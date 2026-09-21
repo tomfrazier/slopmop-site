@@ -123,9 +123,15 @@
       <a href="#modes" style="font: var(--type-ui); color: var(--text-muted)">Modes</a>
       <a href="#jev" style="font: var(--type-ui); color: var(--text-muted)">Why it's free</a>
       <a href="#faq" style="font: var(--type-ui); color: var(--text-muted)">FAQ</a>
+      <sc-if value="{{ sideload }}">
+        <a href="#install" style="font: var(--type-ui); color: var(--text-muted)">Install</a>
+      </sc-if>
       <a href="about.html" style="font: var(--type-ui); color: var(--text-muted)">About</a>
       <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" variant="secondary" icon="loader" hint-size="auto,32px">Coming soon</x-import>
+      </sc-if>
+      <sc-if value="{{ sideload }}">
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openZip }}" hint-size="auto,32px">Download the .zip</x-import>
       </sc-if>
       <sc-if value="{{ launched }}">
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openStore }}" hint-size="auto,32px">Add to browser</x-import>
@@ -160,11 +166,17 @@
           <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
             <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" variant="secondary" icon="loader" hint-size="auto,44px">Coming soon</x-import>
           </sc-if>
+          <sc-if value="{{ sideload }}">
+            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" icon="download" on-click="{{ openZip }}" hint-size="auto,44px">Download the .zip — free</x-import>
+          </sc-if>
           <sc-if value="{{ launched }}">
             <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" icon="download" on-click="{{ openStore }}" hint-size="auto,44px">Add to browser — free</x-import>
           </sc-if>
           <a href="#email" style="font: var(--type-ui)">Get the monthly stats instead</a>
         </div>
+        <sc-if value="{{ sideload }}">
+          <p style="margin: 0; max-width: 52ch; padding: var(--space-5) var(--space-6); background: var(--paper-200); border-radius: var(--radius-sm); font: var(--type-body-sm); color: var(--text-muted)">The Chrome Web Store listing is in review. Until it clears, Slop Mop installs from a .zip in about a minute — <a href="#install">here is how</a>.</p>
+        </sc-if>
         <p style="margin: 0; font: var(--type-mono); color: var(--text-faint)">Chrome extension · MIT licensed</p>
       </div>
 
@@ -597,6 +609,53 @@
     </div>
   </section>
 
+  <sc-if value="{{ sideload }}">
+    <section id="install" style="padding: var(--space-12) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
+      <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
+        <div style="display: grid; gap: var(--space-5); max-width: 62ch">
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">In review</x-import>
+          <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Installing it before the store does</h2>
+          <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The Chrome Web Store listing is under review, which takes anywhere from a few days to a few weeks. Rather than sit on a finished extension, here it is as a .zip. Chrome loads unpacked extensions natively — this is the same mechanism every extension developer uses daily, no special build and nothing disabled.</p>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">When the listing clears, this page switches to a one-click store button and you can reinstall from there. Updates do not arrive automatically on a sideloaded copy, so that is the better long-term route.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6)">
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 1</span>
+            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Download and unzip</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Grab the .zip below and unzip it somewhere you will not delete by accident — Chrome reads the folder every time it starts, so Downloads is a bad home for it.</p>
+          </x-import>
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 2</span>
+            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Open the extensions page</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Paste <span style="font: var(--type-mono)">chrome://extensions</span> into the address bar, then turn on <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Developer mode</strong> with the toggle in the top right.</p>
+          </x-import>
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 3</span>
+            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Load unpacked</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Load unpacked</strong> and select the unzipped folder — the one containing <span style="font: var(--type-mono)">manifest.json</span>, not its parent.</p>
+          </x-import>
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 4</span>
+            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Open LinkedIn</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Reload any open LinkedIn tab. The mop appears in your toolbar; pin it to reach the modes and sensitivity quickly.</p>
+          </x-import>
+        </div>
+
+        <div style="display: flex; gap: var(--space-6); align-items: center; flex-wrap: wrap">
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" icon="download" on-click="{{ openZip }}" hint-size="auto,44px">Download Slop Mop — free</x-import>
+          <span style="font: var(--type-mono); color: var(--text-faint)">{{ zipMeta }}</span>
+        </div>
+
+        <div style="display: grid; gap: var(--space-5); max-width: 68ch; padding-top: var(--space-7); border-top: 1px solid var(--border-hairline)">
+          <h3 style="margin: 0; font: var(--type-heading)">Two things Chrome will tell you</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)"><strong style="font-weight: var(--weight-semibold); color: var(--text-body)">"Disable developer mode extensions"</strong> — Chrome shows this prompt on startup for any unpacked extension. Dismissing it leaves Slop Mop running. It stops once you install from the store.</p>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)"><strong style="font-weight: var(--weight-semibold); color: var(--text-body)">"Read and change your data on linkedin.com"</strong> — that is the whole permission, and it is the minimum needed to read post text and draw over the feed. The extension requests nothing else. Everything it does with that access is in the <a href="privacy.html">privacy policy</a> and in the <a href="https://github.com/tomfrazier/slopmop" target="_blank" rel="noopener">source</a>.</p>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
   <section id="email" style="padding: var(--space-12) var(--space-7); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-10); align-items: start">
       <div style="display: grid; gap: var(--space-5)">
@@ -730,7 +789,7 @@
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;launched&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;emailEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://formspree.io/f/xaenejjw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;},&quot;repoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://github.com/tomfrazier/slopmop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;launched&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;slopmop-extension-0.1.0.zip&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipMeta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;version 0.1.0 · chrome &amp; chromium · mit licensed&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;emailEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://formspree.io/f/xaenejjw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;},&quot;repoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://github.com/tomfrazier/slopmop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;}}">
 class Component extends DCLogic {
   state = { mode: "highlight", sens: "aggressive", open: { a: false, b: false }, votes: { a: null, b: null }, voteOpen: { a: false, b: false }, active: "a", email: "", status: "idle" };
 
@@ -857,6 +916,7 @@ class Component extends DCLogic {
   }));
 
   openStore = () => { const u = this.props.storeUrl; if (u) window.open(u, "_blank", "noopener"); };
+  openZip = () => { const u = this.props.zipUrl; if (u) window.location.href = u; };
   openRepo = () => { const u = this.props.repoUrl; if (u) window.open(u, "_blank", "noopener"); };
 
   submitEmail = async (e) => {
@@ -912,6 +972,8 @@ class Component extends DCLogic {
 
   renderVals() {
     const launched = this.props.launched === true;
+    const zipUrl = this.props.zipUrl || "";
+    const sideload = !launched && zipUrl.length > 0;
     const a = this.postVals("a");
     const b = this.postVals("b");
     const key = this.state.active;
@@ -923,8 +985,9 @@ class Component extends DCLogic {
     const toggleVote = (k) => () => this.setState((s) => ({ voteOpen: Object.assign({}, s.voteOpen, { [k]: !s.voteOpen[k] }), active: k }));
 
     return {
-      launched, preLaunch: !launched,
-      openStore: this.openStore, openRepo: this.openRepo,
+      launched, sideload, preLaunch: !launched && !sideload,
+      openStore: this.openStore, openRepo: this.openRepo, openZip: this.openZip,
+      zipMeta: (this.props.zipMeta || "version 0.1.0 · chrome & chromium · mit licensed").toLowerCase(),
       mode: this.state.mode, sens: this.state.sens,
       modeOptions: [
         { value: "hide", label: "Hide", icon: "eye-off" },
