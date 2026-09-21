@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Privacy policy — Slop Mop</title>
+<meta name="description" content="What Slop Mop sends to api.slopmop.lol, what it stores (hashed post text, scores, engagement counts, a salted install-id hash, votes), how long check logs are kept, and how to reach a human.">
+<link rel="canonical" href="https://slopmop.lol/privacy.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/privacy.html">
+<meta property="og:title" content="Privacy policy — Slop Mop">
+<meta property="og:description" content="Plainly: what leaves your browser, what is stored, how long it is kept, and who to email.">
+<meta property="og:image" content="https://slopmop.lol/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
+<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://slopmop.lol/privacy.html#page",
+  "url": "https://slopmop.lol/privacy.html",
+  "name": "Privacy policy — Slop Mop",
+  "description": "What Slop Mop sends to api.slopmop.lol, what it stores, how long check logs are kept, and how to get in touch.",
+  "inLanguage": "en",
+  "isPartOf": { "@type": "WebSite", "@id": "https://slopmop.lol/#website", "url": "https://slopmop.lol/", "name": "Slop Mop" },
+  "about": { "@type": "SoftwareApplication", "@id": "https://slopmop.lol/#app", "name": "Slop Mop" },
+  "publisher": { "@type": "Person", "name": "Tom Frazier", "url": "https://linkedin.com/in/tomfrazier" }
+}
+</script>
+<style>
+  body { margin: 0; background: var(--surface-card); color: var(--text-body); }
+  a { color: var(--text-link); text-decoration: none; }
+  a:hover { color: var(--blue-500); text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; padding: var(--space-5) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <a href="index.html" style="display: inline-flex; align-items: center; text-decoration: none">
+      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
+    </a>
+    <a href="index.html" style="font: var(--type-ui); color: var(--text-muted)">Back to the landing page</a>
+  </nav>
+
+  <header style="padding: var(--space-11) var(--space-7) var(--space-9); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h1 style="margin: 0; font: var(--type-display); font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">Privacy policy</h1>
+      <p style="margin: 0; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Slop Mop is a research project. It reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. This page says exactly what that means.</p>
+      <p style="margin: 0; font: var(--type-mono); color: var(--text-faint)">last updated 20 september 2026</p>
+    </div>
+  </header>
+
+  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">The server</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">All judging requests go to one host: <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>. Nothing else is contacted by the extension. If you run your own copy, this is the address you change.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What leaves your browser</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The post text and its public engagement counts are sent to <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>, and the text is passed on from there to TypeSafe's Jev, which produces the answers behind the score. Your name is never sent, and neither is the author's.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-7)">
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What is stored</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Five things, and nothing else:</p>
+      <div style="display: grid; gap: var(--space-2)">
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
+          <span style="font: var(--type-ui); flex: 0 0 auto">A hash of the post text</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">a one-way hash, so the same post isn't judged twice. The text itself is not kept.</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
+          <span style="font: var(--type-ui); flex: 0 0 auto">Scores</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">Jev's answers to the eleven questions, the slop score, and when the post was first seen.</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
+          <span style="font: var(--type-ui); flex: 0 0 auto">Engagement counts</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">the public reaction and comment numbers the usefulness check reads.</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
+          <span style="font: var(--type-ui); flex: 0 0 auto">A salted hash of the install id</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">enough to count installs and dedupe votes, not enough to identify you.</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
+          <span style="font: var(--type-ui); flex: 0 0 auto">Votes</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">your No, Maybe or Probably on a post, tallied under that salted hash.</span>
+        </div>
+      </div>
+      <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">No LinkedIn profile data, no browsing history, no cookies set by the extension, and no advertising or analytics vendors. Usage is capped at 250 checks per install per day.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Retention</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Check logs — the operational record of requests hitting the server — are kept for <strong style="font-weight: var(--weight-semibold)">90 days</strong> and then deleted.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">The code</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The extension and the judging server are MIT licensed. You can read exactly what is sent and stored, and run your own server if you would rather not use this one.</p>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-10) var(--space-7)">
+    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Contact</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Questions, corrections, or a request to have your votes removed: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
+    </div>
+  </section>
+
+  <footer style="padding: var(--space-9) var(--space-7); border-top: 1px solid var(--border-hairline)">
+    <div style="max-width: 68ch; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: var(--space-7); flex-wrap: wrap">
+      <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="about.html">About Slop Mop</a></span>
+      <span style="font: var(--type-mono); color: var(--text-faint)">research project, not a product · mit licensed · not affiliated with linkedin</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>
