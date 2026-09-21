@@ -11,6 +11,8 @@ privacy.html        privacy policy
 _ds/                design tokens + component bundle
 support.js          component runtime
 og-image.png        1200x630 share image
+favicon.svg         favicon (+ PNG fallbacks and apple-touch-icon)
+site.webmanifest    icon manifest
 CNAME               slopmop.lol
 ```
 
