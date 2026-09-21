@@ -916,7 +916,7 @@ class Component extends DCLogic {
   }));
 
   openStore = () => { const u = this.props.storeUrl; if (u) window.open(u, "_blank", "noopener"); };
-  openZip = () => { const u = this.props.zipUrl; if (u) window.location.href = u; };
+  openZip = () => { window.location.href = this.props.zipUrl ?? "slopmop-extension-0.1.0.zip"; };
   openRepo = () => { const u = this.props.repoUrl; if (u) window.open(u, "_blank", "noopener"); };
 
   submitEmail = async (e) => {
@@ -972,7 +972,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const launched = this.props.launched === true;
-    const zipUrl = this.props.zipUrl || "";
+    const zipUrl = this.props.zipUrl ?? "slopmop-extension-0.1.0.zip";
     const sideload = !launched && zipUrl.length > 0;
     const a = this.postVals("a");
     const b = this.postVals("b");
