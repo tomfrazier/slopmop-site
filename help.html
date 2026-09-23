@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help — Slop Mop</title>
+<meta name="description" content="Install Slop Mop from the Chrome Web Store, get it running on LinkedIn, and fix scoring errors like &quot;Couldn't score this post&quot;, daily limits and blocked networks.">
+<link rel="canonical" href="https://slopmop.lol/help.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/help.html">
+<meta property="og:title" content="Help — Slop Mop">
+<meta property="og:description" content="Installing Slop Mop, and what to do when a post can't be scored.">
+<meta property="og:image" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
+<meta name="twitter:image" content="https://slopmop.lol/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
+<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: var(--surface-card); color: var(--text-body); }
+  a { color: var(--text-link); text-decoration: none; }
+  a:hover { color: var(--blue-500); text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
+
+  <nav style="position: sticky; top: 0; z-index: 10; background: var(--surface-card); border-bottom: 1px solid var(--border-hairline)">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-7)">
+      <a href="index.html" aria-label="Slop Mop home" style="display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none">
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
+      </a>
+      <span style="display: flex; align-items: center; gap: var(--space-7); min-width: 0">
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <span style="display: flex; align-items: center; gap: var(--space-7)">
+            <a href="#install" style="font: var(--type-ui); color: var(--text-muted)">Install</a>
+            <a href="#using" style="font: var(--type-ui); color: var(--text-muted)">Using it</a>
+            <a href="#scoring" style="font: var(--type-ui); color: var(--text-muted)">Scoring errors</a>
+            <a href="#contact" style="font: var(--type-ui); color: var(--text-muted)">Contact</a>
+            <a href="index.html" style="font: var(--type-ui); color: var(--text-muted)">Home</a>
+          </span>
+        </sc-if>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openStore }}" hint-size="auto,32px">Add to browser</x-import>
+      </span>
+    </div>
+    <sc-if value="{{ isMobile }}">
+      <div style="display: flex; align-items: center; gap: var(--space-7); overflow-x: auto; white-space: nowrap; padding: var(--space-4) var(--space-7); border-top: 1px solid var(--border-hairline); background: var(--paper-100)">
+        <a href="#install" style="font: var(--type-label); color: var(--text-muted)">Install</a>
+        <a href="#using" style="font: var(--type-label); color: var(--text-muted)">Using it</a>
+        <a href="#scoring" style="font: var(--type-label); color: var(--text-muted)">Scoring errors</a>
+        <a href="#contact" style="font: var(--type-label); color: var(--text-muted)">Contact</a>
+        <a href="index.html" style="font: var(--type-label); color: var(--text-muted)">Home</a>
+      </div>
+    </sc-if>
+  </nav>
+
+  <header style="padding: var(--space-11) var(--space-7) var(--space-9); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h1 style="margin: 0; font: var(--type-display); font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">Help</h1>
+      <p style="margin: 0; max-width: 60ch; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Getting Slop Mop installed, what the controls do, and what to try when a post can't be scored.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-4)">
+        <a href="#install" style="display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); background: var(--paper-000); border: 1px solid var(--border-default); border-radius: var(--radius-sm); font: var(--type-ui); color: var(--text-body)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="download" size="15" hint-size="15px,15px"></x-import>Install it</a>
+        <a href="#scoring" style="display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); background: var(--paper-000); border: 1px solid var(--border-default); border-radius: var(--radius-sm); font: var(--type-ui); color: var(--text-body)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="triangle-alert" size="15" hint-size="15px,15px"></x-import>Something's wrong with scoring</a>
+        <a href="#other" style="display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); background: var(--paper-000); border: 1px solid var(--border-default); border-radius: var(--radius-sm); font: var(--type-ui); color: var(--text-body)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="info" size="15" hint-size="15px,15px"></x-import>Other messages</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="install" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
+      <div style="display: grid; gap: var(--space-5); max-width: 62ch">
+        <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Installing Slop Mop</h2>
+        <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">About a minute, on desktop Chrome or any Chromium browser that installs from the Chrome Web Store (Edge, Brave, Arc, Opera, Vivaldi). There is no account to create.</p>
+      </div>
+
+      <ol style="margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-10)">
+        <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8); align-items: center">
+          <div style="display: grid; gap: var(--space-4); align-content: start">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 1</span>
+            <h3 style="margin: 0; font: var(--type-heading)">Open the Chrome Web Store listing</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Go to <a href="{{ storeUrl }}" target="_blank" rel="noopener">Slop Mop on the Chrome Web Store</a>. Check the publisher is Slop Mop and the listing links back to slopmop.lol — copycat extensions exist for most things that get popular.</p>
+            <div style="justify-self: start; padding-top: var(--space-3)">
+              <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" icon="download" on-click="{{ openStore }}" hint-size="auto,38px">Open the store listing</x-import>
+            </div>
+          </div>
+          <div style="aspect-ratio: 16 / 10; min-width: 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); overflow: hidden; background: var(--paper-100)">
+            <image-slot id="help-step-1-store" placeholder="Screenshot: the Chrome Web Store listing" style="width: 100%; height: 100%"></image-slot>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8); align-items: center">
+          <div style="display: grid; gap: var(--space-4); align-content: start">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 2</span>
+            <h3 style="margin: 0; font: var(--type-heading)">Add it, and read the permission</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Add to Chrome</strong>. Chrome asks to let it <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">"Read and change your data on linkedin.com"</strong>. That is the whole permission: enough to read post text and draw over the feed, on LinkedIn only. Click <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Add extension</strong>.</p>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">What it sends and keeps is in the <a href="privacy.html">privacy policy</a>.</p>
+          </div>
+          <div style="aspect-ratio: 16 / 10; min-width: 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); overflow: hidden; background: var(--paper-100)">
+            <image-slot id="help-step-2-permission" placeholder="Screenshot: Chrome's permission dialog" style="width: 100%; height: 100%"></image-slot>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8); align-items: center">
+          <div style="display: grid; gap: var(--space-4); align-content: start">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 3</span>
+            <h3 style="margin: 0; font: var(--type-heading)">Read the first-run page</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">A new tab opens explaining what Slop Mop does and what leaves your browser. Confirm it and Slop Mop starts working. Nothing is judged until you do.</p>
+          </div>
+          <div style="aspect-ratio: 16 / 10; min-width: 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); overflow: hidden; background: var(--paper-100)">
+            <image-slot id="help-step-3-onboarding" placeholder="Screenshot: the first-run page" style="width: 100%; height: 100%"></image-slot>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8); align-items: center">
+          <div style="display: grid; gap: var(--space-4); align-content: start">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 4</span>
+            <h3 style="margin: 0; font: var(--type-heading)">Pin the mop</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click the puzzle-piece icon to the right of the address bar, find Slop Mop, and click the pin. The mop now sits in your toolbar, one click from the mode and sensitivity settings.</p>
+          </div>
+          <div style="aspect-ratio: 16 / 10; min-width: 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); overflow: hidden; background: var(--paper-100)">
+            <image-slot id="help-step-4-pin" placeholder="Screenshot: pinning from the extensions menu" style="width: 100%; height: 100%"></image-slot>
+          </div>
+        </li>
+
+        <li style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8); align-items: center">
+          <div style="display: grid; gap: var(--space-4); align-content: start">
+            <span style="font: var(--type-mono); color: var(--text-faint)">step 5</span>
+            <h3 style="margin: 0; font: var(--type-heading)">Reload LinkedIn</h3>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Tabs that were already open need a reload before Slop Mop can see them. Scroll your feed: posts get judged just before they reach you, and suspected slop folds or gets outlined depending on your mode.</p>
+          </div>
+          <div style="aspect-ratio: 16 / 10; min-width: 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); overflow: hidden; background: var(--paper-100)">
+            <image-slot id="help-step-5-feed" placeholder="Screenshot: a LinkedIn feed with folded posts" style="width: 100%; height: 100%"></image-slot>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="using" style="padding: var(--space-11) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
+      <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Using it</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: var(--space-6)">
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="settings-2" size="20" hint-size="20px,20px"></x-import></span>
+          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Mode and sensitivity</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click the mop in your toolbar. Hide folds suspected slop; Highlight outlines it and hides nothing. Mild, Moderate and Aggressive set how easily a post gets flagged.</p>
+        </x-import>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="chevrons-up-down" size="20" hint-size="20px,20px"></x-import></span>
+          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Opening a folded post</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click the strip's button and the post unfolds in place. Hover any folded or outlined post to see what Jev noticed.</p>
+        </x-import>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="undo-2" size="20" hint-size="20px,20px"></x-import></span>
+          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">When it gets one wrong</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click the mop icon beside the post's "…" menu and vote No, Maybe or Probably. Your vote overrides the score for your feed.</p>
+        </x-import>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="power" size="20" hint-size="20px,20px"></x-import></span>
+          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Turning it off</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Use the switch in the popup to pause it. To remove it, right-click the mop and choose <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Remove from Chrome</strong>.</p>
+        </x-import>
+      </div>
+    </div>
+  </section>
+
+  <section id="scoring" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
+      <div style="display: grid; gap: var(--space-5); max-width: 64ch">
+        <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Something's wrong with scoring</h2>
+        <p style="margin: 0; display: flex; flex-wrap: wrap; gap: var(--space-4)">
+          <span style="font: var(--type-mono); color: var(--text-body); padding: var(--space-2) var(--space-4); background: var(--paper-200); border-radius: var(--radius-xs, 3px)">Couldn't score this post</span>
+          <span style="font: var(--type-mono); color: var(--text-body); padding: var(--space-2) var(--space-4); background: var(--paper-200); border-radius: var(--radius-xs, 3px)">returned a web page instead of data</span>
+        </p>
+        <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop checks each post by sending its text to <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>. Either of these messages means something on your network answered instead of our server. It's almost always a network setting, not a problem with your install or with Slop Mop.</p>
+      </div>
+
+      <div style="display: grid; gap: var(--space-6); max-width: 68ch">
+        <span style="font: var(--type-mono); color: var(--text-faint)">step 1</span>
+        <h3 style="margin: 0; font: var(--type-heading)">See what's answering</h3>
+        <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Open this in a new tab:</p>
+        <a href="https://api.slopmop.lol/api/v1/health" target="_blank" rel="noopener" style="justify-self: start; max-width: 100%; overflow-wrap: anywhere; padding: var(--space-4) var(--space-5); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); font: var(--type-mono)">https://api.slopmop.lol/api/v1/health</a>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-6)">
+          <div style="display: grid; gap: var(--space-4); align-content: start; padding: var(--space-6); border: 1px solid var(--border-hairline); border-radius: var(--radius-md)">
+            <span style="font: var(--type-mono); color: var(--text-body)">{"ok":true, …}</span>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The connection is fine right now. Reload LinkedIn — it was a brief interruption.</p>
+          </div>
+          <div style="display: grid; gap: var(--space-4); align-content: start; padding: var(--space-6); border: 1px solid var(--border-hairline); border-radius: var(--radius-md)">
+            <span style="font: var(--type-ui); color: var(--text-body)">A login, "access denied" or "site blocked" page</span>
+            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">That page usually names what's intercepting. Find it in step 2.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; gap: var(--space-6)">
+        <span style="font: var(--type-mono); color: var(--text-faint)">step 2</span>
+        <h3 style="margin: 0; font: var(--type-heading)">Fix it by cause</h3>
+        <div style="display: grid; border-top: 1px solid var(--border-hairline)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-3) var(--space-8); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
+            <span style="font: var(--type-ui)">Hotel, airport, café or other public wifi</span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Open any plain http:// site, such as <a href="http://neverssl.com" target="_blank" rel="noopener">neverssl.com</a>, to bring up the wifi's login page. Accept it, then reload LinkedIn.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-3) var(--space-8); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
+            <span style="font: var(--type-ui)">A work or school network, proxy or web filter</span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">The network is blocking the domain. Ask your IT team to allow <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>, or switch to a personal network or phone hotspot.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-3) var(--space-8); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
+            <span style="font: var(--type-ui)">A VPN</span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Turn it off, or pick a different server, then retry. Some VPNs block domains they don't recognise.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-3) var(--space-8); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
+            <span style="font: var(--type-ui)">DNS filtering or an ad-blocker <span style="color: var(--text-muted); font-weight: var(--weight-regular, 400)">(Pi-hole, NextDNS, AdGuard, router filtering)</span></span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Add <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span> to the allowlist.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-3) var(--space-8); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
+            <span style="font: var(--type-ui)">Antivirus or "web protection" software</span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Add an exception for <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>, or turn the web shield off briefly to confirm.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-3) var(--space-8); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
+            <span style="font: var(--type-ui)">Other browser extensions</span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Try an incognito window with only Slop Mop enabled (allow it under Details → <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Allow in Incognito</strong>). If it works there, another extension is interfering.</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; gap: var(--space-5); max-width: 68ch">
+        <span style="font: var(--type-mono); color: var(--text-faint)">step 3</span>
+        <h3 style="margin: 0; font: var(--type-heading)">Confirm it's your network</h3>
+        <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Try again on a different network, such as a phone hotspot. If it works there, your original network is the cause.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="other" style="padding: var(--space-11) var(--space-7); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
+      <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Other messages you might see</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-6)">
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="font: var(--type-mono); color: var(--text-body)">Daily limit reached</span>
+          <p style="margin: var(--space-4) 0 0; font: var(--type-body-sm); color: var(--text-muted)">Each install can check 250 posts a day. The count resets at midnight UTC, and posts already scored keep working.</p>
+        </x-import>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="font: var(--type-mono); color: var(--text-body)">Requests from cloud or hosting-provider IP ranges aren't accepted</span>
+          <p style="margin: var(--space-4) 0 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop blocks traffic from data-centre networks to stop automated abuse. If you're on a VPN or cloud desktop, switch it off.</p>
+        </x-import>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
+          <span style="font: var(--type-mono); color: var(--text-body)">Too many requests</span>
+          <p style="margin: var(--space-4) 0 0; font: var(--type-body-sm); color: var(--text-muted)">You're scrolling faster than the per-minute limit. Slop Mop slows down on its own and catches up.</p>
+        </x-import>
+      </div>
+      <div style="display: grid; gap: var(--space-4); max-width: 68ch; padding-top: var(--space-7); border-top: 1px solid var(--border-hairline)">
+        <h3 style="margin: 0; font: var(--type-heading)">Nothing happens at all</h3>
+        <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Reload the LinkedIn tab, and check the popup switch is on. Slop Mop only works in the main feed on desktop LinkedIn. When Jev isn't confident about a post, it leaves it alone, so a quiet feed can simply mean a clean one.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-5); justify-items: start">
+      <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Still stuck?</h2>
+      <p style="margin: 0; max-width: 60ch; font: var(--type-body); color: var(--text-muted)">Email <a href="mailto:hello@slopmop.lol?subject=Slop%20Mop%20help">hello@slopmop.lol</a> with the exact message you see and whether you're on a work, public or home network. A human reads it.</p>
+      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" variant="secondary" icon="send" on-click="{{ openMail }}" hint-size="auto,38px">Email hello@slopmop.lol</x-import>
+    </div>
+  </section>
+
+  <footer style="padding: var(--space-10) var(--space-7)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-8); flex-wrap: wrap">
+        <div style="display: flex; align-items: center; gap: var(--space-5)">
+          <span style="display: block; width: 64px; height: 64px; border-radius: var(--radius-pill); overflow: hidden; background: var(--paper-200); flex: 0 0 auto">
+            <image-slot id="tom-headshot" shape="circle" fit="contain" src="mop.svg" style="width: 64px; height: 64px"></image-slot>
+          </span>
+          <span style="display: grid; gap: var(--space-2)">
+            <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a></span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Say hello: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span>
+          </span>
+        </div>
+        <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
+          <a href="index.html" style="font: var(--type-ui)">Home</a>
+          <a href="about.html" style="font: var(--type-ui)">About</a>
+          <a href="help.html" style="font: var(--type-ui)">Help</a>
+          <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
+          <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
+        </span>
+      </div>
+      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">research project, not a product · mit licensed, self-host the server if you want · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { isMobile: typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches };
+  componentDidMount() {
+    this.mq = window.matchMedia("(max-width: 900px)");
+    this.onMq = () => this.setState({ isMobile: this.mq.matches });
+    this.mq.addEventListener("change", this.onMq);
+    this.onMq();
+  }
+  componentWillUnmount() { if (this.mq) this.mq.removeEventListener("change", this.onMq); }
+  renderVals() {
+    const storeUrl = this.props.storeUrl || "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho";
+    return {
+      isMobile: this.state.isMobile, isDesktop: !this.state.isMobile, storeUrl,
+      openStore: () => window.open(storeUrl, "_blank", "noopener"),
+      openMail: () => { window.location.href = "mailto:hello@slopmop.lol?subject=Slop%20Mop%20help"; },
+    };
+  }
+}
+</script>
+</body>
+</html>

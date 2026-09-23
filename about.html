@@ -3,11 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <title>About Slop Mop — canonical product information</title>
 <meta name="description" content="Canonical description of Slop Mop: a free, MIT-licensed Chrome extension that helps desktop LinkedIn users reduce low-value writing and AI slop. What it is, what it does not do, how it works, and who it is for.">
 <link rel="canonical" href="https://slopmop.lol/about.html">
@@ -18,6 +13,12 @@
 <meta property="og:title" content="About Slop Mop — canonical product information">
 <meta property="og:description" content="Slop Mop is a free, open-source Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control. Not an AI detector.">
 <meta property="og:image" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
+<meta name="twitter:image" content="https://slopmop.lol/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Slop Mop — canonical product information">
 <meta name="twitter:description" content="What Slop Mop is, what it refuses to claim, how it works, and who it is for.">
@@ -26,15 +27,6 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#16181A">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
-<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,11 +63,26 @@
   ]
 }
 </script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
+<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
 <style>
   body { margin: 0; background: var(--surface-card); color: var(--text-body); }
   a { color: var(--text-link); text-decoration: none; }
   a:hover { color: var(--blue-500); text-decoration: underline; }
 </style>
+<script src="./image-slot.js"></script>
 </helmet>
 
 <div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
@@ -263,14 +270,28 @@
     </div>
   </section>
 
-  <footer style="padding: var(--space-9) var(--space-7)">
-    <div style="max-width: 68ch; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: var(--space-7); flex-wrap: wrap">
-      <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a></span>
-      <span style="display: flex; gap: var(--space-7); flex-wrap: wrap">
-        <a href="index.html" style="font: var(--type-ui)">Home</a>
-        <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
-        <a href="mailto:hello@slopmop.lol" style="font: var(--type-ui)">hello@slopmop.lol</a>
-      </span>
+  <footer style="padding: var(--space-10) var(--space-7)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-8); flex-wrap: wrap">
+        <div style="display: flex; align-items: center; gap: var(--space-5)">
+          <span style="display: block; width: 64px; height: 64px; border-radius: var(--radius-pill); overflow: hidden; background: var(--paper-200); flex: 0 0 auto">
+            <image-slot id="tom-headshot" shape="circle" fit="contain" src="mop.svg" style="width: 64px; height: 64px"></image-slot>
+          </span>
+          <span style="display: grid; gap: var(--space-2)">
+            <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a></span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Say hello: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span>
+          </span>
+        </div>
+        <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
+          <a href="index.html" style="font: var(--type-ui)">Home</a>
+          <a href="about.html" style="font: var(--type-ui)">About</a>
+          <a href="help.html" style="font: var(--type-ui)">Help</a>
+          <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
+          <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
+        </span>
+      </div>
+      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">research project, not a product · mit licensed, self-host the server if you want · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
     </div>
   </footer>
 </div>

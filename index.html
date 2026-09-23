@@ -3,48 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <title>Slop Mop — Less slop in your LinkedIn feed. Your call.</title>
 <meta name="description" content="Slop Mop is a free, open-source Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds. It reads posts ahead, explains what it noticed, and lets you hide, highlight, reveal or override. Not an AI detector.">
 <link rel="canonical" href="https://slopmop.lol/">
 <meta name="robots" content="index, follow, max-image-preview:large">
-
-
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://slopmop.lol/">
 <meta property="og:site_name" content="Slop Mop">
-<meta property="og:title" content="LinkedIn is filling up with slop. Bring a mop.">
-<meta property="og:description" content="Not an AI detector. A bad-writing detector. A free, open-source extension that reads posts before you reach them and hides the ones that waste your attention.">
+<meta property="og:url" content="https://slopmop.lol/">
+<meta property="og:title" content="Slop Mop — Less slop. More control. Your call.">
+<meta property="og:description" content="A free, MIT-licensed Chrome extension that judges LinkedIn writing — not who wrote it — and lets you hide it, highlight it, or overrule it.">
 <meta property="og:image" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Slop Mop — LinkedIn is filling up with slop. Bring a mop.">
+<meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
+<meta name="twitter:image" content="https://slopmop.lol/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Slop Mop — Less slop. More control. Your call.">
 <meta name="twitter:description" content="A free, MIT-licensed Chrome extension that judges LinkedIn writing — not who wrote it — and lets you hide it, highlight it, or overrule it.">
-<meta name="twitter:image" content="https://slopmop.lol/og-image-2.png">
 <meta name="author" content="Tom Frazier">
-<meta name="theme-color" content="#F5B400">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#16181A">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
-<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
-<script src="./image-slot.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -112,6 +95,21 @@
   ]
 }
 </script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
+<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
 <style>
   body { margin: 0; background: var(--surface-card); color: var(--text-body); }
   a { color: var(--text-link); text-decoration: none; }
@@ -121,34 +119,52 @@
 
 <div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
 
-  <nav style="position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; padding: var(--space-5) var(--space-7); background: var(--surface-card); border-bottom: 1px solid var(--border-hairline)">
-    <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
-    <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
-      <a href="#how" style="font: var(--type-ui); color: var(--text-muted)">How it works</a>
-      <a href="#modes" style="font: var(--type-ui); color: var(--text-muted)">Modes</a>
-      <a href="#jev" style="font: var(--type-ui); color: var(--text-muted)">Why it's free</a>
-      <a href="#faq" style="font: var(--type-ui); color: var(--text-muted)">FAQ</a>
-      <sc-if value="{{ sideload }}">
-        <a href="#install" style="font: var(--type-ui); color: var(--text-muted)">Install</a>
-      </sc-if>
-      <a href="about.html" style="font: var(--type-ui); color: var(--text-muted)">About</a>
-      <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" variant="secondary" icon="loader" hint-size="auto,32px">Coming soon</x-import>
-      </sc-if>
-      <sc-if value="{{ sideload }}">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openZip }}" hint-size="auto,32px">Download the .zip</x-import>
-      </sc-if>
-      <sc-if value="{{ launched }}">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openStore }}" hint-size="auto,32px">Add to browser</x-import>
-      </sc-if>
-    </span>
+  <nav style="position: sticky; top: 0; z-index: 10; background: var(--surface-card); border-bottom: 1px solid var(--border-hairline)">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-7)">
+      <a href="index.html" aria-label="Slop Mop home" style="display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none">
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
+      </a>
+      <span style="display: flex; align-items: center; gap: var(--space-7); min-width: 0">
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <span style="display: flex; align-items: center; gap: var(--space-7)">
+            <a href="#how" style="font: var(--type-ui); color: var(--text-muted)">How it works</a>
+            <a href="#modes" style="font: var(--type-ui); color: var(--text-muted)">Modes</a>
+            <a href="#jev" style="font: var(--type-ui); color: var(--text-muted)">Why it's free</a>
+            <a href="#faq" style="font: var(--type-ui); color: var(--text-muted)">FAQ</a>
+            <sc-if value="{{ sideload }}"><a href="#install" style="font: var(--type-ui); color: var(--text-muted)">Install</a></sc-if>
+            <a href="help.html" style="font: var(--type-ui); color: var(--text-muted)">Help</a>
+            <a href="about.html" style="font: var(--type-ui); color: var(--text-muted)">About</a>
+          </span>
+        </sc-if>
+        <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" variant="secondary" icon="loader" hint-size="auto,32px">Coming soon</x-import>
+        </sc-if>
+        <sc-if value="{{ sideload }}">
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openZip }}" hint-size="auto,32px">Download the .zip</x-import>
+        </sc-if>
+        <sc-if value="{{ launched }}">
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openStore }}" hint-size="auto,32px">Add to browser</x-import>
+        </sc-if>
+      </span>
+    </div>
+    <sc-if value="{{ isMobile }}">
+      <div style="display: flex; align-items: center; gap: var(--space-7); overflow-x: auto; white-space: nowrap; padding: var(--space-4) var(--space-7); border-top: 1px solid var(--border-hairline); background: var(--paper-100)">
+        <a href="#how" style="font: var(--type-label); color: var(--text-muted)">How it works</a>
+        <a href="#modes" style="font: var(--type-label); color: var(--text-muted)">Modes</a>
+        <a href="#jev" style="font: var(--type-label); color: var(--text-muted)">Why it's free</a>
+        <a href="#faq" style="font: var(--type-label); color: var(--text-muted)">FAQ</a>
+        <sc-if value="{{ sideload }}"><a href="#install" style="font: var(--type-label); color: var(--text-muted)">Install</a></sc-if>
+        <a href="help.html" style="font: var(--type-label); color: var(--text-muted)">Help</a>
+        <a href="about.html" style="font: var(--type-label); color: var(--text-muted)">About</a>
+      </div>
+    </sc-if>
   </nav>
 
   
 
   <header style="padding: var(--space-12) var(--space-7) var(--space-11); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 1120px; margin: 0 auto; position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: var(--space-10); align-items: center">
-      <sc-if value="{{ heroHover }}">
+    <div style="max-width: 1120px; margin: 0 auto; position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: var(--space-10); align-items: center">
+      <sc-if value="{{ heroHoverDesktop }}">
         <div style="position: absolute; left: 0; top: 0; z-index: 20; width: min(400px, 100%); display: grid; gap: var(--space-6); padding: var(--space-7); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-pop)">
           <div style="display: flex; gap: var(--space-5); align-items: flex-start">
             <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">Possibly slop</x-import>
@@ -227,9 +243,22 @@
         </div>
         <span style="font: var(--type-mono); color: var(--text-faint)">9 folded · 5 left to read</span>
       </div>
+      <sc-if value="{{ isMobile }}">
+        <div style="min-width: 0; display: grid; gap: var(--space-6); padding: var(--space-7); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-card)">
+          <div style="display: flex; gap: var(--space-5); align-items: flex-start">
+            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">Possibly slop</x-import>
+            <span style="font: var(--type-body-sm)">This has some hallmarks of AI slop, but isn't clear-cut.</span>
+          </div>
+          <p style="margin: 0; font: var(--type-body-sm)">Strongest signs: <strong style="font-weight: var(--weight-semibold)">Hype words, Scroll-stopper, Empty praise</strong></p>
+          <p style="margin: 0; font: var(--type-label); color: var(--text-muted)">What Jev noticed</p>
+          {{ heroRadar }}
+          {{ heroBars }}
+          <p style="margin: 0; padding-top: var(--space-5); border-top: 1px solid var(--border-hairline); font: var(--type-mono); color: var(--text-faint)">on desktop this panel opens when you hover a post</p>
+        </div>
+      </sc-if>
     </div>
   </header><section style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-10); align-items: center">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-10); align-items: center">
       <div style="display: grid; place-items: center; padding: var(--space-11); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); color: var(--ink-300)">
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="140" knockout="var(--paper-100)" hint-size="140px,140px"></x-import>
       </div>
@@ -244,7 +273,7 @@
   <section id="how" style="padding: var(--space-12) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 1080px; margin: 0 auto; display: grid; gap: var(--space-9)">
       <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">How it works</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-8)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: var(--space-8)">
 
         <div style="display: grid; gap: var(--space-5); align-content: start">
           <div aria-hidden="true" style="display: grid; gap: var(--space-3); align-content: center; height: 104px; padding: var(--space-5); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
@@ -330,7 +359,7 @@
         <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Pick how much you want to see, then pick how far the judgement goes. Try both on the two posts below: hover one for what Jev noticed, and vote when it gets you wrong.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-6)">
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
           <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="eye-off" size="20" hint-size="20px,20px"></x-import></span>
           <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Hide</h3>
@@ -368,7 +397,7 @@
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: var(--space-9); align-items: start">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: var(--space-9); align-items: start">
 
         <div style="display: grid; gap: var(--space-6); padding: var(--space-7); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-pop)">
           <sc-if value="{{ activeHasVote }}">
@@ -391,7 +420,7 @@
 
           <div onMouseEnter="{{ hoverA }}" style="display: grid; gap: var(--space-4); min-width: 0">
             <sc-if value="{{ aFolded }}" hint-placeholder-val="{{ true }}">
-              <div style="display: grid; gap: var(--space-4); min-width: 0; white-space: nowrap">
+              <div style="display: grid; gap: var(--space-4); min-width: 0; white-space: nowrap; overflow: hidden">
                 <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.FoldStrip" score="{{ aStripScore }}" reasons="{{ aReasons }}" on-restore="{{ openA }}" hint-size="100%,44px"></x-import>
                 <button type="button" onClick="{{ toggleVoteA }}" style="justify-self: end; display: inline-flex; align-items: center; gap: var(--space-4); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-default); border-radius: var(--radius-sm); background: var(--paper-000); color: var(--ink-600); cursor: pointer; font: var(--type-label)">
                   <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="15" knockout="var(--paper-000)" hint-size="15px,15px"></x-import>
@@ -481,7 +510,7 @@
 
           <div onMouseEnter="{{ hoverB }}" style="display: grid; gap: var(--space-4); min-width: 0">
             <sc-if value="{{ bFolded }}">
-              <div style="display: grid; gap: var(--space-4); min-width: 0; white-space: nowrap">
+              <div style="display: grid; gap: var(--space-4); min-width: 0; white-space: nowrap; overflow: hidden">
                 <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.FoldStrip" score="{{ bStripScore }}" reasons="{{ bReasons }}" on-restore="{{ openB }}" hint-size="100%,44px"></x-import>
                 <button type="button" onClick="{{ toggleVoteB }}" style="justify-self: end; display: inline-flex; align-items: center; gap: var(--space-4); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-default); border-radius: var(--radius-sm); background: var(--paper-000); color: var(--ink-600); cursor: pointer; font: var(--type-label)">
                   <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="15" knockout="var(--paper-000)" hint-size="15px,15px"></x-import>
@@ -579,7 +608,7 @@
         <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Why it's free</h2>
         <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The judging runs on Jev, used here as a programming primitive rather than a chat call: a question, a definition, and a decision back. There is no account to create, no API key, and no per-post cost for Slop Mop to pass on to you. This will continue to be free as long as it doesn't get abused.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: var(--space-6)">
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
           <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="send" size="20" hint-size="20px,20px"></x-import></span>
           <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Eleven questions, one call</h3>
@@ -598,7 +627,7 @@
       </div>
       <div style="display: grid; gap: var(--space-5)">
         <h3 style="margin: 0; font: var(--type-heading)">The nine signs</h3>
-        <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 var(--space-9)">
+        <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 0 var(--space-9)">
           <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Scroll-stopper</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">one line, then a gap</span></li>
           <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Engagement bait</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"agree?", "comment yes"</span></li>
           <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Hype words</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"unlock", "paradigm shift"</span></li>
@@ -624,7 +653,7 @@
           <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">When the listing clears, this page switches to a one-click store button and you can reinstall from there. Updates do not arrive automatically on a sideloaded copy, so that is the better long-term route.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6)">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: var(--space-6)">
           <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
             <span style="font: var(--type-mono); color: var(--text-faint)">step 1</span>
             <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Download and unzip</h3>
@@ -662,7 +691,7 @@
   </sc-if>
 
   <section id="email" style="padding: var(--space-12) var(--space-7); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-10); align-items: start">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-10); align-items: start">
       <div style="display: grid; gap: var(--space-5)">
         <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">See what the whole set looks like</h2>
         <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Aggregate results roll in as people use it — how often each sign fires, what share of a feed folds at each threshold, and how often the community's votes disagree with the score. Leave an email and you get the numbers about monthly.</p>
@@ -699,7 +728,7 @@
   <section id="faq" style="padding: var(--space-12) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
       <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Questions? We've mopped up a few.</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: var(--space-9) var(--space-10)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: var(--space-9) var(--space-10)">
 
         <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
           <h3 style="margin: 0; font: var(--type-heading)">What is Slop Mop?</h3>
@@ -783,7 +812,9 @@
           </span>
         </div>
         <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
+          <a href="index.html" style="font: var(--type-ui)">Home</a>
           <a href="about.html" style="font: var(--type-ui)">About</a>
+          <a href="help.html" style="font: var(--type-ui)">Help</a>
           <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
           <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
           <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
@@ -796,7 +827,15 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;launched&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;slopmop-extension-0.1.0.zip&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipMeta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;version 0.1.0 · chrome &amp; chromium · mit licensed&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;emailEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://formspree.io/f/xaenejjw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;},&quot;repoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://github.com/tomfrazier/slopmop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;}}">
 class Component extends DCLogic {
-  state = { mode: "highlight", sens: "aggressive", open: { a: false, b: false }, votes: { a: null, b: null }, voteOpen: { a: false, b: false }, active: "a", email: "", status: "idle" };
+  state = { isMobile: typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches, mode: "highlight", sens: "aggressive", open: { a: false, b: false }, votes: { a: null, b: null }, voteOpen: { a: false, b: false }, active: "a", email: "", status: "idle" };
+
+  componentDidMount() {
+    this.mq = window.matchMedia("(max-width: 900px)");
+    this.onMq = () => this.setState({ isMobile: this.mq.matches });
+    this.mq.addEventListener("change", this.onMq);
+    this.onMq();
+  }
+  componentWillUnmount() { if (this.mq) this.mq.removeEventListener("change", this.onMq); }
 
   thresholds = { mild: 0.40, moderate: 0.25, aggressive: 0.18 };
 
@@ -1011,6 +1050,8 @@ class Component extends DCLogic {
       setSens: (v) => this.setState({ sens: v, open: { a: false, b: false }, voteOpen: { a: false, b: false } }),
 
       heroHover: this.state.heroHover === true,
+      heroHoverDesktop: this.state.heroHover === true && !this.state.isMobile,
+      isMobile: this.state.isMobile, isDesktop: !this.state.isMobile,
       heroEnter: () => this.setState({ heroHover: true }),
       heroLeave: () => this.setState({ heroHover: false }),
       heroRadar: this.radar(this.heroPost, "var(--mop-700)"),
