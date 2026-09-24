@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://slopmop.lol/">
 <meta property="og:title" content="Slop Mop — Less slop. More control. Your call.">
 <meta property="og:description" content="A free, MIT-licensed Chrome extension that judges LinkedIn writing — not who wrote it — and lets you hide it, highlight it, or overrule it.">
-<meta property="og:image" content="https://slopmop.lol/og-image.png">
-<meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
+<meta property="og:image" content="https://slopmop.lol/og-image-2.png">
+<meta property="og:image:secure_url" content="https://slopmop.lol/og-image-2.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
-<meta name="twitter:image" content="https://slopmop.lol/og-image.png">
+<meta name="twitter:image" content="https://slopmop.lol/og-image-2.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Slop Mop — Less slop. More control. Your call.">
 <meta name="twitter:description" content="A free, MIT-licensed Chrome extension that judges LinkedIn writing — not who wrote it — and lets you hide it, highlight it, or overrule it.">
@@ -258,11 +258,11 @@
       </sc-if>
     </div>
   </header><section style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-10); align-items: center">
-      <div style="display: grid; place-items: center; padding: var(--space-11); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); color: var(--ink-300)">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="140" knockout="var(--paper-100)" hint-size="140px,140px"></x-import>
+    <div style="max-width: 1120px; margin: 0 auto; box-sizing: border-box; padding-right: max(0px, calc((min(100%, 1120px) - 980px) / 2)); display: flex; flex-wrap: wrap; gap: var(--space-10); align-items: center">
+      <div style="flex: 1 1 260px; min-width: 0; overflow: hidden; background: var(--ink-900); border: 1px solid var(--border-hairline); border-radius: var(--radius-md)">
+        <video src="slopmop-video.mp4" poster="slopprint-preview-image.png" controls="{{ true }}" plays-inline="{{ true }}" preload="metadata" aria-label="Slop Mop video" style="display: block; width: 100%; height: auto"></video>
       </div>
-      <div style="display: grid; gap: var(--space-6)">
+      <div style="flex: 1 1 260px; max-width: calc((980px - var(--space-10)) / 2); display: grid; gap: var(--space-6)">
         <h2 style="margin: 0; font: var(--type-heading); color: var(--text-muted)">Why this exists</h2>
         <p style="margin: 0; font: var(--type-body); font-size: var(--text-lg); text-wrap: pretty">I wanted to try out Jev, a new type of AI model whose focus is decision probability, with a real pain point in my immediate circle. The one I settled on was the slop problem on LinkedIn. I also wanted to use a data set to build the judgement criteria, so I built it on Graphite's <a href="https://graphite.io/five-percent/research/ai-tells?ref=slopmop.lol" data-cc-id="cc-2" target="_blank" rel="noopener">AI tells research</a> rather than on a detector score.</p>
         <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)"><b>Slop Mop targets bad writing, not AI assistance.</b> A post judged useful to readers is shielded even when it reads like a template.</p>
