@@ -119,6 +119,14 @@
 
 <div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
 
+  <sc-if value="{{ phShow }}" hint-placeholder-val="{{ false }}">
+    <a href="{{ phUrl }}" ref="{{ phRef }}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--space-3) var(--space-4); padding: var(--space-3) var(--space-6); background: #FF6154; color: var(--ink-900); text-decoration: none; font: var(--type-label); text-align: center" style-hover="background: #FF7A6E">
+      <span aria-hidden="true" style="flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: #FFFFFF; color: #FF6154; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; line-height: 1">P</span>
+      <span style="font-weight: 600">{{ phLine }}</span>
+      <span style="display: inline-flex; align-items: center; gap: var(--space-2); font-weight: 600; text-decoration: underline; text-underline-offset: 3px">Upvote the mop</span>
+    </a>
+  </sc-if>
+
   <nav style="position: sticky; top: 0; z-index: 10; background: var(--surface-card); border-bottom: 1px solid var(--border-hairline)">
     <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-7)">
       <a href="index.html" aria-label="Slop Mop home" style="display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none">
@@ -825,7 +833,7 @@
   </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;launched&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;slopmop-extension-0.1.0.zip&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipMeta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;version 0.1.0 · chrome &amp; chromium · mit licensed&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;emailEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://formspree.io/f/xaenejjw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;},&quot;repoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://github.com/tomfrazier/slopmop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;phBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Product Hunt&quot;},&quot;phUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.producthunt.com/products/slop-mop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Product Hunt&quot;},&quot;launched&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;slopmop-extension-0.1.0.zip&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipMeta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;version 0.1.0 · chrome &amp; chromium · mit licensed&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;emailEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://formspree.io/f/xaenejjw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;},&quot;repoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://github.com/tomfrazier/slopmop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;}}">
 class Component extends DCLogic {
   state = { isMobile: typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches, mode: "highlight", sens: "aggressive", open: { a: false, b: false }, votes: { a: null, b: null }, voteOpen: { a: false, b: false }, active: "a", email: "", status: "idle" };
 
@@ -834,8 +842,60 @@ class Component extends DCLogic {
     this.onMq = () => this.setState({ isMobile: this.mq.matches });
     this.mq.addEventListener("change", this.onMq);
     this.onMq();
+    if ((this.props.phBar ?? true) && this.phLive()) setTimeout(() => this.confetti(), 400);
+    if (this.phLive()) { this.phTimer = setInterval(() => this.forceUpdate(), 60000); }
   }
-  componentWillUnmount() { if (this.mq) this.mq.removeEventListener("change", this.onMq); }
+  componentWillUnmount() { if (this.mq) this.mq.removeEventListener("change", this.onMq); clearInterval(this.phTimer); }
+
+  phStart = Date.parse("2026-09-25T00:01:00-07:00");
+  phMidnight = Date.parse("2026-09-26T00:00:00-07:00");
+  phEnd = Date.parse("2026-10-25T00:00:00-07:00");
+  phLive() { const n = Date.now(); return n < this.phEnd; }
+  phRef = React.createRef();
+  phPulse() {
+    const a = this.phRef.current;
+    if (!a || !a.animate) return;
+    const kids = Array.from(a.children);
+    const ease = "cubic-bezier(.2,.8,.2,1)";
+    a.animate([{ boxShadow: "inset 0 0 0 0 rgba(255,255,255,0)" }, { boxShadow: "inset 0 0 0 999px rgba(255,255,255,.35)", offset: .15 }, { boxShadow: "inset 0 0 0 999px rgba(255,255,255,0)" }], { duration: 1400, iterations: 3, easing: "ease-out" });
+    if (kids[0]) kids[0].animate([{ transform: "scale(1) rotate(0)" }, { transform: "scale(1.4) rotate(-16deg)", offset: .25 }, { transform: "scale(.94) rotate(6deg)", offset: .5 }, { transform: "scale(1) rotate(0)", offset: .7 }, { transform: "scale(1) rotate(0)" }], { duration: 1400, iterations: 3, easing: ease });
+    kids.slice(1).forEach((k, i) => k.animate([{ transform: "scale(1)" }, { transform: "scale(1.08)", offset: .25 }, { transform: "scale(1)", offset: .6 }, { transform: "scale(1)" }], { duration: 1400, iterations: 3, delay: 120 + i * 120, easing: ease }));
+  }
+  confetti() {
+    try {
+      if (localStorage.getItem("slopmop-ph-confetti")) return;
+      localStorage.setItem("slopmop-ph-confetti", "1");
+    } catch (e) {}
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const c = document.createElement("canvas");
+    c.setAttribute("aria-hidden", "true");
+    c.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9999";
+    document.body.appendChild(c);
+    const ctx = c.getContext("2d"), dpr = window.devicePixelRatio || 1;
+    const W = window.innerWidth, H = window.innerHeight;
+    c.width = W * dpr; c.height = H * dpr; ctx.scale(dpr, dpr);
+    const cols = ["#FF6154", "#F5B400", "#2F6FBF", "#16181A", "#D93025"];
+    const ps = Array.from({ length: Math.min(180, Math.round(W / 6)) }, () => ({
+      x: Math.random() * W, y: -20 - Math.random() * H * 0.6, w: 6 + Math.random() * 6, h: 4 + Math.random() * 6,
+      vy: 2 + Math.random() * 3, vx: -1 + Math.random() * 2, r: Math.random() * 6.28, vr: -0.15 + Math.random() * 0.3,
+      sw: Math.random() * 6.28, c: cols[Math.floor(Math.random() * cols.length)]
+    }));
+    this.phPulse();
+    const t0 = performance.now();
+    const tick = (t) => {
+      const el = t - t0;
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalAlpha = el > 3500 ? Math.max(0, 1 - (el - 3500) / 1000) : 1;
+      ps.forEach((p) => {
+        p.sw += 0.05; p.x += p.vx + Math.sin(p.sw) * 0.6; p.y += p.vy; p.r += p.vr;
+        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r); ctx.fillStyle = p.c;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h * Math.abs(Math.cos(p.sw))); ctx.restore();
+      });
+      if (el < 4500) requestAnimationFrame(tick); else c.remove();
+    };
+    requestAnimationFrame(tick);
+  }
+
 
   thresholds = { mild: 0.40, moderate: 0.25, aggressive: 0.18 };
 
@@ -1028,7 +1088,12 @@ class Component extends DCLogic {
     const voteWord = vote === "no" ? "No" : vote === "maybe" ? "Maybe" : "Probably";
     const toggleVote = (k) => () => this.setState((s) => ({ voteOpen: Object.assign({}, s.voteOpen, { [k]: !s.voteOpen[k] }), active: k }));
 
+    const phToday = Date.now() < this.phMidnight;
     return {
+      phRef: this.phRef,
+      phShow: (this.props.phBar ?? true) && this.phLive(),
+      phUrl: this.props.phUrl ?? "https://www.producthunt.com/products/slop-mop",
+      phLine: phToday ? "Slop Mop is live on Product Hunt today." : "Slop Mop just launched on Product Hunt.",
       launched, sideload, preLaunch: !launched && !sideload,
       openStore: this.openStore, openRepo: this.openRepo, openZip: this.openZip,
       zipMeta: (this.props.zipMeta || "version 0.1.0 · chrome & chromium · mit licensed").toLowerCase(),
