@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works — Slop Mop</title>
+<meta name="description" content="What every part of Slop Mop's breakdown means: the score, the Slopprint's nine signs, and the three counter-signals (sounds like a person, useful to readers, reader response), with examples of each.">
+<link rel="canonical" href="https://slopmop.lol/how-it-works.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/how-it-works.html">
+<meta property="og:title" content="How it works — Slop Mop">
+<meta property="og:description" content="The score, the Slopprint and the three blue bars, explained with examples.">
+<meta property="og:image" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
+<meta name="twitter:image" content="https://slopmop.lol/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
+<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: var(--surface-card); color: var(--text-body); }
+  a { color: var(--text-link); text-decoration: none; }
+  a:hover { color: var(--blue-500); text-decoration: underline; }
+  section[id] { scroll-margin-top: 72px; }
+  .wrap { max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9); }
+  .intro { display: grid; gap: var(--space-5); max-width: 64ch; }
+  .kicker { font: var(--type-mono); color: var(--text-faint); }
+  .h2 { margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight); }
+  .h3 { margin: 0; font: var(--type-heading); }
+  .lede { margin: 0; font: var(--type-body); color: var(--text-muted); }
+  .small { margin: 0; font: var(--type-body-sm); color: var(--text-muted); }
+  .b { font-weight: var(--weight-semibold); color: var(--text-body); }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8); align-items: start; }
+  .box { display: grid; gap: var(--space-4); align-content: start; padding: var(--space-6); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--paper-000); }
+  .list { margin: 0; padding-left: 1.2em; display: grid; gap: var(--space-3); font: var(--type-body-sm); color: var(--text-muted); }
+  .ex { display: grid; gap: var(--space-4); align-content: start; padding: var(--space-6); border-radius: var(--radius-md); background: var(--paper-000); border: 1px solid var(--border-hairline); }
+  .ex.bad { border-left: 4px solid var(--red-500); }
+  .ex.good { border-left: 4px solid var(--blue-500); }
+  .ex q { quotes: none; font: var(--type-body-sm); color: var(--text-body); white-space: pre-line; }
+  .tag { font: var(--type-mono-label); text-transform: uppercase; letter-spacing: 0.04em; }
+  .bad .tag { color: var(--red-500); }
+  .good .tag { color: var(--blue-700); }
+  .why { font: var(--type-body-sm); color: var(--text-muted); }
+  .levels { display: grid; border-top: 1px solid var(--border-hairline); }
+  .level { display: grid; grid-template-columns: 110px 1fr; gap: var(--space-3) var(--space-7); align-items: center; padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); }
+  .bar { height: 6px; border-radius: var(--radius-pill); background: var(--paper-200); overflow: hidden; }
+  .bar i { display: block; height: 100%; border-radius: var(--radius-pill); background: var(--blue-500); }
+  .effect { display: grid; gap: var(--space-3); padding: var(--space-6); border-radius: var(--radius-md); background: var(--blue-100); }
+  .signs { display: grid; gap: var(--space-8); }
+  .sign { display: grid; gap: var(--space-5); padding-top: var(--space-8); border-top: 1px solid var(--border-hairline); }
+  .sign-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-3) var(--space-6); }
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-5); }
+  .num { display: inline-grid; place-items: center; width: 22px; height: 22px; flex: 0 0 auto; border-radius: var(--radius-pill); background: var(--ink-900); color: var(--paper-000); font: var(--type-mono-label); }
+  .parts { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-6); }
+  .parts li { display: grid; grid-template-columns: 22px 1fr; gap: var(--space-4); align-items: start; }
+  .mock { position: relative; display: grid; gap: var(--space-5); padding: var(--space-7) var(--space-7) var(--space-7) 52px; background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-pop, 0 8px 24px rgba(0,0,0,.08)); }
+  .mock .row { display: flex; align-items: center; gap: var(--space-4); }
+  .mock > * { position: relative; }
+  .mock .pin { position: absolute; left: -38px; top: 2px; }
+  .cbars { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-5); align-items: center; font: var(--type-body-sm); }
+  .flow { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; border-top: 1px solid var(--border-hairline); }
+  .flow li { display: grid; grid-template-columns: 40px minmax(0, 220px) 1fr; gap: var(--space-3) var(--space-7); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline); align-items: start; }
+  @media (max-width: 640px) {
+    .flow li { grid-template-columns: 32px 1fr; }
+    .flow li > :last-child { grid-column: 2; }
+    .level { grid-template-columns: 1fr; }
+  }
+</style>
+</helmet>
+
+<div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
+
+  <nav style="position: sticky; top: 0; z-index: 10; background: var(--surface-card); border-bottom: 1px solid var(--border-hairline)">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-7)">
+      <a href="index.html" aria-label="Slop Mop home" style="display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none">
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
+      </a>
+      <span style="display: flex; align-items: center; gap: var(--space-7); min-width: 0">
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <span style="display: flex; align-items: center; gap: var(--space-7)">
+            <a href="#slopprint" style="font: var(--type-ui); color: var(--text-muted)">Slopprint</a>
+            <a href="#sounds-like-a-person" style="font: var(--type-ui); color: var(--text-muted)">Sounds like a person</a>
+            <a href="#useful-to-readers" style="font: var(--type-ui); color: var(--text-muted)">Useful</a>
+            <a href="#reader-response" style="font: var(--type-ui); color: var(--text-muted)">Reader response</a>
+            <a href="#score" style="font: var(--type-ui); color: var(--text-muted)">The score</a>
+          </span>
+        </sc-if>
+        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openStore }}" hint-size="auto,32px">Add to browser</x-import>
+      </span>
+    </div>
+    <sc-if value="{{ isMobile }}">
+      <div style="display: flex; align-items: center; gap: var(--space-7); overflow-x: auto; white-space: nowrap; padding: var(--space-4) var(--space-7); border-top: 1px solid var(--border-hairline); background: var(--paper-100)">
+        <a href="#slopprint" style="font: var(--type-label); color: var(--text-muted)">Slopprint</a>
+        <a href="#sounds-like-a-person" style="font: var(--type-label); color: var(--text-muted)">Sounds like a person</a>
+        <a href="#useful-to-readers" style="font: var(--type-label); color: var(--text-muted)">Useful</a>
+        <a href="#reader-response" style="font: var(--type-label); color: var(--text-muted)">Reader response</a>
+        <a href="#score" style="font: var(--type-label); color: var(--text-muted)">The score</a>
+      </div>
+    </sc-if>
+  </nav>
+
+  <header style="padding: var(--space-11) var(--space-7) var(--space-9); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-6)">
+      <h1 style="margin: 0; font: var(--type-display); font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">How it works</h1>
+      <p style="margin: 0; max-width: 62ch; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Click the mop on any post and you get a breakdown: a score, a verdict, the Slopprint and three blue bars. Here's what each part means, what moves it, and what it can't tell you.</p>
+    </div>
+  </header>
+
+  <section id="panel" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div class="wrap">
+      <div class="intro">
+        <h2 class="h2">Reading the breakdown</h2>
+        <p class="lede">Every part of the panel, top to bottom. This example post was flagged, so it's drawn in red.</p>
+      </div>
+      <div class="two">
+        <div class="mock" aria-label="An example Slop Mop breakdown">
+          <div class="row"><span class="num pin">1</span><span style="font: var(--type-display); font-size: var(--text-2xl)">72</span><span class="kicker">/ 100</span></div>
+          <div class="row"><span class="num pin">2</span><span style="padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill); background: var(--red-100); color: var(--red-500); font: var(--type-label); font-weight: var(--weight-semibold)">Likely slop</span><span class="small">Engagement bait and “not X, but Y” framing.</span></div>
+          <div style="display: grid; gap: var(--space-2)">
+            <span class="num pin">3</span>
+            <div style="position: relative">
+              <div style="display: flex; height: 10px; border-radius: 999px; overflow: hidden"><span style="width: 15%; background: var(--blue-200)"></span><span style="width: 10%; background: var(--mop-200)"></span><span style="width: 75%; background: var(--red-200)"></span></div>
+              <div style="position: absolute; top: -2px; left: calc(72% - 7px); width: 14px; height: 14px; border-radius: 4px; background: var(--ink-900); border: 2px solid var(--paper-000)"></div>
+            </div>
+            <div style="display: flex; gap: var(--space-4); font: var(--type-mono); color: var(--text-faint)"><span style="width: 15%; min-width: max-content">fine</span><span style="width: 10%; min-width: max-content">possibly</span><span>likely</span></div>
+          </div>
+          <div>
+            <span class="num pin">4</span>
+            <span class="kicker">The Slopprint</span>
+            {{ demoRadar }}
+          </div>
+          <div>
+            <span class="num pin">5</span>
+            {{ demoBars }}
+          </div>
+          <div class="row"><span class="num pin">6</span><span class="small">2 flagged as slop · 0 maybe · 1 no</span></div>
+        </div>
+        <ol class="parts">
+          <li><span class="num">1</span><span class="small"><span class="b">The score, out of 100.</span> Higher means more slop-like. It's worked out after the three bars have taken their share off, so it's the final number.</span></li>
+          <li><span class="num">2</span><span class="small"><span class="b">The verdict.</span> Looks fine, Possibly slop or Likely slop, with the signs that pushed it there. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
+          <li><span class="num">3</span><span class="small"><span class="b">The range bar.</span> Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</span></li>
+          <li><span class="num">4</span><span class="small"><span class="b">The Slopprint.</span> Nine signs of slop, one per spoke. The further out a point sits, the more of that sign Jev found. <a href="#slopprint">All nine, with examples.</a></span></li>
+          <li><span class="num">5</span><span class="small"><span class="b">Three counter-signals.</span> <a href="#sounds-like-a-person">Sounds like a person</a>, <a href="#useful-to-readers">useful to readers</a> and <a href="#reader-response">reader response</a>. More blue means more evidence the post is worth reading. They can only lower the score, never raise it. There's no percentage because they're not grades: a short bar just means that line of defence isn't helping this post.</span></li>
+          <li><span class="num">6</span><span class="small"><span class="b">Community votes.</span> How other Slop Mop users voted on this post. Your own vote changes what you see; everyone's votes go into research on how well Slop Mop is working.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="slopprint" style="padding: var(--space-11) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
+    <div class="wrap">
+      <div class="intro">
+        <span class="kicker">the slopprint</span>
+        <h2 class="h2">Nine signs of slop</h2>
+        <p class="lede">Jev asks nine separate questions about the writing, one per spoke of the chart. The shape tells you <em>what kind</em> of slop a post is, not just how much. Six signs come from <a href="https://graphite.io/five-percent/research/ai-tells" target="_blank" rel="noopener">Graphite's research on AI tells</a>, which compared human and model writing. The last three are LinkedIn habits we added ourselves.</p>
+      </div>
+      <div class="two">
+        <div class="box">
+          <h3 class="h3">One spike isn't enough</h3>
+          <p class="small">Plenty of people have one over-the-top habit. When only one sign stands out, the score is cut. Slop usually shows up as several signs at once, and that's what gets flagged.</p>
+        </div>
+        <div class="box">
+          <h3 class="h3">Unsure answers count for less</h3>
+          <p class="small">Jev says how sure it is about each sign, and shaky answers carry less weight. If it isn't sure enough about the post overall, the post is left alone.</p>
+        </div>
+        <div class="box">
+          <h3 class="h3">The weights are private</h3>
+          <p class="small">Some signs count for more than others. The exact weights aren't published, so nobody can write a post that games them. That's the only part of the scoring we keep private.</p>
+        </div>
+      </div>
+
+      <div class="signs">
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Scroll-stopper</h3><span class="kicker">dramatic hook, one-line paragraphs, a moral</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>I got rejected 47 times.
+
+Then everything changed.
+
+Here's what I learned 👇</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>We rebuilt our onboarding flow in March. Trial-to-paid went from 9% to 14%, and most of that came from cutting one form field.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Engagement bait</h3><span class="kicker">asking for comments, reposts and follows</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>Comment "GUIDE" and I'll DM you the template. ♻️ Repost to help your network.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>If you've tried this with a team under ten people, I'd like to hear what happened.</q><span class="why">A genuine question barely registers. Formula asks and giveaways keyed to comments are what count.</span></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Hype words</h3><span class="kicker">marketing vocabulary</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>This game-changing framework will unlock unprecedented growth and elevate your brand.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>The framework cut our review cycle from five days to two.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Empty praise</h3><span class="kicker">evaluation with no detail behind it</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>An incredibly meaningful, truly transformative experience. This matters more than ever.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>The workshop got three of our five teams shipping behind feature flags within a week.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">No-catch promises</h3><span class="kicker">all benefit, no cost</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>Scale your output without sacrificing quality, without burning out, and without hiring.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>It saves us about ten hours a week. Setup took a month and we lost two integrations.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">“Not X, but Y”</h3><span class="kicker">defining things by what they aren't</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>Leadership isn't a title. It's a mindset. It's not about being right, it's about being curious.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>The best managers I've had asked more questions than they answered in one-to-ones.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Flowery prose</h3><span class="kicker">flourish instead of the plain claim</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>Growth is a delicate dance between vision and humility, a tapestry woven from quiet moments.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>We grew because two customers referred six more.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Stiff phrasing</h3><span class="kicker">stock transitions and hedges</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>Furthermore, this approach may provide additional benefits. Ultimately, it can support long-term outcomes.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>It helped. Not as much as we hoped, but enough to keep.</q></div>
+          </div>
+        </div>
+
+        <div class="sign">
+          <div class="sign-head"><h3 class="h3">Too-tidy story</h3><span class="kicker">an anecdote that exists to prove the moral</span></div>
+          <div class="pair">
+            <div class="ex bad"><span class="tag">Slop</span><q>A junior employee once asked me a question I'll never forget. That day, I realised leadership is about listening.</q></div>
+            <div class="ex good"><span class="tag">Fine</span><q>Last Tuesday our intern found a bug in the billing export that three of us had missed for a month. We now review exports in pairs.</q></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sounds-like-a-person" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div class="wrap">
+      <div class="intro">
+        <span class="kicker">counter-signal 1 of 3</span>
+        <h2 class="h2">Sounds like a person</h2>
+        <p class="lede">Does this read like one particular person, or like a generic professional voice that anyone could have written? Jev reads the text only.</p>
+      </div>
+      <div class="two">
+        <div class="box">
+          <h3 class="h3">What raises it</h3>
+          <ul class="list">
+            <li>Specific personal detail: names, places, dates or numbers from the writer's own life or work</li>
+            <li>Word choices and asides that are clearly theirs</li>
+            <li>Uneven rhythm: long sentences, short ones, fragments</li>
+            <li>Contractions and casual qualifiers (“pretty”, “sort of”)</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3 class="h3">What doesn't count on its own</h3>
+          <ul class="list">
+            <li>“I”, “my” or “we”</li>
+            <li>Naming the writer's company</li>
+            <li>“I believe”, “in my experience” and similar framing</li>
+          </ul>
+          <p class="small">Anyone writing on someone else's behalf uses those too, so they don't prove there's a real voice.</p>
+        </div>
+      </div>
+      <div class="levels" aria-label="The four levels Jev chooses between">
+        <div class="level"><div class="bar"><i style="width: 3%"></i></div><span class="small">Impersonal and uniform. No identifiable person behind it.</span></div>
+        <div class="level"><div class="bar"><i style="width: 33%"></i></div><span class="small">First person or a named company, but the phrasing and rhythm could be anyone's.</span></div>
+        <div class="level"><div class="bar"><i style="width: 67%"></i></div><span class="small">A recognisable voice: some personal specifics, and phrasing or rhythm that feels like this writer's own.</span></div>
+        <div class="level"><div class="bar"><i style="width: 100%"></i></div><span class="small">Unmistakably one person: idiosyncratic phrasing, specific personal detail, varied rhythm, asides.</span></div>
+      </div>
+      <div class="pair">
+        <div class="ex bad"><span class="tag">Short bar</span><q>As leaders, we must embrace change. I believe the future belongs to those who adapt. At our company, we are committed to growth.</q><span class="why">It's in the first person, but anyone could have written it.</span></div>
+        <div class="ex good"><span class="tag">Long bar</span><q>Spent Monday rewriting our pricing page for the third time (don't ask). The version that finally worked was the ugly one my co-founder sketched on a train to Leeds.</q><span class="why">Details, an aside and a rhythm that only this person would produce.</span></div>
+      </div>
+      <div class="effect">
+        <h3 class="h3">What it does to the score</h3>
+        <p class="small">It takes a little off the slop score. It's a nudge, not an exemption: a very personal post stuffed with engagement bait can still be flagged.</p>
+        <p class="small">This is not the same as “was it written by AI?” Slop Mop asks that separately, and the answer can only soften the score of a post that reads as typed by a person. It never flags a post by itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="useful-to-readers" style="padding: var(--space-11) var(--space-7); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
+    <div class="wrap">
+      <div class="intro">
+        <span class="kicker">counter-signal 2 of 3</span>
+        <h2 class="h2">Useful to readers</h2>
+        <p class="lede">Could someone doing the job learn something from this post, or act on it? Who or what wrote it doesn't matter. Useful AI-assisted writing scores just as well as useful writing typed by hand.</p>
+      </div>
+      <div class="two">
+        <div class="box">
+          <h3 class="h3">What counts</h3>
+          <ul class="list">
+            <li>Specific facts and numbers</li>
+            <li>Named, concrete examples</li>
+            <li>First-hand experience, with the details</li>
+            <li>A method or step a reader could follow</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3 class="h3">What doesn't count on its own</h3>
+          <ul class="list">
+            <li>An opinion or position, however well argued</li>
+            <li>A framing, a manifesto or a call for change</li>
+            <li>Citing a well-known source or disclaimer</li>
+            <li>“More on this in my next post”</li>
+          </ul>
+          <p class="small">A thoughtful opinion piece can be worth reading. It just isn't what this bar measures.</p>
+        </div>
+      </div>
+      <div class="levels" aria-label="The four levels Jev chooses between">
+        <div class="level"><div class="bar"><i style="width: 3%"></i></div><span class="small">Nothing a reader could use: platitudes, self-promotion, or a teaser for other content.</span></div>
+        <div class="level"><div class="bar"><i style="width: 33%"></i></div><span class="small">Opinion, commentary or familiar advice: you learn the author's view, but no fact, example or method you didn't already have.</span></div>
+        <div class="level"><div class="bar"><i style="width: 67%"></i></div><span class="small">At least one specific thing a typical reader in the field wouldn't already know: a concrete example, number, first-hand result, or step to follow.</span></div>
+        <div class="level"><div class="bar"><i style="width: 100%"></i></div><span class="small">Substantial: several concrete details, real data or first-hand experience, and something you could act on today.</span></div>
+      </div>
+      <div class="pair">
+        <div class="ex bad"><span class="tag">Short bar</span><q>AI is changing everything. Businesses that don't adapt will be left behind. The winners will be the ones who put customers first.</q><span class="why">True enough, but there's nothing a reader didn't already know.</span></div>
+        <div class="ex good"><span class="tag">Long bar</span><q>We moved support triage to a two-question form. First response dropped from 11 hours to 3. The one thing it broke was refunds, so those now skip the form. The form is below.</q><span class="why">Numbers, a trade-off and something you could copy tomorrow.</span></div>
+      </div>
+      <div class="effect">
+        <h3 class="h3">Useful isn't the same as popular</h3>
+        <p class="small">A post nobody has commented on yet can score high here, and a viral post can score low. Popularity has its own bar, <a href="#reader-response">reader response</a>. When a post is checked again later, Jev sees what readers have done since. Real discussion and reposts count as evidence that people found something in it. A quiet post isn't marked down for being new.</p>
+        <p class="small">Usefulness is half of the shield: a genuinely useful post has a large share of its slop score taken off. Never all of it, so a useful post buried in bait can still be flagged.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reader-response" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div class="wrap">
+      <div class="intro">
+        <span class="kicker">counter-signal 3 of 3</span>
+        <h2 class="h2">Reader response</h2>
+        <p class="lede">What readers actually did with the post: reactions, comments and reposts. This one isn't Jev's opinion. It's worked out from the counts shown under the post.</p>
+      </div>
+      <div class="two">
+        <div class="box">
+          <h3 class="h3">Effort counts more than taps</h3>
+          <p class="small">A comment costs someone minutes, and a repost puts the post in front of their whole network. Both count for far more than a one-tap reaction.</p>
+        </div>
+        <div class="box">
+          <h3 class="h3">Hollow engagement is discounted</h3>
+          <p class="small">Hundreds of reactions with almost no comments or reposts is what an engagement pod or a cheap hook looks like. Once a post has lots of reactions, a thin comment-and-repost rate earns it less credit.</p>
+        </div>
+        <div class="box">
+          <h3 class="h3">The first responses move it most</h3>
+          <p class="small">The scale is logarithmic. A post's first comments and reposts move the bar a lot; the thousandth reaction barely moves it. Filling it takes a very large, genuinely engaged audience.</p>
+        </div>
+      </div>
+      <div class="levels" aria-label="Illustrative examples">
+        <div class="level"><div class="bar"><i style="width: 0%"></i></div><span class="small"><span class="b">Just posted.</span> Nothing yet, so there's no bar. That's normal, not a mark against the post.</span></div>
+        <div class="level"><div class="bar"><i style="width: 22%"></i></div><span class="small"><span class="b">A handful of reactions, or one repost.</span> A thin sliver.</span></div>
+        <div class="level"><div class="bar"><i style="width: 45%"></i></div><span class="small"><span class="b">A few dozen reactions and a few comments.</span> A real response, but a small one.</span></div>
+        <div class="level"><div class="bar"><i style="width: 50%"></i></div><span class="small"><span class="b">Hundreds of reactions, almost no comments.</span> Discounted as hollow, so it lands about where a much smaller post with real discussion does.</span></div>
+        <div class="level"><div class="bar"><i style="width: 75%"></i></div><span class="small"><span class="b">A real discussion:</span> dozens of comments and reposts on top of the reactions.</span></div>
+      </div>
+      <p class="small" style="max-width: 64ch">These bars are illustrative. The exact weights can change as we tune them.</p>
+      <div class="effect">
+        <h3 class="h3">What it does to the score</h3>
+        <p class="small">Reader response is the other half of the shield, alongside usefulness. Together they can take a large share off a post's slop score, but never all of it.</p>
+        <p class="small">Posts are scored when you first scroll near them and checked again as they pick up engagement, so a new post starts with an empty bar and can fill it later. Your own posts and drafts leave this bar out entirely: nobody has reacted to a draft, and your colour should reflect your writing, not your reach.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="score" style="padding: var(--space-11) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
+    <div class="wrap">
+      <div class="intro">
+        <h2 class="h2">How it adds up</h2>
+        <p class="lede">From eleven answers to one score, in order.</p>
+      </div>
+      <ol class="flow">
+        <li><span class="num">1</span><span class="h3">Nine signs</span><span class="small">Jev's answers on the Slopprint are weighted and combined into a slop score. A single sign standing out on its own is cut; shaky answers count for less.</span></li>
+        <li><span class="num">2</span><span class="h3">Sounds like a person</span><span class="small">Takes a little off.</span></li>
+        <li><span class="num">3</span><span class="h3">The shield</span><span class="small">Half usefulness, half reader response. Takes a share off the score, up to a cap, so no post is cleared by the shield alone.</span></li>
+        <li><span class="num">4</span><span class="h3">Human-typed?</span><span class="small">If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</span></li>
+        <li><span class="num">5</span><span class="h3">Your threshold</span><span class="small">The final score is compared with your sensitivity setting. Looks fine is left alone. In Highlight mode, Possibly gets a yellow outline and Likely a red one. In Hide mode, posts past your threshold fold away.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="wrong" style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-5); justify-items: start">
+      <h2 class="h2">When it gets one wrong</h2>
+      <p style="margin: 0; max-width: 62ch; font: var(--type-body); color: var(--text-muted)">Click the mop beside the post's “…” menu and vote No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how we tune the questions. If a bar looks badly off, email <a href="mailto:hello@slopmop.lol?subject=Slop%20Mop%20scoring">hello@slopmop.lol</a> with the post's link and which bar surprised you.</p>
+      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" variant="secondary" icon="send" on-click="{{ openMail }}" hint-size="auto,38px">Email hello@slopmop.lol</x-import>
+    </div>
+  </section>
+
+  <footer style="padding: var(--space-10) var(--space-7)">
+    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-8); flex-wrap: wrap">
+        <div style="display: flex; align-items: center; gap: var(--space-5)">
+          <span style="display: block; width: 64px; height: 64px; border-radius: var(--radius-pill); overflow: hidden; background: var(--paper-200); flex: 0 0 auto">
+            <image-slot id="tom-headshot" shape="circle" fit="contain" src="mop.svg" style="width: 64px; height: 64px"></image-slot>
+          </span>
+          <span style="display: grid; gap: var(--space-2)">
+            <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a></span>
+            <span style="font: var(--type-body-sm); color: var(--text-muted)">Say hello: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span>
+          </span>
+        </div>
+        <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
+          <a href="index.html" style="font: var(--type-ui)">Home</a>
+          <a href="how-it-works.html" style="font: var(--type-ui)">How it works</a>
+          <a href="about.html" style="font: var(--type-ui)">About</a>
+          <a href="help.html" style="font: var(--type-ui)">Help</a>
+          <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
+          <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
+          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
+        </span>
+      </div>
+      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">research project, not a product · mit licensed, self-host the server if you want · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { isMobile: typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches };
+
+  axes = ["Scroll-stopper", "Engagement bait", "Hype words", "Empty praise", "No-catch promises", "“Not X, but Y”", "Flowery prose", "Stiff phrasing", "Too-tidy story"];
+
+  demo = { values: [0.55, 0.88, 0.35, 0.45, 0.2, 0.82, 0.3, 0.25, 0.4], person: 22, useful: 15, reader: 30 };
+
+  componentDidMount() {
+    this.mq = window.matchMedia("(max-width: 900px)");
+    this.onMq = () => this.setState({ isMobile: this.mq.matches });
+    this.mq.addEventListener("change", this.onMq);
+    this.onMq();
+  }
+  componentWillUnmount() { if (this.mq) this.mq.removeEventListener("change", this.onMq); }
+
+  radar(post, color) {
+    const e = React.createElement;
+    const cx = 210, cy = 142, R = 80, n = this.axes.length;
+    const pt = (i, r) => [cx + r * Math.sin((2 * Math.PI * i) / n), cy - r * Math.cos((2 * Math.PI * i) / n)];
+    const ring = (f, k) => e("polygon", { key: "r" + k, points: this.axes.map((_, i) => pt(i, R * f).join(",")).join(" "), fill: "none", stroke: "var(--ink-100)", strokeWidth: 1 });
+    const grid = [0.25, 0.5, 0.75, 1].map(ring);
+    const spokes = this.axes.map((_, i) => {
+      const p = pt(i, R);
+      return e("line", { key: "s" + i, x1: cx, y1: cy, x2: p[0], y2: p[1], stroke: "var(--ink-100)", strokeWidth: 1 });
+    });
+    const v = post.values.map((x) => Math.max(x, 0.05));
+    const poly = e("polygon", { key: "poly", points: v.map((x, i) => pt(i, R * x).join(",")).join(" "), fill: color, fillOpacity: 0.16, stroke: color, strokeWidth: 2, strokeLinejoin: "round" });
+    const dots = v.map((x, i) => {
+      const p = pt(i, R * x);
+      return e("circle", { key: "d" + i, cx: p[0], cy: p[1], r: 2.5, fill: color });
+    });
+    const labels = this.axes.map((name, i) => {
+      const p = pt(i, R + 20);
+      const anchor = p[0] > cx + 6 ? "start" : p[0] < cx - 6 ? "end" : "middle";
+      const strong = post.values[i] >= 0.6;
+      return e("text", { key: "t" + i, x: p[0], y: p[1], textAnchor: anchor, dominantBaseline: "middle", fontFamily: "var(--font-body)", fontSize: 13, fontWeight: strong ? 600 : 400, fill: strong ? "var(--ink-900)" : "var(--ink-600)" }, name);
+    });
+    return e("svg", { viewBox: "0 0 420 276", width: "100%", style: { maxWidth: 420, display: "block", margin: "0 auto" }, role: "img", "aria-label": "Slopprint: engagement bait and not X, but Y stand out" }, grid, spokes, poly, dots, labels);
+  }
+
+  // Matches the extension: no percentages, the bar is the number.
+  bars(post) {
+    const e = React.createElement;
+    const row = (label, val, href) => [
+      e("a", { key: label, href, style: { color: "var(--text-body)" } }, label),
+      e("span", { key: label + "-bar", style: { height: 6, borderRadius: 3, background: "var(--paper-200)", overflow: "hidden" } },
+        e("span", { style: { display: "block", height: "100%", width: val + "%", background: "var(--blue-500)" } })),
+    ];
+    return e("div", { className: "cbars" },
+      row("Sounds like a person", post.person, "#sounds-like-a-person"),
+      row("Useful to readers", post.useful, "#useful-to-readers"),
+      row("Reader response", post.reader, "#reader-response"));
+  }
+
+  renderVals() {
+    const storeUrl = this.props.storeUrl || "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho";
+    return {
+      isMobile: this.state.isMobile, isDesktop: !this.state.isMobile, storeUrl,
+      demoRadar: this.radar(this.demo, "var(--red-500)"),
+      demoBars: this.bars(this.demo),
+      openStore: () => window.open(storeUrl, "_blank", "noopener"),
+      openMail: () => { window.location.href = "mailto:hello@slopmop.lol?subject=Slop%20Mop%20scoring"; },
+    };
+  }
+}
+</script>
+</body>
+</html>
