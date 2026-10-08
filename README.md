@@ -9,6 +9,7 @@ index.html          landing page
 about.html          canonical product information
 privacy.html        privacy policy
 terms.html          terms of service (served at /terms)
+open-source.html    the MIT-licensed version, links to the public repo (served at /open-source)
 help.html           install + troubleshooting
 _ds/                design tokens + component bundle
 support.js          component runtime

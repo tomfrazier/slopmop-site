@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy policy — Slop Mop</title>
-<meta name="description" content="What Slop Mop sends to api.slopmop.lol, what it stores (hashed post text, scores, engagement counts, a salted install-id hash, votes), how long check logs are kept, and how to reach a human.">
-<link rel="canonical" href="https://slopmop.lol/privacy.html">
+<title>Open source — Slop Mop</title>
+<meta name="description" content="The original Slop Mop extension and judging server are MIT licensed and public on GitHub. Read the code, fork it, and point the extension at your own /judge endpoint.">
+<link rel="canonical" href="https://slopmop.lol/open-source">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Slop Mop">
-<meta property="og:url" content="https://slopmop.lol/privacy.html">
-<meta property="og:title" content="Privacy policy — Slop Mop">
-<meta property="og:description" content="Plainly: what leaves your browser, what is stored, how long it is kept, and who to email.">
+<meta property="og:url" content="https://slopmop.lol/open-source">
+<meta property="og:title" content="Open source — Slop Mop">
+<meta property="og:description" content="The MIT-licensed Slop Mop extension and server code: read it, fork it, run your own judge.">
 <meta property="og:image" content="https://slopmop.lol/og-image.png">
 <meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
 <meta property="og:image:type" content="image/png">
@@ -29,10 +29,10 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://slopmop.lol/privacy.html#page",
-  "url": "https://slopmop.lol/privacy.html",
-  "name": "Privacy policy — Slop Mop",
-  "description": "What Slop Mop sends to api.slopmop.lol, what it stores, how long check logs are kept, and how to get in touch.",
+  "@id": "https://slopmop.lol/open-source#page",
+  "url": "https://slopmop.lol/open-source",
+  "name": "Open source — Slop Mop",
+  "description": "The MIT-licensed version of the Slop Mop extension and judging server, public on GitHub.",
   "inLanguage": "en",
   "isPartOf": { "@type": "WebSite", "@id": "https://slopmop.lol/#website", "url": "https://slopmop.lol/", "name": "Slop Mop" },
   "about": { "@type": "SoftwareApplication", "@id": "https://slopmop.lol/#app", "name": "Slop Mop" },
@@ -72,74 +72,56 @@
 
   <header style="padding: var(--space-11) var(--space-7) var(--space-9); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h1 style="margin: 0; font: var(--type-display); font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">Privacy policy</h1>
-      <p style="margin: 0; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Slop Mop is a research project. It reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. This page says exactly what that means.</p>
-      <p style="margin: 0; font: var(--type-mono); color: var(--text-faint)">last updated 20 september 2026</p>
+      <h1 style="margin: 0; font: var(--type-display); font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">The open-source version</h1>
+      <p style="margin: 0; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Slop Mop started as an MIT-licensed project, and that code is still public. The extension, the judging server and the sign library are all there to read, fork and run yourself.</p>
+      <div style="display: flex; gap: var(--space-5); flex-wrap: wrap; align-items: center">
+        <a href="https://github.com/tomfrazier/slopmop" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-6); border-radius: var(--radius-md); background: var(--surface-inverse); color: var(--paper-100); font: var(--type-ui); text-decoration: none">View the code on GitHub &rarr;</a>
+        <span style="font: var(--type-mono); color: var(--text-faint)">github.com/tomfrazier/slopmop · mit licensed</span>
+      </div>
     </div>
   </header>
 
   <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">The server</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">All judging requests go to one host: <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>. Nothing else is contacted by the extension. If you run your own copy, this is the address you change.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What leaves your browser</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The post text and its public engagement counts are sent to <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>, and the text is passed on from there to TypeSafe's Jev, which produces the answers behind the score. Your name is never sent, and neither is the author's.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-7)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What is stored</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Five things, and nothing else:</p>
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What's in the repo</h2>
       <div style="display: grid; gap: var(--space-2)">
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-ui); flex: 0 0 auto">A hash of the post text</span>
-          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">a one-way hash, so the same post isn't judged twice. The text itself is not kept.</span>
+          <span style="font: var(--type-ui); flex: 0 0 auto">The extension</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">the Chrome extension: reading posts ahead, hide and highlight modes, the popup, votes.</span>
         </div>
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-ui); flex: 0 0 auto">Scores</span>
-          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">Jev's answers to the eleven questions, the slop score, and when the post was first seen.</span>
+          <span style="font: var(--type-ui); flex: 0 0 auto">The judging server</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">the worker behind the <span style="font: var(--type-mono); color: var(--text-body)">/judge</span> endpoint: asks the questions, weighs the answers, returns a score.</span>
         </div>
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-ui); flex: 0 0 auto">Engagement counts</span>
-          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">the public reaction and comment numbers the usefulness check reads.</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-ui); flex: 0 0 auto">A salted hash of the install id</span>
-          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">enough to count installs and dedupe votes, not enough to identify you.</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-ui); flex: 0 0 auto">Votes</span>
-          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">your No, Maybe or Probably on a post, tallied under that salted hash.</span>
+          <span style="font: var(--type-ui); flex: 0 0 auto">The signs and weights</span>
+          <span style="font: var(--type-body-sm); color: var(--text-muted); text-align: right">the questions behind each sign of slop, and how much each one counts.</span>
         </div>
       </div>
-      <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">No LinkedIn profile data, no browsing history, no cookies set by the extension, and no advertising or analytics vendors. Usage is capped at 250 checks per install per day.</p>
     </div>
   </section>
-
   <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Retention</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Check logs — the operational record of requests hitting the server — are kept for <strong style="font-weight: var(--weight-semibold)">90 days</strong> and then deleted.</p>
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What you can do with it</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Anything the MIT licence allows. Point the extension at your own <span style="font: var(--type-mono); color: var(--text-body)">/judge</span> endpoint, change the weights, or swap the sign library for your own. No permission needed, and nothing about your copy reports back here.</p>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">You will need your own access to a model to do the judging. The licence text is in the repo.</p>
     </div>
   </section>
-
   <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">The code</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The extension and the judging server are MIT licensed. You can read exactly what is sent and stored, and run your own server if you would rather not use this one.</p>
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">How it relates to slopmop.lol</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The extension you install from this site is free to use, and it talks to a separate, privately run judging server at <span style="font: var(--type-mono); color: var(--text-body)">api.slopmop.lol</span>. That server is not open source and may work differently from the code on GitHub. Using it is covered by the <a href="terms.html">terms of service</a> and the <a href="privacy.html">privacy policy</a>.</p>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The open-source code is its own thing: the MIT licence applies to that code, and to nothing else.</p>
     </div>
   </section>
-
   <section style="padding: var(--space-10) var(--space-7)">
     <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Contact</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Questions, corrections, or a request to have your votes removed: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
+      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Get the code</h2>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Questions, or something you built with it: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
+      <div style="display: flex; gap: var(--space-5); flex-wrap: wrap; align-items: center">
+        <a href="https://github.com/tomfrazier/slopmop" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-6); border-radius: var(--radius-md); background: var(--surface-inverse); color: var(--paper-100); font: var(--type-ui); text-decoration: none">View the code on GitHub &rarr;</a>
+        <span style="font: var(--type-mono); color: var(--text-faint)">github.com/tomfrazier/slopmop · mit licensed</span>
+      </div>
     </div>
   </section>
 
