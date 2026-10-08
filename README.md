@@ -8,6 +8,7 @@ Marketing site for [Slop Mop](https://slopmop.lol) — a free, MIT-licensed Chro
 index.html          landing page
 about.html          canonical product information
 privacy.html        privacy policy
+terms.html          terms of service (served at /terms)
 help.html           install + troubleshooting
 _ds/                design tokens + component bundle
 support.js          component runtime
