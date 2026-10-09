@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="shared.css"><style>
+.left{position:absolute;left:120px;top:0;bottom:88px;width:600px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font:500 20px var(--mono);color:var(--ink-500);margin-bottom:28px}
+h1{font-weight:700;font-size:78px;line-height:1.04;letter-spacing:-.02em}
+.sub{margin-top:32px;font-size:28px;line-height:1.45;color:var(--ink-600)}
+.legend{margin-top:48px;display:flex;flex-direction:column;gap:16px;font-size:22px;color:var(--ink-700)}
+.legend div{display:flex;align-items:center;gap:14px}
+.sw{width:22px;height:22px;border-radius:4px;flex:none}
+.feed{position:absolute;left:800px;top:96px;width:600px;display:flex;flex-direction:column;gap:20px}
+.post{padding:24px 26px}
+.post .who{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.post .n{font-weight:600;font-size:18px}.post .t{font:400 13px var(--mono);color:var(--ink-500)}
+.post p{font-size:18px;line-height:1.55;color:var(--ink-800)}
+.post .top{display:flex;justify-content:space-between;align-items:flex-start}
+.why{position:absolute;left:1440px;top:250px;width:380px;padding:24px 26px;background:#fff;border:1px solid var(--ink-100);border-radius:12px;box-shadow:var(--shadow-pop)}
+.why h3{font-weight:600;font-size:18px;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.why .score{font:500 30px var(--mono);color:var(--red-700)}
+.why .thr{font:400 13px var(--mono);color:var(--ink-500);margin-bottom:18px}
+.row{display:grid;grid-template-columns:150px 1fr 44px;gap:12px;align-items:center;margin-bottom:11px;font-size:15px;color:var(--ink-700)}
+.bar{height:8px;border-radius:999px;background:var(--paper-200);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px}
+.row .v{font:400 13px var(--mono);color:var(--ink-500);text-align:right}
+.sep{height:1px;background:var(--ink-100);margin:14px 0}
+.vote{display:flex;gap:8px;margin-top:16px}
+.vote span{flex:1;height:36px;border:1px solid var(--ink-200);border-radius:6px;display:flex;align-items:center;justify-content:center;font:500 15px var(--sans);color:var(--ink-700)}
+.vote span.on{background:var(--ink-900);color:#fff;border-color:var(--ink-900)}
+.why .lbl{font:500 12px var(--mono);color:var(--ink-500);margin-bottom:10px}
+</style></head><body>
+<div class="left">
+  <div class="eyebrow">reads ahead · explains · you decide</div>
+  <h1>See the verdict before you spend the attention.</h1>
+  <p class="sub">Every post is scored before it reaches your screen. Open any one to see the signals behind it.</p>
+  <div class="legend">
+    <div><span class="sw" style="background:var(--gradient-fold);border:1px solid var(--ink-200)"></span>Hide folds it into a strip</div>
+    <div><span class="sw" style="background:var(--mop-500)"></span>Highlight: some tells</div>
+    <div><span class="sw" style="background:var(--red-500)"></span>Highlight: likely slop</div>
+  </div>
+</div>
+<div class="feed">
+  <div class="card post"><div class="who"><div class="avatar"></div><div><div class="n">Dana Whitfield</div><div class="t">3h · edited</div></div></div>
+    <p>Rewrote our onboarding email over the weekend. Open rate went from 31% to 44%. The old one buried its only useful sentence in paragraph four.</p></div>
+  <div class="fold"><span data-mark="20"></span><b>Mopped.</b><span class="tells">engagement bait · hype words</span><span class="show">show me anyway</span></div>
+  <div class="card post flag-warn"><div class="top"><div class="who"><div class="avatar"></div><div><div class="n">Marcus Vale</div><div class="t">7h</div></div></div><span class="chip warn">Some AI tells</span></div>
+    <p>Most founders won’t like this.<br>I turned down a seven-figure offer at 24.<br>It wasn’t about the money — it was about the mission.</p></div>
+  <div class="card post flag-danger"><div class="top"><div class="who"><div class="avatar"></div><div><div class="n">Jordan Pike</div><div class="t">1d</div></div></div><span class="chip danger">Likely slop</span></div>
+    <p>Leadership isn’t a title. It’s a mindset. 🚀<br>Agree? Comment “YES” below.</p></div>
+  <div class="fold"><span data-mark="20"></span><b>Mopped.</b><span class="tells">scroll-stopper · empty praise</span><span class="show">show me anyway</span></div>
+</div>
+<div class="why">
+  <h3>Why this was flagged<span class="score">0.81</span></h3>
+  <div class="thr">threshold 0.50 (moderate)</div>
+  <div class="row">Engagement bait<div class="bar"><i style="width:94%;background:var(--red-500)"></i></div><span class="v">0.94</span></div>
+  <div class="row">“Not X, but Y”<div class="bar"><i style="width:88%;background:var(--red-500)"></i></div><span class="v">0.88</span></div>
+  <div class="row">Hype words<div class="bar"><i style="width:71%;background:var(--mop-500)"></i></div><span class="v">0.71</span></div>
+  <div class="row">Scroll-stopper<div class="bar"><i style="width:62%;background:var(--mop-500)"></i></div><span class="v">0.62</span></div>
+  <div class="row">Empty praise<div class="bar"><i style="width:18%;background:var(--ink-300)"></i></div><span class="v">0.18</span></div>
+  <div class="sep"></div>
+  <div class="lbl">counter-signals</div>
+  <div class="row">Sounds human<div class="bar"><i style="width:12%;background:var(--blue-500)"></i></div><span class="v">0.12</span></div>
+  <div class="row">Useful to readers<div class="bar"><i style="width:8%;background:var(--blue-500)"></i></div><span class="v">0.08</span></div>
+  <div class="lbl" style="margin-top:14px">is it slop?</div>
+  <div class="vote"><span>No</span><span>Maybe</span><span class="on">Probably</span></div>
+</div>
+<div class="foot"><div class="lockup"><span data-mark="34"></span>Slop Mop<span class="dom">slopmop.lol</span></div><div class="meta">nothing is deleted · every post stays one click away</div></div>
+<script src="mark.js"></script></body></html>

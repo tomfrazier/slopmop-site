@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="shared.css"><style>
+.head{position:absolute;left:120px;right:120px;top:112px;display:flex;justify-content:space-between;align-items:flex-end}
+h1{font-weight:700;font-size:72px;line-height:1.04;letter-spacing:-.02em}
+.head p{font-size:24px;line-height:1.45;color:var(--ink-600);max-width:560px;text-align:right}
+.grid{position:absolute;left:120px;right:120px;top:330px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:28px}
+.tile{display:flex;flex-direction:column}
+.tile .lab{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+.tile .lab b{font-weight:600;font-size:26px}
+.tile .lab span{font:400 15px var(--mono);color:var(--ink-500)}
+.surf{flex:1;min-height:500px;background:#fff;border:1px solid var(--ink-100);border-radius:12px;box-shadow:var(--shadow-card);padding:20px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.ln{height:10px;border-radius:999px;background:var(--ink-100)}
+.ln.d{background:var(--ink-200)}
+.mini{border:1px solid var(--ink-100);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.mini .who{display:flex;gap:10px;align-items:center}
+.mini .av{width:26px;height:26px;border-radius:50%;background:var(--ink-100);flex:none}
+.surf .fold{height:42px;font-size:15px;padding:0 12px;gap:8px}
+.surf .fold .tells{font-size:12px}.surf .fold .show{font-size:12px}
+.surf .chip{height:22px;font-size:12px;padding:0 8px}
+.hl{background:var(--mop-100);box-shadow:inset 3px 0 0 var(--mop-500);border-radius:4px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.mail{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--ink-050)}
+.mail .dot{width:8px;height:8px;border-radius:50%;background:var(--blue-500);flex:none}
+.mail .from{width:70px;height:10px;border-radius:999px;background:var(--ink-200);flex:none}
+.reply{margin-left:28px}
+.t{font-size:15px;line-height:1.45;color:var(--ink-800)}
+.title{font-weight:700;font-size:22px;line-height:1.2}
+</style></head><body>
+<div class="head">
+  <h1>Same mop.<br>More floors.</h1>
+  <p>Slop Mop judges writing wherever you read it. Same eleven questions, same threshold, same override.</p>
+</div>
+<div class="grid">
+  <div class="tile"><div class="lab"><b>Social feeds</b><span>posts</span></div>
+    <div class="surf">
+      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:40%"></div></div><div class="t">Shipped the fix at 2am. Root cause was a timezone, as usual.</div></div>
+      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">engagement bait</span></div>
+      <div class="mini flag-warn"><div class="who"><div class="av"></div><div class="ln d" style="width:34%"></div><span class="chip warn" style="margin-left:auto">Some tells</span></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div></div>
+      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">scroll-stopper</span></div>
+      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:46%"></div></div><div class="ln" style="width:88%"></div><div class="ln" style="width:52%"></div></div>
+    </div></div>
+  <div class="tile"><div class="lab"><b>Articles</b><span>paragraphs</span></div>
+    <div class="surf">
+      <div class="title">What we learned migrating 40 services</div>
+      <div class="ln d" style="width:42%;height:8px"></div>
+      <div class="ln" style="width:100%"></div><div class="ln" style="width:96%"></div><div class="ln" style="width:80%"></div>
+      <div class="hl"><span class="chip warn" style="align-self:flex-start">Some AI tells</span><div class="t">In today’s fast-paced landscape, migration isn’t just a project — it’s a journey.</div></div>
+      <div class="ln" style="width:100%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:97%"></div><div class="ln" style="width:60%"></div>
+      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">flowery prose</span></div>
+    </div></div>
+  <div class="tile"><div class="lab"><b>Email</b><span>newsletters &amp; pitches</span></div>
+    <div class="surf" style="gap:0">
+      <div class="mail"><span class="dot"></span><span class="from"></span><span class="t" style="font-size:14px">Invoice #4471 attached</span></div>
+      <div class="fold" style="margin:8px 0"><span data-mark="16"></span><b>Mopped.</b><span class="tells">no-catch promises</span></div>
+      <div class="mail"><span class="dot"></span><span class="from"></span><span class="t" style="font-size:14px">Thursday standup moved to 10</span></div>
+      <div class="mail" style="background:var(--red-100);border-radius:6px;box-shadow:inset 3px 0 0 var(--red-500)"><span class="dot" style="background:var(--red-500)"></span><span class="from"></span><span class="t" style="font-size:14px;flex:1">Quick question 🚀</span><span class="chip danger">Likely slop</span></div>
+      <div class="mail"><span class="dot" style="background:var(--ink-200)"></span><span class="from"></span><span class="t" style="font-size:14px">Your notes from Monday</span></div>
+      <div class="fold" style="margin:8px 0"><span data-mark="16"></span><b>Mopped.</b><span class="tells">hype words</span></div>
+      <div class="mail"><span class="dot" style="background:var(--ink-200)"></span><span class="from"></span><span class="t" style="font-size:14px">Re: Q3 budget draft</span></div>
+      <div class="mail"><span class="dot" style="background:var(--ink-200)"></span><span class="from"></span><span class="t" style="font-size:14px">Lease renewal, two questions</span></div>
+    </div></div>
+  <div class="tile"><div class="lab"><b>Comments</b><span>replies &amp; threads</span></div>
+    <div class="surf">
+      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:36%"></div></div><div class="t">Did you benchmark against the old index? Curious about cold reads.</div></div>
+      <div class="reply fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">empty praise</span></div>
+      <div class="reply mini"><div class="who"><div class="av"></div><div class="ln d" style="width:40%"></div></div><div class="t">Cold reads were 2× slower. Warm was flat.</div></div>
+      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">empty praise</span></div>
+      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">engagement bait</span></div>
+      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:30%"></div></div><div class="ln" style="width:84%"></div></div>
+    </div></div>
+</div>
+<div class="foot"><div class="lockup"><span data-mark="34"></span>Slop Mop<span class="dom">slopmop.lol</span></div><div class="meta">hide or highlight · your threshold · your call</div></div>
+<script src="mark.js"></script></body></html>

@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="shared.css"><style>
+body{background:#fff}
+.left{position:absolute;left:120px;top:0;bottom:88px;width:900px;display:flex;flex-direction:column;justify-content:center}
+.big{display:flex;align-items:center;gap:28px;margin-bottom:56px}
+.big .name{font-weight:700;font-size:64px;letter-spacing:-.01em}
+.big .pill{height:48px;font-size:24px;padding:0 20px}
+h1{font-weight:700;font-size:112px;line-height:1.02;letter-spacing:-.02em}
+.sub{margin-top:36px;font-size:34px;line-height:1.4;color:var(--ink-600);max-width:760px}
+.right{position:absolute;right:0;top:0;bottom:88px;width:820px;background:var(--paper-100);border-left:1px solid var(--ink-100);display:flex;align-items:center;justify-content:center}
+.stack{width:600px;display:flex;flex-direction:column;gap:18px}
+.stack .fold{height:64px;font-size:20px;padding:0 22px}
+.stack .fold .tells{font-size:16px}.stack .fold .show{font-size:16px}
+.keep{padding:26px 28px}
+.keep .who{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.keep .n{font-weight:600;font-size:19px}.keep .t{font:400 14px var(--mono);color:var(--ink-500)}
+.keep p{font-size:19px;line-height:1.55;color:var(--ink-800)}
+.counter{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:0 4px;font:400 16px var(--mono);color:var(--ink-500)}
+.counter b{color:var(--ink-900);font-weight:500}
+</style></head><body>
+<div class="left">
+  <div class="big"><span data-mark="76"></span><span class="name">Slop Mop</span><span class="pill">Pro</span></div>
+  <h1>Less slop.<br>More control.<br>Your call.</h1>
+  <p class="sub">Slop Mop reads ahead, folds away low-value writing, and shows you why. You can always see the post.</p>
+</div>
+<div class="right"><div class="stack">
+  <div class="fold"><span data-mark="22"></span><b>Mopped.</b><span class="tells">engagement bait · hype words</span><span class="show">show me anyway</span></div>
+  <div class="card keep"><div class="who"><div class="avatar"></div><div><div class="n">Priya Raman</div><div class="t">2h</div></div></div>
+  <p>We cut our build from 14 minutes to 3 by caching the dependency layer. The diff was nine lines.</p></div>
+  <div class="fold"><span data-mark="22"></span><b>Mopped.</b><span class="tells">“not X, but Y”</span><span class="show">show me anyway</span></div>
+  <div class="fold"><span data-mark="22"></span><b>Mopped.</b><span class="tells">scroll-stopper · empty praise</span><span class="show">show me anyway</span></div>
+  <div class="counter"><span>today</span><span><b>38</b> mopped · <b>112</b> kept</span></div>
+</div></div>
+<div class="foot"><div class="lockup"><span data-mark="34"></span>Slop Mop<span class="dom">slopmop.lol</span></div><div class="meta">judges the writing, not the writer</div></div>
+<script src="mark.js"></script></body></html>
