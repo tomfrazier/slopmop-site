@@ -77,7 +77,7 @@
       i = order.indexOf(net);
       chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
       word.classList.add("swap");
-      setTimeout(function () { wordText.textContent = chip.getAttribute("data-label"); logo.src = chip.getAttribute("data-logo"); word.classList.remove("swap"); }, reduceMotion ? 0 : 200);
+      setTimeout(function () { wordText.textContent = chip.getAttribute("data-label"); logo.src = chip.getAttribute("data-logo"); word.style.setProperty("--c", chip.getAttribute("data-color")); word.classList.remove("swap"); }, reduceMotion ? 0 : 200);
       document.dispatchEvent(new CustomEvent("slopmop:network", { detail: { net: net } }));
       if (user) stop();
     }
@@ -90,7 +90,7 @@
         if (next === 0) { cycles++; }
         set(order[next]);
         if (cycles >= 1 && next === 0) stop(); /* one lap, then rest on LinkedIn: no endless loop */
-      }, 3800);
+      }, 2400);
     }
     chips.forEach(function (c) { c.addEventListener("click", function () { set(c.getAttribute("data-net"), true); }); });
     if (pauseBtn) pauseBtn.addEventListener("click", function () { if (stopped) { cycles = 0; play(); } else stop(); });
