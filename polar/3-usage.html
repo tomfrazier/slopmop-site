@@ -1,71 +1,49 @@
-<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="shared.css"><style>
-.head{position:absolute;left:120px;right:120px;top:112px;display:flex;justify-content:space-between;align-items:flex-end}
-h1{font-weight:700;font-size:72px;line-height:1.04;letter-spacing:-.02em}
-.head p{font-size:24px;line-height:1.45;color:var(--ink-600);max-width:560px;text-align:right}
-.grid{position:absolute;left:120px;right:120px;top:330px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:28px}
-.tile{display:flex;flex-direction:column}
-.tile .lab{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
-.tile .lab b{font-weight:600;font-size:26px}
-.tile .lab span{font:400 15px var(--mono);color:var(--ink-500)}
-.surf{flex:1;min-height:500px;background:#fff;border:1px solid var(--ink-100);border-radius:12px;box-shadow:var(--shadow-card);padding:20px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
-.ln{height:10px;border-radius:999px;background:var(--ink-100)}
-.ln.d{background:var(--ink-200)}
-.mini{border:1px solid var(--ink-100);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px}
-.mini .who{display:flex;gap:10px;align-items:center}
-.mini .av{width:26px;height:26px;border-radius:50%;background:var(--ink-100);flex:none}
-.surf .fold{height:42px;font-size:15px;padding:0 12px;gap:8px}
-.surf .fold .tells{font-size:12px}.surf .fold .show{font-size:12px}
-.surf .chip{height:22px;font-size:12px;padding:0 8px}
-.hl{background:var(--mop-100);box-shadow:inset 3px 0 0 var(--mop-500);border-radius:4px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
-.mail{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--ink-050)}
-.mail .dot{width:8px;height:8px;border-radius:50%;background:var(--blue-500);flex:none}
-.mail .from{width:70px;height:10px;border-radius:999px;background:var(--ink-200);flex:none}
-.reply{margin-left:28px}
-.t{font-size:15px;line-height:1.45;color:var(--ink-800)}
-.title{font-weight:700;font-size:22px;line-height:1.2}
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="ds/styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="ds/_ds_bundle.js"></script>
+<style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden}
+#c{width:1920px;height:1080px;position:relative;overflow:hidden;box-sizing:border-box;font-family:var(--font-display)}
+.xl{display:inline-flex;align-items:center;padding:0 .32em;height:1.15em;border-radius:6px;background:var(--mop-500);color:var(--text-on-accent);font-weight:700;letter-spacing:-.01em}
+</style>
+
+<style>
+#c{background:var(--paper-200);padding:64px 80px 0}
+.top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px}
+h1{margin:0;font:700 72px/1.02 var(--font-display);letter-spacing:-.02em;color:var(--ink-900)}
+h1 .xl{border-radius:8px}
+.sub{margin:16px 0 0;font:400 26px/1.4 var(--font-body);color:var(--text-muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cell.r1{height:318px}.cell.r2{height:418px}
+.cell{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);padding:20px 22px 22px;box-sizing:border-box;overflow:hidden;display:flex;flex-direction:column;gap:14px}
+.cell h2{margin:0;font:700 26px/1.1 var(--font-display);color:var(--ink-900);display:flex;justify-content:space-between;align-items:baseline}
+.cell h2 span{font:400 15px/1 var(--font-mono);color:var(--text-faint)}
+.cell .in{flex:1;min-height:0;overflow:hidden;border-radius:var(--radius-md);background:var(--paper-200);padding:16px}
+.cell .in > *{zoom:.92}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px 0 5px;border-radius:999px;background:var(--paper-000);border:1px solid var(--border-hairline);font:600 17px/1 var(--font-body);color:var(--ink-900)}
+.pill b{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font:700 15px/1 var(--font-body)}
 </style></head><body>
-<div class="head">
-  <h1>Same mop.<br>More floors.</h1>
-  <p>Slop Mop judges writing wherever you read it. Same eleven questions, same threshold, same override.</p>
+<div id="c">
+  <div class="top">
+    <div><h1>The <span class="xl">XL</span> mop goes everywhere.</h1>
+    <p class="sub">Your free mop cleans one feed. XL cleans every feed, the sites you read and your inbox.</p></div>
+    
+  </div>
+  <div class="grid" id="grid"></div>
 </div>
-<div class="grid">
-  <div class="tile"><div class="lab"><b>Social feeds</b><span>posts</span></div>
-    <div class="surf">
-      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:40%"></div></div><div class="t">Shipped the fix at 2am. Root cause was a timezone, as usual.</div></div>
-      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">engagement bait</span></div>
-      <div class="mini flag-warn"><div class="who"><div class="av"></div><div class="ln d" style="width:34%"></div><span class="chip warn" style="margin-left:auto">Some tells</span></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div></div>
-      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">scroll-stopper</span></div>
-      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:46%"></div></div><div class="ln" style="width:88%"></div><div class="ln" style="width:52%"></div></div>
-    </div></div>
-  <div class="tile"><div class="lab"><b>Articles</b><span>paragraphs</span></div>
-    <div class="surf">
-      <div class="title">What we learned migrating 40 services</div>
-      <div class="ln d" style="width:42%;height:8px"></div>
-      <div class="ln" style="width:100%"></div><div class="ln" style="width:96%"></div><div class="ln" style="width:80%"></div>
-      <div class="hl"><span class="chip warn" style="align-self:flex-start">Some AI tells</span><div class="t">In today’s fast-paced landscape, migration isn’t just a project — it’s a journey.</div></div>
-      <div class="ln" style="width:100%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:97%"></div><div class="ln" style="width:60%"></div>
-      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">flowery prose</span></div>
-    </div></div>
-  <div class="tile"><div class="lab"><b>Email</b><span>newsletters &amp; pitches</span></div>
-    <div class="surf" style="gap:0">
-      <div class="mail"><span class="dot"></span><span class="from"></span><span class="t" style="font-size:14px">Invoice #4471 attached</span></div>
-      <div class="fold" style="margin:8px 0"><span data-mark="16"></span><b>Mopped.</b><span class="tells">no-catch promises</span></div>
-      <div class="mail"><span class="dot"></span><span class="from"></span><span class="t" style="font-size:14px">Thursday standup moved to 10</span></div>
-      <div class="mail" style="background:var(--red-100);border-radius:6px;box-shadow:inset 3px 0 0 var(--red-500)"><span class="dot" style="background:var(--red-500)"></span><span class="from"></span><span class="t" style="font-size:14px;flex:1">Quick question 🚀</span><span class="chip danger">Likely slop</span></div>
-      <div class="mail"><span class="dot" style="background:var(--ink-200)"></span><span class="from"></span><span class="t" style="font-size:14px">Your notes from Monday</span></div>
-      <div class="fold" style="margin:8px 0"><span data-mark="16"></span><b>Mopped.</b><span class="tells">hype words</span></div>
-      <div class="mail"><span class="dot" style="background:var(--ink-200)"></span><span class="from"></span><span class="t" style="font-size:14px">Re: Q3 budget draft</span></div>
-      <div class="mail"><span class="dot" style="background:var(--ink-200)"></span><span class="from"></span><span class="t" style="font-size:14px">Lease renewal, two questions</span></div>
-    </div></div>
-  <div class="tile"><div class="lab"><b>Comments</b><span>replies &amp; threads</span></div>
-    <div class="surf">
-      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:36%"></div></div><div class="t">Did you benchmark against the old index? Curious about cold reads.</div></div>
-      <div class="reply fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">empty praise</span></div>
-      <div class="reply mini"><div class="who"><div class="av"></div><div class="ln d" style="width:40%"></div></div><div class="t">Cold reads were 2× slower. Warm was flat.</div></div>
-      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">empty praise</span></div>
-      <div class="fold"><span data-mark="16"></span><b>Mopped.</b><span class="tells">engagement bait</span></div>
-      <div class="mini"><div class="who"><div class="av"></div><div class="ln d" style="width:30%"></div></div><div class="ln" style="width:84%"></div></div>
-    </div></div>
-</div>
-<div class="foot"><div class="lockup"><span data-mark="34"></span>Slop Mop<span class="dom">slopmop.lol</span></div><div class="meta">hide or highlight · your threshold · your call</div></div>
-<script src="mark.js"></script></body></html>
+<script type="text/babel" src="ds/Placements.jsx"></script>
+<script type="text/babel">
+const Cell=({t,m,r,children})=><section className={"cell "+r}><h2>{t}<span>{m}</span></h2><div className="in">{children}</div></section>;
+const PILLS=[["in","LinkedIn","#0A66C2"],["X","X","#000"],["r/","Reddit","#FF4500"],["f","Facebook","#1877F2"]];
+const Pills=()=><div className="pills">{PILLS.map(p=><span key={p[1]} className="pill"><b style={{background:p[2]}}>{p[0]}</b>{p[1]}</span>)}</div>;
+ReactDOM.createRoot(document.getElementById('grid')).render(<>
+  <Cell r="r1" t="Every feed" m="not just one"><window.SocialFeed/><Pills/></Cell>
+  <Cell r="r1" t="Articles" m="chip at the byline"><window.Article/></Cell>
+  <Cell r="r1" t="Your inbox" m="gmail · outlook"><window.Inbox/></Cell>
+  <Cell r="r2" t="Comments" m="tinted mop on each"><window.Comments hide/></Cell>
+  <Cell r="r2" t="Reviews" m="before the stars"><window.Reviews/></Cell>
+  <Cell r="r2" t="Article lists" m="scored when you ask"><window.ArticleList/></Cell>
+</>);
+</script></body></html>

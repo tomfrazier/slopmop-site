@@ -1,34 +1,41 @@
-<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="shared.css"><style>
-body{background:#fff}
-.left{position:absolute;left:120px;top:0;bottom:88px;width:900px;display:flex;flex-direction:column;justify-content:center}
-.big{display:flex;align-items:center;gap:28px;margin-bottom:56px}
-.big .name{font-weight:700;font-size:64px;letter-spacing:-.01em}
-.big .pill{height:48px;font-size:24px;padding:0 20px}
-h1{font-weight:700;font-size:112px;line-height:1.02;letter-spacing:-.02em}
-.sub{margin-top:36px;font-size:34px;line-height:1.4;color:var(--ink-600);max-width:760px}
-.right{position:absolute;right:0;top:0;bottom:88px;width:820px;background:var(--paper-100);border-left:1px solid var(--ink-100);display:flex;align-items:center;justify-content:center}
-.stack{width:600px;display:flex;flex-direction:column;gap:18px}
-.stack .fold{height:64px;font-size:20px;padding:0 22px}
-.stack .fold .tells{font-size:16px}.stack .fold .show{font-size:16px}
-.keep{padding:26px 28px}
-.keep .who{display:flex;gap:14px;align-items:center;margin-bottom:16px}
-.keep .n{font-weight:600;font-size:19px}.keep .t{font:400 14px var(--mono);color:var(--ink-500)}
-.keep p{font-size:19px;line-height:1.55;color:var(--ink-800)}
-.counter{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:0 4px;font:400 16px var(--mono);color:var(--ink-500)}
-.counter b{color:var(--ink-900);font-weight:500}
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="ds/styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="ds/_ds_bundle.js"></script>
+<style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden}
+#c{width:1920px;height:1080px;position:relative;overflow:hidden;box-sizing:border-box;font-family:var(--font-display)}
+.xl{display:inline-flex;align-items:center;padding:0 .32em;height:1.15em;border-radius:6px;background:var(--mop-500);color:var(--text-on-accent);font-weight:700;letter-spacing:-.01em}
+</style>
+
+<style>
+#c{background:var(--paper-000);display:flex;flex-direction:column}
+.bar{height:16px;background:var(--mop-500);flex:none}
+.main{flex:1;display:flex;padding:0 120px;align-items:center;gap:80px;position:relative}
+.left{flex:1;min-width:0}
+h1{margin:0;font:700 168px/1.0 var(--font-display);letter-spacing:-.025em;color:var(--ink-900)}
+h1 .xl{font-size:.92em;height:1.08em;vertical-align:.04em;border-radius:10px}
+.tag{margin:48px 0 0;font:500 42px/1.35 var(--font-display);color:var(--ink-600);max-width:22ch}
+.right{flex:0 0 640px;display:flex;flex-direction:column;gap:22px;transform:rotate(-3deg);transform-origin:50% 50%}
+.strip{width:470px;transform:scale(1.36);transform-origin:0 50%;height:60px}
+.foot{flex:none;height:96px;background:var(--surface-inverse);display:flex;align-items:center;justify-content:space-between;padding:0 120px}
+.meta{font:400 22px/1 var(--font-mono);color:var(--ink-300)}
 </style></head><body>
-<div class="left">
-  <div class="big"><span data-mark="76"></span><span class="name">Slop Mop</span><span class="pill">Pro</span></div>
-  <h1>Less slop.<br>More control.<br>Your call.</h1>
-  <p class="sub">Slop Mop reads ahead, folds away low-value writing, and shows you why. You can always see the post.</p>
+<div id="c">
+  <div class="bar"></div>
+  <div class="main">
+    <div class="left">
+      <h1>Get the<br><span class="xl">XL</span> mop.</h1>
+      <p class="tag">Less slop.<br>More control.<br>Your call.</p>
+    </div>
+    <div class="right" id="strips"></div>
+  </div>
+  <div class="foot"><span id="lock"></span><span class="meta">every feed · the sites you read · your inbox</span></div>
 </div>
-<div class="right"><div class="stack">
-  <div class="fold"><span data-mark="22"></span><b>Mopped.</b><span class="tells">engagement bait · hype words</span><span class="show">show me anyway</span></div>
-  <div class="card keep"><div class="who"><div class="avatar"></div><div><div class="n">Priya Raman</div><div class="t">2h</div></div></div>
-  <p>We cut our build from 14 minutes to 3 by caching the dependency layer. The diff was nine lines.</p></div>
-  <div class="fold"><span data-mark="22"></span><b>Mopped.</b><span class="tells">“not X, but Y”</span><span class="show">show me anyway</span></div>
-  <div class="fold"><span data-mark="22"></span><b>Mopped.</b><span class="tells">scroll-stopper · empty praise</span><span class="show">show me anyway</span></div>
-  <div class="counter"><span>today</span><span><b>38</b> mopped · <b>112</b> kept</span></div>
-</div></div>
-<div class="foot"><div class="lockup"><span data-mark="34"></span>Slop Mop<span class="dom">slopmop.lol</span></div><div class="meta">judges the writing, not the writer</div></div>
-<script src="mark.js"></script></body></html>
+<script>
+var NS=window.SlopMopDesignSystem_ca9143, h=React.createElement;
+ReactDOM.createRoot(document.getElementById('lock')).render(h(NS.Wordmark,{size:36,tone:"inverse",showDot:true}));
+var tones=["red","red","yellow","red","red"];
+ReactDOM.createRoot(document.getElementById('strips')).render(tones.map(function(t,i){
+  return h('div',{key:i,className:'strip',style:{marginLeft:(i%2?40:0)+'px'}},h(NS.FoldStrip,{tone:t,density:"minimal",label:"This post was hidden",onRestore:function(){}}));}));
+</script></body></html>

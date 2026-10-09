@@ -1,17 +1,19 @@
-# Polar product images
+# Polar product images — Slop Mop XL
 
-16:9 checkout images for Slop Mop Pro, built from the design system tokens in `_ds/`. They're new artwork and don't reuse the MIT-licensed share images.
+Three 16:9 checkout images, built from the Slop Mop design system's real components (`Wordmark`, `FoldStrip`, `MopIcon`, `WhyCard`) plus the site hero graphic and the placements kit. They're new artwork, separate from the MIT-licensed share images.
 
-| File | Use |
-|---|---|
-| `1-brand.png` | first image (brand) |
-| `2-preview.png` | product preview: feed, fold strips, highlights, Why card |
-| `3-usage.png` | where it works: feeds, articles, email, comments |
+| File | Use | Register |
+|---|---|---|
+| `1-brand.png` | first image (brand) | exterior: white, yellow rule, ink foot (the og card) |
+| `2-preview.png` | product preview: feed mid-mop, details panel | exterior: full-bleed ink (the site hero) |
+| `3-usage.png` | where XL works: every feed, articles, inbox, comments, reviews, article lists | the placements kit |
 
-The PNGs are 2880×1620 (1920×1080 at 1.5×). To change one, edit its `.html` and re-render:
+`ds/` is a copy of the design system's tokens and component bundle (`styles.css`, `tokens/`, `_ds_bundle.js`) plus `HeroGraphic.jsx` and `Placements.jsx` from its UI kits. When the system changes, refresh those files and re-render.
+
+PNGs are 2880×1620 (1920×1080 at 1.5×). Re-render after an edit:
 
 ```
-node polar/render.js 1-brand.html 2-preview.html 3-usage.html
+node polar/render.js
 ```
 
-Fonts (Archivo, JetBrains Mono) load from Google Fonts at render time.
+Needs network access for React, Babel and Google Fonts.

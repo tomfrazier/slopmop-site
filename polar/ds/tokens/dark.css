@@ -1,0 +1,23 @@
+/* Dark theme — PROPOSED for Phase 2, not shipped. LinkedIn, Reddit and X all have dark themes; the extension follows the
+   host page, so every shadow-DOM surface sets data-theme="dark" when the page is dark. The ramps flip in place, so a
+   component written against the ink and paper ramps works in both themes without a second set of names. */
+[data-theme="dark"]{color-scheme:dark;
+--ink-900:#F1F3F5;--ink-800:#E2E5E8;--ink-700:#C9CED3;--ink-600:#A9B0B7;--ink-500:#8D949B;--ink-400:#737A82;--ink-300:#565C63;--ink-200:#3B4045;--ink-100:#2C3034;--ink-050:#24282B;
+--paper-000:#1C1F22;--paper-100:#16181A;--paper-200:#24282B;--paper-300:#2C3034;
+--mop-900:#FFD24A;--mop-200:#57450D;--mop-100:#33290A;
+--red-700:#FF9A90;--red-500:#EE4B40;--red-200:#6B2722;--red-100:#36191A;
+--blue-700:#9CC3F0;--blue-500:#5B93DB;--blue-200:#22406A;--blue-100:#16263A;
+--text-on-accent:#16181A;
+/* Aliases re-declared here: a custom property resolves where it's declared, so aliases set on :root would keep the light values. */
+--surface-page:var(--paper-100);--surface-card:var(--paper-000);--surface-sunken:var(--paper-200);--surface-inverse:var(--ink-900);--surface-accent:var(--mop-500);
+--text-body:var(--ink-900);--text-muted:var(--ink-700);--text-faint:var(--ink-600);--text-inverse:var(--paper-000);--text-link:var(--blue-700);
+--border-hairline:var(--ink-100);--border-default:var(--ink-200);--border-strong:var(--ink-400);--border-accent:var(--mop-500);
+--flag-warn:var(--mop-500);--flag-warn-wash:var(--mop-100);--flag-danger:var(--red-500);--flag-danger-wash:var(--red-100);--flag-clean:var(--blue-500);
+--flag-unsure:var(--ink-400);--flag-unsure-wash:var(--paper-200);
+--focus-ring:var(--blue-500);--focus-ring-halo:var(--blue-200);--fold-face:var(--paper-200);
+--shadow-card:0 1px 2px rgba(0,0,0,.4);--shadow-raised:0 2px 8px rgba(0,0,0,.45);--shadow-pop:0 8px 24px rgba(0,0,0,.55);
+--texture-hatch:repeating-linear-gradient(45deg,transparent 0 8px,rgba(255,255,255,.04) 8px 9px);/* @kind other */
+/* Raised surfaces get lighter in dark (muted, not black); grids and tracks become light knockouts. */
+--text-on-solid:#FFFFFF;--surface-raised:#272B30;--surface-raised-foot:#202327;--chart-grid:rgba(255,255,255,.26);--track:rgba(255,255,255,.18);--mini-feed:#131517;--mini-feed-on:#0F1113;--mini-post:#30353B;
+--fold-shade:rgba(0,0,0,.3);--fold-crease:rgba(0,0,0,.45);
+}

@@ -1,2 +1,0 @@
-function mopMark(size,color,knock){color=color||'#16181A';knock=knock||'#fff';return `<svg class="mark" width="${size}" height="${size}" viewBox="0 0 24 24"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="${color}"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="${color}"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="${knock}" stroke-width="1.15" stroke-linecap="round"/></svg>`}
-document.querySelectorAll('[data-mark]').forEach(el=>{el.outerHTML=mopMark(+el.dataset.mark,el.dataset.color,el.dataset.knock)});
