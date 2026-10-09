@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Slop Mop — Less slop in your LinkedIn feed. Your call.</title>
-<meta name="description" content="Slop Mop is a free, open-source Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds. It reads posts ahead, explains what it noticed, and lets you hide, highlight, reveal or override. Not an AI detector.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<title>Slop Mop — Less slop in your feed. Your call.</title>
+<meta name="description" content="Slop Mop is a browser extension, free for one feed, that reads your feed ahead of you, folds away low-value writing and shows why. Not an AI detector: a bad-writing detector. LinkedIn today; X, Reddit, Facebook, Substack and Medium coming soon.">
 <link rel="canonical" href="https://slopmop.lol/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Slop Mop">
 <meta property="og:url" content="https://slopmop.lol/">
 <meta property="og:title" content="Slop Mop — Less slop. More control. Your call.">
-<meta property="og:description" content="A free, MIT-licensed Chrome extension that judges LinkedIn writing — not who wrote it — and lets you hide it, highlight it, or overrule it.">
+<meta property="og:description" content="Slop Mop is a browser extension, free for one feed, that reads your feed ahead of you, folds away low-value writing and shows why. Not an AI detector: a bad-writing detector. LinkedIn today; X, Reddit, Facebook, Substack and Medium coming soon.">
 <meta property="og:image" content="https://slopmop.lol/og-image-2.png">
-<meta property="og:image:secure_url" content="https://slopmop.lol/og-image-2.png">
-<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
-<meta name="twitter:image" content="https://slopmop.lol/og-image-2.png">
+<meta property="og:image:alt" content="Slop Mop: mop the slop out of your feed.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Slop Mop — Less slop. More control. Your call.">
-<meta name="twitter:description" content="A free, MIT-licensed Chrome extension that judges LinkedIn writing — not who wrote it — and lets you hide it, highlight it, or overrule it.">
+<meta name="twitter:description" content="Slop Mop is a browser extension, free for one feed, that reads your feed ahead of you, folds away low-value writing and shows why. Not an AI detector: a bad-writing detector. LinkedIn today; X, Reddit, Facebook, Substack and Medium coming soon.">
+<meta name="twitter:image" content="https://slopmop.lol/og-image-2.png">
 <meta name="author" content="Tom Frazier">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="_ds/slopmop/styles.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/sites.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,16 +48,30 @@
       "@id": "https://slopmop.lol/#website",
       "url": "https://slopmop.lol/",
       "name": "Slop Mop",
-      "description": "A free, open-source Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control.",
+      "description": "A browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown.",
       "inLanguage": "en",
-      "publisher": { "@id": "https://slopmop.lol/#tom" }
+      "publisher": {
+        "@id": "https://slopmop.lol/#org"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://slopmop.lol/#org",
+      "name": "Artimovo LLC",
+      "url": "https://slopmop.lol/",
+      "email": "hello@slopmop.lol",
+      "founder": {
+        "@id": "https://slopmop.lol/#tom"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://slopmop.lol/#tom",
       "name": "Tom Frazier",
       "url": "https://tomfrazier.com",
-      "sameAs": ["https://linkedin.com/in/tomfrazier"]
+      "sameAs": [
+        "https://linkedin.com/in/tomfrazier"
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -55,1121 +80,628 @@
       "applicationCategory": "BrowserApplication",
       "applicationSubCategory": "Chrome extension",
       "operatingSystem": "Chrome",
-      "browserRequirements": "Requires Google Chrome with Manifest V3 support",
       "url": "https://slopmop.lol/",
       "installUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
       "downloadUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
-      "description": "Slop Mop reads LinkedIn posts ahead of the reader and asks Jev, an AI model from Typesafe AI, eleven questions about the writing: nine signals associated with slop and two counter-signals looking for a human voice and genuine usefulness. The result is one slop score. Hide folds suspected slop into a strip that reopens; Highlight leaves the post visible and outlined with its reasoning attached. Slop Mop is not an AI-content detector — it judges the writing, not who or what wrote it — and the reader can vote No, Maybe or Probably to override any judgment.",
+      "description": "Slop Mop reads posts ahead of the reader and asks an AI model designed for calibrated decisions twelve questions about each one: nine tells of slop, two counter-signals for a human voice and usefulness, and how likely it is to be human-typed. Reader response is a third counter-signal. Hide folds suspected slop into a strip that reopens; Highlight tints the post's mop icon. Readers vote Not sure, No, Maybe or Probably to overrule it. Not an AI detector.",
       "featureList": [
+        "Reads posts before they reach your view",
         "Hide mode folds suspected slop into a strip that reopens",
-        "Highlight mode outlines posts yellow or red, nothing hidden",
+        "Highlight mode tints the mop icon yellow or red",
         "Three sensitivity stops: mild, moderate, aggressive",
-        "Nine slop signals plus two counter-signals per post",
-        "Reasoning shown for every judgment",
-        "Reader vote: No, Maybe, Probably — overrides the model",
-        "Not an AI-content detector",
-        "MIT licensed, self-hostable judge endpoint"
+        "Nine tells and three counter-signals per post",
+        "Score out of 100 with the reasoning shown",
+        "Reader vote overrides the model",
+        "Not an AI-content detector"
       ],
-      "isAccessibleForFree": true,
-      "license": "https://opensource.org/licenses/MIT",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "author": { "@id": "https://slopmop.lol/#tom" },
-      "publisher": { "@id": "https://slopmop.lol/#tom" },
-      "privacyPolicy": "https://slopmop.lol/privacy.html"
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Slop Mop (free for one feed)",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free for the one feed you pick, with 250 checks a day.",
+          "url": "https://slopmop.lol/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Slop Mop XL, yearly",
+          "category": "subscription",
+          "price": "59.99",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "59.99",
+            "priceCurrency": "USD",
+            "billingDuration": "P1Y",
+            "unitText": "year"
+          },
+          "description": "Auto-renewing subscription: every feed, the sites you read, the Gmail and Outlook plugins and a higher daily limit, on up to five browsers. Coming soon. Sold by Polar as merchant of record.",
+          "url": "https://slopmop.lol/#pricing",
+          "seller": {
+            "@type": "Organization",
+            "name": "Polar",
+            "url": "https://polar.sh/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Slop Mop XL, monthly",
+          "category": "subscription",
+          "price": "5.99",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "5.99",
+            "priceCurrency": "USD",
+            "billingDuration": "P1M",
+            "unitText": "month"
+          },
+          "description": "Auto-renewing subscription: every feed, the sites you read, the Gmail and Outlook plugins and a higher daily limit, on up to five browsers. Coming soon. Sold by Polar as merchant of record.",
+          "url": "https://slopmop.lol/#pricing",
+          "seller": {
+            "@type": "Organization",
+            "name": "Polar",
+            "url": "https://polar.sh/"
+          }
+        }
+      ],
+      "author": {
+        "@id": "https://slopmop.lol/#tom"
+      },
+      "publisher": {
+        "@id": "https://slopmop.lol/#org"
+      },
+      "privacyPolicy": "https://slopmop.lol/privacy.html",
+      "termsOfService": "https://slopmop.lol/terms"
     },
     {
       "@type": "FAQPage",
       "@id": "https://slopmop.lol/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "What is Slop Mop?", "acceptedAnswer": { "@type": "Answer", "text": "Slop Mop is a free, open-source Chrome extension that helps reduce low-value writing and AI slop in your LinkedIn feed. It reads public posts before they reach your view, asks Jev eleven questions about the writing, and gives each post a slop score. Depending on your settings, likely slop is either highlighted or folded into a small strip. Nothing is deleted from LinkedIn, and you can reveal any folded post whenever you want." } },
-        { "@type": "Question", "name": "How can I reduce AI slop in my LinkedIn feed?", "acceptedAnswer": { "@type": "Answer", "text": "Install Slop Mop and choose how aggressively you want it to judge your LinkedIn feed. Slop Mop looks for nine writing signals associated with slop, while two counter-signals look for evidence that a post sounds like a person or contains something genuinely useful. Choose Hide to fold suspected slop or Highlight to leave everything visible while marking questionable posts. You decide the threshold, and you can override Slop Mop whenever it gets something wrong." } },
-        { "@type": "Question", "name": "Is Slop Mop an AI-content detector?", "acceptedAnswer": { "@type": "Answer", "text": "No. Slop Mop is deliberately not an AI detector. It is designed to identify low-value writing rather than determine whether a human or AI produced it. AI-assisted writing can be excellent and human-written posts can be spectacular slop, so Slop Mop asks a more useful question: is this worth your attention?" } },
-        { "@type": "Question", "name": "How does Slop Mop decide whether a LinkedIn post is slop?", "acceptedAnswer": { "@type": "Answer", "text": "Every post is evaluated using eleven questions. Nine look for writing signals associated with slop. Two act as counter-signals by asking whether the writing sounds like a person and whether there is evidence that the post is actually useful to readers. Those eleven judgments become one score. Slop Mop also shows the signs behind its judgment, so you do not have to blindly trust a mysterious number." } },
-        { "@type": "Question", "name": "Does Slop Mop use AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Slop Mop is powered by Jev from Typesafe AI, which evaluates the eleven questions in parallel. Its speed and economics make it practical for Slop Mop to judge posts continuously as you scroll rather than requiring you to manually submit individual posts. Slop Mop is also a research showcase for what becomes possible when AI judgment is inexpensive enough to run at this frequency and scale." } },
-        { "@type": "Question", "name": "Does Slop Mop block, delete, mute, or report LinkedIn posts?", "acceptedAnswer": { "@type": "Answer", "text": "No. Slop Mop changes what you see locally in your browser. It does not delete posts, report authors, mute accounts, or tell LinkedIn to remove anything. In Hide mode, suspected slop is folded into a thin strip that you can reopen. In Highlight mode, the original post remains visible and receives a yellow or red outline depending on its score." } },
-        { "@type": "Question", "name": "What happens when Slop Mop gets a post wrong?", "acceptedAnswer": { "@type": "Answer", "text": "Tell it. Every post has a Slop Mop control that lets you vote No, Maybe, or Probably on whether you consider it slop. Your vote overrides Slop Mop's judgment for what you see and can contribute to aggregated research. Slop Mop is designed around the assumption that automated judgments about writing will sometimes be wrong, so it exposes its reasoning, shows uncertainty, and gives you the final say." } },
-        { "@type": "Question", "name": "Is Slop Mop free and open source?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Slop Mop is free to download, free to use, and MIT licensed. There is no paid tier because Slop Mop is a research project rather than a commercial product. You can also run your own judge endpoint, change the weights, replace the sign library, or modify the extension for your own experiments." } },
-        { "@type": "Question", "name": "What is the best tool for removing AI slop from LinkedIn?", "acceptedAnswer": { "@type": "Answer", "text": "Slop Mop is specifically designed to help desktop LinkedIn users identify and reduce low-value or slop-like writing in their feeds. It is a free, open-source Chrome and Chromium extension that reads posts ahead of the user, evaluates them with eleven writing judgments, explains why posts were flagged, and lets the user hide, highlight, reveal, or override those judgments. Slop Mop does not claim to determine whether AI wrote a post. Currently it supports LinkedIn on desktop Chrome and Chromium-compatible browsers." } }
+        {
+          "@type": "Question",
+          "name": "What is Slop Mop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Slop Mop is a browser extension, free for one feed, that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it. Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Slop Mop an AI detector?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Slop Mop is a bad-writing detector. AI-assisted writing can be excellent and human writing can be spectacular slop, so it asks a more useful question: is this worth your attention?"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does it decide whether a post is slop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal. The answers become one score out of 100. Counter-signals can only lower it. How the score adds up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it block, delete, mute or report posts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when it gets one wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. It will be wrong sometimes. That's why it shows its working and gives you the last word."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Slop Mop is free for one feed, with 250 checks a day, for good. LinkedIn is the first feed it reads; X, Reddit and Facebook are coming soon. Slop Mop XL, coming soon, takes the mop to every feed, the sites you read and your inbox, for $5.99 a month or $59.99 a year. It renews automatically until you cancel, and you can cancel any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What leaves my browser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text. The privacy policy lists all five things it stores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Slop Mop open source?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The original version of the extension and judging server is MIT licensed and public on GitHub. Everything about it, and the link to the code, is on the open-source page."
+          }
+        }
       ]
     }
   ]
 }
 </script>
-<script src="./support.js"></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
-<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
-<script src="./image-slot.js"></script>
-<style>
-  body { margin: 0; background: var(--surface-card); color: var(--text-body); }
-  a { color: var(--text-link); text-decoration: none; }
-  a:hover { color: var(--blue-500); text-decoration: underline; }
-</style>
-</helmet>
-
-<div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
-
-  <sc-if value="{{ phShow }}" hint-placeholder-val="{{ false }}">
-    <a href="{{ phUrl }}" ref="{{ phRef }}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--space-3) var(--space-4); padding: var(--space-3) var(--space-6); background: #FF6154; color: var(--ink-900); text-decoration: none; font: var(--type-label); text-align: center" style-hover="background: #FF7A6E">
-      <span aria-hidden="true" style="flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: #FFFFFF; color: #FF6154; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; line-height: 1">P</span>
-      <span style="font-weight: 600">{{ phLine }}</span>
-      <span style="display: inline-flex; align-items: center; gap: var(--space-2); font-weight: 600; text-decoration: underline; text-underline-offset: 3px">Upvote the mop</span>
-    </a>
-  </sc-if>
-
-  <nav style="position: sticky; top: 0; z-index: 10; background: var(--surface-card); border-bottom: 1px solid var(--border-hairline)">
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-7)">
-      <a href="index.html" aria-label="Slop Mop home" style="display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
-      </a>
-      <span style="display: flex; align-items: center; gap: var(--space-7); min-width: 0">
-        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-          <span style="display: flex; align-items: center; gap: var(--space-7)">
-            <a href="#how" style="font: var(--type-ui); color: var(--text-muted)">How it works</a>
-            <a href="#modes" style="font: var(--type-ui); color: var(--text-muted)">Modes</a>
-            <a href="#jev" style="font: var(--type-ui); color: var(--text-muted)">Why it's free</a>
-            <a href="#faq" style="font: var(--type-ui); color: var(--text-muted)">FAQ</a>
-            <sc-if value="{{ sideload }}"><a href="#install" style="font: var(--type-ui); color: var(--text-muted)">Install</a></sc-if>
-            <a href="help.html" style="font: var(--type-ui); color: var(--text-muted)">Help</a>
-            <a href="about.html" style="font: var(--type-ui); color: var(--text-muted)">About</a>
-          </span>
-        </sc-if>
-        <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" variant="secondary" icon="loader" hint-size="auto,32px">Coming soon</x-import>
-        </sc-if>
-        <sc-if value="{{ sideload }}">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openZip }}" hint-size="auto,32px">Download the .zip</x-import>
-        </sc-if>
-        <sc-if value="{{ launched }}">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="sm" icon="download" on-click="{{ openStore }}" hint-size="auto,32px">Add to browser</x-import>
-        </sc-if>
-      </span>
+<a class="skip" href="#main">Skip to content</a>
+<a class="ph-bar" data-ph hidden href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="index.html#tells">The tells</a>
+      <a href="index.html#networks">Networks</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="help.html">Help</a>
+      <a href="about.html">About</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="hero" data-networks>
+  <div class="wrap">
+    <span class="eyebrow">a bad-writing detector, not an ai detector</span>
+    <h1 class="h-hero" style="margin-top:var(--space-7)">Built for <span class="net-word" style="--c:#0A66C2"><span class="net-logo"><img src="assets/logos/linkedin.svg" alt=""></span><span class="word">LinkedIn</span><span class="stop">.</span></span></h1>
+    <p class="lede">Everyone is posting more to be seen, and AI made posting nearly free. Slop Mop reads your feed before you reach it, folds away the posts that aren't worth your attention, and shows you exactly why.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser — free</a>
+      <button class="btn btn-secondary" type="button" data-tour><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Take a tour</button>
     </div>
-    <sc-if value="{{ isMobile }}">
-      <div style="display: flex; align-items: center; gap: var(--space-7); overflow-x: auto; white-space: nowrap; padding: var(--space-4) var(--space-7); border-top: 1px solid var(--border-hairline); background: var(--paper-100)">
-        <a href="#how" style="font: var(--type-label); color: var(--text-muted)">How it works</a>
-        <a href="#modes" style="font: var(--type-label); color: var(--text-muted)">Modes</a>
-        <a href="#jev" style="font: var(--type-label); color: var(--text-muted)">Why it's free</a>
-        <a href="#faq" style="font: var(--type-label); color: var(--text-muted)">FAQ</a>
-        <sc-if value="{{ sideload }}"><a href="#install" style="font: var(--type-label); color: var(--text-muted)">Install</a></sc-if>
-        <a href="help.html" style="font: var(--type-label); color: var(--text-muted)">Help</a>
-        <a href="about.html" style="font: var(--type-label); color: var(--text-muted)">About</a>
-      </div>
-    </sc-if>
-  </nav>
-
-  
-
-  <header style="padding: var(--space-12) var(--space-7) var(--space-11); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 1120px; margin: 0 auto; position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: var(--space-10); align-items: center">
-      <sc-if value="{{ heroHoverDesktop }}">
-        <div style="position: absolute; left: 0; top: 0; z-index: 20; width: min(400px, 100%); display: grid; gap: var(--space-6); padding: var(--space-7); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-pop)">
-          <div style="display: flex; gap: var(--space-5); align-items: flex-start">
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">Possibly slop</x-import>
-            <span style="font: var(--type-body-sm)">This has some hallmarks of AI slop, but isn't clear-cut.</span>
-          </div>
-          <p style="margin: 0; font: var(--type-body-sm)">Strongest signs: <strong style="font-weight: var(--weight-semibold)">Hype words, Scroll-stopper, Empty praise</strong></p>
-          <p style="margin: 0; font: var(--type-label); color: var(--text-muted)">What Jev noticed</p>
-          {{ heroRadar }}
-          {{ heroBars }}
-          <p style="margin: 0; padding-top: var(--space-5); border-top: 1px solid var(--border-hairline); font: var(--type-mono); color: var(--text-faint)">hover any post in your feed for this panel</p>
-        </div>
-      </sc-if>
-      <div style="display: grid; gap: var(--space-7); justify-items: start">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">Research purposes only</x-import>
-        <h1 style="margin: 0; font: var(--weight-bold) var(--text-4xl)/1.08 var(--font-display); letter-spacing: var(--tracking-tight); max-width: 22ch; text-wrap: pretty">LinkedIn is filling up with slop. Bring a mop.</h1>
-        <p style="margin: 0; max-width: 52ch; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Everyone is posting more to be seen.&nbsp;AI makes posting even easier. That's a lot more to sift through for the few posts worth reading.&nbsp;Slop Mop scores each post before you reach it and folds the mess away before you step in it.</p>
-        <p style="margin: 0; max-width: 52ch; font: var(--type-body-sm); color: var(--text-muted)">Desktop Chrome-compatible extension. Free to download, free to use and works better than LinkedIn natively. <a href="https://typesafe.ai/?ref=slopmop.lol" target="_blank" rel="noopener">Jev</a> does the judging, so there is no API key and no bill to pass on. <br><br>A research project, not a product. LinkedIn only, for now.</p>
-        <p style="margin: 0; max-width: 52ch; font: var(--type-body); color: var(--text-body)"><strong style="font-weight: var(--weight-semibold)">Slop Mop is a bad-writing detector not an AI detector.</strong> Useful posts survive the mop however they were drafted.</p>
-        <div style="display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap">
-          <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" variant="secondary" icon="loader" hint-size="auto,44px">Coming soon</x-import>
-          </sc-if>
-          <sc-if value="{{ sideload }}">
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" icon="download" on-click="{{ openZip }}" hint-size="auto,44px">Download the .zip — free</x-import>
-          </sc-if>
-          <sc-if value="{{ launched }}">
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" icon="download" on-click="{{ openStore }}" hint-size="auto,44px">Add to browser — free</x-import>
-          </sc-if>
-          <a href="#email" style="font: var(--type-ui)">Get the monthly stats instead</a>
-        </div>
-        <sc-if value="{{ sideload }}">
-          <p style="margin: 0; max-width: 52ch; padding: var(--space-5) var(--space-6); background: var(--paper-200); border-radius: var(--radius-sm); font: var(--type-body-sm); color: var(--text-muted)">The Chrome Web Store listing is in review. Until it clears, Slop Mop installs from a .zip in about a minute — <a href="#install">here is how</a>.</p>
-        </sc-if>
-        <p style="margin: 0; font: var(--type-mono); color: var(--text-faint)">Chrome extension · MIT licensed</p>
-      </div>
-
-      <div aria-hidden="true" onMouseEnter="{{ heroEnter }}" onMouseLeave="{{ heroLeave }}" style="display: grid; gap: var(--space-4); padding: var(--space-6); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-card)">
-        <span style="font: var(--type-mono); color: var(--text-faint)">an ordinary morning · 14 posts scanned</span>
-        <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
-          <span style="flex: 0 0 auto; width: 26px; height: 26px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-          <span style="display: grid; gap: var(--space-3); flex: 1 1 auto">
-            <span style="height: 7px; width: 82%; border-radius: 3px; background: var(--ink-200)"></span>
-            <span style="height: 7px; width: 64%; border-radius: 3px; background: var(--ink-100)"></span>
-            <span style="height: 7px; width: 71%; border-radius: 3px; background: var(--ink-100)"></span>
-          </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-5); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); background: var(--gradient-fold)">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="14" knockout="var(--paper-000)" hint-size="14px,14px"></x-import>
-          <span style="font: var(--type-mono); color: var(--text-faint)">hidden · 0.81</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-5); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); background: var(--gradient-fold)">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="14" knockout="var(--paper-000)" hint-size="14px,14px"></x-import>
-          <span style="font: var(--type-mono); color: var(--text-faint)">hidden · 0.74</span>
-        </div>
-        <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); box-shadow: 0 0 0 3px var(--mop-500)">
-          <span style="flex: 0 0 auto; width: 26px; height: 26px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-          <span style="display: grid; gap: var(--space-3); flex: 1 1 auto">
-            <span style="height: 7px; width: 74%; border-radius: 3px; background: var(--ink-200)"></span>
-            <span style="height: 7px; width: 58%; border-radius: 3px; background: var(--ink-100)"></span>
-          </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-5); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); background: var(--gradient-fold)">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="14" knockout="var(--paper-000)" hint-size="14px,14px"></x-import>
-          <span style="font: var(--type-mono); color: var(--text-faint)">hidden · 0.69</span>
-        </div>
-        <div style="display: flex; gap: var(--space-5); align-items: flex-start; padding: var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
-          <span style="flex: 0 0 auto; width: 26px; height: 26px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-          <span style="display: grid; gap: var(--space-3); flex: 1 1 auto">
-            <span style="height: 7px; width: 88%; border-radius: 3px; background: var(--ink-200)"></span>
-            <span style="height: 7px; width: 52%; border-radius: 3px; background: var(--ink-100)"></span>
-          </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: var(--space-5); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); background: var(--gradient-fold)">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="14" knockout="var(--paper-000)" hint-size="14px,14px"></x-import>
-          <span style="font: var(--type-mono); color: var(--text-faint)">hidden · 0.66</span>
-        </div>
-        <span style="font: var(--type-mono); color: var(--text-faint)">9 folded · 5 left to read</span>
-      </div>
-      <sc-if value="{{ isMobile }}">
-        <div style="min-width: 0; display: grid; gap: var(--space-6); padding: var(--space-7); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-card)">
-          <div style="display: flex; gap: var(--space-5); align-items: flex-start">
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">Possibly slop</x-import>
-            <span style="font: var(--type-body-sm)">This has some hallmarks of AI slop, but isn't clear-cut.</span>
-          </div>
-          <p style="margin: 0; font: var(--type-body-sm)">Strongest signs: <strong style="font-weight: var(--weight-semibold)">Hype words, Scroll-stopper, Empty praise</strong></p>
-          <p style="margin: 0; font: var(--type-label); color: var(--text-muted)">What Jev noticed</p>
-          {{ heroRadar }}
-          {{ heroBars }}
-          <p style="margin: 0; padding-top: var(--space-5); border-top: 1px solid var(--border-hairline); font: var(--type-mono); color: var(--text-faint)">on desktop this panel opens when you hover a post</p>
-        </div>
-      </sc-if>
+    <div class="chips chips-grid" role="group" aria-label="Choose a network">
+        <button class="chip" type="button" data-net="linkedin" data-label="LinkedIn" data-logo="assets/logos/linkedin.svg" data-color="#0A66C2" style="--c:#0A66C2" aria-pressed="true"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/linkedin.svg);mask-image:url(assets/logos/linkedin.svg)" aria-hidden="true"></span>LinkedIn<span class="badge badge-live">live</span></button>
+        <button class="chip" type="button" data-net="x" data-label="X" data-logo="assets/logos/x.svg" data-color="#000000" style="--c:#000000" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/x.svg);mask-image:url(assets/logos/x.svg)" aria-hidden="true"></span>X<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="reddit" data-label="Reddit" data-logo="assets/logos/reddit.svg" data-color="#FF4500" style="--c:#FF4500" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/reddit.svg);mask-image:url(assets/logos/reddit.svg)" aria-hidden="true"></span>Reddit<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="facebook" data-label="Facebook" data-logo="assets/logos/facebook.svg" data-color="#0866FF" style="--c:#0866FF" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/facebook.svg);mask-image:url(assets/logos/facebook.svg)" aria-hidden="true"></span>Facebook<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="substack" data-label="Substack" data-logo="assets/logos/substack.svg" data-color="#FF6719" style="--c:#FF6719" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/substack.svg);mask-image:url(assets/logos/substack.svg)" aria-hidden="true"></span>Substack<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="medium" data-label="Medium" data-logo="assets/logos/medium.svg" data-color="#000000" style="--c:#000000" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/medium.svg);mask-image:url(assets/logos/medium.svg)" aria-hidden="true"></span>Medium<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="email" data-label="Email" data-logo="assets/logos/email.svg" data-color="#EA4335" style="--c:#EA4335" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/email.svg);mask-image:url(assets/logos/email.svg)" aria-hidden="true"></span>Email<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="websites" data-label="Websites" data-logo="assets/logos/web.svg" data-color="#2F6FBF" style="--c:#2F6FBF" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/web.svg);mask-image:url(assets/logos/web.svg)" aria-hidden="true"></span>Websites<span class="badge badge-soon">soon</span></button>
     </div>
-  </header><section style="padding: var(--space-11) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 1120px; margin: 0 auto; box-sizing: border-box; padding-right: max(0px, calc((min(100%, 1120px) - 980px) / 2)); display: flex; flex-wrap: wrap; gap: var(--space-10); align-items: center">
-      <div style="flex: 1 1 260px; min-width: 0; overflow: hidden; background: var(--ink-900); border: 1px solid var(--border-hairline); border-radius: var(--radius-md)">
-        <video src="slopmop-video.mp4" poster="slopprint-preview-image.png" controls="{{ true }}" plays-inline="{{ true }}" preload="metadata" aria-label="Slop Mop video" style="display: block; width: 100%; height: auto"></video>
+    <p class="mono hero-meta">desktop chrome &amp; chromium · linkedin today · other feeds, email and websites coming soon</p>
+    <div class="stack">
+      <button class="icon-btn stack-pause" type="button" aria-label="Pause network tour"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+      <div data-island="NetworkStack"></div>
+    </div>
+  </div>
+</section>
+<section class="quote">
+  <div class="wrap">
+    <span class="eyebrow">why this exists</span>
+    <blockquote class="reveal" data-reveal style="margin-top:var(--space-7)"><span>My</span> <span>feed</span> <span>had</span> <span>turned</span> <span>into</span> <span>something</span> <span>I</span> <span>scrolled</span> <span>past</span> <span>instead</span> <span>of</span> <span>read.</span> <span>Some</span> <span>of</span> <span>it</span> <span>was</span> <span>AI,</span> <span>plenty</span> <span>of</span> <span>it</span> <span>was</span> <span>people,</span> <span>and</span> <span>all</span> <span>of</span> <span>it</span> <span>cost</span> <span>attention.</span> <span>I</span> <span>built</span> <span>Slop</span> <span>Mop</span> <span>to</span> <span>read</span> <span>ahead</span> <span>for</span> <span>me,</span> <span>show</span> <span>its</span> <span>working,</span> <span>and</span> <span>let</span> <span>me</span> <span>overrule</span> <span>it</span> <span>whenever</span> <span>it's</span> <span>wrong.</span></blockquote>
+    <div class="quote-foot">
+      <a class="btn btn-secondary" href="about.html">About Slop Mop</a>
+      <div class="who"><img src="assets/img/tom.webp" alt="Tom Frazier" width="48" height="48"><div><b>Tom Frazier</b><span>Founder, Slop Mop</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="problem-grid">
+      <div>
+        <h2 class="h-1 problem-title">Many posts <span class="logo-cluster" aria-hidden="true"><span><img src="assets/logos/linkedin-color.svg" alt=""></span><span><img src="assets/logos/x.svg" alt=""></span><span><img src="assets/logos/reddit-color.svg" alt=""></span></span> too little worth reading</h2>
+        <p class="lede" style="margin-top:var(--space-7)">Generative AI made plausible writing nearly free, and feeds reward volume. People post more to be seen, tools write it for them, and the few posts worth your attention sit between the hooks, the bait and the tidy little parables.</p>
       </div>
-      <div style="flex: 1 1 260px; max-width: calc((980px - var(--space-10)) / 2); display: grid; gap: var(--space-6)">
-        <h2 style="margin: 0; font: var(--type-heading); color: var(--text-muted)">Why this exists</h2>
-        <p style="margin: 0; font: var(--type-body); font-size: var(--text-lg); text-wrap: pretty">I wanted to try out Jev, a new type of AI model whose focus is decision probability, with a real pain point in my immediate circle. The one I settled on was the slop problem on LinkedIn. I also wanted to use a data set to build the judgement criteria, so I built it on Graphite's <a href="https://graphite.io/five-percent/research/ai-tells?ref=slopmop.lol" data-cc-id="cc-2" target="_blank" rel="noopener">AI tells research</a> rather than on a detector score.</p>
-        <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)"><b>Slop Mop targets bad writing, not AI assistance.</b> A post judged useful to readers is shielded even when it reads like a template.</p>
+      <ul class="problem-points">
+        <li><span class="n">01</span><span><b>AI made it cheap.</b> A post that took an hour now takes a prompt.</span></li>
+        <li><span class="n">02</span><span><b>Humans make it too.</b> Broetry and engagement bait were here long before the models.</span></li>
+        <li><span class="n">03</span><span><b>Feeds reward it.</b> Reactions are easy to farm, so the formula spreads.</span></li>
+        <li><span class="n">04</span><span><b>You pay in attention.</b> Every post costs a few seconds to decide it wasn't worth it.</span></li>
+      </ul>
+    </div>
+    <div class="turn">
+      <p>So Slop Mop reads ahead and does the deciding. Here's the kit it uses.</p>
+      <button class="icon-btn" type="button" data-marquee-toggle="assets-marquee" aria-label="Pause carousel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+    </div>
+  </div>
+  <div class="marquee" id="assets-marquee" data-marquee aria-label="Slop Mop interface pieces">
+    <button class="icon-btn marquee-nav prev" type="button" data-marquee-step="-1" aria-label="Back one card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="icon-btn marquee-nav next" type="button" data-marquee-step="1" aria-label="Forward one card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    <div class="marquee-track">
+        <div class="asset"><div class="asset-stage"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;compact&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;stats&quot;: {&quot;today&quot;: 17, &quot;week&quot;: 86, &quot;month&quot;: 341, &quot;total&quot;: 2904}, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Fold strip</b><span>Past your threshold, a post folds into a 44px strip. One click unfolds it in place.</span><span class="mono">foldstrip</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 64, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>The score</b><span>An integer out of 100, never alone: the range bar shows where Possibly and Likely start.</span><span class="mono">scorezones</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Slopprint" data-props='{&quot;values&quot;: {&quot;formulaicHook&quot;: 0.66, &quot;engagementBait&quot;: 0.6, &quot;hypeMarketing&quot;: 0.41, &quot;emptyEvaluation&quot;: 0.55, &quot;contrastFraming&quot;: 0.72, &quot;manufacturedNarrative&quot;: 0.79, &quot;manneredProse&quot;: 0.2, &quot;formalHedging&quot;: 0.15, &quot;tradeoffFreePromises&quot;: 0.25}, &quot;color&quot;: &quot;var(--mop-500)&quot;, &quot;width&quot;: 220}'></div></div><div class="asset-text"><b>The Slopprint</b><span>Nine tells, one spoke each. The shape says what kind of slop it is, not just how much.</span><span class="mono">slopprint</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Vote" data-props='{&quot;value&quot;: &quot;probably&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Your vote</b><span>Not sure, No, Maybe or Probably. Your call beats the model in your own feed.</span><span class="mono">votecontrol</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;, &quot;showThreshold&quot;: false}'></div></div><div class="asset-text"><b>Sensitivity</b><span>Mild, Moderate or Aggressive: how easily a post gets flagged.</span><span class="mono">sensitivitytoggle</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div></div><div class="asset-text"><b>Hide or Highlight</b><span>Fold suspected slop away, or leave everything visible and tint its mop.</span><span class="mono">segmentedcontrol</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Verdicts"></div></div><div class="asset-text"><b>Four verdicts</b><span>Every stop carries a word, so no verdict is colour-only.</span><span class="mono">badge</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.62, &quot;h&quot;: 400, &quot;card&quot;: {&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 78, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;manufacturedNarrative&quot;: 0.79, &quot;contrastFraming&quot;: 0.72, &quot;formulaicHook&quot;: 0.66}, &quot;humanVoice&quot;: 0.12, &quot;usefulness&quot;: 0.15, &quot;readerResponse&quot;: 0.38, &quot;interactive&quot;: false}}'></div></div><div class="asset-text"><b>The details panel</b><span>Click the mop for the score, strongest signs, the Slopprint and your vote.</span><span class="mono">whycard</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Tiles"></div></div><div class="asset-text"><b>Hidden today</b><span>The popup keeps count, so you can see how much attention you got back.</span><span class="mono">stattile</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="NoticePanel" data-props='{&quot;kind&quot;: &quot;scoring&quot;, &quot;title&quot;: &quot;Checking this post&quot;, &quot;body&quot;: &quot;Reading the writing. This takes a moment.&quot;}'></div></div><div class="asset-text"><b>Checking</b><span>Posts are scored just before you reach them. This is what a post looks like mid-check.</span><span class="mono">noticepanel</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;compact&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;stats&quot;: {&quot;today&quot;: 17, &quot;week&quot;: 86, &quot;month&quot;: 341, &quot;total&quot;: 2904}, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Fold strip</b><span>Past your threshold, a post folds into a 44px strip. One click unfolds it in place.</span><span class="mono">foldstrip</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 64, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>The score</b><span>An integer out of 100, never alone: the range bar shows where Possibly and Likely start.</span><span class="mono">scorezones</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Slopprint" data-props='{&quot;values&quot;: {&quot;formulaicHook&quot;: 0.66, &quot;engagementBait&quot;: 0.6, &quot;hypeMarketing&quot;: 0.41, &quot;emptyEvaluation&quot;: 0.55, &quot;contrastFraming&quot;: 0.72, &quot;manufacturedNarrative&quot;: 0.79, &quot;manneredProse&quot;: 0.2, &quot;formalHedging&quot;: 0.15, &quot;tradeoffFreePromises&quot;: 0.25}, &quot;color&quot;: &quot;var(--mop-500)&quot;, &quot;width&quot;: 220}'></div></div><div class="asset-text"><b>The Slopprint</b><span>Nine tells, one spoke each. The shape says what kind of slop it is, not just how much.</span><span class="mono">slopprint</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Vote" data-props='{&quot;value&quot;: &quot;probably&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Your vote</b><span>Not sure, No, Maybe or Probably. Your call beats the model in your own feed.</span><span class="mono">votecontrol</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;, &quot;showThreshold&quot;: false}'></div></div><div class="asset-text"><b>Sensitivity</b><span>Mild, Moderate or Aggressive: how easily a post gets flagged.</span><span class="mono">sensitivitytoggle</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div></div><div class="asset-text"><b>Hide or Highlight</b><span>Fold suspected slop away, or leave everything visible and tint its mop.</span><span class="mono">segmentedcontrol</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Verdicts"></div></div><div class="asset-text"><b>Four verdicts</b><span>Every stop carries a word, so no verdict is colour-only.</span><span class="mono">badge</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.62, &quot;h&quot;: 400, &quot;card&quot;: {&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 78, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;manufacturedNarrative&quot;: 0.79, &quot;contrastFraming&quot;: 0.72, &quot;formulaicHook&quot;: 0.66}, &quot;humanVoice&quot;: 0.12, &quot;usefulness&quot;: 0.15, &quot;readerResponse&quot;: 0.38, &quot;interactive&quot;: false}}'></div></div><div class="asset-text"><b>The details panel</b><span>Click the mop for the score, strongest signs, the Slopprint and your vote.</span><span class="mono">whycard</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Tiles"></div></div><div class="asset-text"><b>Hidden today</b><span>The popup keeps count, so you can see how much attention you got back.</span><span class="mono">stattile</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="NoticePanel" data-props='{&quot;kind&quot;: &quot;scoring&quot;, &quot;title&quot;: &quot;Checking this post&quot;, &quot;body&quot;: &quot;Reading the writing. This takes a moment.&quot;}'></div></div><div class="asset-text"><b>Checking</b><span>Posts are scored just before you reach them. This is what a post looks like mid-check.</span><span class="mono">noticepanel</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="section dark" data-theme="dark" id="tells">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">the nine tells</span>
+      <h2 class="h-1">Nine tells of slop</h2>
+      <p class="lede">The model asks nine separate questions about the writing. Six come from Graphite's research on AI tells; the last three are feed habits we added. One spike isn't enough: slop usually shows several at once.</p>
+    </div>
+    <div class="tells" data-tells data-current="0">
+      <ul class="tell-list">
+        <li class="tell-item" data-tell="formulaicHook">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Scroll-stopper<span class="code">01</span></button>
+          <div class="tell-open" tabindex="-1"><b>Scroll-stopper</b><p>A dramatic one-line opener, a gap, then one-line paragraphs walking to a moral. Built to stop the thumb, not to say anything.</p><span class="ex">e.g. I got rejected 47 times. / Then everything changed.</span></div>
+        </li>
+        <li class="tell-item" data-tell="engagementBait">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Engagement bait<span class="code">02</span></button>
+          <div class="tell-open" tabindex="-1"><b>Engagement bait</b><p>Asks for the reaction instead of earning it: comment a keyword, repost to help your network, follow for part two.</p><span class="ex">e.g. Comment “GUIDE” and I&#x27;ll DM you the template.</span></div>
+        </li>
+        <li class="tell-item" data-tell="hypeMarketing">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Hype words<span class="code">03</span></button>
+          <div class="tell-open" tabindex="-1"><b>Hype words</b><p>Marketing vocabulary standing in for a claim. Big verbs, no numbers.</p><span class="ex">e.g. This game-changing framework will unlock unprecedented growth.</span></div>
+        </li>
+        <li class="tell-item" data-tell="emptyEvaluation">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Empty praise<span class="code">04</span></button>
+          <div class="tell-open" tabindex="-1"><b>Empty praise</b><p>Calls something meaningful or profound and never says what it did.</p><span class="ex">e.g. An incredibly meaningful, truly transformative experience.</span></div>
+        </li>
+        <li class="tell-item" data-tell="tradeoffFreePromises">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>No-catch promises<span class="code">05</span></button>
+          <div class="tell-open" tabindex="-1"><b>No-catch promises</b><p>All benefit, no cost. Real work has trade-offs; this writing never does.</p><span class="ex">e.g. Scale your output without sacrificing quality or hiring.</span></div>
+        </li>
+        <li class="tell-item" data-tell="contrastFraming">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>“Not X, but Y”<span class="code">06</span></button>
+          <div class="tell-open" tabindex="-1"><b>“Not X, but Y”</b><p>Defines things by what they aren't, over and over, so every line sounds like a revelation.</p><span class="ex">e.g. Leadership isn&#x27;t a title. It&#x27;s a mindset.</span></div>
+        </li>
+        <li class="tell-item" data-tell="manneredProse">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Flowery prose<span class="code">07</span></button>
+          <div class="tell-open" tabindex="-1"><b>Flowery prose</b><p>Flourish in place of the plain claim.</p><span class="ex">e.g. Growth is a delicate dance between vision and humility.</span></div>
+        </li>
+        <li class="tell-item" data-tell="formalHedging">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Stiff phrasing<span class="code">08</span></button>
+          <div class="tell-open" tabindex="-1"><b>Stiff phrasing</b><p>Stock transitions and hedges that make a sentence longer and say less.</p><span class="ex">e.g. Furthermore, this approach may provide additional benefits.</span></div>
+        </li>
+        <li class="tell-item" data-tell="manufacturedNarrative">
+          <button class="tell-btn" type="button" aria-expanded="false"><span class="plus">+</span>Too-tidy story<span class="code">09</span></button>
+          <div class="tell-open" tabindex="-1"><b>Too-tidy story</b><p>An anecdote that exists only to land exactly on its lesson.</p><span class="ex">e.g. A junior employee once asked me a question I&#x27;ll never forget.</span></div>
+        </li>
+      </ul>
+      <div class="tell-stage">
+        <div class="tell-card">
+          <div class="tell-card-head">
+            <span class="mono">each tell is one spoke of the slopprint</span>
+            <div class="tell-nav">
+              <button class="icon-btn" type="button" data-tell-step="-1" aria-label="Previous tell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+              <button class="icon-btn" type="button" data-tell-step="1" aria-label="Next tell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </div>
+          <div data-island="TellCard"></div>
+        </div>
+        <a class="mono" href="how-it-works.html#tells" style="color:var(--text-link)">all nine, with examples and fine versions →</a>
       </div>
     </div>
-  </section>
-
-  <section id="how" style="padding: var(--space-12) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 1080px; margin: 0 auto; display: grid; gap: var(--space-9)">
-      <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">How it works</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: var(--space-8)">
-
-        <div style="display: grid; gap: var(--space-5); align-content: start">
-          <div aria-hidden="true" style="display: grid; gap: var(--space-3); align-content: center; height: 104px; padding: var(--space-5); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
-            <span style="height: 8px; width: 70%; border-radius: 3px; background: var(--ink-200)"></span>
-            <span style="height: 8px; width: 84%; border-radius: 3px; background: var(--ink-200)"></span>
-            <span style="display: flex; align-items: center; gap: var(--space-4)">
-              <span style="flex: 1 1 auto; border-top: 1px dashed var(--ink-300)"></span>
-              <span style="font: var(--type-mono-label); color: var(--text-faint)">viewport</span>
-            </span>
-            <span style="height: 8px; width: 60%; border-radius: 3px; background: var(--ink-100)"></span>
-          </div>
-          <span style="font: var(--type-mono); color: var(--text-faint)">01</span>
-          <h3 style="margin: 0; font: var(--type-heading)">Reads ahead</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Posts are pulled before they reach your view and Jev's speed means the verdict is ready by the time you see them.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-5); align-content: start">
-          <div aria-hidden="true" style="display: grid; gap: var(--space-5); align-content: center; justify-items: center; height: 104px; padding: var(--space-5); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
-            <span style="display: flex; gap: var(--space-2)">
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--ink-300)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--blue-500)"></span>
-              <span style="width: 8px; height: 18px; border-radius: 2px; background: var(--blue-500)"></span>
-            </span>
-            <span style="font: var(--type-mono); color: var(--text-faint)">11 answers → 1 score</span>
-          </div>
-          <span style="font: var(--type-mono); color: var(--text-faint)">02</span>
-          <h3 style="margin: 0; font: var(--type-heading)">Asks Jev</h3><p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Eleven questions go out in parallel: nine writing signs, plus two counter-signals that ask whether it sounds like a person and any proof if it is useful to readers.</p>
-          
-        </div>
-
-        <div style="display: grid; gap: var(--space-5); align-content: start">
-          <div aria-hidden="true" style="display: grid; gap: var(--space-5); align-content: center; height: 104px; padding: var(--space-5); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
-            <span style="display: flex; align-items: center; gap: var(--space-4); height: 22px; padding: 0 var(--space-4); border: 1px solid var(--border-hairline); border-radius: 3px; background: var(--gradient-fold)">
-              <span style="font: var(--type-mono-label); color: var(--text-faint)">hidden</span>
-            </span>
-            <span style="display: grid; gap: var(--space-2); padding: var(--space-4); border-radius: 3px; background: var(--paper-000); box-shadow: 0 0 0 3px var(--red-500)">
-              <span style="height: 6px; width: 76%; border-radius: 3px; background: var(--ink-200)"></span>
-              <span style="height: 6px; width: 54%; border-radius: 3px; background: var(--ink-100)"></span>
-            </span>
-          </div>
-          <span style="font: var(--type-mono); color: var(--text-faint)">03</span>
-          <h3 style="margin: 0; font: var(--type-heading)">Folds or flags</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Choose a threshold and posts fold into a compact strip, or get outlined when using Highlight mode. Hover either one for the full breakdown.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-5); align-content: start">
-          <div aria-hidden="true" style="display: grid; gap: var(--space-4); align-content: center; height: 104px; padding: var(--space-5); background: var(--paper-100); border: 1px solid var(--border-hairline); border-radius: var(--radius-sm)">
-            <span style="display: flex; align-items: center; gap: var(--space-4)">
-              <span style="width: 12px; height: 12px; border-radius: var(--radius-pill); background: var(--blue-500)"></span>
-              <span style="font: var(--type-mono-label); color: var(--text-body)">No</span>
-              <span style="margin-left: auto; color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="13" hint-size="13px,13px"></x-import></span>
-            </span>
-            <span style="display: flex; align-items: center; gap: var(--space-4)">
-              <span style="width: 12px; height: 12px; border-radius: var(--radius-pill); background: var(--mop-500)"></span>
-              <span style="font: var(--type-mono-label); color: var(--text-faint)">Maybe</span>
-            </span>
-            <span style="display: flex; align-items: center; gap: var(--space-4)">
-              <span style="width: 12px; height: 12px; border-radius: var(--radius-pill); background: var(--red-500)"></span>
-              <span style="font: var(--type-mono-label); color: var(--text-faint)">Probably</span>
-            </span>
-          </div>
-          <span style="font: var(--type-mono); color: var(--text-faint)">04</span>
-          <h3 style="margin: 0; font: var(--type-heading)">Takes your vote</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The mop icon sits in the post's header menu. Select it to give your own slop feedback of No, Maybe or Probably. Your vote overrides only for what you see but contributes to aggregated further research.</p>
-        </div>
-
-      </div>
-      <a href="how-it-works.html" style="justify-self: start; display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); background: var(--paper-000); border: 1px solid var(--border-default); border-radius: var(--radius-sm); font: var(--type-ui); color: var(--text-body)">See more: the Slopprint, the three bars and how the score adds up<x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="arrow-right" size="15" hint-size="15px,15px"></x-import></a>
+  </div>
+</section>
+<section class="section" id="humanity">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">three counter-signals</span>
+      <h2 class="h-1" style="max-width:18ch">The value of humanity, included</h2>
+      <p class="lede measure">Useful beats authentic. Three counter-signals sit beside every verdict, and they can only pull a score down. A useful post survives the mop however it was written.</p>
     </div>
-  </section>
-
-  <section id="modes" style="padding: var(--space-12) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 1120px; margin: 0 auto; display: grid; gap: var(--space-9)">
-      <div style="display: grid; gap: var(--space-5); max-width: 62ch">
-        <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Two modes, three levels</h2>
-        <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Pick how much you want to see, then pick how far the judgement goes. Try both on the two posts below: hover one for what Jev noticed, and vote when it gets you wrong.</p>
+    <div class="cards-3">
+      <div class="card">
+        <div class="bar-row"><span>Sounds like a person</span><span class="mono">asked of the model</span></div>
+        <div class="bar grow" data-grow><i style="--w:74%"></i></div>
+        <h3>One particular person, not anyone</h3>
+        <p>Specific detail from the writer's own life or work, phrasing that's clearly theirs, uneven rhythm. “I” and “my” alone don't count. It takes a little off the score.</p>
       </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-6)">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
-          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="eye-off" size="20" hint-size="20px,20px"></x-import></span>
-          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Hide</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The post collapses into a strip carrying the score and the two strongest signs. "Show me anyway" unfolds it in place — nothing is deleted, muted, blocked or reported.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
-          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="flag" size="20" hint-size="20px,20px"></x-import></span>
-          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Highlight</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The post stays exactly where it is and takes a 3px outline: yellow for possibly slop, red for likely slop. Every flag carries a worded chip, so no verdict is colour-only.</p>
-        </x-import>
+      <div class="card">
+        <div class="bar-row"><span>Useful to readers</span><span class="mono">half the shield</span></div>
+        <div class="bar grow" data-grow><i style="--w:81%"></i></div>
+        <h3>Something you could use today</h3>
+        <p>Facts, numbers, a named example, a step to follow. Who or what wrote it doesn't matter: useful AI-assisted writing scores as well as useful writing typed by hand.</p>
       </div>
-
-      <div style="display: grid; gap: var(--space-8); padding: var(--space-8) 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline)">
-        <span style="display: inline-flex; align-items: center; gap: var(--space-4); justify-self: start; font: var(--type-label); color: var(--text-muted)">
-          <span style="width: 7px; height: 7px; border-radius: var(--radius-pill); background: var(--mop-500)"></span>
-          Live — switch mode and sensitivity right here, the posts below respond
-        </span>
-        <div style="display: flex; align-items: baseline; gap: var(--space-6); flex-wrap: wrap; font: var(--weight-bold) var(--text-2xl)/1.15 var(--font-display); letter-spacing: var(--tracking-tight)">
-          <span>{{ modeWord }}</span>
-          <span style="color: var(--ink-300)">+</span>
-          <span>{{ sensWord }}</span>
-          <span style="color: var(--ink-300)">=</span>
-          <span style="color: var(--text-muted)">{{ outcome }}</span>
-        </div>
-        <div style="display: flex; gap: var(--space-8); align-items: flex-end; flex-wrap: wrap">
-          <label style="display: grid; gap: var(--space-4); flex: 1 1 220px; min-width: 0">
-            <span style="font: var(--type-label); color: var(--text-muted)">Mode</span>
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.SegmentedControl" value="{{ mode }}" on-change="{{ setMode }}" options="{{ modeOptions }}" hint-size="100%,34px"></x-import>
-          </label>
-          <label style="display: grid; gap: var(--space-4); flex: 1 1 320px; min-width: 0">
-            <span style="font: var(--type-label); color: var(--text-muted)">Sensitivity</span>
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.SegmentedControl" value="{{ sens }}" on-change="{{ setSens }}" options="{{ sensOptions }}" hint-size="100%,34px"></x-import>
-          </label>
-          <span style="font: var(--type-mono); color: var(--text-faint); padding-bottom: var(--space-3)">{{ thresholdLine }}</span>
-        </div>
+      <div class="card">
+        <div class="bar-row"><span>Reader response</span><span class="mono">counted, not asked</span></div>
+        <div class="bar grow" data-grow><i style="--w:38%"></i></div>
+        <h3>What readers actually did</h3>
+        <p>Comments and reposts count for far more than one-tap reactions, and hundreds of reactions with no discussion is discounted as hollow. The other half of the shield.</p>
       </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: var(--space-9); align-items: start">
-
-        <div style="display: grid; gap: var(--space-6); padding: var(--space-7); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-pop)">
-          <sc-if value="{{ activeHasVote }}">
-            <p style="margin: 0; padding: var(--space-5); background: var(--paper-100); border-radius: var(--radius-sm); font: var(--type-body-sm); color: var(--text-muted)">{{ voteNote }}</p>
-          </sc-if>
-          <div style="display: flex; gap: var(--space-5); align-items: flex-start">
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="{{ activeTone }}" hint-size="auto,22px">{{ activeLabel }}</x-import>
-            <span style="font: var(--type-body-sm)">{{ activeSentence }}</span>
-          </div>
-          {{ activeMeter }}
-          <p style="margin: 0; font: var(--type-body-sm)">Strongest signs: <strong style="font-weight: var(--weight-semibold)">{{ activeSigns }}</strong></p>
-          <p style="margin: 0; font: var(--type-label); color: var(--text-muted)">What Jev noticed</p>
-          {{ activeRadar }}
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted); text-align: center">Further from the centre is a stronger sign of AI writing.</p>
-          {{ activeBars }}
-          <p style="margin: 0; padding-top: var(--space-5); border-top: 1px solid var(--border-hairline); font: var(--type-mono); color: var(--text-faint)">in the extension this panel opens on hover · vote with the mop icon beside the post's "…" menu</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-9); min-width: 0">
-
-          <div onMouseEnter="{{ hoverA }}" style="display: grid; gap: var(--space-4); min-width: 0">
-            <sc-if value="{{ aFolded }}" hint-placeholder-val="{{ true }}">
-              <div style="display: grid; gap: var(--space-4); min-width: 0; white-space: nowrap; overflow: hidden">
-                <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.FoldStrip" score="{{ aStripScore }}" reasons="{{ aReasons }}" on-restore="{{ openA }}" hint-size="100%,44px"></x-import>
-                <button type="button" onClick="{{ toggleVoteA }}" style="justify-self: end; display: inline-flex; align-items: center; gap: var(--space-4); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-default); border-radius: var(--radius-sm); background: var(--paper-000); color: var(--ink-600); cursor: pointer; font: var(--type-label)">
-                  <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="15" knockout="var(--paper-000)" hint-size="15px,15px"></x-import>
-                  Vote on this post
-                </button>
-              </div>
-            </sc-if>
-            <sc-if value="{{ aFramed }}">
-              <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.HighlightFrame" level="{{ aLevel }}" hint-size="100%,200px">
-                <article style="background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: var(--space-6)">
-                  <div style="display: flex; align-items: center; gap: var(--space-5); margin-bottom: var(--space-5)">
-                    <span style="width: 34px; height: 34px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-                    <span style="display: grid; gap: var(--space-1); flex: 1 1 auto">
-                      <span style="font: var(--type-ui)">Sample post</span>
-                      <span style="font: var(--type-mono); color: var(--text-faint)">3h · edited</span>
-                    </span>
-                    <button type="button" onClick="{{ toggleVoteA }}" aria-label="Vote on this post" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 0; border-radius: var(--radius-sm); background: var(--paper-100); color: var(--ink-600); cursor: pointer">
-                      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="17" knockout="var(--paper-100)" hint-size="17px,17px"></x-import>
-                    </button>
-                  </div>
-                  <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">Most founders won't like this.</p>
-                  <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">I turned down a seven-figure acquisition offer at 24.</p>
-                  <p style="margin: 0; font: var(--type-body-sm)">It wasn't just about the money — it was about the mission. Agree? 🚀</p>
-                </article>
-              </x-import>
-            </sc-if>
-            <sc-if value="{{ aPlain }}">
-              <article style="background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: var(--space-6)">
-                <div style="display: flex; align-items: center; gap: var(--space-5); margin-bottom: var(--space-5)">
-                  <span style="width: 34px; height: 34px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-                  <span style="display: grid; gap: var(--space-1); flex: 1 1 auto">
-                    <span style="font: var(--type-ui)">Sample post</span>
-                    <span style="font: var(--type-mono); color: var(--text-faint)">3h · edited</span>
-                  </span>
-                  <button type="button" onClick="{{ toggleVoteA }}" aria-label="Vote on this post" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 0; border-radius: var(--radius-sm); background: var(--paper-100); color: var(--ink-600); cursor: pointer">
-                    <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="17" knockout="var(--paper-100)" hint-size="17px,17px"></x-import>
-                  </button>
-                </div>
-                <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">Most founders won't like this.</p>
-                <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">I turned down a seven-figure acquisition offer at 24.</p>
-                <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">It wasn't just about the money — it was about the mission. Agree? 🚀</p>
-                <sc-if value="{{ aOpened }}">
-                  <button type="button" onClick="{{ foldA }}" style="background: transparent; border: 0; padding: 0; cursor: pointer; font: var(--type-mono); color: var(--text-faint)">fold it again</button>
-                </sc-if>
-              </article>
-            </sc-if>
-            <sc-if value="{{ aVoteOpen }}">
-              <div style="display: grid; gap: var(--space-5); padding: var(--space-6); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-raised)">
-                <div style="display: flex; align-items: baseline; gap: var(--space-4)">
-                  <span style="font: var(--type-ui); color: var(--text-muted)">Slop score</span>
-                  <span style="font: var(--weight-bold) var(--text-2xl)/1 var(--font-display); color: {{ aColor }}">{{ aScore }}</span>
-                  <span style="font: var(--type-mono); color: var(--text-faint); flex: 1 1 auto">of 1.00</span>
-                  <button type="button" onClick="{{ toggleVoteA }}" aria-label="Close" style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--ink-600); cursor: pointer">
-                    <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="x" size="15" hint-size="15px,15px"></x-import>
-                  </button>
-                </div>
-                <span style="font: var(--type-ui); color: {{ aColor }}">{{ aLabel }}</span>
-                <span style="font: var(--type-body-sm); color: var(--text-muted)">{{ aCommunity }}</span>
-                <div style="display: grid; gap: var(--space-4); padding-top: var(--space-5); border-top: 1px solid var(--border-hairline)">
-                  <span style="font: var(--type-ui)">Is this post slop?</span>
-                  <button type="button" onClick="{{ voteANo }}" style="display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-4); border: 0; border-radius: var(--radius-sm); background: transparent; cursor: pointer; text-align: left">
-                    <span style="width: 14px; height: 14px; border-radius: var(--radius-pill); background: var(--blue-500)"></span>
-                    <span style="font: var(--type-ui)">No</span>
-                    <span style="font: var(--type-body-sm); color: var(--text-muted); flex: 1 1 auto">not slop</span>
-                    <sc-if value="{{ aVotedNo }}"><span style="color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="15" hint-size="15px,15px"></x-import></span></sc-if>
-                  </button>
-                  <button type="button" onClick="{{ voteAMaybe }}" style="display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-4); border: 0; border-radius: var(--radius-sm); background: transparent; cursor: pointer; text-align: left">
-                    <span style="width: 14px; height: 14px; border-radius: var(--radius-pill); background: var(--mop-500)"></span>
-                    <span style="font: var(--type-ui)">Maybe</span>
-                    <span style="font: var(--type-body-sm); color: var(--text-muted); flex: 1 1 auto">borderline</span>
-                    <sc-if value="{{ aVotedMaybe }}"><span style="color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="15" hint-size="15px,15px"></x-import></span></sc-if>
-                  </button>
-                  <button type="button" onClick="{{ voteAYes }}" style="display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-4); border: 0; border-radius: var(--radius-sm); background: transparent; cursor: pointer; text-align: left">
-                    <span style="width: 14px; height: 14px; border-radius: var(--radius-pill); background: var(--red-500)"></span>
-                    <span style="font: var(--type-ui)">Probably</span>
-                    <span style="font: var(--type-body-sm); color: var(--text-muted); flex: 1 1 auto">slop</span>
-                    <sc-if value="{{ aVotedYes }}"><span style="color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="15" hint-size="15px,15px"></x-import></span></sc-if>
-                  </button>
-                  <sc-if value="{{ aHasVote }}">
-                    <button type="button" onClick="{{ clearVoteA }}" style="justify-self: start; background: transparent; border: 0; padding: var(--space-3) var(--space-4); cursor: pointer; font: var(--type-ui); color: var(--text-link)">Clear my vote</button>
-                  </sc-if>
-                </div>
-              </div>
-            </sc-if>
-
-          </div>
-
-          <div onMouseEnter="{{ hoverB }}" style="display: grid; gap: var(--space-4); min-width: 0">
-            <sc-if value="{{ bFolded }}">
-              <div style="display: grid; gap: var(--space-4); min-width: 0; white-space: nowrap; overflow: hidden">
-                <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.FoldStrip" score="{{ bStripScore }}" reasons="{{ bReasons }}" on-restore="{{ openB }}" hint-size="100%,44px"></x-import>
-                <button type="button" onClick="{{ toggleVoteB }}" style="justify-self: end; display: inline-flex; align-items: center; gap: var(--space-4); height: 30px; padding: 0 var(--space-5); border: 1px solid var(--border-default); border-radius: var(--radius-sm); background: var(--paper-000); color: var(--ink-600); cursor: pointer; font: var(--type-label)">
-                  <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="15" knockout="var(--paper-000)" hint-size="15px,15px"></x-import>
-                  Vote on this post
-                </button>
-              </div>
-            </sc-if>
-            <sc-if value="{{ bFramed }}">
-              <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.HighlightFrame" level="{{ bLevel }}" hint-size="100%,180px">
-                <article style="background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: var(--space-6)">
-                  <div style="display: flex; align-items: center; gap: var(--space-5); margin-bottom: var(--space-5)">
-                    <span style="width: 34px; height: 34px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-                    <span style="display: grid; gap: var(--space-1); flex: 1 1 auto">
-                      <span style="font: var(--type-ui)">Borderline post</span>
-                      <span style="font: var(--type-mono); color: var(--text-faint)">7h</span>
-                    </span>
-                    <button type="button" onClick="{{ toggleVoteB }}" aria-label="Vote on this post" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 0; border-radius: var(--radius-sm); background: var(--paper-100); color: var(--ink-600); cursor: pointer">
-                      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="17" knockout="var(--paper-100)" hint-size="17px,17px"></x-import>
-                    </button>
-                  </div>
-                  <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">Spent the weekend rewriting our onboarding email. Open rate moved from 31% to 44%.</p>
-                  <p style="margin: 0; font: var(--type-body-sm)">Furthermore, the shorter version may provide a better experience for people landing in the product for the first time.</p>
-                </article>
-              </x-import>
-            </sc-if>
-            <sc-if value="{{ bPlain }}" hint-placeholder-val="{{ true }}">
-              <article style="background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: var(--space-6)">
-                <div style="display: flex; align-items: center; gap: var(--space-5); margin-bottom: var(--space-5)">
-                  <span style="width: 34px; height: 34px; border-radius: var(--radius-pill); background: var(--paper-300)"></span>
-                  <span style="display: grid; gap: var(--space-1); flex: 1 1 auto">
-                    <span style="font: var(--type-ui)">Borderline post</span>
-                    <span style="font: var(--type-mono); color: var(--text-faint)">7h</span>
-                  </span>
-                  <button type="button" onClick="{{ toggleVoteB }}" aria-label="Vote on this post" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 0; border-radius: var(--radius-sm); background: var(--paper-100); color: var(--ink-600); cursor: pointer">
-                    <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.MopMark" size="17" knockout="var(--paper-100)" hint-size="17px,17px"></x-import>
-                  </button>
-                </div>
-                <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">Spent the weekend rewriting our onboarding email. Open rate moved from 31% to 44%.</p>
-                <p style="margin: 0 0 var(--space-5); font: var(--type-body-sm)">Furthermore, the shorter version may provide a better experience for people landing in the product for the first time.</p>
-                <sc-if value="{{ bOpened }}">
-                  <button type="button" onClick="{{ foldB }}" style="background: transparent; border: 0; padding: 0; cursor: pointer; font: var(--type-mono); color: var(--text-faint)">fold it again</button>
-                </sc-if>
-              </article>
-            </sc-if>
-            <sc-if value="{{ bVoteOpen }}">
-              <div style="display: grid; gap: var(--space-5); padding: var(--space-6); background: var(--paper-000); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-raised)">
-                <div style="display: flex; align-items: baseline; gap: var(--space-4)">
-                  <span style="font: var(--type-ui); color: var(--text-muted)">Slop score</span>
-                  <span style="font: var(--weight-bold) var(--text-2xl)/1 var(--font-display); color: {{ bColor }}">{{ bScore }}</span>
-                  <span style="font: var(--type-mono); color: var(--text-faint); flex: 1 1 auto">of 1.00</span>
-                  <button type="button" onClick="{{ toggleVoteB }}" aria-label="Close" style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--ink-600); cursor: pointer">
-                    <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="x" size="15" hint-size="15px,15px"></x-import>
-                  </button>
-                </div>
-                <span style="font: var(--type-ui); color: {{ bColor }}">{{ bLabel }}</span>
-                <span style="font: var(--type-body-sm); color: var(--text-muted)">{{ bCommunity }}</span>
-                <div style="display: grid; gap: var(--space-4); padding-top: var(--space-5); border-top: 1px solid var(--border-hairline)">
-                  <span style="font: var(--type-ui)">Is this post slop?</span>
-                  <button type="button" onClick="{{ voteBNo }}" style="display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-4); border: 0; border-radius: var(--radius-sm); background: transparent; cursor: pointer; text-align: left">
-                    <span style="width: 14px; height: 14px; border-radius: var(--radius-pill); background: var(--blue-500)"></span>
-                    <span style="font: var(--type-ui)">No</span>
-                    <span style="font: var(--type-body-sm); color: var(--text-muted); flex: 1 1 auto">not slop</span>
-                    <sc-if value="{{ bVotedNo }}"><span style="color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="15" hint-size="15px,15px"></x-import></span></sc-if>
-                  </button>
-                  <button type="button" onClick="{{ voteBMaybe }}" style="display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-4); border: 0; border-radius: var(--radius-sm); background: transparent; cursor: pointer; text-align: left">
-                    <span style="width: 14px; height: 14px; border-radius: var(--radius-pill); background: var(--mop-500)"></span>
-                    <span style="font: var(--type-ui)">Maybe</span>
-                    <span style="font: var(--type-body-sm); color: var(--text-muted); flex: 1 1 auto">borderline</span>
-                    <sc-if value="{{ bVotedMaybe }}"><span style="color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="15" hint-size="15px,15px"></x-import></span></sc-if>
-                  </button>
-                  <button type="button" onClick="{{ voteBYes }}" style="display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-4); border: 0; border-radius: var(--radius-sm); background: transparent; cursor: pointer; text-align: left">
-                    <span style="width: 14px; height: 14px; border-radius: var(--radius-pill); background: var(--red-500)"></span>
-                    <span style="font: var(--type-ui)">Probably</span>
-                    <span style="font: var(--type-body-sm); color: var(--text-muted); flex: 1 1 auto">slop</span>
-                    <sc-if value="{{ bVotedYes }}"><span style="color: var(--blue-500); display: inline-flex"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="15" hint-size="15px,15px"></x-import></span></sc-if>
-                  </button>
-                  <sc-if value="{{ bHasVote }}">
-                    <button type="button" onClick="{{ clearVoteB }}" style="justify-self: start; background: transparent; border: 0; padding: var(--space-3) var(--space-4); cursor: pointer; font: var(--type-ui); color: var(--text-link)">Clear my vote</button>
-                  </sc-if>
-                </div>
-              </div>
-            </sc-if>
-
-          </div>
-
-        </div>
-      </div>
-
     </div>
-  </section>
-
-  <section id="jev" style="padding: var(--space-12) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
-      <div style="display: grid; gap: var(--space-5); max-width: 58ch">
-        <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Why it's free</h2>
-        <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The judging runs on Jev, used here as a programming primitive rather than a chat call: a question, a definition, and a decision back. There is no account to create, no API key, and no per-post cost for Slop Mop to pass on to you. This will continue to be free as long as it doesn't get abused.</p>
+    <div class="formula">
+      <h3 class="formula-title">The score is the weight of the tells, shielded by what's useful and human.</h3>
+      <math display="block" aria-label="The slop score">
+        <mi>S</mi><mo>=</mo><mi>&#x3B3;</mi><mo>&#x22C5;</mo>
+        <mrow><mo>(</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>9</mn></munderover><msub><mi>w</mi><mi>i</mi></msub><msub><mi>&#x3C4;</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BB;</mi><mi>h</mi><mo>)</mo></mrow>
+        <mo>&#x22C5;</mo><mrow><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3C3;</mi><mo>)</mo></mrow><mo>,</mo><mspace width="1.2em"/>
+        <mi>&#x3C3;</mi><mo>=</mo><mi>min</mi><mrow><mo>(</mo><mfrac><mrow><mi>u</mi><mo>+</mo><mi>r</mi></mrow><mn>2</mn></mfrac><mo>,</mo><mover><mi>&#x3C3;</mi><mo>&#x2C6;</mo></mover><mo>)</mo></mrow>
+      </math>
+      <div class="legend"><span><i>&#x3C4;<sub>i</sub></i>the nine tells</span><span><i>w<sub>i</sub></i>their weights</span><span><i>h</i>sounds like a person</span><span><i>u</i>useful to readers</span><span><i>r</i>reader response</span><span><i>&#x3C3;</i>the shield, capped</span></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="trust">
+  <div class="wrap trust">
+    <div class="trust-copy">
+      <span class="eyebrow">no judgment of people</span>
+      <h2 class="h-1">Judges the writing. Never the writer.</h2>
+      <p class="lede">Slop Mop has no opinion about you, and none about the person who wrote the post. It never learns who wrote a post, keeps no copy of what they wrote, and tells nobody what it thought.</p>
+      <ul class="never">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>No names go out with a post.</b> Not yours, not the author's. Only the post text and its public counts are sent to be judged.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Posts aren't stored.</b> The server keeps a one-way hash so a post isn't judged twice. The words themselves are never kept.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>No profiles, of anyone.</b> No score is ever attached to a person, and no browsing history or LinkedIn profile data is collected.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Nothing is reported.</b> No author is flagged, muted or told. A verdict only changes what you see, in your own browser.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Your votes stay private.</b> They're never shown to anyone or sent to the author, and only ever counted in aggregate to tune the questions.</span></li>
+      </ul>
+      <a class="btn btn-secondary" href="privacy.html">Read the privacy policy</a>
+    </div>
+    <div class="trust-visual" aria-hidden="true">
+      <div class="tv-card">
+        <span class="tv-label">in your browser</span>
+        <article class="post">
+          <div class="post-head"><span class="avatar">MB</span><span class="post-who"><span class="post-name">Marcus Bell</span><span class="post-meta">Helping B2B leaders unlock growth</span></span></div>
+          <p class="post-body" style="margin:0">Most teams don't have a strategy problem. They have a clarity problem.</p>
+        </article>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: var(--space-6)">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="send" size="20" hint-size="20px,20px"></x-import></span>
-          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Eleven questions, one call</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Nine writing signs and two counter-signals, asked in parallel against the post text and its public engagement counts.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="gauge" size="20" hint-size="20px,20px"></x-import></span>
-          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">One slop score</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The answers are weighted into one score and compared with your threshold. When Jev isn't confident, the post is left alone.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="shield-check" size="20" hint-size="20px,20px"></x-import></span>
-          <h3 style="margin: var(--space-5) 0 var(--space-3); font: var(--type-heading)">Usefulness shield</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">A post judged genuinely useful, or that readers genuinely engaged with, has a large share taken off its score. It's finding bad writing not just bad AI writing — see the <a href="privacy.html">privacy policy</a> for exactly what is sent to our servers.</p>
-        </x-import>
+      <div class="tv-arrow"><span class="mono">sent to be judged</span></div>
+      <div class="tv-card">
+        <span class="tv-label">what leaves</span>
+        <div class="tv-row"><span class="mono">author</span><span class="redact">never sent</span></div>
+        <div class="tv-row"><span class="mono">you</span><span class="redact">never sent</span></div>
+        <div class="tv-row"><span class="mono">text</span><span>“Most teams don't have a strategy problem…”</span></div>
+        <div class="tv-row"><span class="mono">counts</span><span>1,204 reactions · 240 comments</span></div>
       </div>
-      <div style="display: grid; gap: var(--space-5)">
-        <h3 style="margin: 0; font: var(--type-heading)">The nine signs</h3>
-        <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 0 var(--space-9)">
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Scroll-stopper</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">one line, then a gap</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Engagement bait</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"agree?", "comment yes"</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Hype words</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"unlock", "paradigm shift"</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Empty praise</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"meaningful", no detail</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">No-catch promises</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"without sacrificing anything"</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">"Not X, but Y"</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">definition by contrast</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Flowery prose</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">flourish over directness</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Stiff phrasing</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">"furthermore", "may provide"</span></li>
-          <li style="display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Too-tidy story</span><span style="font: var(--type-mono); color: var(--text-faint); text-align: right">anecdote to neat lesson</span></li>
+      <div class="tv-arrow"><span class="mono">what's kept</span></div>
+      <div class="tv-card tv-kept">
+        <span class="tv-label">on the server</span>
+        <div class="tv-row"><span class="mono">post</span><code>sha256 9f2c…e41a</code></div>
+        <div class="tv-row"><span class="mono">score</span><code>61 / 100</code></div>
+        <div class="tv-row"><span class="mono">who</span><span class="redact">nobody</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section sunken" id="how">
+  <div class="wrap">
+    <div class="section-head flow-head">
+      <div>
+        <span class="eyebrow">how it works</span>
+        <h2 class="h-1" style="max-width:16ch;margin-top:var(--space-6)">Reads ahead, so you don't have to</h2>
+      </div>
+      <div>
+        <p class="lede">Seven steps between a post loading and you deciding it wasn't worth it. All but the last finish before you scroll there.</p>
+        <a class="btn btn-secondary" href="how-it-works.html" style="margin-top:var(--space-6)">Read the full breakdown</a>
+      </div>
+    </div>
+  </div>
+  <div class="hflow" data-hflow>
+    <div class="hflow-sticky">
+      <div class="hflow-track">
+        <svg class="hflow-line" aria-hidden="true"><line class="base"/><line class="drawn"/></svg>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">01</span><div><b>Scan ahead</b><p>Posts are read before they reach your screen.</p></div></div>
+            <div class="flow-visual"><div class="mini-feed"><div class="mp"><span class="ln"></span><span class="mono">on screen</span></div><div class="viewport-line">your viewport</div><div class="mp"><span class="ln"></span><span class="mono">reading</span></div><div class="mp"><span class="ln"></span><span class="mono">reading</span></div><div class="mp"><span class="ln"></span><span class="mono">queued</span></div></div><span class="mono">14 posts scanned ahead</span></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">02</span><div><b>Grab the weights</b><p>Each check loads the sign library: nine tells, three counter-signals.</p></div></div>
+            <div class="flow-visual"><div class="weights"><div><span>Scroll-stopper</span><span class="bar"><i style="width:70%"></i></span></div><div><span>Engagement bait</span><span class="bar"><i style="width:82%"></i></span></div><div><span>Hype words</span><span class="bar"><i style="width:55%"></i></span></div><div><span>Empty praise</span><span class="bar"><i style="width:60%"></i></span></div><div><span>Sounds like a person</span><span class="bar counter"><i style="width:40%"></i></span></div><div><span>Useful to readers</span><span class="bar counter"><i style="width:75%"></i></span></div></div><span class="mono">bars illustrative · exact weights stay private</span></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">03</span><div><b>Score with a decision model</b><p>An AI model built for calibrated decisions answers twelve questions at once.</p></div></div>
+            <div class="flow-visual"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 78, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true}'></div><span class="mono">12 answers → 1 score out of 100 · unsure fails open</span></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">04</span><div><b>Send it back to you</b><p>The verdict lands on the mop beside the post.</p></div></div>
+            <div class="flow-visual"><div data-island="MopRow"></div></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">05</span><div><b>Auto-hide</b><p>Past your threshold, the post folds into a strip you can reopen.</p></div></div>
+            <div class="flow-visual"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;minimal&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;yellow&quot;, &quot;density&quot;: &quot;minimal&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">06</span><div><b>Click for the details</b><p>The score, the strongest signs, the Slopprint and the three bars.</p></div></div>
+            <div class="flow-visual"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.6, &quot;h&quot;: 420, &quot;card&quot;: {&quot;verdict&quot;: &quot;possibly&quot;, &quot;score&quot;: 61, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;emptyEvaluation&quot;: 0.74, &quot;engagementBait&quot;: 0.68, &quot;contrastFraming&quot;: 0.52, &quot;formulaicHook&quot;: 0.4}, &quot;humanVoice&quot;: 0.21, &quot;usefulness&quot;: 0.09, &quot;readerResponse&quot;: 0.71, &quot;interactive&quot;: false}}'></div></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">07</span><div><b>Vote to overrule it</b><p>Not sure, No, Maybe or Probably. Your call beats the model in your feed.</p></div><span class="badge badge-paid">your call</span></div>
+            <div class="flow-visual"><div data-island="Vote" data-props='{&quot;value&quot;: &quot;no&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div><div data-island="ScoreZones" data-props='{&quot;score&quot;: 61, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;vote&quot;: &quot;no&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div><span class="mono">your vote: no · the post stays in your feed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="networks">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">works where you read</span>
+      <h2 class="h-1">One mop for every feed</h2>
+      <p class="lede">Slop Mop works on LinkedIn today. The same mop, fold strip and details panel are coming to the other feeds you scroll, the articles and websites you open, and the email you triage.</p>
+    </div>
+    <div class="integrations">
+      <div class="int-group"><h3>social feeds</h3>
+        <div class="int"><span class="lg"><img src="assets/logos/linkedin-color.svg" alt="" width="20" height="20"></span><span class="nm">LinkedIn</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/x.svg" alt="" width="20" height="20"></span><span class="nm">X</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/reddit.svg" alt="" width="20" height="20"></span><span class="nm">Reddit</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/facebook.svg" alt="" width="20" height="20"></span><span class="nm">Facebook</span><span class="badge badge-soon">coming soon</span></div>
+      </div>
+      <div class="int-group"><h3>articles &amp; websites</h3>
+        <div class="int soon"><span class="lg"><img src="assets/logos/substack.svg" alt="" width="20" height="20"></span><span class="nm">Substack</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/medium.svg" alt="" width="20" height="20"></span><span class="nm">Medium</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/web.svg" alt="" width="20" height="20"></span><span class="nm">Any website</span><span class="badge badge-soon">coming soon</span></div>
+      </div>
+      <div class="int-group"><h3>email</h3>
+        <div class="int soon"><span class="lg"><img src="assets/logos/gmail.svg" alt="" width="20" height="20"></span><span class="nm">Gmail</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftoutlook.svg" alt="" width="20" height="20"></span><span class="nm">Outlook</span><span class="badge badge-soon">coming soon</span></div>
+      </div>
+      <div class="int-group"><h3>browsers</h3>
+        <div class="int"><span class="lg"><img src="assets/logos/chrome-color.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/chromium-color.svg" alt="" width="20" height="20"></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftedge.svg" alt="" width="20" height="20"></span><span class="nm">Microsoft Edge</span><span class="badge badge-soon">coming soon</span></div>
+        <p class="mono" style="margin:4px 0 0">brave, arc, opera, vivaldi: chromium browsers that install from the chrome web store</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section sunken" id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">pricing</span>
+      <h2 class="h-1">One feed is free. The XL mop does the whole house.</h2>
+      <p class="lede">Free cleans the one feed you pick, with 250 checks a day, for good. Slop Mop XL takes the mop everywhere you read, and it's coming soon.</p>
+    </div>
+    <div class="plans">
+      <div class="plan featured">
+        <div class="plan-top"><span class="plan-name"><img src="_ds/slopmop/mop.svg" alt="" width="24" height="24">Slop Mop</span><span class="badge badge-live">available now</span></div>
+        <div class="plan-price">Free<small>for one feed, for good</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>The one feed you pick, read ahead and mopped (LinkedIn today)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Hide or Highlight, at three sensitivities</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>The full details panel and the Slopprint on every post</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Your vote overrides the model in your feed</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>250 checks a day</span></li>
         </ul>
-        <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Two more questions are to protect good content: <strong style="font-weight: var(--weight-semibold);">sounds like a person</strong> and <strong style="font-weight: var(--weight-semibold);">useful to readers</strong>. Both can only lower the score. <a href="how-it-works.html">How they work</a>.</p>
+        <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser — free</a>
+      </div>
+      <div class="plan">
+        <div class="plan-top"><span class="plan-name"><img src="_ds/slopmop/mop.svg" alt="" width="24" height="24">Slop Mop XL</span><span class="badge badge-soon">coming soon</span></div>
+        <div class="plan-price">$59.99<small>a year · $5.00 a month</small></div>
+        <p class="plan-alt"><span class="badge badge-live">Best value</span> save 17% on yearly · or $5.99 a month</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Everything in Slop Mop</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Every feed: LinkedIn, X, Reddit and Facebook</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>The sites you read: articles, comments and reviews</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Your inbox, with the Gmail and Outlook plugins</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>More checks every day than the free 250</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Up to five browsers on one account</span></li>
+        </ul>
+        <a class="btn btn-secondary" href="#sub-email">Get told when it's out</a>
       </div>
     </div>
-  </section>
-
-  <sc-if value="{{ sideload }}">
-    <section id="install" style="padding: var(--space-12) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
-      <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
-        <div style="display: grid; gap: var(--space-5); max-width: 62ch">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">In review</x-import>
-          <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Installing it before the store does</h2>
-          <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The Chrome Web Store listing is under review, which takes anywhere from a few days to a few weeks. Rather than sit on a finished extension, here it is as a .zip. Chrome loads unpacked extensions natively — this is the same mechanism every extension developer uses daily, no special build and nothing disabled.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">When the listing clears, this page switches to a one-click store button and you can reinstall from there. Updates do not arrive automatically on a sideloaded copy, so that is the better long-term route.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: var(--space-6)">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
-            <span style="font: var(--type-mono); color: var(--text-faint)">step 1</span>
-            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Download and unzip</h3>
-            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Grab the .zip below and unzip it somewhere you will not delete by accident — Chrome reads the folder every time it starts, so Downloads is a bad home for it.</p>
-          </x-import>
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
-            <span style="font: var(--type-mono); color: var(--text-faint)">step 2</span>
-            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Open the extensions page</h3>
-            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Paste <span style="font: var(--type-mono)">chrome://extensions</span> into the address bar, then turn on <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Developer mode</strong> with the toggle in the top right.</p>
-          </x-import>
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
-            <span style="font: var(--type-mono); color: var(--text-faint)">step 3</span>
-            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Load unpacked</h3>
-            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Click <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Load unpacked</strong> and select the unzipped folder — the one containing <span style="font: var(--type-mono)">manifest.json</span>, not its parent.</p>
-          </x-import>
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,180px">
-            <span style="font: var(--type-mono); color: var(--text-faint)">step 4</span>
-            <h3 style="margin: var(--space-4) 0 var(--space-3); font: var(--type-heading)">Open LinkedIn</h3>
-            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Reload any open LinkedIn tab. The mop appears in your toolbar; pin it to reach the modes and sensitivity quickly.</p>
-          </x-import>
-        </div>
-
-        <div style="display: flex; gap: var(--space-6); align-items: center; flex-wrap: wrap">
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" size="lg" icon="download" on-click="{{ openZip }}" hint-size="auto,44px">Download Slop Mop — free</x-import>
-          <span style="font: var(--type-mono); color: var(--text-faint)">{{ zipMeta }}</span>
-        </div>
-
-        <div style="display: grid; gap: var(--space-5); max-width: 68ch; padding-top: var(--space-7); border-top: 1px solid var(--border-hairline)">
-          <h3 style="margin: 0; font: var(--type-heading)">Two things Chrome will tell you</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)"><strong style="font-weight: var(--weight-semibold); color: var(--text-body)">"Disable developer mode extensions"</strong> — Chrome shows this prompt on startup for any unpacked extension. Dismissing it leaves Slop Mop running. It stops once you install from the store.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)"><strong style="font-weight: var(--weight-semibold); color: var(--text-body)">"Read and change your data on linkedin.com"</strong> — that is the whole permission, and it is the minimum needed to read post text and draw over the feed. The extension requests nothing else. Everything it does with that access is in the <a href="privacy.html">privacy policy</a> and in the <a href="https://github.com/tomfrazier/slopmop" target="_blank" rel="noopener">source</a>.</p>
-        </div>
-      </div>
-    </section>
-  </sc-if>
-
-  <section id="email" style="padding: var(--space-12) var(--space-7); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-10); align-items: start">
-      <div style="display: grid; gap: var(--space-5)">
-        <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">See what the whole set looks like</h2>
-        <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Aggregate results roll in as people use it — how often each sign fires, what share of a feed folds at each threshold, and how often the community's votes disagree with the score. Leave an email and you get the numbers about monthly.</p>
-        <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Optional. The extension works the same either way, and the email is used for this one thing.</p>
-      </div>
-      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,200px">
-        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-          <form onSubmit="{{ submitEmail }}" style="display: grid; gap: var(--space-5)">
-            <label style="display: grid; gap: var(--space-4)">
-              <span style="font: var(--type-label); color: var(--text-muted)">Email (optional)</span>
-              <input type="email" value="{{ email }}" onChange="{{ setEmail }}" placeholder="you@example.com" style="height: 40px; padding: 0 var(--space-5); font: var(--type-body-sm); color: var(--text-body); background: var(--paper-000); border: 1px solid var(--border-default); border-radius: var(--radius-sm); outline: none">
-            </label>
-            <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" variant="primary" icon="send" full-width="{{ true }}" on-click="{{ submitEmail }}" hint-size="100%,38px">Send me the monthly stats</x-import>
-            <sc-if value="{{ invalid }}">
-              <p style="margin: 0; font: var(--type-body-sm); color: var(--red-700)">That address doesn't look right.</p>
-            </sc-if>
-            <sc-if value="{{ failed }}">
-              <p style="margin: 0; font: var(--type-body-sm); color: var(--red-700)">That didn't go through. Try again in a minute.</p>
-            </sc-if>
-            <p style="margin: 0; font: var(--type-mono); color: var(--text-faint)">one email a month · unsubscribe in one click</p>
-          </form>
-        </sc-if>
-        <sc-if value="{{ sent }}">
-          <div style="display: grid; gap: var(--space-5); justify-items: start">
-            <span style="color: var(--ink-900)"><x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Icon" name="check" size="20" hint-size="20px,20px"></x-import></span>
-            <h3 style="margin: 0; font: var(--type-heading)">You're on the list.</h3>
-            <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The first set of numbers goes out at the end of the month.</p>
-          </div>
-        </sc-if>
-      </x-import>
+  </div>
+</section>
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">faq</span>
+      <h2 class="h-1">Questions? We've mopped up a few.</h2>
     </div>
-  </section>
-
-  <section id="faq" style="padding: var(--space-12) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-9)">
-      <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight)">Questions? We've mopped up a few.</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: var(--space-9) var(--space-10)">
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">What is Slop Mop?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">A free, open-source Chrome extension that helps reduce low-value writing and AI slop in your LinkedIn feed. It reads public posts before they reach your view, asks Jev eleven questions about the writing, and gives each post a slop score. Depending on your settings, likely slop is either highlighted or folded into a small strip.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Nothing is deleted from LinkedIn. You can reveal any folded post whenever you want. Think of it as a spam filter for writing that makes you sigh.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">How can I reduce AI slop in my LinkedIn feed?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Install Slop Mop and choose how aggressively you want it to judge. It looks for nine writing signals associated with slop, while two counter-signals look for evidence that a post sounds like a person or contains something genuinely useful.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Choose Hide to fold suspected slop, or Highlight to leave everything visible while marking questionable posts. You decide the threshold, and you can override Slop Mop whenever it gets something wrong.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">Is Slop Mop an AI-content detector?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">No. Slop Mop is deliberately not an AI detector. It is designed to identify low-value writing rather than determine whether a human or AI produced it.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">That's an important difference. AI-assisted writing can be excellent. Human-written posts can be spectacular slop. Slop Mop asks a more useful question: <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">is this worth your attention?</strong></p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">How does Slop Mop decide whether a post is slop?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Every post is evaluated with eleven questions. Nine look for writing signals associated with slop. Two act as counter-signals, asking whether the writing sounds like a person and whether there is evidence the post is actually useful to readers. Those eleven judgments become one score.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop also shows the signs behind its judgment, so you don't have to trust a mysterious number. Hover a flagged or folded post to see what it noticed.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">Does Slop Mop use AI?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Yes. Slop Mop is powered by <a href="https://typesafe.ai/?ref=slopmop.lol" target="_blank" rel="noopener">Jev from Typesafe AI</a>, which evaluates the eleven questions in parallel. Its speed and economics make it practical to judge posts continuously as you scroll, rather than asking you to submit posts one at a time.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop is also a research showcase for what becomes possible when AI judgment gets cheap enough to run at this frequency. Ironically, we're using AI to mop up slop.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">Does it block, delete, mute, or report posts?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">No. Slop Mop changes what you see locally in your browser. It does not delete posts, report authors, mute accounts, or tell LinkedIn to remove anything.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">In Hide mode, suspected slop folds into a thin strip you can reopen. In Highlight mode, the post stays visible with a yellow or red outline. Slop Mop makes recommendations. <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">You make the call.</strong></p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">What happens when Slop Mop gets a post wrong?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Tell it. Every post has a Slop Mop control that lets you vote No, Maybe or Probably. Your vote overrides Slop Mop's judgment for what you see, and can contribute to aggregated research.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop is designed around the assumption that automated judgments about writing will sometimes be wrong. That's why it exposes its reasoning, shows uncertainty, and gives you the final say.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">Is Slop Mop free and open source?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Yes. Free to download, free to use, MIT licensed. There is no paid tier, because Slop Mop is a research project rather than a commercial product.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">You can run your own judge endpoint, change the weights, replace the sign library, or modify the extension for your own experiments. No permission required. Go make a better mop.</p>
-        </div>
-
-        <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">What is the best tool for removing AI slop from LinkedIn?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop is built specifically for desktop LinkedIn users who want to identify and reduce low-value writing in their feed: a free, open-source Chrome and Chromium extension that reads posts ahead of you, evaluates them with eleven writing judgments, explains why posts were flagged, and lets you hide, highlight, reveal or override those judgments.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">It does not claim to determine whether AI wrote a post. The goal is narrower: spend less attention on writing that isn't worth it. LinkedIn on desktop Chrome and Chromium browsers today; other networks and browsers may come later. <a href="about.html">More about the project</a>.</p>
-        </div>
-
+    <div class="faq">
+    <details><summary>What is Slop Mop?</summary><div class="a"><p>Slop Mop is a browser extension, free for one feed, that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it.</p><p>Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming.</p></div></details>
+    <details><summary>Is Slop Mop an AI detector?</summary><div class="a"><p>No. Slop Mop is a bad-writing detector. AI-assisted writing can be excellent and human writing can be spectacular slop, so it asks a more useful question: is this worth your attention?</p></div></details>
+    <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
+    <details><summary>Does it block, delete, mute or report posts?</summary><div class="a"><p>No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported.</p></div></details>
+    <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
+    <details><summary>Is it free?</summary><div class="a"><p>Slop Mop is free for one feed, with 250 checks a day, for good. LinkedIn is the first feed it reads; X, Reddit and Facebook are coming soon. Slop Mop XL, coming soon, takes the mop to every feed, the sites you read and your inbox, for $5.99 a month or $59.99 a year. It renews automatically until you cancel, and you can cancel any time.</p></div></details>
+    <details><summary>What leaves my browser?</summary><div class="a"><p>The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text. The <a href="privacy.html">privacy policy</a> lists all five things it stores.</p></div></details>
+    <details><summary>Is Slop Mop open source?</summary><div class="a"><p>The original version of the extension and judging server is MIT licensed and public on GitHub. Everything about it, and the link to the code, is on the <a href="open-source.html">open-source page</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+<section class="band">
+  <div class="wrap">
+    <div class="band-logo"><img src="assets/img/mark.svg" alt="">Slop Mop</div>
+    <div class="band-line">Less slop. More control. <span class="hl">Your call.</span></div>
+    <div class="band-row">
+      <div>
+        <h2 class="h-2">Give your attention a filter you control.</h2>
+        <p class="lede">About a minute to install. No account, no API key, nothing to configure before it starts reading ahead.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser — free</a>
+        <a class="btn btn-secondary" href="help.html">Install help</a>
       </div>
     </div>
-  </section>
-
-  <section style="padding: var(--space-12) var(--space-7); background: var(--paper-200); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-7); justify-items: start">
-      <h2 style="margin: 0; font: var(--type-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight); max-width: 24ch">Run your own judge instead</h2>
-      <p style="margin: 0; max-width: 58ch; font: var(--type-body); color: var(--text-muted)">The extension and the worker are MIT licensed. Point the extension at your own <span style="font: var(--type-mono)">/judge</span> endpoint, change the weights, or swap the sign library for your own — no permission needed, and nothing about your install reports back here.</p>
-      <div style="display: flex; gap: var(--space-5); flex-wrap: wrap">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" variant="secondary" icon="code" on-click="{{ openRepo }}" hint-size="auto,38px">Read the source</x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Button" variant="ghost" icon="file-text" on-click="{{ openRepo }}" hint-size="auto,38px">MIT license</x-import>
+  </div>
+</section>
+<dialog class="tour" aria-label="Slop Mop tour">
+  <button class="icon-btn close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <video src="slopmop-video.mp4" controls playsinline preload="none"></video>
+</dialog>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
+        <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
-    </div>
-  </section>
-
-  <footer style="padding: var(--space-10) var(--space-7)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
-      <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-8); flex-wrap: wrap">
-        <div style="display: flex; align-items: center; gap: var(--space-5)">
-          <span style="display: block; width: 64px; height: 64px; border-radius: var(--radius-pill); overflow: hidden; background: var(--paper-200); flex: 0 0 auto">
-            <image-slot id="tom-headshot" shape="circle" fit="contain" src="mop.svg" style="width: 64px; height: 64px"></image-slot>
-          </span>
-          <span style="display: grid; gap: var(--space-2)">
-            <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a></span>
-            <span style="font: var(--type-body-sm); color: var(--text-muted)">Say hello: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span>
-          </span>
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
         </div>
-        <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
-          <a href="index.html" style="font: var(--type-ui)">Home</a>
-          <a href="how-it-works.html" style="font: var(--type-ui)">How it works</a>
-          <a href="about.html" style="font: var(--type-ui)">About</a>
-          <a href="help.html" style="font: var(--type-ui)">Help</a>
-          <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
-          <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
-        </span>
-      </div>
-      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">research project, not a product · mit licensed, self-host the server if you want · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
+        <p class="note">how often each tell fires, what folds at each setting · one email a month</p>
+      </form>
     </div>
-  </footer>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;phBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Product Hunt&quot;},&quot;phUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.producthunt.com/products/slop-mop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Product Hunt&quot;},&quot;launched&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;storeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;slopmop-extension-0.1.0.zip&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;zipMeta&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;version 0.1.0 · chrome &amp; chromium · mit licensed&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Launch state&quot;},&quot;emailEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://formspree.io/f/xaenejjw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;},&quot;repoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://github.com/tomfrazier/slopmop&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Integrations&quot;}}">
-class Component extends DCLogic {
-  state = { isMobile: typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches, mode: "highlight", sens: "aggressive", open: { a: false, b: false }, votes: { a: null, b: null }, voteOpen: { a: false, b: false }, active: "a", email: "", status: "idle" };
-
-  componentDidMount() {
-    this.mq = window.matchMedia("(max-width: 900px)");
-    this.onMq = () => this.setState({ isMobile: this.mq.matches });
-    this.mq.addEventListener("change", this.onMq);
-    this.onMq();
-    if ((this.props.phBar ?? true) && this.phLive()) setTimeout(() => this.confetti(), 400);
-    if (this.phLive()) { this.phTimer = setInterval(() => this.forceUpdate(), 60000); }
-  }
-  componentWillUnmount() { if (this.mq) this.mq.removeEventListener("change", this.onMq); clearInterval(this.phTimer); }
-
-  phStart = Date.parse("2026-09-25T00:01:00-07:00");
-  phMidnight = Date.parse("2026-09-26T00:00:00-07:00");
-  phEnd = Date.parse("2026-10-25T00:00:00-07:00");
-  phLive() { const n = Date.now(); return n < this.phEnd; }
-  phRef = React.createRef();
-  phPulse() {
-    const a = this.phRef.current;
-    if (!a || !a.animate) return;
-    const kids = Array.from(a.children);
-    const ease = "cubic-bezier(.2,.8,.2,1)";
-    a.animate([{ boxShadow: "inset 0 0 0 0 rgba(255,255,255,0)" }, { boxShadow: "inset 0 0 0 999px rgba(255,255,255,.35)", offset: .15 }, { boxShadow: "inset 0 0 0 999px rgba(255,255,255,0)" }], { duration: 1400, iterations: 3, easing: "ease-out" });
-    if (kids[0]) kids[0].animate([{ transform: "scale(1) rotate(0)" }, { transform: "scale(1.4) rotate(-16deg)", offset: .25 }, { transform: "scale(.94) rotate(6deg)", offset: .5 }, { transform: "scale(1) rotate(0)", offset: .7 }, { transform: "scale(1) rotate(0)" }], { duration: 1400, iterations: 3, easing: ease });
-    kids.slice(1).forEach((k, i) => k.animate([{ transform: "scale(1)" }, { transform: "scale(1.08)", offset: .25 }, { transform: "scale(1)", offset: .6 }, { transform: "scale(1)" }], { duration: 1400, iterations: 3, delay: 120 + i * 120, easing: ease }));
-  }
-  confetti() {
-    try {
-      if (localStorage.getItem("slopmop-ph-confetti")) return;
-      localStorage.setItem("slopmop-ph-confetti", "1");
-    } catch (e) {}
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const c = document.createElement("canvas");
-    c.setAttribute("aria-hidden", "true");
-    c.style.cssText = "position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9999";
-    document.body.appendChild(c);
-    const ctx = c.getContext("2d"), dpr = window.devicePixelRatio || 1;
-    const W = window.innerWidth, H = window.innerHeight;
-    c.width = W * dpr; c.height = H * dpr; ctx.scale(dpr, dpr);
-    const cols = ["#FF6154", "#F5B400", "#2F6FBF", "#16181A", "#D93025"];
-    const ps = Array.from({ length: Math.min(180, Math.round(W / 6)) }, () => ({
-      x: Math.random() * W, y: -20 - Math.random() * H * 0.6, w: 6 + Math.random() * 6, h: 4 + Math.random() * 6,
-      vy: 2 + Math.random() * 3, vx: -1 + Math.random() * 2, r: Math.random() * 6.28, vr: -0.15 + Math.random() * 0.3,
-      sw: Math.random() * 6.28, c: cols[Math.floor(Math.random() * cols.length)]
-    }));
-    this.phPulse();
-    const t0 = performance.now();
-    const tick = (t) => {
-      const el = t - t0;
-      ctx.clearRect(0, 0, W, H);
-      ctx.globalAlpha = el > 3500 ? Math.max(0, 1 - (el - 3500) / 1000) : 1;
-      ps.forEach((p) => {
-        p.sw += 0.05; p.x += p.vx + Math.sin(p.sw) * 0.6; p.y += p.vy; p.r += p.vr;
-        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r); ctx.fillStyle = p.c;
-        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h * Math.abs(Math.cos(p.sw))); ctx.restore();
-      });
-      if (el < 4500) requestAnimationFrame(tick); else c.remove();
-    };
-    requestAnimationFrame(tick);
-  }
-
-
-  thresholds = { mild: 0.40, moderate: 0.25, aggressive: 0.18 };
-
-  axes = ["Scroll-stopper", "Engagement bait", "Hype words", "Empty praise", "No-catch promises", "\u201CNot X, but Y\u201D", "Flowery prose", "Stiff phrasing", "Too-tidy story"];
-
-  posts = {
-    a: {
-      score: 0.78,
-      values: [0.72, 0.88, 0.55, 0.80, 0.30, 0.85, 0.45, 0.25, 0.70],
-      signs: "Engagement bait, \u201CNot X, but Y\u201D, Empty praise",
-      person: 21, useful: 18,
-      reasons: ["engagement bait", "hype words"],
-    },
-    b: {
-      score: 0.22,
-      values: [0.30, 0.10, 0.25, 0.35, 0.20, 0.15, 0.55, 0.78, 0.40],
-      signs: "Stiff phrasing, Flowery prose, Too-tidy story",
-      person: 61, useful: 58,
-      reasons: ["stiff phrasing", "flowery prose"],
-    },
-  };
-
-  heroPost = {
-    score: 0.81,
-    values: [0.82, 0.58, 0.86, 0.74, 0.35, 0.52, 0.48, 0.30, 0.66],
-    person: 24, useful: 19,
-  };
-
-  outcomes = {
-    hide: {
-      mild: "the worst offenders, gone",
-      moderate: "a better LinkedIn, most days",
-      aggressive: "for a feed that's past saving",
-    },
-    highlight: {
-      mild: "a look at your slop exposure",
-      moderate: "the setting for voting",
-      aggressive: "see how much of it is AI",
-    },
-  };
-
-  bands = {
-    fine: { label: "Looks fine", tone: "neutral", color: "var(--ink-700)", sentence: "Nothing here stands out as AI slop." },
-    possibly: { label: "Possibly slop", tone: "warn", color: "var(--mop-700)", sentence: "This has some hallmarks of AI slop, but isn't clear-cut." },
-    likely: { label: "Likely slop", tone: "danger", color: "var(--red-500)", sentence: "This reads like AI slop." },
-  };
-
-  bandOf(key) {
-    const vote = this.state.votes[key];
-    if (vote === "no") return "fine";
-    if (vote === "maybe") return "possibly";
-    if (vote === "yes") return "likely";
-    const t = this.thresholds[this.state.sens];
-    const s = this.posts[key].score;
-    if (s >= t) return "likely";
-    if (s >= 0.6 * t) return "possibly";
-    return "fine";
-  }
-
-  meter(score) {
-    const e = React.createElement;
-    const t = this.thresholds[this.state.sens];
-    const z1 = 60 * t, z2 = 100 * t;
-    const zone = (w, bg) => e("span", { style: { width: w + "%", background: bg } });
-    return e("div", { style: { display: "grid", gap: 6 } },
-      e("div", { style: { position: "relative" } },
-        e("div", { style: { display: "flex", height: 10, borderRadius: 999, overflow: "hidden" } },
-          zone(z1, "var(--blue-200)"), zone(z2 - z1, "var(--mop-200)"), zone(100 - z2, "var(--red-200)")),
-        e("div", { style: { position: "absolute", top: -2, left: "calc(" + (score * 100) + "% - 7px)", width: 14, height: 14, borderRadius: 4, background: "var(--ink-900)", border: "2px solid var(--paper-000)" } })),
-      e("div", { style: { display: "flex", gap: "var(--space-4)", font: "var(--type-mono)", color: "var(--text-faint)", whiteSpace: "nowrap" } },
-        e("span", { style: { width: z1 + "%", minWidth: "max-content", flex: "0 0 auto" } }, "looks fine"),
-        e("span", { style: { width: (z2 - z1) + "%", minWidth: "max-content", flex: "0 0 auto" } }, "possibly"),
-        e("span", { style: { flex: "0 1 auto", minWidth: 0, overflow: "hidden", textOverflow: "ellipsis" } }, "likely")));
-  }
-
-  radar(post, color) {
-    const e = React.createElement;
-    const cx = 210, cy = 142, R = 80, n = this.axes.length;
-    const pt = (i, r) => [cx + r * Math.sin((2 * Math.PI * i) / n), cy - r * Math.cos((2 * Math.PI * i) / n)];
-    const ring = (f, k) => e("polygon", { key: "r" + k, points: this.axes.map((_, i) => pt(i, R * f).join(",")).join(" "), fill: "none", stroke: "var(--ink-100)", strokeWidth: 1 });
-    const grid = [0.25, 0.5, 0.75, 1].map(ring);
-    const spokes = this.axes.map((_, i) => {
-      const p = pt(i, R);
-      return e("line", { key: "s" + i, x1: cx, y1: cy, x2: p[0], y2: p[1], stroke: "var(--ink-100)", strokeWidth: 1 });
-    });
-    const v = post.values.map((x) => Math.max(x, 0.05));
-    const poly = e("polygon", { key: "poly", points: v.map((x, i) => pt(i, R * x).join(",")).join(" "), fill: color, fillOpacity: 0.16, stroke: color, strokeWidth: 2, strokeLinejoin: "round" });
-    const dots = v.map((x, i) => {
-      const p = pt(i, R * x);
-      return e("circle", { key: "d" + i, cx: p[0], cy: p[1], r: 2.5, fill: color });
-    });
-    const labels = this.axes.map((name, i) => {
-      const p = pt(i, R + 20);
-      const anchor = p[0] > cx + 6 ? "start" : p[0] < cx - 6 ? "end" : "middle";
-      const strong = post.values[i] >= 0.6;
-      return e("text", { key: "t" + i, x: p[0], y: p[1], textAnchor: anchor, dominantBaseline: "middle", fontFamily: "var(--font-body)", fontSize: 14, fontWeight: strong ? 600 : 400, fill: strong ? "var(--ink-900)" : "var(--ink-600)" }, name);
-    });
-    return e("svg", { viewBox: "0 0 420 276", width: "100%", style: { maxWidth: 420, display: "block", margin: "0 auto" }, role: "img", "aria-label": "strength of each sign" }, grid, spokes, poly, dots, labels);
-  }
-
-  bars(post) {
-    const e = React.createElement;
-    const row = (label, val) => e("div", { key: label, style: { display: "flex", alignItems: "center", gap: "var(--space-5)", font: "var(--type-body-sm)" } },
-      e("span", { style: { flex: "1 1 auto" } }, label),
-      e("span", { style: { flex: "0 0 110px", height: 6, borderRadius: 3, background: "var(--paper-200)", overflow: "hidden" } },
-        e("span", { style: { display: "block", height: "100%", width: val + "%", background: "var(--blue-500)" } })),
-      e("span", { style: { flex: "0 0 38px", textAlign: "right", font: "var(--type-mono)", color: "var(--text-faint)" } }, val + "%"));
-    return e("div", { style: { display: "grid", gap: "var(--space-4)" } },
-      row("Sounds like a person", post.person), row("Useful to readers", post.useful));
-  }
-
-  community(key) {
-    const vote = this.state.votes[key];
-    if (!vote) return "No community votes yet";
-    const n = { yes: vote === "yes" ? 1 : 0, maybe: vote === "maybe" ? 1 : 0, no: vote === "no" ? 1 : 0 };
-    return "Community: " + n.yes + " flagged as slop · " + n.maybe + " maybe · " + n.no + " no";
-  }
-
-  setVote = (key, v) => this.setState((s) => ({
-    votes: Object.assign({}, s.votes, { [key]: s.votes[key] === v ? null : v }),
-    active: key,
-  }));
-
-  openStore = () => { window.open(this.props.storeUrl || "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho", "_blank", "noopener"); };
-  openZip = () => { window.location.href = this.props.zipUrl ?? "slopmop-extension-0.1.0.zip"; };
-  openRepo = () => { const u = this.props.repoUrl; if (u) window.open(u, "_blank", "noopener"); };
-
-  submitEmail = async (e) => {
-    if (e && e.preventDefault) e.preventDefault();
-    const email = this.state.email.trim();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { this.setState({ status: "invalid" }); return; }
-    const target = (this.props.emailEndpoint || "").trim();
-    this.setState({ status: "sending" });
-    try {
-      if (target && target.indexOf("://") === -1 && target.indexOf("@") > 0) {
-        window.location.href = "mailto:" + target + "?subject=" + encodeURIComponent("Slop Mop monthly stats") + "&body=" + encodeURIComponent("Add " + email + " to the monthly stats list.");
-      } else if (target) {
-        const res = await fetch(target, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({ email, source: "slopmop.lol", _subject: "Slop Mop monthly stats signup" }),
-        });
-        if (!res.ok) { this.setState({ status: "failed" }); return; }
-      }
-      this.setState({ status: "sent" });
-    } catch (err) {
-      this.setState({ status: "failed" });
-    }
-  };
-
-  postVals(key) {
-    const p = this.posts[key];
-    const band = this.bandOf(key);
-    const b = this.bands[band];
-    const mode = this.state.mode;
-    const opened = this.state.open[key];
-    const vote = this.state.votes[key];
-    const t = this.thresholds[this.state.sens];
-    const flagged = band !== "fine";
-    return {
-      score: p.score.toFixed(2),
-      stripScore: p.score,
-      reasons: p.reasons,
-      label: b.label,
-      color: b.color,
-      level: band === "likely" ? "danger" : "warn",
-      folded: mode === "hide" && flagged && !opened,
-      framed: mode === "highlight" && flagged,
-      plain: !flagged || (mode === "hide" && opened),
-      opened: opened,
-      community: this.community(key),
-      hasVote: !!vote,
-      votedNo: vote === "no", votedMaybe: vote === "maybe", votedYes: vote === "yes",
-      voteOpen: this.state.voteOpen[key],
-      meta: "score " + p.score + "/100 · threshold t = " + t + " (" + this.state.sens + ") · " + b.label.toLowerCase(),
-    };
-  }
-
-  renderVals() {
-    const launched = this.props.launched ?? true;
-    const zipUrl = this.props.zipUrl ?? "slopmop-extension-0.1.0.zip";
-    const sideload = !launched && zipUrl.length > 0;
-    const a = this.postVals("a");
-    const b = this.postVals("b");
-    const key = this.state.active;
-    const post = this.posts[key];
-    const band = this.bandOf(key);
-    const bandInfo = this.bands[band];
-    const vote = this.state.votes[key];
-    const voteWord = vote === "no" ? "No" : vote === "maybe" ? "Maybe" : "Probably";
-    const toggleVote = (k) => () => this.setState((s) => ({ voteOpen: Object.assign({}, s.voteOpen, { [k]: !s.voteOpen[k] }), active: k }));
-
-    const phToday = Date.now() < this.phMidnight;
-    return {
-      phRef: this.phRef,
-      phShow: (this.props.phBar ?? true) && this.phLive(),
-      phUrl: this.props.phUrl ?? "https://www.producthunt.com/products/slop-mop",
-      phLine: phToday ? "Slop Mop is live on Product Hunt today." : "Slop Mop just launched on Product Hunt.",
-      launched, sideload, preLaunch: !launched && !sideload,
-      openStore: this.openStore, openRepo: this.openRepo, openZip: this.openZip,
-      zipMeta: (this.props.zipMeta || "version 0.1.0 · chrome & chromium · mit licensed").toLowerCase(),
-      mode: this.state.mode, sens: this.state.sens,
-      modeOptions: [
-        { value: "hide", label: "Hide", icon: "eye-off" },
-        { value: "highlight", label: "Highlight", icon: "flag" },
-      ],
-      sensOptions: [
-        { value: "mild", label: "Mild" },
-        { value: "moderate", label: "Moderate" },
-        { value: "aggressive", label: "Aggressive" },
-      ],
-      modeWord: this.state.mode === "hide" ? "Hide" : "Highlight",
-      sensWord: this.state.sens.charAt(0).toUpperCase() + this.state.sens.slice(1),
-      outcome: this.outcomes[this.state.mode][this.state.sens],
-      thresholdLine: "folds at " + this.thresholds[this.state.sens].toFixed(2) + " · flags from " + (0.6 * this.thresholds[this.state.sens]).toFixed(2) + " · thresholds provisional",
-      setMode: (v) => this.setState({ mode: v, open: { a: false, b: false }, voteOpen: { a: false, b: false } }),
-      setSens: (v) => this.setState({ sens: v, open: { a: false, b: false }, voteOpen: { a: false, b: false } }),
-
-      heroHover: this.state.heroHover === true,
-      heroHoverDesktop: this.state.heroHover === true && !this.state.isMobile,
-      isMobile: this.state.isMobile, isDesktop: !this.state.isMobile,
-      heroEnter: () => this.setState({ heroHover: true }),
-      heroLeave: () => this.setState({ heroHover: false }),
-      heroRadar: this.radar(this.heroPost, "var(--mop-700)"),
-      heroBars: this.bars(this.heroPost),
-
-      activeLabel: bandInfo.label,
-      activeTone: bandInfo.tone,
-      activeSentence: bandInfo.sentence,
-      activeSigns: post.signs,
-      activeMeter: this.meter(post.score),
-      activeRadar: this.radar(post, bandInfo.color),
-      activeBars: this.bars(post),
-      activeHasVote: !!vote,
-      voteNote: "You voted " + voteWord + " on this post. Your vote overrides the score for what is shown; use the mop icon to change it.",
-      hoverA: () => this.setState({ active: "a" }),
-      hoverB: () => this.setState({ active: "b" }),
-
-      aScore: a.score, aStripScore: a.stripScore, aReasons: a.reasons, aLabel: a.label, aColor: a.color, aLevel: a.level,
-      aFolded: a.folded, aFramed: a.framed, aPlain: a.plain, aOpened: a.opened, aMeta: a.meta,
-      aCommunity: a.community, aHasVote: a.hasVote, aVoteOpen: a.voteOpen,
-      aVotedNo: a.votedNo, aVotedMaybe: a.votedMaybe, aVotedYes: a.votedYes,
-      openA: () => this.setState((s) => ({ open: Object.assign({}, s.open, { a: true }), active: "a" })),
-      foldA: () => this.setState((s) => ({ open: Object.assign({}, s.open, { a: false }) })),
-      toggleVoteA: toggleVote("a"),
-      voteANo: () => this.setVote("a", "no"),
-      voteAMaybe: () => this.setVote("a", "maybe"),
-      voteAYes: () => this.setVote("a", "yes"),
-      clearVoteA: () => this.setState((s) => ({ votes: Object.assign({}, s.votes, { a: null }) })),
-
-      bScore: b.score, bStripScore: b.stripScore, bReasons: b.reasons, bLabel: b.label, bColor: b.color, bLevel: b.level,
-      bFolded: b.folded, bFramed: b.framed, bPlain: b.plain, bOpened: b.opened, bMeta: b.meta,
-      bCommunity: b.community, bHasVote: b.hasVote, bVoteOpen: b.voteOpen,
-      bVotedNo: b.votedNo, bVotedMaybe: b.votedMaybe, bVotedYes: b.votedYes,
-      openB: () => this.setState((s) => ({ open: Object.assign({}, s.open, { b: true }), active: "b" })),
-      foldB: () => this.setState((s) => ({ open: Object.assign({}, s.open, { b: false }) })),
-      toggleVoteB: toggleVote("b"),
-      voteBNo: () => this.setVote("b", "no"),
-      voteBMaybe: () => this.setVote("b", "maybe"),
-      voteBYes: () => this.setVote("b", "yes"),
-      clearVoteB: () => this.setState((s) => ({ votes: Object.assign({}, s.votes, { b: null }) })),
-
-      email: this.state.email,
-      setEmail: (e) => this.setState({ email: e.target.value, status: "idle" }),
-      submitEmail: this.submitEmail,
-      sent: this.state.status === "sent",
-      notSent: this.state.status !== "sent",
-      invalid: this.state.status === "invalid",
-      failed: this.state.status === "failed",
-    };
-  }
-}
-</script>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="index.html#tells">The nine tells</a></li>
+        <li><a href="index.html#networks">Networks</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho">Add to browser</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="open-source.html">Open source</a></li>
+        <li><a href="mailto:hello@slopmop.lol">Contact</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google or microsoft</span></span>
+      <nav class="legal-links" aria-label="Legal">
+        <a href="open-source.html">Open source</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="_ds/slopmop/_ds_bundle.js"></script>
+<script src="assets/sites.js"></script>
+<script src="assets/islands.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
