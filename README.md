@@ -46,6 +46,10 @@ A social icon stays hidden until its URL is filled in.
 
 Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, right after the viewport meta. It's disclosed in the privacy policy.
 
+## Slop Mop XL checkout
+
+Polar's success URL is `https://slopmop.lol/xl/welcome?checkout_id={CHECKOUT_ID}`, served by `xl/welcome.html` (noindex). It is the third upgrade step: the receipt note, then the request for site access. The embedded checkout itself is started by `api.slopmop.lol`.
+
 ## Deploying
 
 GitHub Pages, `main` branch, `/ (root)`. `CNAME` points at slopmop.lol; add the DNS records at your registrar:

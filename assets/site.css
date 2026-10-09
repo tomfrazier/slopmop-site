@@ -304,6 +304,7 @@ a:hover { text-decoration: underline; }
 .plan li { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font: var(--type-body-sm); font-size: 14px; color: var(--text-muted); }
 .plan li svg { width: 16px; height: 16px; margin-top: 3px; color: var(--blue-500); }
 .plan .btn { width: 100%; }
+.plan-alt { margin: calc(var(--space-4) * -1) 0 0; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font: var(--type-body-sm); color: var(--text-muted); }
 @media (max-width: 760px) { .plans { grid-template-columns: 1fr; } }
 
 /* ---------- FAQ ---------- */
@@ -587,3 +588,18 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .btn-gh img { filter: none; transition: filter var(--dur-fast) var(--ease-standard); }
 .btn-gh:hover { background: #16181A; color: #fff; box-shadow: 0 0 0 1px var(--mop-500); }
 .btn-gh:hover img { filter: invert(1); }
+
+/* ---------- XL welcome (/xl/welcome, Polar's success URL) ---------- */
+.xl-steps { width: 320px; max-width: 100%; margin: 0; padding: var(--space-6); list-style: none; display: grid; gap: 10px; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--surface-card); box-shadow: var(--shadow-pop); }
+.xl-steps li { display: flex; align-items: center; gap: 12px; font: var(--weight-semibold) var(--text-lg)/1.3 var(--font-display); color: var(--text-faint); }
+.xl-steps .mono { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--border-default); font-size: 12px; }
+.xl-steps li.done { color: var(--text-muted); }
+.xl-steps li.done .mono { background: var(--blue-500); border-color: var(--blue-500); color: #fff; }
+.xl-steps li.now { color: var(--text-body); }
+.xl-steps li.now .mono { background: var(--mop-500); border-color: var(--mop-500); color: #16181A; }
+.xl-next { max-width: 760px; }
+.xl-how { margin: var(--space-8) 0; padding: 0; list-style: none; counter-reset: xl; display: grid; gap: var(--space-5); }
+.xl-how li { counter-increment: xl; display: grid; grid-template-columns: 36px 1fr; gap: var(--space-5); align-items: start; font: var(--type-body); color: var(--text-muted); }
+.xl-how li::before { content: counter(xl); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-sunken); border: 1px solid var(--border-default); font: var(--type-mono); color: var(--text-body); }
+.xl-how b { color: var(--text-body); }
+.xl-small { font: var(--type-body-sm); color: var(--text-faint); }

@@ -4855,7 +4855,7 @@ function AccountSettings({
       font: "var(--type-label)",
       color: "var(--text-muted)"
     }
-  }, xl ? "Renews November 14 · billed by Stripe. Cancel any time; you keep XL until the period ends." : "One feed, 250 checks a day."), !xl && /*#__PURE__*/React.createElement(Button, {
+  }, xl ? "Renews November 14 · billed by Polar. Cancel any time; you keep XL until the period ends." : "One feed, 250 checks a day."), !xl && /*#__PURE__*/React.createElement(Button, {
     variant: "primary",
     size: "lg",
     fullWidth: true,
