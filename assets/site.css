@@ -580,3 +580,10 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .chip[aria-pressed="true"] { color: var(--text-body); border-color: var(--c); box-shadow: 0 0 0 1px var(--c); }
 .chip[aria-pressed="true"] .chip-logo { background: var(--c); }
 .chip:hover .chip-logo { background: var(--c); }
+
+/* ---------- round 5 ---------- */
+.formula math { overflow: visible; }
+@media (max-width: 860px) { .formula math { overflow-x: auto; scrollbar-width: none; } .formula math::-webkit-scrollbar { display: none; } }
+.btn-gh img { filter: none; transition: filter var(--dur-fast) var(--ease-standard); }
+.btn-gh:hover { background: #16181A; color: #fff; box-shadow: 0 0 0 1px var(--mop-500); }
+.btn-gh:hover img { filter: invert(1); }
