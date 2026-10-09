@@ -1,5 +1,5 @@
 :root{
-/* --- Neutral greys: plain, cool-neutral, no warm cast --- */
+/* --- Neutral grays: plain, cool-neutral, no warm cast --- */
 --ink-900:#16181A;--ink-800:#24282B;--ink-700:#3B4045;--ink-600:#565C63;--ink-500:#6E757D;--ink-400:#8D949B;--ink-300:#B2B8BE;--ink-200:#D3D7DB;--ink-100:#E6E9EC;--ink-050:#F1F3F5;
 /* --- Surfaces --- */
 --paper-000:#FFFFFF;--paper-100:#F7F8F9;--paper-200:#EFF1F3;--paper-300:#E4E7EA;
@@ -14,6 +14,11 @@
 --text-body:var(--ink-900);--text-muted:var(--ink-600);--text-faint:var(--ink-500);--text-inverse:var(--paper-000);--text-on-accent:var(--ink-900);--text-link:var(--blue-700);
 --border-hairline:var(--ink-100);--border-default:var(--ink-200);--border-strong:var(--ink-400);--border-accent:var(--mop-500);
 --flag-warn:var(--mop-500);--flag-warn-wash:var(--mop-100);--flag-danger:var(--red-500);--flag-danger-wash:var(--red-100);--flag-clean:var(--blue-500);
+/* --- Uncertainty: "expect to be wrong" is a visible state, not a hidden one.
+   Shipped verdictStyle.ts already reads --flag-unsure-wash, but 0.2.7's tokens.css never defines it: add both there. --- */
+--flag-unsure:var(--ink-400);--flag-unsure-wash:var(--paper-200);
 --focus-ring:var(--blue-500);--focus-ring-halo:var(--blue-200);
+/* --- Roles that must NOT just invert with the theme --- */
+--text-on-solid:#FFFFFF;--surface-raised:var(--paper-000);--surface-raised-foot:var(--paper-100);--chart-grid:var(--ink-200);--track:var(--paper-200);--mini-feed:#F4F2EE;--mini-feed-on:#E9E5DD;--mini-post:var(--paper-000);
 --fold-crease:var(--ink-200);--fold-face:var(--paper-200);--fold-shade:rgba(22,24,26,.08);
 }

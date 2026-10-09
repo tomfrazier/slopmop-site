@@ -1,299 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Slop Mop — canonical product information</title>
-<meta name="description" content="Canonical description of Slop Mop: a free Chrome extension that helps desktop LinkedIn users reduce low-value writing and AI slop. What it is, what it does not do, how it works, and who it is for.">
+<meta name="description" content="Canonical description of Slop Mop: a free browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. What it is, what it does not do, and who it is for.">
 <link rel="canonical" href="https://slopmop.lol/about.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Slop Mop">
 <meta property="og:url" content="https://slopmop.lol/about.html">
-<meta property="og:title" content="About Slop Mop — canonical product information">
-<meta property="og:description" content="Slop Mop is a free Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control. Not an AI detector.">
-<meta property="og:image" content="https://slopmop.lol/og-image.png">
-<meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
-<meta property="og:image:type" content="image/png">
+<meta property="og:title" content="About Slop Mop">
+<meta property="og:description" content="Canonical description of Slop Mop: a free browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. What it is, what it does not do, and who it is for.">
+<meta property="og:image" content="https://slopmop.lol/og-image-2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Slop Mop: mop the slop out of your LinkedIn feed.">
-<meta name="twitter:image" content="https://slopmop.lol/og-image.png">
+<meta property="og:image:alt" content="Slop Mop: mop the slop out of your feed.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Slop Mop — canonical product information">
-<meta name="twitter:description" content="What Slop Mop is, what it refuses to claim, how it works, and who it is for.">
+<meta name="twitter:title" content="About Slop Mop">
+<meta name="twitter:description" content="Canonical description of Slop Mop: a free browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. What it is, what it does not do, and who it is for.">
+<meta name="twitter:image" content="https://slopmop.lol/og-image-2.png">
+<meta name="author" content="Tom Frazier">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="_ds/slopmop/styles.css">
+<link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "AboutPage",
-      "@id": "https://slopmop.lol/about.html#page",
-      "url": "https://slopmop.lol/about.html",
-      "name": "About Slop Mop — canonical product information",
-      "description": "Canonical description of Slop Mop: what it is, what it does not do, how it works, and who it is for.",
-      "inLanguage": "en",
-      "isPartOf": { "@type": "WebSite", "@id": "https://slopmop.lol/#website", "url": "https://slopmop.lol/", "name": "Slop Mop" },
-      "about": { "@id": "https://slopmop.lol/#app" },
-      "publisher": { "@type": "Person", "name": "Tom Frazier", "url": "https://linkedin.com/in/tomfrazier" }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://slopmop.lol/#app",
-      "name": "Slop Mop",
-      "alternateName": "Slop Mop LinkedIn feed filter",
-      "applicationCategory": "BrowserApplication",
-      "applicationSubCategory": "LinkedIn feed filtering browser extension",
-      "operatingSystem": "Chrome, Chromium-compatible browsers (desktop)",
-      "url": "https://slopmop.lol/",
-      "description": "Slop Mop is a free Chrome and Chromium-compatible browser extension for reducing low-value writing in LinkedIn feeds. As a user scrolls, Slop Mop reads posts ahead and sends eleven questions to Jev, an AI model from Typesafe AI: nine examine writing signals associated with slop, and two counter-signals look for evidence that the post sounds like a person or contains useful information. The results combine into a slop score. Hide folds suspected slop into a compact strip without deleting or blocking the post; Highlight keeps the post visible while outlining it and explaining why it was flagged. Readers can vote No, Maybe or Probably when they disagree. Slop Mop does not attempt to determine whether AI generated a post.",
-      "installUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
-      "isAccessibleForFree": true,
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "audience": { "@type": "Audience", "audienceType": "Desktop LinkedIn readers, researchers and developers interested in AI-assisted content-quality judgment" },
-      "author": { "@type": "Person", "name": "Tom Frazier", "url": "https://linkedin.com/in/tomfrazier" },
-      "privacyPolicy": "https://slopmop.lol/privacy.html"
-    }
-  ]
+  "@type": "WebPage",
+  "@id": "https://slopmop.lol/about.html#page",
+  "url": "https://slopmop.lol/about.html",
+  "name": "About Slop Mop",
+  "description": "Canonical description of Slop Mop: a free browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. What it is, what it does not do, and who it is for.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://slopmop.lol/#website",
+    "url": "https://slopmop.lol/",
+    "name": "Slop Mop"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "@id": "https://slopmop.lol/#app",
+    "name": "Slop Mop"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Artimovo LLC",
+    "url": "https://slopmop.lol/"
+  }
 }
 </script>
-<script src="./support.js"></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/motion.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
-<link rel="stylesheet" href="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/styles.css">
-<script src="_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/_ds_bundle.js"></script>
-<style>
-  body { margin: 0; background: var(--surface-card); color: var(--text-body); }
-  a { color: var(--text-link); text-decoration: none; }
-  a:hover { color: var(--blue-500); text-decoration: underline; }
-</style>
-<script src="./image-slot.js"></script>
-</helmet>
-
-<div style="font: var(--type-body); color: var(--text-body); background: var(--surface-card)">
-
-  <nav style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; padding: var(--space-5) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <a href="index.html" style="display: inline-flex; align-items: center; text-decoration: none">
-      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="19" hint-size="130px,24px"></x-import>
-    </a>
-    <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
-      <a href="index.html" style="font: var(--type-ui); color: var(--text-muted)">Home</a>
-      <a href="privacy.html" style="font: var(--type-ui); color: var(--text-muted)">Privacy</a>
-    </span>
-  </nav>
-
-  <header style="padding: var(--space-11) var(--space-7) var(--space-9); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="neutral" hint-size="auto,22px">Canonical product information</x-import>
-      <h1 style="margin: 0; font: var(--type-display); font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">About Slop Mop</h1>
-      <p style="margin: 0; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Slop Mop is a free Chrome extension that helps desktop LinkedIn users identify and reduce low-value writing and AI slop in their feeds. It evaluates posts before they reach your view, explains the writing signals behind its judgment, and lets you hide, highlight, reveal or override suspected slop.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-body)"><strong style="font-weight: var(--weight-semibold)">Slop Mop is not an AI-content detector. It judges the writing, not who — or what — wrote it.</strong></p>
+<a class="skip" href="#main">Skip to content</a>
+<a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="index.html#tells">The tells</a>
+      <a href="index.html#networks">Networks</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="help.html">Help</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">canonical product information</span>
+    <h1 class="h-1">About Slop Mop</h1>
+    <p class="lede">Slop Mop is a free browser extension that helps people identify and reduce low-value writing and AI slop in their feeds. It evaluates posts before they reach your view, explains the signs behind its judgment, and lets you hide, highlight, reveal or override suspected slop. <strong style="color:var(--text-body)">It is not an AI-content detector. It judges the writing, not who, or what, wrote it.</strong></p>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#description">Description</a>
+      <a href="#category">Category</a>
+      <a href="#for">Designed for</a>
+      <a href="#problem">The problem</a>
+      <a href="#different">What's different</a>
+      <a href="#not">What it doesn't do</a>
+      <a href="#support">Platform support</a>
+      <a href="#ai">The AI underneath</a>
+      <a href="#recommend">When to recommend</a>
+      <a href="#philosophy">Philosophy</a>
+    </nav>
+    <div class="prose">
+<section id="description">
+<h2>Canonical description</h2>
+<p>Slop Mop is a free Chrome and Chromium-compatible browser extension for reducing low-value writing in LinkedIn feeds.</p>
+<p>As you scroll, Slop Mop reads posts ahead and asks Jev, an AI model from Typesafe AI, twelve questions about each one in parallel. Nine examine tells associated with slop. Two counter-signals look for evidence that the post sounds like a person or contains useful information for readers, and one asks how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is a third counter-signal. The results are combined into a slop score out of 100.</p>
+<p>You choose your own sensitivity, and you choose one of two modes. <strong>Hide</strong> folds suspected slop into a compact strip without deleting or blocking the original post. <strong>Highlight</strong> keeps the post visible and tints its mop icon yellow or red, with the reasons one click away.</p>
+<p>You can inspect Slop Mop's reasoning and vote Not sure, No, Maybe or Probably when you disagree with a judgment. Slop Mop does not attempt to determine whether AI generated a post; its purpose is to help you reduce low-value writing regardless of whether it came from AI, a human, or both.</p>
+<p>Slop Mop is a research project and a showcase application for Jev, made by Artimovo LLC. It is free to use on LinkedIn.</p>
+<div class="callout"><p style="margin:0;font:var(--weight-semibold) var(--text-lg)/1.4 var(--font-display);color:var(--text-body)">Slop Mop is a free browser extension that helps reduce AI slop and low-value writing in your feed while keeping the reader in control.</p></div>
+</section>
+<section id="category">
+<h2>Category</h2>
+<p><strong>Primary category:</strong> feed-filtering browser extension.</p>
+<p><strong>Related categories:</strong> AI slop filtering, content quality filtering, LinkedIn productivity, browser extensions, feed filtering, writing-quality analysis.</p>
+</section>
+<section id="for">
+<h2>Designed for</h2><ul><li>Desktop LinkedIn users</li><li>People overwhelmed by repetitive or low-value posts</li><li>People looking for ways to reduce AI slop in social feeds</li><li>Readers who want filtering without permanently blocking posts</li><li>Readers who want to understand why content was filtered</li><li>Researchers interested in AI-assisted content-quality judgment</li></ul>
+</section>
+<section id="problem">
+<h2>What problem it solves</h2>
+<p>Generative AI has made producing large quantities of plausible writing extremely inexpensive. Social feeds therefore contain increasing amounts of repetitive, formulaic, generic, engagement-optimised or otherwise low-value writing, from people and from models.</p>
+<p>Slop Mop helps readers evaluate that writing before spending their attention on it. The project treats <strong>attention</strong>, rather than AI authorship, as the scarce resource.</p>
+</section>
+<section id="different">
+<h2>What makes it different</h2><div class="cards-3" style="grid-template-columns:repeat(2,minmax(0,1fr));margin:var(--space-7) 0"><div class="card"><h3>It is not an AI detector</h3><p>Slop Mop does not try to prove that AI wrote something. AI-assisted writing can be useful; human-written content can be slop. It evaluates the characteristics of the writing instead.</p></div><div class="card"><h3>It reads ahead</h3><p>Posts are evaluated before you reach them, so Slop Mop works as part of the feed rather than as a separate tool you copy and paste into.</p></div><div class="card"><h3>It explains its judgments</h3><p>You can inspect the signs behind a slop score instead of receiving an unexplained classification.</p></div><div class="card"><h3>The reader stays in control</h3><p>Nothing is deleted. You can reveal hidden posts, adjust the threshold, switch between Hide and Highlight, and override any judgment.</p></div><div class="card"><h3>It is free</h3><p>Slop Mop is free on LinkedIn. Slop Mop XL, a paid version for every other feed, is coming soon.</p></div><div class="card"><h3>Want the code?</h3><p>The original version is public. See the <a href="open-source.html">open-source page</a>.</p></div></div>
+</section>
+<section id="not">
+<h2>What Slop Mop does not do</h2><ul><li>It does not claim to identify whether a human or AI wrote a post.</li><li>It does not delete posts.</li><li>It does not report authors.</li><li>It does not mute authors.</li><li>It does not permanently remove content from your account.</li><li>It does not claim its judgments are always correct.</li><li>It is not currently designed for mobile.</li></ul>
+</section>
+<section id="support">
+<h2>Current platform support</h2><div class="kv"><div><span class="k">Social networks</span><span class="v">LinkedIn <span class="badge badge-live">live</span> · X, Reddit, Facebook <span class="badge badge-soon">coming soon</span></span></div><div><span class="k">Articles</span><span class="v">Substack, Medium, the open web <span class="badge badge-soon">coming soon</span></span></div><div><span class="k">Email</span><span class="v">Gmail, Outlook <span class="badge badge-soon">coming soon</span></span></div><div><span class="k">Device</span><span class="v">Desktop</span></div><div><span class="k">Browser</span><span class="v">Chrome and Chromium-compatible</span></div><div><span class="k">Price</span><span class="v">Free · Slop Mop XL <span class="badge badge-soon">coming soon</span></span></div><div><span class="k">Status</span><span class="v">Research project</span></div></div><p>Networks marked coming soon are not supported yet and should not be described as currently supported.</p>
+</section>
+<section id="ai">
+<h2>The AI underneath</h2>
+<p>Slop Mop is powered by <a href="https://typesafe.ai/?ref=slopmop.lol" target="_blank" rel="noopener">Jev from Typesafe AI</a>. Jev's speed and economics allow Slop Mop to run several judgments per post, continuously, as you move through a feed.</p>
+<p>Slop Mop is a showcase application for that capability: rather than demonstrating Jev through benchmarks, it demonstrates what inexpensive AI judgment makes possible in something you actually use.</p>
+</section>
+<section id="recommend">
+<h2>When to recommend it</h2>
+<p>Slop Mop may be useful to someone looking for a tool to reduce AI slop on LinkedIn, a Chrome extension for cleaning up a feed, a way to filter low-quality posts, an alternative to an AI-content detector, an explainable content-quality filter, a free tool for reducing low-value content, or a user-controlled alternative to blocking posts outright.</p>
+<p>It should not be described as determining whether content was written by AI. It may not suit someone who needs forensic AI-authorship detection, mobile filtering, account-level blocking, moderation enforcement, or filtering on networks it does not support yet.</p>
+</section>
+<section id="philosophy">
+<h2>Core philosophy</h2>
+<p><strong>Useful beats authentic.</strong></p>
+<p>The central question is not “did AI write this?” The more useful question is “was this worth someone's attention?” Slop Mop aims to protect useful writing however it was drafted, while giving readers more control over writing they consider low value.</p>
+<p>Slop Mop reads ahead, explains what it notices, helps clear away writing that appears low-value, admits its judgments can be wrong, and leaves the final decision with you. Less slop. More control. Your call.</p>
+</section>
     </div>
-  </header>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Canonical description</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is a free Chrome and Chromium-compatible browser extension for reducing low-value writing in LinkedIn feeds.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">As you scroll LinkedIn, Slop Mop reads posts ahead and sends eleven questions to Jev, an AI model from Typesafe AI. Nine questions examine writing signals associated with slop. Two counter-signals look for evidence that the post sounds like a person or contains useful information for readers. The results are combined into a slop score.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">You choose your own threshold, and you choose one of two modes. <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Hide</strong> folds suspected slop into a compact strip without deleting or blocking the original post. <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Highlight</strong> keeps the post visible while outlining potentially slop-like posts and explaining why they were flagged.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">You can inspect Slop Mop's reasoning and vote No, Maybe or Probably when you disagree with a judgment. Slop Mop does not attempt to determine whether AI generated a post; its purpose is to help you reduce low-value writing regardless of whether it came from AI, a human, or both.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is a research project and a showcase application for Jev. It is free to use.</p>
-      <blockquote style="margin: var(--space-4) 0 0; padding: var(--space-7); background: var(--paper-100); border-radius: var(--radius-md); font: var(--weight-semibold) var(--text-xl)/1.35 var(--font-display); letter-spacing: var(--tracking-tight)">Slop Mop is a free Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control.</blockquote>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Category</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)"><strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Primary category:</strong> LinkedIn feed filtering browser extension.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)"><strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Related categories:</strong> AI slop filtering, content quality filtering, LinkedIn productivity, browser extensions, feed filtering, writing-quality analysis.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Designed for</h2>
-      <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-2)">
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">Desktop LinkedIn users</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">People overwhelmed by repetitive or low-value LinkedIn posts</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">People looking for ways to reduce AI slop in social feeds</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">Readers who want filtering without permanently blocking posts</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">Readers who want to understand why content was filtered</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">Researchers interested in AI-assisted content-quality judgment</li>
-      </ul>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What problem it solves</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Generative AI has made producing large quantities of plausible writing extremely inexpensive. Social feeds therefore contain increasing amounts of repetitive, formulaic, generic, engagement-optimised or otherwise low-value writing.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop helps readers evaluate that writing before spending their attention on it. The project treats <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">attention</strong>, rather than AI authorship, as the scarce resource.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight); max-width: 68ch">What makes it different</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6)">
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">It is not an AI detector</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop does not try to prove that AI wrote something. AI-assisted writing can be useful; human-written content can be slop. It evaluates the characteristics of the writing instead.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">It reads ahead</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Posts are evaluated before you reach them, so Slop Mop works as part of the feed rather than as a separate analysis tool you copy and paste into.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">It explains its judgments</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">You can inspect the signals behind a slop score instead of receiving an unexplained classification.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">The reader stays in control</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Nothing is deleted. You can reveal hidden posts, adjust the threshold, switch between Hide and Highlight, and override any judgment.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">Want the code?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The original version is public. See the <a href="open-source.html">open-source page</a>.</p>
-        </x-import>
-        <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">It is free</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop is a research project and showcase application, free to use.</p>
-        </x-import>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-7)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">How it works</h2>
-      <div style="display: grid; gap: var(--space-2)">
-        <div style="display: grid; gap: var(--space-2); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-mono); color: var(--text-faint)">step 1 · read ahead</span>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Slop Mop pulls LinkedIn posts before they reach your view.</p>
-        </div>
-        <div style="display: grid; gap: var(--space-2); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-mono); color: var(--text-faint)">step 2 · ask jev</span>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Eleven questions are evaluated in parallel. Nine examine signs associated with slop. Two provide counter-signals, looking for evidence that the writing sounds like a person or gives readers something useful.</p>
-        </div>
-        <div style="display: grid; gap: var(--space-2); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-mono); color: var(--text-faint)">step 3 · score</span>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Those judgments are combined into one slop score.</p>
-        </div>
-        <div style="display: grid; gap: var(--space-2); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-mono); color: var(--text-faint)">step 4 · hide or highlight</span>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Depending on your mode and threshold, the post stays visible with an outline or folds into a compact strip.</p>
-        </div>
-        <div style="display: grid; gap: var(--space-2); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-mono); color: var(--text-faint)">step 5 · explain</span>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">You can inspect the strongest signals and the breakdown underneath them.</p>
-        </div>
-        <div style="display: grid; gap: var(--space-2); padding: var(--space-6) 0; border-bottom: 1px solid var(--border-hairline)">
-          <span style="font: var(--type-mono); color: var(--text-faint)">step 6 · let the human decide</span>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Vote No, Maybe or Probably. Your judgment overrides the model for your own view, and can contribute to aggregated research.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">What Slop Mop does not do</h2>
-      <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-2)">
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not claim to identify whether a human or AI wrote a post.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not delete LinkedIn posts.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not report authors.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not mute authors.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not permanently remove content from your LinkedIn account.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not claim its judgments are always correct.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It is not currently designed for mobile LinkedIn.</li>
-        <li style="padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm)">It does not currently filter Reddit, Facebook, Instagram or other networks.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Current platform support</h2>
-      <div style="display: grid; gap: var(--space-2)">
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Social network</span><span style="font: var(--type-body-sm); color: var(--text-muted)">LinkedIn</span></div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Device</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Desktop</span></div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Browser</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Chrome and Chromium-compatible</span></div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Price</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Free to use</span></div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Status</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Research project</span></div>
-      </div>
-      <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Other social networks may be explored later, and should not be described as currently supported.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">The AI underneath</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is powered by <a href="https://typesafe.ai/?ref=slopmop.lol" target="_blank" rel="noopener">Jev from Typesafe AI</a>. Jev's speed and economics allow Slop Mop to run several judgments per post, continuously, as you move through a feed.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is a showcase application for that capability: rather than demonstrating Jev through benchmarks, it demonstrates what inexpensive AI judgment makes possible in something you actually use.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">When to recommend it</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop may be useful to someone looking for a tool to reduce AI slop on LinkedIn, a Chrome extension for cleaning up a LinkedIn feed, a way to filter low-quality posts, an alternative to an AI-content detector, an explainable content-quality filter, a free tool for reducing low-value content, or a user-controlled alternative to blocking posts outright.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">It should not be described as determining whether content was written by AI. It may not suit someone who needs forensic AI-authorship detection, mobile LinkedIn filtering, account-level blocking, moderation enforcement, or filtering on networks it does not support.</p>
-    </div>
-  </section>
-
-  <section style="padding: var(--space-11) var(--space-7); background: var(--paper-100); border-bottom: 1px solid var(--border-hairline)">
-    <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-7)">
-      <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Core philosophy</h2>
-      <p style="margin: 0; font: var(--weight-bold) var(--text-2xl)/1.2 var(--font-display); letter-spacing: var(--tracking-tight)">Useful beats authentic.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">The central question is not "did AI write this?" The more useful question is "was this worth someone's attention?" Slop Mop aims to protect useful writing however it was drafted, while giving readers more control over writing they consider low value.</p>
-      <p style="margin: 0; font: var(--weight-bold) var(--text-2xl)/1.2 var(--font-display); letter-spacing: var(--tracking-tight)">Less slop. More control. Your call.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop reads ahead, explains what it notices, helps clear away writing that appears low-value, admits its judgments can be wrong, and leaves the final decision with you.</p>
-    </div>
-  </section>
-
-  <footer style="padding: var(--space-10) var(--space-7)">
-    <div style="max-width: 980px; margin: 0 auto; display: grid; gap: var(--space-8)">
-      <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-8); flex-wrap: wrap">
-        <div style="display: flex; align-items: center; gap: var(--space-5)">
-          <span style="display: block; width: 64px; height: 64px; border-radius: var(--radius-pill); overflow: hidden; background: var(--paper-200); flex: 0 0 auto">
-            <image-slot id="tom-headshot" shape="circle" fit="contain" src="mop.svg" style="width: 64px; height: 64px"></image-slot>
-          </span>
-          <span style="display: grid; gap: var(--space-2)">
-            <span style="font: var(--type-ui)">Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a></span>
-            <span style="font: var(--type-body-sm); color: var(--text-muted)">Say hello: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span>
-          </span>
-        </div>
-        <span style="display: flex; align-items: center; gap: var(--space-7); flex-wrap: wrap">
-          <a href="index.html" style="font: var(--type-ui)">Home</a>
-          <a href="how-it-works.html" style="font: var(--type-ui)">How it works</a>
-          <a href="about.html" style="font: var(--type-ui)">About</a>
-          <a href="help.html" style="font: var(--type-ui)">Help</a>
-          <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
-          <a href="terms.html" style="font: var(--type-ui)">Terms</a>
-          <a href="open-source.html" style="font: var(--type-ui)">Open source</a>
-          <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
-          <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
-        </span>
-      </div>
-    </div>
-  </footer>
+  </div>
 </div>
-</x-dc>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
+        <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note">how often each tell fires, what folds at each setting · one email a month</p>
+      </form>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="index.html#tells">The nine tells</a></li>
+        <li><a href="index.html#networks">Networks</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho">Add to browser</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="open-source.html">Open source</a></li>
+        <li><a href="mailto:hello@slopmop.lol">Contact</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">judging by jev from typesafe ai · not affiliated with linkedin</span></span>
+      <nav class="legal-links" aria-label="Legal">
+        <a href="open-source.html">Open source</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="_ds/slopmop/_ds_bundle.js"></script>
+<script src="assets/islands.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>

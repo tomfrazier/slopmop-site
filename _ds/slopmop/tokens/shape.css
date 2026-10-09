@@ -10,7 +10,5 @@
 --shadow-flag-danger:0 0 0 3px var(--red-500);/* @kind other */
 --shadow-focus:0 0 0 2px var(--paper-000),0 0 0 4px var(--focus-ring);/* @kind other */
 --glow-accent:0 0 0 4px var(--mop-200);/* @kind other */
---gradient-fold:linear-gradient(180deg,var(--paper-000) 0%,var(--paper-100) 46%,var(--ink-200) 50%,var(--paper-100) 54%,var(--paper-000) 100%);/* @kind other */
---gradient-sensitivity:linear-gradient(90deg,var(--ink-200) 0%,var(--mop-300) 60%,var(--mop-500) 100%);/* @kind other */
 --texture-hatch:repeating-linear-gradient(45deg,transparent 0 8px,rgba(22,24,26,.03) 8px 9px);/* @kind other */
 }
