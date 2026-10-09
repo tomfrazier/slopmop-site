@@ -61,7 +61,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
+<a class="ph-bar" data-ph hidden href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
@@ -116,14 +116,28 @@
 <h2>Using it</h2>
 <h3>Mode and sensitivity</h3>
 <p>Click the mop in your toolbar. Hide folds suspected slop; Highlight tints the post's mop yellow or red and hides nothing. Mild, Moderate and Aggressive set how easily a post gets flagged.</p>
-<div class="demo"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;}'></div></div>
+<div class="demo"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;, &quot;showThreshold&quot;: false}'></div></div>
 <h3>Opening a folded post</h3>
 <p>Click the strip's Show post button and the post unfolds in place. Click any post's mop to see what the model noticed.</p>
 <div class="demo"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;full&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;stats&quot;: {&quot;today&quot;: 17, &quot;week&quot;: 86, &quot;month&quot;: 341, &quot;total&quot;: 2904}, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div>
 <h3>When it gets one wrong</h3>
-<p>Click the mop icon beside the post's “…” menu and vote No, Maybe or Probably. Not sure clears your vote. Your vote overrides the score for your feed.</p>
+<p>Click the mop icon beside the post's “…” menu and vote No, Maybe or Probably. Not sure clears your vote. Your vote overrides the score for your feed. Three common cases:</p>
+<div class="vote-exs"><div data-island="VoteExample" data-props='{&quot;kicker&quot;: &quot;it folded something useful&quot;, &quot;vote&quot;: &quot;no&quot;, &quot;who&quot;: &quot;Ken Osei&quot;, &quot;meta&quot;: &quot;Trade desk \u00b7 2h&quot;, &quot;mop&quot;: &quot;red&quot;, &quot;body&quot;: &quot;The new tariff schedule took effect Oct 1. If you import under $2,500 per shipment, nothing changes. Over that, here&#x27;s the form.&quot;, &quot;results&quot;: {&quot;none&quot;: &quot;It stays folded.&quot;, &quot;no&quot;: &quot;It&#x27;s shown in your feed again, and your vote tells the model it was wrong.&quot;, &quot;maybe&quot;: &quot;It stays visible with a yellow mop.&quot;, &quot;probably&quot;: &quot;It stays folded.&quot;}}'></div><div data-island="VoteExample" data-props='{&quot;kicker&quot;: &quot;slop slipped through&quot;, &quot;vote&quot;: &quot;probably&quot;, &quot;who&quot;: &quot;Growth Guru&quot;, &quot;meta&quot;: &quot;Coach \u00b7 4h&quot;, &quot;mop&quot;: &quot;blue&quot;, &quot;body&quot;: &quot;Your network is your net worth.\n\nRead that again.\n\nRepost if you agree. \u267b\ufe0f&quot;, &quot;results&quot;: {&quot;none&quot;: &quot;It stays visible.&quot;, &quot;no&quot;: &quot;It stays visible.&quot;, &quot;maybe&quot;: &quot;It stays visible with a yellow mop.&quot;, &quot;probably&quot;: &quot;It folds away in your feed, whatever the model said.&quot;}}'></div><div data-island="VoteExample" data-props='{&quot;kicker&quot;: &quot;you&#x27;re on the fence&quot;, &quot;vote&quot;: &quot;maybe&quot;, &quot;who&quot;: &quot;Jordan Lake&quot;, &quot;meta&quot;: &quot;Brand storyteller \u00b7 6h&quot;, &quot;mop&quot;: &quot;red&quot;, &quot;body&quot;: &quot;We rebuilt our onboarding emails this quarter. A journey of a thousand steps, as they say. Open rate went from 31% to 44%.&quot;, &quot;results&quot;: {&quot;none&quot;: &quot;It stays folded.&quot;, &quot;no&quot;: &quot;It&#x27;s shown in your feed again.&quot;, &quot;maybe&quot;: &quot;It stays visible with a yellow mop, and your vote counts as borderline.&quot;, &quot;probably&quot;: &quot;It stays folded.&quot;}}'></div></div>
 <h3>Turning it off</h3>
 <p>Use the switch in the popup to pause it: off is a real off, with no scanning and no server calls. To remove it, right-click the mop and choose Remove from Chrome.</p>
+<div class="demo" style="justify-items:stretch"><div class="offdemo" data-offdemo aria-label="Animation: turning Slop Mop off from the toolbar popup">
+  <div class="od-pop">
+    <div class="od-head"><span><img src="assets/img/mark.svg" alt="">Slop Mop <span class="od-badge"><span class="on">9</span><span class="off">off</span></span></span><span class="od-sw" aria-hidden="true"></span></div>
+    <div class="od-body"><span>Mode · Hide</span><span>Sensitivity · Moderate</span><span>Hidden today · 17</span></div>
+  </div>
+  <div class="od-feed">
+    <div class="od-row"><span class="od-mop blue"><img src="_ds/slopmop/mop.svg" alt=""></span><span class="ln"></span></div>
+    <div class="od-row"><span class="od-mop red"><img src="_ds/slopmop/mop.svg" alt=""></span><span>This post was hidden</span><span class="ln"></span></div>
+    <div class="od-row"><span class="od-mop yellow"><img src="_ds/slopmop/mop.svg" alt=""></span><span class="ln"></span></div>
+  </div>
+  <span class="od-cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 2-3 7z" fill="#16181A" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+  <p class="od-cap" aria-live="polite"></p>
+</div><div><button class="btn btn-secondary btn-sm" type="button" data-offdemo-replay>Replay</button></div></div>
 </section>
 <section id="errors">
 <h2>Something's wrong with scoring</h2>

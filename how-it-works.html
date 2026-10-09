@@ -61,7 +61,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
+<a class="ph-bar" data-ph hidden href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
@@ -104,8 +104,8 @@
     <div class="prose">
 <section id="breakdown">
 <h2>Reading the breakdown</h2>
-<p>Every part of the details panel, top to bottom. This example post was flagged, so it's drawn in red. Try voting on it.</p>
-<div class="demo"><div data-island="WhyCard" data-props='{&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 72, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;engagementBait&quot;: 0.81, &quot;contrastFraming&quot;: 0.74, &quot;formulaicHook&quot;: 0.55, &quot;hypeMarketing&quot;: 0.3, &quot;emptyEvaluation&quot;: 0.42}, &quot;humanVoice&quot;: 0.18, &quot;usefulness&quot;: 0.12, &quot;readerResponse&quot;: 0.4, &quot;community&quot;: {&quot;probably&quot;: 6, &quot;maybe&quot;: 0, &quot;no&quot;: 1}, &quot;checksToday&quot;: {&quot;used&quot;: 41, &quot;limit&quot;: 250}, &quot;interactive&quot;: true}'></div></div>
+<p>Every part of the details panel, top to bottom. Pick one of three posts to see how the panel changes: one that folds away, one that's borderline, and one that reads fine. Try voting on them.</p>
+<div class="demo"><div data-island="Breakdown3"></div></div>
 <ol class="steps">
 <li><span><strong>The score, out of 100.</strong> Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</span></li>
 <li><span><strong>The verdict.</strong> Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
@@ -186,11 +186,22 @@
 <li><span><strong>Human-typed?</strong> If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</span></li>
 <li><span><strong>Your threshold.</strong> The final score is compared with your sensitivity. Looks fine is left alone. In Highlight mode, the post's mop turns yellow for Possibly slop and red for Likely slop. In Hide mode, posts past your threshold fold away into a strip you can reopen.</span></li>
 </ol>
-<div class="callout"><p class="mono" style="margin:0">score = (tells × 2.0 − 0.15 · sounds like a person) × (1 − shield) · shield = ½ useful + ½ reader response, max 0.6</p></div>
+<div class="formula">
+      <h3 class="formula-title">The score is the weight of the tells, shielded by what's useful and human.</h3>
+      <math display="block" aria-label="The slop score">
+        <mi>S</mi><mo>=</mo><mi>&#x3B3;</mi><mo>&#x22C5;</mo>
+        <mrow><mo>(</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>9</mn></munderover><msub><mi>w</mi><mi>i</mi></msub><msub><mi>&#x3C4;</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BB;</mi><mi>h</mi><mo>)</mo></mrow>
+        <mo>&#x22C5;</mo><mrow><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3C3;</mi><mo>)</mo></mrow><mo>,</mo><mspace width="1.2em"/>
+        <mi>&#x3C3;</mi><mo>=</mo><mi>min</mi><mrow><mo>(</mo><mfrac><mrow><mi>u</mi><mo>+</mo><mi>r</mi></mrow><mn>2</mn></mfrac><mo>,</mo><mover><mi>&#x3C3;</mi><mo>&#x2C6;</mo></mover><mo>)</mo></mrow>
+      </math>
+      <div class="legend"><span><i>&#x3C4;<sub>i</sub></i>the nine tells</span><span><i>w<sub>i</sub></i>their weights</span><span><i>h</i>sounds like a person</span><span><i>u</i>useful to readers</span><span><i>r</i>reader response</span><span><i>&#x3C3;</i>the shield, capped</span></div>
+    </div>
 </section>
 <section id="wrong">
 <h2>When it gets one wrong</h2>
-<p>Click the mop beside the post's “…” menu and vote No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. If a bar looks badly off, email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a> with the post's link and which bar surprised you.</p>
+<p>Click the mop beside the post's “…” menu and vote No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. Try it on this folded post:</p>
+<div class="demo"><div data-island="VoteDemo"></div></div>
+<p>If a bar looks badly off, email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a> with the post's link and which bar surprised you.</p>
 </section>
     </div>
   </div>

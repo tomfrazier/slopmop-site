@@ -177,7 +177,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
+<a class="ph-bar" data-ph hidden href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
@@ -250,6 +250,8 @@
     </div>
   </div>
   <div class="marquee" id="assets-marquee" data-marquee aria-label="Slop Mop interface pieces">
+    <button class="icon-btn marquee-nav prev" type="button" data-marquee-step="-1" aria-label="Back one card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="icon-btn marquee-nav next" type="button" data-marquee-step="1" aria-label="Forward one card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
     <div class="marquee-track">
         <div class="asset"><div class="asset-stage"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;compact&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;stats&quot;: {&quot;today&quot;: 17, &quot;week&quot;: 86, &quot;month&quot;: 341, &quot;total&quot;: 2904}, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Fold strip</b><span>Past your threshold, a post folds into a 44px strip. One click unfolds it in place.</span><span class="mono">foldstrip</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 64, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>The score</b><span>An integer out of 100, never alone: the range bar shows where Possibly and Likely start.</span><span class="mono">scorezones</span></div></div>
@@ -364,6 +366,7 @@
       </div>
     </div>
     <div class="formula">
+      <h3 class="formula-title">The score is the weight of the tells, shielded by what's useful and human.</h3>
       <math display="block" aria-label="The slop score">
         <mi>S</mi><mo>=</mo><mi>&#x3B3;</mi><mo>&#x22C5;</mo>
         <mrow><mo>(</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>9</mn></munderover><msub><mi>w</mi><mi>i</mi></msub><msub><mi>&#x3C4;</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BB;</mi><mi>h</mi><mo>)</mo></mrow>
@@ -494,7 +497,7 @@
     </div>
     <div class="integrations">
       <div class="int-group"><h3>social feeds</h3>
-        <div class="int"><span class="lg"><img src="assets/logos/linkedin.svg" alt="" width="20" height="20"></span><span class="nm">LinkedIn</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/x.svg" alt="" width="20" height="20"></span><span class="nm">X</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/reddit.svg" alt="" width="20" height="20"></span><span class="nm">Reddit</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/facebook.svg" alt="" width="20" height="20"></span><span class="nm">Facebook</span><span class="badge badge-soon">coming soon</span></div>
+        <div class="int"><span class="lg"><img src="assets/logos/linkedin-color.svg" alt="" width="20" height="20"></span><span class="nm">LinkedIn</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/x.svg" alt="" width="20" height="20"></span><span class="nm">X</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/reddit.svg" alt="" width="20" height="20"></span><span class="nm">Reddit</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/facebook.svg" alt="" width="20" height="20"></span><span class="nm">Facebook</span><span class="badge badge-soon">coming soon</span></div>
       </div>
       <div class="int-group"><h3>articles &amp; websites</h3>
         <div class="int soon"><span class="lg"><img src="assets/logos/substack.svg" alt="" width="20" height="20"></span><span class="nm">Substack</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/medium.svg" alt="" width="20" height="20"></span><span class="nm">Medium</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/web.svg" alt="" width="20" height="20"></span><span class="nm">Any website</span><span class="badge badge-soon">coming soon</span></div>
@@ -503,7 +506,7 @@
         <div class="int soon"><span class="lg"><img src="assets/logos/gmail.svg" alt="" width="20" height="20"></span><span class="nm">Gmail</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftoutlook.svg" alt="" width="20" height="20"></span><span class="nm">Outlook</span><span class="badge badge-soon">coming soon</span></div>
       </div>
       <div class="int-group"><h3>browsers</h3>
-        <div class="int"><span class="lg"><img src="assets/logos/googlechrome.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><span class="glyph">Cr</span></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftedge.svg" alt="" width="20" height="20"></span><span class="nm">Microsoft Edge</span><span class="badge badge-soon">coming soon</span></div>
+        <div class="int"><span class="lg"><img src="assets/logos/chrome-color.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/chromium-color.svg" alt="" width="20" height="20"></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftedge.svg" alt="" width="20" height="20"></span><span class="nm">Microsoft Edge</span><span class="badge badge-soon">coming soon</span></div>
         <p class="mono" style="margin:4px 0 0">brave, arc, opera, vivaldi: chromium browsers that install from the chrome web store</p>
       </div>
     </div>

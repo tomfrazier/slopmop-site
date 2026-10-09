@@ -5,6 +5,8 @@
     storeUrl: "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
     productHuntUrl: "https://www.producthunt.com/products/slop-mop",
     emailEndpoint: "https://formspree.io/f/xaenejjw",
+    /* The top announcement bar (Product Hunt). Set to true to show it again. */
+    announcementBar: false,
     /* Social icons in the footer stay hidden until a URL is filled in. */
     social: {
       linkedin: "",
@@ -26,7 +28,7 @@
 
   /* store + product hunt + social links */
   $$("[data-add]").forEach(function (a) { a.href = SITE.storeUrl; a.target = "_blank"; a.rel = "noopener"; });
-  $$("[data-ph]").forEach(function (a) { if (SITE.productHuntUrl) { a.href = SITE.productHuntUrl; } else { a.remove(); } });
+  $$("[data-ph]").forEach(function (a) { if (SITE.productHuntUrl) { a.href = SITE.productHuntUrl; } a.hidden = !(SITE.announcementBar && SITE.productHuntUrl); });
   $$("[data-social]").forEach(function (a) {
     var url = SITE.social[a.getAttribute("data-social")];
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
@@ -98,17 +100,40 @@
     if (!stopped) play(); else stop();
   }
 
-  /* ---------- carousel pause ---------- */
+  /* ---------- kit carousel: autoplay, pause on hover, arrows nudge one card either way ---------- */
   $$("[data-marquee]").forEach(function (m) {
-    var btn = $("[data-marquee-toggle='" + m.id + "']");
-    if (!btn) return;
-    if (reduceMotion) { btn.hidden = true; return; }
-    btn.addEventListener("click", function () {
-      var p = m.classList.toggle("paused");
-      btn.setAttribute("aria-label", p ? "Play carousel" : "Pause carousel"); btn.innerHTML = p ? ICON_PLAY : ICON_PAUSE;
+    var track = $(".marquee-track", m), toggle = $("[data-marquee-toggle='" + m.id + "']");
+    var playing = !reduceMotion, hover = false, offset = 0, last = 0, tween = null, speed = 36; /* px per second */
+    function half() { return track.scrollWidth / 2; }
+    function step() { var c = $(".asset", track); return c ? c.getBoundingClientRect().width + 16 : 380; }
+    function wrap(x) { var w = half(); return w ? ((x % w) + w) % w : 0; }
+    function paint() { track.style.transform = "translateX(" + (-wrap(offset)) + "px)"; }
+    function frame(ts) {
+      var dt = last ? Math.min(64, ts - last) / 1000 : 0; last = ts;
+      if (tween) {
+        var k = Math.min(1, (ts - tween.t0) / tween.d), e = 1 - Math.pow(1 - k, 3);
+        offset = tween.from + (tween.to - tween.from) * e;
+        if (k >= 1) tween = null;
+      } else if (playing && !hover) { offset += speed * dt; }
+      paint(); requestAnimationFrame(frame);
+    }
+    m.addEventListener("mouseenter", function () { hover = true; });
+    m.addEventListener("mouseleave", function () { hover = false; });
+    m.addEventListener("focusin", function () { hover = true; });
+    m.addEventListener("focusout", function () { hover = false; });
+    $$("[data-marquee-step]", m).forEach(function (b) {
+      b.addEventListener("click", function () {
+        var from = offset, to = (tween ? tween.to : offset) + (+b.getAttribute("data-marquee-step")) * step();
+        tween = { from: from, to: to, t0: performance.now(), d: reduceMotion ? 1 : 420 };
+      });
     });
+    if (toggle) {
+      var setToggle = function () { toggle.setAttribute("aria-label", playing ? "Pause carousel" : "Play carousel"); toggle.innerHTML = playing ? ICON_PAUSE : ICON_PLAY; };
+      toggle.addEventListener("click", function () { playing = !playing; setToggle(); });
+      setToggle();
+    }
+    requestAnimationFrame(frame);
   });
-
 
   /* ---------- quote: words darken with scroll; fully dark near the top ---------- */
   var rv = document.querySelector("[data-reveal]");
@@ -156,8 +181,13 @@
       if (isStatic() || !nodes.length) return;
       var r = hf.getBoundingClientRect();
       var p = Math.min(1, Math.max(0, (64 - r.top) / span));
-      var tip = nodes[0] + p * span;                 /* track x that sits under the viewport centre */
-      var tx = window.innerWidth / 2 - tip;
+      var col = $("#how .wrap") || hf, cr = col.getBoundingClientRect(), pad = parseFloat(getComputedStyle(col).paddingLeft) || 0;
+      var first = steps2[0], lastS = steps2[steps2.length - 1];
+      var startTx = cr.left + pad - first.offsetLeft;                                   /* first card on the page's left edge */
+      var endTx = cr.right - pad - (lastS.offsetLeft + lastS.offsetWidth);              /* last card on its right edge */
+      if (endTx > startTx) endTx = startTx;
+      var tip = nodes[0] + p * span;
+      var tx = startTx + p * (endTx - startTx);
       track.style.transform = "translateX(" + tx + "px)";
       drawn2.setAttribute("x2", tip);
       steps2.forEach(function (s, k) { s.classList.toggle("passed", nodes[k] <= tip + 1); });
@@ -168,6 +198,27 @@
     document.addEventListener("slopmop:islands", measure);
     setTimeout(measure, 400);
   }
+
+
+  /* ---------- help: "turning it off" plays once when it comes into view; Replay runs it again ---------- */
+  $$("[data-offdemo]").forEach(function (d) {
+    var cap = $(".od-cap", d), timers = [];
+    var lines = ["Click the mop in your toolbar…", "…and flip the switch.", "Off is a real off: no scanning, no server calls, every mop goes grey."];
+    function run() {
+      timers.forEach(clearTimeout); timers = [];
+      d.classList.remove("s1", "s2", "s3"); cap.textContent = lines[0];
+      if (reduceMotion) { d.classList.add("s1", "s2", "s3"); cap.textContent = lines[2]; return; }
+      timers.push(setTimeout(function () { d.classList.add("s1"); }, 400));
+      timers.push(setTimeout(function () { d.classList.add("s2"); cap.textContent = lines[1]; }, 1400));
+      timers.push(setTimeout(function () { d.classList.add("s3"); cap.textContent = lines[2]; }, 2100));
+    }
+    var replay = $("[data-offdemo-replay]", d.parentNode);
+    if (replay) replay.addEventListener("click", run);
+    if ("IntersectionObserver" in window) {
+      var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { run(); o.disconnect(); } }, { threshold: 0.6 });
+      o.observe(d);
+    } else run();
+  });
 
   /* ---------- nine tells accordion ---------- */
   var tellRoot = $("[data-tells]");

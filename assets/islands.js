@@ -81,17 +81,21 @@
   }
 
   /* ---------- the nine tells ---------- */
+  /* tone: the verdict the whole post got. A blue one shows that a single tell on its own isn't enough. */
   var TELLS = [
-    { id: "formulaicHook", label: "Scroll-stopper", who: "Greg Tanner", meta: "Sales leader | Speaker", body: [["My 4 year old taught me more about closing than any sales trainer ever did.", ""], ["", "\n\nShe asked for ice cream.\n\nI said no.\n\nShe asked again.\n\n"], ["Read that again.", ""]] },
-    { id: "engagementBait", label: "Engagement bait", who: "Marcus Bell", meta: "Helping B2B leaders unlock growth", body: [["", "Strategy without clarity is noise.\nClarity without execution is theater.\n\n"], ["Comment YES if this resonates. Agree? 👇", ""]] },
-    { id: "hypeMarketing", label: "Hype words", who: "Avery Stone", meta: "Founder, Northbeam Labs", body: [["", "Our new platform will "], ["unlock a paradigm shift", ""], ["", " in how teams "], ["elevate", ""], ["", " their "], ["game-changing", ""], ["", " potential."]] },
-    { id: "emptyEvaluation", label: "Empty praise", who: "Jamie Cole", meta: "Community lead", body: [["", "Just wrapped an "], ["incredibly meaningful, truly profound", ""], ["", " offsite. "], ["So much value.", ""], ["", " Grateful."]] },
-    { id: "tradeoffFreePromises", label: "No-catch promises", who: "Rae Patel", meta: "Growth coach", body: [["", "Double your pipeline "], ["without sacrificing a single hour", ""], ["", " of your week. "], ["Zero risk, all upside.", ""]] },
-    { id: "contrastFraming", label: "“Not X, but Y”", who: "Dana Whitfield", meta: "Founder & CEO", body: [["", "Leadership "], ["isn't about having the answers. It's about", ""], ["", " asking better questions. "], ["It's not a job — it's a calling.", ""]] },
-    { id: "manneredProse", label: "Flowery prose", who: "Jordan Lake", meta: "Brand storyteller", body: [["", "Leadership is "], ["a delicate dance between vision and vulnerability", ""], ["", ", "], ["a tapestry woven", ""], ["", " from quiet moments."]] },
-    { id: "formalHedging", label: "Stiff phrasing", who: "Sam Ortiz", meta: "Operations", body: [["Furthermore,", ""], ["", " the revised process "], ["may provide", ""], ["", " additional value "], ["in terms of", ""], ["", " overall efficiency."]] },
-    { id: "manufacturedNarrative", label: "Too-tidy story", who: "Greg Tanner", meta: "Sales leader | Speaker", body: [["", "A janitor stopped me in the lobby yesterday.\n\n"], ["What he said next changed how I lead forever.", ""], ["", "\n\nThe lesson? Everyone is a teacher."]] }
+    { id: "formulaicHook", label: "Scroll-stopper", tone: "red", score: 84, also: ["engagementBait", "manufacturedNarrative"], who: "Greg Tanner", meta: "Sales leader | Speaker", body: [["My 4 year old taught me more about closing than any sales trainer ever did.", ""], ["", "\n\nShe asked for ice cream.\n\nI said no.\n\nShe asked again.\n\n"], ["Read that again.", ""]] },
+    { id: "engagementBait", label: "Engagement bait", tone: "red", score: 78, also: ["formulaicHook", "contrastFraming"], who: "Marcus Bell", meta: "Helping B2B leaders unlock growth", body: [["", "Strategy without clarity is noise.\nClarity without execution is theater.\n\n"], ["Comment YES if this resonates. Agree? 👇", ""]] },
+    { id: "hypeMarketing", label: "Hype words", tone: "yellow", score: 61, also: ["tradeoffFreePromises"], who: "Avery Stone", meta: "Founder, Northbeam Labs", body: [["", "Our new platform will "], ["unlock a paradigm shift", ""], ["", " in how teams "], ["elevate", ""], ["", " their "], ["game-changing", ""], ["", " potential."]] },
+    { id: "emptyEvaluation", label: "Empty praise", tone: "blue", score: 22, also: [], who: "Jamie Cole", meta: "Community lead", body: [["", "Just wrapped our offsite. "], ["Truly meaningful.", ""], ["", " We cut the roadmap from 14 bets to 5 and gave each one an owner and a date."]] },
+    { id: "tradeoffFreePromises", label: "No-catch promises", tone: "yellow", score: 55, also: ["hypeMarketing"], who: "Rae Patel", meta: "Growth coach", body: [["", "Double your pipeline "], ["without sacrificing a single hour", ""], ["", " of your week. "], ["Zero risk, all upside.", ""]] },
+    { id: "contrastFraming", label: "“Not X, but Y”", tone: "red", score: 72, also: ["manneredProse", "emptyEvaluation"], who: "Dana Whitfield", meta: "Founder & CEO", body: [["", "Leadership "], ["isn't about having the answers. It's about", ""], ["", " asking better questions. "], ["It's not a job — it's a calling.", ""]] },
+    { id: "manneredProse", label: "Flowery prose", tone: "blue", score: 28, also: [], who: "Ellen Okafor", meta: "Designer", body: [["", "Redrew the same icon 40 times on Saturday. "], ["A quiet dance of curves and doubt.", ""], ["", " Posting #37 anyway, the one with the thicker stroke."]] },
+    { id: "formalHedging", label: "Stiff phrasing", tone: "yellow", score: 47, also: ["emptyEvaluation"], who: "Sam Ortiz", meta: "Operations", body: [["Furthermore,", ""], ["", " the revised process "], ["may provide", ""], ["", " additional value "], ["in terms of", ""], ["", " overall efficiency."]] },
+    { id: "manufacturedNarrative", label: "Too-tidy story", tone: "red", score: 81, also: ["formulaicHook", "emptyEvaluation"], who: "Greg Tanner", meta: "Sales leader | Speaker", body: [["", "A janitor stopped me in the lobby yesterday.\n\n"], ["What he said next changed how I lead forever.", ""], ["", "\n\nThe lesson? Everyone is a teacher."]] }
   ];
+  var TONE_MOP = { red: "red", yellow: "yellow", blue: "blue" }, TONE_COLOR = { red: "var(--red-500)", yellow: "var(--mop-500)", blue: "var(--blue-500)" };
+  var TONE_BADGE = { red: ["danger", "Likely slop"], yellow: ["warn", "Possibly slop"], blue: ["clean", "Looks fine"] };
+  var TONE_NOTE = { red: "several tells at once, so it folds away", yellow: "some tells, not clear-cut, so it stays visible", blue: "one tell on its own isn't enough: the rest reads fine" };
   function TellCard() {
     var s = useState(0), idx = s[0], t = TELLS[idx];
     useEffect(function () {
@@ -99,22 +103,81 @@
       document.addEventListener("slopmop:tell", on);
       return function () { document.removeEventListener("slopmop:tell", on); };
     }, []);
-    var vals = {}; TELLS.forEach(function (x, k) { vals[x.id] = k === idx ? 0.92 : 0.12 + ((k * 7) % 5) * 0.04; });
+    var vals = {}; TELLS.forEach(function (x) { vals[x.id] = t.tone === "blue" ? 0.06 : 0.12; });
+    t.also.forEach(function (id, k) { vals[id] = t.tone === "red" ? 0.6 - k * 0.05 : 0.42; });
+    vals[t.id] = t.tone === "blue" ? 0.7 : 0.92;
+    var b = TONE_BADGE[t.tone];
     return h("div", { className: "tell-card-top" },
       h("div", { className: "tell-sample" },
         h("article", { className: "post" },
           h("div", { className: "post-head" }, h("span", { className: "avatar" }, t.who.split(" ").map(function (w) { return w[0]; }).join("")),
             h("span", { className: "post-who" }, h("span", { className: "post-name" }, t.who), h("span", { className: "post-meta" }, t.meta)),
-            h("span", { className: "post-tools" }, h(DS.MopIcon, { state: "yellow", label: "Is this post slop?" }))),
-          h("p", { className: "post-body", style: { margin: 0 } }, t.body.map(function (seg, k) { return seg[0] ? h("mark", { key: k }, seg[0]) : seg[1]; }))),
-        h("span", { className: "mono" }, "marked: what the model weighs for “" + t.label.replace(/[“”]/g, "") + "”")),
-      h("div", { className: "tell-print" }, h(DS.Slopprint, { values: vals, highlight: [t.label], color: "var(--mop-500)", width: 230 })));
+            h("span", { className: "post-tools" }, h(DS.MopIcon, { state: TONE_MOP[t.tone], label: "Is this post slop?" }))),
+          h("p", { className: "post-body", style: { margin: 0 } }, t.body.map(function (seg, k) { return seg[0] ? h("mark", { key: k, className: "t-" + t.tone }, seg[0]) : seg[1]; }))),
+        h("div", { className: "tell-verdict" }, h(DS.Badge, { tone: b[0] }, b[1]), h("span", { className: "mono" }, t.score + " / 100 · " + TONE_NOTE[t.tone]))),
+      h("div", { className: "tell-print" }, h(DS.Slopprint, { values: vals, highlight: [t.label], color: TONE_COLOR[t.tone], width: 230 })));
+  }
+
+
+  /* ---------- how it works: three example posts and their panels ---------- */
+  var EXAMPLES = [
+    { key: "likely", label: "Likely slop", who: "Greg Tanner", meta: "Sales leader | Speaker · 11h", mop: "red",
+      body: "My 4 year old taught me more about closing than any sales trainer ever did.\n\nShe asked for ice cream. I said no. She asked again.\n\nRead that again.\n\nWho needed to hear this today? 👇",
+      card: { verdict: "likely", score: 84, mode: "hide", tells: { formulaicHook: 0.91, engagementBait: 0.77, manufacturedNarrative: 0.64, contrastFraming: 0.58, hypeMarketing: 0.2 }, humanVoice: 0.44, usefulness: 0.08, readerResponse: 0.18, community: { probably: 14, maybe: 2, no: 0 }, checksToday: { used: 41, limit: 250 } } },
+    { key: "possibly", label: "Possibly slop", who: "Marcus Bell", meta: "Helping B2B leaders unlock growth · 7h", mop: "yellow",
+      body: "Most teams don't have a strategy problem. They have a clarity problem.\n\nStrategy without clarity is noise.\n\nComment YES if this resonates.",
+      card: { verdict: "possibly", score: 61, mode: "hide", tells: { emptyEvaluation: 0.74, engagementBait: 0.68, contrastFraming: 0.52, formulaicHook: 0.4 }, humanVoice: 0.21, usefulness: 0.09, readerResponse: 0.71, community: { probably: 9, maybe: 4, no: 1 }, checksToday: { used: 42, limit: 250 } } },
+    { key: "fine", label: "Looks fine", who: "Priya Raman", meta: "Staff engineer, payments · 5h", mop: "blue",
+      body: "We shaved 400ms off checkout by moving the fraud check off the critical path. Took three weeks, two of them arguing about it. Writeup in comments: the boring part (queue backpressure) is the part that mattered.",
+      card: { verdict: "fine", score: 12, mode: "hide", tells: { formalHedging: 0.22 }, humanVoice: 0.74, usefulness: 0.81, readerResponse: 0.22, community: null, checksToday: { used: 43, limit: 250 } } }
+  ];
+  function MiniPost(p) {
+    return h("article", { className: "post" },
+      h("div", { className: "post-head" }, h("span", { className: "avatar" }, p.who.split(" ").map(function (w) { return w[0]; }).join("")),
+        h("span", { className: "post-who" }, h("span", { className: "post-name" }, p.who), h("span", { className: "post-meta" }, p.meta)),
+        h("span", { className: "post-tools" }, h(DS.MopIcon, { state: p.mop, label: "Is this post slop?" }), h("span", { "aria-hidden": "true" }, "···"))),
+      h("p", { className: "post-body", style: { margin: 0 } }, p.body));
+  }
+  function Breakdown3() {
+    var s = useState("likely"), ex = EXAMPLES.filter(function (e) { return e.key === s[0]; })[0];
+    return h("div", { className: "bd3" },
+      h("div", { className: "bd3-pick" }, h(DS.SegmentedControl, { value: s[0], onChange: s[1], options: EXAMPLES.map(function (e) { return { value: e.key, label: e.label }; }) })),
+      h("div", { className: "bd3-grid" },
+        h("div", { className: "bd3-post" }, h("span", { className: "mono" }, "the post"), h(MiniPost, ex)),
+        h("div", { className: "bd3-panel" }, h("span", { className: "mono" }, "click its mop"), h(Why, Object.assign({ key: ex.key, interactive: true }, ex.card)))));
+  }
+
+  /* ---------- voting: what each vote does ---------- */
+  var VOTE_RESULT = {
+    none: ["Not sure", "Slop Mop's own verdict stands: Likely slop, so the post is folded away."],
+    no: ["No", "You overrule it. The post is shown in your feed and the model's score is dimmed."],
+    maybe: ["Maybe", "Possibly slop: the post stays visible and its mop turns yellow."],
+    probably: ["Probably", "You agree. The post stays folded, and your vote counts toward the research."]
+  };
+  function VoteDemo(p) {
+    var s = useState(p.value === undefined ? null : p.value), v = s[0], r = VOTE_RESULT[v || "none"];
+    var ex = EXAMPLES[0];
+    var shown = v === "no" || v === "maybe";
+    return h("div", { className: "vote-demo" },
+      h("div", { className: "vd-feed" }, shown ? h(MiniPost, Object.assign({}, ex, { mop: v === "no" ? "blue" : "yellow" })) : h(DS.FoldStrip, { tone: "red", density: "minimal", label: "This post was hidden", style: { width: "100%" } })),
+      h("div", { className: "vd-controls" },
+        h(DS.VoteControl, { value: v, onChange: s[1], style: { width: "100%" } }),
+        h(DS.ScoreZones, { score: ex.card.score, possibly: 40, likely: 70, hides: true, vote: v, style: { width: "100%" } }),
+        h("p", { className: "vd-result" }, h("b", null, r[0] + ". "), r[1])));
+  }
+  function VoteExample(p) {
+    var s = useState(p.vote), v = s[0];
+    return h("div", { className: "vote-ex" },
+      h("span", { className: "mono" }, p.kicker),
+      h(MiniPost, { who: p.who, meta: p.meta, mop: v === "no" ? "blue" : v === "maybe" ? "yellow" : v === "probably" ? "red" : p.mop, body: p.body }),
+      h(DS.VoteControl, { value: v, onChange: s[1], style: { width: "100%" } }),
+      h("p", { className: "vd-result" }, h("b", null, (VOTE_RESULT[v || "none"] || [""])[0] + ". "), p.results[v || "none"]));
   }
 
   var REG = {
     FoldStrip: DS.FoldStrip, ScoreZones: DS.ScoreZones, Slopprint: DS.Slopprint, NoticePanel: DS.NoticePanel, MopIcon: DS.MopIcon, Badge: DS.Badge,
     WhyCard: Why, Vote: Vote, Sensitivity: Sensitivity, Mode: Mode, MopRow: MopRow, Tiles: Tiles, Verdicts: Verdicts, Mark: Mark, Popup: PopupLite, PanelPeek: PanelPeek,
-    NetworkStack: NetworkStack, TellCard: TellCard
+    NetworkStack: NetworkStack, TellCard: TellCard, Breakdown3: Breakdown3, VoteDemo: VoteDemo, VoteExample: VoteExample
   };
   var nodes = document.querySelectorAll("[data-island]");
   Array.prototype.forEach.call(nodes, function (el) {
