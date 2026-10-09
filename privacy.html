@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="_ds/slopmop/styles.css">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/sites.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +64,7 @@
 <a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop</a>
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
     <nav class="nav-links" aria-label="Main">
       <a href="how-it-works.html">How it works</a>
       <a href="index.html#tells">The tells</a>
@@ -77,13 +78,28 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head">
-  <div class="wrap">
-    <span class="eyebrow">privacy</span>
-    <h1 class="h-1">Privacy policy</h1>
-    <p class="lede">Slop Mop is a research project. It reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. This page says exactly what that means.</p>
-    <p class="mono">last updated 20 september 2026</p>
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <span class="eyebrow">privacy</span>
+      <h1 class="h-1">Privacy policy</h1>
+      <p class="lede">Slop Mop is a research project. It reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. This page says exactly what that means.</p>
+      <p class="mono">last updated 20 september 2026</p>
+    </div>
+    <div class="ph-visual"><div class="tv-stack">
+  <div class="tv-card"><span class="tv-label">what leaves your browser</span>
+    <div class="tv-row"><span class="mono">author</span><span class="redact">never sent</span></div>
+    <div class="tv-row"><span class="mono">you</span><span class="redact">never sent</span></div>
+    <div class="tv-row"><span class="mono">text</span><span>the post, to be judged</span></div>
+    <div class="tv-row"><span class="mono">counts</span><span>reactions · comments</span></div></div>
+  <div class="tv-arrow"><span class="mono">what's kept</span></div>
+  <div class="tv-card tv-kept"><span class="tv-label">on the server</span>
+    <div class="tv-row"><span class="mono">post</span><code>sha256 9f2c…e41a</code></div>
+    <div class="tv-row"><span class="mono">install</span><code>salted · 3b7a…01c</code></div>
+    <div class="tv-row"><span class="mono">who</span><span class="redact">nobody</span></div></div>
+</div></div>
   </div>
+  <div class="wrap"><div class="glance"><div class="glance-tile"><span class="mono">sent</span><b>Text and public counts</b><span>never your name, never the author's</span></div><div class="glance-tile"><span class="mono">kept</span><b>A one-way hash</b><span>not the words</span></div><div class="glance-tile"><span class="mono">logs</span><b>90 days</b><span>then deleted</span></div><div class="glance-tile"><span class="mono">vendors</span><b>No ads, no analytics</b><span>no cookies set by the extension</span></div></div></div>
 </section>
 <div class="page-body">
   <div class="wrap page-grid">
@@ -103,13 +119,13 @@
 </section>
 <section id="what-leaves-your-browser">
 <h2>What leaves your browser</h2>
-<p>The post text and its public engagement counts are sent to <code>api.slopmop.lol</code>, and the text is passed on from there to TypeSafe's Jev, which produces the answers behind the score. Your name is never sent, and neither is the author's.</p>
+<p>The post text and its public engagement counts are sent to <code>api.slopmop.lol</code>, and the text is passed on from there to a third-party AI model designed for calibrated decisions, which produces the answers behind the score. Your name is never sent, and neither is the author's.</p>
 
 </section>
 <section id="what-is-stored">
 <h2>What is stored</h2>
 <p>Five things, and nothing else:</p>
-<div class="kv"><div><span class="k">A hash of the post text</span><span class="v">a one-way hash, so the same post isn't judged twice. The text itself is not kept.</span></div><div><span class="k">Scores</span><span class="v">Jev's answers to the twelve questions, the slop score, and when the post was first seen.</span></div><div><span class="k">Engagement counts</span><span class="v">the public reaction and comment numbers the usefulness check reads.</span></div><div><span class="k">A salted hash of the install id</span><span class="v">enough to count installs and dedupe votes, not enough to identify you.</span></div><div><span class="k">Votes</span><span class="v">your No, Maybe or Probably on a post, tallied under that salted hash.</span></div></div>
+<div class="kv"><div><span class="k">A hash of the post text</span><span class="v">a one-way hash, so the same post isn't judged twice. The text itself is not kept.</span></div><div><span class="k">Scores</span><span class="v">The model's answers to the twelve questions, the slop score, and when the post was first seen.</span></div><div><span class="k">Engagement counts</span><span class="v">the public reaction and comment numbers the usefulness check reads.</span></div><div><span class="k">A salted hash of the install id</span><span class="v">enough to count installs and dedupe votes, not enough to identify you.</span></div><div><span class="k">Votes</span><span class="v">your No, Maybe or Probably on a post, tallied under that salted hash.</span></div></div>
 <p>No LinkedIn profile data, no browsing history, no cookies set by the extension, and no advertising or analytics vendors. Usage is capped at 250 checks per install per day.</p>
 
 </section>
@@ -131,7 +147,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="index.html"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop<span class="dot">.lol</span></a>
+        <a class="brand" href="index.html"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
         <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
@@ -173,7 +189,7 @@
         <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">judging by jev from typesafe ai · not affiliated with linkedin</span></span>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google or microsoft</span></span>
       <nav class="legal-links" aria-label="Legal">
         <a href="open-source.html">Open source</a>
         <a href="privacy.html">Privacy</a>

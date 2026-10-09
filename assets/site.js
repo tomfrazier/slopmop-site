@@ -109,6 +109,66 @@
     });
   });
 
+
+  /* ---------- quote: words darken with scroll; fully dark near the top ---------- */
+  var rv = document.querySelector("[data-reveal]");
+  if (rv) {
+    var ws = Array.prototype.slice.call(rv.querySelectorAll("span"));
+    var paint = function () {
+      var r = rv.getBoundingClientRect(), vh = window.innerHeight;
+      var p = reduceMotion ? 1 : Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (vh * 0.85 - vh * 0.2)));
+      var n = Math.round(p * ws.length);
+      ws.forEach(function (w, k) { w.classList.toggle("on", k < n); });
+    };
+    window.addEventListener("scroll", paint, { passive: true }); window.addEventListener("resize", paint); paint();
+  }
+
+  /* ---------- counter-signal bars grow once ---------- */
+  var grows = $$("[data-grow]");
+  if (grows.length) {
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      var gio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); gio.unobserve(e.target); } }); }, { threshold: 0.6 });
+      grows.forEach(function (g) { gio.observe(g); });
+    } else grows.forEach(function (g) { g.classList.add("in"); });
+  }
+
+  /* ---------- horizontal flow: pinned while the track slides; the blue line's tip stays at the viewport centre ---------- */
+  var hf = $("[data-hflow]");
+  if (hf) {
+    var track = $(".hflow-track", hf), steps2 = $$(".hstep", hf), base2 = $(".hflow-line .base", hf), drawn2 = $(".hflow-line .drawn", hf), svg2 = $(".hflow-line", hf);
+    var nodes = [], span = 0;
+    var isStatic = function () { return reduceMotion || window.innerWidth <= 900; };
+    var measure = function () {
+      hf.classList.toggle("static", isStatic());
+      track.style.transform = "";
+      nodes = steps2.map(function (s) { var n = $(".hnode", s); return s.offsetLeft + n.offsetLeft; });
+      var first = nodes[0], last = nodes[nodes.length - 1];
+      span = last - first;
+      var y = 16;
+      svg2.setAttribute("width", track.scrollWidth); svg2.style.width = track.scrollWidth + "px";
+      [base2, drawn2].forEach(function (l) { l.setAttribute("x1", first); l.setAttribute("y1", y); l.setAttribute("y2", y); });
+      base2.setAttribute("x2", last);
+      if (isStatic()) { hf.style.height = ""; drawn2.setAttribute("x2", last); steps2.forEach(function (s) { s.classList.add("passed"); }); return; }
+      hf.style.height = (window.innerHeight - 64 + span) + "px";
+      move();
+    };
+    var move = function () {
+      if (isStatic() || !nodes.length) return;
+      var r = hf.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (64 - r.top) / span));
+      var tip = nodes[0] + p * span;                 /* track x that sits under the viewport centre */
+      var tx = window.innerWidth / 2 - tip;
+      track.style.transform = "translateX(" + tx + "px)";
+      drawn2.setAttribute("x2", tip);
+      steps2.forEach(function (s, k) { s.classList.toggle("passed", nodes[k] <= tip + 1); });
+    };
+    window.addEventListener("scroll", move, { passive: true });
+    window.addEventListener("resize", measure);
+    window.addEventListener("load", measure);
+    document.addEventListener("slopmop:islands", measure);
+    setTimeout(measure, 400);
+  }
+
   /* ---------- nine tells accordion ---------- */
   var tellRoot = $("[data-tells]");
   if (tellRoot) {

@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="_ds/slopmop/styles.css">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/sites.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,7 +75,7 @@
       "url": "https://slopmop.lol/",
       "installUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
       "downloadUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
-      "description": "Slop Mop reads posts ahead of the reader and asks Jev, an AI model from Typesafe AI, twelve questions about each one: nine tells of slop, two counter-signals for a human voice and usefulness, and how likely it is to be human-typed. Reader response is a third counter-signal. Hide folds suspected slop into a strip that reopens; Highlight tints the post's mop icon. Readers vote Not sure, No, Maybe or Probably to overrule it. Not an AI detector.",
+      "description": "Slop Mop reads posts ahead of the reader and asks an AI model designed for calibrated decisions twelve questions about each one: nine tells of slop, two counter-signals for a human voice and usefulness, and how likely it is to be human-typed. Reader response is a third counter-signal. Hide folds suspected slop into a strip that reopens; Highlight tints the post's mop icon. Readers vote Not sure, No, Maybe or Probably to overrule it. Not an AI detector.",
       "featureList": [
         "Reads posts before they reach your view",
         "Hide mode folds suspected slop into a strip that reopens",
@@ -109,7 +110,7 @@
           "name": "What is Slop Mop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Slop Mop is a free browser extension that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it. Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, articles and email are coming."
+            "text": "Slop Mop is a free browser extension that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it. Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming."
           }
         },
         {
@@ -125,7 +126,7 @@
           "name": "How does it decide whether a post is slop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jev, an AI model from Typesafe AI, answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal. The answers become one score out of 100. Counter-signals can only lower it. How the score adds up."
+            "text": "An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal. The answers become one score out of 100. Counter-signals can only lower it. How the score adds up."
           }
         },
         {
@@ -179,7 +180,7 @@
 <a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop</a>
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
     <nav class="nav-links" aria-label="Main">
       <a href="how-it-works.html">How it works</a>
       <a href="index.html#tells">The tells</a>
@@ -202,15 +203,17 @@
       <a class="btn btn-solid" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser — free</a>
       <button class="btn btn-secondary" type="button" data-tour><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Take a tour</button>
     </div>
-    <div class="chips" role="group" aria-label="Choose a network">
+    <div class="chips chips-grid" role="group" aria-label="Choose a network">
         <button class="chip" type="button" data-net="linkedin" data-label="LinkedIn" data-logo="assets/logos/linkedin.svg" aria-pressed="true"><img src="assets/logos/linkedin.svg" alt="" width="16" height="16">LinkedIn<span class="badge badge-live">live</span></button>
         <button class="chip" type="button" data-net="x" data-label="X" data-logo="assets/logos/x.svg" aria-pressed="false"><img src="assets/logos/x.svg" alt="" width="16" height="16">X<span class="badge badge-soon">soon</span></button>
         <button class="chip" type="button" data-net="reddit" data-label="Reddit" data-logo="assets/logos/reddit.svg" aria-pressed="false"><img src="assets/logos/reddit.svg" alt="" width="16" height="16">Reddit<span class="badge badge-soon">soon</span></button>
         <button class="chip" type="button" data-net="facebook" data-label="Facebook" data-logo="assets/logos/facebook.svg" aria-pressed="false"><img src="assets/logos/facebook.svg" alt="" width="16" height="16">Facebook<span class="badge badge-soon">soon</span></button>
         <button class="chip" type="button" data-net="substack" data-label="Substack" data-logo="assets/logos/substack.svg" aria-pressed="false"><img src="assets/logos/substack.svg" alt="" width="16" height="16">Substack<span class="badge badge-soon">soon</span></button>
         <button class="chip" type="button" data-net="medium" data-label="Medium" data-logo="assets/logos/medium.svg" aria-pressed="false"><img src="assets/logos/medium.svg" alt="" width="16" height="16">Medium<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="email" data-label="Email" data-logo="assets/logos/email.svg" aria-pressed="false"><img src="assets/logos/email.svg" alt="" width="16" height="16">Email<span class="badge badge-soon">soon</span></button>
+        <button class="chip" type="button" data-net="websites" data-label="Websites" data-logo="assets/logos/web.svg" aria-pressed="false"><img src="assets/logos/web.svg" alt="" width="16" height="16">Websites<span class="badge badge-soon">soon</span></button>
     </div>
-    <p class="mono hero-meta">desktop chrome &amp; chromium · linkedin today, the rest coming soon</p>
+    <p class="mono hero-meta">desktop chrome &amp; chromium · linkedin today · other feeds, email and websites coming soon</p>
     <div class="stack">
       <button class="icon-btn stack-pause" type="button" aria-label="Pause network tour"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
       <div data-island="NetworkStack"></div>
@@ -220,10 +223,7 @@
 <section class="quote">
   <div class="wrap">
     <span class="eyebrow">why this exists</span>
-    <blockquote style="margin-top:var(--space-7)">
-      <span class="lead-in">My feed had turned into something I scrolled past instead of read.</span>
-      <span class="rest">Some of it was AI, plenty of it was people, and all of it cost attention. I built Slop Mop to read ahead for me, show its working, and let me overrule it whenever it's wrong.</span>
-    </blockquote>
+    <blockquote class="reveal" data-reveal style="margin-top:var(--space-7)"><span>My</span> <span>feed</span> <span>had</span> <span>turned</span> <span>into</span> <span>something</span> <span>I</span> <span>scrolled</span> <span>past</span> <span>instead</span> <span>of</span> <span>read.</span> <span>Some</span> <span>of</span> <span>it</span> <span>was</span> <span>AI,</span> <span>plenty</span> <span>of</span> <span>it</span> <span>was</span> <span>people,</span> <span>and</span> <span>all</span> <span>of</span> <span>it</span> <span>cost</span> <span>attention.</span> <span>I</span> <span>built</span> <span>Slop</span> <span>Mop</span> <span>to</span> <span>read</span> <span>ahead</span> <span>for</span> <span>me,</span> <span>show</span> <span>its</span> <span>working,</span> <span>and</span> <span>let</span> <span>me</span> <span>overrule</span> <span>it</span> <span>whenever</span> <span>it's</span> <span>wrong.</span></blockquote>
     <div class="quote-foot">
       <a class="btn btn-secondary" href="about.html">About Slop Mop</a>
       <div class="who"><img src="assets/img/tom.webp" alt="Tom Frazier" width="48" height="48"><div><b>Tom Frazier</b><span>Founder, Slop Mop</span></div></div>
@@ -255,26 +255,22 @@
         <div class="asset"><div class="asset-stage"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 64, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>The score</b><span>An integer out of 100, never alone: the range bar shows where Possibly and Likely start.</span><span class="mono">scorezones</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="Slopprint" data-props='{&quot;values&quot;: {&quot;formulaicHook&quot;: 0.66, &quot;engagementBait&quot;: 0.6, &quot;hypeMarketing&quot;: 0.41, &quot;emptyEvaluation&quot;: 0.55, &quot;contrastFraming&quot;: 0.72, &quot;manufacturedNarrative&quot;: 0.79, &quot;manneredProse&quot;: 0.2, &quot;formalHedging&quot;: 0.15, &quot;tradeoffFreePromises&quot;: 0.25}, &quot;color&quot;: &quot;var(--mop-500)&quot;, &quot;width&quot;: 220}'></div></div><div class="asset-text"><b>The Slopprint</b><span>Nine tells, one spoke each. The shape says what kind of slop it is, not just how much.</span><span class="mono">slopprint</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="Vote" data-props='{&quot;value&quot;: &quot;maybe&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Your vote</b><span>Not sure, No, Maybe or Probably. Your call beats the model in your own feed.</span><span class="mono">votecontrol</span></div></div>
-        <div class="asset"><div class="asset-stage"><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;}'></div></div><div class="asset-text"><b>Sensitivity</b><span>Mild, Moderate or Aggressive. The threshold is printed, because the number is the reasoning.</span><span class="mono">sensitivitytoggle</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;, &quot;showThreshold&quot;: false}'></div></div><div class="asset-text"><b>Sensitivity</b><span>Mild, Moderate or Aggressive: how easily a post gets flagged.</span><span class="mono">sensitivitytoggle</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div></div><div class="asset-text"><b>Hide or Highlight</b><span>Fold suspected slop away, or leave everything visible and tint its mop.</span><span class="mono">segmentedcontrol</span></div></div>
-        <div class="asset"><div class="asset-stage"><div data-island="MopRow"></div></div><div class="asset-text"><b>The mop icon</b><span>Sits beside each post's menu. Blue looks fine, yellow possibly slop, red likely slop.</span><span class="mono">mopicon</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="Verdicts"></div></div><div class="asset-text"><b>Four verdicts</b><span>Every stop carries a word, so no verdict is colour-only.</span><span class="mono">badge</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.62, &quot;h&quot;: 400, &quot;card&quot;: {&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 78, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;manufacturedNarrative&quot;: 0.79, &quot;contrastFraming&quot;: 0.72, &quot;formulaicHook&quot;: 0.66}, &quot;humanVoice&quot;: 0.12, &quot;usefulness&quot;: 0.15, &quot;readerResponse&quot;: 0.38, &quot;interactive&quot;: false}}'></div></div><div class="asset-text"><b>The details panel</b><span>Click the mop for the score, strongest signs, the Slopprint and your vote.</span><span class="mono">whycard</span></div></div>
         <div class="asset"><div class="asset-stage"><div data-island="Tiles"></div></div><div class="asset-text"><b>Hidden today</b><span>The popup keeps count, so you can see how much attention you got back.</span><span class="mono">stattile</span></div></div>
-        <div class="asset"><div class="asset-stage"><div data-island="NoticePanel" data-props='{&quot;kind&quot;: &quot;scoring&quot;}'></div></div><div class="asset-text"><b>Fails open</b><span>When Jev isn't sure, the post is left alone and the panel says so.</span><span class="mono">noticepanel</span></div></div>
-        <div class="asset"><div class="asset-stage"><div data-island="Mark"></div></div><div class="asset-text"><b>The mark</b><span>A two-tone mop. Never rotated, never a mascot.</span><span class="mono">mopmark</span></div></div>
+        <div class="asset"><div class="asset-stage"><div data-island="NoticePanel" data-props='{&quot;kind&quot;: &quot;scoring&quot;, &quot;title&quot;: &quot;Checking this post&quot;, &quot;body&quot;: &quot;Reading the writing. This takes a moment.&quot;}'></div></div><div class="asset-text"><b>Checking</b><span>Posts are scored just before you reach them. This is what a post looks like mid-check.</span><span class="mono">noticepanel</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;compact&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;stats&quot;: {&quot;today&quot;: 17, &quot;week&quot;: 86, &quot;month&quot;: 341, &quot;total&quot;: 2904}, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Fold strip</b><span>Past your threshold, a post folds into a 44px strip. One click unfolds it in place.</span><span class="mono">foldstrip</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 64, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>The score</b><span>An integer out of 100, never alone: the range bar shows where Possibly and Likely start.</span><span class="mono">scorezones</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Slopprint" data-props='{&quot;values&quot;: {&quot;formulaicHook&quot;: 0.66, &quot;engagementBait&quot;: 0.6, &quot;hypeMarketing&quot;: 0.41, &quot;emptyEvaluation&quot;: 0.55, &quot;contrastFraming&quot;: 0.72, &quot;manufacturedNarrative&quot;: 0.79, &quot;manneredProse&quot;: 0.2, &quot;formalHedging&quot;: 0.15, &quot;tradeoffFreePromises&quot;: 0.25}, &quot;color&quot;: &quot;var(--mop-500)&quot;, &quot;width&quot;: 220}'></div></div><div class="asset-text"><b>The Slopprint</b><span>Nine tells, one spoke each. The shape says what kind of slop it is, not just how much.</span><span class="mono">slopprint</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Vote" data-props='{&quot;value&quot;: &quot;maybe&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div><div class="asset-text"><b>Your vote</b><span>Not sure, No, Maybe or Probably. Your call beats the model in your own feed.</span><span class="mono">votecontrol</span></div></div>
-        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;}'></div></div><div class="asset-text"><b>Sensitivity</b><span>Mild, Moderate or Aggressive. The threshold is printed, because the number is the reasoning.</span><span class="mono">sensitivitytoggle</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;, &quot;showThreshold&quot;: false}'></div></div><div class="asset-text"><b>Sensitivity</b><span>Mild, Moderate or Aggressive: how easily a post gets flagged.</span><span class="mono">sensitivitytoggle</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div></div><div class="asset-text"><b>Hide or Highlight</b><span>Fold suspected slop away, or leave everything visible and tint its mop.</span><span class="mono">segmentedcontrol</span></div></div>
-        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="MopRow"></div></div><div class="asset-text"><b>The mop icon</b><span>Sits beside each post's menu. Blue looks fine, yellow possibly slop, red likely slop.</span><span class="mono">mopicon</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Verdicts"></div></div><div class="asset-text"><b>Four verdicts</b><span>Every stop carries a word, so no verdict is colour-only.</span><span class="mono">badge</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.62, &quot;h&quot;: 400, &quot;card&quot;: {&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 78, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;manufacturedNarrative&quot;: 0.79, &quot;contrastFraming&quot;: 0.72, &quot;formulaicHook&quot;: 0.66}, &quot;humanVoice&quot;: 0.12, &quot;usefulness&quot;: 0.15, &quot;readerResponse&quot;: 0.38, &quot;interactive&quot;: false}}'></div></div><div class="asset-text"><b>The details panel</b><span>Click the mop for the score, strongest signs, the Slopprint and your vote.</span><span class="mono">whycard</span></div></div>
         <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Tiles"></div></div><div class="asset-text"><b>Hidden today</b><span>The popup keeps count, so you can see how much attention you got back.</span><span class="mono">stattile</span></div></div>
-        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="NoticePanel" data-props='{&quot;kind&quot;: &quot;scoring&quot;}'></div></div><div class="asset-text"><b>Fails open</b><span>When Jev isn't sure, the post is left alone and the panel says so.</span><span class="mono">noticepanel</span></div></div>
-        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="Mark"></div></div><div class="asset-text"><b>The mark</b><span>A two-tone mop. Never rotated, never a mascot.</span><span class="mono">mopmark</span></div></div>
+        <div class="asset" aria-hidden="true"><div class="asset-stage"><div data-island="NoticePanel" data-props='{&quot;kind&quot;: &quot;scoring&quot;, &quot;title&quot;: &quot;Checking this post&quot;, &quot;body&quot;: &quot;Reading the writing. This takes a moment.&quot;}'></div></div><div class="asset-text"><b>Checking</b><span>Posts are scored just before you reach them. This is what a post looks like mid-check.</span><span class="mono">noticepanel</span></div></div>
     </div>
   </div>
 </section>
@@ -283,7 +279,7 @@
     <div class="section-head center">
       <span class="eyebrow">the nine tells</span>
       <h2 class="h-1">Nine tells of slop</h2>
-      <p class="lede">Jev asks nine separate questions about the writing. Six come from Graphite's research on AI tells; the last three are feed habits we added. One spike isn't enough: slop usually shows several at once.</p>
+      <p class="lede">The model asks nine separate questions about the writing. Six come from Graphite's research on AI tells; the last three are feed habits we added. One spike isn't enough: slop usually shows several at once.</p>
     </div>
     <div class="tells" data-tells data-current="0">
       <ul class="tell-list">
@@ -326,14 +322,14 @@
       </ul>
       <div class="tell-stage">
         <div class="tell-card">
-          <div data-island="TellCard"></div>
-          <div class="tell-card-foot">
+          <div class="tell-card-head">
             <span class="mono">each tell is one spoke of the slopprint</span>
             <div class="tell-nav">
               <button class="icon-btn" type="button" data-tell-step="-1" aria-label="Previous tell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
               <button class="icon-btn" type="button" data-tell-step="1" aria-label="Next tell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
             </div>
           </div>
+          <div data-island="TellCard"></div>
         </div>
         <a class="mono" href="how-it-works.html#tells" style="color:var(--text-link)">all nine, with examples and fine versions →</a>
       </div>
@@ -349,77 +345,141 @@
     </div>
     <div class="cards-3">
       <div class="card">
-        <div class="bar-row"><span>Sounds like a person</span><span class="mono">a jev question</span></div>
-        <div class="bar"><i style="width:74%"></i></div>
+        <div class="bar-row"><span>Sounds like a person</span><span class="mono">asked of the model</span></div>
+        <div class="bar grow" data-grow><i style="--w:74%"></i></div>
         <h3>One particular person, not anyone</h3>
         <p>Specific detail from the writer's own life or work, phrasing that's clearly theirs, uneven rhythm. “I” and “my” alone don't count. It takes a little off the score.</p>
       </div>
       <div class="card">
         <div class="bar-row"><span>Useful to readers</span><span class="mono">half the shield</span></div>
-        <div class="bar"><i style="width:81%"></i></div>
+        <div class="bar grow" data-grow><i style="--w:81%"></i></div>
         <h3>Something you could use today</h3>
         <p>Facts, numbers, a named example, a step to follow. Who or what wrote it doesn't matter: useful AI-assisted writing scores as well as useful writing typed by hand.</p>
       </div>
       <div class="card">
         <div class="bar-row"><span>Reader response</span><span class="mono">counted, not asked</span></div>
-        <div class="bar"><i style="width:38%"></i></div>
+        <div class="bar grow" data-grow><i style="--w:38%"></i></div>
         <h3>What readers actually did</h3>
         <p>Comments and reposts count for far more than one-tap reactions, and hundreds of reactions with no discussion is discounted as hollow. The other half of the shield.</p>
       </div>
     </div>
-    <div class="formula">score = (tells × 2.0 − 0.15 · sounds like a person) × (1 − shield) · shield = ½ useful + ½ reader response, max 0.6</div>
+    <div class="formula">
+      <math display="block" aria-label="The slop score">
+        <mi>S</mi><mo>=</mo><mi>&#x3B3;</mi><mo>&#x22C5;</mo>
+        <mrow><mo>(</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>9</mn></munderover><msub><mi>w</mi><mi>i</mi></msub><msub><mi>&#x3C4;</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BB;</mi><mi>h</mi><mo>)</mo></mrow>
+        <mo>&#x22C5;</mo><mrow><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3C3;</mi><mo>)</mo></mrow><mo>,</mo><mspace width="1.2em"/>
+        <mi>&#x3C3;</mi><mo>=</mo><mi>min</mi><mrow><mo>(</mo><mfrac><mrow><mi>u</mi><mo>+</mo><mi>r</mi></mrow><mn>2</mn></mfrac><mo>,</mo><mover><mi>&#x3C3;</mi><mo>&#x2C6;</mo></mover><mo>)</mo></mrow>
+      </math>
+      <div class="legend"><span><i>&#x3C4;<sub>i</sub></i>the nine tells</span><span><i>w<sub>i</sub></i>their weights</span><span><i>h</i>sounds like a person</span><span><i>u</i>useful to readers</span><span><i>r</i>reader response</span><span><i>&#x3C3;</i>the shield, capped</span></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="trust">
+  <div class="wrap trust">
+    <div class="trust-copy">
+      <span class="eyebrow">no judgment of people</span>
+      <h2 class="h-1">Judges the writing. Never the writer.</h2>
+      <p class="lede">Slop Mop has no opinion about you, and none about the person who wrote the post. It never learns who anyone is, keeps no copy of what they wrote, and tells nobody what it thought.</p>
+      <ul class="never">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>No names leave your browser.</b> Not yours, not the author's. Only the post text and its public counts are sent to be judged.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Posts aren't stored.</b> The server keeps a one-way hash so a post isn't judged twice. The words themselves are never kept.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>No profiles, of anyone.</b> No score is ever attached to a person, and no browsing history or LinkedIn profile data is collected.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Nothing is reported.</b> No author is flagged, muted or told. A verdict only changes what you see, in your own browser.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Your votes are anonymous.</b> They're tallied under a salted hash of your install, enough to dedupe, not enough to identify you.</span></li>
+      </ul>
+      <a class="btn btn-secondary" href="privacy.html">Read the privacy policy</a>
+    </div>
+    <div class="trust-visual" aria-hidden="true">
+      <div class="tv-card">
+        <span class="tv-label">in your browser</span>
+        <article class="post">
+          <div class="post-head"><span class="avatar">MB</span><span class="post-who"><span class="post-name">Marcus Bell</span><span class="post-meta">Helping B2B leaders unlock growth</span></span></div>
+          <p class="post-body" style="margin:0">Most teams don't have a strategy problem. They have a clarity problem.</p>
+        </article>
+      </div>
+      <div class="tv-arrow"><span class="mono">sent to be judged</span></div>
+      <div class="tv-card">
+        <span class="tv-label">what leaves</span>
+        <div class="tv-row"><span class="mono">author</span><span class="redact">never sent</span></div>
+        <div class="tv-row"><span class="mono">you</span><span class="redact">never sent</span></div>
+        <div class="tv-row"><span class="mono">text</span><span>“Most teams don't have a strategy problem…”</span></div>
+        <div class="tv-row"><span class="mono">counts</span><span>1,204 reactions · 240 comments</span></div>
+      </div>
+      <div class="tv-arrow"><span class="mono">what's kept</span></div>
+      <div class="tv-card tv-kept">
+        <span class="tv-label">on the server</span>
+        <div class="tv-row"><span class="mono">post</span><code>sha256 9f2c…e41a</code></div>
+        <div class="tv-row"><span class="mono">score</span><code>61 / 100</code></div>
+        <div class="tv-row"><span class="mono">who</span><span class="redact">nobody</span></div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="section sunken" id="how">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">how it works</span>
-      <h2 class="h-1" style="max-width:16ch">Reads ahead, so you don't have to</h2>
-      <p class="lede measure">Six steps between a post loading and you deciding whether it was worth it. The whole trip finishes before you scroll there.</p>
-      <div><a class="btn btn-secondary" href="how-it-works.html">Read the full breakdown</a></div>
+    <div class="section-head flow-head">
+      <div>
+        <span class="eyebrow">how it works</span>
+        <h2 class="h-1" style="max-width:16ch;margin-top:var(--space-6)">Reads ahead, so you don't have to</h2>
+      </div>
+      <div>
+        <p class="lede">Seven steps between a post loading and you deciding it wasn't worth it. All but the last finish before you scroll there.</p>
+        <a class="btn btn-secondary" href="how-it-works.html" style="margin-top:var(--space-6)">Read the full breakdown</a>
+      </div>
     </div>
-    <div class="flow" data-flow>
-      <svg class="flow-path" aria-hidden="true"></svg>
-      <div class="flow-step">
-        <span class="flow-node" aria-hidden="true"></span>
-        <div class="flow-card">
-          <div class="flow-card-head"><span class="flow-num">01</span><div><b>Scan ahead</b><p>Posts are read before they reach your screen, so the verdict is ready when you are.</p></div></div>
-          <div class="flow-visual"><div class="mini-feed"><div class="mp"><span class="ln"></span><span class="mono">on screen</span></div><div class="viewport-line">your viewport</div><div class="mp"><span class="ln"></span><span class="mono">reading</span></div><div class="mp"><span class="ln"></span><span class="mono">reading</span></div><div class="mp"><span class="ln"></span><span class="mono">queued</span></div></div><span class="mono">14 posts scanned ahead · 0 seconds of yours</span></div>
+  </div>
+  <div class="hflow" data-hflow>
+    <div class="hflow-sticky">
+      <div class="hflow-track">
+        <svg class="hflow-line" aria-hidden="true"><line class="base"/><line class="drawn"/></svg>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">01</span><div><b>Scan ahead</b><p>Posts are read before they reach your screen.</p></div></div>
+            <div class="flow-visual"><div class="mini-feed"><div class="mp"><span class="ln"></span><span class="mono">on screen</span></div><div class="viewport-line">your viewport</div><div class="mp"><span class="ln"></span><span class="mono">reading</span></div><div class="mp"><span class="ln"></span><span class="mono">reading</span></div><div class="mp"><span class="ln"></span><span class="mono">queued</span></div></div><span class="mono">14 posts scanned ahead</span></div>
+          </div>
         </div>
-      </div>
-      <div class="flow-step">
-        <span class="flow-node" aria-hidden="true"></span>
-        <div class="flow-card">
-          <div class="flow-card-head"><span class="flow-num">02</span><div><b>Grab the weights</b><p>Each check loads the sign library: nine tells, three counter-signals, and how much each one counts.</p></div></div>
-          <div class="flow-visual"><div class="weights"><div><span>Scroll-stopper</span><span class="bar"><i style="width:70%"></i></span></div><div><span>Engagement bait</span><span class="bar"><i style="width:82%"></i></span></div><div><span>Hype words</span><span class="bar"><i style="width:55%"></i></span></div><div><span>Empty praise</span><span class="bar"><i style="width:60%"></i></span></div><div><span>“Not X, but Y”</span><span class="bar"><i style="width:64%"></i></span></div><div><span>Sounds like a person</span><span class="bar counter"><i style="width:40%"></i></span></div><div><span>Useful to readers</span><span class="bar counter"><i style="width:75%"></i></span></div></div><span class="mono">bars illustrative · exact weights stay private so nobody can game them</span></div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">02</span><div><b>Grab the weights</b><p>Each check loads the sign library: nine tells, three counter-signals.</p></div></div>
+            <div class="flow-visual"><div class="weights"><div><span>Scroll-stopper</span><span class="bar"><i style="width:70%"></i></span></div><div><span>Engagement bait</span><span class="bar"><i style="width:82%"></i></span></div><div><span>Hype words</span><span class="bar"><i style="width:55%"></i></span></div><div><span>Empty praise</span><span class="bar"><i style="width:60%"></i></span></div><div><span>Sounds like a person</span><span class="bar counter"><i style="width:40%"></i></span></div><div><span>Useful to readers</span><span class="bar counter"><i style="width:75%"></i></span></div></div><span class="mono">bars illustrative · exact weights stay private</span></div>
+          </div>
         </div>
-      </div>
-      <div class="flow-step">
-        <span class="flow-node" aria-hidden="true"></span>
-        <div class="flow-card">
-          <div class="flow-card-head"><span class="flow-num">03</span><div><b>Score with a decision model</b><p>Jev, an AI model from Typesafe AI, answers twelve questions in parallel. The answers become one score out of 100.</p></div><span class="badge badge-live">jev</span></div>
-          <div class="flow-visual"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 78, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true}'></div><span class="mono">12 answers → 1 score · low confidence fails open</span></div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">03</span><div><b>Score with a decision model</b><p>An AI model built for calibrated decisions answers twelve questions at once.</p></div></div>
+            <div class="flow-visual"><div data-island="ScoreZones" data-props='{&quot;score&quot;: 78, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;hides&quot;: true}'></div><span class="mono">12 answers → 1 score out of 100 · unsure fails open</span></div>
+          </div>
         </div>
-      </div>
-      <div class="flow-step">
-        <span class="flow-node" aria-hidden="true"></span>
-        <div class="flow-card">
-          <div class="flow-card-head"><span class="flow-num">04</span><div><b>Send it back to you</b><p>The verdict lands on the mop beside the post before you scroll to it.</p></div></div>
-          <div class="flow-visual"><div data-island="MopRow"></div></div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">04</span><div><b>Send it back to you</b><p>The verdict lands on the mop beside the post.</p></div></div>
+            <div class="flow-visual"><div data-island="MopRow"></div></div>
+          </div>
         </div>
-      </div>
-      <div class="flow-step">
-        <span class="flow-node" aria-hidden="true"></span>
-        <div class="flow-card">
-          <div class="flow-card-head"><span class="flow-num">05</span><div><b>Auto-hide</b><p>Past your threshold in Hide mode, the post folds into a strip. Nothing is deleted, muted or reported.</p></div></div>
-          <div class="flow-visual"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;minimal&quot;, &quot;label&quot;: &quot;This post was hidden&quot;}'></div><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;yellow&quot;, &quot;density&quot;: &quot;minimal&quot;, &quot;label&quot;: &quot;This post was hidden&quot;}'></div></div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">05</span><div><b>Auto-hide</b><p>Past your threshold, the post folds into a strip you can reopen.</p></div></div>
+            <div class="flow-visual"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;minimal&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;yellow&quot;, &quot;density&quot;: &quot;minimal&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div>
+          </div>
         </div>
-      </div>
-      <div class="flow-step">
-        <span class="flow-node" aria-hidden="true"></span>
-        <div class="flow-card">
-          <div class="flow-card-head"><span class="flow-num">06</span><div><b>Click for the details</b><p>Click the mop for the full panel: the score, the strongest signs, the Slopprint, the three bars, and your vote.</p></div></div>
-          <div class="flow-visual"><div style="display:grid;place-items:center"><div data-island="WhyCard" data-props='{&quot;verdict&quot;: &quot;possibly&quot;, &quot;score&quot;: 61, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;emptyEvaluation&quot;: 0.74, &quot;engagementBait&quot;: 0.68, &quot;contrastFraming&quot;: 0.52, &quot;formulaicHook&quot;: 0.4}, &quot;humanVoice&quot;: 0.21, &quot;usefulness&quot;: 0.09, &quot;readerResponse&quot;: 0.71, &quot;community&quot;: {&quot;probably&quot;: 9, &quot;maybe&quot;: 4, &quot;no&quot;: 1}, &quot;checksToday&quot;: {&quot;used&quot;: 41, &quot;limit&quot;: 250}, &quot;interactive&quot;: true}'></div></div></div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">06</span><div><b>Click for the details</b><p>The score, the strongest signs, the Slopprint and the three bars.</p></div></div>
+            <div class="flow-visual"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.6, &quot;h&quot;: 420, &quot;card&quot;: {&quot;verdict&quot;: &quot;possibly&quot;, &quot;score&quot;: 61, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;emptyEvaluation&quot;: 0.74, &quot;engagementBait&quot;: 0.68, &quot;contrastFraming&quot;: 0.52, &quot;formulaicHook&quot;: 0.4}, &quot;humanVoice&quot;: 0.21, &quot;usefulness&quot;: 0.09, &quot;readerResponse&quot;: 0.71, &quot;interactive&quot;: false}}'></div></div>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnode" aria-hidden="true"></span>
+          <div class="flow-card">
+            <div class="flow-card-head"><span class="flow-num">07</span><div><b>Vote to overrule it</b><p>Not sure, No, Maybe or Probably. Your call beats the model in your feed.</p></div><span class="badge badge-paid">your call</span></div>
+            <div class="flow-visual"><div data-island="Vote" data-props='{&quot;value&quot;: &quot;no&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div><div data-island="ScoreZones" data-props='{&quot;score&quot;: 61, &quot;possibly&quot;: 40, &quot;likely&quot;: 70, &quot;vote&quot;: &quot;no&quot;, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div><span class="mono">your vote: no · the post stays in your feed</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -430,21 +490,21 @@
     <div class="section-head center">
       <span class="eyebrow">works where you read</span>
       <h2 class="h-1">One mop for every feed</h2>
-      <p class="lede">Slop Mop works on LinkedIn today. The same mop, fold strip and details panel are coming to the other feeds you scroll, the articles you open and the email you triage.</p>
+      <p class="lede">Slop Mop works on LinkedIn today. The same mop, fold strip and details panel are coming to the other feeds you scroll, the articles and websites you open, and the email you triage.</p>
     </div>
     <div class="integrations">
       <div class="int-group"><h3>social feeds</h3>
         <div class="int"><span class="lg"><img src="assets/logos/linkedin.svg" alt="" width="20" height="20"></span><span class="nm">LinkedIn</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/x.svg" alt="" width="20" height="20"></span><span class="nm">X</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/reddit.svg" alt="" width="20" height="20"></span><span class="nm">Reddit</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/facebook.svg" alt="" width="20" height="20"></span><span class="nm">Facebook</span><span class="badge badge-soon">coming soon</span></div>
       </div>
-      <div class="int-group"><h3>articles</h3>
-        <div class="int soon"><span class="lg"><img src="assets/logos/substack.svg" alt="" width="20" height="20"></span><span class="nm">Substack</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/medium.svg" alt="" width="20" height="20"></span><span class="nm">Medium</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><span class="glyph">Aa</span></span><span class="nm">Any article</span><span class="badge badge-soon">coming soon</span></div>
+      <div class="int-group"><h3>articles &amp; websites</h3>
+        <div class="int soon"><span class="lg"><img src="assets/logos/substack.svg" alt="" width="20" height="20"></span><span class="nm">Substack</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/medium.svg" alt="" width="20" height="20"></span><span class="nm">Medium</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/web.svg" alt="" width="20" height="20"></span><span class="nm">Any website</span><span class="badge badge-soon">coming soon</span></div>
       </div>
       <div class="int-group"><h3>email</h3>
         <div class="int soon"><span class="lg"><img src="assets/logos/gmail.svg" alt="" width="20" height="20"></span><span class="nm">Gmail</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftoutlook.svg" alt="" width="20" height="20"></span><span class="nm">Outlook</span><span class="badge badge-soon">coming soon</span></div>
       </div>
       <div class="int-group"><h3>browsers</h3>
-        <div class="int"><span class="lg"><img src="assets/logos/googlechrome.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><span class="glyph">Cr</span></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div>
-        <p class="mono" style="margin:4px 0 0">edge, brave, arc, opera, vivaldi: anything that installs from the chrome web store</p>
+        <div class="int"><span class="lg"><img src="assets/logos/googlechrome.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><span class="glyph">Cr</span></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftedge.svg" alt="" width="20" height="20"></span><span class="nm">Microsoft Edge</span><span class="badge badge-soon">coming soon</span></div>
+        <p class="mono" style="margin:4px 0 0">brave, arc, opera, vivaldi: chromium browsers that install from the chrome web store</p>
       </div>
     </div>
   </div>
@@ -490,9 +550,9 @@
       <h2 class="h-1">Questions? We've mopped up a few.</h2>
     </div>
     <div class="faq">
-    <details><summary>What is Slop Mop?</summary><div class="a"><p>Slop Mop is a free browser extension that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it.</p><p>Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, articles and email are coming.</p></div></details>
+    <details><summary>What is Slop Mop?</summary><div class="a"><p>Slop Mop is a free browser extension that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it.</p><p>Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming.</p></div></details>
     <details><summary>Is Slop Mop an AI detector?</summary><div class="a"><p>No. Slop Mop is a bad-writing detector. AI-assisted writing can be excellent and human writing can be spectacular slop, so it asks a more useful question: is this worth your attention?</p></div></details>
-    <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>Jev, an AI model from Typesafe AI, answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
+    <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
     <details><summary>Does it block, delete, mute or report posts?</summary><div class="a"><p>No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported.</p></div></details>
     <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
     <details><summary>Is it free?</summary><div class="a"><p>Yes. Slop Mop is free to install and free to use on LinkedIn, up to 250 checks a day. Slop Mop XL, a paid version for every other feed, articles and email, is coming soon.</p></div></details>
@@ -503,7 +563,8 @@
 </section>
 <section class="band">
   <div class="wrap">
-    <div class="band-line" aria-label="Less slop. More control. Your call."><img src="_ds/slopmop/mop.svg" alt="">Less slop<span class="sep">·</span>More control<span class="sep">·</span>Your call</div>
+    <div class="band-logo"><img src="assets/img/mark.svg" alt="">Slop Mop</div>
+    <div class="band-line">Less slop. More control. <span class="hl">Your call.</span></div>
     <div class="band-row">
       <div>
         <h2 class="h-2">Give your attention a filter you control.</h2>
@@ -525,7 +586,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="index.html"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop<span class="dot">.lol</span></a>
+        <a class="brand" href="index.html"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
         <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
@@ -567,7 +628,7 @@
         <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">judging by jev from typesafe ai · not affiliated with linkedin</span></span>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google or microsoft</span></span>
       <nav class="legal-links" aria-label="Legal">
         <a href="open-source.html">Open source</a>
         <a href="privacy.html">Privacy</a>
@@ -579,6 +640,7 @@
 <script src="vendor/react.production.min.js"></script>
 <script src="vendor/react-dom.production.min.js"></script>
 <script src="_ds/slopmop/_ds_bundle.js"></script>
+<script src="assets/sites.js"></script>
 <script src="assets/islands.js"></script>
 <script src="assets/site.js"></script>
 </body>

@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="_ds/slopmop/styles.css">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/sites.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +64,7 @@
 <a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop</a>
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
     <nav class="nav-links" aria-label="Main">
       <a href="how-it-works.html" aria-current="page">How it works</a>
       <a href="index.html#tells">The tells</a>
@@ -77,12 +78,16 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head">
-  <div class="wrap">
-    <span class="eyebrow">how it works</span>
-    <h1 class="h-1">How Slop Mop judges a post</h1>
-    <p class="lede">Click the mop on any post and you get a breakdown: a score, a verdict, the Slopprint and three blue bars. Here's what each part means, what moves it, and what it can't tell you.</p>
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <span class="eyebrow">how it works</span>
+      <h1 class="h-1">How Slop Mop judges a post</h1>
+      <p class="lede">Click the mop on any post and you get a breakdown: a score, a verdict, the Slopprint and three blue bars. Here's what each part means, what moves it, and what it can't tell you.</p>
+    </div>
+    <div class="ph-visual"><div data-island="PanelPeek" data-props='{&quot;k&quot;: 0.78, &quot;h&quot;: 560, &quot;card&quot;: {&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 72, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;engagementBait&quot;: 0.81, &quot;contrastFraming&quot;: 0.74, &quot;formulaicHook&quot;: 0.55, &quot;emptyEvaluation&quot;: 0.42}, &quot;humanVoice&quot;: 0.18, &quot;usefulness&quot;: 0.12, &quot;readerResponse&quot;: 0.4, &quot;interactive&quot;: false}}'></div></div>
   </div>
+  <div class="wrap"><div class="glance"><div class="glance-tile"><span class="mono">01</span><b>Twelve questions</b><span>nine tells, two counter-signals and a human-typed check, asked at once</span></div><div class="glance-tile"><span class="mono">02</span><b>One score out of 100</b><span>never alone: the signs behind it are always shown</span></div><div class="glance-tile"><span class="mono">03</span><b>Three counter-signals</b><span>they can only pull a score down</span></div><div class="glance-tile"><span class="mono">04</span><b>Your vote wins</b><span>Not sure, No, Maybe or Probably overrides the model in your feed</span></div></div></div>
 </section>
 <div class="page-body">
   <div class="wrap page-grid">
@@ -103,21 +108,21 @@
 <div class="demo"><div data-island="WhyCard" data-props='{&quot;verdict&quot;: &quot;likely&quot;, &quot;score&quot;: 72, &quot;mode&quot;: &quot;hide&quot;, &quot;tells&quot;: {&quot;engagementBait&quot;: 0.81, &quot;contrastFraming&quot;: 0.74, &quot;formulaicHook&quot;: 0.55, &quot;hypeMarketing&quot;: 0.3, &quot;emptyEvaluation&quot;: 0.42}, &quot;humanVoice&quot;: 0.18, &quot;usefulness&quot;: 0.12, &quot;readerResponse&quot;: 0.4, &quot;community&quot;: {&quot;probably&quot;: 6, &quot;maybe&quot;: 0, &quot;no&quot;: 1}, &quot;checksToday&quot;: {&quot;used&quot;: 41, &quot;limit&quot;: 250}, &quot;interactive&quot;: true}'></div></div>
 <ol class="steps">
 <li><span><strong>The score, out of 100.</strong> Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</span></li>
-<li><span><strong>The verdict.</strong> Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When Jev isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
+<li><span><strong>The verdict.</strong> Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
 <li><span><strong>The range bar.</strong> Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</span></li>
-<li><span><strong>Your vote.</strong> Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides Jev's score in your feed and dims it in the panel.</span></li>
-<li><span><strong>The Slopprint.</strong> Nine tells of slop, one per spoke. The further out a point sits, the more of that tell Jev found. <a href="#tells">All nine, with examples.</a></span></li>
+<li><span><strong>Your vote.</strong> Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel.</span></li>
+<li><span><strong>The Slopprint.</strong> Nine tells of slop, one per spoke. The further out a point sits, the more of that tell the model found. <a href="#tells">All nine, with examples.</a></span></li>
 <li><span><strong>In its favour.</strong> Three counter-signals: sounds like a person, useful to readers and reader response. More blue means more evidence the post is worth reading. They can only lower the score, never raise it.</span></li>
 <li><span><strong>Community votes and checks today.</strong> How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left.</span></li>
 </ol>
 </section>
 <section id="tells">
 <h2>Nine tells of slop</h2>
-<p>Jev asks nine separate questions about the writing, one per spoke of the Slopprint. The shape tells you <em>what kind</em> of slop a post is, not just how much. Six tells come from Graphite's research on AI tells, which compared human and model writing. The last three are feed habits we added ourselves.</p>
+<p>The model asks nine separate questions about the writing, one per spoke of the Slopprint. The shape tells you <em>what kind</em> of slop a post is, not just how much. Six tells come from Graphite's research on AI tells, which compared human and model writing. The last three are feed habits we added ourselves.</p>
 <h3>One spike isn't enough</h3>
 <p>Plenty of people have one over-the-top habit. When only one tell stands out, the score is cut. Slop usually shows up as several tells at once, and that's what gets flagged.</p>
 <h3>Unsure answers count for less</h3>
-<p>Jev says how sure it is about each tell, and shaky answers carry less weight. If it isn't sure enough about the post overall, the verdict is Not sure and the post is left alone.</p>
+<p>The model says how sure it is about each tell, and shaky answers carry less weight. That calibration is what it's designed for. If it isn't sure enough about the post overall, the verdict is Not sure and the post is left alone.</p>
 <h3>The weights are private</h3>
 <p>Some tells count for more than others. The exact weights on the hosted server aren't published, so nobody can write a post that games them.</p>
 <h3>Scroll-stopper <span class="mono" style="font-weight:400">dramatic hook, one-line paragraphs, a moral</span></h3>
@@ -134,7 +139,7 @@
 <section id="person">
 <p class="mono">counter-signal 1 of 3</p>
 <h2>Sounds like a person</h2>
-<p>Does this read like one particular person, or like a generic professional voice that anyone could have written? Jev reads the text only.</p>
+<p>Does this read like one particular person, or like a generic professional voice that anyone could have written? The model reads the text only.</p>
 <h3>What raises it</h3>
 <ul><li>Specific personal detail: names, places, dates or numbers from the writer's own life or work</li><li>Word choices and asides that are clearly theirs</li><li>Uneven rhythm: long sentences, short ones, fragments</li><li>Contractions and casual qualifiers (“pretty”, “sort of”)</li></ul>
 <h3>What doesn't count on its own</h3>
@@ -161,7 +166,7 @@
 <section id="response">
 <p class="mono">counter-signal 3 of 3</p>
 <h2>Reader response</h2>
-<p>What readers actually did with the post: reactions, comments and reposts. This one isn't Jev's opinion. It's counted from the numbers shown under the post.</p>
+<p>What readers actually did with the post: reactions, comments and reposts. This one isn't the model's opinion. It's counted from the numbers shown under the post.</p>
 <h3>Effort counts more than taps</h3>
 <p>A comment costs someone minutes, and a repost puts the post in front of their whole network. Both count for far more than a one-tap reaction.</p>
 <h3>Hollow engagement is discounted</h3>
@@ -175,7 +180,7 @@
 <h2>How it adds up</h2>
 <p>From twelve answers to one score, in order.</p>
 <ol class="steps">
-<li><span><strong>Nine tells.</strong> Jev's answers on the Slopprint are weighted and combined. A single tell standing out on its own is cut; shaky answers count for less.</span></li>
+<li><span><strong>Nine tells.</strong> The model's answers on the Slopprint are weighted and combined. A single tell standing out on its own is cut; shaky answers count for less.</span></li>
 <li><span><strong>Sounds like a person.</strong> Takes a little off.</span></li>
 <li><span><strong>The shield.</strong> Half usefulness, half reader response. Takes a share off the score, up to a cap, so no post is cleared by the shield alone.</span></li>
 <li><span><strong>Human-typed?</strong> If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</span></li>
@@ -195,7 +200,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="index.html"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop<span class="dot">.lol</span></a>
+        <a class="brand" href="index.html"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
         <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
@@ -237,7 +242,7 @@
         <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">judging by jev from typesafe ai · not affiliated with linkedin</span></span>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google or microsoft</span></span>
       <nav class="legal-links" aria-label="Legal">
         <a href="open-source.html">Open source</a>
         <a href="privacy.html">Privacy</a>
@@ -249,6 +254,7 @@
 <script src="vendor/react.production.min.js"></script>
 <script src="vendor/react-dom.production.min.js"></script>
 <script src="_ds/slopmop/_ds_bundle.js"></script>
+<script src="assets/sites.js"></script>
 <script src="assets/islands.js"></script>
 <script src="assets/site.js"></script>
 </body>

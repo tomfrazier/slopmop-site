@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="_ds/slopmop/styles.css">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/sites.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +64,7 @@
 <a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop</a>
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
     <nav class="nav-links" aria-label="Main">
       <a href="how-it-works.html">How it works</a>
       <a href="index.html#tells">The tells</a>
@@ -77,12 +78,16 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head">
-  <div class="wrap">
-    <span class="eyebrow">help</span>
-    <h1 class="h-1">Help</h1>
-    <p class="lede">Getting Slop Mop installed, what the controls do, and what to try when a post can't be scored.</p>
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <span class="eyebrow">help</span>
+      <h1 class="h-1">Help</h1>
+      <p class="lede">Getting Slop Mop installed, what the controls do, and what to try when a post can't be scored.</p>
+    </div>
+    <div class="ph-visual"><div class="ph-popup"><div data-island="Popup"></div></div></div>
   </div>
+  <div class="wrap"><div class="glance"><div class="glance-tile"><span class="mono">install</span><b>About a minute</b><span>from the Chrome Web Store, no account</span></div><div class="glance-tile"><span class="mono">controls</span><b>Hide or Highlight</b><span>Mild, Moderate or Aggressive</span></div><div class="glance-tile"><span class="mono">limit</span><b>250 checks a day</b><span>resets at midnight UTC</span></div><div class="glance-tile"><span class="mono">people</span><b>A human reads email</b><span>hello@slopmop.lol</span></div></div></div>
 </section>
 <div class="page-body">
   <div class="wrap page-grid">
@@ -97,7 +102,7 @@
     <div class="prose">
 <section id="install">
 <h2>Installing Slop Mop</h2>
-<p>About a minute, on desktop Chrome or any Chromium browser that installs from the Chrome Web Store (Edge, Brave, Arc, Opera, Vivaldi). There is no account to create.</p>
+<p>About a minute, on desktop Chrome or any Chromium browser that installs from the Chrome Web Store (Brave, Arc, Opera, Vivaldi). Microsoft Edge support is coming soon. There is no account to create.</p>
 <ol class="steps">
 <li><span><strong>Open the Chrome Web Store listing.</strong> Go to <a data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho">Slop Mop on the Chrome Web Store</a>. Check the publisher is Slop Mop and the listing links back to slopmop.lol: copycat extensions exist for most things that get popular.</span></li>
 <li><span><strong>Add it, and read the permission.</strong> Click Add to Chrome. Chrome asks to let it “Read and change your data on linkedin.com”. That is the whole permission: enough to read post text and draw over the feed, on LinkedIn only. Click Add extension. What it sends and keeps is in the <a href="privacy.html">privacy policy</a>.</span></li>
@@ -113,7 +118,7 @@
 <p>Click the mop in your toolbar. Hide folds suspected slop; Highlight tints the post's mop yellow or red and hides nothing. Mild, Moderate and Aggressive set how easily a post gets flagged.</p>
 <div class="demo"><div data-island="Mode" data-props='{&quot;value&quot;: &quot;hide&quot;}'></div><div data-island="Sensitivity" data-props='{&quot;value&quot;: &quot;moderate&quot;}'></div></div>
 <h3>Opening a folded post</h3>
-<p>Click the strip's Show post button and the post unfolds in place. Click any post's mop to see what Jev noticed.</p>
+<p>Click the strip's Show post button and the post unfolds in place. Click any post's mop to see what the model noticed.</p>
 <div class="demo"><div data-island="FoldStrip" data-props='{&quot;tone&quot;: &quot;red&quot;, &quot;density&quot;: &quot;full&quot;, &quot;label&quot;: &quot;This post was hidden&quot;, &quot;stats&quot;: {&quot;today&quot;: 17, &quot;week&quot;: 86, &quot;month&quot;: 341, &quot;total&quot;: 2904}, &quot;style&quot;: {&quot;width&quot;: &quot;100%&quot;}}'></div></div>
 <h3>When it gets one wrong</h3>
 <p>Click the mop icon beside the post's “…” menu and vote No, Maybe or Probably. Not sure clears your vote. Your vote overrides the score for your feed.</p>
@@ -133,7 +138,7 @@
 </section>
 <section id="messages">
 <h2>Other messages you might see</h2>
-<div class="kv"><div><span class="k">Daily limit reached</span><span class="v">Each install can check 250 posts a day. The count resets at midnight UTC, and posts already scored keep working.</span></div><div><span class="k">Requests from cloud or hosting-provider IP ranges aren't accepted</span><span class="v">Slop Mop blocks traffic from data-centre networks to stop automated abuse. If you're on a VPN or cloud desktop, switch it off.</span></div><div><span class="k">Too many requests</span><span class="v">You're scrolling faster than the per-minute limit. Slop Mop slows down on its own and catches up.</span></div><div><span class="k">Nothing happens at all</span><span class="v">Reload the LinkedIn tab, and check the popup switch is on. Slop Mop only works in the main feed on desktop LinkedIn. When Jev isn't confident about a post, it leaves it alone, so a quiet feed can simply mean a clean one.</span></div></div>
+<div class="kv"><div><span class="k">Daily limit reached</span><span class="v">Each install can check 250 posts a day. The count resets at midnight UTC, and posts already scored keep working.</span></div><div><span class="k">Requests from cloud or hosting-provider IP ranges aren't accepted</span><span class="v">Slop Mop blocks traffic from data-centre networks to stop automated abuse. If you're on a VPN or cloud desktop, switch it off.</span></div><div><span class="k">Too many requests</span><span class="v">You're scrolling faster than the per-minute limit. Slop Mop slows down on its own and catches up.</span></div><div><span class="k">Nothing happens at all</span><span class="v">Reload the LinkedIn tab, and check the popup switch is on. Slop Mop only works in the main feed on desktop LinkedIn. When the model isn't confident about a post, it leaves it alone, so a quiet feed can simply mean a clean one.</span></div></div>
 </section>
 <section id="contact">
 <h2>Still stuck?</h2>
@@ -148,7 +153,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="index.html"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop<span class="dot">.lol</span></a>
+        <a class="brand" href="index.html"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
         <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
@@ -190,7 +195,7 @@
         <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">judging by jev from typesafe ai · not affiliated with linkedin</span></span>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google or microsoft</span></span>
       <nav class="legal-links" aria-label="Legal">
         <a href="open-source.html">Open source</a>
         <a href="privacy.html">Privacy</a>
@@ -202,6 +207,7 @@
 <script src="vendor/react.production.min.js"></script>
 <script src="vendor/react-dom.production.min.js"></script>
 <script src="_ds/slopmop/_ds_bundle.js"></script>
+<script src="assets/sites.js"></script>
 <script src="assets/islands.js"></script>
 <script src="assets/site.js"></script>
 </body>

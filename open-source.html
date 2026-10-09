@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="_ds/slopmop/styles.css">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/sites.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +64,7 @@
 <a class="ph-bar" data-ph href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop</a>
+    <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
     <nav class="nav-links" aria-label="Main">
       <a href="how-it-works.html">How it works</a>
       <a href="index.html#tells">The tells</a>
@@ -77,12 +78,19 @@
   </div>
 </header>
 <main id="main">
-<section class="page-head">
-  <div class="wrap">
-    <span class="eyebrow">open source</span>
-    <h1 class="h-1">The open-source version</h1>
-    <p class="lede">Slop Mop started as an MIT-licensed project, and that code is still public. The extension, the judging server and the sign library are all there to read, fork and run yourself.</p>
-    <p class="mono"><a class="btn btn-solid btn-sm" href="https://github.com/tomfrazier/slopmop" target="_blank" rel="noopener" style="margin-top:var(--space-4)"><img src="assets/logos/github.svg" alt="" width="15" height="15" style="filter:invert(1)">View the code on GitHub</a></p>
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <span class="eyebrow">open source</span>
+      <h1 class="h-1">The open-source version</h1>
+      <p class="lede">Slop Mop started as an MIT-licensed project, and that code is still public. The extension, the judging server and the sign library are all there to read, fork and run yourself.</p>
+      <p class="mono"><a class="btn btn-solid btn-sm" href="https://github.com/tomfrazier/slopmop" target="_blank" rel="noopener" style="margin-top:var(--space-4)"><img src="assets/logos/github.svg" alt="" width="15" height="15" style="filter:invert(1)">View the code on GitHub</a></p>
+    </div>
+    <div class="ph-visual"><div class="repo"><div class="repo-head"><img src="assets/logos/github.svg" alt="" width="16" height="16"><b>tomfrazier / slopmop</b><span class="badge badge-live">mit</span></div>
+  <div class="repo-row"><span class="mono">dir</span><code>extension/</code><span class="mono">reading ahead, modes, popup, votes</span></div>
+  <div class="repo-row"><span class="mono">dir</span><code>worker/</code><span class="mono">the /judge endpoint</span></div>
+  <div class="repo-row"><span class="mono">dir</span><code>signs/</code><span class="mono">the questions and weights</span></div>
+  <div class="repo-row"><span class="mono">file</span><code>LICENSE</code><span class="mono">mit</span></div></div></div>
   </div>
 </section>
 <div class="page-body">
@@ -122,7 +130,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="index.html"><img src="_ds/slopmop/mop.svg" alt="" width="23" height="23">Slop Mop<span class="dot">.lol</span></a>
+        <a class="brand" href="index.html"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
         <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working. Less slop. More control. Your call.</p>
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
@@ -164,7 +172,7 @@
         <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">judging by jev from typesafe ai · not affiliated with linkedin</span></span>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google or microsoft</span></span>
       <nav class="legal-links" aria-label="Legal">
         <a href="open-source.html">Open source</a>
         <a href="privacy.html">Privacy</a>

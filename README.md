@@ -16,6 +16,8 @@ _ds/slopmop/        Slop Mop design system: tokens, styles.css, _ds_bundle.js (c
 assets/site.css     site layout on top of the design-system tokens
 assets/site.js      site settings + behaviour (store link, Product Hunt, social URLs, signup, tour video)
 assets/islands.js   mounts live design-system components into the pages
+assets/sites.js     hero mockups of each host site (LinkedIn, X, Reddit, Facebook, Substack, Medium, email, websites)
+assets/sites.css    styles for those mockups
 assets/logos/       network and social marks (simple-icons)
 vendor/             React 18.3.1 UMD, self-hosted so the components need no CDN
 og-image-2.png      1200x630 share image (og:image)
