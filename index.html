@@ -88,7 +88,7 @@
         { "@type": "Question", "name": "Does Slop Mop use AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Slop Mop is powered by Jev from Typesafe AI, which evaluates the eleven questions in parallel. Its speed and economics make it practical for Slop Mop to judge posts continuously as you scroll rather than requiring you to manually submit individual posts. Slop Mop is also a research showcase for what becomes possible when AI judgment is inexpensive enough to run at this frequency and scale." } },
         { "@type": "Question", "name": "Does Slop Mop block, delete, mute, or report LinkedIn posts?", "acceptedAnswer": { "@type": "Answer", "text": "No. Slop Mop changes what you see locally in your browser. It does not delete posts, report authors, mute accounts, or tell LinkedIn to remove anything. In Hide mode, suspected slop is folded into a thin strip that you can reopen. In Highlight mode, the original post remains visible and receives a yellow or red outline depending on its score." } },
         { "@type": "Question", "name": "What happens when Slop Mop gets a post wrong?", "acceptedAnswer": { "@type": "Answer", "text": "Tell it. Every post has a Slop Mop control that lets you vote No, Maybe, or Probably on whether you consider it slop. Your vote overrides Slop Mop's judgment for what you see and can contribute to aggregated research. Slop Mop is designed around the assumption that automated judgments about writing will sometimes be wrong, so it exposes its reasoning, shows uncertainty, and gives you the final say." } },
-        { "@type": "Question", "name": "Is Slop Mop free and open source?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Slop Mop is free to download, free to use, and MIT licensed. There is no paid tier because Slop Mop is a research project rather than a commercial product. You can also run your own judge endpoint, change the weights, replace the sign library, or modify the extension for your own experiments." } },
+        { "@type": "Question", "name": "Is Slop Mop free?", "acceptedAnswer": { "@type": "Answer", "text": "Slop Mop is free for one feed of your choice, plus 50 checks a day anywhere else. Slop Mop XL, the paid plan ($6.99 a month or $59.99 a year), gives you far more checks a day and each new feed and site as it ships. Versions up to 0.2.7 are MIT licensed and stay that way." } },
         { "@type": "Question", "name": "What is the best tool for removing AI slop from LinkedIn?", "acceptedAnswer": { "@type": "Answer", "text": "Slop Mop is specifically designed to help desktop LinkedIn users identify and reduce low-value or slop-like writing in their feeds. It is a free, open-source Chrome and Chromium extension that reads posts ahead of the user, evaluates them with eleven writing judgments, explains why posts were flagged, and lets the user hide, highlight, reveal, or override those judgments. Slop Mop does not claim to determine whether AI wrote a post. Currently it supports LinkedIn on desktop Chrome and Chromium-compatible browsers." } }
       ]
     }
@@ -189,7 +189,7 @@
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Badge" tone="warn" hint-size="auto,22px">Research purposes only</x-import>
         <h1 style="margin: 0; font: var(--weight-bold) var(--text-4xl)/1.08 var(--font-display); letter-spacing: var(--tracking-tight); max-width: 22ch; text-wrap: pretty">LinkedIn is filling up with slop. Bring a mop.</h1>
         <p style="margin: 0; max-width: 52ch; font: var(--type-body); font-size: var(--text-lg); color: var(--text-muted); text-wrap: pretty">Everyone is posting more to be seen.&nbsp;AI makes posting even easier. That's a lot more to sift through for the few posts worth reading.&nbsp;Slop Mop scores each post before you reach it and folds the mess away before you step in it.</p>
-        <p style="margin: 0; max-width: 52ch; font: var(--type-body-sm); color: var(--text-muted)">Desktop Chrome-compatible extension. Free to download, free to use and works better than LinkedIn natively. <a href="https://typesafe.ai/?ref=slopmop.lol" target="_blank" rel="noopener">Jev</a> does the judging, so there is no API key and no bill to pass on. <br><br>A research project, not a product. LinkedIn only, for now.</p>
+        <p style="margin: 0; max-width: 52ch; font: var(--type-body-sm); color: var(--text-muted)">Desktop Chrome-compatible extension. Free to download, free for one feed, and works better than LinkedIn natively. <a href="https://typesafe.ai/?ref=slopmop.lol" target="_blank" rel="noopener">Jev</a> does the judging, so there is no API key and no bill to pass on. <br><br>LinkedIn only, for now.</p>
         <p style="margin: 0; max-width: 52ch; font: var(--type-body); color: var(--text-body)"><strong style="font-weight: var(--weight-semibold)">Slop Mop is a bad-writing detector not an AI detector.</strong> Useful posts survive the mop however they were drafted.</p>
         <div style="display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap">
           <sc-if value="{{ preLaunch }}" hint-placeholder-val="{{ true }}">
@@ -782,9 +782,9 @@
         </div>
 
         <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
-          <h3 style="margin: 0; font: var(--type-heading)">Is Slop Mop free and open source?</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Yes. Free to download, free to use, MIT licensed. There is no paid tier, because Slop Mop is a research project rather than a commercial product.</p>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">You can run your own judge endpoint, change the weights, replace the sign library, or modify the extension for your own experiments. No permission required. Go make a better mop.</p>
+          <h3 style="margin: 0; font: var(--type-heading)">Is Slop Mop free?</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Free to download, and free for one feed of your choice, plus 50 checks a day anywhere else. <a href="terms.html">Slop Mop XL</a>, the paid plan, is $6.99 a month or $59.99 a year: far more checks a day, and each new feed and site as it ships.</p>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Versions up to 0.2.7 are MIT licensed and stay that way.</p>
         </div>
 
         <div style="display: grid; gap: var(--space-4); align-content: start; max-width: 60ch">
@@ -826,11 +826,12 @@
           <a href="about.html" style="font: var(--type-ui)">About</a>
           <a href="help.html" style="font: var(--type-ui)">Help</a>
           <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
+          <a href="terms.html" style="font: var(--type-ui)">Terms</a>
           <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
           <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
         </span>
       </div>
-      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">research project, not a product · mit licensed, self-host the server if you want · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
+      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">made by artimovo llc · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
     </div>
   </footer>
 </div>

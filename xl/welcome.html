@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Slop Mop XL</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<meta name="theme-color" content="#16181A">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="xl.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="../index.html"><img src="../mop.svg" width="20" height="20" alt="">Slop Mop <span class="xltag">XL</span></a>
+  <a href="../help.html" style="font: var(--type-ui); color: var(--text-muted)">Help</a>
+</nav>
+
+<main>
+  <div class="steps" aria-label="Upgrade steps"><span class="ok">Plan</span><span class="ok">Checkout</span><span class="on">Access</span></div>
+  <div class="done">✓ You're on Slop Mop XL.</div>
+  <div style="display: grid; gap: var(--space-4)">
+    <h1>Thanks for upgrading</h1>
+    <p class="lede">A receipt is on its way from Polar. Manage or cancel your plan any time from Slop Mop's account settings, under <b>Manage billing</b>.</p>
+  </div>
+
+  <section class="card" id="access">
+    <h2>One last step: let Slop Mop read all sites</h2>
+    <p>So each new feed and site works as it ships, your browser needs your OK for Slop Mop to read the pages you visit. It reads post and article text to score it, and never stores it. Slop Mop asks in its own window.</p>
+    <div class="actions">
+      <button class="btn" type="button" id="allow">Allow all sites</button>
+    </div>
+  </section>
+
+  <div class="warn" id="signin" hidden>Slop Mop in this browser isn't signed in. Click the mop in your toolbar and sign in with the email you used at checkout; XL turns on by itself.</div>
+  <div class="warn" id="noext" hidden>Couldn't reach Slop Mop from this page. Click the mop in your browser's toolbar and open your account: it picks up XL, and asks for site access there.</div>
+
+  <p class="meta">Questions about billing? <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a> · <a href="../terms.html">terms</a></p>
+</main>
+
+<script>
+(() => {
+  // The extension that started this checkout (checkout.html kept its id). It lists this site in externally_connectable.
+  let ext = new URLSearchParams(location.search).get("ext");
+  if (!ext) { try { ext = localStorage.getItem("slopmop:ext"); } catch {} }
+  const valid = ext && /^[a-p]{32}$/.test(ext);
+  const send = (message) =>
+    new Promise((resolve) => {
+      if (!valid || !window.chrome?.runtime?.sendMessage) return resolve(null);
+      try {
+        chrome.runtime.sendMessage(ext, message, (reply) => resolve(chrome.runtime.lastError ? null : reply ?? null));
+      } catch { resolve(null); }
+    });
+  const show = (id) => { document.getElementById(id).hidden = false; };
+
+  // Tell Slop Mop the checkout finished, so it reads the plan from Polar now rather than waiting.
+  send({ type: "slopmop:upgraded" }).then((reply) => {
+    if (!reply) show("noext");
+    else if (reply.signedIn === false) show("signin");
+  });
+  document.getElementById("allow").addEventListener("click", async () => {
+    const reply = await send({ type: "slopmop:openAccess" });
+    if (!reply) show("noext");
+  });
+})();
+</script>
+</body>
+</html>
