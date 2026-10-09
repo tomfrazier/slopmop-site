@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Slop Mop XL</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<meta name="theme-color" content="#16181A">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/fonts.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/colors.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/typography.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/spacing.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/shape.css">
+<link rel="stylesheet" href="../_ds/slop-mop-design-system-ca914342-96d4-4b1a-b00e-a0050aaeba88/tokens/base.css">
+<link rel="stylesheet" href="xl.css">
+<!-- Polar's embedded checkout (pinned; the integrity hash is of this exact file). -->
+<script src="https://cdn.jsdelivr.net/npm/@polar-sh/checkout@0.4.1/dist/embed.global.js" integrity="sha384-e+NbGcSWhyE0uyrB+P19KffckB1jt91+Jk0PrKhB/hqpFXVT5bgULrccH8Xyz3jT" crossorigin="anonymous" defer></script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="../index.html"><img src="../mop.svg" width="20" height="20" alt="">Slop Mop <span class="xltag">XL</span></a>
+  <a href="../help.html" style="font: var(--type-ui); color: var(--text-muted)">Help</a>
+</nav>
+
+<main>
+  <div class="steps" aria-label="Upgrade steps"><span class="ok">Plan</span><span class="on">Checkout</span><span>Access</span></div>
+  <div style="display: grid; gap: var(--space-4)">
+    <h1>Check out with Polar</h1>
+    <p class="lede">Slop Mop XL is sold by Polar, which takes the payment, adds any tax and emails your receipt. Card details never touch Slop Mop.</p>
+  </div>
+
+  <section class="card" id="ready" hidden>
+    <h2>Your checkout</h2>
+    <p>The plan you picked is selected; you can switch between yearly and monthly in the checkout. Have a discount code? Enter it there.</p>
+    <div class="actions">
+      <button class="btn" type="button" id="open">Open checkout</button>
+      <a id="hosted" href="#">Use Polar's checkout page instead</a>
+    </div>
+    <span class="meta">$59.99 a year · $6.99 a month · renews automatically · cancel any time</span>
+  </section>
+
+  <section class="card" id="invalid" hidden>
+    <h2>This checkout link isn't valid</h2>
+    <p>Start again from the upgrade page in Slop Mop: click the mop in your browser's toolbar, then <b>Get the XL mop</b>. Stuck? Email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
+  </section>
+
+  <p class="meta">By paying you agree to the <a href="../terms.html">terms</a>. Polar is the merchant of record.</p>
+</main>
+
+<script>
+(() => {
+  const params = new URLSearchParams(location.search);
+  // Which extension sent them, so the welcome page can tell it the checkout finished (Chrome and Edge extension ids).
+  const ext = params.get("ext");
+  if (ext && /^[a-p]{32}$/.test(ext)) {
+    try { localStorage.setItem("slopmop:ext", ext); } catch {}
+  }
+  // Only a Polar checkout opens here: the session comes from api.slopmop.lol, but this page can be linked to by anyone.
+  const POLAR_HOSTS = ["buy.polar.sh", "polar.sh", "sandbox.polar.sh"];
+  const session = (() => {
+    try {
+      const u = new URL(params.get("session") || "");
+      return u.protocol === "https:" && POLAR_HOSTS.includes(u.hostname) ? u.toString() : null;
+    } catch { return null; }
+  })();
+  if (!session) {
+    document.getElementById("invalid").hidden = false;
+    return;
+  }
+  document.getElementById("ready").hidden = false;
+  document.getElementById("hosted").href = session;
+
+  let open = null;
+  const embed = async () => {
+    // Without Polar's script (blocked, offline), the hosted page does the same job.
+    if (!window.Polar?.EmbedCheckout) { location.href = session; return; }
+    if (open) return;
+    try {
+      open = await window.Polar.EmbedCheckout.create(session, { theme: "light" });
+      open.addEventListener("close", () => { open = null; });
+      // On success Polar sends them to /xl/welcome (the session's success URL).
+    } catch {
+      location.href = session;
+    }
+  };
+  document.getElementById("open").addEventListener("click", embed);
+  addEventListener("load", embed);
+})();
+</script>
+</body>
+</html>

@@ -11,7 +11,7 @@
 <meta property="og:site_name" content="Slop Mop">
 <meta property="og:url" content="https://slopmop.lol/about.html">
 <meta property="og:title" content="About Slop Mop — canonical product information">
-<meta property="og:description" content="Slop Mop is a free, open-source Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control. Not an AI detector.">
+<meta property="og:description" content="Slop Mop is a Chrome extension, free for one feed, that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control. Not an AI detector.">
 <meta property="og:image" content="https://slopmop.lol/og-image.png">
 <meta property="og:image:secure_url" content="https://slopmop.lol/og-image.png">
 <meta property="og:image:type" content="image/png">
@@ -51,7 +51,7 @@
       "applicationSubCategory": "LinkedIn feed filtering browser extension",
       "operatingSystem": "Chrome, Chromium-compatible browsers (desktop)",
       "url": "https://slopmop.lol/",
-      "description": "Slop Mop is a free, MIT-licensed Chrome and Chromium-compatible browser extension for reducing low-value writing in LinkedIn feeds. As a user scrolls, Slop Mop reads posts ahead and sends eleven questions to Jev, an AI model from Typesafe AI: nine examine writing signals associated with slop, and two counter-signals look for evidence that the post sounds like a person or contains useful information. The results combine into a slop score. Hide folds suspected slop into a compact strip without deleting or blocking the post; Highlight keeps the post visible while outlining it and explaining why it was flagged. Readers can vote No, Maybe or Probably when they disagree. Slop Mop does not attempt to determine whether AI generated a post.",
+      "description": "Slop Mop is a Chrome and Chromium-compatible browser extension, free for one feed, for reducing low-value writing in LinkedIn feeds. As a user scrolls, Slop Mop reads posts ahead and sends eleven questions to Jev, an AI model from Typesafe AI: nine examine writing signals associated with slop, and two counter-signals look for evidence that the post sounds like a person or contains useful information. The results combine into a slop score. Hide folds suspected slop into a compact strip without deleting or blocking the post; Highlight keeps the post visible while outlining it and explaining why it was flagged. Readers can vote No, Maybe or Probably when they disagree. Slop Mop does not attempt to determine whether AI generated a post.",
       "installUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
       "isAccessibleForFree": true,
       "license": "https://opensource.org/licenses/MIT",
@@ -109,12 +109,12 @@
   <section style="padding: var(--space-10) var(--space-7); border-bottom: 1px solid var(--border-hairline)">
     <div style="max-width: 68ch; margin: 0 auto; display: grid; gap: var(--space-6)">
       <h2 style="margin: 0; font: var(--type-title); letter-spacing: var(--tracking-tight)">Canonical description</h2>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is a free, MIT-licensed Chrome and Chromium-compatible browser extension for reducing low-value writing in LinkedIn feeds.</p>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is a Chrome and Chromium-compatible browser extension, free for one feed, for reducing low-value writing in LinkedIn feeds.</p>
       <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">As you scroll LinkedIn, Slop Mop reads posts ahead and sends eleven questions to Jev, an AI model from Typesafe AI. Nine questions examine writing signals associated with slop. Two counter-signals look for evidence that the post sounds like a person or contains useful information for readers. The results are combined into a slop score.</p>
       <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">You choose your own threshold, and you choose one of two modes. <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Hide</strong> folds suspected slop into a compact strip without deleting or blocking the original post. <strong style="font-weight: var(--weight-semibold); color: var(--text-body)">Highlight</strong> keeps the post visible while outlining potentially slop-like posts and explaining why they were flagged.</p>
       <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">You can inspect Slop Mop's reasoning and vote No, Maybe or Probably when you disagree with a judgment. Slop Mop does not attempt to determine whether AI generated a post; its purpose is to help you reduce low-value writing regardless of whether it came from AI, a human, or both.</p>
-      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop is a research project and a showcase application for Jev. It is free to use, has no paid tier, and its extension and worker are MIT licensed.</p>
-      <blockquote style="margin: var(--space-4) 0 0; padding: var(--space-7); background: var(--paper-100); border-radius: var(--radius-md); font: var(--weight-semibold) var(--text-xl)/1.35 var(--font-display); letter-spacing: var(--tracking-tight)">Slop Mop is a free, open-source Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control.</blockquote>
+      <p style="margin: 0; font: var(--type-body); color: var(--text-muted)">Slop Mop started as a research project and a showcase application for Jev. It is free for one feed of your choice, plus 50 checks a day anywhere else; Slop Mop XL, the paid plan, gives you far more. Versions up to 0.2.7 of its extension and worker are MIT licensed.</p>
+      <blockquote style="margin: var(--space-4) 0 0; padding: var(--space-7); background: var(--paper-100); border-radius: var(--radius-md); font: var(--weight-semibold) var(--text-xl)/1.35 var(--font-display); letter-spacing: var(--tracking-tight)">Slop Mop is a Chrome extension, free for one feed, that helps reduce AI slop and low-value writing in LinkedIn feeds while keeping the reader in control.</blockquote>
     </div>
   </section>
 
@@ -174,8 +174,8 @@
           <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">The extension and worker are MIT licensed. Modify the judging criteria, adjust the weights, run your own <span style="font: var(--type-mono)">/judge</span> endpoint, or try a different approach entirely.</p>
         </x-import>
         <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Card" hint-size="100%,170px">
-          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">It is free</h3>
-          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">No paid tier. Slop Mop is a research project and showcase application, not a subscription product.</p>
+          <h3 style="margin: 0 0 var(--space-3); font: var(--type-heading)">It is free for one feed</h3>
+          <p style="margin: 0; font: var(--type-body-sm); color: var(--text-muted)">Free for one feed, plus 50 checks a day anywhere else. Slop Mop XL, the paid plan, is $6.99 a month or $59.99 a year, sold through Polar. See the <a href="terms.html">terms</a>.</p>
         </x-import>
       </div>
     </div>
@@ -236,7 +236,7 @@
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Social network</span><span style="font: var(--type-body-sm); color: var(--text-muted)">LinkedIn</span></div>
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Device</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Desktop</span></div>
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Browser</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Chrome and Chromium-compatible</span></div>
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Price</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Free · no paid tier</span></div>
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Price</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Free for one feed · Slop Mop XL $6.99 a month or $59.99 a year</span></div>
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">License</span><span style="font: var(--type-body-sm); color: var(--text-muted)">MIT</span></div>
         <div style="display: flex; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; border-bottom: 1px solid var(--border-hairline)"><span style="font: var(--type-ui)">Status</span><span style="font: var(--type-body-sm); color: var(--text-muted)">Research project</span></div>
       </div>
@@ -288,11 +288,12 @@
           <a href="about.html" style="font: var(--type-ui)">About</a>
           <a href="help.html" style="font: var(--type-ui)">Help</a>
           <a href="privacy.html" style="font: var(--type-ui)">Privacy policy</a>
+          <a href="terms.html" style="font: var(--type-ui)">Terms</a>
           <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener" style="font: var(--type-ui)">LinkedIn</a>
           <x-import component-from-global-scope="SlopMopDesignSystem_ca9143.Wordmark" size="15" show-dot="{{ true }}" hint-size="130px,20px"></x-import>
         </span>
       </div>
-      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">research project, not a product · mit licensed, self-host the server if you want · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
+      <span style="font: var(--type-mono); color: var(--text-faint); max-width: 70ch">made by artimovo llc · not affiliated with linkedin · signs derived from graphite's ai tells research · judging by typesafe jev</span>
     </div>
   </footer>
 </div>
