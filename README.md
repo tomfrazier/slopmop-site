@@ -1,6 +1,6 @@
 # slopmop-site
 
-Marketing site for [Slop Mop](https://slopmop.lol) — a free, MIT-licensed Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds. The extension and judging worker live in the main `slopmop` repo; this repo is the static site only.
+Marketing site for [Slop Mop](https://slopmop.lol) — a free Chrome extension that helps reduce AI slop and low-value writing in LinkedIn feeds. The extension and judging worker live in the main `slopmop` repo (the original MIT version is public at github.com/tomfrazier/slopmop and linked from `/open-source`); this repo is the static site only.
 
 ## Structure
 
