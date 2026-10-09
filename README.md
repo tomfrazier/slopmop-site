@@ -37,11 +37,14 @@ var SITE = {
   storeUrl: "https://chromewebstore.google.com/detail/slop-mop/…",
   productHuntUrl: "https://www.producthunt.com/products/slop-mop",   // "" removes the top bar
   emailEndpoint: "https://formspree.io/f/xaenejjw",
+  announcementBar: false,   // true shows the Product Hunt bar again
   social: { linkedin: "", x: "", bluesky: "", threads: "", youtube: "", github: "", producthunt: "" }
 };
 ```
 
 A social icon stays hidden until its URL is filled in.
+
+Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, right after the viewport meta. It's disclosed in the privacy policy.
 
 ## Deploying
 

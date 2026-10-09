@@ -3,22 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
 <title>Privacy policy — Slop Mop</title>
-<meta name="description" content="What Slop Mop sends to api.slopmop.lol, what it stores (hashed post text, scores, engagement counts, a salted install-id hash, votes), how long check logs are kept, and how to reach a human.">
+<meta name="description" content="What the Slop Mop extension sends to api.slopmop.lol and what it stores, how Polar handles payments for Slop Mop XL, how this website uses Google Analytics, how long things are kept, and how to reach a human.">
 <link rel="canonical" href="https://slopmop.lol/privacy.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Slop Mop">
 <meta property="og:url" content="https://slopmop.lol/privacy.html">
 <meta property="og:title" content="Privacy policy — Slop Mop">
-<meta property="og:description" content="What Slop Mop sends to api.slopmop.lol, what it stores (hashed post text, scores, engagement counts, a salted install-id hash, votes), how long check logs are kept, and how to reach a human.">
+<meta property="og:description" content="What the Slop Mop extension sends to api.slopmop.lol and what it stores, how Polar handles payments for Slop Mop XL, how this website uses Google Analytics, how long things are kept, and how to reach a human.">
 <meta property="og:image" content="https://slopmop.lol/og-image-2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Slop Mop: mop the slop out of your feed.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy policy — Slop Mop">
-<meta name="twitter:description" content="What Slop Mop sends to api.slopmop.lol, what it stores (hashed post text, scores, engagement counts, a salted install-id hash, votes), how long check logs are kept, and how to reach a human.">
+<meta name="twitter:description" content="What the Slop Mop extension sends to api.slopmop.lol and what it stores, how Polar handles payments for Slop Mop XL, how this website uses Google Analytics, how long things are kept, and how to reach a human.">
 <meta name="twitter:image" content="https://slopmop.lol/og-image-2.png">
 <meta name="author" content="Tom Frazier">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -38,7 +46,7 @@
   "@id": "https://slopmop.lol/privacy.html#page",
   "url": "https://slopmop.lol/privacy.html",
   "name": "Privacy policy — Slop Mop",
-  "description": "What Slop Mop sends to api.slopmop.lol, what it stores (hashed post text, scores, engagement counts, a salted install-id hash, votes), how long check logs are kept, and how to reach a human.",
+  "description": "What the Slop Mop extension sends to api.slopmop.lol and what it stores, how Polar handles payments for Slop Mop XL, how this website uses Google Analytics, how long things are kept, and how to reach a human.",
   "inLanguage": "en",
   "isPartOf": {
     "@type": "WebSite",
@@ -83,7 +91,7 @@
     <div class="ph-copy">
       <span class="eyebrow">privacy</span>
       <h1 class="h-1">Privacy policy</h1>
-      <p class="lede">Slop Mop is a research project. It reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. This page says exactly what that means.</p>
+      <p class="lede">Slop Mop is a research project. The extension reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. This site uses Google Analytics, and paid Slop Mop XL subscriptions are billed through Polar. This page says exactly what all of that means.</p>
       <p class="mono">last updated 9 october 2026</p>
     </div>
     <div class="ph-visual"><div class="tv-stack">
@@ -99,7 +107,7 @@
     <div class="tv-row"><span class="mono">who</span><span class="redact">nobody</span></div></div>
 </div></div>
   </div>
-  <div class="wrap"><div class="glance"><div class="glance-tile"><span class="mono">sent</span><b>Text and public counts</b><span>never your name, never the author's</span></div><div class="glance-tile"><span class="mono">kept</span><b>A one-way hash</b><span>not the words</span></div><div class="glance-tile"><span class="mono">logs</span><b>90 days</b><span>then deleted</span></div><div class="glance-tile"><span class="mono">vendors</span><b>No ad networks</b><span>no cookies set by the extension</span></div></div></div>
+  <div class="wrap"><div class="glance"><div class="glance-tile"><span class="mono">sent</span><b>Text and public counts</b><span>never your name, never the author's</span></div><div class="glance-tile"><span class="mono">kept</span><b>A one-way hash</b><span>not the words</span></div><div class="glance-tile"><span class="mono">logs</span><b>90 days</b><span>then deleted</span></div><div class="glance-tile"><span class="mono">vendors</span><b>Polar and Google Analytics</b><span>payments for XL, visits to this site; never ads</span></div></div></div>
 </section>
 <div class="page-body">
   <div class="wrap page-grid">
@@ -108,13 +116,15 @@
       <a href="#the-server">The server</a>
       <a href="#what-leaves-your-browser">What leaves your browser</a>
       <a href="#what-is-stored">What is stored</a>
+      <a href="#payments-for-slop-mop-xl">Payments for Slop Mop XL</a>
+      <a href="#this-website-and-google-analytics">This website and Google Analytics</a>
       <a href="#retention">Retention</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="prose">
 <section id="the-server">
 <h2>The server</h2>
-<p>All judging requests go to one host: <code>api.slopmop.lol</code>. Nothing else is contacted by the extension. The server is run privately by Artimovo LLC.</p>
+<p>All judging requests go to one host: <code>api.slopmop.lol</code>. Nothing else is contacted by the extension. The server is run privately by Artimovo LLC. This website and paid subscriptions are separate, and are covered further down this page.</p>
 
 </section>
 <section id="what-leaves-your-browser">
@@ -126,12 +136,27 @@
 <h2>What is stored</h2>
 <p>Five things, and nothing else:</p>
 <div class="kv"><div><span class="k">A hash of the post text</span><span class="v">a one-way hash, so the same post isn't judged twice. The text itself is not kept.</span></div><div><span class="k">Scores</span><span class="v">The model's answers to the twelve questions, the slop score, and when the post was first seen.</span></div><div><span class="k">Engagement counts</span><span class="v">the public reaction and comment numbers the usefulness check reads.</span></div><div><span class="k">A salted hash of the install id</span><span class="v">enough to count installs and dedupe votes, not enough to identify you.</span></div><div><span class="k">Votes</span><span class="v">your No, Maybe or Probably on a post, tallied under that salted hash.</span></div></div>
-<p>No LinkedIn profile data, no browsing history, no cookies set by the extension, and no advertising vendors. Usage is capped at 250 checks per install per day.</p>
+<p>No LinkedIn profile data, no browsing history, no cookies set by the extension, and no analytics or advertising vendors in the extension. Usage is capped at 250 checks per install per day.</p>
+
+</section>
+<section id="payments-for-slop-mop-xl">
+<h2>Payments for Slop Mop XL</h2>
+<p>Slop Mop XL is a paid subscription. <strong>Polar (Polar Software, Inc.) is the merchant of record</strong>: it sells the subscription to you, takes the payment, works out and collects sales tax or VAT, and sends receipts. Polar and the payment processors it works with collect and process your payment data, such as your name, email address, billing address and card or other payment details, under <a href="https://polar.sh/legal/privacy-policy" rel="noopener">Polar's privacy policy</a>.</p>
+<p>We never see or store your full card number. From Polar we receive what we need to run your subscription: your email address, name, country, plan, subscription status, and the dates and amounts of payments and refunds. We use it to give you access to Slop Mop XL, answer billing questions, and keep the records the law requires.</p>
+<p>The free plan involves no payment and nothing is sent to Polar.</p>
+
+</section>
+<section id="this-website-and-google-analytics">
+<h2>This website and Google Analytics</h2>
+<p>This website, <code>slopmop.lol</code>, uses Google Analytics to count visits and see which pages are useful. Google Analytics sets cookies in your browser and collects information such as the pages you view, the site that sent you, your browser and device type, and your approximate location, which Google derives from your IP address. Google processes that data under <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">its own policies</a>. We don't use it for advertising and we don't combine it with anything the extension sends.</p>
+<p>You can block it with your browser's cookie or tracking settings, a content blocker, or <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google's opt-out add-on</a>. The site works the same either way.</p>
+<p>The site's fonts are served by Google Fonts. If you sign up for updates, your email address is collected through Formspree and used only to send you Slop Mop news. Every email has an unsubscribe link.</p>
+<p><strong>Google Analytics runs on this website only.</strong> The extension does not load it, and nothing from your feed is sent to Google Analytics.</p>
 
 </section>
 <section id="retention">
 <h2>Retention</h2>
-<p>Check logs — the operational record of requests hitting the server — are kept for <strong>90 days</strong> and then deleted.</p>
+<p>Check logs — the operational record of requests hitting the server — are kept for <strong>90 days</strong> and then deleted. Payment and subscription records from Polar are kept for as long as tax and accounting law requires, usually seven years. Google Analytics data is kept under Google Analytics' retention setting, at most 14 months. You can unsubscribe from updates at any time, or ask us to delete your address.</p>
 
 </section>
 <section id="contact">

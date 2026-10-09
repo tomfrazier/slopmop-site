@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
 <title>Slop Mop — Less slop in your feed. Your call.</title>
 <meta name="description" content="Slop Mop is a free browser extension that reads your feed ahead of you, folds away low-value writing and shows why. Not an AI detector: a bad-writing detector. LinkedIn today; X, Reddit, Facebook, Substack and Medium coming soon.">
 <link rel="canonical" href="https://slopmop.lol/">
@@ -86,12 +94,28 @@
         "Reader vote overrides the model",
         "Not an AI-content detector"
       ],
-      "isAccessibleForFree": true,
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Slop Mop (free plan)",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free on LinkedIn, up to 250 checks a day.",
+          "url": "https://slopmop.lol/#pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Slop Mop XL",
+          "category": "subscription",
+          "description": "Paid, auto-renewing subscription for every other feed, articles and email. Coming soon; price to be announced. Sold by Polar as merchant of record.",
+          "url": "https://slopmop.lol/#pricing",
+          "seller": {
+            "@type": "Organization",
+            "name": "Polar",
+            "url": "https://polar.sh/"
+          }
+        }
+      ],
       "author": {
         "@id": "https://slopmop.lol/#tom"
       },
@@ -150,7 +174,7 @@
           "name": "Is it free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Slop Mop is free to install and free to use on LinkedIn, up to 250 checks a day. Slop Mop XL, a paid version for every other feed, articles and email, is coming soon."
+            "text": "Yes. Slop Mop is free to install and free to use on LinkedIn, up to 250 checks a day. Slop Mop XL, a paid subscription for every other feed, articles and email, is coming soon. It will renew automatically until you cancel, and you can cancel any time."
           }
         },
         {
@@ -517,7 +541,7 @@
     <div class="section-head center">
       <span class="eyebrow">pricing</span>
       <h2 class="h-1">Free to mop. XL when it's ready.</h2>
-      <p class="lede">Slop Mop is free on LinkedIn. Slop Mop XL, a paid version for every other feed, is coming soon.</p>
+      <p class="lede">Slop Mop is free on LinkedIn. Slop Mop XL, a paid subscription for every other feed, is coming soon.</p>
     </div>
     <div class="plans">
       <div class="plan featured">
@@ -558,7 +582,7 @@
     <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
     <details><summary>Does it block, delete, mute or report posts?</summary><div class="a"><p>No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported.</p></div></details>
     <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
-    <details><summary>Is it free?</summary><div class="a"><p>Yes. Slop Mop is free to install and free to use on LinkedIn, up to 250 checks a day. Slop Mop XL, a paid version for every other feed, articles and email, is coming soon.</p></div></details>
+    <details><summary>Is it free?</summary><div class="a"><p>Yes. Slop Mop is free to install and free to use on LinkedIn, up to 250 checks a day. Slop Mop XL, a paid subscription for every other feed, articles and email, is coming soon. It will renew automatically until you cancel, and you can cancel any time.</p></div></details>
     <details><summary>What leaves my browser?</summary><div class="a"><p>The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text. The <a href="privacy.html">privacy policy</a> lists all five things it stores.</p></div></details>
     <details><summary>Is Slop Mop open source?</summary><div class="a"><p>The original version of the extension and judging server is MIT licensed and public on GitHub. Everything about it, and the link to the code, is on the <a href="open-source.html">open-source page</a>.</p></div></details>
     </div>
