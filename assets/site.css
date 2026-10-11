@@ -228,6 +228,25 @@ a:hover { text-decoration: underline; }
 .tell-card-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) var(--space-8); border-top: 1px solid var(--border-hairline); background: var(--surface-raised-foot); }
 .tell-nav { display: flex; gap: var(--space-4); }
 .dark .icon-btn { background: var(--surface-card); color: var(--text-body); }
+.tell-mob { display: none; }
+@media (max-width: 980px) {
+  .tells .tell-list, .tells .tell-card-head { display: none; }
+  .tell-stage { gap: var(--space-5); }
+  .tell-mob { display: grid; grid-template-columns: 40px minmax(0, 1fr) 40px; align-items: center; gap: var(--space-4); background: var(--surface-raised); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-raised); }
+  .tell-mob .icon-btn { width: 40px; height: 40px; }
+  .tell-mob-text { display: grid; gap: 4px; text-align: center; min-height: 112px; align-content: center; }
+  .tell-mob-text .mono { color: var(--text-faint); font: var(--type-mono-label); }
+  .tell-mob-text b { font: var(--type-heading); font-size: var(--text-lg); }
+  .tell-mob-text p { margin: 0; color: var(--text-muted); font: var(--type-body-sm); }
+  /* post across the top; verdict and a small Slopprint side by side under it */
+  .tells .tell-card-top { grid-template-columns: minmax(0, 1fr) 112px; gap: var(--space-5); padding: var(--space-6); align-items: center; }
+  .tells .tell-sample { display: contents; }
+  .tells .tell-sample .post { grid-column: 1 / -1; }
+  .tells .tell-verdict { display: grid; justify-items: start; gap: 6px; }
+  .tells .tell-print { padding: 0; }
+  .tells .tell-print svg { width: 112px; height: auto; }
+  .tells .tell-print svg text { display: none; }
+}
 @media (max-width: 980px) { .tells { grid-template-columns: 1fr; } .tell-stage { position: static; } .tell-card-top { grid-template-columns: 1fr; } .tell-sample { border-right: 0; border-bottom: 1px solid var(--border-hairline); } }
 
 /* ---------- counter-signals ---------- */
@@ -603,3 +622,15 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .xl-how li::before { content: counter(xl); width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-sunken); border: 1px solid var(--border-default); font: var(--type-mono); color: var(--text-body); }
 .xl-how b { color: var(--text-body); }
 .xl-small { font: var(--type-body-sm); color: var(--text-faint); }
+
+/* formula: the score and the shield sit side by side, and stack on narrow screens instead of scrolling */
+.formula-eq { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--space-3) 1.2em; }
+.formula-eq math { margin: 0; }
+@media (max-width: 640px) { .formula math { font-size: 20px; overflow-x: visible; } }
+
+/* about: two cards per row, one on phones */
+.cards-3.cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) { .cards-3.cards-2 { grid-template-columns: 1fr; } }
+
+/* footer bottom links: a comfortable tap target on phones */
+@media (max-width: 640px) { .legal-links a { display: inline-block; padding: 10px 0; } }

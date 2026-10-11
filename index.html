@@ -377,6 +377,11 @@
         </li>
       </ul>
       <div class="tell-stage">
+        <div class="tell-mob" data-tell-mob>
+          <button class="icon-btn" type="button" data-tell-step="-1" aria-label="Previous tell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="tell-mob-text" aria-live="polite"><span class="mono"><span data-tm-n>01</span> / 09</span><b data-tm-label>Scroll-stopper</b><p data-tm-desc>A dramatic one-line opener, a gap, then one-line paragraphs walking to a moral. Built to stop the thumb, not to say anything.</p></div>
+          <button class="icon-btn" type="button" data-tell-step="1" aria-label="Next tell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
         <div class="tell-card">
           <div class="tell-card-head">
             <span class="mono">each tell is one spoke of the slopprint</span>
@@ -421,12 +426,16 @@
     </div>
     <div class="formula">
       <h3 class="formula-title">The score is the weight of the tells, shielded by what's useful and human.</h3>
+      <div class="formula-eq">
       <math display="block" aria-label="The slop score">
         <mi>S</mi><mo>=</mo><mi>&#x3B3;</mi><mo>&#x22C5;</mo>
         <mrow><mo>(</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>9</mn></munderover><msub><mi>w</mi><mi>i</mi></msub><msub><mi>&#x3C4;</mi><mi>i</mi></msub><mo>&#x2212;</mo><mi>&#x3BB;</mi><mi>h</mi><mo>)</mo></mrow>
-        <mo>&#x22C5;</mo><mrow><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3C3;</mi><mo>)</mo></mrow><mo>,</mo><mspace width="1.2em"/>
+        <mo>&#x22C5;</mo><mrow><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3C3;</mi><mo>)</mo></mrow><mo>,</mo>
+      </math>
+      <math display="block" aria-label="The shield">
         <mi>&#x3C3;</mi><mo>=</mo><mi>min</mi><mrow><mo>(</mo><mfrac><mrow><mi>u</mi><mo>+</mo><mi>r</mi></mrow><mn>2</mn></mfrac><mo>,</mo><mover><mi>&#x3C3;</mi><mo>&#x2C6;</mo></mover><mo>)</mo></mrow>
       </math>
+      </div>
       <div class="legend"><span><i>&#x3C4;<sub>i</sub></i>the nine tells</span><span><i>w<sub>i</sub></i>their weights</span><span><i>h</i>sounds like a person</span><span><i>u</i>useful to readers</span><span><i>r</i>reader response</span><span><i>&#x3C3;</i>the shield, capped</span></div>
     </div>
   </div>
