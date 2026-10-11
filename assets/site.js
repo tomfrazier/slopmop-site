@@ -103,7 +103,7 @@
   /* ---------- kit carousel: autoplay, pause on hover, arrows nudge one card either way ---------- */
   $$("[data-marquee]").forEach(function (m) {
     var track = $(".marquee-track", m), toggle = $("[data-marquee-toggle='" + m.id + "']");
-    var playing = !reduceMotion, hover = false, offset = 0, last = 0, tween = null, speed = 36; /* px per second */
+    var playing = !reduceMotion, hover = false, offset = 0, last = 0, tween = null, hold = 0, speed = 36; /* px per second */
     function half() { return track.scrollWidth / 2; }
     function step() { var c = $(".asset", track); return c ? c.getBoundingClientRect().width + 16 : 380; }
     function wrap(x) { var w = half(); return w ? ((x % w) + w) % w : 0; }
@@ -114,7 +114,7 @@
         var k = Math.min(1, (ts - tween.t0) / tween.d), e = 1 - Math.pow(1 - k, 3);
         offset = tween.from + (tween.to - tween.from) * e;
         if (k >= 1) tween = null;
-      } else if (playing && !hover) { offset += speed * dt; }
+      } else if (playing && !hover && ts > hold) { offset += speed * dt; }
       paint(); requestAnimationFrame(frame);
     }
     m.addEventListener("mouseenter", function () { hover = true; });
@@ -123,8 +123,17 @@
     m.addEventListener("focusout", function () { hover = false; });
     $$("[data-marquee-step]", m).forEach(function (b) {
       b.addEventListener("click", function () {
-        var from = offset, to = (tween ? tween.to : offset) + (+b.getAttribute("data-marquee-step")) * step();
-        tween = { from: from, to: to, t0: performance.now(), d: reduceMotion ? 1 : 420 };
+        /* Centre the next card in the direction pressed. Measured from where the current move will land,
+           so quick repeat presses step one card each. */
+        var dir = +b.getAttribute("data-marquee-step"), base = tween ? tween.to : offset;
+        var mr = m.getBoundingClientRect(), mid = mr.left + mr.width / 2, shift = base - offset, best = null;
+        $$(".asset", track).forEach(function (c) {
+          var r = c.getBoundingClientRect(), d = r.left + r.width / 2 - shift - mid;
+          if (dir > 0 ? d > 2 : d < -2) { if (best === null || Math.abs(d) < Math.abs(best)) best = d; }
+        });
+        var to = base + (best === null ? dir * step() : best);
+        tween = { from: offset, to: to, t0: performance.now(), d: reduceMotion ? 1 : 420 };
+        hold = performance.now() + 4000; /* let the centred card be read before autoplay resumes */
       });
     });
     if (toggle) {
@@ -223,7 +232,7 @@
   /* ---------- nine tells accordion ---------- */
   var tellRoot = $("[data-tells]");
   if (tellRoot) {
-    var items = $$(".tell-item", tellRoot);
+    var items = $$(".tell-item", tellRoot), mob = $("[data-tell-mob]", tellRoot);
     function openTell(idx, focus) {
       idx = (idx + items.length) % items.length;
       items.forEach(function (it, k) {
@@ -231,13 +240,33 @@
         $(".tell-btn", it).setAttribute("aria-expanded", k === idx ? "true" : "false");
       });
       tellRoot.setAttribute("data-current", idx);
+      if (mob) {
+        $("[data-tm-n]", mob).textContent = (idx < 9 ? "0" : "") + (idx + 1);
+        $("[data-tm-label]", mob).textContent = $(".tell-open b", items[idx]).textContent;
+        $("[data-tm-desc]", mob).textContent = $(".tell-open p", items[idx]).textContent;
+      }
       document.dispatchEvent(new CustomEvent("slopmop:tell", { detail: { index: idx, id: items[idx].getAttribute("data-tell") } }));
       if (focus) { var o = $(".tell-open", items[idx]); if (o) o.focus(); }
     }
     items.forEach(function (it, k) { $(".tell-btn", it).addEventListener("click", function () { openTell(k, true); }); });
     $$("[data-tell-step]", tellRoot).forEach(function (b) {
-      b.addEventListener("click", function () { openTell(+tellRoot.getAttribute("data-current") + (+b.getAttribute("data-tell-step"))); });
+      b.addEventListener("click", function () { openTell(+tellRoot.getAttribute("data-current") + (+b.getAttribute("data-tell-step"))); keepTellInView(); });
     });
+    /* On phones the strip and the example share one screen: if a step leaves part of them off screen, bring them back. */
+    var keepTellInView = function () {
+      if (!mob || !mob.offsetParent) return;
+      var stage = $(".tell-card", tellRoot), top = mob.getBoundingClientRect().top, bottom = stage.getBoundingClientRect().bottom;
+      var navH = ($(".nav") || { offsetHeight: 64 }).offsetHeight + 12;
+      if (top < navH || bottom > window.innerHeight) window.scrollBy({ top: top - navH, behavior: reduceMotion ? "auto" : "smooth" });
+    };
+    /* Swipe the example left or right to step through the tells. */
+    var sx = null, sy = 0, card = $(".tell-card", tellRoot);
+    card.addEventListener("touchstart", function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    card.addEventListener("touchend", function (e) {
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; sx = null;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) openTell(+tellRoot.getAttribute("data-current") + (dx < 0 ? 1 : -1));
+    }, { passive: true });
     openTell(0);
   }
 
