@@ -1,0 +1,52 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../ds/styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../ds/_ds_bundle.js"></script>
+<style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden}
+#c{width:1920px;height:1080px;position:relative;overflow:hidden;box-sizing:border-box;font-family:var(--font-display)}
+.xl{display:inline-flex;align-items:center;padding:0 .32em;height:1.15em;border-radius:6px;background:var(--mop-500);color:var(--text-on-accent);font-weight:700;letter-spacing:-.01em}
+.offer{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 20px;border-radius:8px;background:var(--ink-900);color:var(--paper-000);font:600 24px/1 var(--font-body)}
+.offer i{width:10px;height:10px;border-radius:50%;background:var(--mop-500)}
+</style>
+
+<style>
+#c{background:var(--paper-200);padding:64px 80px 0}
+.top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px}
+h1{margin:0;font:700 68px/1.02 var(--font-display);letter-spacing:-.02em;color:var(--ink-900)}
+h1 .xl{border-radius:8px}
+.sub{margin:16px 0 0;font:400 26px/1.4 var(--font-body);color:var(--text-muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cell.r1{height:318px}.cell.r2{height:418px}
+.cell{background:var(--surface-card);border:1px solid var(--border-hairline);border-radius:var(--radius-lg);padding:20px 22px 22px;box-sizing:border-box;overflow:hidden;display:flex;flex-direction:column;gap:14px}
+.cell h2{margin:0;font:700 26px/1.1 var(--font-display);color:var(--ink-900);display:flex;justify-content:space-between;align-items:baseline}
+.cell h2 span{font:400 15px/1 var(--font-mono);color:var(--text-faint)}
+.cell .in{flex:1;min-height:0;overflow:hidden;border-radius:var(--radius-md);background:var(--paper-200);padding:16px}
+.cell .in > *{zoom:.92}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px 0 5px;border-radius:999px;background:var(--paper-000);border:1px solid var(--border-hairline);font:600 17px/1 var(--font-body);color:var(--ink-900)}
+.pill b{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font:700 15px/1 var(--font-body)}
+</style></head><body>
+<div id="c">
+  <div class="top">
+    <div><h1>One payment. The <span class="xl">XL</span> mop everywhere.</h1>
+    <p class="sub">Lifetime XL cleans every feed, the sites you read and your inbox. 400 checks a day, no renewal.</p></div>
+    <span class="offer"><i></i>Launch offer</span>
+    
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+<script type="text/babel" src="../ds/Placements.jsx"></script>
+<script type="text/babel">
+const Cell=({t,m,r,children})=><section className={"cell "+r}><h2>{t}<span>{m}</span></h2><div className="in">{children}</div></section>;
+const PILLS=[["in","LinkedIn","#0A66C2"],["X","X","#000"],["r/","Reddit","#FF4500"],["f","Facebook","#1877F2"]];
+const Pills=()=><div className="pills">{PILLS.map(p=><span key={p[1]} className="pill"><b style={{background:p[2]}}>{p[0]}</b>{p[1]}</span>)}</div>;
+ReactDOM.createRoot(document.getElementById('grid')).render(<>
+  <Cell r="r1" t="Every feed" m="not just one"><window.SocialFeed/><Pills/></Cell>
+  <Cell r="r1" t="Articles" m="chip at the byline"><window.Article/></Cell>
+  <Cell r="r1" t="Your inbox" m="gmail · outlook"><window.Inbox/></Cell>
+  <Cell r="r2" t="Comments" m="tinted mop on each"><window.Comments hide/></Cell>
+  <Cell r="r2" t="Reviews" m="before the stars"><window.Reviews/></Cell>
+  <Cell r="r2" t="Article lists" m="scored when you ask"><window.ArticleList/></Cell>
+</>);
+</script></body></html>

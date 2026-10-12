@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../ds/styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../ds/_ds_bundle.js"></script>
+<style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden}
+#c{width:1920px;height:1080px;position:relative;overflow:hidden;box-sizing:border-box;font-family:var(--font-display)}
+.xl{display:inline-flex;align-items:center;padding:0 .32em;height:1.15em;border-radius:6px;background:var(--mop-500);color:var(--text-on-accent);font-weight:700;letter-spacing:-.01em}
+.offer{align-self:flex-start;display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 20px;border-radius:8px;background:var(--paper-000);color:var(--ink-900);font:600 24px/1 var(--font-body)}
+.offer i{width:10px;height:10px;border-radius:50%;background:var(--mop-500)}
+</style>
+
+<style>
+#c{background:var(--ink-900);color:var(--paper-000)}
+.left{position:absolute;left:120px;top:0;bottom:0;width:760px;display:flex;flex-direction:column;justify-content:center}
+.lock{position:absolute;left:120px;top:72px}
+h1{margin:36px 0 0;font:700 92px/1.02 var(--font-display);letter-spacing:-.02em}
+p.lede{margin:36px 0 0;font:400 32px/1.45 var(--font-body);color:var(--ink-300);max-width:30ch}
+p.lede b{color:var(--paper-000);font-weight:600}
+.stats{margin-top:48px;font:400 22px/1 var(--font-mono);color:var(--ink-400)}
+.g{position:absolute;left:1000px;top:56px;width:540px;transform:scale(1.03);transform-origin:top left}
+</style></head><body>
+<div id="c">
+  <div class="lock" id="lock"></div>
+  <div class="left">
+    <span class="offer"><i></i>Lifetime XL · launch offer</span>
+    <h1>Slop folds away. You pay once.</h1>
+    <p class="lede">Every post gets a score out of 100 before you reach it. Click the mop for the signs behind it, and <b>vote when it gets you wrong.</b></p>
+    <div class="stats">one payment · no renewal · 400 checks a day</div>
+  </div>
+  <div class="g" id="g"></div>
+</div>
+<script type="text/babel" src="HeroGraphic.jsx"></script>
+<script type="text/babel">
+const NS=window.SlopMopDesignSystem_ca9143;
+ReactDOM.createRoot(document.getElementById('lock')).render(<NS.Wordmark size={30} tone="inverse" showDot />);
+ReactDOM.createRoot(document.getElementById('g')).render(<window.HeroGraphic/>);
+</script></body></html>
