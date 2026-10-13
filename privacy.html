@@ -3,14 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]});
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted'});
+  (function () {
+    var c = null; try { c = JSON.parse(localStorage.getItem('slopmop:consent')); } catch (e) {}
+    if (c && c.v === 1 && Date.now() - c.t < 365 * 864e5) gtag('consent', 'update', {analytics_storage: c.analytics ? 'granted' : 'denied'});
+    else if (navigator.globalPrivacyControl === true) gtag('consent', 'update', {analytics_storage: 'denied'});
+  })();
   gtag('js', new Date());
   gtag('config', 'G-QLWD48WK07');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
 <title>Privacy policy — Slop Mop</title>
 <meta name="description" content="What the Slop Mop extension sends to api.slopmop.lol and what it stores, what your account holds, how Polar handles payments for Slop Mop XL, how this website uses Google Analytics, how long things are kept, and how to reach a human.">
 <link rel="canonical" href="https://slopmop.lol/privacy.html">
@@ -92,7 +99,7 @@
       <span class="eyebrow">privacy</span>
       <h1 class="h-1">Privacy policy</h1>
       <p class="lede">Slop Mop is a browser extension from Artimovo LLC. It reads the posts your own LinkedIn session already rendered, sends the text out to be judged, and keeps as little as it can afterwards. Your account holds your email address, settings and votes. This site uses Google Analytics, and Slop Mop XL is billed through Polar. This page says exactly what all of that means.</p>
-      <p class="mono">last updated 9 october 2026</p>
+      <p class="mono">last updated 13 october 2026</p>
     </div>
     <div class="ph-visual"><div class="tv-stack">
   <div class="tv-card"><span class="tv-label">what leaves your browser</span>
@@ -158,9 +165,10 @@
 </section>
 <section id="this-website-and-google-analytics">
 <h2>This website and Google Analytics</h2>
-<p>This website, <code>slopmop.lol</code>, uses Google Analytics to count visits and see which pages are useful. Google Analytics sets cookies in your browser and collects information such as the pages you view, the site that sent you, your browser and device type, and your approximate location, which Google derives from your IP address. Google processes that data under <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">its own policies</a>. We don't use it for advertising and we don't combine it with anything the extension sends.</p>
-<p>You can block it with your browser's cookie or tracking settings, a content blocker, or <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google's opt-out add-on</a>. The site works the same either way.</p>
-<p>The site's fonts are served by Google Fonts. If you sign up for updates, your email address is collected through Formspree and used only to send you Slop Mop news. Every email has an unsubscribe link.</p>
+<p>This website, <code>slopmop.lol</code>, uses Google Analytics to count visits and see which pages are useful. With your consent, Google Analytics sets cookies in your browser and collects information such as the pages you view, the site that sent you, your browser and device type, and your approximate location, which Google derives from your IP address. Google processes that data under <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">its own policies</a>. We don't use it for advertising and we don't combine it with anything the extension sends.</p>
+<p><strong>Cookie choice.</strong> In the UK, the EEA and Switzerland, Google Analytics sets no cookies until you choose Accept on the cookie banner. Until then, and if you choose Reject, it sends only cookieless pings with no identifier, as Google's consent mode does. Elsewhere, analytics cookies are on unless you choose Reject or your browser sends a Global Privacy Control signal. Change your choice any time with Cookie settings at the bottom of every page. Your choice is saved in your browser for a year.</p>
+<p>You can also block analytics with your browser's cookie or tracking settings, a content blocker, or <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google's opt-out add-on</a>. The site works the same either way.</p>
+<p>The site's fonts are served by Google Fonts. Forms on this site go through Formspree. If you sign up for updates, your email address is used only to send you Slop Mop news, and every email has an unsubscribe link. If you use the contact form, your name, email address and message are used only to reply to you.</p>
 <p><strong>Google Analytics runs on this website only.</strong> The extension does not load it, and nothing from your feed is sent to Google Analytics.</p>
 
 </section>
@@ -207,7 +215,7 @@
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="open-source.html">Open source</a></li>
-        <li><a href="mailto:hello@slopmop.lol">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div><h3>Legal</h3><ul>
         <li><a href="privacy.html">Privacy policy</a></li>
@@ -229,6 +237,7 @@
         <a href="open-source.html">Open source</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
+        <button class="link-btn" type="button" data-consent-open>Cookie settings</button>
       </nav>
     </div>
   </div>
