@@ -44,7 +44,22 @@ var SITE = {
 
 A social icon stays hidden until its URL is filled in.
 
-Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, right after the viewport meta. It's disclosed in the privacy policy.
+Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2:
+
+- In the UK, EEA and Switzerland, analytics cookies stay off until the visitor clicks Accept on the cookie banner; until then GA sends cookieless pings. Elsewhere they are on unless the visitor clicks Reject or sends Global Privacy Control. Ads signals are always denied.
+- The banner and the footer's "Cookie settings" button live in `assets/site.js`; the choice is kept in `localStorage` (`slopmop:consent`) for a year.
+- The XL pages strip the query string from `page_location`, so checkout ids never reach GA.
+
+Events sent (register `link_location` and `lead_source` as custom dimensions in GA; mark `add_to_browser` and `generate_lead` as key events):
+
+| Event | When | Parameters |
+| --- | --- | --- |
+| `add_to_browser` | any "Add to browser" link is clicked | `link_location` (nav, footer, hero, pricing…), `link_url` |
+| `generate_lead` | newsletter signup or contact form is sent successfully | `lead_source` (`newsletter` or `contact_form`), `form_location` |
+| `tour_open` | "Take a tour" opens the video | `link_location` |
+| `begin_checkout` | the XL checkout opens on `xl/checkout` | `currency` |
+
+Page views, scrolls, outbound clicks and form starts come from GA's enhanced measurement.
 
 ## Slop Mop XL checkout
 

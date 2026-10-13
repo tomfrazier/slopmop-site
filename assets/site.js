@@ -26,8 +26,23 @@
   function $(s, r) { return (r || document).querySelector(s); }
   function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
 
+  /* ---------- analytics events (GA4). Consent mode in the page head decides whether cookies are used. ---------- */
+  function gaEvent(name, params) { try { if (window.gtag) window.gtag("event", name, params || {}); } catch (e) {} }
+  function where(el) {
+    if (el.closest(".nav")) return "nav";
+    if (el.closest("footer")) return "footer";
+    var sec = el.closest("section");
+    if (sec && (sec.id || sec.classList[0])) return sec.id || sec.classList[0];
+    return location.pathname.replace(/^\/|\.html$/g, "") || "home";
+  }
+  window.slopmopTrack = gaEvent;
+
   /* store + product hunt + social links */
-  $$("[data-add]").forEach(function (a) { a.href = SITE.storeUrl; a.target = "_blank"; a.rel = "noopener"; });
+  $$("[data-add]").forEach(function (a) {
+    a.href = SITE.storeUrl; a.target = "_blank"; a.rel = "noopener";
+    /* Key event: someone heading to the Chrome Web Store to install. */
+    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: SITE.storeUrl }); });
+  });
   $$("[data-ph]").forEach(function (a) { if (SITE.productHuntUrl) { a.href = SITE.productHuntUrl; } a.hidden = !(SITE.announcementBar && SITE.productHuntUrl); });
   $$("[data-social]").forEach(function (a) {
     var url = SITE.social[a.getAttribute("data-social")];
@@ -51,15 +66,52 @@
       btn.disabled = true; note.classList.remove("err"); note.textContent = "Sending…";
       fetch(SITE.emailEndpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({ email: email, source: "slopmop.lol", _subject: "Slop Mop monthly stats signup" }) })
-        .then(function (r) { if (!r.ok) throw new Error(); note.textContent = "You're on the list. The first numbers go out at the end of the month."; input.value = ""; })
+        .then(function (r) {
+          if (!r.ok) throw new Error();
+          note.textContent = "You're on the list. The first numbers go out at the end of the month."; input.value = "";
+          gaEvent("generate_lead", { lead_source: "newsletter", form_location: where(form) });
+        })
         .catch(function () { note.textContent = "That didn't go through. Try again in a minute."; note.classList.add("err"); })
         .then(function () { btn.disabled = false; });
     });
   });
 
+  /* contact form: send stays off until name, a well-formed email and a message are all filled in */
+  $$("form[data-contact]").forEach(function (form) {
+    var name = $("[name=name]", form), email = $("[name=email]", form), msg = $("[name=message]", form);
+    var btn = $("button[type=submit]", form), status = $(".contact-status", form), err = $("#c-email-err", form);
+    var EMAIL = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
+    function emailOk() { return EMAIL.test(email.value.trim()); }
+    function check() {
+      btn.disabled = !(name.value.trim() && emailOk() && msg.value.trim());
+      var bad = email.value.trim() !== "" && !emailOk();
+      email.setAttribute("aria-invalid", bad ? "true" : "false");
+      if (err) err.hidden = !(bad && email.dataset.touched);
+    }
+    [name, email, msg].forEach(function (f) { f.addEventListener("input", check); });
+    email.addEventListener("blur", function () { email.dataset.touched = "1"; check(); });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); email.dataset.touched = "1"; check();
+      if (btn.disabled) return;
+      btn.disabled = true; status.classList.remove("err"); status.textContent = "Sending…";
+      fetch(SITE.emailEndpoint, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
+        .then(function (r) { if (!r.ok) throw new Error(); })
+        .then(function () {
+          gaEvent("generate_lead", { lead_source: "contact_form", form_location: "contact" });
+          form.innerHTML = '<div class="contact-done"><h2 class="h-2">Thanks. Message sent.</h2><p class="lede">We reply by email, usually within two working days.</p></div>';
+        })
+        .catch(function () {
+          status.classList.add("err");
+          status.innerHTML = 'That didn\'t go through. Try again, or email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.';
+          check();
+        });
+    });
+    check();
+  });
+
   /* tour video */
   var dlg = $("dialog.tour");
-  $$("[data-tour]").forEach(function (b) { b.addEventListener("click", function () { if (dlg && dlg.showModal) { dlg.showModal(); var v = $("video", dlg); if (v) v.play().catch(function () {}); } }); });
+  $$("[data-tour]").forEach(function (b) { b.addEventListener("click", function () { gaEvent("tour_open", { link_location: where(b) }); if (dlg && dlg.showModal) { dlg.showModal(); var v = $("video", dlg); if (v) v.play().catch(function () {}); } }); });
   if (dlg) {
     $(".close", dlg).addEventListener("click", function () { dlg.close(); });
     dlg.addEventListener("close", function () { var v = $("video", dlg); if (v) v.pause(); });
@@ -308,4 +360,41 @@
     setTimeout(layout, 300);
   }
 
+
+  /* ---------- cookie banner (UK/EEA/US). Google Analytics is the only thing it covers.
+     The page head sets Consent Mode defaults; this records the visitor's choice and updates them. ---------- */
+  var CONSENT_KEY = "slopmop:consent";
+  function readConsent() { try { var c = JSON.parse(localStorage.getItem(CONSENT_KEY)); return c && c.v === 1 && Date.now() - c.t < 365 * 864e5 ? c : null; } catch (e) { return null; } }
+  function clearGaCookies() {
+    document.cookie.split(";").forEach(function (c) {
+      var n = c.split("=")[0].trim();
+      if (/^_ga/.test(n)) ["", "; domain=" + location.hostname, "; domain=." + location.hostname.replace(/^www\./, "")].forEach(function (d) {
+        document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + d;
+      });
+    });
+  }
+  function setConsent(analytics) {
+    try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ v: 1, analytics: analytics, t: Date.now() })); } catch (e) {}
+    if (window.gtag) window.gtag("consent", "update", { analytics_storage: analytics ? "granted" : "denied" });
+    if (!analytics) clearGaCookies();
+  }
+  var banner = null;
+  function showBanner() {
+    if (!banner) {
+      banner = document.createElement("div");
+      banner.className = "consent"; banner.setAttribute("role", "dialog"); banner.setAttribute("aria-live", "polite"); banner.setAttribute("aria-label", "Cookie choice");
+      var priv = (document.querySelector('a[href$="privacy.html"]') || { getAttribute: function () { return "privacy.html"; } }).getAttribute("href");
+      banner.innerHTML = '<p><b>Cookies, just for counting visits.</b> We use Google Analytics cookies to see which pages are useful. No ads, no selling data. ' +
+        '<a href="' + priv + '#this-website-and-google-analytics">How it works</a></p>' +
+        '<div class="consent-btns"><button class="btn btn-secondary btn-sm" type="button" data-consent="0">Reject</button>' +
+        '<button class="btn btn-secondary btn-sm" type="button" data-consent="1">Accept</button></div>';
+      $$("[data-consent]", banner).forEach(function (b) {
+        b.addEventListener("click", function () { setConsent(b.getAttribute("data-consent") === "1"); banner.hidden = true; });
+      });
+      document.body.appendChild(banner);
+    }
+    banner.hidden = false;
+  }
+  if (!readConsent()) showBanner();
+  $$("[data-consent-open]").forEach(function (b) { b.addEventListener("click", showBanner); });
 })();

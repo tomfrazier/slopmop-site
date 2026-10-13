@@ -3,14 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]});
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted'});
+  (function () {
+    var c = null; try { c = JSON.parse(localStorage.getItem('slopmop:consent')); } catch (e) {}
+    if (c && c.v === 1 && Date.now() - c.t < 365 * 864e5) gtag('consent', 'update', {analytics_storage: c.analytics ? 'granted' : 'denied'});
+    else if (navigator.globalPrivacyControl === true) gtag('consent', 'update', {analytics_storage: 'denied'});
+  })();
   gtag('js', new Date());
-  gtag('config', 'G-QLWD48WK07');
+  gtag('config', 'G-QLWD48WK07', { page_location: location.origin + location.pathname });
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
 <title>Checkout · Slop Mop XL</title>
 <meta name="description" content="Checkout for Slop Mop XL.">
 <link rel="canonical" href="https://slopmop.lol/xl/checkout">
@@ -109,12 +116,12 @@
         <button class="btn btn-primary" type="button" id="xl-open">Open checkout</button>
         <a id="xl-hosted" href="#">Open checkout on its own page</a>
       </p>
-      <p class="xl-small">$59.99 a year or $6.99 a month · renews automatically · cancel any time from Manage billing. By paying you agree to the <a href="../terms.html#plans-and-subscriptions">terms of service</a>.</p>
+      <p class="xl-small">$59.99 a year or $5.99 a month · renews automatically · cancel any time from Manage billing. By paying you agree to the <a href="../terms.html#plans-and-subscriptions">terms of service</a>.</p>
     </div>
     <div id="xl-invalid" hidden>
       <span class="eyebrow">checkout</span>
-      <h2 class="h-1">This checkout link isn't valid.</h2>
-      <p class="lede">Start again from Slop Mop: click the mop in your browser's toolbar, then <b>Get the XL mop</b>. Stuck? <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
+      <h2 class="h-1">This checkout has expired.</h2>
+      <p class="lede">It may have timed out or already been paid. Start again from Slop Mop: click the mop in your browser's toolbar, then <b>Get the XL mop</b>. Stuck? <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
     </div>
   </div>
 </section>
@@ -148,7 +155,7 @@
         <li><a href="../help.html">Help</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../open-source.html">Open source</a></li>
-        <li><a href="mailto:hello@slopmop.lol">Contact</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul></div>
       <div><h3>Legal</h3><ul>
         <li><a href="../privacy.html">Privacy policy</a></li>
@@ -170,6 +177,7 @@
         <a href="../open-source.html">Open source</a>
         <a href="../privacy.html">Privacy</a>
         <a href="../terms.html">Terms</a>
+        <button class="link-btn" type="button" data-consent-open>Cookie settings</button>
       </nav>
     </div>
   </div>
@@ -183,30 +191,41 @@
   if (ext && /^[a-p]{32}$/.test(ext)) {
     try { localStorage.setItem("slopmop:ext", ext); } catch {}
   }
-  // Only a Polar checkout opens here: api.slopmop.lol makes the session, but anyone can link to this page.
-  const POLAR_HOSTS = ["buy.polar.sh", "polar.sh", "sandbox.polar.sh"];
-  const session = (() => {
-    try {
-      const u = new URL(params.get("session") || "");
-      return u.protocol === "https:" && POLAR_HOSTS.includes(u.hostname) ? u.toString() : null;
-    } catch { return null; }
-  })();
-  if (!session) { document.getElementById("xl-invalid").hidden = false; return; }
-  document.getElementById("xl-ready").hidden = false;
-  document.getElementById("xl-hosted").href = session;
+  // Only Slop Mop's own APIs are asked, and the page embeds only the link one of them returns for this checkout id:
+  // a link handed to this page is never opened.
+  const APIS = ["https://api.slopmop.lol", "https://staging-api.slopmop.lol"];
+  const api = APIS.includes(params.get("api")) ? params.get("api") : APIS[0];
+  const id = params.get("checkout") || "";
+  const invalid = () => { document.getElementById("xl-invalid").hidden = false; };
+  if (!/^[0-9a-f-]{36}$/i.test(id)) return invalid();
+
+  let session = null;
   let open = null;
   const embed = async () => {
+    if (!session) return;
     // Without Polar's script (blocked, offline) the hosted page does the same job.
     if (!window.Polar?.EmbedCheckout) { location.href = session; return; }
     if (open) return;
     try {
       open = await window.Polar.EmbedCheckout.create(session, { theme: "light" });
+      window.slopmopTrack?.("begin_checkout", { currency: "USD" });
       open.addEventListener("close", () => { open = null; });
       // On success Polar sends them to /xl/welcome, the session's success URL.
     } catch { location.href = session; }
   };
   document.getElementById("xl-open").addEventListener("click", embed);
-  addEventListener("load", embed);
+
+  fetch(`${api}/api/v1/account/checkout?id=${encodeURIComponent(id)}`, { credentials: "omit" })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((c) => {
+      const u = c && typeof c.url === "string" ? new URL(c.url) : null;
+      if (!u || u.protocol !== "https:" || !(u.hostname === "polar.sh" || u.hostname.endsWith(".polar.sh"))) return invalid();
+      session = u.toString();
+      document.getElementById("xl-ready").hidden = false;
+      document.getElementById("xl-hosted").href = session;
+      embed();
+    })
+    .catch(invalid);
 })();
 </script>
 </body>
