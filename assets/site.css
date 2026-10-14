@@ -670,3 +670,18 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .link-btn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 @media (max-width: 640px) { .legal-links .link-btn { padding: 10px 0; } }
 .legal-links .link-btn { color: var(--text-muted); text-decoration-color: var(--border-default); font: inherit; }
+
+/* ---------- account deleted ---------- */
+.gone { display: grid; gap: var(--space-10); max-width: 960px; }
+.gone-cards { margin: 0; }
+.gone-cards .card h3 { margin: 0 0 var(--space-4); font: var(--type-heading); font-size: var(--text-lg); }
+.gone-cards .card p, .gone-cards .card li { font: var(--type-body-sm); color: var(--text-muted); line-height: 1.6; }
+.gone-cards .card p { margin: 0; }
+.gone-cards .card ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; }
+.gone-cards .card li b { color: var(--text-body); }
+.gone-remove .h-2, .gone-form .h-2 { margin: 0 0 var(--space-5); }
+.gone-form { max-width: 640px; }
+.gone-form .h-2 { margin-bottom: 0; }
+.gone-form .lede-sm { margin: 0; font: var(--type-body); color: var(--text-muted); }
+.opt { font-weight: 400; color: var(--text-faint); font-size: .8em; }
+.gone-foot { margin: 0; padding-top: var(--space-7); border-top: 1px solid var(--border-hairline); font: var(--type-body-sm); color: var(--text-muted); }

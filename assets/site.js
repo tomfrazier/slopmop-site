@@ -109,6 +109,36 @@
     check();
   });
 
+  /* account-deleted feedback: optional; Send needs some text, and the email only if one is typed must be well formed.
+     No analytics event: this page sends nothing beyond its page view. */
+  $$("form[data-feedback]").forEach(function (form) {
+    var msg = $("[name=message]", form), email = $("[name=email]", form), btn = $("button[type=submit]", form);
+    var status = $(".contact-status", form), err = $("#f-email-err", form);
+    var EMAIL = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
+    function emailOk() { var v = email.value.trim(); return v === "" || EMAIL.test(v); }
+    function check() {
+      btn.disabled = !(msg.value.trim() && emailOk());
+      email.setAttribute("aria-invalid", emailOk() ? "false" : "true");
+      if (err) err.hidden = emailOk() || !email.dataset.touched;
+    }
+    [msg, email].forEach(function (f) { f.addEventListener("input", check); });
+    email.addEventListener("blur", function () { email.dataset.touched = "1"; check(); });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); email.dataset.touched = "1"; check();
+      if (btn.disabled) return;
+      btn.disabled = true; status.classList.remove("err"); status.textContent = "Sending…";
+      fetch(SITE.emailEndpoint, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
+        .then(function (r) { if (!r.ok) throw new Error(); })
+        .then(function () { form.innerHTML = '<div class="contact-done"><h2 class="h-2">Thanks for telling us.</h2><p class="lede">We read every one.</p></div>'; })
+        .catch(function () {
+          status.classList.add("err");
+          status.innerHTML = 'That didn\'t go through. Try again, or email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.';
+          check();
+        });
+    });
+    check();
+  });
+
   /* tour video */
   var dlg = $("dialog.tour");
   $$("[data-tour]").forEach(function (b) { b.addEventListener("click", function () { gaEvent("tour_open", { link_location: where(b) }); if (dlg && dlg.showModal) { dlg.showModal(); var v = $("video", dlg); if (v) v.play().catch(function () {}); } }); });
