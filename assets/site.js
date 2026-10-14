@@ -3,6 +3,11 @@
   /* ---------- site settings: edit here ---------- */
   var SITE = {
     storeUrl: "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
+    /* Other stores. "Add to browser" sends each browser to its own store; an empty one falls back to storeUrl
+       (Chrome Web Store, which Comet, Brave, Opera, Arc, Vivaldi and other Chromium browsers also use). */
+    edgeStoreUrl: "",
+    firefoxStoreUrl: "",
+    safariStoreUrl: "",
     productHuntUrl: "https://www.producthunt.com/products/slop-mop",
     emailEndpoint: "https://formspree.io/f/xaenejjw",
     /* The top announcement bar (Product Hunt). Set to true to show it again. */
@@ -38,10 +43,13 @@
   window.slopmopTrack = gaEvent;
 
   /* store + product hunt + social links */
+  var ua = navigator.userAgent;
+  var browser = /Edg\//.test(ua) ? "edge" : /Firefox\//.test(ua) ? "firefox" : (/Safari\//.test(ua) && !/Chrome\/|Chromium\/|CriOS|Android/.test(ua)) ? "safari" : "chrome";
+  var storeUrl = { edge: SITE.edgeStoreUrl, firefox: SITE.firefoxStoreUrl, safari: SITE.safariStoreUrl }[browser] || SITE.storeUrl;
   $$("[data-add]").forEach(function (a) {
-    a.href = SITE.storeUrl; a.target = "_blank"; a.rel = "noopener";
-    /* Key event: someone heading to the Chrome Web Store to install. */
-    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: SITE.storeUrl }); });
+    a.href = storeUrl; a.target = "_blank"; a.rel = "noopener";
+    /* Key event: someone heading to their browser's store to install. */
+    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser }); });
   });
   $$("[data-ph]").forEach(function (a) { if (SITE.productHuntUrl) { a.href = SITE.productHuntUrl; } a.hidden = !(SITE.announcementBar && SITE.productHuntUrl); });
   $$("[data-social]").forEach(function (a) {
@@ -100,6 +108,36 @@
           gaEvent("generate_lead", { lead_source: "contact_form", form_location: "contact" });
           form.innerHTML = '<div class="contact-done"><h2 class="h-2">Thanks. Message sent.</h2><p class="lede">We reply by email, usually within two working days.</p></div>';
         })
+        .catch(function () {
+          status.classList.add("err");
+          status.innerHTML = 'That didn\'t go through. Try again, or email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.';
+          check();
+        });
+    });
+    check();
+  });
+
+  /* account-deleted feedback: optional; Send needs some text, and the email only if one is typed must be well formed.
+     No analytics event: this page sends nothing beyond its page view. */
+  $$("form[data-feedback]").forEach(function (form) {
+    var msg = $("[name=message]", form), email = $("[name=email]", form), btn = $("button[type=submit]", form);
+    var status = $(".contact-status", form), err = $("#f-email-err", form);
+    var EMAIL = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/;
+    function emailOk() { var v = email.value.trim(); return v === "" || EMAIL.test(v); }
+    function check() {
+      btn.disabled = !(msg.value.trim() && emailOk());
+      email.setAttribute("aria-invalid", emailOk() ? "false" : "true");
+      if (err) err.hidden = emailOk() || !email.dataset.touched;
+    }
+    [msg, email].forEach(function (f) { f.addEventListener("input", check); });
+    email.addEventListener("blur", function () { email.dataset.touched = "1"; check(); });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); email.dataset.touched = "1"; check();
+      if (btn.disabled) return;
+      btn.disabled = true; status.classList.remove("err"); status.textContent = "Sending…";
+      fetch(form.getAttribute("data-endpoint") || SITE.emailEndpoint, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
+        .then(function (r) { if (!r.ok) throw new Error(); })
+        .then(function () { form.innerHTML = '<div class="contact-done"><h2 class="h-2">Thanks for telling us.</h2><p class="lede">We read every one.</p></div>'; })
         .catch(function () {
           status.classList.add("err");
           status.innerHTML = 'That didn\'t go through. Try again, or email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.';
