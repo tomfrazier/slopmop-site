@@ -153,8 +153,8 @@
 <section id="when-your-vote-disagrees">
 <h2>When your vote disagrees</h2>
 <p>Voting is how you tell Slop Mop it got a post wrong. <strong>If your vote disagrees with Slop Mop's verdict, the full text of that post is stored with your vote</strong>: for example, you vote No on a post it called Likely slop, or Probably on one it let through. Votes that agree with the verdict store no text.</p>
-<p>A person at Artimovo reviews each of these posts by hand. The ones Slop Mop got wrong go into a training set used to tune the weights of the tells and the scoring, so it makes fewer of the same mistakes. The author's name and profile are not stored with the text.</p>
-<p>These training examples are kept for as long as they help improve Slop Mop. To have a post removed from them, whether you voted on it or wrote it, email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
+<p>A person at Artimovo reviews each of these posts by hand. The ones Slop Mop got wrong go into a training set used to tune the weights of the tells and the scoring, so it makes fewer of the same mistakes. The author's name and profile are never stored with the text: Slop Mop judges writing, not people. These training examples are kept for as long as they help improve Slop Mop.</p>
+<p>This applies to posts and articles only. Votes on emails never store their text and are never used for training.</p>
 <p>You can't vote on your own posts: the vote panel doesn't appear on them, so nothing you wrote is stored through your own vote.</p>
 
 </section>
@@ -176,8 +176,9 @@
 <section id="email-gmail-and-outlook">
 <h2>Email (Gmail and Outlook)</h2>
 <p>With Slop Mop XL, the Gmail and Outlook plugins score the emails in your inbox. They work inside your mail app, and only after you install them.</p>
-<p><strong>Personal information in an email is never sent to Slop Mop's servers.</strong> Before an email is scored, the plugin redacts it: names, email addresses, phone numbers, Social Security and other ID numbers, bank and card details, and health information are removed. Attachments are never sent. Only the redacted text goes to <code>api.slopmop.lol</code>, and only the redacted text is ever stored.</p>
-<p>Sender and recipient addresses are never sent, and the plugins don't send, delete, move or reply to anything in your mailbox.</p>
+<p><strong>Personal information in an email is never sent to Slop Mop's servers.</strong> Before an email is scored, the plugin redacts it: names, email addresses, phone numbers, Social Security and other ID numbers, bank and card details, and health information are removed. Attachments are never sent. Only the redacted text goes to <code>api.slopmop.lol</code> to be scored, and the email text is never stored: like a post, it leaves only a one-way hash.</p>
+<p>Sender and recipient addresses are never sent, so Slop Mop never learns who you email or who emails you. The plugins don't send, delete, move or reply to anything in your mailbox.</p>
+<p>You can vote on an email's verdict the same way as on a post. Votes on emails only change what you see: their text is never stored and never used for training.</p>
 
 </section>
 <section id="this-website-and-google-analytics">
