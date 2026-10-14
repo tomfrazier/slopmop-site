@@ -179,8 +179,8 @@
         var next = (i + 1) % order.length;
         if (next === 0) { cycles++; }
         set(order[next]);
-        if (cycles >= 1 && next === 0) stop(); /* one lap, then rest on LinkedIn: no endless loop */
-      }, 2400);
+        if (cycles >= 2 && next === 0) stop(); /* two laps, then rest on LinkedIn: no endless loop */
+      }, 1800);
     }
     chips.forEach(function (c) { c.addEventListener("click", function () { set(c.getAttribute("data-net"), true); }); });
     if (pauseBtn) pauseBtn.addEventListener("click", function () { if (stopped) { cycles = 0; play(); } else stop(); });
