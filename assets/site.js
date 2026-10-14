@@ -127,7 +127,7 @@
       e.preventDefault(); email.dataset.touched = "1"; check();
       if (btn.disabled) return;
       btn.disabled = true; status.classList.remove("err"); status.textContent = "Sending…";
-      fetch(SITE.emailEndpoint, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
+      fetch(form.getAttribute("data-endpoint") || SITE.emailEndpoint, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
         .then(function (r) { if (!r.ok) throw new Error(); })
         .then(function () { form.innerHTML = '<div class="contact-done"><h2 class="h-2">Thanks for telling us.</h2><p class="lede">We read every one.</p></div>'; })
         .catch(function () {
