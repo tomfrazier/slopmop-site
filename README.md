@@ -20,7 +20,7 @@ assets/sites.js     hero mockups of each host site (LinkedIn, X, Reddit, Faceboo
 assets/sites.css    styles for those mockups
 assets/logos/       network and social marks (simple-icons)
 vendor/             React 18.3.1 UMD, self-hosted so the components need no CDN
-og-image-2.png      1200x630 share image (og:image)
+og-image-3.png      1200x630 share image (og:image); og-image-2.png and og-image.png are older versions
 favicon.svg         favicon (+ PNG fallbacks and apple-touch-icon)
 site.webmanifest    icon manifest
 CNAME               slopmop.lol
@@ -84,4 +84,4 @@ MIT.
 
 The title, description, Open Graph, Twitter and JSON-LD tags **must stay inside `<head>`**, above `<body>`. LinkedIn, Facebook, Slack and X read the raw HTML without running JavaScript and ignore tags in `<body>`. 
 
-After deploying, re-scrape: https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ . To force a refresh, rename the image (og-image-3.png) and update every og:image / twitter:image.
+After deploying, re-scrape: https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ . To force a refresh, rename the image (og-image-4.png) and update every og:image / twitter:image.
