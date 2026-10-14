@@ -3,6 +3,11 @@
   /* ---------- site settings: edit here ---------- */
   var SITE = {
     storeUrl: "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
+    /* Other stores. "Add to browser" sends each browser to its own store; an empty one falls back to storeUrl
+       (Chrome Web Store, which Comet, Brave, Opera, Arc, Vivaldi and other Chromium browsers also use). */
+    edgeStoreUrl: "",
+    firefoxStoreUrl: "",
+    safariStoreUrl: "",
     productHuntUrl: "https://www.producthunt.com/products/slop-mop",
     emailEndpoint: "https://formspree.io/f/xaenejjw",
     /* The top announcement bar (Product Hunt). Set to true to show it again. */
@@ -38,10 +43,13 @@
   window.slopmopTrack = gaEvent;
 
   /* store + product hunt + social links */
+  var ua = navigator.userAgent;
+  var browser = /Edg\//.test(ua) ? "edge" : /Firefox\//.test(ua) ? "firefox" : (/Safari\//.test(ua) && !/Chrome\/|Chromium\/|CriOS|Android/.test(ua)) ? "safari" : "chrome";
+  var storeUrl = { edge: SITE.edgeStoreUrl, firefox: SITE.firefoxStoreUrl, safari: SITE.safariStoreUrl }[browser] || SITE.storeUrl;
   $$("[data-add]").forEach(function (a) {
-    a.href = SITE.storeUrl; a.target = "_blank"; a.rel = "noopener";
-    /* Key event: someone heading to the Chrome Web Store to install. */
-    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: SITE.storeUrl }); });
+    a.href = storeUrl; a.target = "_blank"; a.rel = "noopener";
+    /* Key event: someone heading to their browser's store to install. */
+    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser }); });
   });
   $$("[data-ph]").forEach(function (a) { if (SITE.productHuntUrl) { a.href = SITE.productHuntUrl; } a.hidden = !(SITE.announcementBar && SITE.productHuntUrl); });
   $$("[data-social]").forEach(function (a) {

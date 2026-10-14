@@ -108,19 +108,19 @@
   <div class="wrap xl-next">
     <span class="eyebrow">one last step</span>
     <h2 class="h-1">Your mop can reach everywhere.</h2>
-    <p class="lede">To mop more than one feed, Chrome needs your OK for Slop Mop to read the pages you visit. It reads post and article text to score it, and never stores it.</p>
+    <p class="lede">To mop more than one feed, your browser needs your OK for Slop Mop to read the pages you visit. It reads post and article text to score it, and never stores it.</p>
     <p style="display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap; margin: var(--space-8) 0 0">
       <button class="btn btn-primary" type="button" id="xl-allow">Allow all sites</button>
-      <span class="xl-small">Slop Mop opens and asks Chrome for you.</span>
+      <span class="xl-small">Slop Mop opens and asks your browser for you.</span>
     </p>
     <div class="callout" id="xl-signin" hidden><p><b>Slop Mop in this browser isn't signed in.</b> Click the mop in your toolbar and sign in with the email you used at checkout; XL turns on by itself.</p></div>
     <div class="callout" id="xl-noext" hidden><p><b>Couldn't reach Slop Mop from this page.</b> Do it from the toolbar instead:</p></div>
     <ol class="xl-how">
       <li><span><b>Click the Slop Mop icon</b> in your browser's toolbar. If you can't see it, open the puzzle-piece menu and pin it.</span></li>
-      <li><span><b>Choose “Let Slop Mop access all sites”</b> and approve Chrome's prompt.</span></li>
+      <li><span><b>Choose “Let Slop Mop access all sites”</b> and approve your browser's prompt.</span></li>
       <li><span><b>Open any feed.</b> XL is ready on every feed and site. Articles and comments are scored when you click their mop, so checks are only spent on what you ask about.</span></li>
     </ol>
-    <p class="xl-small">You can turn site access off again in Chrome's extension settings. Questions about your subscription: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>. How billing, renewal and refunds work: <a href="../terms.html#plans-and-subscriptions">terms of service</a>.</p>
+    <p class="xl-small">You can turn site access off again in your browser's extension settings. Questions about your subscription: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>. How billing, renewal and refunds work: <a href="../terms.html#plans-and-subscriptions">terms of service</a>.</p>
   </div>
 </section>
 </main>
@@ -188,13 +188,25 @@
   let ext = new URLSearchParams(location.search).get("ext");
   if (!ext) { try { ext = localStorage.getItem("slopmop:ext"); } catch {} }
   const valid = !!ext && /^[a-p]{32}$/.test(ext);
-  const send = (message) =>
+  // Chrome, Edge, Opera, Brave: straight to the extension by its id. Firefox, Safari: through the extension's relay script.
+  const direct = (message) =>
     new Promise((resolve) => {
       if (!valid || !window.chrome?.runtime?.sendMessage) return resolve(null);
       try {
         chrome.runtime.sendMessage(ext, message, (reply) => resolve(chrome.runtime.lastError ? null : reply ?? null));
       } catch { resolve(null); }
     });
+  const relayed = (message) =>
+    new Promise((resolve) => {
+      if (document.documentElement.dataset.slopmopRelay !== "1") return resolve(null);
+      const id = Math.random().toString(36).slice(2);
+      const done = (reply) => { removeEventListener("message", on); resolve(reply); };
+      const on = (e) => { if (e.source === window && e.data?.slopmop === "fromExtension" && e.data.id === id) done(e.data.reply ?? null); };
+      addEventListener("message", on);
+      postMessage({ slopmop: "toExtension", id, message }, location.origin);
+      setTimeout(() => done(null), 5000);
+    });
+  const send = (message) => (valid ? direct(message) : relayed(message));
   const show = (id) => { document.getElementById(id).hidden = false; };
   // Slop Mop reads the plan from Polar now rather than waiting for Polar's webhook. Nothing here is trusted: the
   // extension asks the server, which asks Polar.

@@ -685,3 +685,12 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .gone-form .lede-sm { margin: 0; font: var(--type-body); color: var(--text-muted); }
 .opt { font-weight: 400; color: var(--text-faint); font-size: .8em; }
 .gone-foot { margin: 0; padding-top: var(--space-7); border-top: 1px solid var(--border-hairline); font: var(--type-body-sm); color: var(--text-muted); }
+
+/* ---------- hero: browsers it works in ---------- */
+.browsers { margin-top: var(--space-7); display: flex; flex-direction: column; align-items: center; gap: var(--space-4); }
+.browsers > .mono { font: var(--type-mono-label); color: var(--text-faint); }
+.browsers ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4) var(--space-6); }
+.browsers li { display: flex; align-items: center; gap: 8px; font: var(--type-ui); font-size: 13px; color: var(--text-muted); }
+.browsers img { width: 22px; height: 22px; }
+@media (max-width: 640px) { .browsers ul { gap: var(--space-4) var(--space-5); } .browsers li { font-size: 12px; } .browsers img { width: 20px; height: 20px; } }
+.hero-meta { margin-top: var(--space-5); }

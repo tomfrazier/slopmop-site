@@ -85,8 +85,8 @@
       "@id": "https://slopmop.lol/#app",
       "name": "Slop Mop",
       "applicationCategory": "BrowserApplication",
-      "applicationSubCategory": "Chrome extension",
-      "operatingSystem": "Chrome",
+      "applicationSubCategory": "Browser extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Safari, Firefox, Chromium browsers",
       "url": "https://slopmop.lol/",
       "installUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
       "downloadUrl": "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho",
@@ -171,7 +171,7 @@
           "name": "What is Slop Mop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Slop Mop is a browser extension, free for one feed, that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it. Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming."
+            "text": "Slop Mop is a browser extension, free for one feed, that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it. Today it works on LinkedIn in desktop Chrome, Microsoft Edge, Safari, Firefox and Chromium browsers such as Comet, Brave and Opera. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming."
           }
         },
         {
@@ -227,7 +227,7 @@
           "name": "Does Slop Mop read my email?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The privacy policy has the details."
+            "text": "Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. We take every step we can to catch names written in the body of an email, but can't guarantee every one. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The privacy policy has the details."
           }
         },
         {
@@ -235,7 +235,7 @@
           "name": "Can Slop Mop see who I email?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The names and email addresses of the people on an email are replaced with placeholders in your mailbox before anything is sent, and so are other personal details in the message. We take every step we can to catch names, though one written in the body of an email can occasionally get through. Slop Mop judges the writing in an email, never who sent it or who it's for."
+            "text": "No. Slop Mop never sees who an email is from or who it's to: the sender and recipient names and addresses are taken out in your mailbox before anything is sent. Slop Mop judges the writing in an email, never who sent it or who it's for."
           }
         },
         {
@@ -290,7 +290,11 @@
         <button class="chip" type="button" data-net="email" data-label="Email" data-logo="assets/logos/email.svg" data-color="#EA4335" style="--c:#EA4335" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/email.svg);mask-image:url(assets/logos/email.svg)" aria-hidden="true"></span>Email<span class="badge badge-soon">soon</span></button>
         <button class="chip" type="button" data-net="websites" data-label="Websites" data-logo="assets/logos/web.svg" data-color="#2F6FBF" style="--c:#2F6FBF" aria-pressed="false"><span class="chip-logo" style="-webkit-mask-image:url(assets/logos/web.svg);mask-image:url(assets/logos/web.svg)" aria-hidden="true"></span>Websites<span class="badge badge-soon">soon</span></button>
     </div>
-    <p class="mono hero-meta">desktop chrome &amp; chromium · linkedin today · other feeds, email and websites coming soon</p>
+    <div class="browsers" aria-label="Works in these desktop browsers">
+      <span class="mono">works in</span>
+      <ul><li><img src="assets/logos/chrome-color.svg" alt="" width="22" height="22"><span>Chrome</span></li><li><img src="assets/logos/microsoftedge-color.svg" alt="" width="22" height="22"><span>Microsoft Edge</span></li><li><img src="assets/logos/safari-color.svg" alt="" width="22" height="22"><span>Safari</span></li><li><img src="assets/logos/firefoxbrowser-color.svg" alt="" width="22" height="22"><span>Firefox</span></li><li><img src="assets/logos/comet-color.svg" alt="" width="22" height="22"><span>Comet</span></li><li><img src="assets/logos/brave-color.svg" alt="" width="22" height="22"><span>Brave</span></li><li><img src="assets/logos/opera-color.svg" alt="" width="22" height="22"><span>Opera</span></li><li><img src="assets/logos/chromium-color.svg" alt="" width="22" height="22"><span>All Chromium browsers</span></li></ul>
+    </div>
+    <p class="mono hero-meta">desktop browsers · linkedin today · other feeds, email and websites coming soon</p>
     <div class="stack">
       <button class="icon-btn stack-pause" type="button" aria-label="Pause network tour"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
       <div data-island="NetworkStack"></div>
@@ -592,8 +596,8 @@
         <div class="int soon"><span class="lg"><img src="assets/logos/gmail.svg" alt="" width="20" height="20"></span><span class="nm">Gmail</span><span class="badge badge-soon">coming soon</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftoutlook.svg" alt="" width="20" height="20"></span><span class="nm">Outlook</span><span class="badge badge-soon">coming soon</span></div>
       </div>
       <div class="int-group"><h3>browsers</h3>
-        <div class="int"><span class="lg"><img src="assets/logos/chrome-color.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/chromium-color.svg" alt="" width="20" height="20"></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div><div class="int soon"><span class="lg"><img src="assets/logos/microsoftedge.svg" alt="" width="20" height="20"></span><span class="nm">Microsoft Edge</span><span class="badge badge-soon">coming soon</span></div>
-        <p class="mono" style="margin:4px 0 0">brave, arc, opera, vivaldi: chromium browsers that install from the chrome web store</p>
+        <div class="int"><span class="lg"><img src="assets/logos/chrome-color.svg" alt="" width="20" height="20"></span><span class="nm">Chrome</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/microsoftedge-color.svg" alt="" width="20" height="20"></span><span class="nm">Microsoft Edge</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/safari-color.svg" alt="" width="20" height="20"></span><span class="nm">Safari</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/firefoxbrowser-color.svg" alt="" width="20" height="20"></span><span class="nm">Firefox</span><span class="badge badge-live">live</span></div><div class="int"><span class="lg"><img src="assets/logos/chromium-color.svg" alt="" width="20" height="20"></span><span class="nm">Chromium browsers</span><span class="badge badge-live">live</span></div>
+        <p class="mono" style="margin:4px 0 0">comet, brave, opera, arc, vivaldi and other chromium browsers install from the chrome web store</p>
       </div>
     </div>
   </div>
@@ -642,15 +646,15 @@
       <h2 class="h-1">Questions? We've mopped up a few.</h2>
     </div>
     <div class="faq">
-    <details><summary>What is Slop Mop?</summary><div class="a"><p>Slop Mop is a browser extension, free for one feed, that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it.</p><p>Today it works on LinkedIn in desktop Chrome and Chromium browsers. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming.</p></div></details>
+    <details><summary>What is Slop Mop?</summary><div class="a"><p>Slop Mop is a browser extension, free for one feed, that reads the posts in your feed before you reach them, judges the writing, and folds away what reads like slop. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it.</p><p>Today it works on LinkedIn in desktop Chrome, Microsoft Edge, Safari, Firefox and Chromium browsers such as Comet, Brave and Opera. X, Reddit, Facebook, Substack, Medium, email and the rest of the web are coming.</p></div></details>
     <details><summary>Is Slop Mop an AI detector?</summary><div class="a"><p>No. Slop Mop is a bad-writing detector. AI-assisted writing can be excellent and human writing can be spectacular slop, so it asks a more useful question: is this worth your attention?</p></div></details>
     <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
     <details><summary>Does it block, delete, mute or report posts?</summary><div class="a"><p>No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported.</p></div></details>
     <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. Nothing that leads to you or the author is saved with it: it judges writing, not people. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
     <details><summary>Is it free?</summary><div class="a"><p>Slop Mop is free for one feed, with 250 checks a day, for good. LinkedIn is the first feed it reads; X, Reddit and Facebook are coming soon. Slop Mop XL, coming soon, takes the mop to every feed, the sites you read and your inbox, for $5.99 a month or $59.99 a year. It renews automatically until you cancel, and you can cancel any time.</p></div></details>
     <details><summary>What leaves my browser?</summary><div class="a"><p>The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text, unless your vote disagrees with its verdict: then that post's text is kept for review and training. The <a href="privacy.html">privacy policy</a> lists everything it stores.</p></div></details>
-    <details><summary>Does Slop Mop read my email?</summary><div class="a"><p>Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The <a href="privacy.html#slop-mop-for-email">privacy policy</a> has the details.</p></div></details>
-    <details><summary>Can Slop Mop see who I email?</summary><div class="a"><p>No. The names and email addresses of the people on an email are replaced with placeholders in your mailbox before anything is sent, and so are other personal details in the message. We take every step we can to catch names, though one written in the body of an email can occasionally get through. Slop Mop judges the writing in an email, never who sent it or who it's for.</p></div></details>
+    <details><summary>Does Slop Mop read my email?</summary><div class="a"><p>Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. We take every step we can to catch names written in the body of an email, but can't guarantee every one. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The <a href="privacy.html#slop-mop-for-email">privacy policy</a> has the details.</p></div></details>
+    <details><summary>Can Slop Mop see who I email?</summary><div class="a"><p>No. Slop Mop never sees who an email is from or who it's to: the sender and recipient names and addresses are taken out in your mailbox before anything is sent. Slop Mop judges the writing in an email, never who sent it or who it's for.</p></div></details>
     <details><summary>Is Slop Mop open source?</summary><div class="a"><p>The original version of the extension and judging server is MIT licensed and public on GitHub. Everything about it, and the link to the code, is on the <a href="open-source.html">open-source page</a>.</p></div></details>
     </div>
   </div>
