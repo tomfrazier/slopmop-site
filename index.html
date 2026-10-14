@@ -203,7 +203,7 @@
           "name": "What happens when it gets one wrong?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. It will be wrong sometimes. That's why it shows its working and gives you the last word."
+            "text": "Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word."
           }
         },
         {
@@ -219,7 +219,15 @@
           "name": "What leaves my browser?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text. The privacy policy lists all five things it stores."
+            "text": "The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text, unless your vote disagrees with its verdict: then that post's text is kept for review and training. The privacy policy lists everything it stores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Slop Mop read my email?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only with Slop Mop XL, through its Gmail and Outlook plugins, and never your personal details. Before an email is sent to be scored, the plugin redacts names, email addresses, phone numbers, Social Security numbers, bank and card details and health information. Attachments are never sent. Only the redacted text reaches Slop Mop's servers. The privacy policy has the details."
           }
         },
         {
@@ -259,7 +267,7 @@
   <div class="wrap">
     <span class="eyebrow">a bad-writing detector, not an ai detector</span>
     <h1 class="h-hero" style="margin-top:var(--space-7)">Built for <span class="net-word" style="--c:#0A66C2"><span class="net-logo"><img src="assets/logos/linkedin.svg" alt=""></span><span class="word">LinkedIn</span><span class="stop">.</span></span></h1>
-    <p class="lede">Everyone is posting more to be seen, and AI made posting nearly free. Slop Mop reads your feed before you reach it, folds away the posts that aren't worth your attention, and shows you exactly why.</p>
+    <p class="lede">Time is the one thing you can't get back. Stop spending it on slop, whether a person or an AI wrote it.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser — free</a>
       <button class="btn btn-secondary" type="button" data-tour><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Take a tour</button>
@@ -452,10 +460,10 @@
     <div class="trust-copy">
       <span class="eyebrow">no judgment of people</span>
       <h2 class="h-1">Judges the writing. Never the writer.</h2>
-      <p class="lede">Slop Mop has no opinion about you, and none about the person who wrote the post. It never learns who wrote a post, keeps no copy of what they wrote, and tells nobody what it thought.</p>
+      <p class="lede">Slop Mop has no opinion about you, and none about the person who wrote the post. It never learns who wrote a post, and tells nobody what it thought.</p>
       <ul class="never">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>No names go out with a post.</b> Not yours, not the author's. Only the post text and its public counts are sent to be judged.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Posts aren't stored.</b> The server keeps a one-way hash so a post isn't judged twice. The words themselves are never kept.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Posts aren't stored, unless it got one wrong.</b> The server keeps a one-way hash so a post isn't judged twice. Only when your vote disagrees with its verdict is the text kept, so a person can review it and the scoring can learn.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>No profiles, of anyone.</b> No score is ever attached to a person, and no browsing history or LinkedIn profile data is collected.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Nothing is reported.</b> No author is flagged, muted or told. A verdict only changes what you see, in your own browser.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Your votes stay private.</b> They're never shown to anyone or sent to the author, and only ever counted in aggregate to tune the questions.</span></li>
@@ -630,9 +638,10 @@
     <details><summary>Is Slop Mop an AI detector?</summary><div class="a"><p>No. Slop Mop is a bad-writing detector. AI-assisted writing can be excellent and human writing can be spectacular slop, so it asks a more useful question: is this worth your attention?</p></div></details>
     <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
     <details><summary>Does it block, delete, mute or report posts?</summary><div class="a"><p>No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported.</p></div></details>
-    <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed, and everyone's votes feed into how the questions get tuned. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
+    <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
     <details><summary>Is it free?</summary><div class="a"><p>Slop Mop is free for one feed, with 250 checks a day, for good. LinkedIn is the first feed it reads; X, Reddit and Facebook are coming soon. Slop Mop XL, coming soon, takes the mop to every feed, the sites you read and your inbox, for $5.99 a month or $59.99 a year. It renews automatically until you cancel, and you can cancel any time.</p></div></details>
-    <details><summary>What leaves my browser?</summary><div class="a"><p>The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text. The <a href="privacy.html">privacy policy</a> lists all five things it stores.</p></div></details>
+    <details><summary>What leaves my browser?</summary><div class="a"><p>The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text, unless your vote disagrees with its verdict: then that post's text is kept for review and training. The <a href="privacy.html">privacy policy</a> lists everything it stores.</p></div></details>
+    <details><summary>Does Slop Mop read my email?</summary><div class="a"><p>Only with Slop Mop XL, through its Gmail and Outlook plugins, and never your personal details. Before an email is sent to be scored, the plugin redacts names, email addresses, phone numbers, Social Security numbers, bank and card details and health information. Attachments are never sent. Only the redacted text reaches Slop Mop's servers. The <a href="privacy.html#email-gmail-and-outlook">privacy policy</a> has the details.</p></div></details>
     <details><summary>Is Slop Mop open source?</summary><div class="a"><p>The original version of the extension and judging server is MIT licensed and public on GitHub. Everything about it, and the link to the code, is on the <a href="open-source.html">open-source page</a>.</p></div></details>
     </div>
   </div>
