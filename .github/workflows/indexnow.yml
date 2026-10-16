@@ -1,0 +1,29 @@
+# After each GitHub Pages deploy, submit the pages that commit changed to IndexNow.
+# Run it by hand (Actions → IndexNow → Run workflow) with "all" ticked to submit every page in the sitemap.
+name: IndexNow
+
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Submit every page in sitemap.xml"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 2
+      - name: Submit changed pages
+        run: python3 .github/scripts/indexnow.py ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}

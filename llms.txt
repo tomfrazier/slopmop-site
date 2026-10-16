@@ -1,0 +1,15 @@
+# Slop Mop
+
+> A browser extension that reads your feed ahead of you and folds away low-value posts ("slop"), whether a person or an AI wrote them, and shows why. Not an AI detector: a bad-writing detector. Free for one feed; live on LinkedIn.
+
+## Start here
+- [Slop Mop in brief](https://slopmop.lol/ask-ai.md): what it is, how it works, who it's for, pricing, privacy, press
+- [How it works](https://slopmop.lol/how-it-works.html): the nine tells, the counter-signals, the score
+- [About](https://slopmop.lol/about.html): canonical product information
+
+## Data
+- [The Slop Report](https://slopmop.lol/stats/): what Slop Mop finds in the feeds it reads
+
+## Policies
+- [Privacy policy](https://slopmop.lol/privacy.html)
+- [Terms of service](https://slopmop.lol/terms)

@@ -84,6 +84,10 @@
     });
   });
 
+  /* Ask AI buttons and press links: which assistant people reach for, and which mention they open */
+  $$("[data-ask]").forEach(function (a) { a.addEventListener("click", function () { gaEvent("ask_ai", { tool: a.getAttribute("data-ask"), link_location: where(a) }); }); });
+  $$("[data-press]").forEach(function (a) { a.addEventListener("click", function () { gaEvent("press_click", { outlet: a.getAttribute("data-press") }); }); });
+
   /* contact form: send stays off until name, a well-formed email and a message are all filled in */
   $$("form[data-contact]").forEach(function (form) {
     var name = $("[name=name]", form), email = $("[name=email]", form), msg = $("[name=message]", form);

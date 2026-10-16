@@ -699,3 +699,31 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .hero-meta { margin-top: var(--space-5); }
 .browsers li.soon img { opacity: .55; }
 .browsers li .badge { margin-left: -2px; }
+
+/* ---------- proof band: the token count and where Slop Mop has been written about ---------- */
+.proof { padding: var(--space-9) 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline); background: var(--surface-card); }
+.proof-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--space-9); align-items: center; }
+.proof-stat { display: grid; grid-template-columns: auto 1fr; column-gap: var(--space-6); row-gap: 4px; align-items: center; color: var(--text-body); text-decoration: none; }
+.proof-stat b { grid-row: span 2; font: var(--weight-bold) clamp(44px, 6vw, 64px)/1 var(--font-display); letter-spacing: -0.03em; color: var(--ink-900); }
+.proof-what { font: var(--weight-semibold) var(--text-md)/1.35 var(--font-display); }
+.proof-stat .mono { display: inline-flex; align-items: center; gap: 6px; font: var(--type-mono); font-size: var(--text-2xs); color: var(--text-faint); }
+.proof-stat .mono svg { width: 13px; height: 13px; transition: transform var(--dur-fast) var(--ease-standard); }
+.proof-stat:hover .mono { color: var(--text-body); } .proof-stat:hover .mono svg { transform: translateX(3px); }
+.proof-press { display: grid; gap: var(--space-4); justify-items: end; }
+.proof-press .mono { font-size: var(--text-2xs); color: var(--text-faint); }
+.proof-press ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-7); justify-content: flex-end; }
+.proof-press a { display: inline-flex; align-items: center; gap: 8px; font: var(--weight-semibold) var(--text-sm)/1 var(--font-body); color: var(--text-muted); text-decoration: none; }
+.proof-press img { filter: grayscale(1); opacity: .65; transition: filter var(--dur-fast), opacity var(--dur-fast); }
+.proof-press a:hover { color: var(--text-body); } .proof-press a:hover img { filter: none; opacity: 1; }
+@media (max-width: 860px) { .proof-grid { grid-template-columns: 1fr; } .proof-press { justify-items: start; } .proof-press ul { justify-content: flex-start; } }
+
+/* ---------- footer: Ask AI under the newsletter box, page-updated line ---------- */
+.footer-side { display: grid; gap: var(--space-8); }
+.ask-ai-label { margin: 0 0 var(--space-4); font: var(--type-heading); color: var(--text-body); }
+.ask-ai-row { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+.ask-ai-btn { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--border-default); border-radius: var(--radius-md); background: var(--surface-card); transition: border-color var(--dur-fast) var(--ease-standard), transform var(--dur-fast) var(--ease-standard); }
+.ask-ai-btn img { filter: grayscale(1); opacity: .55; transition: filter var(--dur-fast) var(--ease-standard), opacity var(--dur-fast) var(--ease-standard); }
+.ask-ai-btn:hover, .ask-ai-btn:focus-visible { border-color: var(--ink-900); transform: translateY(-1px); }
+.ask-ai-btn:hover img, .ask-ai-btn:focus-visible img { filter: none; opacity: 1; }
+.footer-bottom .updated time { color: var(--text-muted); }
+@media (prefers-reduced-motion: reduce) { .ask-ai-btn, .ask-ai-btn img, .proof-press img { transition: none; } }
