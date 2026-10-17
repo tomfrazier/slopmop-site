@@ -708,7 +708,6 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .proof-what { font: var(--weight-semibold) var(--text-md)/1.35 var(--font-display); }
 .proof-stat .mono { display: inline-flex; align-items: center; gap: 6px; font: var(--type-mono); font-size: var(--text-2xs); color: var(--text-faint); }
 .proof-stat .mono svg { width: 13px; height: 13px; transition: transform var(--dur-fast) var(--ease-standard); }
-.proof-stat:hover .mono { color: var(--text-body); } .proof-stat:hover .mono svg { transform: translateX(3px); }
 .proof-press { display: grid; gap: var(--space-4); justify-items: end; }
 .proof-press .mono { font-size: var(--text-2xs); color: var(--text-faint); }
 .proof-press ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-7); justify-content: flex-end; }

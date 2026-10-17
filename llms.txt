@@ -7,9 +7,6 @@
 - [How it works](https://slopmop.lol/how-it-works.html): the nine tells, the counter-signals, the score
 - [About](https://slopmop.lol/about.html): canonical product information
 
-## Data
-- [The Slop Report](https://slopmop.lol/stats/): what Slop Mop finds in the feeds it reads
-
 ## Policies
 - [Privacy policy](https://slopmop.lol/privacy.html)
 - [Terms of service](https://slopmop.lol/terms)

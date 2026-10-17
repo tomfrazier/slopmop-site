@@ -32,7 +32,6 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 
 - People who use LinkedIn for work and are tired of scrolling past hooks, bait and filler to find the posts worth reading.
 - Anyone who wants a calmer feed without leaving the platform or muting people.
-- Researchers and journalists interested in how much low-value writing is in social feeds (see the Slop Report).
 
 ## Key benefits
 
@@ -45,7 +44,6 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 ## By the numbers
 
 - **70 million tokens** of posts read in the three weeks to 16 October 2026.
-- The Slop Report publishes monthly figures: https://slopmop.lol/stats/
 
 ## Pricing
 
