@@ -15,6 +15,14 @@ It is **not an AI detector**. It judges the writing, not who or what wrote it. A
 - Coming soon: X, Reddit, Facebook, Substack, Medium, email (Gmail and Outlook) and websites
 - Works in: Chrome, Brave, Opera, Comet and other Chromium browsers. Microsoft Edge, Safari and Firefox are coming soon.
 
+## Background
+
+Slop Mop started in September 2026 as a test of a new kind of AI model: a calibrated decision model. Instead of writing text, it answers fixed questions with choices, scores or calibrated probabilities. Tom Frazier wanted a real problem to test it on, and the one he ran into every day was slop: feeds full of hooks, bait and filler that took attention and gave nothing back.
+
+The timing lined up. The same week, Graphite published its "AI Tells" study, built on 100,000 articles: 10,000 human-written articles from before ChatGPT, and 90,000 rewrites of them by nine AI models. It found about 13,000 words and phrases that appear at least twice as often in AI writing as in human writing. That research became Slop Mop's starting point: six of its nine tells come from it, and the other three are feed habits added on top.
+
+Slop Mop brought three things together: solid research on what slop looks like, a model built to make calibrated calls, and a problem almost everyone online recognises. It launched as a free, open-source (MIT-licensed) Chrome extension and quickly drew attention, including coverage in The Register and a discussion on Hacker News. Artimovo has since turned it into a commercial product, tuned on more than 70 million tokens of real posts.
+
 ## How it works
 
 1. **Reads ahead.** As you scroll, Slop Mop sends the text of each new post (never your name, never the author's) to its scoring service.
