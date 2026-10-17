@@ -439,4 +439,39 @@
   }
   if (!readConsent()) showBanner();
   $$("[data-consent-open]").forEach(function (b) { b.addEventListener("click", showBanner); });
+
+  /* ---------- theme: system / light / dark. The head script sets data-theme before paint; this keeps it in step. ---------- */
+  var themeMq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  function themePref() { try { return localStorage.getItem("theme") || "system"; } catch (e) { return "system"; } }
+  function applyTheme() {
+    var p = themePref(), dark = p === "dark" || (p === "system" && themeMq && themeMq.matches);
+    if (dark) document.documentElement.setAttribute("data-theme", "dark"); else document.documentElement.removeAttribute("data-theme");
+    $$("[data-theme-set]").forEach(function (b) { b.setAttribute("aria-checked", b.getAttribute("data-theme-set") === p ? "true" : "false"); });
+  }
+  $$(".theme-pick").forEach(function (g) { g.hidden = false; });
+  $$("[data-theme-set]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var v = b.getAttribute("data-theme-set");
+      try { if (v === "system") localStorage.removeItem("theme"); else localStorage.setItem("theme", v); } catch (e) {}
+      applyTheme(); gaEvent("theme", { theme: v });
+    });
+  });
+  if (themeMq && themeMq.addEventListener) themeMq.addEventListener("change", applyTheme);
+  applyTheme();
+
+  /* ---------- on-this-page nav: mark the section being read ---------- */
+  $$(".toc").forEach(function (toc) {
+    var links = $$('a[href^="#"]', toc), secs = links.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
+    if (!links.length) return;
+    var ticking = false;
+    function spy() {
+      ticking = false;
+      var line = 140, i = 0;
+      secs.forEach(function (s, k) { if (s && s.getBoundingClientRect().top <= line) i = k; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) i = secs.length - 1;
+      links.forEach(function (a, k) { if (k === i) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+    }
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
+    spy();
+  });
 })();
