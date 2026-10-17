@@ -724,5 +724,4 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .ask-ai-btn img { filter: grayscale(1); opacity: .55; transition: filter var(--dur-fast) var(--ease-standard), opacity var(--dur-fast) var(--ease-standard); }
 .ask-ai-btn:hover, .ask-ai-btn:focus-visible { border-color: var(--ink-900); transform: translateY(-1px); }
 .ask-ai-btn:hover img, .ask-ai-btn:focus-visible img { filter: none; opacity: 1; }
-.footer-bottom .updated time { color: var(--text-muted); }
 @media (prefers-reduced-motion: reduce) { .ask-ai-btn, .ask-ai-btn img, .proof-press img { transition: none; } }
