@@ -1,3 +1,33 @@
+# slopmop.lol is open to search engines and AI assistants. Named crawlers below are allowed explicitly so it's clear
+# we want to be found and cited; the catch-all at the bottom covers everyone else.
+
+# Search engines
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+Allow: /
+
+# AI search and answer engines (fetch pages to answer questions and cite them)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Meta-ExternalFetcher
+User-agent: MistralAI-User
+Allow: /
+
+# AI model training crawlers
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Meta-ExternalAgent
+User-agent: CCBot
+Allow: /
+
 User-agent: *
 Allow: /
 
