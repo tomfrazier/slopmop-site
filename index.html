@@ -302,8 +302,6 @@
       <a href="index.html#tells">The tells</a>
       <a href="index.html#networks">Networks</a>
       <a href="index.html#pricing">Pricing</a>
-      <a href="help.html">Help</a>
-      <a href="about.html">About</a>
     </nav>
     <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -699,18 +697,20 @@
   </div>
 </section>
 <section class="band">
-  <div class="wrap">
-    <div class="band-logo"><img src="assets/img/mark.svg" alt="">Slop Mop</div>
-    <div class="band-line">Your feed, <span class="hl">minus the slop.</span></div>
-    <div class="band-row">
-      <div>
-        <h2 class="h-2">Give your attention a filter you control.</h2>
-        <p class="lede">About a minute to install. No account, no API key, nothing to configure before it starts reading ahead.</p>
-      </div>
+  <div class="wrap band-grid">
+    <div class="band-copy">
+      <div class="band-logo"><img src="assets/img/mark.svg" alt="">Slop Mop</div>
+      <div class="band-line">Your feed, <span class="hl">minus the slop.</span></div>
+      <p class="lede">About a minute to install. No account, no API key, nothing to configure before it starts reading ahead.</p>
       <div class="ctas">
         <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser — free</a>
-        <a class="btn btn-secondary" href="help.html">Install help</a>
       </div>
+    </div>
+    <div class="band-video">
+      <video data-preview poster="assets/video/preview.jpg" muted loop playsinline preload="none" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback" aria-label="Slop Mop in action: a silent preview of the tour video" width="1280" height="720">
+        <source src="assets/video/preview.mp4" type="video/mp4">
+        <source src="assets/video/preview.webm" type="video/webm">
+      </video>
     </div>
   </div>
 </section>
@@ -755,17 +755,17 @@
         <li><a href="index.html#tells">The nine tells</a></li>
         <li><a href="index.html#networks">Networks</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho">Add to browser</a></li>
       </ul></div>
       <div><h3>Resources</h3><ul>
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="open-source.html">Open source</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div><h3>Legal</h3><ul>
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="terms.html">Terms of service</a></li>
+        <li><a href="open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
       </ul></div>
       <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
         <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
@@ -784,12 +784,6 @@
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
       <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
-      <nav class="legal-links" aria-label="Legal">
-        <a href="open-source.html">Open source</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <button class="link-btn" type="button" data-consent-open>Cookie settings</button>
-      </nav>
     </div>
   </div>
 </footer>
