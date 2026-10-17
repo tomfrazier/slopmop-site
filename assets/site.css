@@ -754,3 +754,8 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
 
 /* Ask AI on the dark footer: every mark as the same flat silhouette, so none shouts louder; colour comes back on hover */
 .footer .ask-ai-btn img { filter: grayscale(1) brightness(0) invert(1); opacity: .55; }
+
+/* ---------- /ask-ai: the brief for AI assistants (an orphan page, built from ask-ai.md) ---------- */
+.ask-brief { padding-top: var(--space-6); }
+.ask-brief h1 { margin: 0 0 var(--space-6); font: var(--weight-bold) clamp(36px, 5vw, 56px)/1.1 var(--font-display); letter-spacing: -0.02em; color: var(--text-body); }
+.ask-brief li + li { margin-top: 6px; }
