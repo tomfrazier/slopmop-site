@@ -474,4 +474,19 @@
     window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
     spy();
   });
+
+  /* ---------- band preview: silent loop that plays only while on screen; controls appear on hover or focus ---------- */
+  $$("video[data-preview]").forEach(function (v) {
+    var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    v.muted = true;
+    function show() { v.controls = true; } function hide() { if (document.activeElement !== v) v.controls = false; }
+    v.addEventListener("mouseenter", show); v.addEventListener("mouseleave", hide);
+    v.addEventListener("focus", show); v.addEventListener("blur", hide);
+    v.tabIndex = 0;
+    if (still || !("IntersectionObserver" in window)) { v.preload = "metadata"; return; }
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } });
+    }, { threshold: 0.25 }).observe(v);
+    v.addEventListener("play", function once() { v.removeEventListener("play", once); gaEvent("preview_play", {}); });
+  });
 })();

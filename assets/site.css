@@ -342,10 +342,6 @@ a:hover { text-decoration: underline; }
 .band-line { display: flex; flex-wrap: wrap; align-items: center; column-gap: 0.32em; row-gap: 0.1em; font: var(--weight-bold) clamp(36px, 6.2vw, 84px)/1.05 var(--font-display); letter-spacing: -0.025em; }
 .band-line img { width: 0.9em; height: 0.9em; }
 .band-line .sep { color: var(--mop-500); }
-.band-row { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; margin-top: var(--space-11); }
-.band-row .h-2 { max-width: 22ch; }
-.band-row .lede { margin-top: var(--space-5); max-width: 52ch; }
-.band-row .ctas { display: flex; gap: var(--space-5); flex-wrap: wrap; }
 
 /* ---------- footer ---------- */
 .footer { border-top: 1px solid var(--border-hairline); padding: var(--space-12) 0 0; }
@@ -741,3 +737,20 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 /* ---------- footer: near-black in both themes. It carries data-theme="dark", so everything inside uses the dark tokens. ---------- */
 .footer { background: var(--paper-100); color: var(--text-body); border-top: 1px solid var(--border-hairline); }
 html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
+
+/* ---------- band: install on the left, a silent looping preview on the right ---------- */
+.band-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-11); align-items: center; }
+.band-logo { font-size: clamp(32px, 4vw, 48px); }
+.band-line { font-size: clamp(26px, 3.2vw, 40px); margin-top: var(--space-5); }
+.band-copy .lede { margin-top: var(--space-6); max-width: 46ch; }
+.band-copy .ctas { margin-top: var(--space-8); display: flex; gap: var(--space-5); flex-wrap: wrap; }
+.band-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: var(--radius-lg); background: var(--ink-900); border: 1px solid var(--border-hairline); box-shadow: var(--shadow-raised); object-fit: cover; }
+@media (max-width: 860px) { .band-grid { grid-template-columns: 1fr; gap: var(--space-9); } }
+
+/* footer: cookie settings sits in the Legal column as a link */
+.footer-cols .link-btn { all: unset; cursor: pointer; color: var(--text-muted); font: var(--type-body-sm); font-size: 14px; }
+.footer-cols .link-btn:hover { color: var(--text-body); }
+.footer-cols .link-btn:focus-visible { box-shadow: var(--shadow-focus); border-radius: 2px; }
+
+/* Ask AI on the dark footer: every mark as the same flat silhouette, so none shouts louder; colour comes back on hover */
+.footer .ask-ai-btn img { filter: grayscale(1) brightness(0) invert(1); opacity: .55; }
