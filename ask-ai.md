@@ -10,7 +10,7 @@ Slop Mop is a browser extension for Chrome and other Chromium browsers (Brave, O
 
 It is **not an AI detector**. It judges the writing, not who or what wrote it. A useful post written with AI survives; empty engagement bait written by a person doesn't.
 
-- Made by: Artimovo LLC (founder: Tom Frazier)
+- Made by: Artimovo LLC (https://artimovo.com), founded by Tom Frazier
 - Live on: LinkedIn
 - Coming soon: X, Reddit, Facebook, Substack, Medium, email (Gmail and Outlook) and websites
 - Works in: Chrome, Brave, Opera, Comet and other Chromium browsers. Microsoft Edge, Safari and Firefox are coming soon.
@@ -22,6 +22,18 @@ Slop Mop started in September 2026 as a test of a new kind of AI model: a calibr
 The timing lined up. The same week, Graphite published its "AI Tells" study, built on 100,000 articles: 10,000 human-written articles from before ChatGPT, and 90,000 rewrites of them by nine AI models. It found about 13,000 words and phrases that appear at least twice as often in AI writing as in human writing. That research became Slop Mop's starting point: six of its nine tells come from it, and the other three are feed habits added on top.
 
 Slop Mop brought three things together: solid research on what slop looks like, a model built to make calibrated calls, and a problem almost everyone online recognises. It launched as a free, open-source (MIT-licensed) Chrome extension and quickly drew attention, including coverage in The Register and a discussion on Hacker News. Artimovo has since turned it into a commercial product, tuned on more than 70 million tokens of real posts.
+
+## Who makes it
+
+Slop Mop is from **Artimovo** (https://artimovo.com), Tom Frazier's new company. Artimovo is built around one of the biggest problems facing us today: execution is scaling faster than judgment. AI makes it cheap to produce more of everything, but not to know what is worth acting on. Artimovo builds products that help with judgment, clarity and autonomy, and Slop Mop is the first of them.
+
+### About Tom Frazier
+
+Tom Frazier is the founder of Artimovo. He has deep experience in AI and in solving real problems with companies. He is the author of *The Idea Chose You*, a book about how to build a company in the age of AI.
+
+- Tom Frazier: https://tomfrazier.com
+- The Idea Chose You: https://theideachoseyou.com
+- Artimovo: https://artimovo.com
 
 ## How it works
 
