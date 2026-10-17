@@ -737,3 +737,7 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 [data-theme="dark"] .ask-ai-btn img { filter: grayscale(1) invert(1); opacity: .6; }
 [data-theme="dark"] .ask-ai-btn:hover img, [data-theme="dark"] .ask-ai-btn:focus-visible img { filter: none; opacity: 1; }
 [data-theme="dark"] .ask-ai-btn:is(:hover, :focus-visible) img:is([src$="chatgpt.svg"], [src$="grok.svg"]) { filter: invert(1); }
+
+/* ---------- footer: near-black in both themes. It carries data-theme="dark", so everything inside uses the dark tokens. ---------- */
+.footer { background: var(--paper-100); color: var(--text-body); border-top: 1px solid var(--border-hairline); }
+html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
