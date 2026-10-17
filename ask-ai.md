@@ -1,19 +1,39 @@
 # Slop Mop
 
-> A browser extension that reads your feed ahead of you and folds away low-value posts ("slop"), whether a person or an AI wrote them. It shows why it made each call, and you can overrule it. Free for one feed. Website: https://slopmop.lol
+> A browser extension that reads online content ahead of you and folds away low-value writing ("slop"), whether a person or an AI wrote it. Live on LinkedIn today, with X, Reddit, Facebook, Substack, Medium, websites and email coming soon. It shows why it made each call, and you can overrule it. Free for one feed. Website: https://slopmop.lol
 
 Last updated: 17 October 2026
 
 ## What it is
 
-Slop Mop is a browser extension for Chrome and other Chromium browsers (Brave, Opera, Comet and others). It reads each post in your feed before you reach it, judges whether the writing is worth your time, and either folds low-value posts into a one-line strip you can reopen, or leaves them visible and marks them.
+Slop Mop is a browser extension for Chrome and other Chromium browsers (Brave, Opera, Comet and others). It reads the content you scroll (posts in your feeds today; articles, websites and email soon) before you reach it, judges whether the writing is worth your time, and either folds low-value posts into a one-line strip you can reopen, or leaves them visible and marks them.
 
 It is **not an AI detector**. It judges the writing, not who or what wrote it. A useful post written with AI survives; empty engagement bait written by a person doesn't.
 
-- Made by: Artimovo LLC (founder: Tom Frazier)
+- Made by: Artimovo LLC, founded by Tom Frazier
 - Live on: LinkedIn
 - Coming soon: X, Reddit, Facebook, Substack, Medium, email (Gmail and Outlook) and websites
 - Works in: Chrome, Brave, Opera, Comet and other Chromium browsers. Microsoft Edge, Safari and Firefox are coming soon.
+
+## Background
+
+Slop Mop started in September 2026 as a test of a new kind of AI model: a calibrated decision model. Instead of writing text, it answers fixed questions with choices, scores or calibrated probabilities. Tom Frazier wanted a real problem to test it on, and the one he ran into every day was slop: feeds full of hooks, bait and filler that took attention and gave nothing back.
+
+The timing lined up. The same week, Graphite published its "AI Tells" study, built on 100,000 articles: 10,000 human-written articles from before ChatGPT, and 90,000 rewrites of them by nine AI models. It found about 13,000 words and phrases that appear at least twice as often in AI writing as in human writing. That research became Slop Mop's starting point: six of its nine tells come from it, and the other three are feed habits added on top.
+
+Slop Mop brought three things together: solid research on what slop looks like, a model built to make calibrated calls, and a problem almost everyone online recognises. It launched as a free, open-source (MIT-licensed) Chrome extension and quickly drew attention, including coverage in The Register and a discussion on Hacker News. Artimovo has since turned it into a commercial product, tuned on more than 70 million tokens of real posts.
+
+## Who makes it
+
+Slop Mop is from **Artimovo**, Tom Frazier's new company. Artimovo is built around one of the biggest problems facing us today: execution is scaling faster than judgment. AI makes it cheap to produce more of everything, but not to know what is worth acting on. Artimovo builds products that help with judgment, clarity and autonomy, and Slop Mop is the first of them.
+
+### About Tom Frazier
+
+Tom Frazier is the founder of Artimovo. He has deep experience in AI and in solving real problems with companies. He is the author of *The Idea Chose You*, a book about how to build a company in the age of AI.
+
+- Tom Frazier: https://tomfrazier.com
+- The Idea Chose You: https://theideachoseyou.com
+- Artimovo: https://artimovo.com
 
 ## How it works
 
@@ -30,8 +50,10 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 
 ## Who it's for
 
-- People who use LinkedIn for work and are tired of scrolling past hooks, bait and filler to find the posts worth reading.
-- Anyone who wants a calmer feed without leaving the platform or muting people.
+- Anyone who reads a lot online and is tired of scrolling past hooks, bait and filler to find what's worth reading.
+- Social feeds: LinkedIn is live today. X, Reddit, Facebook, Substack and Medium are coming soon, along with the articles and websites you read.
+- Email: Slop Mop for Gmail and Outlook is coming soon, for people whose inbox is full of the same filler.
+- Anyone who wants a calmer feed or inbox without leaving the platform or muting people.
 
 ## Key benefits
 
@@ -50,7 +72,7 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 ## Pricing
 
 - **Free** for the one feed you pick, with 250 checks a day.
-- **Slop Mop XL**: US$5.99 a month or US$59.99 a year. Adds every feed, the sites you read, Slop Mop for Gmail and Outlook, and a higher daily limit, on up to five browsers. Some XL features are marked coming soon. Payments are handled by Polar.
+- **Slop Mop XL** (coming soon): US$5.99 a month or US$59.99 a year. Adds every feed, the sites you read, Slop Mop for Gmail and Outlook, and a higher daily limit, on up to five browsers.
 
 ## In the press
 
