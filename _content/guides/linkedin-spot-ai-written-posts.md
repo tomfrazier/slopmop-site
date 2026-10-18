@@ -88,7 +88,7 @@ The fine version might have been drafted with AI. It passes all four questions, 
 ## What not to do
 
 - **Don't accuse people in the comments.** "This is ChatGPT" is usually unprovable, sometimes wrong, and lands hardest on people writing in a second language. The [AI shaming](/glossary/ai-shaming/) entry explains how accusations stick even when they're mistaken.
-- **Don't rely on a detector score.** If you paste a post into one, read the result as a guess about style, not a finding about the person.
+- **Don't rely on a detector score.** If you paste a post into one, read the result as a guess about style. It tells you nothing reliable about the person.
 - **Don't treat polish as guilt.** Clean grammar and tidy structure are what good editors produce too.
 
 ## What to do with the posts that fail

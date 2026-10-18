@@ -19,7 +19,7 @@
   ]
 }
 ---
-Your full list of follows lives under **My Network**, then **Manage my network**, on the left of the page on desktop. Open it, work down the list, and click **Following** next to anyone you want to drop, then confirm **Unfollow**. If you're connected to someone you stay connected, and nobody is told. Do the same for newsletters, which have their own list on the same page.
+Your full list of follows lives under **My Network**, then **Manage my network**, on the left of the page on desktop. Open it, work down the list, and click **Following** next to anyone you want to drop, then confirm **Unfollow**. You stay connected to anyone you unfollow, nobody is told, and newsletters have their own list on the same page.
 
 ## Before you start
 

@@ -3,7 +3,7 @@
   "title": "How to reduce LinkedIn notifications",
   "seo_title": "How to reduce LinkedIn notifications and emails · Slop Mop",
   "description": "Cut LinkedIn notification noise: turn off types from the Notifications tab, set email frequency, stop newsletter alerts and mute busy message threads.",
-  "summary": "Turn off notification types at the source, choose in-app, push or email for each, and stop newsletter and invitation alerts you never asked for.",
+  "summary": "Turn off notification types at the source, pick in-app, push or email for each, and stop newsletter alerts you never asked for.",
   "updated": "2026-10-18",
   "network": "linkedin",
   "publish_date": "2026-11-03",

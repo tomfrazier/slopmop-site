@@ -121,11 +121,11 @@ These are the nine habits Slop Mop asks about when it reads a post in a LinkedIn
 | [Scroll-stopper](/patterns/scroll-stopper/) | A first line that hides the point; one-line paragraphs |
 | [Engagement bait](/patterns/engagement-bait/) | Comment, repost, follow or tag requests you don't need |
 | [Hype words](/patterns/hype-words/) | Words that would fit any product or idea |
-| [Empty praise](/patterns/empty-praise/) | "Incredible", "powerful" with no detail behind them |
+| [Empty praise](/patterns/empty-praise/) | Words like "incredible" and "powerful" with no detail behind them |
 | [No-catch promises](/patterns/no-catch-promises/) | Benefits with no cost, effort or limit |
 | ["Not X, but Y"](/patterns/not-x-but-y/) | Defining your point against something nobody said |
-| [Flowery prose](/patterns/flowery-prose/) | Journeys, tapestries and dances in place of what happened |
-| [Stiff phrasing](/patterns/stiff-phrasing/) | Furthermore, moreover, ultimately, it's worth noting |
+| [Flowery prose](/patterns/flowery-prose/) | Metaphors ("journey", "tapestry", "dance") in place of what happened |
+| [Stiff phrasing](/patterns/stiff-phrasing/) | Stock transitions ("furthermore", "moreover", "ultimately") |
 | [Too-tidy story](/patterns/too-tidy-story/) | An unnamed character delivering a perfect lesson |
 
 One tell on its own is rarely a problem; a post that ticks three or four is the kind readers learn to skip.
