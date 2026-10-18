@@ -30,7 +30,7 @@ p{margin-top:28px;font-size:34px;line-height:1.3;color:#C9CED4;max-width:920px}
     if (!all && fs.existsSync(out)) continue;
     fs.mkdirSync(path.dirname(out), { recursive: true });
     await pg.setContent(page(r), { waitUntil: 'networkidle' });
-    await pg.screenshot({ path: out, type: 'png' });
+    await pg.screenshot({ path: out, type: 'jpeg', quality: 86 });
     n++;
   }
   await b.close();

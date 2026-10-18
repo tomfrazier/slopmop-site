@@ -7,7 +7,7 @@
   "updated": "2026-10-18",
   "term": "Clanker",
   "aliases": [],
-  "punchline": "What you call the robot when it won't connect you.",
+  "punchline": "A droid slur that found a second career.",
   "kind": "ai",
   "first_seen": "2005",
   "coined_by": "",
@@ -48,8 +48,8 @@ A video of a delivery robot stuck on a kerb gets the caption "clanker down".
 
 ## The criticism
 
-The main debate is about what kind of word it is. The linguist Adam Aleksic has described clanker as an evolution of racial slurs that anthropomorphise robots, and some memes using it borrow openly from real histories of discrimination, which critics find uncomfortable. Axios, drawing on the linguist Geoffrey Nunberg, argued that it's a derogatory word rather than a slur, because it doesn't keep any group of people down. NPR pointed out that "robot" itself was coined by Karel Čapek for his 1920 play *R.U.R.* as a critique of industrialised work.
+The main debate is about what kind of word it is. The linguist Adam Aleksic has described clanker as an evolution of racial slurs that anthropomorphise robots, and some memes using it borrow openly from real histories of discrimination, which critics find uncomfortable. Axios, drawing on the linguist Geoffrey Nunberg, argued that it's a derogatory word rather than a slur, because it doesn't perpetuate social inequality. NPR pointed out that "robot" itself was coined by Karel Čapek for his 1920 play *R.U.R.* as a critique of industrialised work.
 
 ## How Slop Mop sees it
 
-Clanker is about attitudes to machines, which is outside what Slop Mop judges. Slop Mop doesn't try to sort posts by whether a person or an AI wrote them; it reads the writing itself, so a useful AI-assisted post survives and an empty human one can be folded away.
+Clanker is about attitudes to machines, which is outside what Slop Mop judges. Slop Mop judges the writing, not who or what wrote it, so a useful AI-assisted post survives and an empty human one can be folded away.

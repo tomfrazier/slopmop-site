@@ -1,7 +1,7 @@
 ---
 {
   "title": "Brandolini’s law",
-  "seo_title": "Brandolini’s law: the bullshit asymmetry principle · Slop Mop",
+  "seo_title": "Brandolini’s law: the bullshit asymmetry principle",
   "description": "Brandolini’s law says refuting nonsense takes far more effort than producing it. Who coined it in 2013, what it explains, and why it matters for slop.",
   "summary": "The adage that refuting nonsense takes an order of magnitude more effort than producing it.",
   "updated": "2026-10-18",
@@ -32,13 +32,13 @@ Brandolini’s law, also called the bullshit asymmetry principle, is an internet
 
 Making a false or empty claim is quick. Checking it means finding the original source, reading it, asking someone who knows, and writing a correction clear enough that people will read it. By the time that's done, the claim has travelled.
 
-"Order of magnitude" means roughly ten times. Nobody has measured the ratio; the adage is a rule of thumb, and its usefulness is in naming the imbalance.
+"Order of magnitude" means roughly ten times. The figure isn't a measurement. The adage is a rule of thumb, and its use is in naming the imbalance.
 
 ## Where it came from
 
 Alberto Brandolini, an Italian programmer, formulated it publicly in January 2013. He said he was inspired by reading Daniel Kahneman's *Thinking, Fast and Slow* shortly before watching an Italian political talk show featuring former Prime Minister Silvio Berlusconi and the journalist Marco Travaglio.
 
-The law is often cited in discussions of misinformation. A standard example is the false claim that the MMR vaccine causes autism: the 1998 paper behind it was retracted and its lead author lost his medical licence, yet years of research and public education haven't made the claim go away. During the COVID-19 pandemic, the Radio-Canada disinformation journalist Jeff Yates described fact-checking a YouTube video full of medical claims: "It took this guy 15 minutes to make his video and it took me three days to fact-check."
+The law is often cited in discussions of misinformation. A standard example is the false claim that the MMR vaccine causes autism: the 1998 paper behind it was retracted and its lead author lost his medical licence, yet decades of research and public education haven't made the claim go away. During the COVID-19 pandemic, the Radio-Canada disinformation journalist Jeff Yates described fact-checking a YouTube video full of medical claims: "It took this guy 15 minutes to make his video and it took me three days to fact-check."
 
 It has picked up new relevance with generative AI. When producing plausible text costs almost nothing, the side doing the checking falls further behind.
 

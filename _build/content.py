@@ -210,8 +210,8 @@ def crumbs_html(items, last=False):
 
 
 def og_for(path):
-    f = "assets/og/" + path.strip("/").replace("/", "-") + ".png"
-    return f if os.path.exists(f"{ROOT}/{f}") else "og-image-4.png"
+    f = "assets/og/" + path.strip("/").replace("/", "-") + ".jpg"
+    return f if os.path.exists(f"{ROOT}/{f}") else "og-image-4.jpg"
 
 
 def share(path, text):
@@ -592,7 +592,7 @@ def clean_stale():
             keep |= {f"guides/{p['network']}/" for p in LIVE_PAGES[f]}
         for idx in glob.glob(f"{ROOT}/{f}/**/index.html", recursive=True):
             d = os.path.relpath(os.path.dirname(idx), ROOT) + "/"
-            if d != f"{f}/" and d not in keep:
+            if d != f"{f}/" and d not in keep and os.path.exists(idx):
                 shutil.rmtree(os.path.dirname(idx))
                 print("removed", d)
 
@@ -623,9 +623,9 @@ def og_manifest():
                 eyebrow, title, line = f"guides · {NET_NAME[p['network']].lower()}", p["title"], p["summary"]
             else:
                 eyebrow, title, line = FAMILIES[f][0].lower(), p["title"], p["summary"]
-            rows.append({"out": "assets/og/" + p["path"].strip("/").replace("/", "-") + ".png", "eyebrow": eyebrow,
+            rows.append({"out": "assets/og/" + p["path"].strip("/").replace("/", "-") + ".jpg", "eyebrow": eyebrow,
                          "title": title, "line": line, "url": "slopmop.lol/" + p["path"].rstrip("/")})
-        rows.append({"out": f"assets/og/{f}.png", "eyebrow": "slop mop", "title": FAMILIES[f][1], "line": "", "url": f"slopmop.lol/{f}"})
+        rows.append({"out": f"assets/og/{f}.jpg", "eyebrow": "slop mop", "title": FAMILIES[f][1], "line": "", "url": f"slopmop.lol/{f}"})
     open(f"{ROOT}/_build/og_manifest.json", "w").write(json.dumps(rows, indent=1, ensure_ascii=False))
 
 

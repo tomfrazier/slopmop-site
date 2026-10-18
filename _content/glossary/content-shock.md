@@ -41,14 +41,14 @@ Writing on the post's tenth anniversary in January 2024, he said the industry ha
 ## Examples
 
 :::example
-A software company publishes 3 blog posts a week in 2014 and gets steady traffic. By 2018 it publishes 5 a week, pays for promotion, and gets less. Nothing about the posts got worse; there were simply more competitors for the same readers.
+An invented case: a software company publishes 3 blog posts a week in 2014 and gets steady traffic. By 2018 it publishes 5 a week, pays for promotion, and gets less. Nothing about the posts got worse; there were simply more competitors for the same readers.
 :::
 
 Generative AI has made the supply side much cheaper again. A content calendar that once took a team now takes one person and a prompt, and every one of those posts asks a reader for the same few seconds.
 
 ## The criticism
 
-Schaefer says the post was called controversial at the time, and that prominent content marketers dismissed it, including a podcast host who laughed at the idea that content saturation was a problem. Their position was that good content would always find an audience. Schaefer's reply was that it might, but at a rising cost that many businesses couldn't pay.
+Schaefer says the post was called controversial at the time, and that prominent content marketers dismissed it, including a podcast host who laughed when asked whether it had any legitimacy and described content marketing as having unlimited potential. Schaefer responded with a book, *The Content Code*, built on the premise that "the economic value of content that is not seen and shared is zero".
 
 ## How Slop Mop sees it
 

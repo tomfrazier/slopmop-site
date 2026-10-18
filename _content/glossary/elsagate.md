@@ -1,13 +1,13 @@
 ---
 {
   "title": "Elsagate",
-  "seo_title": "Elsagate: the YouTube kids' video scandal explained · Slop Mop",
-  "description": "Elsagate was the 2017 scandal over keyword-stuffed YouTube videos that looked child-friendly but weren't. What happened, and why it's an early case of slop.",
+  "seo_title": "Elsagate: the YouTube kids' video scandal · Slop Mop",
+  "description": "Elsagate was the 2017 scandal over keyword-stuffed YouTube videos that looked child-friendly but weren't. What happened, and why it's early slop.",
   "summary": "The 2017 scandal over mass-produced, keyword-stuffed YouTube videos that looked child-friendly but showed disturbing content.",
   "updated": "2026-10-18",
   "term": "Elsagate",
   "aliases": [],
-  "punchline": "Nursery rhymes made for the algorithm, not the child.",
+  "punchline": "Nursery rhymes reverse-engineered from search terms.",
   "kind": "both",
   "first_seen": "2017",
   "coined_by": "",
@@ -48,4 +48,4 @@ The title contains no description of the video. It's a list of search terms aime
 
 ## How Slop Mop sees it
 
-Elsagate is video on a children's platform, which is outside what Slop Mop reads. It belongs in this glossary as an early, large-scale case of content made to satisfy an algorithm rather than a person, the same incentive behind much of today's [AI slop](/glossary/ai-slop/).
+Elsagate is video on a children's platform, which is outside what Slop Mop reads. It belongs in this glossary as an early, large-scale case of content shaped to please a recommendation system, the same incentive behind much of today's [AI slop](/glossary/ai-slop/).

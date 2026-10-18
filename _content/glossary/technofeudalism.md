@@ -6,7 +6,11 @@
   "summary": "A contested theory that big tech platforms work like feudal estates, collecting rent from users and sellers who depend on them.",
   "updated": "2026-10-18",
   "term": "Technofeudalism",
-  "aliases": ["techno-feudalism", "digital feudalism", "neo-feudalism"],
+  "aliases": [
+    "techno-feudalism",
+    "digital feudalism",
+    "neo-feudalism"
+  ],
   "punchline": "Welcome back to the Middle Ages, now with GPUs.",
   "kind": "human",
   "first_seen": "",
@@ -24,12 +28,6 @@
       "publisher": "La Découverte (WorldCat record)",
       "url": "https://search.worldcat.org/oclc/1204202322",
       "date": "2020"
-    },
-    {
-      "title": "Technofeudalism: What Killed Capitalism (review)",
-      "publisher": "Australian Book Review",
-      "url": "https://australianbookreview.com.au/abr-online/archive/2023/995-november-2023-no-459/11364-nathan-hollier-reviews-technofeudalism-what-killed-capitalism-by-yanis-varoufakis",
-      "date": "2023-11"
     },
     {
       "title": "Critique of Techno-Feudal Reason",
