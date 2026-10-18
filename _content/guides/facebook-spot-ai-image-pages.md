@@ -23,7 +23,7 @@ An AI image page is a Facebook Page that posts a steady stream of generated pict
 
 ## Why the picture alone won't tell you
 
-Image generators have got good enough that hunting for a sixth finger is unreliable, and some real photos look odd. Meta labels some AI content with **AI info**, but only when it detects industry-standard signals in the file or the uploader discloses it. Since September 2024, images that were only edited with AI have had the label moved into the post's menu ([Meta](https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/)). A missing label proves nothing.
+Image generators have got good enough that hunting for a sixth finger is unreliable, and some real photos look odd. Meta labels some AI content with **AI info**, but only when it detects industry-standard signals in the file or the uploader discloses it. In September 2024 Meta said that for images only edited with AI, it would move the label into the post's menu ([Meta](https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/)). A missing label proves nothing.
 
 The behaviour around the picture is harder to fake. The best public study of these Pages, by Renee DiResta and Josh Goldstein, followed 120 Facebook Pages that had each posted at least 50 AI-generated images. Their mean follower count was about 129,000, and one post with an AI image was among the 20 most viewed pieces of content on Facebook in the third quarter of 2023, with 40 million views ([arXiv](https://arxiv.org/abs/2403.12838)). The signs below come from what that study found and from how these posts are built.
 
@@ -68,7 +68,7 @@ Read a few comments. Rows of "Amen", "Beautiful" and "Happy birthday" with no on
 
 ### The picture itself, as a last check
 
-When the Page signs are mixed, then look closely at the image. Text in the background that isn't quite letters, hands and tools that merge, and repeated faces in a crowd are common tells. Treat them as supporting evidence. Some real photos are blurry, and the best generated ones have none of these faults.
+When the Page signs are mixed, look closely at the image. Text in the background that isn't quite letters, hands and tools that merge, and repeated faces in a crowd are common tells. Treat them as supporting evidence. Some real photos are blurry, and the best generated ones have none of these faults.
 
 ## What it means when you find one
 

@@ -2,7 +2,7 @@
 {
   "title": "How to get fewer slop results in Google search",
   "seo_title": "Fewer slop results in Google: Web filter and operators",
-  "description": "Use Google's Web filter, date operators, minus and site: to cut AI Overviews, padded pages and content farms out of your results. Steps checked 18 October 2026.",
+  "description": "Use Google's Web filter, before:, -site: and exact quotes to cut AI Overviews, padded pages and content farms out of your search results.",
   "summary": "Google's Web filter, before:, -site: and exact quotes, used together to get fewer padded pages and AI summaries in your results.",
   "updated": "2026-10-18",
   "network": "websites",
@@ -14,7 +14,9 @@
     {"title": "Refine Google searches", "publisher": "Google Search Help", "url": "https://support.google.com/websearch/answer/2466433", "date": ""},
     {"title": "Narrow your search results with filters", "publisher": "Google Search Help", "url": "https://support.google.com/websearch/answer/142143", "date": ""},
     {"title": "AI Overviews in Google Search", "publisher": "Google Search Help", "url": "https://support.google.com/websearch/answer/14901683", "date": ""},
-    {"title": "Sick of AI Overviews? The old Google is still hiding in plain sight", "publisher": "PCWorld", "url": "https://pcworld.com/article/3143866/sick-of-ai-overviews-the-old-google-is-still-hiding-in-plain-sight.html", "date": ""}
+    {"title": "Sick of AI Overviews? The old Google is still hiding in plain sight", "publisher": "PCWorld", "url": "https://pcworld.com/article/3143866/sick-of-ai-overviews-the-old-google-is-still-hiding-in-plain-sight.html", "date": ""},
+    {"title": "How To Block Sites From Appearing in DuckDuckGo Search Results", "publisher": "DuckDuckGo Help Pages", "url": "https://duckduckgo.com/duckduckgo-help-pages/results/how-to-block-sites-from-appearing-in-search-results", "date": ""},
+    {"title": "Website Info & Personalized Results", "publisher": "Kagi Docs", "url": "https://help.kagi.com/kagi/features/website-info-personalized-results.html", "date": ""}
   ]
 }
 ---

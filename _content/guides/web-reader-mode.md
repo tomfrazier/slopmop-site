@@ -24,7 +24,7 @@ In Chrome on a computer, right-click the page and choose **Open in reading mode*
 
 - Steps were checked against Google's and Apple's help pages on 18 October 2026. Icons and menu names change between versions, so yours may look slightly different.
 - Reader views only work on pages that look like articles. Shops, search results and web apps usually aren't supported. Chrome says the feature "is not available to all websites", and Safari shows the option only when there's an article to show.
-- Reader views remove clutter, not filler. A padded article stays padded, but you'll see that faster.
+- Reader views remove clutter and leave filler in place. A padded article stays padded, but you'll see that faster.
 
 ## Chrome on a computer
 

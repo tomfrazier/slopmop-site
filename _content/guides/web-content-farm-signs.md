@@ -2,8 +2,8 @@
 {
   "title": "How to tell if a website is a content farm",
   "seo_title": "How to tell if a website is a content farm · Slop Mop",
-  "description": "Signs a whole site is a content farm: dozens of posts a day on unrelated topics, generic authors, no real About page and ads everywhere. A site-level check in five minutes.",
-  "summary": "Judge the whole site, not one article: publishing volume, topic sprawl, authors, ownership and ads reveal a content farm in minutes.",
+  "description": "Signs a whole site is a content farm: dozens of posts a day on unrelated topics, generic authors, an empty About page and ads everywhere.",
+  "summary": "Judge the whole site: publishing volume, topic sprawl, authors, ownership and ads reveal a content farm in minutes.",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-12-08",
@@ -71,13 +71,13 @@ Farms are built for ad impressions. Signs include ads between every paragraph, a
 Farm articles share a house style whatever the topic: a long warm-up, headings that restate the question, and [stiff phrasing](/patterns/stiff-phrasing/) holding it together. They rarely have dates for events, quotes from named people, or anything the writer could only know by being there.
 
 :::slop
-In conclusion, choosing the right mortgage is a significant decision that requires careful consideration of various factors. It is essential to consult with professionals to make an informed choice.
+In conclusion, choosing the right lawn care routine is an important decision that requires careful consideration of various factors. It is essential to consider your specific needs to achieve the best results.
 :::
 :::fine
-If your fixed rate ends in the next six months, ask your current lender for a product transfer quote before you shop around. It usually needs no new valuation.
+Mow less often in a dry spell and raise the blades to the highest setting. Longer grass shades its own roots and browns more slowly.
 :::
 
-Advice like the fine example is still general, and for money decisions you should talk to a qualified adviser. But it gives you something to do, which the farm version never does.
+The fine example is short and general, but it gives you something to do this weekend. The farm version never does.
 
 ## Signs at a glance
 

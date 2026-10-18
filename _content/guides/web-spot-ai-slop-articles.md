@@ -2,7 +2,7 @@
 {
   "title": "How to spot an AI slop article before you read it all",
   "seo_title": "How to spot AI slop articles on websites · Slop Mop",
-  "description": "The signs of a low-value AI-written article: generic claims, padded intros, vague sources and no first-hand detail. A check you can run in under three minutes.",
+  "description": "The signs of a low-value AI-written article: generic claims, padded intros, vague sources and no first-hand detail. A check in under three minutes.",
   "summary": "A three-minute check for web articles: look for specifics, real sources and first-hand detail, and don't rely on AI detectors.",
   "updated": "2026-10-18",
   "network": "websites",
@@ -13,13 +13,14 @@
   "sources": [
     {"title": "Wikipedia:Signs of AI writing", "publisher": "WikiProject AI Cleanup, Wikipedia", "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing", "date": ""},
     {"title": "Google Search's guidance about AI-generated content", "publisher": "Google Search Central", "url": "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content", "date": "2023-02-08"},
-    {"title": "Spam policies for Google web search", "publisher": "Google Search Central", "url": "https://developers.google.com/search/docs/essentials/spam-policies", "date": "2026-08-28"}
+    {"title": "Spam policies for Google web search", "publisher": "Google Search Central", "url": "https://developers.google.com/search/docs/essentials/spam-policies", "date": "2026-08-28"},
+    {"title": "Refine Google searches", "publisher": "Google Search Help", "url": "https://support.google.com/websearch/answer/2466433", "date": ""}
   ]
 }
 ---
 Look for specifics. A low-value article, whether a model or a person wrote it, makes broad claims that would fit any page on the topic, names no sources you can check and has nothing the writer saw or did themselves. If three minutes of skimming turns up no numbers, names, dates or steps you could follow, close the tab.
 
-## Why "was it written by AI?" is the wrong question
+## Judge the writing, whoever wrote it
 
 You can't reliably tell, and it matters less than you'd think. Wikipedia's volunteer [guide to signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) warns editors not to rely solely on AI detection tools, which have "non-trivial error rates", and notes that people are poor at telling model text from human text too. Google says much the same from the other side: its [2023 guidance on AI-generated content](https://developers.google.com/search/blog/2023/02/google-search-and-ai-content) rewards "high-quality content, however it is produced", and its [spam policies](https://developers.google.com/search/docs/essentials/spam-policies) target pages made in bulk to rank "no matter how it's created".
 
@@ -71,7 +72,7 @@ One sign on its own proves little. Plenty of good writers say "furthermore". Sev
 
 ## Things that tell you less than you'd think
 
-- **Length.** Long articles can be thorough or padded. Count specifics per section, not words.
+- **Length.** Long articles can be thorough or padded. Count specifics per section and ignore the word count.
 - **Polish.** Clean grammar says nothing about whether the content is useful.
 - **Em dashes.** Wikipedia's editors list heavy em dash use as one sign among many, but people used them long before chatbots did. Treat it as a weak hint at most.
 - **A byline.** Names are cheap. A byline means more when it links to an author page with other work on the same subject.
@@ -91,4 +92,4 @@ The first paragraph has four sentences and zero instructions. The second has fiv
 
 ## What to do with a bad one
 
-Close it and go back to the results. If the same site keeps failing the check, stop clicking it: most search engines let you leave a site out of a search with -site: in front of its domain. Slop Mop runs a similar set of questions on posts automatically and is coming soon to websites; for now, the check above takes less time than reading a padded article to the end.
+Close it and go back to the results. If the same site keeps failing the check, stop clicking it: Google and DuckDuckGo both let you leave a site out of a search by adding `-site:` in front of its domain. Slop Mop runs a similar set of questions on posts automatically and is coming soon to websites; for now, the check above takes less time than reading a padded article to the end.

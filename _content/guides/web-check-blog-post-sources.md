@@ -2,7 +2,7 @@
 {
   "title": "How to check a blog post's sources in five minutes",
   "seo_title": "How to check a blog post's sources · Slop Mop",
-  "description": "Do a blog post's links say what it claims? A five-minute method using lateral reading and the SIFT moves to test sources, statistics and quotes before you trust them.",
+  "description": "Do a blog post's links say what it claims? A five-minute method, based on lateral reading and SIFT, for testing sources, statistics and quotes.",
   "summary": "Open the links, trace the statistic, read about the site elsewhere: a five-minute way to test whether a blog post's sources hold up.",
   "updated": "2026-10-18",
   "network": "websites",
@@ -91,6 +91,6 @@ Of the 14 clients who tried the new invoice template last quarter, 9 were paid f
 
 - **One weak source, rest solid:** use the post, but don't repeat that claim.
 - **Main claim unsupported:** treat the post as opinion and look for better coverage.
-- **Sources misrepresented:** stop trusting the site, not just the post. A writer who upgrades "may" to "will" once tends to do it again.
+- **Sources misrepresented:** stop trusting the site as well as the post. A writer who upgrades "may" to "will" once tends to do it again.
 
 Posts that dress opinion up as fact for a cause are sometimes called [slopaganda](/glossary/slopaganda/). The checks are the same whichever side they come from. For a faster first pass before you start checking, see [How to spot an AI slop article](/guides/websites/web-spot-ai-slop-articles/). To keep a site you've caught out of future searches, see [How to block a site from your search results](/guides/websites/web-block-sites-search-results/).

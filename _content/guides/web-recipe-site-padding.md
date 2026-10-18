@@ -2,7 +2,7 @@
 {
   "title": "How to skip the life story on recipe sites, and spot recipes nobody tested",
   "seo_title": "Skip recipe site padding and spot untested recipes",
-  "description": "Get straight to the recipe with jump links, reader mode and print view, then check whether anyone actually cooked it: weights, times, cues and honest comments.",
+  "description": "Get straight to the recipe with jump links, reader mode and print view, then check whether anyone cooked it: weights, times, cues and comments.",
   "summary": "Three quick ways past recipe-site padding, and a short check for whether the recipe underneath was ever cooked by anyone.",
   "updated": "2026-10-18",
   "network": "websites",

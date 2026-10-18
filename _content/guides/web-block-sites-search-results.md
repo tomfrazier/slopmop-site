@@ -2,7 +2,7 @@
 {
   "title": "How to block a site from your search results",
   "seo_title": "Block sites from search results: DuckDuckGo, Kagi, Google",
-  "description": "Block content farms from your search results for good: DuckDuckGo's block list, Kagi's Block and Lower settings, and what to do on Google. Checked 18 October 2026.",
+  "description": "Block content farms from your results for good: DuckDuckGo's block list, Kagi's Block and Lower options, and workarounds for Google.",
   "summary": "Permanent site blocking in DuckDuckGo and Kagi, ranking tools in Kagi and Brave, and the workarounds for Google, which has no block list.",
   "updated": "2026-10-18",
   "network": "websites",
@@ -21,7 +21,7 @@
   ]
 }
 ---
-DuckDuckGo and Kagi both let you block a site permanently from the result itself: in DuckDuckGo, open the ••• menu next to a result and choose "Block this site from all results"; in Kagi, click the shield icon and choose Block. Google has no block list, so there you're limited to `-site:` in each search or a browser extension. Blocking works best on the few sites that keep coming back, not as a way to filter the whole web.
+DuckDuckGo and Kagi both let you block a site permanently from the result itself: in DuckDuckGo, open the ••• menu next to a result and choose "Block this site from all results"; in Kagi, click the shield icon and choose Block. Google has no block list, so there you're limited to `-site:` in each search or a browser extension. Blocking works best on the few sites that keep coming back; it can't filter the whole web.
 
 ## Before you start
 

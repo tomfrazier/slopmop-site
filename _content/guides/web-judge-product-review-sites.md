@@ -2,8 +2,8 @@
 {
   "title": "How to tell if a product review site actually tested anything",
   "seo_title": "How to tell if a product review site tested anything",
-  "description": "Spot 'best of' lists written by people who never touched the product: look for original photos, measurements, drawbacks, test methods and clear affiliate disclosure.",
-  "summary": "Six checks for product review sites: own photos, numbers, drawbacks, comparisons, a test method and an honest note about how the site earns money.",
+  "description": "Spot 'best of' lists by people who never touched the product: check for their own photos, measurements, drawbacks, test methods and disclosure.",
+  "summary": "Six checks for review sites: own photos, numbers, drawbacks, comparisons, a test method and honesty about how the site earns money.",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-12-01",
@@ -82,7 +82,7 @@ Look for a disclosure near the top of the page or in the footer explaining affil
 - **Star ratings.** A site's own 4.8 out of 5 means little without the measurements behind it.
 - **The year in the headline.** Pages often change the year without changing the picks. Check whether the products are current.
 - **Polished writing and [hype words](/patterns/hype-words/).** Polish says nothing about testing. Hype words are a mild warning.
-- **A big brand name.** Large publishers run thin review pages too. Judge the page, not the masthead.
+- **A big brand name.** Large publishers run thin review pages too, so put each page through the checks above.
 
 ## When you find a good one
 
