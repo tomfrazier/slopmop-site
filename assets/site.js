@@ -490,3 +490,48 @@
     v.addEventListener("play", function once() { v.removeEventListener("play", once); gaEvent("preview_play", {}); });
   });
 })();
+
+// Content library: copy-link buttons and the glossary's search and filters.
+(function () {
+  function ga(name, p) { try { if (window.gtag) window.gtag("event", name, p || {}); } catch (e) {} }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (b) {
+    b.addEventListener("click", function () {
+      var url = b.getAttribute("data-copy");
+      var done = function () { b.classList.add("done"); setTimeout(function () { b.classList.remove("done"); }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () {}); else { window.prompt("Copy this link", url); }
+      ga("share", { method: "copy", item_id: location.pathname });
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-share]"), function (a) {
+    a.addEventListener("click", function () { ga("share", { method: a.getAttribute("data-share"), item_id: location.pathname }); });
+  });
+  var input = document.querySelector("[data-gl-search]");
+  if (!input) return;
+  var kind = "all";
+  var items = Array.prototype.slice.call(document.querySelectorAll(".gl-list li"));
+  var groups = Array.prototype.slice.call(document.querySelectorAll(".gl-group"));
+  var empty = document.querySelector(".gl-empty");
+  var jump = document.querySelector(".gl-jump");
+  function apply() {
+    var q = input.value.trim().toLowerCase(), shown = 0;
+    items.forEach(function (li) {
+      var k = li.getAttribute("data-kind");
+      var okKind = kind === "all" || k === kind || (k === "both" && (kind === "ai" || kind === "human"));
+      var ok = okKind && (!q || li.getAttribute("data-q").indexOf(q) !== -1);
+      li.hidden = !ok; if (ok) shown++;
+    });
+    groups.forEach(function (g) { g.hidden = !g.querySelector("li:not([hidden])"); });
+    empty.hidden = shown > 0;
+    if (jump) jump.hidden = !!q || kind !== "all";
+  }
+  input.addEventListener("input", apply);
+  Array.prototype.forEach.call(document.querySelectorAll("[data-gl-kind]"), function (b) {
+    b.addEventListener("click", function () {
+      kind = b.getAttribute("data-gl-kind");
+      Array.prototype.forEach.call(document.querySelectorAll("[data-gl-kind]"), function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      apply();
+    });
+  });
+  var q0 = new URLSearchParams(location.search).get("q");
+  if (q0) { input.value = q0; apply(); }
+})();

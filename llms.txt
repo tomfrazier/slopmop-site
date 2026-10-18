@@ -7,6 +7,13 @@
 - [How it works](https://slopmop.lol/how-it-works.html): the nine tells, the counter-signals, the score
 - [About](https://slopmop.lol/about.html): canonical product information
 
+## Library
+- [The slop glossary](https://slopmop.lol/glossary/): an A–Z of terms for low-value content by people and by AI, each with its own page
+- [The nine tells](https://slopmop.lol/patterns/): each writing pattern Slop Mop scores, with examples and fixes
+- [Who it's for](https://slopmop.lol/for/): Slop Mop on each network and for each line of work
+- [Compare](https://slopmop.lol/compare/): Slop Mop next to ad blockers, spam filters, AI detectors and other tools
+- [Guides](https://slopmop.lol/guides/): weekly guides to cutting the slop on each network
+
 ## Policies
 - [Privacy policy](https://slopmop.lol/privacy.html)
 - [Terms of service](https://slopmop.lol/terms)
