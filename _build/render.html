@@ -147,6 +147,36 @@ body { font-family: var(--font-body); color: #16181A; }
 .fig .why { align-self: start; height: 640px; overflow: hidden; }
 .fig .why-scale { transform: scale(.84); transform-origin: top left; width: 476px; }
 .fig .why .caption-chip { margin-top: 14px; font-family: var(--font-mono); font-size: 13px; color: #8A929B; text-transform: lowercase; letter-spacing: .05em; }
+/* learn: editorial, paper with a mop band */
+.og.learn { background: #FAF9F6; color: #16181A; border-top: 22px solid #F5B400; }
+.og.learn .eb { font-size: 21px; color: #B58400; }
+.og.learn h1 { margin-top: 24px; font-size: 74px; max-width: 1040px; }
+.og.learn p { margin-top: 24px; font-size: 30px; line-height: 1.32; color: #4A5158; max-width: 980px; }
+/* calculators: a readout */
+.og.calculators { background: #16181A; color: #F1F3F5; flex-direction: row; gap: 56px; align-items: center; }
+.og.calculators .l { flex: 1; display: grid; gap: 22px; align-self: stretch; align-content: start; }
+.og.calculators .eb { font-size: 21px; color: #F5B400; }
+.og.calculators h1 { font-size: 66px; }
+.og.calculators p { font-size: 27px; color: #C9CED4; line-height: 1.32; }
+.readout { flex: none; width: 380px; border-radius: 22px; background: #202327; border: 2px solid #33383D; padding: 34px 32px; display: grid; gap: 10px; }
+.readout .mono { font-size: 17px; color: #8A929B; }
+.readout b { font-size: 92px; line-height: 1; letter-spacing: -.03em; color: #F5B400; font-variant-numeric: tabular-nums; }
+.readout span.l2 { font-size: 22px; color: #E3E6EA; line-height: 1.3; }
+.og.calculators .ft { position: absolute; left: 76px; right: 76px; bottom: 56px; }
+.hero.learn { background: linear-gradient(170deg, #FFF6DC, #FAF9F6 55%); justify-content: center; }
+.hero.learn .card { padding: 46px 50px; display: grid; gap: 22px; border-top: 10px solid #F5B400; }
+.hero.learn .card .mono { font-size: 17px; color: #B58400; }
+.hero.learn .card b.h { font-size: 46px; line-height: 1.08; letter-spacing: -.02em; }
+.hero.learn ol, .hero.calculators ol { list-style: none; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.hero.learn li { counter-increment: s; display: flex; gap: 16px; align-items: center; font-size: 22px; color: #2B2F33; }
+.hero.learn li::before { content: counter(s, decimal-leading-zero); font-family: var(--font-mono); font-size: 16px; color: #B58400; flex: none; width: 34px; }
+.hero.calculators { background: #16181A; justify-content: center; align-items: center; }
+.hero.calculators .readout { width: 640px; padding: 48px 50px; gap: 16px; }
+.hero.calculators .readout b { font-size: 132px; }
+.hero.calculators .readout .t { font-size: 30px; font-weight: 700; color: #F1F3F5; line-height: 1.15; }
+.hero.calculators .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+.hero.calculators .keys i { height: 34px; border-radius: 8px; background: #2B2F33; }
+.hero.calculators .keys i:nth-child(4n) { background: #F5B400; opacity: .85; }
 </style>
 </head>
 <body>
@@ -190,6 +220,8 @@ body { font-family: var(--font-body); color: #16181A; }
     else if (f === "for") o += '<span class="eb mono">slop mop for</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + '</p><div class="logos">' + s.nets.map(logo).join("") + "</div>" + foot(s.url);
     else if (f === "compare") return '<div class="og compare"><div class="side l"><span class="eb mono">slop mop</span><b>Slop Mop</b><span class="d">' + esc(s.us) + '</span></div><div class="side r"><span class="eb mono">compared with</span><b>' + esc(s.them) + '</b><span class="d">' + esc(s.themLine) + '</span></div><div class="vs">vs</div><div class="foot"><span class="mark" style="color:#F1F3F5">' + MARK + 'Slop Mop</span><span class="url">' + esc(s.url) + "</span></div></div>";
     else if (f === "guides") o += '<span class="band" style="background:' + NET[s.net].color + '"></span><span class="eb mono"><img src="../assets/logos/' + NET[s.net].logo + '.svg" alt="">guide · ' + esc(NET[s.net].name.toLowerCase()) + " · " + s.minutes + " min</span><h1>" + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + foot(s.url);
+    else if (f === "learn") o += '<span class="eb mono">slop mop · learn</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + foot(s.url);
+    else if (f === "calculators") return '<div class="og calculators"><div class="l"><span class="eb mono">slop calculator · free</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + '</p></div><div class="readout"><span class="mono">example</span><b>' + esc(s.big) + '</b><span class="l2">' + esc(s.bigLabel) + "</span></div>" + foot(s.url) + "</div>";
     else o = '<div class="og hub"><span class="eb mono">slop mop</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + foot(s.url);
     if (f !== "hub") o += '<span class="dot" style="right:-110px;bottom:-150px;width:420px;height:420px;opacity:' + (f === "for" ? ".0" : ".14") + '"></span>';
     return o + "</div>";
@@ -202,6 +234,8 @@ body { font-family: var(--font-body); color: #16181A; }
     if (f === "for") return '<div class="hero for"><div class="card"><span class="mono">slop mop for</span><b>' + esc(s.title) + "</b><ul>" + s.points.map(function (p) { return "<li><i>✓</i><span>" + esc(p) + "</span></li>"; }).join("") + '</ul><div class="logos">' + s.nets.map(logo).join("") + "</div></div></div>";
     if (f === "compare") return '<div class="hero compare"><span class="cap mono">at a glance · checked ' + esc(s.checked) + '</span><div class="card"><table><thead><tr><th></th><th>Slop Mop</th><th>' + esc(s.them) + "</th></tr></thead><tbody>" + s.rows.map(function (r) { return "<tr><th>" + esc(r[0]) + "</th><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>"; }).join("") + "</tbody></table></div></div>";
     if (f === "guides") return '<div class="hero guides" style="--net:' + NET[s.net].color + '"><div class="card"><span class="top"><img src="../assets/logos/' + NET[s.net].logo + '.svg" alt="">' + esc(NET[s.net].name) + " guide · " + s.minutes + ' min read</span><b class="h">' + esc(s.title) + "</b><ol>" + s.steps.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></div></div>";
+    if (f === "learn") return '<div class="hero learn"><div class="card"><span class="mono">slop mop · learn</span><b class="h">' + esc(s.title) + "</b><ol>" + s.steps.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></div></div>";
+    if (f === "calculators") return '<div class="hero calculators"><div class="readout"><span class="mono">slop calculator · example</span><b>' + esc(s.big) + '</b><span class="l2">' + esc(s.bigLabel) + '</span><span class="t">' + esc(s.title) + '</span><div class="keys"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>';
     return '<div class="hero hub"><span class="mono">slop mop · ' + esc(s.count) + '</span><b>' + esc(s.title) + '</b><div class="chips">' + s.chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div></div>";
   }
 

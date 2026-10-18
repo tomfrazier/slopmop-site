@@ -16991,5 +16991,655 @@
    "line": "Weekly guides for each network.",
    "url": "slopmop.lol/guides"
   }
+ },
+ {
+  "out": "assets/og/learn-ai-detector-vs-writing-quality.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "learn",
+   "title": "AI detector vs writing quality: two different questions",
+   "line": "AI detectors guess authorship; quality checks judge the writing. Why they disagree, why detectors misfire, and which question…",
+   "big": "",
+   "bigLabel": "",
+   "url": "slopmop.lol/learn/ai-detector-vs-writing-quality"
+  }
+ },
+ {
+  "out": "assets/hero/learn-ai-detector-vs-writing-quality.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "learn",
+   "title": "AI detector vs writing quality: two different questions",
+   "steps": [
+    "AI detector vs writing quality: what each…",
+    "Why the two answers disagree",
+    "Why AI detectors misfire",
+    "Writing quality: why judging the text is…"
+   ],
+   "big": "",
+   "bigLabel": ""
+  }
+ },
+ {
+  "out": "assets/fig/learn-ai-detector-vs-writing-quality.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "email",
+   "text": "Most leaders don't have a strategy problem. They have a clarity problem. Comment CLARITY and I'll send you my framework. ♻️",
+   "author": "Hana Sato",
+   "initials": "HS",
+   "avColor": "#4D7C0F",
+   "byline": "to me · 09:14",
+   "acts": [
+    "Reply",
+    "Forward"
+   ],
+   "subject": "A quick win for you",
+   "verdict": "likely",
+   "score": 84,
+   "tells": [
+    0.92,
+    0.12,
+    0.24,
+    0.18,
+    0.82,
+    0.18,
+    0.24,
+    0.24,
+    0.15
+   ],
+   "humanVoice": 0.15,
+   "usefulness": 0.17,
+   "readerResponse": 0.54,
+   "community": {
+    "probably": 6,
+    "maybe": 5,
+    "no": 0
+   },
+   "used": 71,
+   "fine": "We cut our release checklist from 31 steps to 12 in August. Rollbacks went from four a month to one. The steps we dropped were all checks a CI job already ran.",
+   "fineAuthor": "Sam Okafor",
+   "fineInitials": "SO",
+   "fineColor": "#0F766E",
+   "fineByline": "to me · 09:14",
+   "caption": "Illustration: Slop Mop on Email, marking an email like the example on this page. It scores 84 out of 100 (Likely slop); the strongest signs are scroll-stopper and no-catch promises. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Email email marked Likely slop by Slop Mop, with the panel showing Scroll-stopper and No-catch promises as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/learn-false-positives-in-slop-detection.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "learn",
+   "title": "Can slop detection be wrong? False positives explained",
+   "line": "Every slop filter gets some calls wrong. Where false positives come from, how calibration and one-spike cuts limit them, and how…",
+   "big": "",
+   "bigLabel": "",
+   "url": "slopmop.lol/learn/false-positives-in-slop-detection"
+  }
+ },
+ {
+  "out": "assets/hero/learn-false-positives-in-slop-detection.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "learn",
+   "title": "Can slop detection be wrong? False positives explained",
+   "steps": [
+    "Where slop detection false positives come from",
+    "How Slop Mop limits false positives",
+    "When a false positive happens anyway",
+    "Living with slop detection false positives"
+   ],
+   "big": "",
+   "bigLabel": ""
+  }
+ },
+ {
+  "out": "assets/fig/learn-false-positives-in-slop-detection.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "medium",
+   "text": "Most leaders don't have a strategy problem. They have a clarity problem. Comment CLARITY and I'll send you my framework. ♻️",
+   "author": "Aisha Rahman",
+   "initials": "AR",
+   "avColor": "#BE185D",
+   "byline": "8 min read · 2 days ago",
+   "acts": [
+    "👏 1.2K",
+    "💬 38",
+    "Save"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 72,
+   "tells": [
+    0.82,
+    0.3,
+    0.27,
+    0.3,
+    0.3,
+    0.15,
+    0.21,
+    0.92,
+    0.21
+   ],
+   "humanVoice": 0.1,
+   "usefulness": 0.09,
+   "readerResponse": 0.54,
+   "community": {
+    "probably": 6,
+    "maybe": 3,
+    "no": 0
+   },
+   "used": 85,
+   "fine": "We cut our release checklist from 31 steps to 12 in August. Rollbacks went from four a month to one. The steps we dropped were all checks a CI job already ran.",
+   "fineAuthor": "Jordan Ellis",
+   "fineInitials": "JE",
+   "fineColor": "#5B6CD9",
+   "fineByline": "8 min read · 2 days ago",
+   "caption": "Illustration: Slop Mop on Medium, marking a post like the example on this page. It scores 72 out of 100 (Likely slop); the strongest signs are stiff phrasing and scroll-stopper. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Medium post marked Likely slop by Slop Mop, with the panel showing Stiff phrasing and Scroll-stopper as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/learn-useful-ai-assisted-writing.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "learn",
+   "title": "When AI-assisted writing is good, and when it's slop",
+   "line": "AI help doesn't make writing slop; missing substance does. What useful AI-assisted writing has in common, with examples and a…",
+   "big": "",
+   "bigLabel": "",
+   "url": "slopmop.lol/learn/useful-ai-assisted-writing"
+  }
+ },
+ {
+  "out": "assets/hero/learn-useful-ai-assisted-writing.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "learn",
+   "title": "When AI-assisted writing is good, and when it's slop",
+   "steps": [
+    "What makes AI-assisted writing useful",
+    "When AI-assisted writing turns into slop",
+    "A checklist for AI-assisted writing before…",
+    "Using AI-assisted writing with a clear…"
+   ],
+   "big": "",
+   "bigLabel": ""
+  }
+ },
+ {
+  "out": "assets/fig/learn-useful-ai-assisted-writing.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "x",
+   "text": "In today's fast-paced world, leadership is more important than ever. Great leaders don't just manage; they inspire. Here are 5 game-changing habits that will elevate your leadership journey. 🚀",
+   "author": "Sam Okafor",
+   "initials": "SO",
+   "avColor": "#0F766E",
+   "byline": "@sam76 · 2h",
+   "acts": [
+    "💬 312",
+    "🔁 1.1K",
+    "❤️ 8.4K",
+    "📊 220K"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 75,
+   "tells": [
+    0.21,
+    0.82,
+    0.18,
+    0.18,
+    0.27,
+    0.12,
+    0.24,
+    0.18,
+    0.92
+   ],
+   "humanVoice": 0.25,
+   "usefulness": 0.13,
+   "readerResponse": 0.46,
+   "community": {
+    "probably": 14,
+    "maybe": 4,
+    "no": 2
+   },
+   "used": 58,
+   "fine": "I asked a model to tidy up my notes from our September offsite, then cut half of what it gave me. What's left: we moved one-to-ones from weekly to fortnightly for senior engineers, and asked for written agendas. Two…",
+   "fineAuthor": "Aisha Rahman",
+   "fineInitials": "AR",
+   "fineColor": "#BE185D",
+   "fineByline": "@aisha57 · 2h",
+   "caption": "Illustration: Slop Mop on X, marking a post like the example on this page. It scores 75 out of 100 (Likely slop); the strongest signs are too-tidy story and engagement bait. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a X post marked Likely slop by Slop Mop, with the panel showing Too-tidy story and Engagement bait as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/learn-why-feeds-fill-with-slop.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "learn",
+   "title": "Why feeds fill with slop: the incentives behind it",
+   "line": "Feeds rank by engagement, slop is cheap to make and earns reactions, and platforms only partly push back. The loop, and how…",
+   "big": "",
+   "bigLabel": "",
+   "url": "slopmop.lol/learn/why-feeds-fill-with-slop"
+  }
+ },
+ {
+  "out": "assets/hero/learn-why-feeds-fill-with-slop.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "learn",
+   "title": "Why feeds fill with slop: the incentives behind it",
+   "steps": [
+    "Why feeds fill with slop: ranking by…",
+    "Slop is cheap and pays",
+    "Platforms push back, partly",
+    "What readers can do about feeds filling with…"
+   ],
+   "big": "",
+   "bigLabel": ""
+  }
+ },
+ {
+  "out": "assets/fig/learn-why-feeds-fill-with-slop.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "websites",
+   "text": "Comment \"PLAN\" and I'll DM you my 30-day content calendar. 📩 ♻️ Repost to help someone in your network. Follow me for more.",
+   "author": "Luis Ortega",
+   "initials": "LO",
+   "avColor": "#1D4ED8",
+   "byline": "Published 12 September 2026",
+   "acts": [
+    "Share",
+    "Save",
+    "Print"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 85,
+   "tells": [
+    0.15,
+    0.92,
+    0.24,
+    0.82,
+    0.12,
+    0.18,
+    0.18,
+    0.27,
+    0.18
+   ],
+   "humanVoice": 0.1,
+   "usefulness": 0.13,
+   "readerResponse": 0.62,
+   "community": {
+    "probably": 7,
+    "maybe": 4,
+    "no": 1
+   },
+   "used": 150,
+   "fine": "I've put our 30-day content calendar in a public spreadsheet: one tab per week, with the posts we cut and why. Use whatever helps.",
+   "fineAuthor": "Priya Nair",
+   "fineInitials": "PN",
+   "fineColor": "#C2410C",
+   "fineByline": "Published 12 September 2026",
+   "caption": "Illustration: Slop Mop on a website, marking an article like the example on this page. It scores 85 out of 100 (Likely slop); the strongest signs are engagement bait and empty praise. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Websites & blogs article marked Likely slop by Slop Mop, with the panel showing Engagement bait and Empty praise as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/hero/learn.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "hub",
+   "title": "Learn how slop works",
+   "count": "4 explainers",
+   "chips": [
+    "AI detector vs writing…",
+    "Can slop detection be…",
+    "When AI-assisted writing…",
+    "Why feeds fill with slop…"
+   ]
+  }
+ },
+ {
+  "out": "assets/og/learn.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "hub",
+   "title": "Learn how slop works",
+   "line": "The ideas behind judging writing, not writers.",
+   "url": "slopmop.lol/learn"
+  }
+ },
+ {
+  "out": "assets/og/calculators-attention-cost-calculator.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "calculators",
+   "title": "Attention cost calculator: what slop costs you in time",
+   "line": "Enter how many posts you scroll past and how long each slop post takes to dismiss, and see the hours it adds up to in a year.",
+   "big": "29 hours",
+   "bigLabel": "a year dismissing slop, at the example settings",
+   "url": "slopmop.lol/calculators/attention-cost-calculator"
+  }
+ },
+ {
+  "out": "assets/hero/calculators-attention-cost-calculator.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "calculators",
+   "title": "Attention cost calculator: what slop costs you in time",
+   "steps": [
+    "How the attention cost calculator works",
+    "The attention cost formula",
+    "What the number leaves out",
+    "Lowering your attention cost"
+   ],
+   "big": "29 hours",
+   "bigLabel": "a year dismissing slop, at the example settings"
+  }
+ },
+ {
+  "out": "assets/fig/calculators-attention-cost-calculator.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "websites",
+   "text": "I almost quit. My manager looked at me and said six words. I'll never forget them. \"Your spreadsheet is the product.\" Read that again.",
+   "author": "Luis Ortega",
+   "initials": "LO",
+   "avColor": "#1D4ED8",
+   "byline": "Published 12 September 2026",
+   "acts": [
+    "Share",
+    "Save",
+    "Print"
+   ],
+   "subject": "",
+   "verdict": "possibly",
+   "score": 68,
+   "tells": [
+    0.92,
+    0.27,
+    0.15,
+    0.15,
+    0.82,
+    0.18,
+    0.27,
+    0.18,
+    0.12
+   ],
+   "humanVoice": 0.25,
+   "usefulness": 0.13,
+   "readerResponse": 0.62,
+   "community": {
+    "probably": 10,
+    "maybe": 4,
+    "no": 1
+   },
+   "used": 78,
+   "fine": "Our finance team moved the month-end close into one shared spreadsheet instead of three tools. Close now takes 4 working days instead of 7. The cost was a week of migration and one very long macro.",
+   "fineAuthor": "Priya Nair",
+   "fineInitials": "PN",
+   "fineColor": "#C2410C",
+   "fineByline": "Published 12 September 2026",
+   "caption": "Illustration: Slop Mop on a website, marking an article like the example on this page. It scores 68 out of 100 (Possibly slop); the strongest signs are scroll-stopper and no-catch promises. In Highlight mode it stays visible and its mop turns yellow; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Websites & blogs article marked Possibly slop by Slop Mop, with the panel showing Scroll-stopper and No-catch promises as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/calculators-content-value-density.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "calculators",
+   "title": "Content value density calculator: how much does it say?",
+   "line": "Paste any text to count concrete details against filler per 100 words, with each one highlighted. A transparent word count, not…",
+   "big": "2 vs 17",
+   "bigLabel": "concrete vs filler markers per 100 words in a typical hook post",
+   "url": "slopmop.lol/calculators/content-value-density"
+  }
+ },
+ {
+  "out": "assets/hero/calculators-content-value-density.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "calculators",
+   "title": "Content value density calculator: how much does it say?",
+   "steps": [
+    "How the content value density calculator…",
+    "Reading the content value density result",
+    "What this calculator is not",
+    "Using it on your own writing"
+   ],
+   "big": "2 vs 17",
+   "bigLabel": "concrete vs filler markers per 100 words in a typical hook post"
+  }
+ },
+ {
+  "out": "assets/fig/calculators-content-value-density.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "reddit",
+   "text": "Thrilled to announce our cutting-edge, AI-powered platform that will revolutionise how teams collaborate and unlock unprecedented productivity.",
+   "author": "Priya Nair",
+   "initials": "PN",
+   "avColor": "#C2410C",
+   "byline": "u/priya46 · r/productivity · 5h",
+   "acts": [
+    "⬆ 2.3k",
+    "💬 418 comments",
+    "Share"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 77,
+   "tells": [
+    0.18,
+    0.15,
+    0.92,
+    0.72,
+    0.18,
+    0.27,
+    0.18,
+    0.82,
+    0.24
+   ],
+   "humanVoice": 0.2,
+   "usefulness": 0.09,
+   "readerResponse": 0.54,
+   "community": {
+    "probably": 12,
+    "maybe": 3,
+    "no": 0
+   },
+   "used": 97,
+   "fine": "Our new release lets two people edit the same invoice at once. Before, the second person got a locked file and had to wait.",
+   "fineAuthor": "Tom Brennan",
+   "fineInitials": "TB",
+   "fineColor": "#B45309",
+   "fineByline": "u/tom40 · r/productivity · 5h",
+   "caption": "Illustration: Slop Mop on Reddit, marking a post like the example on this page. It scores 77 out of 100 (Likely slop); the strongest signs are hype words and stiff phrasing. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Reddit post marked Likely slop by Slop Mop, with the panel showing Hype words and Stiff phrasing as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/calculators-newsletter-reading-budget.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "calculators",
+   "title": "Newsletter reading budget calculator",
+   "line": "Count your newsletters, issues and reading time, set a weekly budget, and see how many fit and how many to cut or demote.",
+   "big": "162 min",
+   "bigLabel": "a week to read every issue, at the example settings",
+   "url": "slopmop.lol/calculators/newsletter-reading-budget"
+  }
+ },
+ {
+  "out": "assets/hero/calculators-newsletter-reading-budget.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "calculators",
+   "title": "Newsletter reading budget calculator",
+   "steps": [
+    "How the newsletter reading budget works",
+    "The newsletter budget formula",
+    "Getting your inbox inside the newsletter…"
+   ],
+   "big": "162 min",
+   "bigLabel": "a week to read every issue, at the example settings"
+  }
+ },
+ {
+  "out": "assets/fig/calculators-newsletter-reading-budget.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "medium",
+   "text": "Hi {First name}, I hope this email finds you well! I came across your impressive profile and was truly inspired. Our cutting-edge platform empowers teams like yours to unlock seamless growth. Do you have 15 minutes this week?",
+   "author": "Aisha Rahman",
+   "initials": "AR",
+   "avColor": "#BE185D",
+   "byline": "8 min read · 2 days ago",
+   "acts": [
+    "👏 1.2K",
+    "💬 38",
+    "Save"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 76,
+   "tells": [
+    0.92,
+    0.24,
+    0.18,
+    0.27,
+    0.21,
+    0.18,
+    0.82,
+    0.21,
+    0.27
+   ],
+   "humanVoice": 0.3,
+   "usefulness": 0.09,
+   "readerResponse": 0.54,
+   "community": {
+    "probably": 6,
+    "maybe": 3,
+    "no": 0
+   },
+   "used": 189,
+   "fine": "Hi Priya, you posted a data engineer role on 3 October. We place contract data engineers in Leeds, usually within two weeks, for a 15% fee. Worth a call, or not a fit?",
+   "fineAuthor": "Jordan Ellis",
+   "fineInitials": "JE",
+   "fineColor": "#5B6CD9",
+   "fineByline": "8 min read · 2 days ago",
+   "caption": "Illustration: Slop Mop on Medium, marking a post like the example on this page. It scores 76 out of 100 (Likely slop); the strongest signs are scroll-stopper and flowery prose. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Medium post marked Likely slop by Slop Mop, with the panel showing Scroll-stopper and Flowery prose as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/calculators-scrolling-time-calculator.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "calculators",
+   "title": "Scrolling time calculator: reading versus scrolling",
+   "line": "Turn minutes a day in feeds into hours a year, split between what was worth reading and what wasn't, and see how many books that…",
+   "big": "205 hours",
+   "bigLabel": "a year on feed posts you wouldn't miss, at the example settings",
+   "url": "slopmop.lol/calculators/scrolling-time-calculator"
+  }
+ },
+ {
+  "out": "assets/hero/calculators-scrolling-time-calculator.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "calculators",
+   "title": "Scrolling time calculator: reading versus scrolling",
+   "steps": [
+    "How the scrolling time calculator works",
+    "The scrolling time formula",
+    "Reading versus scrolling: what changes the…",
+    "What the scrolling time calculator can't…"
+   ],
+   "big": "205 hours",
+   "bigLabel": "a year on feed posts you wouldn't miss, at the example settings"
+  }
+ },
+ {
+  "out": "assets/fig/calculators-scrolling-time-calculator.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "x",
+   "text": "I almost quit last Tuesday. Then my 6-year-old said something that changed how I lead forever. Here's what she taught me 👇",
+   "author": "Sam Okafor",
+   "initials": "SO",
+   "avColor": "#0F766E",
+   "byline": "@sam38 · 2h",
+   "acts": [
+    "💬 312",
+    "🔁 1.1K",
+    "❤️ 8.4K",
+    "📊 220K"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 81,
+   "tells": [
+    0.92,
+    0.12,
+    0.21,
+    0.27,
+    0.24,
+    0.82,
+    0.27,
+    0.12,
+    0.15
+   ],
+   "humanVoice": 0.1,
+   "usefulness": 0.13,
+   "readerResponse": 0.3,
+   "community": {
+    "probably": 6,
+    "maybe": 4,
+    "no": 0
+   },
+   "used": 170,
+   "fine": "We moved our all-hands from Monday to Thursday in May. Attendance went from about 60% to 85%, mostly because Mondays were eaten by customer calls.",
+   "fineAuthor": "Aisha Rahman",
+   "fineInitials": "AR",
+   "fineColor": "#BE185D",
+   "fineByline": "@aisha55 · 2h",
+   "caption": "Illustration: Slop Mop on X, marking a post like the example on this page. It scores 81 out of 100 (Likely slop); the strongest signs are scroll-stopper and “not x, but y”. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a X post marked Likely slop by Slop Mop, with the panel showing Scroll-stopper and “Not X, but Y” as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/hero/calculators.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "hub",
+   "title": "Slop calculators",
+   "count": "4 calculators",
+   "chips": [
+    "Attention cost calculator…",
+    "Content value density…",
+    "Newsletter reading budget…",
+    "Scrolling time calculator…"
+   ]
+  }
+ },
+ {
+  "out": "assets/og/calculators.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "hub",
+   "title": "Slop calculators",
+   "line": "What low-value content costs you, worked out in your browser.",
+   "url": "slopmop.lol/calculators"
+  }
  }
 ]

@@ -7,7 +7,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REQ = ["title", "seo_title", "description", "summary", "updated", "related", "keyword"]
 FAM = {"glossary": ["term", "aliases", "punchline", "kind"], "patterns": ["tell", "short", "order"],
        "for": ["kind", "audience"], "compare": ["kind", "them", "checked", "table", "verdict"],
-       "guides": ["network", "publish_date", "verified", "minutes"]}
+       "guides": ["network", "publish_date", "verified", "minutes"], "learn": ["minutes", "order"],
+       "calculators": ["calc", "order", "big", "big_label"]}
 BANNED = r"\b(game[- ]chang\w*|unlock\w*|elevat\w*|revolutioni[sz]\w*|seamless\w*|robust|cutting[- ]edge|leverag\w*|empower\w*|supercharg\w*|delv\w*|tapestry|symphony|furthermore|moreover|in conclusion|it'?s worth noting|in today'?s fast[- ]paced|ultimately,)"
 
 pages, errors, warns = {}, [], []
@@ -23,7 +24,7 @@ for f in glob.glob(f"{ROOT}/_content/*/*.md"):
     pages[path] = (fam, slug, m, body)
 
 known = set(pages) | {"/", "/how-it-works.html", "/help.html", "/about.html", "/privacy.html", "/terms.html", "/contact.html",
-                      "/open-source.html", "/glossary/", "/patterns/", "/for/", "/compare/", "/guides/", "/index.html"}
+                      "/open-source.html", "/glossary/", "/patterns/", "/for/", "/compare/", "/guides/", "/learn/", "/calculators/", "/index.html"}
 known |= {f"/guides/{p.split('/')[2]}/" for p in pages if p.startswith("/guides/")}
 
 for path, (fam, slug, m, body) in sorted(pages.items()):
@@ -62,7 +63,7 @@ for path, (fam, slug, m, body) in sorted(pages.items()):
     inner = re.findall(r"\]\((/[^)\s]*)\)", body)
     if not any(l in ("/", "/how-it-works.html", "/index.html") or l.startswith("/how-it-works.html#") for l in inner):
         errors.append(f"{name}: no link to / or /how-it-works.html")
-    if len({l for l in inner if re.match(r"/(glossary|patterns|for|compare|guides)/", l)}) < 2:
+    if len({l for l in inner if re.match(r"/(glossary|patterns|for|compare|guides|learn|calculators)/", l)}) < 2:
         errors.append(f"{name}: fewer than two links to library pages")
     if not re.search(r"\]\(https?://", body):
         errors.append(f"{name}: no third-party link in the body")

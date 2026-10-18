@@ -21,6 +21,8 @@ FAMILIES = {
     "for": ("Slop Mop for", "Who Slop Mop is for"),
     "compare": ("Compare", "Slop Mop compared"),
     "guides": ("Guides", "Guides to a better feed"),
+    "learn": ("Learn", "Learn how slop works"),
+    "calculators": ("Calculators", "Slop calculators"),
 }
 NETWORKS = [("linkedin", "LinkedIn"), ("reddit", "Reddit"), ("x", "X"), ("facebook", "Facebook"), ("substack", "Substack"),
             ("medium", "Medium"), ("websites", "Websites & blogs"), ("email", "Email")]
@@ -271,7 +273,8 @@ def cta(network=None):
 
 
 EXPLORE = [("/", "Slop Mop home"), ("/how-it-works.html", "How it works"), ("/glossary/", "The slop glossary"),
-           ("/patterns/", "The nine tells"), ("/for/", "Who it's for"), ("/compare/", "Compare"), ("/guides/", "Guides")]
+           ("/patterns/", "The nine tells"), ("/for/", "Who it's for"), ("/compare/", "Compare"), ("/guides/", "Guides"),
+           ("/learn/", "Learn"), ("/calculators/", "Calculators")]
 
 
 def explore(here):
@@ -337,7 +340,8 @@ def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", l
 
 
 def emit(path, h, main, depth):
-    write(path + "index.html", rel(page_shell(h, "", main, islands=False), depth))
+    extra = '<script src="/assets/calculators.js" defer></script>\n' if 'data-calc="' in main else ""
+    write(path + "index.html", rel(page_shell(h, "", main, islands=False, extra_scripts=extra), depth))
 
 
 def hub_page(family, title, lede, inner, desc, depth=1, extra_ld=None, visual=""):
@@ -596,6 +600,40 @@ def guides():
              "Weekly guides to cutting low-value content on LinkedIn, Reddit, X, Facebook, Substack, Medium, websites and email, using each platform's own controls.")
 
 
+# ---------------------------------------------------------------- learn and calculators
+def learn():
+    pages_ = sorted(LIVE_PAGES["learn"], key=lambda p: p.get("order", 99))
+    for p in pages_:
+        meta = f'{p.get("minutes", 6)} min read'
+        h, main = article(p, [("Home", ""), ("Learn", "learn/"), (p["title"], p["path"])], "learn", esc(p["summary"]), meta=meta,
+                          ld_extra={"@type": "Article", "headline": p["title"], "datePublished": p["updated"], "dateModified": p["lastmod"],
+                                    "author": {"@type": "Organization", "name": "Slop Mop"}, "mainEntityOfPage": SITE + p["path"]})
+        emit(p["path"], h, main, 2)
+    hub_page("learn", "Learn how slop works",
+             "The ideas behind Slop Mop: why feeds fill up with slop, how judging the writing differs from guessing who wrote it, when AI-assisted writing is good, and what happens when a filter gets it wrong.",
+             '<div class="cards-3">' + "".join(card(p, f'{p.get("minutes", 6)} min read') for p in pages_) + "</div>",
+             "Explainers on low-value content: AI detection versus writing quality, useful AI-assisted writing, false positives, and why feeds fill with slop.")
+
+
+def calc_widget(p):
+    return (f'<div class="calc" data-calc="{esc(p["calc"])}" aria-live="polite"><noscript><p>This calculator needs JavaScript. '
+            f'The arithmetic is written out below, so you can work it by hand.</p></noscript></div>')
+
+
+def calculators():
+    pages_ = sorted(LIVE_PAGES["calculators"], key=lambda p: p.get("order", 99))
+    for p in pages_:
+        app = {"@type": "WebApplication", "name": p["title"], "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (runs in your browser)",
+               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": SITE + p["path"], "description": p["description"]}
+        h, main = article(p, [("Home", ""), ("Calculators", "calculators/"), (p["title"], p["path"])], "calculators", esc(p["summary"]),
+                          meta="free · runs in your browser · nothing is sent anywhere", before=calc_widget(p), ld_extra=app)
+        emit(p["path"], h, main, 2)
+    hub_page("calculators", "Slop calculators",
+             "Work out what low-value content costs you: the attention it takes, the hours it adds up to, the inbox time it eats and how much a piece of writing actually says. Every calculator runs in your browser and shows its arithmetic.",
+             f'<div class="cards-3">{"".join(card(p, "calculator") for p in pages_)}</div>',
+             "Free calculators for the cost of slop: attention cost, scrolling versus reading time, newsletter reading budget and content value density.")
+
+
 # ---------------------------------------------------------------- sitemaps
 CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "open-source", "contact.html",
         # the brief for AI assistants: an orphan HTML page plus its Markdown source, and llms.txt
@@ -685,6 +723,8 @@ HUB_CHIPS = {
     "for": ("pages", "Slop Mop on every network and for every line of work"),
     "compare": ("comparisons", "Slop Mop next to the other tools people use to cut the noise"),
     "guides": ("guides", "weekly guides for each network"),
+    "learn": ("explainers", "the ideas behind judging writing, not writers"),
+    "calculators": ("calculators", "what low-value content costs you, worked out in your browser"),
 }
 
 
@@ -807,6 +847,11 @@ def page_images(p):
         what = next((r for r in p.get("table", []) if "does" in r["row"].lower() or "judge" in r["row"].lower()), (p.get("table") or [{"slopmop": "", "them": ""}])[0])
         og = {"mode": "og", "family": f, "us": _short(what["slopmop"], 70), "them": p["them"], "themLine": _short(what["them"], 70), "url": url}
         hero_alt = f"Comparison table: Slop Mop and {p['them']} side by side"
+    elif f in ("learn", "calculators"):
+        heads = [_short(h, 46) for h in re.findall(r"^## (.+)$", p["body"], re.M)][:4]
+        hero = {"mode": "hero", "family": f, "title": _short(p["title"], 80), "steps": heads, "big": p.get("big", ""), "bigLabel": p.get("big_label", "")}
+        og = {"mode": "og", "family": f, "title": p["title"], "line": _short(p["summary"], 130), "big": p.get("big", ""), "bigLabel": p.get("big_label", ""), "url": url}
+        hero_alt = (f"{p['title']}: " + "; ".join(heads)) if f == "learn" else f"{p['title']}: {p.get('big', '')} {p.get('big_label', '')}".strip()
     else:
         steps = [_short(re.sub(r"^\d+\.\s*", "", h), 44) for h in re.findall(r"^## (.+)$", p["body"], re.M)][:4]
         hero = {"mode": "hero", "family": f, "net": p["network"], "title": _short(p["title"], 70), "minutes": p.get("minutes", 5), "steps": steps}
@@ -842,5 +887,5 @@ def images_manifest():
 if __name__ == "__main__":
     print("today is", TODAY)
     clean_stale()
-    glossary(); patterns(); for_pages(); compare(); guides()
+    glossary(); patterns(); for_pages(); compare(); guides(); learn(); calculators()
     sitemaps(); patch_xl(); images_manifest()
