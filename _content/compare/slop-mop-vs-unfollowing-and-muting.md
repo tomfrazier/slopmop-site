@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs unfollowing and muting people",
   "seo_title": "Slop Mop vs muting people: posts or people? · Slop Mop",
-  "description": "Muting removes everything a person posts. Slop Mop judges each post, so a contact's good posts still reach you. When each makes sense, and how to combine them.",
+  "description": "Muting removes everything a person posts. Slop Mop judges each post, so a contact's good posts still reach you. When each makes sense, and how to mix them.",
   "summary": "Muting removes everything a person posts, good or bad; Slop Mop judges each post on its writing, so the good ones still get through.",
   "updated": "2026-10-18",
   "kind": "category",

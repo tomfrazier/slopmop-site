@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs newsletter unsubscribe and email triage tools",
   "seo_title": "Slop Mop vs email triage tools: senders or writing?",
-  "description": "Email triage tools sort mail by sender and unsubscribe in bulk. Slop Mop judges each piece of writing, with email support coming soon. How they compare today.",
+  "description": "Email triage tools sort mail by sender and unsubscribe in bulk. Slop Mop judges each piece of writing; its email support is coming soon. How they compare.",
   "summary": "Email triage tools act on whole senders today; Slop Mop judges each piece of writing, with Gmail and Outlook support coming soon.",
   "updated": "2026-10-18",
   "kind": "category",

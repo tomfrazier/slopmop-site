@@ -3,7 +3,7 @@
   "title": "How to spot karma farming and repost bots on Reddit",
   "seo_title": "How to spot Reddit karma farming and repost bots",
   "description": "The signs of a karma-farming account or repost bot on Reddit, a quick profile check that takes a minute, and what to do once you're fairly sure.",
-  "summary": "Karma farmers recycle old hits and copied comments to build accounts worth selling or using. The signs, a one-minute profile check and what to do.",
+  "summary": "Karma farmers recycle old hits and copied comments to build accounts worth using. The signs, a one-minute profile check and what to do.",
   "updated": "2026-10-18",
   "network": "reddit",
   "publish_date": "2026-10-27",

@@ -31,3 +31,59 @@ technofeudalism	Technofeudalism
 vibe-coding	Vibe coding
 vibe-revenue	Vibe revenue
 workslop	Workslop
+ai-snake-oil	AI snake oil
+ai-sycophancy	AI sycophancy
+ai-washing	AI washing
+article-spinning	Article spinning
+astroturfing	Astroturfing
+bacn	Bacn
+botshit	Botshit
+brandolinis-law	Brandolini’s law
+broetry	Broetry
+bullshit	Bullshit (Frankfurt)
+chumbox	Chumbox
+churnalism	Churnalism
+clanker	Clanker
+click-farm	Click farm
+clickbait	Clickbait
+cognitive-debt	Cognitive debt
+content-farm	Content farm
+content-shock	Content shock
+copypasta	Copypasta
+delve	Delve (AI marker)
+doomscrolling	Doomscrolling
+doorway-page	Doorway page
+elsagate	Elsagate
+firehose-of-falsehood	Firehose of falsehood
+flood-the-zone	Flood the zone
+hallucination	Hallucination (AI)
+hot-take	Hot take
+humblebrag	Humblebrag
+hustle-porn	Hustle porn
+infodemic	Infodemic
+information-overload	Information overload
+information-pollution	Information pollution
+italian-brainrot	Italian brainrot
+keyword-stuffing	Keyword stuffing
+linkedin-lunatics	LinkedIn Lunatics
+listicle	Listicle
+llm-grooming	LLM grooming
+made-for-adsense	Made for AdSense
+model-collapse	Model collapse
+outrage-porn	Outrage porn
+pink-slime-journalism	Pink-slime journalism
+rage-bait	Rage bait
+reply-guy	Reply guy
+scaled-content-abuse	Scaled content abuse
+scraper-site	Scraper site
+shitposting	Shitposting
+site-reputation-abuse	Site reputation abuse
+slopper	Slopper
+slopsquatting	Slopsquatting
+sludge-content	Sludge content
+sock-puppet	Sock puppet
+spam-blog	Spam blog
+stochastic-parrot	Stochastic parrot
+troll-farm	Troll farm
+vagueposting	Vagueposting
+word-salad	Word salad

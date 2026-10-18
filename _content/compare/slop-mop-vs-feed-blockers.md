@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs feed blockers and hiders",
   "seo_title": "Slop Mop vs feed blockers: cleaner or gone? · Slop Mop",
-  "description": "Feed blockers remove a site's feed so you stop scrolling. Slop Mop keeps the feed and folds only likely slop. Which suits you depends on what you want from the feed.",
+  "description": "Feed blockers remove a site's feed so you stop scrolling. Slop Mop keeps the feed and folds only likely slop. Which suits you depends on what you want.",
   "summary": "Feed blockers remove the feed to break the scrolling habit; Slop Mop keeps the feed and folds only the posts it judges low-value.",
   "updated": "2026-10-18",
   "kind": "category",

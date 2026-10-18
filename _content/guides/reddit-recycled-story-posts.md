@@ -2,7 +2,7 @@
 {
   "title": "How to tell a recycled or made-up story post on Reddit",
   "seo_title": "Recycled and made-up Reddit story posts: the signs",
-  "description": "How to spot recycled, invented and rage-bait story posts in Reddit advice and confession communities, and when a repeated question still deserves an answer.",
+  "description": "How to spot recycled, invented and rage-bait story posts in Reddit advice and confession communities, and when a repeated question deserves an answer.",
   "summary": "Perfect villains, escalating updates and titles built for outrage: how to tell a recycled or invented Reddit story from a real one.",
   "updated": "2026-10-18",
   "network": "reddit",

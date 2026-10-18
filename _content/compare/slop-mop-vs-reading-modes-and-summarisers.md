@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs browser reading modes and AI summarisers",
   "seo_title": "Slop Mop vs reading modes and AI summarisers",
-  "description": "Reading modes tidy a page and summarisers shorten it. Slop Mop decides what's worth reading in the first place. Where each fits, and how they work together.",
+  "description": "Reading modes tidy a page and summarisers shorten it. Slop Mop decides what's worth reading in the first place. Where each fits, and how they combine.",
   "summary": "Reading modes and summarisers tidy or shorten what you've opened; Slop Mop screens a feed first and folds what isn't worth opening.",
   "updated": "2026-10-18",
   "kind": "category",

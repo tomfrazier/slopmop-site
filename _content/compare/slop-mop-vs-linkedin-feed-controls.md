@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs LinkedIn's own feed controls",
   "seo_title": "Slop Mop vs LinkedIn's feed controls · Slop Mop",
-  "description": "LinkedIn lets you hide posts, mute people and sort your feed. Slop Mop reads ahead and folds likely slop before you reach it. What each does, and how they fit together.",
+  "description": "LinkedIn lets you hide posts, mute people and sort your feed. Slop Mop folds likely slop before you reach it. What each does, and how they fit together.",
   "summary": "LinkedIn's controls act after you've read a post and shape its algorithm over time; Slop Mop judges each post first and shows why.",
   "updated": "2026-10-18",
   "kind": "category",

@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs RSS and feed readers",
   "seo_title": "Slop Mop vs RSS readers: curate or filter? · Slop Mop",
-  "description": "Feed readers replace a platform's feed with sources you choose. Slop Mop keeps you on LinkedIn and folds the slop. What each is good at, and why they pair well.",
+  "description": "Feed readers swap a platform's feed for sources you choose. Slop Mop keeps you on LinkedIn and folds the slop. What each is good at, and how they pair.",
   "summary": "Feed readers let you leave the algorithm for hand-picked sources; Slop Mop keeps you on the platform and judges each post's writing.",
   "updated": "2026-10-18",
   "kind": "category",

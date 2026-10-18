@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs spam filters",
   "seo_title": "Slop Mop vs spam filters: junk or just dull? · Slop Mop",
-  "description": "Spam filters catch unwanted and dangerous email. Slop Mop judges legitimate posts that waste your time. How they differ, and why one won't replace the other.",
+  "description": "Spam filters catch unwanted and dangerous email. Slop Mop judges legitimate posts that waste your time. How they differ, and why you need both.",
   "summary": "Spam filters catch junk, scams and phishing at the server; Slop Mop judges legitimate posts on their writing. One doesn't replace the other.",
   "updated": "2026-10-18",
   "kind": "category",

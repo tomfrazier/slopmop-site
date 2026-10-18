@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs keyword and mute-word filters",
   "seo_title": "Slop Mop vs keyword filters: words or writing? · Slop Mop",
-  "description": "Keyword filters hide posts containing words you list. Slop Mop judges how a post is written, with no list. Where each works best, and how to use them together.",
+  "description": "Keyword filters hide posts containing words you list. Slop Mop judges how a post is written, with no list. Where each works best, and how to combine them.",
   "summary": "Keyword filters hide posts that contain words you choose; Slop Mop judges the whole post's writing and needs no word list.",
   "updated": "2026-10-18",
   "kind": "category",

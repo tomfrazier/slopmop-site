@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs AI detectors",
   "seo_title": "Is Slop Mop an AI detector? Slop Mop vs AI detectors",
-  "description": "Slop Mop isn't an AI detector. Detectors estimate who wrote a text; Slop Mop judges whether it's worth reading. How the two differ and when each is the right tool.",
+  "description": "Slop Mop isn't an AI detector. Detectors estimate who wrote a text; Slop Mop judges whether it's worth reading. How they differ and when to use each.",
   "summary": "AI detectors estimate whether AI wrote a text. Slop Mop judges whether the writing is worth your time, whoever or whatever wrote it.",
   "updated": "2026-10-18",
   "kind": "category",

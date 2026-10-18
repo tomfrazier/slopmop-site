@@ -23,7 +23,7 @@ A stealth ad on Reddit is a comment or post that recommends a product as if from
 
 ## Why recommendation threads attract it
 
-People add "reddit" to searches because they want opinions from users rather than marketers. That makes "What's the best…", "Has anyone used…" and "Is X worth it?" threads valuable to anyone selling X.
+Plenty of people add "reddit" to their searches to find opinions from users instead of marketers. That makes "What's the best…", "Has anyone used…" and "Is X worth it?" threads valuable to anyone selling X.
 
 Reddit draws its own lines. Its spam policy gives "programming a bot that continuously promotes specific products or services within a community or across many communities" as an example of a violation, and asks people whose contributions are mostly links to a business they benefit from to watch how often they post, or to buy ads instead ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam)). Reddiquette offers a long-standing rule of thumb: about one in ten of your submissions being your own content ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette)).
 
@@ -40,17 +40,17 @@ A tagged comment can still be useful, and the tag tells you how to weigh it. A p
 Real users answering "best budget headphones?" tend to compare two or three and explain the choice. A stealth ad names one product in the first line, often with a link, sometimes to a specific landing page rather than the maker's main site.
 
 :::slop
-Honestly you can't go wrong with SoundPeak Pro! I switched last year and it's been a total game-changer. Crystal-clear audio, all-day comfort and seamless pairing. Here's the link: soundpeak.example/deal
+Honestly you can't go wrong with Quellsound Pro! I switched last year and it's been a total game-changer. Crystal-clear audio, all-day comfort and seamless pairing. Here's the link: quellsound.example/deal
 :::
 :::fine
 For under £60 I'd pick between two I've owned. The cheaper one sounds better but the headband cracked after a year. The other is duller but has replaceable pads. If you commute, the second.
 :::
 
-Both brand names and the link are made up. The first reads like product copy; the second reads like someone who has owned headphones.
+The brand name and the link are made up. The first reads like product copy; the second reads like someone who has owned headphones.
 
 ### It sounds like the box
 
-Phrases such as "game-changer", "seamless", "crystal-clear" and "all-day comfort" come from marketing, not from use. These are the [hype words](/patterns/hype-words/) tell, and in a thread of casual replies they stand out.
+Phrases such as "game-changer", "seamless", "crystal-clear" and "all-day comfort" come from marketing copy. These are the [hype words](/patterns/hype-words/) tell, and in a thread of casual replies they stand out.
 
 ### There's no catch
 
@@ -58,7 +58,7 @@ Everyone who owns something has a complaint about it: the battery, the app, the 
 
 ### The "I'm just a happy customer" opener
 
-"Not affiliated, just love this product!" without being asked is worth a second look. Plenty of real fans say it, so treat it as a prompt to check the profile, not as evidence.
+"Not affiliated, just love this product!" without being asked is worth a second look. Plenty of real fans say it, so treat it only as a prompt to check the profile.
 
 ### Replies that agree too neatly
 
@@ -89,4 +89,4 @@ If you sell something and want to take part honestly, the rules are simple. Read
 
 ## Where judgement still matters
 
-Some promotion is careful enough to pass every check above: a real-looking account, a modest tone, one plausible complaint. You won't catch all of it, and you don't have to. Recommendations that agree across several unrelated, long-standing accounts, with specifics and trade-offs, are still the best evidence Reddit offers. Slop Mop, which already flags promotional writing in LinkedIn posts, is coming soon to Reddit.
+Some promotion is careful enough to pass every check above: a real-looking account, a modest tone, one plausible complaint. You won't catch all of it, and you don't have to. Recommendations that agree across several unrelated, long-standing accounts, with specifics and trade-offs, are still the best evidence Reddit offers. Slop Mop, which already checks LinkedIn posts for hype words and no-catch promises, is coming soon to Reddit.

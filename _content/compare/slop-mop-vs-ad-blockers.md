@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs ad blockers",
   "seo_title": "Slop Mop vs ad blockers: ads or bad posts? · Slop Mop",
-  "description": "Ad blockers stop ads and trackers from loading. Slop Mop judges the ordinary posts left in your LinkedIn feed. What each does, and why most people can run both.",
+  "description": "Ad blockers stop ads and trackers loading. Slop Mop judges the ordinary posts left in your LinkedIn feed. What each does, and why you can run both.",
   "summary": "Ad blockers remove paid placements and trackers; Slop Mop judges the organic posts that remain. Different jobs, and they run side by side.",
   "updated": "2026-10-18",
   "kind": "category",
