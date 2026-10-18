@@ -2,7 +2,7 @@
 sitemap. Run after home.py, pages.py and askai.py (it rewrites the footer of the hand-edited xl/ pages too).
 
 Each source file is JSON frontmatter between --- lines, then Markdown (format in _content/WRITING.md). A page goes live
-when its publish_date (guides) is today or earlier, in UTC; .github/workflows/publish.yml rebuilds daily so scheduled
+when its publish_date (guides) is today or earlier, in Pacific time; .github/workflows/publish.yml rebuilds at 12:07am Pacific so scheduled
 guides appear on their date with their hub links and sitemap entries. SLOPMOP_TODAY=YYYY-MM-DD overrides the date
 for previews.
 """
@@ -12,7 +12,9 @@ from common import *
 import pages as P
 
 CONTENT = f"{ROOT}/_content"
-TODAY = os.environ.get("SLOPMOP_TODAY") or datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+# Publish dates are Pacific dates: a guide dated 20 October goes live at midnight on 20 October in California.
+from zoneinfo import ZoneInfo
+TODAY = os.environ.get("SLOPMOP_TODAY") or datetime.datetime.now(ZoneInfo("America/Los_Angeles")).date().isoformat()
 SITE = "https://slopmop.lol/"
 
 FAMILIES = {

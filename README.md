@@ -50,7 +50,7 @@ python3 check.py      # content checks: fields, broken links, banned stock phras
 
 How to write a page (format, voice, product facts) is in `_content/WRITING.md`. Share images live in `assets/og/`, one per page; after adding pages run `node _build/og.js` (needs Playwright) to render the missing ones.
 
-**Scheduled publishing.** `.github/workflows/publish.yml` runs the build every day at 12:07 UTC. A guide whose `publish_date` has arrived gets its page, hub links and sitemap entry; the workflow commits that to `main`, Pages deploys it and the IndexNow workflow submits it. To publish early, change the date or run the workflow by hand.
+**Scheduled publishing.** `.github/workflows/publish.yml` runs the build every day at 12:07am Pacific time (PDT or PST, whichever is in force; publish dates are Pacific dates). A guide whose `publish_date` has arrived gets its page, hub links and sitemap entry; the workflow commits that to `main`, Pages deploys it and the IndexNow workflow submits it. To publish early, change the date or run the workflow by hand.
 
 **Sitemaps.** `sitemap.xml` is an index of `sitemap-core.xml` plus one child per content family (`sitemap-glossary.xml`, `sitemap-patterns.xml`, …). Each page is in exactly one child, with `lastmod` set to when its content last changed. The pages are plain HTML; the design-system pieces (fold strip, details panel, Slopprint, mop icons) render into `data-island` placeholders.
 
