@@ -56,7 +56,7 @@ Absolutely fascinating perspective! This really highlights the importance of inn
 
 That reply mentions nothing specific to any post. It would work under a rocket launch, a recipe or a resignation letter, which is how you know.
 
-## Check the account, not just the reply
+## Check the account as well as the reply
 
 One empty reply doesn't make anyone a bot. Before you write an account off, open its profile and look at the **Replies** tab.
 
@@ -73,6 +73,8 @@ Be careful about calling people bots in public. Plenty of real people write stif
 2. **Look for replies with detail.** A number, a place, a link to a source or a first-hand account. Read those and skip the rest.
 3. **Check whether the author replied.** Replies the original poster answered are more likely to be part of a real conversation.
 4. **Look for corrections with sources.** A correction with a link is worth more than ten agreements.
+
+5. **Sort by usefulness yourself.** If one reply answers the question you had, stop there. A reply section doesn't need reading to the end.
 
 ## What to do about it
 

@@ -55,6 +55,8 @@ X reopens the tab you last used, so if you choose Following and leave it there, 
 
 **Use For You when** you want to find new accounts or see what's being discussed beyond your own follows. Treat it as somewhere to visit for a few minutes at a time.
 
+**During breaking news**, Following is usually the calmer choice. For You mixes in recommended posts from accounts you've never checked, and in the first hours of a big story those can include a lot of speculation and pile-ons. In Following you'll see the story through accounts you already trust, at the pace they post it. If you need wider coverage, a List of reporters and official sources does that job without the recommendations.
+
 A pattern that works for many readers: Following by default, For You for five minutes when you want something new, and a follow (or a List) for anything good you find there, so you'll see it again in Following.
 
 ## Tidy your Following tab

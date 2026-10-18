@@ -85,6 +85,8 @@ That's [engagement bait](/patterns/engagement-bait/), and it often arrives after
 
 If all three checks fail, skip the thread. If the opener is vague but the middle is solid, it may be worth a read despite the packaging. If the opener is specific but the middle is a list of names, the writer probably ran out of material.
 
+Whichever way you decide, the check costs about two minutes. A formula thread of 15 posts takes longer than that to read in full, and you'll usually know by the third post you open.
+
 ## Patterns that reliably mean padding
 
 - **The lesson list.** "10 lessons from 10 years in sales", each lesson a proverb. Lessons with no incident behind them are opinions in numbered form.

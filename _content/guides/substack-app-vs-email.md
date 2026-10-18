@@ -71,6 +71,7 @@ If you've moved to the app, three settings make it work better as a reader:
 - **Inbox appearance** (in app Settings): choose **dense** to hide preview images and shrink titles, so more posts fit on screen. **Classic** shows the images.
 - **Archive as you go.** In the **Latest** view, swipe left on a post to archive it. Archived posts live under **Archive** in the app's Settings; press and hold one to unarchive.
 - **Save for later.** Posts and notes you save from Home appear in the **Saved** tab, which keeps the queue for things you actually mean to read.
+- **Listen instead.** On a post, tap the **play icon** at the top right and the app reads it aloud, carrying on in the background until you pause or close the app. If a publication or an older post has no audio, you'll see a message saying so. This is a good way to get through long essays on a commute, and it only exists in the app.
 
 ## 5. Set up email for reading
 

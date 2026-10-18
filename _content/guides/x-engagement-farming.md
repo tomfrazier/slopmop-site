@@ -52,7 +52,7 @@ The second question has an asker who will use the answers, a reason for asking a
 
 ### 3. The fill-in-the-blank list
 
-"Five books that changed my life: 1. 2. 3. 4. 5. Drop yours below." Sometimes the list is already filled with famous titles, chosen for agreement rather than recommendation. The giveaway is the closing request, which is [engagement bait](/patterns/engagement-bait/) in its plainest form.
+"Five books that changed my life: 1. 2. 3. 4. 5. Drop yours below." Sometimes the list is already filled with famous titles, chosen to draw nods of agreement. The giveaway is the closing request, which is [engagement bait](/patterns/engagement-bait/) in its plainest form.
 
 ### 4. The "agree?" opinion
 
@@ -77,6 +77,10 @@ It will replace 90% of your workflow.
 
 Link in replies 👇 (repost so others see it)
 :::
+
+## Who writes these
+
+Some farming accounts are run by one person posting by hand; others post on a schedule, with text that's easy to generate in bulk because the formula is the whole post. Trying to work out which is which isn't worth your time. A follow-back promise is equally empty whether a person or a tool wrote it, and a sharp question is equally useful either way. Judge the post by what's in it, using the checks below.
 
 ## How to tell a farm from a genuine post
 

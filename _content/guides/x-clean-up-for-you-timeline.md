@@ -87,7 +87,7 @@ I'll follow back everyone who replies with 🔥
 The council published the new bus timetable today. Route 12 loses its Sunday service from 2 November; the PDF is on their site under "service changes".
 :::
 
-The second post isn't exciting. It is something a reader can use, which is the bar worth training the feed towards.
+The second post is dull and useful, which is the bar worth training the feed towards.
 
 ## If that doesn't work
 

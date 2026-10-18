@@ -84,6 +84,10 @@ A mute on "unpopular opinion" would hide both of these. That's the trade. If the
 
 The short durations are the most underused setting. When one event dominates the feed, such as a product launch, a match or a celebrity row, mute its name and hashtag for 24 hours or 7 days. You'll get the timeline back without permanently losing the topic. X lets you pick the duration per entry, so a permanent list of bait phrases and a short-lived list of news items can sit side by side.
 
+## Muted words or Not interested
+
+The two controls do different jobs. Muted words are precise and predictable: a phrase on the list is hidden from your Home timeline, every time, until the mute expires. Not interested is a hint to the recommendation system, so its effect is gradual and you can't see exactly what it changed. Use muted words for phrases you can name, and Not interested for the posts you can't describe in a few words.
+
 ## Review and unmute
 
 Go back to **Muted words** using the same path. Open an entry to change its duration or scope, or remove it; X's help page says you can view and unmute words from this list. A quick review once a month keeps the list from quietly hiding things you'd now like to see.

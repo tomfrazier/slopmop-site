@@ -1,7 +1,7 @@
 ---
 {
   "title": "Following topics or writers on Medium: which gives a better feed",
-  "seo_title": "Medium: follow topics or writers for a better feed · Slop Mop",
+  "seo_title": "Follow topics or writers on Medium for a better feed",
   "description": "How following topics, writers and publications shapes your Medium homepage, when each one helps, and how to build a short follow list that stays useful.",
   "summary": "Topics bring volume, writers bring quality. How Medium uses each follow, and how to build a follow list that keeps your feed worth reading.",
   "updated": "2026-10-18",

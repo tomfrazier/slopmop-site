@@ -31,6 +31,17 @@ Show less like this is a nudge about one story. Muting is a firm rule about a so
 
 If the problem is a whole subject rather than one source, mute the topic instead. Medium added topic muting in May 2026, and the [recommendations clean-up guide](/guides/medium/medium-clean-up-recommendations/) covers it.
 
+## Mute, show less or unfollow
+
+| Problem | Best tool | Why |
+|---|---|---|
+| One disappointing story | Show less like this | A single signal, easy to recover from |
+| One source that keeps failing | Mute the writer or publication | Removes that source from your feed and digests |
+| A subject you never want | Mute the topic | Covers every writer in that subject |
+| A source you followed and went off | Unfollow first | Unfollowing stops the guaranteed delivery; mute only if it still appears |
+
+Unfollowing and muting do different jobs. Unfollowing removes a source from the stories you asked for. Muting also keeps it out of recommendations, which matters when a writer is popular in topics you follow.
+
 ## 1. Mute from a story preview
 
 This is the quickest way, and it works from your feed.
