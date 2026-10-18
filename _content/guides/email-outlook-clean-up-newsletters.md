@@ -3,7 +3,7 @@
   "title": "How to clean up newsletters in Outlook: Subscriptions, Sweep and blocking",
   "seo_title": "Clean up newsletters in Outlook · Slop Mop",
   "description": "Unsubscribe from newsletters in Outlook.com's Subscriptions page, clear the backlog with Sweep, and block senders who won't stop. Verified steps.",
-  "summary": "Three Outlook tools for newsletter clutter: the Subscriptions page to leave lists, Sweep to clear the backlog, and blocking for the stubborn ones.",
+  "summary": "Three Outlook tools for newsletter clutter: Subscriptions to leave lists, Sweep to clear the backlog, and blocking for stubborn senders.",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-10-27",

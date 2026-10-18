@@ -3,7 +3,7 @@
   "title": "How to spot an AI-written cold email (and when it doesn't matter)",
   "seo_title": "How to spot an AI-written cold email · Slop Mop",
   "description": "Fake personalisation, flattery with no detail, a vague offer and a soft ask: the signs of a mass-produced cold email, and a 30-second test for any pitch.",
-  "summary": "The signs of a mass-produced cold email, why 'written by AI' is the wrong question, and a 30-second test for whether a pitch deserves a reply.",
+  "summary": "The signs of a mass-produced cold email, why 'written by AI' is the wrong question, and a 30-second test for any pitch.",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-03",

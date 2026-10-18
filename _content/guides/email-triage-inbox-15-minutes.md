@@ -52,7 +52,7 @@ Most of an overloaded inbox is newsletters, notifications and receipts you've al
 - `category:promotions older_than:7d`
 - `category:social` or `category:updates older_than:3d`
 - `list:` with a newsletter's list address, or `from:` with a notification address (for example a project tool's)
-- `older_than:1m -is:starred` if your inbox is truly buried
+- `older_than:1m -is:starred` if your inbox is badly buried
 
 Check the first screen of results before you archive. If something important is in there, add `-from:` that sender and search again.
 

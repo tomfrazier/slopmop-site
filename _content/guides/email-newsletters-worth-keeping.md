@@ -21,7 +21,7 @@ This is the step after the big clear-out. If you haven't done that yet, [Gmail's
 
 - **Pick 10 to 15 newsletters.** The ones you've kept on purpose, or still feel guilty about not reading.
 - **Use the last three issues of each.** One issue can be an off week. Three show the habit.
-- **Give yourself about a minute per newsletter.** You're skimming, not reading. If an issue can't show you its value in a minute, that's part of the answer.
+- **Give yourself about a minute per newsletter.** Skim each one; don't read it. If an issue can't show you its value in a minute, that's part of the answer.
 
 ## What to look for in an issue
 

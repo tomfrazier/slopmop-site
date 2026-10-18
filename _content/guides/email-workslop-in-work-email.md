@@ -3,7 +3,7 @@
   "title": "Workslop in your work inbox: how to spot it and what to reply",
   "seo_title": "Workslop in work email: spot it, reply to it · Slop Mop",
   "description": "How to recognise a polished but empty work email, reply in a way that gets you the missing decision, and avoid sending workslop yourself.",
-  "summary": "How to spot a polished but empty work email, what to reply so you get the missing facts back, and how to keep your own emails out of the pile.",
+  "summary": "How to spot a polished but empty work email, what to reply to get the missing facts, and how to keep your own emails out of the pile.",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-17",
@@ -23,7 +23,7 @@ The term comes from a [Harvard Business Review article](https://hbr.org/2025/09/
 
 Read the email once, then check it against these. Three or more and you're probably holding workslop.
 
-- **The subject line names a topic, not a point.** "Q3 review: summary and next steps" tells you what it's about. "Q3 review: we're over budget by £18k" tells you what happened.
+- **The subject line names only a topic.** "Q3 review: summary and next steps" tells you what it's about. "Q3 review: we're over budget by £18k" tells you what happened.
 - **It would be true at any company.** Swap your team's name for another team's. If nothing breaks, nobody wrote it with your situation in mind.
 - **The verbs are soft.** "Explore", "align", "consider", "continue to evaluate". Nobody is doing anything by any date.
 - **Stock transitions hold it together.** "Additionally", "it's important to note", "moving forward". This is [stiff phrasing](/patterns/stiff-phrasing/), and in a work email it's often a sign the sentences were produced in a batch and not edited.

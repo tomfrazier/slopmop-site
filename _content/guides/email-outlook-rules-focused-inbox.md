@@ -3,7 +3,7 @@
   "title": "How to use Outlook rules and Focused Inbox to quieten your inbox",
   "seo_title": "Outlook rules and Focused Inbox, step by step · Slop Mop",
   "description": "Turn on Focused Inbox, train it sender by sender, and write Outlook rules for the bulk mail it misses. Steps for new Outlook, classic Outlook and the web.",
-  "summary": "Focused Inbox splits mail into Focused and Other; rules handle what it gets wrong. Steps for new Outlook, classic Outlook and Outlook on the web.",
+  "summary": "Focused Inbox splits mail into Focused and Other; rules catch what it gets wrong. Steps for new and classic Outlook and the web.",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-24",
