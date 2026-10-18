@@ -3,7 +3,7 @@
   "title": "How to spot broetry and too-tidy stories on LinkedIn",
   "seo_title": "How to spot LinkedIn broetry and too-tidy stories · Slop Mop",
   "description": "Broetry is the LinkedIn post written one sentence per line, usually a parable with a moral. How to recognise it from the preview and skip it.",
-  "summary": "One-sentence lines, a withheld hook, an unnamed taxi driver and a moral at the end: how to recognise LinkedIn broetry before you click see more.",
+  "summary": "One-sentence lines, a withheld hook, an unnamed taxi driver and a moral: how to recognise LinkedIn broetry before you click see more.",
   "updated": "2026-10-18",
   "network": "linkedin",
   "publish_date": "2026-11-24",
@@ -12,6 +12,7 @@
   "related": ["/patterns/scroll-stopper/", "/patterns/too-tidy-story/", "/patterns/flowery-prose/", "/patterns/empty-praise/", "/for/linkedin/", "/for/founders/"],
   "sources": [
     {"title": "Hide content in your feed", "publisher": "LinkedIn Help", "url": "https://www.linkedin.com/help/linkedin/answer/13325", "date": ""},
+    {"title": "LinkedIn relevance - Optimizing the member experience", "publisher": "LinkedIn Help", "url": "https://www.linkedin.com/help/linkedin/answer/a1339724", "date": ""},
     {"title": "Follow or unfollow people", "publisher": "LinkedIn Help", "url": "https://www.linkedin.com/help/linkedin/answer/72150", "date": ""}
   ]
 }
@@ -100,7 +101,7 @@ That post uses short lines too. Each one carries a fact.
 
 ## What to do about it
 
-1. **Don't click "see more" to check.** Expanding a post can be read as interest. Decide from the preview.
+1. **Don't click "see more" to check.** LinkedIn says the content you spend the most time viewing is one of the signals it uses ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1339724)). Decide from the preview.
 2. **Use Not interested.** Click the **More** icon (three dots) at the top right of the post, or tap it in the app, and choose **Not interested**. The author isn't told ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/13325)).
 3. **Unfollow the habitual writers.** If someone posts a parable every morning, **Unfollow [name]** in the same menu keeps you connected without the posts ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/72150)).
 4. **Don't quote-post it to mock it.** A sarcastic repost spreads the original to your network and gives it more engagement.
@@ -109,4 +110,4 @@ Slop Mop, the Chrome extension that's live on LinkedIn, asks about scroll-stoppe
 
 ## If you write this way yourself
 
-Many people write broetry because it once performed well, and LinkedIn's preview does reward a strong opening. You can keep the strong opening and drop the rest. Open with the most interesting fact, write in normal paragraphs, name what you can, and stop when you've said it. The [engagement bait guide](/guides/linkedin/linkedin-filter-engagement-bait/) covers the ending that usually comes with this format, the "agree?" or the comment-for-a-PDF offer, and why to drop it.
+Some people write this way simply because the format is everywhere, and the preview cuts long posts off after a few lines, so the opening does matter. You can keep a strong opening and drop the rest. Open with the most interesting fact, write in normal paragraphs, name what you can, and stop when you've said it. The [engagement bait guide](/guides/linkedin/linkedin-filter-engagement-bait/) covers the ending that usually comes with this format, the "agree?" or the comment-for-a-PDF offer, and why to drop it.

@@ -53,7 +53,7 @@ A summary of that post: "Good leaders listen and value people." Shorter, and sti
 
 **Where they work.** Reading modes and summarisers work on most articles and pages today. As of October 2026, Slop Mop works only on LinkedIn; websites and articles, along with Substack, Medium, X, Reddit, Facebook and email, are coming soon. For long-form reading on the open web, a reading mode is the tool you can use now.
 
-**Privacy.** A built-in reading mode reformats the page in your browser. Summarisers usually send text to an AI service, so check each one's terms. Slop Mop sends the text of each new post (never your name or the author's) to its scoring service, which keeps a one-way hash of the text and the scores, not the text.
+**Privacy.** A built-in reading mode reformats the page in your browser. Many summarisers send text to an AI service, so check each one's terms. Slop Mop sends the text of each new post (never your name or the author's) to its scoring service, which keeps a one-way hash of the text and the scores, not the text.
 
 ## When to use a reading mode or summariser
 
@@ -64,7 +64,7 @@ A summary of that post: "Good leaders listen and value people." Shorter, and sti
 ## When to use Slop Mop
 
 - Your time goes on deciding, post after post, that something wasn't worth it.
-- You want the good posts left as written, not paraphrased.
+- You want the good posts left exactly as their authors wrote them.
 - You read LinkedIn in Chrome or another Chromium browser.
 
 ## Using both
