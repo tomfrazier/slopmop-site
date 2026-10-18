@@ -35,7 +35,7 @@ A useful article answers the question in the headline early, or at least tells y
 In today's digital age, choosing the right standing desk has become more important than ever. Whether you're a remote worker or a busy professional, the desk you choose can have a significant impact on your productivity and well-being.
 :::
 :::fine
-Get a desk that goes at least 10cm below your seated elbow height. Most cheap frames stop at 72cm, which is too tall for anyone under about 170cm.
+Measure your elbow height while seated, then find the lowest setting on the frame's spec sheet. If that lowest setting is above your elbow, the desk will always be too tall for typing.
 :::
 
 The first could open any desk article on the web. The second gives you a test you can use in a shop.
@@ -48,7 +48,7 @@ Wikipedia's editors describe why model text drifts this way: it tends toward the
 
 ### 3. Check two links
 
-Pick two claims that have links and open them. Do the linked pages exist, and do they say what the article says they say? Pages built to rank often link to a homepage, a vague "study" with no author, or another page on the same site. Claims like "experts agree" and "research shows" with no link at all are the weakest version. Our week 4 guide covers this step in more depth.
+Pick two claims that have links and open them. Do the linked pages exist, and do they say what the article says they say? Pages built to rank often link to a homepage, a vague "study" with no author, or another page on the same site. Claims like "experts agree" and "research shows" with no link at all are the weakest version. If the first two links fail, assume the rest are no better.
 
 ### 4. Read the last section
 
@@ -84,11 +84,11 @@ One sign on its own proves little. Plenty of good writers say "furthermore". Sev
 When it comes to cleaning a cast iron pan, there are several key factors to consider. Proper care is essential for maintaining its longevity. Furthermore, using the right techniques can make all the difference. Ultimately, a well-maintained pan is a valuable kitchen companion.
 :::
 :::fine
-Rinse it in hot water while it's still warm and scrub with a stiff brush. A drop of washing-up liquid is fine; modern soap won't strip polymerised seasoning. Dry it on the hob for two minutes, then wipe on a few drops of oil.
+Rinse it in hot water while it's still warm and scrub with a stiff brush. A drop of washing-up liquid is fine. Dry it on the hob for two minutes, then wipe on a few drops of oil.
 :::
 
-The first paragraph has four sentences and zero instructions. The second has five steps and one myth corrected.
+The first paragraph has four sentences and zero instructions. The second has five steps you can follow tonight.
 
 ## What to do with a bad one
 
-Close it and go back to the results. If the same site keeps failing the check, it's probably not worth clicking again, and next week's guide on cleaner search results shows how to get fewer pages like it. Slop Mop runs a similar set of questions on posts automatically and is coming soon to websites; for now, the check above takes less time than reading a padded article to the end.
+Close it and go back to the results. If the same site keeps failing the check, stop clicking it: most search engines let you leave a site out of a search with -site: in front of its domain. Slop Mop runs a similar set of questions on posts automatically and is coming soon to websites; for now, the check above takes less time than reading a padded article to the end.

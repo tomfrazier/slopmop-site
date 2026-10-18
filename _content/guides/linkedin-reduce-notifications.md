@@ -107,6 +107,6 @@ Some notifications earn their keep even when you're cutting hard:
 
 - **A type you turned off keeps arriving.** Check it isn't arriving by a different channel. A type switched off for push can still arrive by email.
 - **Notifications stopped altogether.** LinkedIn's troubleshooting page suggests resetting two settings: under **Connecting with others**, open **Updates from your network**, and under **Posting and commenting**, open **Comments and reactions**. Switch each toggle off and on again, or on and off again if it was off. Push only works when in-app notifications are on ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1672779)).
-- **You want a type back.** Click the **Notifications** icon, then **Manage notifications** in the left pane, find the type and switch it **On**. ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/76636)).
+- **You want a type back.** Click the **Notifications** icon, then **Manage notifications** in the left pane, find the type and switch it **On** ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/76636)).
 
 Notifications are only half the noise. If the feed is the bigger problem, see [how to clean up your LinkedIn feed](/guides/linkedin/linkedin-clean-up-feed/) and [how to filter engagement bait](/guides/linkedin/linkedin-filter-engagement-bait/).

@@ -2,8 +2,8 @@
 {
   "title": "AI-written articles on Medium: what to look for and what to ignore",
   "seo_title": "AI-written articles on Medium: what to look for · Slop Mop",
-  "description": "How to judge AI-written Medium stories by their writing, what Medium's AI policy requires of writers, and why guessing authorship is a poor filter.",
-  "summary": "Judge AI-written Medium stories on the writing. The tells of generated filler, Medium's disclosure rules, and why detectors mislead.",
+  "description": "How to judge AI-written Medium stories by their writing, what Medium's AI policy requires of writers, and why guessing who wrote it is a poor filter.",
+  "summary": "Judge AI-written Medium stories on the writing. The tells of generated filler, Medium's disclosure rules, and why guessing misleads.",
   "updated": "2026-10-18",
   "network": "medium",
   "publish_date": "2026-12-01",
@@ -13,7 +13,7 @@
   "sources": [
     {"title": "Artificial Intelligence (AI) content policy", "publisher": "Medium Help Center", "url": "https://help.medium.com/hc/en-us/articles/22576852947223-Artificial-Intelligence-AI-content-policy", "date": ""},
     {"title": "Content not eligible for the paywall", "publisher": "Medium Help Center", "url": "https://help.medium.com/hc/en-us/articles/31090080813591-Content-not-eligible-for-the-paywall", "date": ""},
-    {"title": "Distribution", "publisher": "Medium Help Center", "url": "https://help.medium.com/hc/en-us/articles/360006362473", "date": "2024-08-14"},
+    {"title": "What makes a story great for Boosting?", "publisher": "Medium Help Center", "url": "https://help.medium.com/hc/en-us/articles/26716922635159-Which-stories-are-eligible-to-be-Boosted", "date": ""},
     {"title": "Medium Sets New Policies on AI-Generated Writing", "publisher": "Plagiarism Today", "url": "https://www.plagiarismtoday.com/2024/04/11/medium-sets-new-policies-on-ai-generated-writing/", "date": "2024-04-11"}
   ]
 }
@@ -29,13 +29,13 @@ Medium has a written [AI content policy](https://help.medium.com/hc/en-us/articl
 - **Undisclosed** AI writing is limited to the writer's own network of followers.
 - **AI images** are allowed if captioned as AI-generated.
 
-Medium's paywall [eligibility page](https://help.medium.com/hc/en-us/articles/31090080813591-Content-not-eligible-for-the-paywall) says tools used for outlining, spelling, grammar or fact checking don't count against a story. The Boost tier, where curators pick stories for extra reach, isn't open to AI-generated stories according to Medium's [distribution help pages](https://help.medium.com/hc/en-us/articles/360006362473). The policy took effect on 1 May 2024.
+Medium's paywall [eligibility page](https://help.medium.com/hc/en-us/articles/31090080813591-Content-not-eligible-for-the-paywall) says tools used for outlining, spelling, grammar or fact checking don't count against a story. The Boost tier, where curators pick stories for extra reach, isn't open to AI-generated stories according to Medium's [Boost eligibility page](https://help.medium.com/hc/en-us/articles/26716922635159-Which-stories-are-eligible-to-be-Boosted). The policy took effect on 1 May 2024.
 
-For readers, this has two uses. A disclosure line near the top is information, not an accusation: the writer is telling you how the piece was made, as Medium asks. And the rules rely on writers declaring honestly and Medium enforcing them, so you'll still meet undisclosed generated stories in your feed.
+For readers, this has two uses. A disclosure line near the top is the writer telling you how the piece was made, as Medium asks, so there's nothing to hold against it. And the rules rely on writers declaring honestly and Medium enforcing them, so you'll still meet undisclosed generated stories in your feed.
 
 ## Why guessing authorship is a weak filter
 
-AI detectors produce false positives, and careful human writers get flagged. Fluent non-native writers, technical writers and anyone who edits heavily toward a plain house style can all trip them. Treating every smooth paragraph as machine-made is what people call [AI suspicion](/glossary/ai-suspicion/), and publicly accusing writers on that basis has a name too, [AI shaming](/glossary/ai-shaming/).
+Smooth, plain prose is also what careful human writers produce. Technical writers, people writing in a second language and anyone editing toward a strict house style can all sound "too clean" to a suspicious reader, and a guess can't be checked. Treating every smooth paragraph as machine-made is what people call [AI suspicion](/glossary/ai-suspicion/), and publicly accusing writers on that basis has a name too, [AI shaming](/glossary/ai-shaming/).
 
 The question you need answered is narrower and easier: is this story going to tell me something? That you can check from the text.
 
