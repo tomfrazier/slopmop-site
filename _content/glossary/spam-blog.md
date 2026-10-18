@@ -5,6 +5,7 @@
   "description": "A spam blog, or splog, is a fake blog filled with scraped or junk text to boost other sites' search rankings or serve ads. Its history, with an example.",
   "summary": "A fake blog filled with scraped or junk text, made only to boost other sites' search rankings or to serve ads.",
   "updated": "2026-10-18",
+  "keyword": "spam blog",
   "term": "Spam blog",
   "aliases": ["splog", "auto blog", "autoblog"],
   "punchline": "A blog with no writer and no readers.",
@@ -18,7 +19,7 @@
   ]
 }
 ---
-## What it means
+## What a spam blog is
 
 A spam blog looks like a blog from a distance: a name, a list of posts, dates, perhaps an author photo. Up close, nobody is writing it. The posts are copied from other sites, run through a rewording tool, stitched together from search results or generated automatically, and they exist for one of two reasons.
 
@@ -26,9 +27,9 @@ The first is links. A network of spam blogs can point thousands of links at a si
 
 "Splog" is the short form. "Autoblog" describes the automated version, where software pulls in feeds and republishes them with no human involved.
 
-## Where it came from
+## Where spam blogs came from
 
-Spam blogs became a visible problem as free blogging platforms and blog search engines grew in the mid-2000s. The word "splog" was popularised around August 2005, when the entrepreneur Mark Cuban, whose company ran the blog search engine IceRocket, used it publicly while complaining about the volume of fake blogs clogging its results.
+Spam blogs became a visible problem as free blogging platforms and blog search engines grew in the mid-2000s. According to [Wikipedia](https://en.wikipedia.org/wiki/Spam_blog), the word "splog" was popularised around August 2005, when the entrepreneur Mark Cuban, whose company ran the blog search engine IceRocket, used it publicly while complaining about the volume of fake blogs clogging its results.
 
 The tactics have changed with the tools. Early splogs relied on copying and keyword stuffing; later ones used article spinning to disguise the copying; generative AI now produces passable text in bulk, which makes a fake blog harder to tell from a thin real one.
 
@@ -47,4 +48,4 @@ The first is written for a search crawler: the keyword repeated, a definition no
 
 ## How Slop Mop sees it
 
-Spam blogs live on the open web, and Slop Mop is live only on LinkedIn today, with websites coming soon. The text inside them shares the habits it scores, filler, [stiff phrasing](/patterns/stiff-phrasing/) and [hype words](/patterns/hype-words/), and none of the specific detail that earns a post credit for being useful to readers.
+Spam blogs live on the open web, and Slop Mop reads the articles and websites you visit as part of Slop Mop XL. The text inside them shares the habits it scores, filler, [stiff phrasing](/patterns/stiff-phrasing/) and [hype words](/patterns/hype-words/), and none of the specific detail that earns a page credit for being useful to readers; [How it works](/how-it-works.html) explains that counter-signal. [Add Slop Mop to your browser](/) and it checks pages like the first example as you read.

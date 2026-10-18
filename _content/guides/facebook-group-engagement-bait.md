@@ -5,6 +5,7 @@
   "description": "Pointless polls, 'drop a photo' threads and advice that ends in a pitch: how to spot engagement bait in Facebook groups, and when to tell the admins.",
   "summary": "How engagement bait looks inside Facebook groups, how to tell it from a real question, and when reporting to the admins is worth it.",
   "updated": "2026-10-18",
+  "keyword": "facebook group engagement bait",
   "network": "facebook",
   "publish_date": "2026-11-24",
   "verified": "2026-10-18",
@@ -33,7 +34,7 @@ Groups reward activity. Facebook says the number of comments, likes and reaction
 - **Admins trying to make the group look busy,** to attract members or sponsors.
 - **Ordinary members who copy what gets attention,** which is most of it, and not malicious.
 
-## What it looks like in a group
+## What engagement bait looks like in a Facebook group
 
 ### The question with no stakes
 
@@ -97,5 +98,6 @@ Know three things first:
 - **Sort the posts.** At the top of the group's posts, choose **Recent activity**, **New posts** or **Most relevant** ([Facebook Help](https://www.facebook.com/help/792969828344532)). **New posts** is useful in groups where bait threads keep getting pushed up by their comment counts. It resets to the admins' default each visit, and Facebook notes the feature may not be available to you yet.
 - **Read the Groups filter in Feeds** to catch the groups you care about in date order. The [Feeds and Favorites guide](/guides/facebook/facebook-feeds-tab-favourites/) has the steps.
 - **Unfollow a group you want to keep but not see.** The [snooze and unfollow guide](/guides/facebook/facebook-snooze-unfollow-not-interested/) covers it. Next week's guide deals with group notifications.
+- **Let Slop Mop fold the bait posts.** In a desktop browser, Slop Mop reads the posts in groups you can see, in your feed and on the group's own page, and folds the ones that score as slop, such as comment-target polls and comment-and-tag giveaways, into a one-line strip you can reopen ([how it scores a post](/how-it-works.html)). It doesn't report anything to the admins or to Facebook, and it doesn't leave or unfollow the group for you.
 
-Slop Mop, which judges posts on LinkedIn today, is coming soon to Facebook.
+[Add Slop Mop to your browser](/) and it folds group bait like this so the real questions are easier to find.

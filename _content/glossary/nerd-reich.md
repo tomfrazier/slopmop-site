@@ -42,21 +42,34 @@
       "publisher": "Democracy Now!",
       "url": "https://democracynow.org/2026/8/17/gil_duran_nerd_reich",
       "date": "2026-08-17"
+    },
+    {
+      "title": "The Nerd Reich",
+      "publisher": "Simon & Schuster",
+      "url": "https://www.simonandschuster.com/books/The-Nerd-Reich/Gil-Duran/9781668221402",
+      "date": "2026-08-18"
+    },
+    {
+      "title": "Etzioni on AI: The colorful and cranky language of the AI era, from slop to slap",
+      "publisher": "GeekWire",
+      "url": "https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/",
+      "date": "2026-10-16"
     }
-  ]
+  ],
+  "keyword": "nerd reich"
 }
 ---
-## What it means
+## What Nerd Reich means
 
 "Nerd Reich" is a political label for what its users see as an authoritarian streak among some of the richest people in the technology industry: a belief that tech founders and investors should run things, and that democratic government is an obstacle to be worked around or replaced.
 
 The phrase is meant to provoke. "Nerd" points at Silicon Valley's engineering culture; "Reich" deliberately evokes Nazi Germany. It's an accusation dressed as a nickname, used by critics of the people it describes.
 
-## Where it came from
+## Where Nerd Reich came from
 
-The term is most closely associated with Gil Durán, a journalist who previously spent years working in Democratic politics. He writes a newsletter called The Nerd Reich (previously Parallel Mirror), which describes itself as covering "tech authoritarianism, billionaire extremism, the Network State and the meta politics of California". We haven't found an earlier use of the phrase, though we can't rule one out.
+The term is most closely associated with Gil Durán, a journalist who previously spent years working in Democratic politics. He writes a newsletter called The Nerd Reich (previously Parallel Mirror), which describes itself as covering "tech authoritarianism, billionaire extremism, the Network State and the meta politics of California". He doesn't claim to have coined it. Oren Etzioni and Daniel S. Weld, who included the term in [their October 2026 GeekWire glossary of AI-era language](https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/), report that someone in the crypto world told Durán they'd been using it for years.
 
-In August 2026 Simon & Schuster published his book *The Nerd Reich: Silicon Valley Fascism and the War on Democracy*. According to the publisher, it argues that a small network of tech billionaires and investors has spent decades building an ideological and political movement aimed at replacing democratic government with corporate rule, and traces part of that thinking to the 1997 book *The Sovereign Individual*.
+In August 2026 Simon & Schuster published [his book](https://www.simonandschuster.com/books/The-Nerd-Reich/Gil-Duran/9781668221402) *The Nerd Reich: Silicon Valley Fascism and the War on Democracy*. According to the publisher, it argues that a small network of tech billionaires and investors has spent decades building an ideological and political movement aimed at replacing democratic government with corporate rule, and traces part of that thinking to the 1997 book *The Sovereign Individual*.
 
 The term sits alongside [Broligarchy](/glossary/broligarchy/), which focuses on concentrated wealth and influence, and [technofeudalism](/glossary/technofeudalism/), an economic theory about platform power. Nerd Reich is the most explicitly political of the three.
 
@@ -81,4 +94,6 @@ Whether the label is fair depends on contested judgments about individual people
 
 ## How Slop Mop sees it
 
-Nerd Reich is a political label, and judging political arguments is outside what Slop Mop does. Slop Mop takes no side on it.
+Nerd Reich is a political label, and judging political arguments is outside what Slop Mop does. Slop Mop takes no side on it. It scores the writing of a post the same way whichever side the post is on, on LinkedIn, X, Reddit, Facebook, Substack, Medium or the articles you read; [How it works](/how-it-works.html) lists the questions it asks.
+
+[Add Slop Mop to your browser](/) and it folds hollow posts on any side of this argument.

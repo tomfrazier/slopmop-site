@@ -5,6 +5,7 @@
   "description": "Model collapse is what happens when AI models are trained on other models' output and lose the rare parts of real data. The research and its limits.",
   "summary": "The decline of AI models trained on AI output, which lose the rare and varied parts of real data over successive generations.",
   "updated": "2026-10-18",
+  "keyword": "model collapse",
   "term": "Model collapse",
   "aliases": ["Habsburg AI", "AI inbreeding", "AI cannibalism", "model autophagy disorder", "MAD"],
   "punchline": "AI eating its own leftovers.",
@@ -26,15 +27,15 @@
   ]
 }
 ---
-## What it means
+## What model collapse means
 
 Model collapse is what researchers call the decline of AI models that are trained on text or images produced by other AI models. Each generation learns from a slightly simplified copy of the last. The common patterns survive; the unusual ones, which were rare to begin with, get rarer and then vanish. Over enough generations the model's output narrows and drifts away from the real data it started from.
 
-In the words of the paper that named it, "indiscriminate use of model-generated content in training causes irreversible defects in the resulting models, in which tails of the original content distribution disappear". The "tails" are the rare cases: uncommon words, minority viewpoints, odd facts, the edges of any distribution.
+In the words of [the paper that named it](https://www.nature.com/articles/s41586-024-07566-y), "indiscriminate use of model-generated content in training causes irreversible defects in the resulting models, in which tails of the original content distribution disappear". The "tails" are the rare cases: uncommon words, minority viewpoints, odd facts, the edges of any distribution.
 
 The concern became practical as AI-generated text spread across the web. Future models are trained on data scraped from that web, so some of what they learn from will be the output of their predecessors.
 
-## Where it came from
+## Where model collapse came from
 
 The term was introduced by Ilia Shumailov, Zakhar Shumaylov and colleagues in a May 2023 preprint, "The Curse of Recursion: Training on Generated Data Makes Models Forget". A revised version appeared in *Nature* on 24 July 2024 as "AI models collapse when trained on recursively generated data". They showed the effect in large language models, variational autoencoders and Gaussian mixture models, and argued that data from genuine human interactions would become more valuable as AI content filled the web.
 
@@ -59,4 +60,4 @@ So the term names a real effect shown in controlled experiments. Whether it's ha
 
 ## How Slop Mop sees it
 
-Model collapse is about how AI models are trained, which is outside what Slop Mop judges. It's one more reason human writing with real detail matters, and that's the kind of post Slop Mop's "sounds like a person" and "useful to readers" counter-signals look for.
+Model collapse is about how AI models are trained, which is outside what Slop Mop judges. It's one more reason human writing with real detail matters, and that's the kind of writing Slop Mop's "sounds like a person" and "useful to readers" counter-signals look for, as [How it works](/how-it-works.html#tells) explains. The worry about a web filling up with [AI slop](/glossary/ai-slop/) is also the starting point of the [dead internet theory](/glossary/dead-internet-theory/). [Add Slop Mop to your browser](/) and it folds the emptiest of that writing in your feeds, from LinkedIn and Reddit to the articles you read.

@@ -5,16 +5,19 @@
   "description": "A too-tidy story is an anecdote that exists to prove its moral. How to spot one, when a tidy story is fine, and how to tell a real one instead.",
   "summary": "An anecdote with no date, no names and no loose ends, which exists only to deliver the moral in the last line.",
   "updated": "2026-10-18",
+  "keyword": "too-tidy story",
   "tell": "Too-tidy story",
   "short": "an anecdote that exists to prove the moral",
   "order": 9,
-  "related": ["/patterns/stiff-phrasing/", "/patterns/scroll-stopper/", "/glossary/ai-slop/", "/how-it-works.html"],
-  "sources": []
+  "related": ["/patterns/stiff-phrasing/", "/patterns/scroll-stopper/", "/glossary/copypasta/", "/glossary/ai-slop/", "/how-it-works.html"],
+  "sources": [
+    {"title": "Copypasta", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Copypasta", "date": ""}
+  ]
 }
 ---
 A too-tidy story is an anecdote shaped backwards from its lesson. A taxi driver, a janitor, a child or a junior employee says something simple; the narrator is changed for ever; the post ends with the moral in bold. Nothing in it can be checked, nothing goes wrong afterwards, and the details are exactly the ones the lesson needs.
 
-## What it looks like
+## What a too-tidy story looks like
 
 :::slop
 A security guard once told me something I'll never forget. "I don't guard the building. I guard the people in it." That day, I realised every role matters.
@@ -66,9 +69,9 @@ Stories are one of the best ways to explain anything, and some are meant to be t
 
 The test: could someone else check this happened, or at least picture it differently from you? If the story has a date, a place and a consequence that doesn't flatter the moral, it's probably real enough.
 
-## How Slop Mop scores it
+## How Slop Mop scores a too-tidy story
 
-Too-tidy story is one of nine questions the model asks about every post, and one spoke on the Slopprint. It asks whether the anecdote exists to prove the moral, which is a different matter from whether the post contains a story at all. It can't know whether something really happened; it reads how the story is built.
+Too-tidy story is one of the [nine questions the model asks](/how-it-works.html#tells) about every post, and one spoke on the Slopprint. It asks whether the anecdote exists to prove the moral, which is a different matter from whether the post contains a story at all. It can't know whether something really happened; it reads how the story is built.
 
 The model rates its own confidence, and unsure answers count for less. When this is the only tell that stands out, the score is cut, because one neat story in an otherwise useful post is an ordinary habit. Too-tidy stories usually sit inside a [scroll-stopper](/patterns/scroll-stopper/) layout, with a [“not X, but Y”](/patterns/not-x-but-y/) moral at the bottom, and several tells together is what gets flagged.
 
@@ -89,6 +92,8 @@ A customer once called me in tears. Our product had saved her business. I hung u
 In August a bakery owner in Bristol emailed to say our scheduling tool had cut her weekly rota time from 3 hours to 40 minutes. She also said the app crashed every time she added a seventh staff member. We fixed that bug in September, and she's still a customer.
 :::
 
-## Where it shows up
+## Where too-tidy stories show up
 
-LinkedIn is full of them, often under a scroll-stopper hook, and LinkedIn is where Slop Mop reads posts today. They also travel widely as chain posts on Facebook, in motivational talks, in sales emails ("one of our clients was in exactly your position") and in wedding speeches, where they're forgiven.
+LinkedIn is full of them, often under a [scroll-stopper](/patterns/scroll-stopper/) hook. On Facebook they spread as chain posts, passed on with the details swapped the way [copypasta](/glossary/copypasta/) is (Wikipedia has a [short history of copypasta](https://en.wikipedia.org/wiki/Copypasta)). Reddit has its share of suspiciously neat "this happened to me" posts, and Medium and Substack have self-help essays built around one. They also turn up in motivational talks, in sales email ("one of our clients was in exactly your position") and in wedding speeches, where they're forgiven.
+
+Slop Mop reads for too-tidy stories on every network it covers: LinkedIn, X, Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium, articles and websites, and email in Gmail and Outlook, where it checks only what the sender wrote. [Add Slop Mop to your browser](/) and it folds posts like these for you.

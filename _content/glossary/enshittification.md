@@ -12,16 +12,55 @@
   "first_seen": "2022",
   "coined_by": "Cory Doctorow",
   "sensitivity": "",
-  "related": ["/glossary/dead-internet-theory/", "/glossary/technofeudalism/", "/glossary/brain-rot/", "/glossary/ai-slop/", "/patterns/engagement-bait/"],
+  "related": [
+    "/glossary/dead-internet-theory/",
+    "/glossary/technofeudalism/",
+    "/glossary/brain-rot/",
+    "/glossary/ai-slop/",
+    "/patterns/engagement-bait/"
+  ],
   "sources": [
-    {"title": "The 'Enshittification' of TikTok", "publisher": "WIRED (Cory Doctorow)", "url": "https://www.wired.com/story/tiktok-platforms-cory-doctorow/", "date": "2023-01-23"},
-    {"title": "2023 Word of the Year Is \"Enshittification\"", "publisher": "American Dialect Society", "url": "https://americandialect.org/2023-word-of-the-year-is-enshittification/", "date": "2024-01-05"},
-    {"title": "Australia's Macquarie Dictionary picks 'enshittification' as word of 2024", "publisher": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/11/26/what-many-of-us-feel-enshittification-named-word-of-the-year", "date": "2024-11-26"},
-    {"title": "Why We Can't Have Nice Things Online", "publisher": "Compact", "url": "https://www.compactmag.com/article/why-we-cant-have-nice-things-online/", "date": "2025-10-23"}
-  ]
+    {
+      "title": "The 'Enshittification' of TikTok",
+      "publisher": "WIRED (Cory Doctorow)",
+      "url": "https://www.wired.com/story/tiktok-platforms-cory-doctorow/",
+      "date": "2023-01-23"
+    },
+    {
+      "title": "2023 Word of the Year Is \"Enshittification\"",
+      "publisher": "American Dialect Society",
+      "url": "https://americandialect.org/2023-word-of-the-year-is-enshittification/",
+      "date": "2024-01-05"
+    },
+    {
+      "title": "Australia's Macquarie Dictionary picks 'enshittification' as word of 2024",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2024/11/26/what-many-of-us-feel-enshittification-named-word-of-the-year",
+      "date": "2024-11-26"
+    },
+    {
+      "title": "Why We Can't Have Nice Things Online",
+      "publisher": "Compact",
+      "url": "https://www.compactmag.com/article/why-we-cant-have-nice-things-online/",
+      "date": "2025-10-23"
+    },
+    {
+      "title": "Enshittification",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Enshittification",
+      "date": ""
+    },
+    {
+      "title": "Etzioni on AI: The colorful and cranky language of the AI era, from slop to slap",
+      "publisher": "GeekWire",
+      "url": "https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/",
+      "date": "2026-10-16"
+    }
+  ],
+  "keyword": "enshittification"
 }
 ---
-## What it means
+## What enshittification means
 
 Enshittification is the writer Cory Doctorow's name for a specific pattern of decline in online platforms. In his words: "first, they are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves. Then, they die."
 
@@ -33,9 +72,9 @@ The three stages, roughly:
 
 The engine is lock-in. It works because leaving is costly: your friends, your followers, your sales history or your audience are all on the platform. How far any particular service has gone down this path varies a lot, and changes over time.
 
-## Where it came from
+## Where enshittification came from
 
-Doctorow coined the word in a 2022 blog post, and set out the full argument in a January 2023 essay for WIRED about TikTok. It caught on fast. The American Dialect Society chose it as its Digital Word of the Year for 2023, and in November 2024 Australia's Macquarie Dictionary made it word of the year, with its committee saying it "captures what many of us feel is happening to the world". Doctorow turned the idea into a book, *Enshittification: Why Everything Suddenly Got Worse and What to Do About It*, published in 2025.
+Doctorow coined the word in a 2022 blog post, and set out the full argument in a [January 2023 essay for WIRED](https://www.wired.com/story/tiktok-platforms-cory-doctorow/) about TikTok. It caught on fast. The American Dialect Society chose it as its Digital Word of the Year for 2023, and in November 2024 Australia's Macquarie Dictionary made it word of the year, with its committee saying it "captures what many of us feel is happening to the world". Doctorow turned the idea into a book, *Enshittification: Why Everything Suddenly Got Worse and What to Do About It*, published in 2025. In October 2026 Oren Etzioni and Daniel S. Weld included it, with Doctorow's three stages, in [their GeekWire glossary of AI-era language](https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/). It's often mentioned alongside [technofeudalism](/glossary/technofeudalism/), a broader and more contested theory about platform power.
 
 ## Examples
 
@@ -56,4 +95,6 @@ The most common complaint is that the word has stretched to cover any change som
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't change how any platform ranks or pays for posts, and it can't undo stage three. It works on what reaches your screen: on LinkedIn it folds away the [engagement bait](/patterns/engagement-bait/) and hooks that crowd a feed, without leaving the platform or muting anyone.
+Slop Mop doesn't change how any platform ranks or pays for posts, and it can't undo stage three. It works on what reaches your screen: on LinkedIn, X, Reddit, Facebook, Substack and Medium it folds away the [engagement bait](/patterns/engagement-bait/) and hooks that crowd a feed, without making you leave the platform or muting anyone. [How it works](/how-it-works.html) explains what it scores.
+
+[Add Slop Mop to your browser](/) and it folds that filler for you.

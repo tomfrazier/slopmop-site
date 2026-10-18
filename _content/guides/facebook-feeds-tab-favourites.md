@@ -5,6 +5,7 @@
   "description": "Facebook's Feeds tab shows only recent posts from people, Pages and groups you follow. How to open it, add up to 30 Favorites and pin it.",
   "summary": "Open Facebook's Feeds tab, add up to 30 Favorites, and pin it to your tab bar so a feed without suggestions is one tap away.",
   "updated": "2026-10-18",
+  "keyword": "facebook feeds tab",
   "network": "facebook",
   "publish_date": "2026-11-03",
   "verified": "2026-10-18",
@@ -31,7 +32,7 @@ Facebook spells the feature "Favorites", so that's the label you'll see on scree
 - **Favorites has limits.** Up to 30 friends and Pages, no groups, and nobody is told when you add or remove them ([Facebook Help](https://www.facebook.com/help/1634545223376778)).
 - **Recent means everything.** Chronological order shows every post from everyone you follow, including the dull ones the ranking would have buried. If Feeds feels noisy, that's a sign to unfollow, which a later guide covers.
 
-## 1. Open the Feeds tab
+## 1. Open the Facebook Feeds tab
 
 **In the app (iPhone and Android):**
 
@@ -107,7 +108,7 @@ Facebook's help page doesn't list every shortcut you can pin, so if Feeds isn't 
 
 In March 2025 Meta relaunched a **Friends** tab in the US and Canada that shows only content from your Facebook friends, with no recommended posts, and said you could pin it from the same Tab bar setting ([Meta](https://about.fb.com/news/2025/03/bringing-magic-of-friends-back-to-facebook/)). If you're outside those countries it may not appear.
 
-## What changes, and what doesn't
+## What the Facebook Feeds tab changes, and what it doesn't
 
 Feeds removes the suggested posts and the ranking, which is most of what people mean when they say Facebook used to be better. It doesn't filter what your friends, Pages and groups post themselves. A group you joined in 2019 that now posts nothing but "Type YES if you remember this!" will be right there in date order.
 
@@ -118,7 +119,9 @@ Only real 80s kids will know what this is 👇 Type YES if you remember!
 Lost: grey cat, white paws, answers to Mog. Last seen Thursday evening near the Co-op on Station Road.
 :::
 
-Both could turn up in your Groups filter, and only the second one asks for something useful.
+Both could turn up in your Groups filter, and only the second one asks for something useful. The first is [engagement bait](/patterns/engagement-bait/), and date order gives it the same space as the lost cat.
+
+That's where Slop Mop helps if you read Facebook on a computer. It reads the feed posts from the friends, Pages and groups you follow and folds the ones that score as slop into a one-line strip you can reopen ([how it scores a post](/how-it-works.html)). It doesn't unfollow or leave anything for you, and it isn't in the phone app.
 
 ## If that doesn't work
 
@@ -126,4 +129,4 @@ Both could turn up in your Groups filter, and only the second one asks for somet
 - **The main feed hasn't changed.** It won't. Favorites raises a few people in it, and the [suggested posts guide](/guides/facebook/facebook-reduce-suggested-posts/) covers the rest. Facebook says the main feed returns to its default ranking even after you sort it ([Facebook Help](https://www.facebook.com/help/166738576721085)).
 - **You keep forgetting to use it.** Pin it, then move the app to a different place on your phone so muscle memory doesn't open Home for you.
 
-Slop Mop, which folds away low-value posts on LinkedIn today, is coming soon to Facebook.
+[Add Slop Mop to your browser](/) and it folds the bait that chronological order lets back in.

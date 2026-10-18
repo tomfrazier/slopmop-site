@@ -87,3 +87,6 @@ stochastic-parrot	Stochastic parrot
 troll-farm	Troll farm
 vagueposting	Vagueposting
 word-salad	Word salad
+shrimp-jesus	Shrimp Jesus
+wireborn	Wireborn
+your-ai-slop-bores-me	Your AI Slop Bores Me

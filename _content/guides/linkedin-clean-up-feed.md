@@ -5,6 +5,7 @@
   "description": "Seven steps to a cleaner LinkedIn feed: hide posts, unfollow without disconnecting, mute strangers, hide promoted posts and stop rewarding bait.",
   "summary": "Hide posts, unfollow without disconnecting, mute strangers and stop rewarding bait: the LinkedIn controls that make the feed readable again.",
   "updated": "2026-10-18",
+  "keyword": "clean up linkedin feed",
   "network": "linkedin",
   "publish_date": "2026-10-20",
   "verified": "2026-10-18",
@@ -25,7 +26,7 @@
 ---
 Most of the clean-up happens in the three-dot menu on each post. Use **Not interested** on posts you don't want, **Unfollow** people whose posts you always skip (you stay connected and they aren't told), and mute people who only appear because a connection reacted to them. Then stop reacting to the posts you want less of, because LinkedIn reads your reactions as interest.
 
-## Before you start
+## Before you clean up your LinkedIn feed
 
 It helps to know where the posts come from. LinkedIn says your feed mixes posts from your connections, from people and companies you follow, from groups you belong to, recommended posts from outside your network, and sponsored content ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1339724)). Each source has its own off switch, and none of them works on the others.
 
@@ -81,11 +82,13 @@ Most of the feed is still people and Pages you follow, so pruning that list once
 
 If you'd rather see only people you follow, newest first, you can also switch the desktop feed from Top to Recent with the **Sort by** menu above it ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1480504)). That removes most recommended posts from strangers, but it does nothing about bait from people you follow.
 
-## 7. Fold individual posts with a filter
+## 7. Clean up your LinkedIn feed post by post with a filter
 
 LinkedIn's controls act on whole people or on one post after you've already read it. None of them looks at what a post says before you reach it, and LinkedIn's help pages don't describe a muted-words feature.
 
-That gap is what Slop Mop is for. It's a free browser extension for Chrome and other Chromium browsers, live on LinkedIn, that reads each post's text as you scroll and either folds likely slop into a one-line strip you can reopen (Hide mode) or just marks it (Highlight mode). It judges the writing, so the colleague's useful hiring update stays visible while their parables fold. You can set sensitivity to Mild, Moderate or Aggressive and vote to overrule any call. The limits: the free plan covers one feed with 250 checks a day, it runs on your computer's browser only, so the LinkedIn app is unchanged, and it never mutes, reports or unfollows anyone.
+That gap is what [Slop Mop](/) is for. It's a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave and Arc. On LinkedIn it reads each post's text as you scroll and either folds likely slop into a one-line strip you can reopen (Hide mode) or just marks it (Highlight mode). It judges the writing, so the colleague's useful hiring update stays visible while their parables fold. You can set sensitivity to Mild, Moderate or Aggressive and vote to overrule any call; [How it works](/how-it-works.html) lists the twelve questions behind each score. The limits: the free plan covers one feed with 250 checks a day, it runs in your desktop browser only, so the LinkedIn app is unchanged, and it never mutes, reports or unfollows anyone.
+
+The same habits turn up elsewhere: bait threads on X, karma-farmed posts on Reddit, recycled pages on Facebook. Slop Mop reads those feeds too, plus Substack, Medium, the sites you read and Gmail and Outlook, with Slop Mop XL (US$5.99 a month or US$59.99 a year) covering every feed at once. The [Slop Mop for LinkedIn](/for/linkedin/) page has more on how it treats LinkedIn posts. If X is your other problem, the [X For you timeline guide](/guides/x/x-clean-up-for-you-timeline/) covers its own controls.
 
 ## If that doesn't work
 
@@ -93,3 +96,5 @@ That gap is what Slop Mop is for. It's a free browser extension for Chrome and o
 - **You unfollowed someone by mistake.** Click **Me**, then **Settings & Privacy**. Under **Account preferences**, find **Site preferences** and open **People you unfollowed**, then click **Follow** next to their name ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/72150)).
 - **A post breaks the rules.** Hiding isn't reporting. Use **Report this post** in the same menu for harassment, scams or spam ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/68012)).
 - **Nothing seems to change.** The feed adjusts gradually. Keep hiding and keep not reacting for a week, then look again.
+
+[Add Slop Mop to your browser](/) and it folds posts like these before you reach them.

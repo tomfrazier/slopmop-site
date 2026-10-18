@@ -5,6 +5,7 @@
   "description": "Block a Reddit account from its profile or your settings on web and app, what blocking hides on both sides, the 1,000 limit, and how to hide posts and ads.",
   "summary": "Blocking stops one account's posts showing in any feed. Steps for web and app, what the other person sees, and how to hide posts and ads.",
   "updated": "2026-10-18",
+  "keyword": "block accounts on reddit",
   "network": "reddit",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
@@ -22,7 +23,7 @@
 ---
 To block a Reddit account, open its profile, tap or click the overflow menu (three dots) and choose **Block account**. Its posts then stop appearing in any of your feeds, including community feeds, and its comments are collapsed wherever you meet them ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/4413520308372-How-does-blocking-work)). For a single post you'd rather not see, hide it instead; for an ad, use **Hide** on the ad's own menu.
 
-## Before you start
+## Before you block accounts on Reddit
 
 Blocking cuts contact both ways, which makes it a stronger tool than it first looks. Know what you're choosing:
 
@@ -80,13 +81,15 @@ Blocking is for an account. If one post is the problem, hide it. On the current 
 
 Hiding is a one-off. It does nothing about the next post from the same account or community.
 
+If the problem is a type of post rather than one account, such as vote-begging titles or filler replies, Slop Mop covers that gap on desktop. It reads each Reddit post and comment in your feed and folds the ones that score as slop into a one-line strip you can reopen ([how it scores a post](/how-it-works.html)). It never blocks, mutes or reports anyone, so everything in this guide still works alongside it.
+
 ## 5. Hide or report an ad
 
 Blocking and muting don't touch ads. To hide one, open the overflow menu at the top right of the ad and select **Hide**. Reddit says this hides future ads from that advertiser account for at least a year ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/12731527501460-How-do-I-report-an-ad)).
 
 If the ad looks like it breaks Reddit's advertising policy, choose **Report** instead, pick a reason and submit. Reporting also hides that ad and future ads from the advertiser.
 
-## When to block
+## When to block accounts on Reddit
 
 Blocking works best on accounts that are reliably a waste of your time:
 
@@ -95,7 +98,7 @@ Blocking works best on accounts that are reliably a waste of your time:
 - A serial poster of recycled or invented stories, as described in [How to tell a recycled or made-up story post on Reddit](/guides/reddit/reddit-recycled-story-posts/).
 - Someone who keeps replying to you in bad faith.
 
-For a whole community you never want to see, muting is the better tool; [How to mute a subreddit on Reddit](/guides/reddit/reddit-mute-communities/) compares the options.
+For a whole community you never want to see, muting is the better tool; [How to mute Reddit communities (subreddits)](/guides/reddit/reddit-mute-communities/) compares the options.
 
 ## Block and report together
 
@@ -110,3 +113,5 @@ To report a post or comment, open its overflow menu and select **Report** ([Redd
 - **They're in a group chat with you.** Blocking doesn't remove them; leave the chat if you need to.
 - **The same person comes back on a new account.** Block the new one too, and report it if the contact is harassing.
 - **You've hit 1,000.** Unblock old accounts that have been deleted or gone quiet.
+
+[Add Slop Mop to your browser](/) and it folds low-effort posts post by post, without blocking anyone.

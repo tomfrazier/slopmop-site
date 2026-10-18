@@ -4,13 +4,14 @@ Run from _build/: python3 check.py"""
 import glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REQ = ["title", "seo_title", "description", "summary", "updated", "related"]
+REQ = ["title", "seo_title", "description", "summary", "updated", "related", "keyword"]
 FAM = {"glossary": ["term", "aliases", "punchline", "kind"], "patterns": ["tell", "short", "order"],
        "for": ["kind", "audience"], "compare": ["kind", "them", "checked", "table", "verdict"],
        "guides": ["network", "publish_date", "verified", "minutes"]}
 BANNED = r"\b(game[- ]chang\w*|unlock\w*|elevat\w*|revolutioni[sz]\w*|seamless\w*|robust|cutting[- ]edge|leverag\w*|empower\w*|supercharg\w*|delv\w*|tapestry|symphony|furthermore|moreover|in conclusion|it'?s worth noting|in today'?s fast[- ]paced|ultimately,)"
 
 pages, errors, warns = {}, [], []
+STOP = {"a", "an", "the", "of", "to", "in", "on", "for", "and", "or", "vs", "is", "what", "how", "your", "my", "with", "s"}
 for f in glob.glob(f"{ROOT}/_content/*/*.md"):
     fam, slug = f.split("/")[-2], os.path.basename(f)[:-3]
     try:
@@ -44,6 +45,29 @@ for path, (fam, slug, m, body) in sorted(pages.items()):
             errors.append(f"{name}: link to {link} goes nowhere")
         elif target in pages and pages[target][2].get("publish_date", "0000") > mine:
             errors.append(f"{name}: links to {link}, which publishes later ({pages[target][2]['publish_date']})")
+    # SEO: the keyword's main words in the title, seo_title, an H2 and (ideally) the slug
+    kw = [w for w in re.findall(r"[a-z0-9]+", m.get("keyword", "").lower()) if w not in STOP]
+    def has(text):
+        t = re.findall(r"[a-z0-9]+", text.lower().replace("’", "'"))
+        return all(any(x == w or x.startswith(w) or w.startswith(x) and len(x) > 3 for x in t) for w in kw)
+    if kw:
+        for k in ("title", "seo_title"):
+            if not has(m.get(k, "")):
+                errors.append(f"{name}: keyword '{m['keyword']}' not in {k}")
+        if not any(has(h) for h in re.findall(r"^## (.+)$", body, re.M)):
+            errors.append(f"{name}: keyword '{m['keyword']}' not in any H2")
+        if not has(slug.replace("-", " ")):
+            warns.append(f"{name}: keyword '{m['keyword']}' not fully in the slug")
+    # links: home or how it works, two library pages, one third-party page
+    inner = re.findall(r"\]\((/[^)\s]*)\)", body)
+    if not any(l in ("/", "/how-it-works.html", "/index.html") or l.startswith("/how-it-works.html#") for l in inner):
+        errors.append(f"{name}: no link to / or /how-it-works.html")
+    if len({l for l in inner if re.match(r"/(glossary|patterns|for|compare|guides)/", l)}) < 2:
+        errors.append(f"{name}: fewer than two links to library pages")
+    if not re.search(r"\]\(https?://", body):
+        errors.append(f"{name}: no third-party link in the body")
+    if re.search(r"coming soon|isn.t out yet|not yet available|LinkedIn only|only on LinkedIn|works on LinkedIn today|planned for", body + m.get("description", "") + m.get("summary", ""), re.I):
+        errors.append(f"{name}: still says a network or browser isn't live")
     prose = re.sub(r":::(slop|fine|example)\n.*?\n:::", "", body, flags=re.S)
     prose = re.sub(r"[\"“‘'][^\"”’'\n]{0,80}[\"”’']", "", prose)  # quoted words are examples, not our voice
     for w in sorted({x.group(0).lower() for x in re.finditer(BANNED, prose, re.I)}):

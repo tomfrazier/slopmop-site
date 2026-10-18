@@ -5,6 +5,7 @@
   "description": "A content farm mass-produces cheap articles or videos to win search traffic and ad money rather than serve readers. Its history, and the AI-run versions.",
   "summary": "A company or site that pumps out huge volumes of cheap articles or videos for search and ad revenue rather than for readers.",
   "updated": "2026-10-18",
+  "keyword": "content farm",
   "term": "Content farm",
   "aliases": ["content mill", "AI content farm"],
   "punchline": "Articles grown for search engines, harvested by ads.",
@@ -20,7 +21,7 @@
   ]
 }
 ---
-## What it means
+## What a content farm is
 
 A content farm produces articles or videos in bulk, chosen by what people search for and written as cheaply as possible. The goal is traffic: each page is a small bet that it will rank for a query, collect visits and earn a little from the ads around it. Multiply that by thousands of pages and the bets pay.
 
@@ -28,11 +29,11 @@ Readers come second. The writing tends to be padded to reach a word count, vague
 
 "Content mill" is often used for the same thing, especially for the low-paid freelance work that supplies it.
 
-## Where it came from
+## Where content farms came from
 
 The term spread around 2009 and 2010, attached to sites such as Demand Media's eHow, which published large numbers of how-to articles chosen by search demand. In 2011 Google released its Panda update, which was widely seen as aimed at content farms and cut the search visibility of many of them.
 
-Generative AI brought the model back at far lower cost. In May 2023 NewsGuard reported finding 49 news and information sites that appeared to be almost entirely written by AI with little human oversight. Two weeks later its count was 125, and it has kept a running tracker of these AI content farm sites ever since, which has grown into the thousands.
+Generative AI brought the model back at far lower cost. In May 2023 NewsGuard reported finding 49 news and information sites that appeared to be almost entirely written by AI with little human oversight. Two weeks later its count was 125, and it has kept a [running tracker](https://www.newsguardtech.com/special-reports/ai-tracking-center/) of these AI content farm sites ever since, which has grown into the thousands.
 
 ## Examples
 
@@ -49,4 +50,6 @@ The first paragraph is written to hold a reader on the page long enough to load 
 
 ## How Slop Mop sees it
 
-Content farm pages are thick with [stiff phrasing](/patterns/stiff-phrasing/) and filler, and they rarely give a reader anything to act on, which is what Slop Mop's usefulness signal looks for. It's live on LinkedIn today; the websites and articles you read, where content farms mostly live, are coming soon.
+Content farm pages are thick with [stiff phrasing](/patterns/stiff-phrasing/) and filler, and they rarely give a reader anything to act on, which is what Slop Mop's usefulness signal looks for. Slop Mop reads the articles and websites you open, where content farms mostly live, as well as posts on LinkedIn, X, Reddit, Facebook, Substack and Medium, where their links get shared. [Slop Mop for websites](/for/websites/) explains what it does on the open web, and [made for AdSense](/glossary/made-for-adsense/) covers the ad-funded sites next door.
+
+[Add Slop Mop to your browser](/) and it folds pages like these for you.

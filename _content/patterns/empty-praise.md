@@ -5,16 +5,19 @@
   "description": "Empty praise calls things incredible or transformative without saying what happened. How to spot it, when it's fine, and how to make praise specific.",
   "summary": "Big verdicts like incredible, powerful and transformative, with no detail to show what the writer actually saw.",
   "updated": "2026-10-18",
+  "keyword": "empty praise",
   "tell": "Empty praise",
   "short": "evaluation with no detail behind it",
   "order": 4,
   "related": ["/patterns/hype-words/", "/patterns/no-catch-promises/", "/glossary/workslop/", "/glossary/ai-slop/"],
-  "sources": []
+  "sources": [
+    {"title": "Write high quality reviews", "publisher": "Google Search Central", "url": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews", "date": "2025-12-10"}
+  ]
 }
 ---
 Empty praise is a verdict without the evidence. Something was incredible, powerful, inspiring, transformative or "exactly what this industry needs", and the post never says what happened to earn the word. It's the review equivalent of five stars and a blank comment box, written at length.
 
-## What it looks like
+## What empty praise looks like
 
 :::slop
 What an incredibly powerful keynote today. Truly inspiring, deeply insightful and exactly what our industry needs right now. 🙌
@@ -50,7 +53,9 @@ When you read praise, you want to know whether to care: should you watch the tal
 
 It also costs the person being praised. A team thanked for "world-class work" has learned nothing about what they did well, and readers outside the team can't tell whether the quarter was good or merely survived. Specific thanks is more useful to both, and more flattering.
 
-Taken together, the effect is inflation. When every event is transformative, the reader starts discounting all praise, including the deserved kind.
+The overall effect is inflation. When every event is transformative, the reader starts discounting all praise, including the deserved kind.
+
+Google asks the same of anyone writing a product review. Its [advice for review writers](https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews) asks for evidence of your own experience, quantitative measurements, and the drawbacks as well as the benefits. A post that praises something is a small review, and the same standard helps.
 
 ## When it's fine
 
@@ -63,11 +68,11 @@ Short, warm, unspecific praise has a real place:
 
 The tell is about posts that offer evaluation as their main content. If the praise is the whole post and nothing in it could be checked, readers are being asked to share a feeling with no reason given.
 
-## How Slop Mop scores it
+## How Slop Mop scores empty praise
 
-Empty praise is one of nine questions the model asks about each post, one spoke on the Slopprint. It asks whether the post evaluates something without the detail to back the evaluation up. A warm word in a post full of specifics should barely move it.
+Empty praise is one of the [nine questions the model asks](/how-it-works.html#tells) about each post, one spoke on the Slopprint. It asks whether the post evaluates something without the detail to back the evaluation up. A warm word in a post full of specifics should barely move it.
 
-The model says how confident it is, and shaky answers count for less. If empty praise is the only tell that stands out, the score is cut, since a short, kind congratulation is ordinary and harmless. It tends to arrive with [hype words](/patterns/hype-words/) and a moral or two, and that combination is what gets flagged.
+The model says how confident it is, and shaky answers count for less. If empty praise is the only tell that stands out, the score is cut, since a short, kind congratulation is ordinary and harmless. It often appears with [hype words](/patterns/hype-words/), [no-catch promises](/patterns/no-catch-promises/) and a moral or two, and that combination is what gets flagged.
 
 The counter-signals can only lower the score. A post that's useful to readers, sounds like one particular person or has drawn real comments and reposts gets a share taken off. Some tells count for more than others, and the weights aren't published. The verdict depends on your sensitivity setting, and if you think it's wrong, your vote overrides it in your feed.
 
@@ -86,6 +91,8 @@ Just finished an incredible two-day workshop with an amazing group of leaders. T
 Two days on a workshop about giving feedback. The most useful exercise was rewriting one real review we'd given in the past year, in pairs. Mine went from 600 words to 150 and finally said what the problem was. Day two's role-play felt forced.
 :::
 
-## Where it shows up
+## Where empty praise shows up
 
-Event recaps and team shout-outs on LinkedIn are full of it, and LinkedIn is where Slop Mop reads posts today. It's also common in testimonials on product pages, book-cover blurbs, award announcements and the comment sections under almost any popular post.
+Event recaps and team shout-outs on LinkedIn are full of it, and so are the reply threads under popular posts on X and Facebook, "great post!" comments on Reddit and Medium, and testimonials on the websites you read. It's also common in book-cover blurbs, award announcements and the opening lines of sales email.
+
+Slop Mop reads for empty praise on every network it covers: LinkedIn, X, Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium, articles and websites, and email in Gmail and Outlook, where it checks only what the sender wrote. [Add Slop Mop to your browser](/) and it folds posts like these for you.

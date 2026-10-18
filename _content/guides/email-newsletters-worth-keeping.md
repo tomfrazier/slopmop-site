@@ -4,13 +4,17 @@
   "seo_title": "Which newsletters are worth keeping? A 10-minute audit",
   "description": "Score each newsletter in your inbox on what it gives you per minute of reading. Signs of padded, AI-filler issues, and a keep, demote or cut rule.",
   "summary": "A quick audit for the newsletters you didn't cut: how to tell a padded issue from a useful one, and when to keep, demote or unsubscribe.",
+  "keyword": "newsletters worth keeping",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
   "minutes": 6,
   "related": ["/patterns/flowery-prose/", "/patterns/not-x-but-y/", "/patterns/too-tidy-story/", "/glossary/ai-slop/", "/for/email/", "/for/marketers/"],
-  "sources": []
+  "sources": [
+    {"title": "Create rules to filter your emails", "publisher": "Google (Gmail Help)", "url": "https://support.google.com/mail/answer/6579", "date": ""},
+    {"title": "Manage email messages by using rules in Outlook", "publisher": "Microsoft Support", "url": "https://support.microsoft.com/en-gb/office/use-rules-in-new-and-classic-outlook-for-windows-8400435c-f14e-4272-9004-1548bb1848f2", "date": ""}
+  ]
 }
 ---
 Keep a newsletter if, most weeks, it tells you something specific you'd act on or repeat to someone, in less time than it takes to read. To check, open the last three issues side by side and count the concrete things in each: dates, numbers, names, links to original sources, a method you could use. Padded issues have lots of words and few of those.
@@ -53,7 +57,7 @@ The county council published its staff working-pattern survey on Tuesday. Hybrid
 
 Both are invented. The first could be AI-drafted or typed at speed, and it makes no difference to you. The second gives you the source, the date, a number and where to look, in fewer words.
 
-## The scoring
+## Score which newsletters are worth keeping
 
 For each newsletter, look at its last three issues and give it one point for each issue that:
 
@@ -71,7 +75,7 @@ That's a score out of 9. Then:
 
 The third point is there on purpose. A newsletter you read for the writing, the jokes or one person's taste is doing its job even if it's light on facts. The audit is for the issues you skim out of a faint sense of obligation. Leave the ones you enjoy alone.
 
-For the demote pile, [Gmail filters](/guides/email/email-gmail-filters-for-newsletters/) can send them to a label automatically. In Outlook, an inbox rule does the same job.
+For the demote pile, [Gmail filters](/guides/email/email-gmail-filters-for-newsletters/) can send them to a label automatically. In Outlook, an [inbox rule](https://support.microsoft.com/en-gb/office/use-rules-in-new-and-classic-outlook-for-windows-8400435c-f14e-4272-9004-1548bb1848f2) does the same job.
 
 ## Things that look like padding but aren't
 
@@ -83,3 +87,7 @@ For the demote pile, [Gmail filters](/guides/email/email-gmail-filters-for-newsl
 ## Run it again in three months
 
 Newsletters change. A good one gets sold, gets a sponsor, or runs out of steam; a new one you signed up for at a conference turns out to be excellent. Put a reminder in your calendar for three months from now and redo the audit on whatever has crept back in.
+
+Between audits, Slop Mop for Gmail and Outlook can keep score issue by issue. It reads what the sender wrote, checks it for the same tells described above ([how it works](/how-it-works.html)), and marks or folds the padded issues, so a newsletter that's slipping shows it before your next audit. Personal details are swapped for placeholders before an email is checked, attachments and quoted earlier messages are never sent, and spam, private, legal, health and transactional mail is never read unless you check a message by hand. It's part of Slop Mop XL, at US$5.99 a month or US$59.99 a year.
+
+[Add Slop Mop for Gmail and Outlook](/) (part of Slop Mop XL) and it marks the padded issues in the newsletters you keep.

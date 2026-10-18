@@ -5,6 +5,7 @@
   "description": "Cut LinkedIn notification noise: turn off types from the Notifications tab, set email frequency, stop newsletter alerts and mute busy message threads.",
   "summary": "Turn off notification types at the source, pick in-app, push or email for each, and stop newsletter alerts you never asked for.",
   "updated": "2026-10-18",
+  "keyword": "reduce linkedin notifications",
   "network": "linkedin",
   "publish_date": "2026-11-03",
   "verified": "2026-10-18",
@@ -24,7 +25,7 @@
 ---
 The fastest fix is on the Notifications tab itself: click the three dots next to any notification you don't want and choose **Show less like this**, or **Change notification preferences** to switch that type off. For a full clear-out, go to **Settings & Privacy**, then **Notifications**, and work through each category, choosing in-app, push or email for every type you keep.
 
-## Before you start
+## Before you reduce LinkedIn notifications
 
 LinkedIn can reach you three ways, and each is set separately ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1378534)):
 
@@ -53,7 +54,7 @@ In the app, tap the **Notifications** icon in the navigation bar, then the three
 
 LinkedIn notes that the options vary by notification type, so not every one offers all three.
 
-## 2. Work through each category in Settings
+## 2. Reduce LinkedIn notifications by category in Settings
 
 This is where the bulk of the noise goes.
 
@@ -109,4 +110,8 @@ Some notifications earn their keep even when you're cutting hard:
 - **Notifications stopped altogether.** LinkedIn's troubleshooting page suggests resetting two settings: under **Connecting with others**, open **Updates from your network**, and under **Posting and commenting**, open **Comments and reactions**. Switch each toggle off and on again, or on and off again if it was off. Push only works when in-app notifications are on ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1672779)).
 - **You want a type back.** Click the **Notifications** icon, then **Manage notifications** in the left pane, find the type and switch it **On** ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/76636)).
 
-Notifications are only half the noise. If the feed is the bigger problem, see [how to clean up your LinkedIn feed](/guides/linkedin/linkedin-clean-up-feed/) and [how to filter engagement bait](/guides/linkedin/linkedin-filter-engagement-bait/).
+Notifications are only half the noise. If the feed is the bigger problem, see [how to clean up your LinkedIn feed](/guides/linkedin/linkedin-clean-up-feed/) and [how to filter engagement bait](/guides/linkedin/linkedin-filter-engagement-bait/). A notification that sends you to a post full of [engagement bait](/patterns/engagement-bait/) is still a wasted click.
+
+That's the part [Slop Mop](/) helps with. It's a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers that reads LinkedIn posts as you scroll and folds likely slop into a one-line strip you can reopen, or marks it if you prefer Highlight mode. It doesn't change your notification settings, and it doesn't touch the LinkedIn app. It also reads X, Reddit, Facebook, Substack and Medium feeds; the free plan covers one feed with 250 checks a day, and Slop Mop XL covers every feed. [How it works](/how-it-works.html) explains what it looks for.
+
+[Add Slop Mop to your browser](/) and the posts your notifications lead to get checked before you read them.

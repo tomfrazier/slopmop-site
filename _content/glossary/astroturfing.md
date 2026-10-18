@@ -5,6 +5,7 @@
   "description": "Astroturfing is an organised campaign dressed up as spontaneous public support. Where the word came from, what it looks like online, and its critics.",
   "summary": "Disguising an organised, sponsored campaign so it looks like spontaneous support from ordinary people.",
   "updated": "2026-10-18",
+  "keyword": "astroturfing",
   "term": "Astroturfing",
   "aliases": ["astroturf"],
   "punchline": "Grass roots, made in a factory.",
@@ -26,15 +27,15 @@
   ]
 }
 ---
-## What it means
+## What astroturfing means
 
 Astroturfing is an organised campaign made to look like a spontaneous one. The letters, posts, reviews or comments appear to come from ordinary people who happen to agree; in fact a company, lobby group, campaign or government is behind them and keeps its role hidden. The deception is the hidden sponsor. Organising supporters is normal politics and marketing; hiding who organised them is what makes it astroturf.
 
-Offline it meant form letters, paid crowds and front groups with homely names. Online it scales cheaply: one operator can run many accounts, buy reviews, or use automated accounts to push a hashtag into a trending list. Wikipedia's article cites a study by researchers at EPFL reporting that 20% of global Twitter trends in 2019 were fake, created by fake and compromised accounts posting in coordination.
+Offline it meant form letters, paid crowds and front groups with homely names. Online it scales cheaply: one operator can run many accounts ([sock puppets](/glossary/sock-puppet/)), buy reviews, or use automated accounts to push a hashtag into a trending list. Wikipedia's article cites a study by researchers at EPFL reporting that 20% of global Twitter trends in 2019 were fake, created by fake and compromised accounts posting in coordination.
 
-## Where it came from
+## Where the word astroturfing came from
 
-The word plays on "grass roots" and AstroTurf, a brand of artificial grass. The usage is credited to Lloyd Bentsen, then a US senator for Texas, who in 1985 received a pile of postcards and letters prompted by insurance companies and remarked that "a fellow from Texas can tell the difference between grass roots and Astroturf". Merriam-Webster dates the first known use of the noun "astroturfing" to 1993.
+The word plays on "grass roots" and AstroTurf, a brand of artificial grass. The usage is credited to Lloyd Bentsen, then a US senator for Texas, who in 1985 received a pile of postcards and letters prompted by insurance companies and remarked that "a fellow from Texas can tell the difference between grass roots and Astroturf". [Merriam-Webster](https://www.merriam-webster.com/dictionary/astroturfing) dates the first known use of the noun "astroturfing" to 1993.
 
 Many countries now regulate the commercial version. US Federal Trade Commission guidance on endorsements, updated in 2009 for social media, requires paid endorsers to disclose the connection, and EU and UK consumer law prohibits businesses from falsely presenting themselves as consumers.
 
@@ -58,4 +59,6 @@ The word is an accusation, and it gets used as a weapon. Calling a movement "ast
 
 ## How Slop Mop sees it
 
-Astroturfing is mostly outside what Slop Mop judges. It reads one post at a time and scores the writing, so it can't see who paid for a post or whether 40 accounts are working together. One part overlaps: its reader-response signal discounts hollow engagement, such as hundreds of reactions with almost no comments or reposts, which is what an engagement pod or bought reactions tend to look like.
+Astroturfing is mostly outside what Slop Mop judges. It reads one post at a time and scores the writing, so it can't see who paid for a post or whether 40 accounts are working together. One part overlaps: its [reader-response signal](/how-it-works.html#response) discounts hollow engagement, such as hundreds of reactions with almost no comments or reposts, which is what an engagement pod or reactions bought from a [click farm](/glossary/click-farm/) tend to look like. Coordinated posting shows up on X, Reddit and Facebook as much as on LinkedIn, and Slop Mop reads posts on all of them.
+
+[Add Slop Mop to your browser](/) and it folds the empty posts for you.

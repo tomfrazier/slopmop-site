@@ -5,6 +5,7 @@
   "description": "How following topics, writers and publications shapes your Medium homepage, when each one helps, and how to build a short follow list that stays useful.",
   "summary": "Topics bring volume, writers bring quality. How Medium uses each follow, and how to build a follow list that keeps your feed worth reading.",
   "updated": "2026-10-18",
+  "keyword": "follow topics or writers on medium",
   "network": "medium",
   "publish_date": "2026-11-17",
   "verified": "2026-10-18",
@@ -30,7 +31,7 @@ Medium uses all three kinds of follow, in different ways.
 
 In short, a writer follow is a guarantee and a topic follow is a request.
 
-## Which to use when
+## Follow topics or writers on Medium: which to use when
 
 | You want | Follow | Why |
 |---|---|---|
@@ -87,4 +88,6 @@ Any one of these means a topic is too broad or a follow has gone stale. Use the 
 
 ## If that doesn't work
 
-If your Following feed is good but For you stays full of filler, prune your reading history as described in the [recommendations clean-up guide](/guides/medium/medium-clean-up-recommendations/). Recommendations draw on what you read as well as what you follow, so a run of curiosity clicks can outweigh a careful follow list. Slop Mop is coming soon to Medium; for now, a short follow list does most of the filtering for you.
+If your Following feed is good but For you stays full of filler, prune your reading history as described in the [recommendations clean-up guide](/guides/medium/medium-clean-up-recommendations/). Recommendations draw on what you read as well as what you follow, so a run of curiosity clicks can outweigh a careful follow list. A short follow list does most of the filtering. For the rest, [Slop Mop](/how-it-works.html) reads the stories in your Medium feed and the articles you open, and folds the ones heavy on tells such as [hype words](/patterns/hype-words/) and [empty praise](/patterns/empty-praise/), so a broad topic follow costs you less. It doesn't follow or unfollow anything for you, and it runs in desktop browsers rather than the Medium app.
+
+The same choice comes up on X, between [Following and For you](/guides/x/x-following-vs-for-you/), and Slop Mop works there too. [Add Slop Mop to your browser](/) and it folds the filler your topic follows bring in.

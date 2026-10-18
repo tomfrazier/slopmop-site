@@ -5,6 +5,7 @@
   "description": "A kind way to help a parent or grandparent spot AI images on Facebook: three questions to ask of any post, a feed tidy-up and the scam signs to know.",
   "summary": "Help a parent or grandparent tell AI picture posts from real ones on Facebook, without embarrassing them or making them doubt everything.",
   "updated": "2026-10-18",
+  "keyword": "spot ai images on facebook",
   "network": "facebook",
   "publish_date": "2026-12-08",
   "verified": "2026-10-18",
@@ -30,7 +31,7 @@ Anyone can be taken in by these posts. Researchers who studied 120 Pages posting
 - **Ask, don't announce.** "I keep seeing these odd pictures on Facebook. Do you get them too?" goes further than "That thing you shared was fake."
 - **Bring an example that isn't theirs.** Scroll your own feed or theirs together and find one. Nobody likes their own post used as the cautionary tale.
 
-## The three questions
+## Three questions to spot AI images on Facebook
 
 Write these on a card by the computer if it helps.
 
@@ -90,4 +91,4 @@ Agree a simple rule: if anyone on Facebook asks for money or a code, they ring y
 
 Feeds take a while to change, and one session won't clear months of drift. Check in after a couple of weeks and repeat the Not interested taps on whatever's still there. If the main feed stays bad, using the Feeds tab with Favorites is a reliable way to see family posts without the suggestions.
 
-Slop Mop, which judges the writing in LinkedIn posts today, is coming soon to Facebook.
+If your relative reads Facebook on a computer, Slop Mop can help with question 2. It reads the words of feed posts, including those from Pages and groups, and folds reaction-fishing captions such as the 100th-birthday post above into a one-line strip they can reopen ([how it scores a post](/how-it-works.html)). It doesn't analyse the pictures, it isn't in the phone app, and it's no substitute for the money rule. [Add Slop Mop to their browser](/) and it folds the caption-bait posts before they have to decide what to make of them.

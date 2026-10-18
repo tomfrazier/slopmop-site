@@ -2,6 +2,7 @@
 {
   "title": "Infodemic",
   "seo_title": "Infodemic: meaning and origin of the term · Slop Mop",
+  "keyword": "infodemic",
   "description": "An infodemic is an overload of information, accurate and not, that spreads with a crisis and buries reliable guidance. Coined in 2003, revived in 2020.",
   "summary": "Too much information, some accurate and some not, spreading alongside a crisis and making trustworthy guidance hard to find.",
   "updated": "2026-10-18",
@@ -25,15 +26,15 @@
   ]
 }
 ---
-## What it means
+## What an infodemic is
 
 An infodemic is what happens to information during a crisis: there is suddenly far too much of it, some right, some wrong, some out of date by the afternoon, and it spreads faster than anyone can check it. The word blends "information" and "epidemic", and the metaphor is deliberate. False claims pass from person to person like an infection and can do real harm to the people who act on them.
 
-The World Health Organization's current definition is "too much information including false or misleading information in digital and physical environments during a disease outbreak." It says infodemics cause confusion and risk-taking, and lead to mistrust in health authorities.
+[The World Health Organization's current definition](https://www.who.int/health-topics/infodemic) is "too much information including false or misleading information in digital and physical environments during a disease outbreak." It says infodemics cause confusion and risk-taking, and lead to mistrust in health authorities.
 
-The defining problem is quantity as much as falsehood. Even when good guidance exists, it's hard to find under everything else.
+The defining problem is quantity as much as falsehood, which ties it to [information overload](/glossary/information-overload/). Even when good guidance exists, it's hard to find under everything else.
 
-## Where it came from
+## Where the word infodemic came from
 
 The foreign-policy writer David Rothkopf coined the term in a *Washington Post* column on 11 May 2003, about the SARS outbreak. He described the "information epidemic" as "a few facts, mixed with fear, speculation, and rumor, amplified and relayed swiftly worldwide by modern information technologies," and argued it had turned a regional health crisis into a global one.
 
@@ -51,6 +52,8 @@ A new virus variant is reported on a Friday. By Sunday, search results for its n
 
 ## How Slop Mop sees it
 
-This is outside what Slop Mop judges. It scores the writing in posts on LinkedIn for hooks, bait and filler, and it doesn't check facts, so it can't tell you whether health information is accurate.
+This is outside what Slop Mop judges. It scores the writing in posts and articles, on LinkedIn, Facebook, Reddit, X and the websites you read, for hooks, [engagement bait](/patterns/engagement-bait/) and filler, and it doesn't check facts, so it can't tell you whether health information is accurate.
 
 Infodemic describes information, and it isn't a medical term. For decisions about your health, go to a doctor, pharmacist or your national public health authority rather than a feed.
+
+[Add Slop Mop to your browser](/) if you want padded posts folded, knowing it won't sort true from false for you.

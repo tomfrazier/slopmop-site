@@ -2,6 +2,7 @@
 {
   "title": "Information overload",
   "seo_title": "Information overload: meaning and history · Slop Mop",
+  "keyword": "information overload",
   "description": "Information overload is having so much coming at you that understanding and deciding get harder. Where the term came from, and how old the complaint is.",
   "summary": "Having so much information coming at you that it becomes harder, not easier, to understand things and make decisions.",
   "updated": "2026-10-18",
@@ -25,17 +26,17 @@
   ]
 }
 ---
-## What it means
+## What information overload means
 
 Information overload is the point where more information makes you worse at understanding something or deciding about it. Past a certain amount, you can't take it all in, so you skim, guess, put the decision off or go with whatever you saw last.
 
 The research version is simple. When the input exceeds a person's capacity to process it, the quality of their decisions tends to drop. Later definitions add time to the picture: the problem is often less the total amount than having too much, too complex or too contradictory, with too little time to sort it.
 
-Today the phrase covers the familiar daily experience of feeds, inboxes, notifications and chat channels, all producing more than anyone could read. Variants include "infobesity", "infoxication" and "information anxiety".
+Today the phrase covers the familiar daily experience of feeds, inboxes, notifications and chat channels, all producing more than anyone could read. Variants include "infobesity", "infoxication" and "information anxiety". Related ideas include [content shock](/glossary/content-shock/), more content than anyone could consume, and [doomscrolling](/glossary/doomscrolling/).
 
-## Where it came from
+## Where the term information overload came from
 
-The term was used by management and information scholars from the early 1960s, including in Bertram Gross's 1964 book *The Managing of Organizations*. Alvin Toffler made it popular in his 1970 bestseller *Future Shock*.
+According to [Wikipedia's entry](https://en.wikipedia.org/wiki/Information_overload), the term was used by management and information scholars from the early 1960s, including in Bertram Gross's 1964 book *The Managing of Organizations*. Alvin Toffler made it popular in his 1970 bestseller *Future Shock*.
 
 The complaint is far older than the phrase. Seneca the Elder wrote in the 1st century AD that "the abundance of books is distraction". In 1255 the Dominican scholar Vincent of Beauvais grumbled about "the multitude of books, the shortness of time and the slipperiness of memory". Denis Diderot predicted that books would one day be so many that learning from them would be nearly as hard as studying the universe directly.
 
@@ -51,4 +52,6 @@ Two habits help: cutting inputs at the source (unsubscribing, leaving channels, 
 
 ## How Slop Mop sees it
 
-Slop Mop is aimed at one slice of the problem: the low-value posts that take attention and give nothing back. It folds likely slop out of your LinkedIn feed so there is less to wade through, though it can only cut volume from that one feed today and it won't decide anything for you. Other feeds and email are coming soon.
+Slop Mop is aimed at one slice of the problem: the low-value posts that take attention and give nothing back. It folds likely slop in your feeds on LinkedIn, X, Reddit, Facebook, Substack and Medium and in the articles you read, and Slop Mop for Gmail and Outlook checks what senders wrote in your inbox, so there is less to wade through. It won't decide anything for you. The free version covers the one feed you pick; every feed, the sites you read and email are part of Slop Mop XL.
+
+[Add Slop Mop to your browser](/) and it folds the filler before you reach it.

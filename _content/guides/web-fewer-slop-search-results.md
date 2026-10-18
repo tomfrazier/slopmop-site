@@ -1,9 +1,10 @@
 ---
 {
   "title": "How to get fewer slop results in Google search",
-  "seo_title": "Fewer slop results in Google: Web filter and operators",
+  "seo_title": "Fewer slop search results in Google: filters, operators",
   "description": "Use Google's Web filter, before:, -site: and exact quotes to cut AI Overviews, padded pages and content farms out of your search results.",
   "summary": "Google's Web filter, before:, -site: and exact quotes, used together to get fewer padded pages and AI summaries in your results.",
+  "keyword": "fewer slop search results",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-10-27",
@@ -72,7 +73,7 @@ https://www.google.com/search?q=%s&udm=14
 
 Where to add it depends on your browser, and the menu may be labelled differently from one version to the next. Two cautions: because Google doesn't document the parameter, it could stop working at any time; and third-party redirect sites that do this for you can see every search you type.
 
-## Combine them
+## Combine them for fewer slop search results
 
 The steps work best together. A search for a dishwasher fault might look like this:
 
@@ -102,4 +103,6 @@ The first title has a year and a superlative and could sit on any appliance page
 - **The Web filter has vanished.** Google moves filters around by query. Try the other options in the filter row, or use the `udm=14` address above.
 - **You need recent results.** Drop `before:` and use quotes and `-site:` instead.
 
-Slop Mop is coming soon to websites. It won't change Google's results, and none of these steps need it: they're free and work in any browser today.
+None of these steps need anything installed: they're free and work in any browser. Slop Mop picks up where they stop. It doesn't change Google's results, but on the articles you open it scores the text with the same twelve questions it uses on social posts ([how it works](/how-it-works.html)) and marks or folds the padded ones, so a thin page that got past your operators doesn't cost you a full read. Websites are part of Slop Mop XL (US$5.99 a month).
+
+[Add Slop Mop to your browser](/) and it folds the padded pages your searches still turn up.

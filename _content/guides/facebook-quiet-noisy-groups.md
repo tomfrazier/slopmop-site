@@ -5,6 +5,7 @@
   "description": "Turn a Facebook group's notifications to Off or Friends' posts, stop @everyone alerts, unfollow the group or leave it, on the app and on a computer.",
   "summary": "Change a Facebook group's notifications, stop @everyone alerts, unfollow or leave, and pick the right level for each group you're in.",
   "updated": "2026-10-18",
+  "keyword": "noisy facebook groups",
   "network": "facebook",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
@@ -22,7 +23,7 @@
 ---
 To quieten a Facebook group, open the group, choose **Manage notifications** from its menu and switch in-app notifications from **Highlights** to **Friends' posts** or **Off**. That stops the alerts. To stop its posts reaching your feed as well, choose **Unfollow group**; to be done with it, **Leave group**. Nobody in the group is told about any of these.
 
-## Before you start
+## Before you quieten noisy Facebook groups
 
 - **Notifications and feed are separate.** Turning notifications off doesn't remove the group's posts from your feed, and unfollowing doesn't change your notifications. Most noisy groups need both.
 - **The default is Highlights.** When you join a group, Facebook sets its notifications to Highlights, which includes suggested posts as well as posts from your friends ([Facebook Help](https://www.facebook.com/help/187225274663021)). That's why a group you joined once for a jumble sale can still buzz your phone.
@@ -88,7 +89,7 @@ You can also do it from any of the group's posts in your feed: three dots, then 
 
 When you leave, members aren't notified, you stop getting its notifications and its posts in your feed, and the group drops off your list ([Facebook Help](https://www.facebook.com/help/172944012764072)). If you're the only admin, Facebook asks you to invite a new one first, and pauses the group if nobody accepts within seven days.
 
-## Sorting all your groups in one sitting
+## Sorting all your noisy Facebook groups in one sitting
 
 Open **Your groups** and go down the list. For each one, decide which of four piles it belongs in:
 
@@ -108,10 +109,12 @@ Bin collections move to Friday next week because of the bank holiday. Garden was
 
 A group that sends the second is worth a notification. A group that sends the first every morning isn't.
 
+Some groups mix the two, and leaving would lose the bin dates along with the mood polls. For those, Slop Mop is an option in a desktop browser: it reads the posts in groups you can see and folds the ones that score as [engagement bait](/patterns/engagement-bait/) or other slop into a one-line strip you can reopen ([how it scores a post](/how-it-works.html)). It changes what you see on screen only; notifications are still up to the settings above.
+
 ## If that doesn't work
 
 - **The group still notifies you.** Check push notifications on the same Manage notifications screen; they're set separately from in-app ones.
 - **The Groups tab keeps showing red dots.** In the app, press and hold that tab on the tab bar and choose **Turn off notification dots** ([Facebook Help](https://www.facebook.com/help/2741283262582983)).
 - **Posts from groups you're not in still appear.** Those are suggestions, or friends' activity. The [suggested posts guide](/guides/facebook/facebook-reduce-suggested-posts/) covers them.
 
-Slop Mop, which folds away low-value posts on LinkedIn today, is coming soon to Facebook.
+[Add Slop Mop to your browser](/) and it folds the mood polls in the groups you decide to keep.

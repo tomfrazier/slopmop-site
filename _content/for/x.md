@@ -1,13 +1,14 @@
 ---
 {
-  "title": "Slop Mop for X",
-  "seo_title": "Slop Mop for X: reply guys and thread bait · Slop Mop",
-  "description": "Engagement farming, reply guys and formula threads: what slop looks like on X, what Slop Mop plans to do there, and how to use X's muted words today.",
-  "summary": "Coming soon to X. Until then: why engagement farming pays, what it looks like, and how to cut it down with X's own muting tools.",
+  "title": "Slop Mop for X: a timeline filter for reply guys and thread bait",
+  "seo_title": "X timeline filter for reply guys and bait · Slop Mop",
+  "description": "An X timeline filter that judges the writing: why engagement farming pays, what Slop Mop does to posts and replies, and how X's muted words fit in.",
+  "summary": "Slop Mop reads posts and replies on X as you scroll and folds or marks the thread bait, reply farming and filler.",
+  "keyword": "x timeline filter",
   "updated": "2026-10-18",
   "kind": "network",
   "audience": "people who read X",
-  "network_status": "soon",
+  "network_status": "live",
   "related": ["/patterns/engagement-bait/", "/patterns/scroll-stopper/", "/patterns/hype-words/", "/glossary/ai-slop/", "/for/journalists/", "/for/creators/"],
   "sources": [
     {"title": "X changes creator payouts to depend on engagement, not ads", "publisher": "TechCrunch", "url": "https://techcrunch.com/2024/10/09/x-changes-creator-payouts-to-depend-on-engagement-not-ads/", "date": "2024-10-09"},
@@ -57,17 +58,27 @@ This. 💯 So underrated. Everyone needs to read this.
 The chart starts in 2020, which hides the 2018 dip. Start it at 2015 and the trend is a lot flatter.
 :::
 
-The first is a [scroll-stopper](/patterns/scroll-stopper/) with [hype words](/patterns/hype-words/) attached. The second is pure [engagement bait](/patterns/engagement-bait/). The third is harder to spot one at a time and obvious in bulk: thirty of them under one post push the useful replies out of sight.
+The first is a [scroll-stopper](/patterns/scroll-stopper/) with [hype words](/patterns/hype-words/) attached. The second is pure [engagement bait](/patterns/engagement-bait/). The third, the [reply guy](/glossary/reply-guy/), is harder to spot one at a time and obvious in bulk: thirty of them under one post push the useful replies out of sight.
 
-## What Slop Mop does here
+## How Slop Mop filters your X timeline
 
-Slop Mop for X is coming soon. It doesn't work on X yet.
+On X, Slop Mop reads the posts in your timeline and the replies under a post you open, shortly before you reach them. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet. It sends each post's text and its public engagement counts to its scoring service, and never your handle or the author's.
 
-When it arrives, the plan is for it to do what it already does on LinkedIn. It will read posts ahead of you, ask twelve questions about the writing (nine tells of slop and three counter-signals: sounds like a person, useful to readers, and reader response) and either fold likely slop into a one-line strip you can reopen or leave it in place and mark it. Each call comes with its reasons, and your vote overrides the model in your own feed.
+An AI model designed for calibrated decisions answers twelve questions about the writing: nine tells of slop and three counter-signals (sounds like a person, useful to readers, and reader response). Each post gets a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure. A Not sure post is left alone.
 
-It judges the writing, and it isn't an AI detector. A sharp post drafted with AI should stay. A hand-typed "drop a 🔥" probably won't. It won't delete, report, mute or block anything, so it won't touch who you follow.
+- **Hide mode** folds a post past your threshold into a one-line strip where it was. Under a big post, thirty "This. 💯" replies become thirty thin lines, and the reply with the correction is easy to find. Click Show post to open one in place.
+- **Highlight mode** hides nothing. The post's mop turns yellow for Possibly slop and red for Likely slop.
+- **Sensitivity** is Mild, Moderate or Aggressive.
 
-## What you can do today
+Click the mop on a post to see the details panel: the score, the strongest signs and the Slopprint, a nine-spoke chart with one spoke per tell. A formula thread usually spikes on scroll-stopper and hype words at once, which is why it gets flagged; one loud habit on its own is discounted. The reader response bar counts replies and reposts for more than likes, and a post with a big like count and little discussion gets little credit for it.
+
+If you disagree, vote Not sure, No, Maybe or Probably. Your vote overrides the model in your own timeline, and X never sees it. There's no vote on your own posts.
+
+It judges the writing, and it isn't an AI detector. A sharp post drafted with AI stays. A hand-typed "drop a 🔥" probably won't. It never deletes, reports, mutes or blocks anything, so it doesn't touch who you follow.
+
+The free plan covers the one feed you pick, with 250 checks a day, and X can be that feed. Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every other feed, the sites you read, Gmail and Outlook, and a higher daily limit. The scoring is set out on [how it works](/how-it-works.html).
+
+## X's own muted words, and how they fit with Slop Mop
 
 X's muted words are the closest built-in tool, and they're more flexible than most people realise ([X Help Center](https://help.x.com/en/using-x/advanced-x-mute-options)).
 
@@ -77,7 +88,7 @@ X's muted words are the closest built-in tool, and they're more flexible than mo
 4. **Choose how long.** Mutes last forever by default. You can pick 24 hours, 7 days or 30 days instead.
 5. **Review the list now and then.** You can see and remove muted words in the same settings page.
 
-Muted words are literal. They catch the exact phrase and miss the next variation, and they'll also hide a friend who uses the phrase sincerely. That's the gap a writing-based judgement is meant to fill.
+Muted words are literal. They catch the exact phrase and miss the next variation, and they'll also hide a friend who uses the phrase sincerely. The two fit together: keep a short muted list for phrases you never want to see, and let Slop Mop judge the variations by their writing. [Slop Mop vs keyword filters](/compare/slop-mop-vs-keyword-filters/) goes into the difference.
 
 ## Who it's for
 
@@ -87,3 +98,5 @@ People who still use X for news, expertise and the occasional good argument:
 - [Developers](/for/developers/) and [researchers](/for/researchers/) who follow specialists and want their posts without the thread-merchant layer.
 - [Investors](/for/investors/) and [founders](/for/founders/) reading industry chatter that's increasingly written to be quoted.
 - [Creators](/for/creators/) who want to see what their peers make, and who'd prefer not to absorb the formulas by osmosis.
+
+[Add Slop Mop to your browser](/) and it folds posts and replies like these out of your X timeline for you.

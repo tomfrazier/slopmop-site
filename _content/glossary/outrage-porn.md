@@ -5,6 +5,7 @@
   "description": "Outrage porn is media made to make you angry, because indignation drives views, shares and comments. Coined by Tim Kreider in 2009; what it covers and why.",
   "summary": "Media designed to make you angry, produced because indignation reliably drives views, shares and comments.",
   "updated": "2026-10-18",
+  "keyword": "outrage porn",
   "term": "Outrage porn",
   "aliases": ["outrage media", "outrage journalism"],
   "punchline": "Anger, served hot, for clicks.",
@@ -24,7 +25,7 @@
   ]
 }
 ---
-## What it means
+## What outrage porn means
 
 Outrage porn is media made to provoke anger because anger pays. The story, clip or post exists to give you a jolt of indignation, then a reason to share it so others can feel the same. The "porn" in the name is about the transaction: a reliable, repeatable hit with little else attached.
 
@@ -32,9 +33,9 @@ It runs on a few familiar moves: an extreme example presented as typical, a quot
 
 Why it works has been studied too. In 2014 Jonah Berger of the Wharton School described anger as a "high-arousal emotion" that makes people more likely to pass things on.
 
-## Where it came from
+## Where outrage porn came from
 
-The cartoonist and essayist Tim Kreider coined the term in a *New York Times* piece in July 2009. He wrote that "it sometimes seems as if most of the news consists of outrage porn, selected specifically to pander to our impulses to judge and punish and get us all riled up with righteous indignation."
+The cartoonist and essayist Tim Kreider coined the term, according to [Wikipedia's entry on outrage porn](https://en.wikipedia.org/wiki/Outrage_porn), in a *New York Times* piece in July 2009. He wrote that "it sometimes seems as if most of the news consists of outrage porn, selected specifically to pander to our impulses to judge and punish and get us all riled up with righteous indignation."
 
 The media critic Ryan Holiday picked it up in his 2012 book *Trust Me, I'm Lying*, using it for manufactured online controversy. The idea now covers cable news segments, talk radio, blogs and the feed posts that copy their style.
 
@@ -57,4 +58,4 @@ Kreider himself drew a line: "outrage is healthy to the extent that it causes us
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't judge politics or whether anger is deserved. On LinkedIn it scores the habits outrage posts tend to use, such as dramatic hooks and [engagement bait](/patterns/engagement-bait/) like "share this before they delete it", along with whether the post gives a reader anything useful.
+Slop Mop doesn't judge politics or whether anger is deserved. In your feeds on Facebook, X, Reddit, LinkedIn and the other networks it reads, it scores the habits outrage posts tend to use, such as [scroll-stopper](/patterns/scroll-stopper/) hooks and [engagement bait](/patterns/engagement-bait/) like "share this before they delete it", along with whether the post gives a reader anything useful. The same habits run through [rage bait](/glossary/rage-bait/). [Add Slop Mop to your browser](/) and it folds posts like the first example for you.

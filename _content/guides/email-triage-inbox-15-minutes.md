@@ -4,6 +4,7 @@
   "seo_title": "Triage your inbox in 15 minutes: Gmail and Outlook",
   "description": "A timed, four-pass method for clearing an overloaded inbox in Gmail or Outlook: find what matters, bulk-archive the rest, and snooze what can wait.",
   "summary": "A four-pass, 15-minute method for an overloaded inbox, using Gmail search and snooze or Outlook filters, Sweep and snooze.",
+  "keyword": "triage your inbox",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-12-08",
@@ -21,7 +22,7 @@
 ---
 Spend 15 minutes in four passes: 3 minutes pulling out mail from real people, 5 minutes bulk-archiving everything automated, 5 minutes answering or snoozing what's left, and 2 minutes setting one filter or rule so the same pile doesn't come back. Archive, don't delete. The aim is an inbox where everything left needs you. Empty is optional.
 
-## Before you start
+## Before you triage your inbox
 
 - **Set a timer.** The limit is what stops you reading newsletters halfway through.
 - **Use a computer.** Gmail's search and snooze-in-bulk steps and Outlook's Sweep are documented for the browser and desktop versions.
@@ -33,7 +34,7 @@ Find the mail that's from people, about things that need you.
 
 **In Gmail**, search for unread mail from people you deal with:
 
-- `is:unread is:important` shows unread mail Gmail has marked as important. Google says it decides this from who you email, which emails you open and reply to, and similar signals.
+- `is:unread is:important` shows unread mail Gmail has marked as important. [Google says](https://support.google.com/mail/answer/186543) it decides this from who you email, which emails you open and reply to, and similar signals.
 - `is:unread category:primary` works if you use inbox categories.
 - `is:unread from:boss@example.com` for the one or two people you can't keep waiting.
 
@@ -91,6 +92,8 @@ Can you sign off the £2,400 print quote by Thursday? The printer holds the pric
 
 The first takes a minute to read and leaves you guessing. The second takes ten seconds and you know exactly what to do.
 
+If you use Slop Mop for Gmail or Outlook, this pass gets shorter. It reads what the sender wrote in each email, scores it on the same tells it uses on posts ([how it works](/how-it-works.html)), and marks or folds the padded ones, so you can see at a glance which messages to skim. Personal details are replaced with placeholders before an email is checked, attachments and quoted earlier messages are never sent, and spam, private, legal, health and transactional mail is never read unless you check a message by hand. It's part of Slop Mop XL (US$5.99 a month), and it never archives or deletes anything, so the decisions stay yours.
+
 ## Pass 4: stop the same pile coming back (2 minutes)
 
 Look at what you archived in pass 2 and pick the single biggest source. Then:
@@ -109,3 +112,5 @@ Security codes and sign-in alerts, bank and card messages, payroll, anything fro
 - **The inbox is too big for 15 minutes.** Do pass 2 with `older_than:1m` in Gmail, or select everything older than a month in Outlook and archive it. Then run the four passes on what's left. Nothing is lost; it's all searchable.
 - **Snooze isn't where this guide says.** Look under **More** in Gmail, or on the ribbon's **Tags** section in Outlook on the web. Your version may label it differently.
 - **You keep reading instead of sorting.** Work from the message list and decide from the sender and subject line. Open an email only if you can't decide without it.
+
+[Add Slop Mop for Gmail and Outlook](/) (part of Slop Mop XL) and it marks the padded emails before you start the timer.

@@ -5,6 +5,7 @@
   "description": "Rage bait is online content designed to make you angry so you engage with it. Where the term came from, and why Oxford chose it for 2025.",
   "summary": "Online content deliberately designed to make people angry so that they comment, share and keep it circulating.",
   "updated": "2026-10-18",
+  "keyword": "rage bait",
   "term": "Rage bait",
   "aliases": ["ragebait", "rage-baiting", "rage farming"],
   "punchline": "Anger, farmed for engagement.",
@@ -18,7 +19,7 @@
   ]
 }
 ---
-## What it means
+## What rage bait means
 
 Rage bait is content made to annoy, offend or outrage, because anger gets a response. An angry reader comments, quote-posts and shares to complain, and every one of those actions tells the platform the post is engaging. The poster collects the reach whether people agreed or not.
 
@@ -26,9 +27,9 @@ The bait can be an outrageous opinion, a deliberately wrong "fact", a staged vid
 
 Rage bait is related to [clickbait](/glossary/clickbait/), which trades on curiosity, and to the [hot take](/glossary/hot-take/), which is often provocative too, but a hot take can be sincere. Rage bait is built to provoke whether or not the writer believes it.
 
-## Where it came from
+## Where rage bait came from
 
-Oxford University Press traces the phrase to a 2002 Usenet post, where it described one driver's reaction to being passed by another. It later became internet slang for content that provokes anger to drive traffic or engagement.
+[Oxford University Press](https://corp.oup.com/news/the-oxford-word-of-the-year-2025-is-rage-bait/) traces the phrase to a 2002 Usenet post, where it described one driver's reaction to being passed by another. It later became internet slang for content that provokes anger to drive traffic or engagement.
 
 In December 2025 Oxford named rage bait its Word of the Year, after a public vote and a review of its language data, choosing it over "aura farming" and "biohack". It said usage of the term had tripled in the previous 12 months, and linked the choice to a year of debate about online anger, regulating online content and digital wellbeing.
 
@@ -51,4 +52,4 @@ The first post is designed to make most readers angry and to invite them to say 
 
 ## How Slop Mop sees it
 
-Rage bait usually carries [engagement bait](/patterns/engagement-bait/) ("tell me I'm wrong") and a [scroll-stopper](/patterns/scroll-stopper/) opening, and those are tells Slop Mop scores on LinkedIn. Reader response is counted from the numbers under a post, so an angry pile-on can earn some credit; the tells are what catch it, and you can always vote to overrule.
+Rage bait usually carries [engagement bait](/patterns/engagement-bait/) ("tell me I'm wrong") and a [scroll-stopper](/patterns/scroll-stopper/) opening, and those are tells Slop Mop scores in posts on X, Facebook, Reddit, LinkedIn, Substack Notes and the other feeds it reads. Reader response is counted from the numbers under a post, so an angry pile-on can earn some credit; the tells are what catch it, and you can always vote to overrule. [Add Slop Mop to your browser](/) and it folds posts like the first example for you.

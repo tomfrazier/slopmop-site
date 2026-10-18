@@ -5,6 +5,7 @@
   "description": "Mute words, mute or block accounts, and tune topics and content types in Substack's Content preferences. Steps for web and app, checked 18 October 2026.",
   "summary": "Use Substack's Content preferences to hide words, mute or block accounts, and set the topics and formats your Notes feed shows.",
   "updated": "2026-10-18",
+  "keyword": "clean up substack notes feed",
   "network": "substack",
   "publish_date": "2026-10-20",
   "verified": "2026-10-18",
@@ -22,9 +23,9 @@
 ---
 Most of the clean-up happens in one place: **Settings → Content preferences**. There you can hide Notes and posts containing up to 50 words or phrases, review who you've muted or blocked, pick topics you want more or less of, and turn down video, audio, chat and long posts. For individual accounts, use the three-dot menu on any note or profile and choose Mute or Block.
 
-You can't switch Notes off. Substack's help pages say Notes can't be disabled or removed from your account, so the job is to shape what reaches you.
+You can't switch Notes off. [Substack's help pages](https://support.substack.com/hc/en-us/articles/14743173826964-Can-I-disable-Substack-Notes) say Notes can't be disabled or removed from your account, so the job is to shape what reaches you.
 
-## Before you start
+## Before you clean up your Substack Notes feed
 
 - **Know where your Notes come from.** Your Home feed mixes notes from people you subscribe to or follow, notes from publications recommended by the Substacks you read, and restacks, replies and comments from people you follow. A noisy feed is often one or two prolific accounts, or a recommendation chain you never asked for.
 - **Following and For you.** Substack describes two Home views: a Following feed made of the people and publications you chose, and a For you feed where those get priority alongside suggestions. If For you is the problem, spending more time in Following may fix most of it before you touch a setting.
@@ -88,6 +89,12 @@ Content preferences also has an **AI Content** section. Under **100% AI-Generate
 
 Treat the badge as one clue. It says nothing about whether a note is useful, and plenty of tired Notes are typed by hand. [AI slop](/glossary/ai-slop/) is a judgement about the writing, and so is the rest of this page.
 
+## 7. Optional: fold low-value Notes with Slop Mop
+
+Everything above works on sources, words and topics. None of it looks at whether a particular note says anything. [Slop Mop](/how-it-works.html) is a browser extension that does that part on the desktop web: in Substack's web app it reads the Notes and posts in your feed and scores each one against nine tells of slop, such as hype words and engagement bait, with credit for posts that are useful or sound like a person. Hide mode folds likely slop into a one-line strip you can reopen; Highlight mode only marks it. It judges the writing, not whether AI wrote it, and it never mutes, blocks or reports anyone.
+
+The limits: it works in Chrome, Edge, Firefox, Safari and other Chromium browsers on a computer, not in the Substack phone app. The free plan covers one feed you pick, with 250 checks a day; Slop Mop XL adds the rest. If it folds a note you wanted, vote on it and your vote wins in your feed.
+
 ## What to look for once it's tidy
 
 A cleaner feed still needs a reader's eye. The Notes that waste the most time tend to share a few habits:
@@ -110,6 +117,6 @@ The first is a [scroll-stopper](/patterns/scroll-stopper/) with [engagement bait
 - **The same people keep appearing through restacks.** Mute the person doing the restacking, not only the original author. Substack's help pages don't describe a setting that hides restacks as a category.
 - **A muted word still gets through.** Check spelling and try the phrase as it's actually written in the posts. Hashtag-style or punctuated variants may need their own entries.
 - **The app doesn't match the web.** Make the change on substack.com/settings; it applies to your account everywhere.
-- **You've hit the 50-word limit.** Prune the entries that no longer catch anything and mute the accounts behind the rest.
+- **You've hit the 50-word limit.** Prune the entries that no longer catch anything and mute the accounts behind the rest, or let a filter that reads the writing take over some of that work.
 
-Slop Mop, a browser extension that folds away low-value posts, is coming soon to Substack; today it works on LinkedIn only.
+The same clean-up habits apply on [LinkedIn](/guides/linkedin/linkedin-clean-up-feed/) and [Reddit](/guides/reddit/reddit-clean-up-home-feed/), where Slop Mop also works. [Add Slop Mop to your browser](/) and it folds Notes like the first example for you.

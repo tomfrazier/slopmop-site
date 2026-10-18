@@ -4,6 +4,7 @@
   "seo_title": "Reader mode in Chrome and Safari: strip a page to text",
   "description": "Turn on reading mode in Chrome (desktop and Android) and Reader in Safari (Mac and iPhone) to hide ads, pop-ups and clutter. Steps checked 18 October 2026.",
   "summary": "Chrome's reading mode and Safari's Reader, step by step on desktop and mobile, plus how to use the plain view to judge a page faster.",
+  "keyword": "reader mode",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-11-17",
@@ -84,7 +85,7 @@ The automatic setting is handy for sites you read often and trust, and for recip
 
 Firefox has its own Reader View. Mozilla's support page for it wouldn't load for us when we checked, so we haven't listed the steps here; see [Mozilla's help article](https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages) for the current instructions.
 
-## Use the plain view to judge the page
+## Use reader mode to judge the page
 
 Reader mode is useful for more than comfort. With the ads and boxes gone, the writing has nowhere to hide, and the checks from [How to spot an AI slop article](/guides/websites/web-spot-ai-slop-articles/) go faster.
 
@@ -109,4 +110,6 @@ The first is three sentences of [stiff phrasing](/patterns/stiff-phrasing/) befo
 - **The page loads, then a paywall or pop-up covers it.** Reader mode may show the text that loaded, but don't count on it, and respect the site's terms.
 - **The keyboard shortcut does nothing, or opens something else.** Google notes that other apps, such as voice control, can claim the same shortcut. Change the shortcut in the other app.
 
-Slop Mop is coming soon to websites. Reader mode is free, built into the browser and works on any article today.
+Reader mode is free, built into the browser and works on any article. It hides the clutter; deciding whether the text is worth reading is still your job. Slop Mop does that part on the articles you open: it scores the article text with the same twelve questions it uses on social posts ([how it works](/how-it-works.html)) and marks or folds a low-value page. It runs in Chrome, Edge, Firefox, Safari and other Chromium browsers on desktop, and websites are part of Slop Mop XL (US$5.99 a month).
+
+[Add Slop Mop to your browser](/) and it marks padded articles like these before you open reader mode.

@@ -5,6 +5,7 @@
   "description": "Turn off recommended posts, train the Best sort with Show fewer, switch to Latest, stop trending alerts and hide ads, with steps for web and app.",
   "summary": "Six Reddit settings that cut recommended posts, trending alerts and repeat ads out of your Home feed, on the website and the apps.",
   "updated": "2026-10-18",
+  "keyword": "clean up reddit home feed",
   "network": "reddit",
   "publish_date": "2026-10-20",
   "verified": "2026-10-18",
@@ -22,7 +23,7 @@
 ---
 Most of the clutter in a Reddit Home feed comes from recommended posts: posts from communities you never joined, which Reddit adds when you sort by Best. Turn off "Show recommendations in home feed" in your settings, use "Show fewer posts like this" on the recommendations you do see, and switch to the Latest feed on the app when you only want your own communities. The steps below take about ten minutes and work on the website and the iOS and Android apps.
 
-## Before you start
+## Before you clean up your Reddit home feed
 
 You need to be logged in. Logged-out visitors get the Popular feed, which none of these settings change ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/23511859482388-Reddit-s-Approach-to-Content-Recommendations)).
 
@@ -72,11 +73,15 @@ Ads aren't covered by blocking or muting. You can hide one from its overflow men
 
 Recommendations are the noisy part, but your own subscriptions add up too. Go through the communities you've joined and leave the ones you scroll past every time. A big general community you joined years ago can fill your feed with reposts and quick-hit memes, while a smaller one about the thing you actually do tends to have more answers and fewer reposts. You leave from the community's own page, and you can rejoin whenever you like.
 
-## What these controls don't do
+## What Reddit's home feed controls don't do
 
-Every control above works on whole communities, advertisers or feeds. None of them looks at an individual post and asks whether it's any good. A community you love can still serve up a karma-farmed repost or a thread of "this!" replies, and muting it would throw out the good posts with the bad.
+Every control above works on whole communities, advertisers or feeds. None of them looks at an individual post and asks whether it's any good. A community you love can still serve up a karma-farmed repost, a title built on [engagement bait](/patterns/engagement-bait/) or a thread of "this!" replies, and muting it would throw out the good posts with the bad.
 
-Reddit says it already filters some spam and content you've blocked before ranking your feed ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/23511859482388-Reddit-s-Approach-to-Content-Recommendations)), but low-effort posts that break no rules get through. For those, the useful skill is recognising them quickly, which later guides in this series cover. Slop Mop, which judges individual posts on LinkedIn today, is coming soon to Reddit.
+Reddit says it already filters some spam and content you've blocked before ranking your feed ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/23511859482388-Reddit-s-Approach-to-Content-Recommendations)), but low-effort posts that break no rules get through. For those, the useful skill is recognising them quickly, which later guides in this series cover.
+
+## A post-by-post filter for your Reddit feed
+
+If you'd like a post-by-post filter on top of the settings above, Slop Mop reads the posts and comments in your Reddit feed on desktop and scores each one against nine tells of slop, such as vote-begging titles and filler replies. In Hide mode a likely-slop post folds into a one-line strip you can reopen; Highlight mode only marks it. It judges the writing rather than guessing who wrote it, and it never hides, mutes or blocks a community for you. [How it works](/how-it-works.html) explains the score, and the [Slop Mop for Reddit page](/for/reddit/) covers what it does there. The free plan covers one feed, such as Reddit, with 250 checks a day.
 
 ## If that doesn't work
 
@@ -84,3 +89,5 @@ Reddit says it already filters some spam and content you've blocked before ranki
 - **Home feels empty after switching recommendations off.** That's the toggle working. Join communities instead of turning it back on.
 - **A muted community keeps coming back.** Changing its notification settings to opt in removes it from your muted list ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/9810475384084-What-is-community-muting)). Check that you haven't done that by accident.
 - **You keep seeing the same post.** That's usually a repost in a different community, not a setting. Downvote it and move on.
+
+[Add Slop Mop to your browser](/) and it folds the low-effort posts these settings let through.

@@ -5,6 +5,7 @@
   "description": "AI shaming means criticising or mocking someone for suspected or admitted AI use. Where the term comes from, what research says, and why it misfires.",
   "summary": "Criticising or mocking someone for suspected or admitted use of AI. Accusations are often wrong and can stick.",
   "updated": "2026-10-18",
+  "keyword": "ai shaming",
   "term": "AI shaming",
   "aliases": [],
   "punchline": "Accusing someone of using AI.",
@@ -14,13 +15,15 @@
   "sensitivity": "",
   "related": ["/glossary/ai-suspicion/", "/glossary/ai-slop/", "/glossary/ai-cream/", "/glossary/counterfeit-people/"],
   "sources": [
+    {"title": "Etzioni on AI: The colorful and cranky language of the AI era, from slop to slap", "publisher": "GeekWire", "url": "https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/", "date": "2026-10-16"},
+    {"title": "AI Could Have Written This: Birth of a Classist Slur in Knowledge Work (PDF)", "publisher": "Advait Sarkar, CHI 2025 (ACM)", "url": "https://advait.org/files/sarkar_2025_ai_shaming.pdf", "date": "2025-04-26"},
     {"title": "AI Could Have Written This: Birth of a Classist Slur in Knowledge Work", "publisher": "Advait Sarkar, CHI 2025 (ACM)", "url": "https://advait.org/publications-web/sarkar-2025-ai-shaming", "date": "2025-04-26"},
     {"title": "Generative AI and Perceptual Harms: Who's Suspected of using LLMs?", "publisher": "Proceedings of CHI '25 (ACM)", "url": "https://arxiv.org/abs/2410.00906", "date": "2025-04-26"},
     {"title": "GPT detectors are biased against non-native English writers", "publisher": "arXiv (later Patterns, Cell Press)", "url": "https://arxiv.org/abs/2304.02819", "date": "2023-04-06"}
   ]
 }
 ---
-## What it means
+## What AI shaming means
 
 AI shaming is criticism or social pressure aimed at someone because they used AI, or because someone thinks they did. It ranges from a jokey "did ChatGPT write this?" in a comment thread to a student hauled before a misconduct panel, or a colleague whose work is quietly marked down.
 
@@ -33,7 +36,9 @@ It comes in a few forms:
 
 ## Where it came from
 
-The term is newer and less settled than most in this glossary. Microsoft researcher Advait Sarkar gave it an academic footing in a paper presented at the ACM CHI conference in 2025, "AI Could Have Written This: Birth of a Classist Slur in Knowledge Work". It describes AI shaming as negative judgement attached to the use of AI, and argues it works as a way of policing who counts as a proper knowledge worker.
+The term is newer and less settled than most in this glossary. Microsoft researcher Advait Sarkar gave it an academic footing in [a paper presented at the ACM CHI conference in 2025](https://advait.org/files/sarkar_2025_ai_shaming.pdf), "AI Could Have Written This: Birth of a Classist Slur in Knowledge Work". It describes AI shaming as negative judgement attached to the use of AI, and argues it works as a way of policing who counts as a proper knowledge worker.
+
+Oren Etzioni and Daniel S. Weld included it in their [October 2026 GeekWire glossary of AI-era language](https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/), as the accusation that follows [AI suspicion](/glossary/ai-suspicion/). Summarising Sarkar's paper, they note its argument that the accusations fall hardest on racial minorities and on writers whose first language isn't English.
 
 Other research shows why it matters. In experiments published at CHI 2025, Kowe Kadoma, Danaë Metaxa and Mor Naaman found that suspecting a freelance writer of AI use lowered how readers rated both the work and the writer. A 2023 Stanford study found that AI-text detectors wrongly flagged many essays by non-native English writers as machine-made.
 
@@ -55,6 +60,6 @@ A useful comparison: "This post doesn't say what the tool costs or who it's for"
 
 Some people defend the instinct behind it. They see calling out AI use as a fair response to [AI slop](/glossary/ai-slop/), deception or work passed off as personal effort, and argue that "AI shaming" can be used to wave away legitimate complaints. The disagreement is mostly about the target: criticising a piece of empty writing is one thing; accusing a person of how they made it, without evidence, is another.
 
-## How Slop Mop sees it
+## How Slop Mop avoids AI shaming
 
-Slop Mop judges content, never people, and it doesn't flag a post for suspected AI use. A useful AI-assisted post stays in your feed and an empty human-written one can be folded away, so its verdicts describe what the post gives the reader.
+Slop Mop judges content, never people, and it doesn't flag a post for suspected AI use. It is not an AI detector ([how it compares with one](/compare/slop-mop-vs-ai-detectors/)). A useful AI-assisted post stays in your feed and an empty human-written one can be folded away, so its verdicts describe what the post gives the reader, whether that post is on LinkedIn, X, Reddit, Facebook, Substack or Medium. [Add Slop Mop to your browser](/) and it folds empty posts without accusing anyone of anything.

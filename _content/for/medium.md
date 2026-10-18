@@ -1,13 +1,14 @@
 ---
 {
-  "title": "Slop Mop for Medium",
-  "seo_title": "Slop Mop for Medium: SEO-padded listicles · Slop Mop",
-  "description": "SEO-padded listicles and clap-bait endings: what slop looks like on Medium, what Slop Mop plans to do there, and Medium's own Show less and mute tools.",
-  "summary": "Coming soon to Medium. Until then: how padded listicles work, Medium's AI policy, and how to use Show less like this and mute.",
+  "title": "Slop Mop for Medium: an article filter for SEO-padded listicles",
+  "seo_title": "Medium article filter for padded listicles · Slop Mop",
+  "description": "A Medium article filter for padded listicles and clap-bait: what Medium slop looks like, what Slop Mop does to stories, and Show less like this and mute.",
+  "summary": "Slop Mop reads Medium stories and responses and folds or marks the SEO intros, repeated list items and clap-bait endings.",
+  "keyword": "medium article filter",
   "updated": "2026-10-18",
   "kind": "network",
   "audience": "Medium readers",
-  "network_status": "soon",
+  "network_status": "live",
   "related": ["/patterns/stiff-phrasing/", "/patterns/hype-words/", "/patterns/no-catch-promises/", "/glossary/ai-slop/", "/for/developers/", "/for/product-managers/"],
   "sources": [
     {"title": "Artificial Intelligence (AI) content policy", "publisher": "Medium Help Center", "url": "https://help.medium.com/hc/en-us/articles/22576852947223", "date": ""},
@@ -56,15 +57,25 @@ The full config is in the repo linked above. On Windows, the path in step 3 need
 
 The first is [stiff phrasing](/patterns/stiff-phrasing/) with [hype words](/patterns/hype-words/) on top. The second is filler. The third is [engagement bait](/patterns/engagement-bait/) in Medium's local dialect. The fine versions are shorter and carry more, which is usually how you can tell.
 
-## What Slop Mop does here
+## How Slop Mop filters Medium articles
 
-Slop Mop for Medium is coming soon. It doesn't work on Medium yet.
+On Medium, Slop Mop reads the stories you open and the responses under them. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet. It sends the text and its public engagement counts to its scoring service, and never your name or the writer's.
 
-The plan is for it to do the same job it does on LinkedIn today. It will read stories and posts ahead of you, ask twelve questions about the writing (nine tells of slop and three counter-signals, including whether it's useful to readers), and either fold likely slop into a one-line strip you can reopen or leave it visible and mark it. You'll see why each call was made, and your vote overrides the model.
+An AI model designed for calibrated decisions answers twelve questions about the writing: nine tells of slop and three counter-signals (sounds like a person, useful to readers, and reader response). Each story or response gets a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure. Not sure means it's left alone.
 
-It judges the writing, and it isn't an AI detector, which makes it a different tool from Medium's policy. A well-edited article that used AI along the way can pass; a hand-typed listicle full of filler may not. It won't delete, report, mute or block anything.
+- **Hide mode** folds a response past your threshold into a one-line strip where it was, so "Great article, thanks for sharing!" stops pushing down the reply that corrects step 3. Click Show post to open it in place.
+- **Highlight mode** hides nothing. The mop turns yellow for Possibly slop and red for Likely slop.
+- **Sensitivity** is Mild, Moderate or Aggressive.
 
-## What you can do today
+On a full article the details panel is the part to use. Click the mop and you get the score, the strongest signs and the Slopprint, a nine-spoke chart with one spoke per tell. The SEO listicle has a recognisable shape: stiff phrasing and hype words high, with "useful to readers" low because each point restates its heading. A dense tutorial with a dull opening scores well on usefulness, and that bar can take a large share off its score. Clap counts feed the reader response bar, but a story with a big clap count and few responses gets less credit than one people argued about.
+
+You can vote Not sure, No, Maybe or Probably, and your vote overrides the model for you. Medium never sees it.
+
+It judges the writing, and it isn't an AI detector, which makes it a different tool from Medium's policy. A well-edited article that used AI along the way can pass; a hand-typed listicle full of filler may not. It never deletes, reports, mutes or blocks anything.
+
+The free plan covers the one feed you pick, with 250 checks a day; Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every feed, the sites you read, Gmail and Outlook, and a higher daily limit. The scoring is explained on [how it works](/how-it-works.html).
+
+## Medium's own controls, and how they fit with Slop Mop
 
 Medium has more feed controls than most readers use ([Medium Help Center](https://help.medium.com/hc/en-us/articles/224488047)).
 
@@ -72,7 +83,7 @@ Medium has more feed controls than most readers use ([Medium Help Center](https:
 2. **Mute an author or publication.** Their stories stop appearing in your feed. It's the right tool for a publication that runs the same listicle every week.
 3. **Refine recommendations.** From your profile picture, go to Settings and find the Refine recommendations page. It has tabs for Following, Reading history and Muted. Removing a few clicked-by-mistake stories from your reading history changes what you're shown next.
 
-Show less like this is a nudge, and muting removes a writer completely. Neither tells you why a story felt thin, which is the part a breakdown of tells adds.
+Show less like this is a nudge, and muting removes a writer completely. Neither tells you why a story felt thin, which is the part a breakdown of tells adds. A good routine: when Slop Mop flags a story and the panel agrees with your own read, press Show less like this on the next one from that publication, and mute it if the pattern holds. For the reading-mode and summariser alternatives, see [Slop Mop vs reading modes and summarisers](/compare/slop-mop-vs-reading-modes-and-summarisers/).
 
 ## Who it's for
 
@@ -82,3 +93,5 @@ People who use Medium as a reference shelf and want the useful articles to come 
 - [Product managers](/for/product-managers/) and [marketers](/for/marketers/) reading industry writing, a lot of which is padded to rank.
 - [Educators](/for/educators/) and [researchers](/for/researchers/) pointing others to explanations they can trust.
 - Writers on Medium who want a second opinion before publishing. The [no-catch promises](/patterns/no-catch-promises/) tell is a common one in headlines.
+
+[Add Slop Mop to your browser](/) and it flags Medium articles like these before you've read the intro.

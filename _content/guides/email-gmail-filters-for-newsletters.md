@@ -4,6 +4,7 @@
   "seo_title": "Gmail filters for newsletters: a reading folder · Slop Mop",
   "description": "Set up Gmail filters and a label so newsletters you want to keep skip the inbox and wait in one place. Search operators, steps and a weekly routine.",
   "summary": "For newsletters you want but not in your inbox: a Gmail label, a filter that sends them there, and the search operators that make it work.",
+  "keyword": "gmail filters for newsletters",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-10",
@@ -24,7 +25,7 @@ This guide is for the newsletters you want to keep. If you'd rather stop them ar
 
 ## Before you start
 
-- **Use a computer.** Google's filter instructions are for Gmail in a browser.
+- **Use a computer.** [Google's filter instructions](https://support.google.com/mail/answer/6579) are for Gmail in a browser.
 - **Plan for the backlog.** Google's help page says a forwarding filter only affects new messages, and doesn't promise any filter will re-sort what you already have. Step 3 covers labelling the old issues by hand.
 - **Don't catch the wrong mail.** A filter on a broad word like "update" will scoop up your bank's security updates. Test every search before you turn it into a filter (step 2 below).
 
@@ -39,7 +40,7 @@ Google points out that labels are different from folders: one email can carry se
 
 ## 2. Write a search that finds your newsletters
 
-This is the part that decides whether the filter works. Gmail's search operators let you be precise:
+This is the part that decides whether the filter works. [Gmail's search operators](https://support.google.com/mail/answer/7190) let you be precise:
 
 | You want | Type this in the search box |
 |---|---|
@@ -83,7 +84,7 @@ If you don't want to build filters, Gmail can do some of the sorting for you. Wi
 
 If a newsletter lands in the wrong tab, drag it to the right one; Google says this helps Gmail learn. You can't create your own categories, which is why a label and a filter give you more control. You can search a category with `category:promotions` or `category:forums`, and a filter can send a sender's mail to a specific category.
 
-## What the filter can't do
+## What Gmail filters can't do for newsletters
 
 A filter sorts by who sent the email and which words appear in it. It has no idea whether this week's issue is any good. A newsletter you love can send a padded issue built around a [scroll-stopper](/patterns/scroll-stopper/) subject line, and the filter will file it next to the good ones.
 
@@ -97,6 +98,8 @@ Three dates for your calendar, and why we stopped recommending two note-taking a
 :::
 
 Both would land in your Reading label. Only one is worth opening first. Skimming subject lines in the label, rather than opening issues in order, is the quickest way to tell them apart.
+
+If you'd rather not judge every issue yourself, Slop Mop for Gmail reads what the sender wrote in each newsletter and marks or folds the padded ones, using the same tells it checks on posts ([how it works](/how-it-works.html)). Personal details are replaced with placeholders before an email is checked, attachments and quoted earlier messages are never sent, and spam, private, legal, health and transactional mail is left alone unless you check a message by hand. It's part of Slop Mop XL, which costs US$5.99 a month, and it works alongside your filters rather than replacing them.
 
 ## Managing your filters later
 
@@ -112,3 +115,5 @@ From the same page you can export your filters as an .xml file, which is worth d
 - **The filter missed an issue.** The sender may have changed address. Search for the issue, check the sender, and add it to your filter with `OR`.
 - **Important email went to the label.** Your search was too broad. Edit the filter and add `-word` exclusions, or switch from a word match to `from:` or `list:`.
 - **Replies in a thread got filtered.** Google notes that a reply is only filtered if it matches the same criteria, so threads can behave unexpectedly. Filters on `from:` are the most predictable.
+
+[Add Slop Mop for Gmail](/) (part of Slop Mop XL) and it marks the weak issues in your Reading label for you.

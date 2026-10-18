@@ -5,23 +5,26 @@
   "description": "Formula threads on X promise a lot in post one and deliver a list. A two-minute check for spotting a hollow thread, with examples of both kinds.",
   "summary": "A two-minute check for X threads: read the opener for a claim, the middle for evidence and the end for an ask, then decide.",
   "updated": "2026-10-18",
+  "keyword": "x thread",
   "network": "x",
   "publish_date": "2026-11-10",
   "verified": "2026-10-18",
   "minutes": 6,
   "related": ["/patterns/scroll-stopper/", "/patterns/too-tidy-story/", "/patterns/hype-words/", "/glossary/ai-slop/", "/for/x/", "/for/researchers/"],
-  "sources": []
+  "sources": [
+    {"title": "About your For you timeline on X", "publisher": "X Help Center", "url": "https://help.x.com/en/using-x/x-timeline", "date": ""}
+  ]
 }
 ---
 Most hollow X threads follow the same formula: a huge promise in the first post, a "🧵" or "a thread", ten or so one-sentence posts that each name something without explaining it, and a final post asking you to follow and repost. To judge one quickly, read the first post for a specific claim, skim two posts from the middle for evidence, then read the last post. If the opener is vague, the middle has no numbers or sources and the ending is an ask, skip it.
 
-## Why the formula exists
+## Why the X thread formula exists
 
 A thread gives a writer several posts' worth of space and several chances to be shared. That's useful when there's a lot to say. It also makes a thread an easy container for very little: each post can be one sentence long, and the length itself suggests effort. The 🧵 emoji became shorthand for "there's more below", which is why it appears on threads with nothing much below.
 
 None of this means long threads are bad. Some of the most useful things on X are threads: live reporting from an event, a step-by-step fix for a software problem, a researcher walking through a new paper figure by figure. The formula is the problem, and it's recognisable.
 
-## The two-minute check
+## The two-minute check for an X thread
 
 ### 1. Read the opener for a claim
 
@@ -104,4 +107,8 @@ Whichever way you decide, the check costs about two minutes. A formula thread of
 
 ## If you want to keep the good thread-writers
 
-When you find someone whose threads pass this check, keep them where For You can't bury them. The Following tab shows only accounts you follow, and the tips in [how to clean up your For You timeline](/guides/x/x-clean-up-for-you-timeline/) help with the rest. For the shorter cousins of the formula thread, see [engagement farming on X](/guides/x/x-engagement-farming/).
+When you find someone whose threads pass this check, keep them where For You can't bury them. The Following tab shows only accounts you follow ([X Help Center](https://help.x.com/en/using-x/x-timeline)), and the tips in [how to clean up your For You timeline](/guides/x/x-clean-up-for-you-timeline/) help with the rest. For the shorter cousins of the formula thread, see [engagement farming on X](/guides/x/x-engagement-farming/).
+
+If you'd like the first check done for you, [Slop Mop](/) reads the posts and replies in your X timeline as you scroll, in Chrome, Edge, Firefox, Safari and Chromium browsers. A thread opener built on a dramatic hook, hype words and a follow-and-repost ask scores on several of the nine tells at once, so Hide mode folds it into a one-line strip you can reopen, and Highlight mode marks it. A plain, specific opener like the S3 one above stays visible. [How it works](/how-it-works.html) explains the scoring. It runs on x.com in your desktop browser, not in the X app, and the free plan covers one feed with 250 checks a day. The same formula fills LinkedIn carousels and Medium listicles, and Slop Mop reads those too.
+
+[Add Slop Mop to your browser](/) and it folds formula threads before you open them.

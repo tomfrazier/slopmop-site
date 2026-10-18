@@ -5,6 +5,7 @@
   "description": "Clickbait is a headline, thumbnail or post opener built to get the click while holding back what you'll find. Where the word came from, and how to spot it.",
   "summary": "A headline, thumbnail or opening line built to get the click, usually by promising more than the content behind it delivers.",
   "updated": "2026-10-18",
+  "keyword": "clickbait",
   "term": "Clickbait",
   "aliases": ["click-bait", "link bait", "linkbait"],
   "punchline": "A headline that writes cheques the article can't cash.",
@@ -27,9 +28,9 @@
   ]
 }
 ---
-## What it means
+## What clickbait means
 
-Clickbait is a headline, thumbnail or link text designed to make you click, usually by withholding the one piece of information that would let you decide whether the click is worth it. Merriam-Webster defines it as "something designed to make readers want to click on a hyperlink especially when the link leads to content of dubious value or interest."
+Clickbait is a headline, thumbnail or link text designed to make you click, usually by withholding the one piece of information that would let you decide whether the click is worth it. [Merriam-Webster](https://www.merriam-webster.com/dictionary/clickbait) defines it as "something designed to make readers want to click on a hyperlink especially when the link leads to content of dubious value or interest."
 
 The usual mechanism is the curiosity gap: tell readers just enough to make them curious and not enough to satisfy them. "You won't believe what this landlord found in the loft" works because it names a surprise and hides it. The page behind it is often thinner than the headline suggested, which is why the most common working definition is a headline that overpromises and underdelivers.
 
@@ -41,13 +42,13 @@ People draw the line in different places:
 
 The word now covers more than headlines. A video thumbnail with a shocked face and a red arrow is clickbait. So is a social post whose first two lines exist only to make you press "see more".
 
-## Where it came from
+## Where the word clickbait came from
 
 Merriam-Webster dates the first known use of "clickbait" to 1999. The "-bait" half is a fishing image: a hook disguised as something worth swallowing. The technique is much older than the word. Sensational, exaggerated front pages were the stock in trade of yellow journalism in the 1890s, and bait-and-switch was a sales trick long before the web.
 
 What changed was the money. Ad-funded sites earned more with every page view, and social networks showed posts that got clicks to more people. Through the early 2010s the curiosity-gap headline ("This is what happens when…", "Number 7 will shock you") became the defining complaint about online publishing.
 
-The backlash arrived in 2014. The Onion launched ClickHole, a site parodying viral publishers. On 25 August 2014 Facebook announced it would show fewer "click-baiting" headlines in News Feed. One signal it named was time spent: if people clicked a link and came straight back, the story probably hadn't delivered. It said that in an initial survey, people preferred headlines that helped them decide whether to read the full article 80% of the time.
+The backlash arrived in 2014. The Onion launched ClickHole, a site parodying viral publishers. On 25 August 2014 Facebook [announced](https://about.fb.com/news/2014/08/news-feed-fyi-click-baiting/) it would show fewer "click-baiting" headlines in News Feed. One signal it named was time spent: if people clicked a link and came straight back, the story probably hadn't delivered. It said that in an initial survey, people preferred headlines that helped them decide whether to read the full article 80% of the time.
 
 ## Examples
 
@@ -88,4 +89,6 @@ Our board approved a four-day week trial for the support team, starting in Janua
 
 ## How Slop Mop sees it
 
-The feed version of clickbait is what Slop Mop calls a [scroll-stopper](/patterns/scroll-stopper/): a dramatic hook, one-line drumroll paragraphs and a promise that the good part is below the fold. Slop Mop scores the text of each LinkedIn post for that and for [engagement bait](/patterns/engagement-bait/), and a post that pairs a hook with nothing useful underneath is likely to be folded away; one that hooks and then delivers usually survives. It scores the post itself; articles and websites are coming soon.
+The feed version of clickbait is what Slop Mop calls a [scroll-stopper](/patterns/scroll-stopper/): a dramatic hook, one-line drumroll paragraphs and a promise that the good part is below the fold. Slop Mop scores the text of each post on LinkedIn, X, Reddit, Facebook, Substack and Medium for that and for [engagement bait](/patterns/engagement-bait/), and a post that pairs a hook with nothing useful underneath is likely to be folded away; one that hooks and then delivers usually survives. It also reads the articles and websites you open, so a page behind a clickbait headline is judged on its own writing.
+
+[Add Slop Mop to your browser](/) and it folds posts like these for you.

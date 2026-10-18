@@ -5,6 +5,7 @@
   "description": "The signs of a padded or AI-written newsletter, how Substack's Scan for AI text works and where it stops, and a two-minute test for any issue.",
   "summary": "Signs that a Substack post is padding, how Substack's own AI scan works, and why the writing matters more than who typed it.",
   "updated": "2026-10-18",
+  "keyword": "spot padded ai substack post",
   "network": "substack",
   "publish_date": "2026-11-03",
   "verified": "2026-10-18",
@@ -44,7 +45,7 @@ The first has [stiff phrasing](/patterns/stiff-phrasing/) ("Furthermore", "as we
 People padded newsletters long before chatbots. What AI tools changed is the cost: a writer can now produce 2,000 smooth words from a one-line idea. Text produced that way tends to carry a recognisable set of habits, and our [patterns](/patterns/) pages cover each one in detail:
 
 - **[Flowery prose](/patterns/flowery-prose/):** tapestries, symphonies, "a delicate dance between".
-- **[Hype words](/patterns/hype-words/):** game-changing, seamless, unlock, elevate.
+- **[Hype words](/patterns/hype-words/):** "game-changing", "seamless", "unlock", "elevate".
 - **[Empty praise](/patterns/empty-praise/):** "a truly transformative read" with nothing about what it transformed.
 - **[Too-tidy stories](/patterns/too-tidy-story/):** an anecdote with no names, dates or places that exists only to deliver the moral.
 - **Even rhythm.** Paragraphs of the same length, each ending in a neat summary sentence, with no asides, jokes or second thoughts.
@@ -64,11 +65,11 @@ Substack added an AI transparency tool that uses a detection service called Pang
 
 **To scan a note:** click the three dots on the note and select **Scan for AI text**. Short notes show a "not enough text" message instead.
 
-**In the app:** tap a post or note, tap the three dots in the upper right, then **Scan for AI text**. Substack lists this for the iOS app, with Android marked as coming soon.
+**In the app:** tap a post or note, tap the three dots in the upper right, then **Scan for AI text**. Substack lists this for the iOS app, with Android listed as on the way.
 
 **To label your whole feed:** in Settings, under **Content preferences → AI Content**, turn on **Label content**. Posts and notes from other people get a badge when Pangram judges them to be 100% AI-generated, or when the author has switched detection off. It's off by default and only affects your view.
 
-**Where it doesn't work.** Substack says the scan covers only posts and notes published on or after 21 July 2026. It isn't available for video or audio posts, for posts read on a publication's own site or custom domain, or in emails. Writers can also disable detection on any post or note, in which case you'll see "AI detection unavailable". That isn't proof of anything; some writers simply opt out.
+**Where it doesn't work.** [Substack says](https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack) the scan covers only posts and notes published on or after 21 July 2026. It isn't available for video or audio posts, for posts read on a publication's own site or custom domain, or in emails. Writers can also disable detection on any post or note, in which case you'll see "AI detection unavailable". That isn't proof of anything; some writers simply opt out.
 
 ## Why the scan isn't the whole answer
 
@@ -79,7 +80,9 @@ The scan estimates *who or what produced the text*. Your question as a reader is
 
 Detection tools also make mistakes, which is why Substack gives writers a **Report detection error** button. Use the percentage to decide where to look harder, then judge the writing.
 
-## A two-minute test for any issue
+That's the question [Slop Mop](/how-it-works.html) is built around. It's a browser extension that reads Notes and posts in Substack's web app and scores the writing against nine tells, the ones listed above among them, with credit for posts that are useful or sound like a person. It isn't an AI detector, so a useful AI-assisted post can pass and a padded hand-typed one can be folded. It works on a computer in Chrome, Edge, Firefox, Safari and other Chromium browsers, not in the Substack app.
+
+## Spot a padded or AI-written Substack post in two minutes
 
 1. **Read the first paragraph.** Does it make a claim, or announce that a claim is coming?
 2. **Skip to the middle.** Pick any paragraph. Does it contain a name, number, date, example or source?
@@ -94,4 +97,4 @@ Two or more "no" answers is a good reason to stop reading. If it's the third iss
 - **Check the writer's older posts.** A good writer can have a lazy week. A run of identical-feeling issues is a pattern.
 - **Give it one specific test.** Pick the post's most important claim and ask what would have to be true for it to be wrong. If the post never says, it hasn't done the work.
 
-Slop Mop, which judges the writing rather than guessing who wrote it, is coming soon to Substack; today it works on LinkedIn only.
+The same padding shows up in [LinkedIn posts](/guides/linkedin/linkedin-clean-up-feed/) and on [web articles](/guides/websites/web-spot-ai-slop-articles/), and Slop Mop reads those too. [Add Slop Mop to your browser](/) and it folds padded posts like the first example for you.

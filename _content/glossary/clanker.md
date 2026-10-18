@@ -5,6 +5,7 @@
   "description": "Clanker is a derogatory slang term for robots and AI systems. Its Star Wars roots, why it spread in 2025, and the debate over whether it's a slur.",
   "summary": "A derogatory slang term for robots and AI systems, chatbots included, that spread widely online in 2025.",
   "updated": "2026-10-18",
+  "keyword": "clanker",
   "term": "Clanker",
   "aliases": [],
   "punchline": "A droid slur that found a second career.",
@@ -24,15 +25,15 @@
   ]
 }
 ---
-## What it means
+## What clanker means
 
 Clanker is an insult for machines: robots, delivery bots, customer-service agents and chatbots. People use it to mock the machine itself, and often to signal that they're tired of AI being put into everything.
 
 The word sits next to [AI slop](/glossary/ai-slop/) but aims at a different target. AI slop describes the low-quality output. Clanker belittles the system that produced it.
 
-## Where it came from
+## Where the word clanker came from
 
-Wikipedia traces it to science fiction. William Tenn used it in a 1958 article about film robots such as the one in *Metropolis*. The Star Wars franchise adopted it as a slur against droids in the 2005 video game *Star Wars: Republic Commando*, and it became common in the animated series *Star Wars: The Clone Wars*, where clone troopers use it for battle droids.
+[Wikipedia](https://en.wikipedia.org/wiki/Clanker) traces it to science fiction. William Tenn used it in a 1958 article about film robots such as the one in *Metropolis*. The Star Wars franchise adopted it as a slur against droids in the 2005 video game *Star Wars: Republic Commando*, and it became common in the animated series *Star Wars: The Clone Wars*, where clone troopers use it for battle droids.
 
 In the 2020s it moved into everyday use as people met more AI and robots in daily life. In June 2025 US Senator Ruben Gallego tweeted that his "new bill makes sure you don't have to talk to a clanker if you don't want to", referring to proposed rules requiring call centres to disclose automated agents and offer a human. Wikipedia links the word's popularity to wider unease about automation, job losses, energy use and AI trained on copyrighted work.
 
@@ -52,4 +53,6 @@ The main debate is about what kind of word it is. The linguist Adam Aleksic has 
 
 ## How Slop Mop sees it
 
-Clanker is about attitudes to machines, which is outside what Slop Mop judges. Slop Mop judges the writing, not who or what wrote it, so a useful AI-assisted post survives and an empty human one can be folded away.
+Clanker is about attitudes to machines, which is outside what Slop Mop judges. Slop Mop judges the writing, not who or what wrote it, so a useful AI-assisted post survives and an empty human one can be folded away. That's the main difference from an [AI detector](/compare/slop-mop-vs-ai-detectors/), and it's also why Slop Mop has no view on [AI shaming](/glossary/ai-shaming/).
+
+[Add Slop Mop to your browser](/) and it reads posts on LinkedIn, X, Reddit, Facebook, Substack and Medium that way.

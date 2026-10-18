@@ -1,10 +1,11 @@
 ---
 {
-  "title": "How to use Medium lists to keep the good stories and skip the rest",
+  "title": "How to use Medium lists and your Reading list to keep the good stories",
   "seo_title": "Use Medium lists and your Reading list well · Slop Mop",
   "description": "How to save Medium stories to your Reading list, create private and public lists, add notes, and use lists as a filter so the feed matters less.",
   "summary": "Save Medium stories to lists instead of reading on impulse: Reading list, private and public lists, notes, and saving other people's lists.",
   "updated": "2026-10-18",
+  "keyword": "medium reading list",
   "network": "medium",
   "publish_date": "2026-12-08",
   "verified": "2026-10-18",
@@ -19,7 +20,7 @@
 ---
 Press Save on a story to add it to your Reading list, and make a few named lists in your Library for the subjects you return to. Then read from your lists instead of the feed: the feed is where you find candidates, the list is where you decide what earns your time. You can also save other readers' public lists, which is often the quickest way to find good writers on a subject.
 
-## Why lists help with filler
+## Why Medium lists help with filler
 
 Most low-value reading happens on impulse. A headline grabs you, you open it, and ten minutes later you've finished something you'd never have chosen with a minute to think. Saving puts a gap between seeing and reading. Stories that looked irresistible in the feed often look thin a day later in a list, and you can delete them without opening them.
 
@@ -29,7 +30,7 @@ That's the habit this guide sets up: skim the feed, save the candidates, read fr
 
 You need to be signed in. Lists work on desktop and in the app, but some controls sit in different places; the steps say where they differ. Medium updates its interface now and then, so a button may be labelled or placed a little differently.
 
-## 1. Save a story to your Reading list
+## 1. Save a story to your Medium Reading list
 
 1. On a story preview in your feed, or on the story page, click the Save button (a bookmark icon in most versions).
 2. Medium's [help page on lists](https://help.medium.com/hc/en-us/articles/214993247-Create-and-manage-lists) says the story goes to your Reading list by default.
@@ -96,4 +97,6 @@ A list also gives you a second, calmer look at a story. When you sit down to rea
 
 If your Reading list grows faster than you read it, you're saving too freely. Set a cap, say 20 stories, and delete the oldest when you go over. If a saved story has disappeared, the writer may have deleted or unpublished it; lists can only hold stories that still exist.
 
-Slop Mop is coming soon to Medium. For now, a short list and a weekly clear-out filter more than any setting, and they cost nothing but a few minutes.
+A short list and a weekly clear-out filter more than any setting, and they cost nothing but a few minutes. If you want help at the saving stage, [Slop Mop](/how-it-works.html) reads the stories in your Medium feed and folds the likely filler, including [hype words](/patterns/hype-words/) and empty set-ups, before you're tempted to press Save. It runs in desktop browsers, not the Medium app, and a folded story is one click from being opened if you disagree.
+
+[Add Slop Mop to your browser](/) and fewer thin stories make it onto your Reading list.

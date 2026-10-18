@@ -5,6 +5,7 @@
   "description": "Switch off Substack email and push notifications for Notes, chat, direct messages, live video and new followers, on the web and in the app.",
   "summary": "Where each Substack notification lives, from Notes likes to chat and live video, and how to switch off the ones you don't need.",
   "updated": "2026-10-18",
+  "keyword": "substack notifications",
   "network": "substack",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
@@ -25,9 +26,9 @@
 ---
 Almost every Substack notification can be switched off from one page: **substack.com/settings**, where each section (Engagement, Messaging, Live, Connections, Notifications) lists features with separate **Email** and **Push** boxes. Untick the ones you don't want. For push notifications on your phone, the app has its own Notifications settings, and chat has a separate mute.
 
-The one thing you can't switch off is the bell. Substack says the Activity section can't be cleared and its notifications can't be disabled. Turning off the email and push versions below still keeps them off your phone and out of your inbox.
+The one thing you can't switch off is the bell. [Substack says](https://support.substack.com/hc/en-us/articles/4531662852628-What-is-the-bell-icon-on-Substack) the Activity section can't be cleared and its notifications can't be disabled. Turning off the email and push versions below still keeps them off your phone and out of your inbox.
 
-## Before you start
+## Before you turn off Substack notifications
 
 - **Email and push are separate.** Unticking Email stops the emails; you'll still get phone alerts unless you also untick Push, and the other way round.
 - **Do the big changes on the web.** The web Settings page has every section in one place. The app is better for push-only tweaks.
@@ -99,7 +100,7 @@ New-post alerts come from your **Newsletter delivery** choice. "Prefer push" or 
 
 **Android only:** the app's **Notifications** page has **Settings** next to **Push Notifications**, which opens your phone's settings for Substack. Under **Notification categories** you can turn individual types on or off, including Reactions, Comments, New posts and Reshare.
 
-## What to look for
+## What to look for after the notifications are off
 
 Notifications pull you back to the feed, and the feed is where the bait lives. If you've turned off likes and restacks but still feel the urge to check, compare what brought you back with what you found:
 
@@ -107,10 +108,12 @@ Notifications pull you back to the feed, and the feed is where the bait lives. I
 Opened the app for a reply notification. Read the reply (one line, useful). Then spent 12 minutes on Home. Of the notes seen, two were worth it.
 :::
 
-If that sounds familiar, the fix is upstream: fewer writers, a cleaner feed, and a closer eye on [bait Notes](/guides/substack/substack-notes-engagement-bait/) when they appear.
+If that sounds familiar, the fix is upstream: fewer writers, a cleaner feed, and a closer eye on [bait Notes](/guides/substack/substack-notes-engagement-bait/) when they appear. On a computer, [Slop Mop](/how-it-works.html) can take some of that on: it reads the Notes and posts in Substack's web app and folds the likely [engagement bait](/patterns/engagement-bait/) into a strip you can reopen. It doesn't change your notifications, and it doesn't run in the phone app.
 
 ## If that doesn't work
 
 - **Emails still arrive after unticking.** Check whether they're newsletter posts (controlled by subscriptions and delivery, not Engagement) or recommendation digests, which have their own unsubscribe link in the email.
 - **Push still arrives after unticking in Settings.** Check the app's own Notifications settings, and on Android the phone-level notification categories.
-- **You can't find a section.** Settings pages change, so the menu may be labelled differently. Search the page for the feature's name, or check Substack's help centre for the current wording.
+- **You can't find a section.** Settings pages change, so the menu may be labelled differently. Search the page for the feature's name, or check [Substack's help centre](https://support.substack.com/hc/en-us/articles/14740062438932-How-do-I-disable-Substack-Notes-notifications) for the current wording.
+
+[Add Slop Mop to your browser](/) and it folds the bait waiting on Home when a notification does bring you back.

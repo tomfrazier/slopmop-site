@@ -5,6 +5,7 @@
   "description": "How to recognise low-value replies on X, from human reply guys to automated praise bots, and how to read a reply section without wading through them.",
   "summary": "The signs of reply guys and reply bots on X, why replies are worth farming, and how to read a reply section without the filler.",
   "updated": "2026-10-18",
+  "keyword": "reply guys on x",
   "network": "x",
   "publish_date": "2026-11-24",
   "verified": "2026-10-18",
@@ -18,7 +19,7 @@
 ---
 A reply guy is an account, usually a person, that replies to large accounts constantly with comments that add nothing: agreement, a joke that repeats the post, or a correction nobody needed. A reply bot does the same job automatically, often with generic praise or a tidy restatement of the original post. You spot both the same way: the reply would fit under almost any post, and the account's replies tab is full of the same thing.
 
-## Why the replies are crowded
+## Why reply guys crowd the replies on X
 
 Replies under a big post get seen by that post's audience, which makes them free reach. On X there can be money in it as well: since October 2024, creator payouts have depended on engagement from Premium subscribers ([TechCrunch](https://techcrunch.com/2024/10/09/x-changes-creator-payouts-to-depend-on-engagement-not-ads/)), so an account that replies early and often under popular posts can draw attention back to its own. Not every reply guy is chasing money; some just like being in the conversation. The effect on readers is the same.
 
@@ -76,13 +77,16 @@ Be careful about calling people bots in public. Plenty of real people write stif
 
 5. **Sort by usefulness yourself.** If one reply answers the question you had, stop there. A reply section doesn't need reading to the end.
 
-## What to do about it
+## What to do about reply guys and bots on X
 
 - **Don't reply to the reply guy.** Arguing under a reply gives it the attention it was after.
 - **Mute or block the account** if it keeps showing up. X offers both from the account's profile and from the post menu; the wording varies between the app and the web.
 - **Mute the phrases bots overuse.** X's muted words can hide replies that contain a word or phrase ([X Help Center](https://help.x.com/en/using-x/advanced-x-mute-options)). "Thanks for sharing" and "valuable insight" are reasonable entries; [how to use muted words on X](/guides/x/x-muted-words/) has the steps.
+- **Fold the filler automatically.** [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads the posts and replies in your X timeline as you scroll. Replies built from empty praise and stiff phrasing score on two of its nine tells, so Hide mode folds them into a one-line strip you can reopen and Highlight mode marks them, while a reply with a date and a fix stays visible. It never mutes, blocks or reports the account. [How it works](/how-it-works.html) explains the scoring; it runs on x.com in your desktop browser, not in the X app, and the free plan covers one feed with 250 checks a day.
 - **Keep your own replies specific.** If you reply, add something the post didn't have.
 
 ## If that doesn't work
 
-On very large accounts the reply section may be a lost cause; read the post and close it. For the posts that attract this kind of reply in the first place, see [engagement farming on X](/guides/x/x-engagement-farming/).
+On very large accounts the reply section may be a lost cause; read the post and close it. For the posts that attract this kind of reply in the first place, see [engagement farming on X](/guides/x/x-engagement-farming/). The same "Great insights, thanks for sharing" comments fill LinkedIn and Reddit threads, and Slop Mop reads comments there too.
+
+[Add Slop Mop to your browser](/) and it folds empty replies like these for you.

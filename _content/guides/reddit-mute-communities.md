@@ -1,10 +1,11 @@
 ---
 {
-  "title": "How to mute a subreddit on Reddit",
-  "seo_title": "How to mute a subreddit on Reddit (web and app)",
+  "title": "How to mute Reddit communities (subreddits)",
+  "seo_title": "How to mute Reddit communities (subreddits) on web and app",
   "description": "Mute a Reddit community from a post, its page or your settings, on web and app. What muting hides, the 1,000 limit, and how it differs from leaving.",
   "summary": "Step-by-step community muting on reddit.com, iOS and Android, what it hides, how to undo it, and when leaving or Show fewer is the better tool.",
   "updated": "2026-10-18",
+  "keyword": "mute reddit communities",
   "network": "reddit",
   "publish_date": "2026-11-03",
   "verified": "2026-10-18",
@@ -26,7 +27,7 @@ To mute a subreddit, open the three-dot overflow menu on the community's page an
 - **There's a cap.** You can mute up to 1,000 communities, with no daily limit inside that ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/9810475384084-What-is-community-muting)).
 - **Decide whether you want to mute or leave.** If you've joined the community, leaving takes it out of your subscriptions. Muting is for communities you haven't joined but keep seeing, usually through recommendations or Popular. The table further down compares the options.
 
-## Mute on reddit.com
+## Mute Reddit communities on reddit.com
 
 These steps work in a desktop browser and in a mobile browser on reddit.com.
 
@@ -48,7 +49,7 @@ Reddit says that after this you won't get suggestions from that community again 
 1. Open Settings and go to **Preferences**.
 2. Scroll down to **Muted communities** and add or remove communities there.
 
-## Mute on iOS and Android
+## Mute Reddit communities on iOS and Android
 
 Reddit's help page uses a different overflow-menu icon for iOS and Android. On both, it's the three dots on the post or page.
 
@@ -106,7 +107,7 @@ It works badly when the community is mostly useful and only some of its posts ar
 
 ## What muting doesn't cover
 
-- **Individual posts and comments.** Muting has no effect on the quality of the communities you keep. A muted list of 50 communities won't stop a low-effort thread in one you love.
+- **Individual posts and comments.** Muting has no effect on the quality of the communities you keep. A muted list of 50 communities won't stop a low-effort thread in one you love. That's the gap Slop Mop fills on desktop: it reads the posts and comments in the communities you keep and folds the ones that score as slop, such as [scroll-stopper](/patterns/scroll-stopper/) titles and filler replies, while leaving the rest of the community in your feed ([how it scores a post](/how-it-works.html)).
 - **Every feed.** Reddit describes community muting as a focused launch and says future launches will remove muted communities from "other mixed feeds and recommendations" ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/9810475384084-What-is-community-muting)). Today it covers Home, Popular and notifications.
 - **Rule-breaking content.** Reddit asks you to report content that breaks its rules, as well as muting (same source). Muting only changes what you see.
 - **The less filtered All feed.** Reddit's help page points web users to old.reddit.com/r/all for the All feed and says you can filter communities from it there ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/360043043552-What-s-the-difference-between-r-all-r-popular-news-and-my-home-feed)). That filter is separate from your muted list.
@@ -116,3 +117,5 @@ It works badly when the community is mostly useful and only some of its posts ar
 - **There's no Mute option in the menu.** Check you're logged in, and try from the community's page instead of a post. The option may be labelled differently in your app version.
 - **You've hit 1,000.** Unmute communities you no longer see anyway, such as ones that have gone quiet.
 - **Your Home feed is still noisy.** Most of that is usually recommendations, which you can switch off entirely using step 1 of [How to clean up your Reddit home feed](/guides/reddit/reddit-clean-up-home-feed/).
+
+[Add Slop Mop to your browser](/) and it folds the low-effort posts in the communities you decide to keep.

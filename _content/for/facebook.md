@@ -1,13 +1,14 @@
 ---
 {
-  "title": "Slop Mop for Facebook",
-  "seo_title": "Slop Mop for Facebook: bait posts and AI pages · Slop Mop",
-  "description": "Engagement-bait posts, AI image pages and Shrimp Jesus: what slop looks like on Facebook, Slop Mop's plans there, and Facebook's own Show less and Snooze.",
-  "summary": "Coming soon to Facebook. Until then: how AI image pages and bait posts work, and how to use Show less, Snooze and Unfollow.",
+  "title": "Slop Mop for Facebook: a feed filter for bait posts and AI pages",
+  "seo_title": "Facebook feed filter for bait and AI pages · Slop Mop",
+  "description": "A Facebook feed filter for bait captions and AI image pages: what Facebook slop looks like, what Slop Mop does in your Feed, and Show less and Snooze.",
+  "summary": "Slop Mop reads the writing in Facebook posts as you scroll and folds or marks the bait captions, fake quizzes and sob-story links.",
+  "keyword": "facebook feed filter",
   "updated": "2026-10-18",
   "kind": "network",
   "audience": "Facebook users",
-  "network_status": "soon",
+  "network_status": "live",
   "related": ["/patterns/engagement-bait/", "/patterns/flowery-prose/", "/glossary/ai-slop/", "/glossary/dead-internet-theory/", "/for/small-business-owners/"],
   "sources": [
     {"title": "How spammers and scammers leverage AI-generated images on Facebook for audience growth", "publisher": "Harvard Kennedy School Misinformation Review", "url": "https://misinforeview.hks.harvard.edu/wp-content/uploads/2024/08/diresta_spammers_scammers_ai_images_facebook_20240815.pdf", "date": "2024-08-15"},
@@ -56,15 +57,27 @@ Mill Lane is closed between the bridge and the school from 20 to 24 October for 
 
 All three are [engagement bait](/patterns/engagement-bait/), and the first and third lean on [flowery](/patterns/flowery-prose/), emotional language to get there. The fine examples are dull on purpose. Community news, local notices and posts from people you actually know are what Facebook does well, and the bait crowds them out.
 
-## What Slop Mop does here
+## How Slop Mop filters your Facebook feed
 
-Slop Mop for Facebook is coming soon. It doesn't work on Facebook yet.
+On Facebook, Slop Mop reads the posts in your Feed shortly before you scroll to them, whether they come from friends, groups, Pages or suggestions. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet. It sends each post's text and its public engagement counts to its scoring service, and never your name or the author's.
 
-The plan is for it to do the job it does on LinkedIn today: read posts ahead of you, ask twelve questions about the writing (nine tells of slop and three counter-signals), and then fold likely slop into a one-line strip you can reopen, or leave it visible and mark it. You'll see why each call was made, and your vote will overrule the model in your feed.
+It reads the writing, so on an image post it judges the caption. It won't tell you whether the carved horse is real. It will notice that "Type AMEN if you think it's beautiful" is engagement bait, and on these posts the caption is where the bait lives.
 
-It judges writing, and it isn't an AI detector. It won't delete, report, mute or block anything, so friends and Pages carry on as normal and nobody is unfriended.
+An AI model designed for calibrated decisions answers twelve questions about the writing: nine tells of slop and three counter-signals (sounds like a person, useful to readers, and reader response). Each post gets a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure. Not sure means the post is left alone.
 
-## What you can do today
+- **Hide mode** folds a post past your threshold into a one-line strip where it was. Click Show post and it opens in place.
+- **Highlight mode** hides nothing. The post's mop turns yellow for Possibly slop and red for Likely slop.
+- **Sensitivity** is Mild, Moderate or Aggressive.
+
+Click the mop to see the details panel: the score, the strongest signs and the Slopprint, a nine-spoke chart with one spoke per tell. The reader response bar counts comments and shares for more than reactions, and it discounts the pattern bait produces: a thousand one-word comments on a post that asked for them. The plain local notice that nobody reacts to still scores well on "useful to readers".
+
+You can vote Not sure, No, Maybe or Probably on anyone else's post, and your vote overrides the model in your own Feed. Facebook never sees it.
+
+It judges the writing, and it isn't an AI detector. It never deletes, reports, mutes or blocks anything, so friends and Pages carry on as normal and nobody is unfriended or snoozed.
+
+The free plan covers the one feed you pick, with 250 checks a day, and Facebook can be that feed. Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every other feed, the sites you read, Gmail and Outlook, and a higher daily limit. The details are on [how it works](/how-it-works.html).
+
+## Facebook's own feed controls, and how they fit with Slop Mop
 
 Facebook has three built-in controls for this, each a little stronger than the last.
 
@@ -72,7 +85,7 @@ Facebook has three built-in controls for this, each a little stronger than the l
 2. **Snooze.** From the same menu, snooze the person, Page or group for 30 days. Their posts disappear from your feed for the month, and they aren't told ([TechCrunch](https://techcrunch.com/2017/12/15/facebook-adds-a-snooze-button-for-muting-people-groups-and-pages-for-30-days/)).
 3. **Unfollow.** For a Page that only ever posts bait, unfollow it. You can unfollow a friend without unfriending them.
 
-Show less is a hint that fades. Snooze and Unfollow work on whole accounts, which is fine for a spam Page and harsh for an aunt who posts one quiz a week between photos you'd want to see.
+Show less is a hint that fades. Snooze and Unfollow work on whole accounts, which is fine for a spam Page and harsh for an aunt who posts one quiz a week between photos you'd want to see. Use them together: unfollow the spam Pages, use Show less on suggestions you never asked for, and let Slop Mop fold the aunt's quiz while her photos stay. [Slop Mop vs unfollowing and muting](/compare/slop-mop-vs-unfollowing-and-muting/) compares them in more detail.
 
 ## Who it's for
 
@@ -82,3 +95,5 @@ People who stay on Facebook for groups, family and local news, and would like th
 - [Educators](/for/educators/) in parent and school groups, where notices get lost under puzzles and chain posts.
 - [Comms teams](/for/comms-teams/) who monitor community pages and need the real complaints and questions.
 - Anyone who has had to explain to a relative that the carved wooden horse isn't real. The [AI slop](/glossary/ai-slop/) entry covers where the word and the genre came from.
+
+[Add Slop Mop to your browser](/) and it folds Facebook posts like these for you.

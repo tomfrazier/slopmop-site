@@ -5,6 +5,7 @@
   "description": "Stiff phrasing means stock transitions and hedges like furthermore and may potentially. Why it slows readers, when it's right, and how to loosen it.",
   "summary": "Stock transitions and hedges such as furthermore, moreover and may potentially, bolted onto sentences that don't need them.",
   "updated": "2026-10-18",
+  "keyword": "stiff phrasing",
   "tell": "Stiff phrasing",
   "short": "stock transitions and hedges",
   "order": 8,
@@ -16,7 +17,7 @@
 ---
 Stiff phrasing is writing assembled from stock parts. Sentences open with "Furthermore", "Moreover" or "It's worth noting that", claims are wrapped in "may potentially help to support", and the post ends with "Ultimately" or "In conclusion". Each part is grammatical. Together they read like a form filled in by someone who wasn't there.
 
-## What it looks like
+## What stiff phrasing looks like
 
 :::slop
 Furthermore, it is worth noting that this approach may potentially offer a range of additional benefits. Ultimately, it can help to support long-term outcomes.
@@ -54,7 +55,7 @@ Stock phrases add words without adding meaning. "It's worth noting that the dead
 
 Hedges are a subtler cost. "May potentially help to support" commits to almost nothing, so you can't tell whether the writer saw an effect, expects one or is guessing. Honest uncertainty sounds different: it says what isn't known and why.
 
-The stiffness also hides the writer. Orwell described prose that "consists less and less of words chosen for the sake of their meaning, and more and more of phrases tacked together like the sections of a prefabricated hen-house". That was in 1946. The hen-house parts have changed a little; the effect on the reader is the same.
+The stiffness also hides the writer. Orwell, in ["Politics and the English Language"](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/), described prose that "consists less and less of words chosen for the sake of their meaning, and more and more of phrases tacked together like the sections of a prefabricated hen-house". That was in 1946. The hen-house parts have changed a little; the effect on the reader is the same.
 
 ## When it's fine
 
@@ -68,11 +69,11 @@ Formal phrasing has proper uses, and some readers depend on it.
 
 The test: delete the phrase. If the sentence loses information, keep it. If it only loses formality, leave it out.
 
-## How Slop Mop scores it
+## How Slop Mop scores stiff phrasing
 
-Stiff phrasing is one of nine questions the model asks about every post, one spoke on the Slopprint. It looks for stock transitions and hedges that pad a post out, as distinct from formality the subject requires.
+Stiff phrasing is one of the [nine questions the model asks](/how-it-works.html#tells) about every post, one spoke on the Slopprint. It looks for stock transitions and hedges that pad a post out, as distinct from formality the subject requires.
 
-The model says how sure it is about each answer, and unsure ones count for less. If stiff phrasing is the only tell that stands out, the score is cut. That matters most for people writing in a second language or in a formal house style, whose posts can be stiff and still useful. Stiff phrasing usually comes with [flowery prose](/patterns/flowery-prose/) or [hype words](/patterns/hype-words/) when a post is genuinely empty, and several tells together is what gets flagged.
+The model says how sure it is about each answer, and unsure ones count for less. If stiff phrasing is the only tell that stands out, the score is cut. That matters most for people writing in a second language or in a formal house style, whose posts can be stiff and still useful. When a post is genuinely empty, stiff phrasing usually appears with [flowery prose](/patterns/flowery-prose/) or [hype words](/patterns/hype-words/), and several tells together is what gets flagged.
 
 The counter-signals can only lower a score. A formal post with specific facts, a method readers can follow or real comments under it gets a share taken off. Some tells count for more than others, and the weights aren't published. Your sensitivity setting decides where the verdict falls, and your vote overrides it in your feed.
 
@@ -91,6 +92,8 @@ Moreover, it is important to note that implementing regular feedback sessions ca
 We started monthly 20-minute feedback chats in April. In the October staff survey, the share of people who said they knew how they were doing rose from 41% to 63%. We haven't yet seen any change in staff turnover.
 :::
 
-## Where it shows up
+## Where stiff phrasing shows up
 
-Corporate updates and policy posts on LinkedIn are frequent offenders, and LinkedIn is where Slop Mop reads posts today. The same phrasing fills internal memos, school essays, grant applications, press statements and auto-generated summaries in email.
+Corporate updates and policy posts on LinkedIn are frequent offenders, and so are company statements on X and Facebook, explainer articles on the websites you read, and generated answers pasted into Reddit comments. Work email is full of it, along with internal memos, school essays, grant applications and press statements.
+
+Slop Mop reads for stiff phrasing on every network it covers: LinkedIn, X, Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium, articles and websites, and email in Gmail and Outlook, where it checks only what the sender wrote. [Add Slop Mop to your browser](/) and it folds posts like these for you.

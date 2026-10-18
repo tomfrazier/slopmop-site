@@ -5,6 +5,7 @@
   "description": "A sock puppet is a fake online identity used to praise yourself, attack critics or fake a crowd. Where the term came from, the main types, and examples.",
   "summary": "A fake online identity, posing as an independent person, used to praise yourself, attack critics or fake a crowd.",
   "updated": "2026-10-18",
+  "keyword": "sock puppet",
   "term": "Sock puppet",
   "aliases": ["sockpuppet", "sock puppet account", "sock"],
   "punchline": "One person, many accounts, fake applause.",
@@ -24,7 +25,7 @@
   ]
 }
 ---
-## What it means
+## What a sock puppet is
 
 A sock puppet is a false online identity that pretends to be an independent person while someone else pulls the strings. The image is the hand puppet made from a sock: it seems to talk, and everyone can see whose hand is inside, except online they can't.
 
@@ -37,9 +38,9 @@ People use sock puppets to:
 
 The deception is what makes it a sock puppet. A second account that is openly yours, for a hobby or for work, is usually called an "alt", and a pseudonym isn't a sock puppet just for hiding a real name. The line is crossed when the extra account pretends to be someone else.
 
-## Where it came from
+## Where sock puppets came from
 
-The practice is older than the internet. Walt Whitman, Anthony Burgess and Benjamin Franklin all wrote pseudonymous reviews or praise of their own work. The Oxford English Dictionary defines sock puppet without reference to the internet, as "a person whose actions are controlled by another; a minion", with a citation from 2000.
+The practice is older than the internet. [Wikipedia's article on sock puppet accounts](https://en.wikipedia.org/wiki/Sockpuppet_account) notes that Walt Whitman, Anthony Burgess and Benjamin Franklin all wrote pseudonymous reviews or praise of their own work. The Oxford English Dictionary defines sock puppet without reference to the internet, as "a person whose actions are controlled by another; a minion", with a citation from 2000.
 
 Online, the term has long been used in forums and on Wikipedia, which has fought sock puppets for years. In October 2013 the Wikimedia Foundation condemned paid-advocacy sock puppetry and banned the firm Wiki-PR from editing. In 2015 it uncovered another group of accounts doing undisclosed paid editing.
 
@@ -59,4 +60,4 @@ Neither pattern proves anything alone. Investigators use clues such as shared IP
 
 ## How Slop Mop sees it
 
-Slop Mop judges the writing in each post and never looks at who wrote it, so it can't tell whether an account is a sock puppet. That is outside what it judges.
+Slop Mop judges the writing in each post and never looks at who wrote it, so it can't tell whether an account on Reddit, X or anywhere else is a sock puppet. That is outside what it judges, and it never reports or blocks accounts. A sock puppet's gushing post can still show [empty praise](/patterns/empty-praise/), which it does score, as [How it works](/how-it-works.html) explains. [Add Slop Mop to your browser](/) and it folds posts like that for you.

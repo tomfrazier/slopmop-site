@@ -5,6 +5,7 @@
   "description": "Shitposting is posting deliberately absurd, low-quality or provocative content, often ironically, to derail a thread or get a rise. Origins and examples.",
   "summary": "Posting deliberately absurd, low-quality or provocative content, often ironically, to derail a conversation or get a rise.",
   "updated": "2026-10-18",
+  "keyword": "shitposting",
   "term": "Shitposting",
   "aliases": ["shitpost"],
   "punchline": "Low effort, high reaction, on purpose.",
@@ -26,15 +27,15 @@
   ]
 }
 ---
-## What it means
+## What shitposting means
 
-Shitposting is posting something deliberately absurd, pointless or provocative, usually with a straight face. Merriam-Webster defines shitpost as "to post something online (such as a comment, video, or meme) that is deliberately absurd, provocative, or offensive".
+Shitposting is posting something deliberately absurd, pointless or provocative, usually with a straight face. [Merriam-Webster](https://www.merriam-webster.com/dictionary/shitposting) defines shitpost as "to post something online (such as a comment, video, or meme) that is deliberately absurd, provocative, or offensive".
 
 The defining feature is intent. A shitpost is bad on purpose, and the people posting it know it. The Daily Dot described it in 2016 as "a deliberate provocation designed for maximum impact with minimum effort". The Financial Times called it posting "ostentatiously inane and contextless content" in a way that derails discussion.
 
 Motives vary. Some shitposting is play: a running joke in a group chat or a surreal meme. Some is meant to drown a conversation, or, in coordinated bursts, to make a forum unusable for its regulars. The same word covers a harmless joke and a hostile flood, which is part of why it's slippery.
 
-## Where it came from
+## Where shitposting came from
 
 Merriam-Webster finds the verb in 1993 and the noun in 1996. The current ironic sense took shape in the mid-2000s on image boards such as 4chan. Writing for Polygon, Sam Greszes compared it to Dada's absurd, context-free art, with the goal of confusing an audience until they laugh.
 
@@ -56,4 +57,4 @@ Whether either is funny depends on the room. In a forum that enjoys the joke it'
 
 ## How Slop Mop sees it
 
-Slop Mop's tells were built for a different kind of low quality: polished, earnest filler written to farm attention. A shitpost may trip [engagement bait](/patterns/engagement-bait/) or none of the tells at all, so it sits mostly outside what Slop Mop is designed to catch.
+Slop Mop's tells were built for a different kind of low quality: polished, earnest filler written to farm attention. A shitpost may trip [engagement bait](/patterns/engagement-bait/) or none of the tells at all, so on X, Reddit and the other feeds Slop Mop reads it sits mostly outside what it's designed to catch. Its cousins [rage bait](/glossary/rage-bait/) and [copypasta](/glossary/copypasta/) overlap more. If a call looks wrong, you can vote to overrule it, as [How it works](/how-it-works.html) explains. [Add Slop Mop to your browser](/) and it folds the earnest filler around the jokes.

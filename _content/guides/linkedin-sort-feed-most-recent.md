@@ -5,6 +5,7 @@
   "description": "Switch LinkedIn's feed from Top to Recent for one session or for good, what the chronological feed changes, and what it leaves exactly as it was.",
   "summary": "Use Sort by for one session, or Preferred Feed View to make Recent stick. It cuts recommendations; bait from people you follow stays.",
   "updated": "2026-10-18",
+  "keyword": "sort linkedin feed most recent",
   "network": "linkedin",
   "publish_date": "2026-11-17",
   "verified": "2026-10-18",
@@ -37,7 +38,7 @@ The control is mainly a desktop one. LinkedIn's feed help says sorting is only a
 
 Next time you sign in, the feed goes back to your default ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1339724)). That's handy for a quick catch-up on what people you follow posted this morning, without changing anything else.
 
-## 2. Make Recent your default
+## 2. Sort your LinkedIn feed by most recent for good
 
 1. Click the **Me** icon at the top of the LinkedIn homepage.
 2. Choose **Settings & Privacy**. The **Account preferences** page opens.
@@ -76,7 +77,9 @@ Chronological feeds reward a little upkeep. Once a month, scroll the first scree
 | Keep LinkedIn from learning from what you click | Recent, as your default |
 | Read on your phone | Top, since sorting may not be available there |
 
-Neither view judges what a post says. If the posts you skip are coming from people you want to keep following, a post-level filter does a different job from sorting. Slop Mop, a free Chrome extension that's live on LinkedIn, folds or marks individual posts by their writing, and it works the same way in Top or Recent. It doesn't change the order of your feed.
+Neither view judges what a post says. If the posts you skip are coming from people you want to keep following, a post-level filter does a different job from sorting. [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads LinkedIn posts as you scroll and folds or marks them by their writing, and it works the same way in Top or Recent. It doesn't change the order of your feed, and the free plan covers one feed with 250 checks a day. [How it works](/how-it-works.html) lists what it scores, from [scroll-stopper hooks](/patterns/scroll-stopper/) to engagement bait.
+
+X has the same split between a ranked and a chronological feed, and Slop Mop reads posts there too, along with Reddit, Facebook, Substack and Medium.
 
 ## If that doesn't work
 
@@ -85,3 +88,5 @@ Neither view judges what a post says. If the posts you skip are coming from peop
 - **Recent still looks filtered.** If you're outside the EEA, that's expected: LinkedIn says the Recent view there still picks the most relevant updates, then sorts them by time.
 - **Recent is too quiet.** Follow a few more people whose posts you'd read in full, or switch back to Top for a session when you want to explore.
 - **Recent is mostly one person.** Unfollow them, or use **Hide posts by [name]** in the three-dot menu on one of their posts. The [engagement bait guide](/guides/linkedin/linkedin-filter-engagement-bait/) covers the other menu options.
+
+[Add Slop Mop to your browser](/) and it folds the posts you'd skip, whichever order your feed is in.

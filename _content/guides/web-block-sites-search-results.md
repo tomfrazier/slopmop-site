@@ -4,6 +4,7 @@
   "seo_title": "Block sites from search results: DuckDuckGo, Kagi, Google",
   "description": "Block content farms from your results for good: DuckDuckGo's block list, Kagi's Block and Lower options, and workarounds for Google.",
   "summary": "Permanent site blocking in DuckDuckGo and Kagi, ranking tools in Kagi and Brave, and the workarounds for Google, which has no block list.",
+  "keyword": "block sites in search results",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-11-03",
@@ -82,7 +83,7 @@ Google's help pages don't offer a way to block a site. You have two options.
 
 The catch with extensions: you're trusting a third party with access to your search pages, and public lists reflect someone else's judgment. Read a list before you subscribe, and check the extension's permissions in your browser.
 
-## What to block, and what to leave
+## Which sites to block from search results
 
 Block a site after it fails you more than once. A single bad article is a reason to close the tab.
 
@@ -101,6 +102,8 @@ We ran five air purifiers in a 20m² bedroom for a week each. Two were quieter t
 
 Leave alone: big general sites with mixed quality, where one weak page doesn't mean the next will be weak too. Use Lower in Kagi for those, or nothing at all.
 
+For those mixed sites, judging page by page works better than blocking. Slop Mop does that on the articles you open: it scores the article text with the same twelve questions it uses on social posts ([how it works](/how-it-works.html)) and marks or folds a low-value page, so a weak article on a decent site gets caught without losing the site's good ones. It doesn't touch your search results, block domains or report anything to a search engine, and it's part of Slop Mop XL (US$5.99 a month).
+
 ## If that doesn't work
 
 - **The site still appears in DuckDuckGo.** Check whether **Show all results** is on, and whether the result is on a different subdomain.
@@ -108,4 +111,4 @@ Leave alone: big general sites with mixed quality, where one weak page doesn't m
 - **Kagi's Higher setting seems to do little.** Kagi doesn't publish how much weight each setting carries. Pin is the strongest option if you always want a site first.
 - **Google keeps showing the site.** Only an extension changes that. Otherwise, keep a note of domains to paste in as `-site:` operators.
 
-Slop Mop is coming soon to websites. It never blocks or deletes anything, so the controls above remain the way to keep known bad sites out of your results.
+Blocking keeps known bad sites out of your results; it can't judge the pages that get through. [Add Slop Mop to your browser](/) and it marks or folds the thin articles you still click on.

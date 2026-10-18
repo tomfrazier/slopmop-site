@@ -1,9 +1,10 @@
 ---
 {
   "title": "How to unsubscribe from newsletters in Gmail with Manage subscriptions",
-  "seo_title": "Unsubscribe from newsletters in Gmail · Slop Mop",
+  "seo_title": "Gmail Manage subscriptions: unsubscribe fast · Slop Mop",
   "description": "Use Gmail's Manage subscriptions page to see every mailing list in one place and unsubscribe sender by sender, on computer, Android and iPhone.",
   "summary": "Gmail's Manage subscriptions page lists your mailing lists in one place. How to use it, what unsubscribing does, and when to block instead.",
+  "keyword": "gmail manage subscriptions",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-10-20",
@@ -23,11 +24,11 @@ Gmail has a page called **Manage subscriptions** that lists the senders you're o
 
 ## Before you start
 
-- **It may not be on your account yet.** Google's help page says the feature is "gradually rolling out and may not be available to you yet". If you can't find it, skip to "If that doesn't work" below.
+- **It may not be on your account yet.** [Google's help page](https://support.google.com/mail/answer/15621070) says the feature is "gradually rolling out and may not be available to you yet". If you can't find it, skip to "If that doesn't work" below.
 - **Unsubscribing and blocking do different things.** Unsubscribing asks the sender to stop. Blocking leaves you on the list and sends everything they mail to Spam. Google's own advice is to unsubscribe from newsletters you don't want, and keep blocking for senders you don't want to hear from at all.
 - **Decide what you're keeping first.** Receipts, bank statements, security alerts and anything your job depends on should never go in the cull. Most of those don't come through mailing lists anyway, but a quick look saves you hunting for a password reset next month.
 
-## Unsubscribe on a computer
+## Use Gmail Manage subscriptions on a computer
 
 1. Open Gmail in your browser.
 2. In the left-hand menu, click **More**, then **Manage subscriptions**.
@@ -35,7 +36,7 @@ Gmail has a page called **Manage subscriptions** that lists the senders you're o
 4. To leave, click **Unsubscribe** on the right, next to the email count.
 5. If a pop-up appears, some senders want you to finish on their website. Choose **Go to website** to do that, or **Block** if you'd rather not visit their site.
 
-## Unsubscribe on Android, iPhone or iPad
+## Use Gmail Manage subscriptions on Android, iPhone or iPad
 
 1. Open the Gmail app.
 2. Tap **Menu** at the top left, then **Manage subscriptions**.
@@ -86,6 +87,8 @@ Your plan goes from £8 to £9 a month on 1 November. If you switch to annual be
 
 The second one is still marketing. It's worth keeping because it tells you something with a date and a number on it.
 
+For the newsletters that survive the cull, Slop Mop for Gmail can do this reading for you. It checks what the sender wrote against the same tells it uses on posts ([how it works](/how-it-works.html)) and marks or folds the padded issues, so the good ones stand out. Before an email is checked, personal details are replaced with placeholders in your mailbox; attachments and quoted earlier messages are never sent, and spam, private, legal, health and transactional mail is never read unless you check a message by hand. It's part of Slop Mop XL (US$5.99 a month) and doesn't unsubscribe, block or delete anything, so the steps above stay your tools for deciding who can email you.
+
 ## If that doesn't work
 
 - **No Manage subscriptions in the menu.** The rollout hasn't reached you. Use the Unsubscribe button inside each email instead, or the link at the bottom of the message.
@@ -93,4 +96,4 @@ The second one is still marketing. It's worth keeping because it tells you somet
 - **The email looks suspicious.** Don't click its unsubscribe link. Google's phishing guidance is to avoid clicking links in messages from untrustworthy or unknown senders. Block the sender or report the message as spam instead.
 - **They keep emailing after a week.** Block them. In an open message, click **More** next to Reply, then **Block** with the sender's name. Their future emails go to Spam. You can review and unblock senders in **Settings**, **See all settings**, **Filters and blocked addresses**.
 
-Slop Mop for Gmail is coming soon. It will judge the writing inside the emails you keep, which is a different job from deciding who's allowed to send them; for now, the steps above are the whole toolkit.
+[Add Slop Mop for Gmail](/) (part of Slop Mop XL) and it marks or folds the weak issues among the newsletters you keep.

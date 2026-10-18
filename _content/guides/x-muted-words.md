@@ -5,6 +5,7 @@
   "description": "Step-by-step muted words on X for the app and the web: what you can mute, durations, what muting misses, and a starter list for cutting bait.",
   "summary": "Where X's muted words live in the app and on the web, what they do and don't hide, and a starter list aimed at bait and filler.",
   "updated": "2026-10-18",
+  "keyword": "x muted words",
   "network": "x",
   "publish_date": "2026-11-03",
   "verified": "2026-10-18",
@@ -17,7 +18,7 @@
 ---
 On X, muted words hide posts containing a word, phrase, hashtag, emoji or @username from your Home timeline and notifications. In the app, go to Notifications, tap the gear icon, then Muted, then Muted words, and tap Add; on the web the list sits under Settings and privacy. Pick where it applies and for how long.
 
-## What muted words do
+## What muted words on X do
 
 According to X's help centre, you can mute words, phrases, usernames, emojis and hashtags, and the mute removes matching posts from your Home timeline and notifications ([X Help Center](https://help.x.com/en/using-x/advanced-x-mute-options)). X also says it won't recommend content with your muted words, in the app or by email.
 
@@ -54,7 +55,7 @@ On x.com the same list lives in settings rather than under Notifications.
 
 X's own instructions focus on the app, so on the web the menu may be labelled differently.
 
-## A starter list for bait and filler
+## A starter list of X muted words for bait and filler
 
 These phrases turn up mostly in posts built to collect reactions. Add the ones that match what you keep seeing, set them to Home timeline, and leave them for 30 days before deciding whether to make them permanent.
 
@@ -95,3 +96,7 @@ Go back to **Muted words** using the same path. Open an entry to change its dura
 ## If that doesn't work
 
 Muted words only catch exact text, so they miss bait that's phrased fresh each time. For those, the Not interested option and the Following tab do more of the work; both are covered in [how to clean up your For You timeline](/guides/x/x-clean-up-for-you-timeline/). For recognising the shapes that slip past a word list, see [engagement farming on X](/guides/x/x-engagement-farming/).
+
+A filter that reads the whole post catches what a word list can't. [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads the posts and replies in your X timeline as you scroll and judges the writing rather than matching words, so it can fold a freshly worded bait post and leave the useful "unpopular opinion" alone. Hide mode folds likely slop into a one-line strip you can reopen; Highlight mode only marks it. [How it works](/how-it-works.html) lists the nine tells it scores. It doesn't add to or change your muted words, it runs on x.com in your desktop browser rather than the X app, and the free plan covers one feed with 250 checks a day. The [comparison with keyword filters](/compare/slop-mop-vs-keyword-filters/) sets out where each one wins.
+
+[Add Slop Mop to your browser](/) and it folds the bait your muted words miss.

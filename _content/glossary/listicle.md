@@ -2,6 +2,7 @@
 {
   "title": "Listicle",
   "seo_title": "Listicle: what it means, with examples · Slop Mop",
+  "keyword": "listicle",
   "description": "A listicle is an article built as a numbered list, often padded around a thin idea. Where the word came from, the criticism, and what a useful list does.",
   "summary": "An article built as a numbered list, often padded around a thin idea for quick clicks.",
   "updated": "2026-10-18",
@@ -26,7 +27,7 @@
   ]
 }
 ---
-## What it means
+## What a listicle is
 
 A listicle is an article structured as a list: a title with a number in it ("17 ways to…", "The 10 worst…") and a short section for each item. The word is a blend of "list" and "article".
 
@@ -34,9 +35,9 @@ The form itself is neutral. A ranked list of the year's best albums, a checklist
 
 On social feeds the listicle has a cousin: the post that opens "7 lessons I learned from failing" and follows with seven one-line platitudes.
 
-## Where it came from
+## Where the word listicle came from
 
-Merriam-Webster dates the first known use of "listicle" to 2007. The habit it names is older. Magazine covers such as *Cosmopolitan*'s had carried numbered lists for years, and in 2006 the blogger Anil Dash was already disparaging list posts as the "geek equivalents of Cosmo coverlines".
+[Merriam-Webster](https://www.merriam-webster.com/dictionary/listicle) dates the first known use of "listicle" to 2007. The habit it names is older. Magazine covers such as *Cosmopolitan*'s had carried numbered lists for years, and in 2006 the blogger Anil Dash was already disparaging list posts as the "geek equivalents of Cosmo coverlines".
 
 Lists are quick to make. Narrative writing needs flow from one point to the next, while a list just needs items, and it can be assembled from material that already exists, such as captions under video clips. That ease is why it drew the charge of being a "kind of cheap content-creation". By 2015 sites such as BuzzFeed were publishing hundreds a day.
 
@@ -71,4 +72,6 @@ The first list could be pasted under any leadership post ever written. Each item
 
 ## How Slop Mop sees it
 
-A list on its own doesn't make a post slop to Slop Mop. The padded kind usually gives itself away through other tells, typically a [scroll-stopper](/patterns/scroll-stopper/) title, [engagement bait](/patterns/engagement-bait/) at the end and [empty praise](/patterns/empty-praise/) in between, and those are what it scores on LinkedIn.
+A list on its own doesn't make a post slop to Slop Mop. The padded kind usually gives itself away through other tells, typically a [scroll-stopper](/patterns/scroll-stopper/) title, [engagement bait](/patterns/engagement-bait/) at the end and [empty praise](/patterns/empty-praise/) in between, and those are what it scores, in posts on LinkedIn and X, in Medium and Substack articles and on the websites you read.
+
+[Add Slop Mop to your browser](/) and it folds padded lists like the first example for you.

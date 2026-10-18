@@ -4,6 +4,7 @@
   "seo_title": "How to spot AI slop articles on websites · Slop Mop",
   "description": "The signs of a low-value AI-written article: generic claims, padded intros, vague sources and no first-hand detail. A check in under three minutes.",
   "summary": "A three-minute check for web articles: look for specifics, real sources and first-hand detail, and don't rely on AI detectors.",
+  "keyword": "spot ai slop articles",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-10-20",
@@ -55,7 +56,7 @@ Pick two claims that have links and open them. Do the linked pages exist, and do
 
 Generic articles end with a summary of what you just read, or with an outline of "challenges and future prospects" that says nothing new. Wikipedia lists those outline-style endings as a common tell. A useful article ends with a decision, a next step or a limitation.
 
-## What to look for, at a glance
+## How to spot AI slop articles at a glance
 
 | Sign | What it looks like | Why it matters |
 |---|---|---|
@@ -92,4 +93,8 @@ The first paragraph has four sentences and zero instructions. The second has fiv
 
 ## What to do with a bad one
 
-Close it and go back to the results. If the same site keeps failing the check, stop clicking it: Google and DuckDuckGo both let you leave a site out of a search by adding `-site:` in front of its domain. Slop Mop runs a similar set of questions on posts automatically and is coming soon to websites; for now, the check above takes less time than reading a padded article to the end.
+Close it and go back to the results. If the same site keeps failing the check, stop clicking it: Google and DuckDuckGo both let you leave a site out of a search by adding `-site:` in front of its domain. The check above takes less time than reading a padded article to the end.
+
+Slop Mop runs a similar set of questions for you. On the articles you open, it scores the article text for the same tells listed above, plus counter-signals such as first-hand detail and usefulness ([how it works](/how-it-works.html)), and marks or folds a low-value page. It judges the writing, not whether a model wrote it, so a useful AI-assisted guide gets through. Websites are part of Slop Mop XL (US$5.99 a month), and the same check runs on LinkedIn, X, Reddit, Facebook, Substack and Medium.
+
+[Add Slop Mop to your browser](/) and it folds articles like these for you.

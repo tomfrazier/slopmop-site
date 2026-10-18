@@ -5,6 +5,7 @@
   "description": "Broetry is the LinkedIn style of one short sentence per line, building to a business lesson. Where it came from, why it spreads, and how to rewrite it.",
   "summary": "LinkedIn posts written one short sentence per line, with a personal story building to a business or self-help lesson.",
   "updated": "2026-10-18",
+  "keyword": "broetry",
   "term": "Broetry",
   "aliases": ["broem", "broems"],
   "punchline": "Self-help, one line at a time.",
@@ -26,17 +27,17 @@
   ]
 }
 ---
-## What it means
+## What broetry means
 
 Broetry is a way of writing LinkedIn posts: one short sentence per line, a blank line after each, building to a business or self-help lesson. A single post is a broem. The name blends "bro" and "poetry", and the joke is that the layout looks like verse while the content is a pep talk.
 
 The usual broem has three parts. It opens with a line that promises a story ("I was fired on a Tuesday."). It tells a short anecdote in which the writer comes off well, often after a setback. It closes on a moral that would have fitted in one sentence, sometimes followed by "Agree?" and a pointing emoji.
 
-The line breaks do two jobs. They make a thin idea look weightier than it is, because every sentence gets a line of its own. They also push the text below LinkedIn's "see more" cut-off, so a reader has to click to finish the post, and that click tells the feed the post is interesting. Fenwick's long write-up on the style calls the breaks "typographic mic drops for insights that aren't particularly insightful".
+The line breaks do two jobs. They make a thin idea look weightier than it is, because every sentence gets a line of its own. They also push the text below LinkedIn's "see more" cut-off, so a reader has to click to finish the post, and that click tells the feed the post is interesting. [Fenwick's long write-up on the style](https://fenwick.media/rewild/magazine/dead-broets-society-behind-the-strange-story) calls the breaks "typographic mic drops for insights that aren't particularly insightful".
 
 Plenty of good posts use short sentences and white space. A broem adds the drip-fed hook, the tidy anecdote and the lesson nobody needed spelling out.
 
-## Where it came from
+## Where broetry came from
 
 The style spread on LinkedIn in late 2017. BuzzFeed News reporters looked into it that year, tracing much of it to one self-described growth strategist whose posts were drawing unusual engagement and copycats, and suggested LinkedIn might soon crack down. According to Fenwick, LinkedIn did change its feed ranking afterwards to give more weight to posts from people's close connections and less to viral writers. The format survived anyway.
 
@@ -108,4 +109,6 @@ The first is a [too-tidy story](/patterns/too-tidy-story/): an anecdote that exi
 
 ## How Slop Mop sees it
 
-Broetry is one of the most common shapes in the LinkedIn feed, and Slop Mop has no rule against line breaks. What it scores are the habits broetry tends to carry: the [scroll-stopper](/patterns/scroll-stopper/) opening, the too-tidy story and the closing [engagement bait](/patterns/engagement-bait/). A short-lined post with a real number and a real cost in it can pass; a broem with nothing behind the drumroll usually shows several tells at once, which is what gets it folded.
+Broetry is one of the most common shapes in the LinkedIn feed, and the same one-line drip turns up in X posts, Facebook posts and Substack Notes. Slop Mop reads all of them and has no rule against line breaks. What it scores are the habits broetry tends to carry: the [scroll-stopper](/patterns/scroll-stopper/) opening, the too-tidy story and the closing [engagement bait](/patterns/engagement-bait/). A short-lined post with a real number and a real cost in it can pass; a broem with nothing behind the drumroll usually shows several tells at once, which is what gets it folded. [How it works](/how-it-works.html) explains why one tell alone isn't enough.
+
+[Add Slop Mop to your browser](/) and it folds posts like these for you.

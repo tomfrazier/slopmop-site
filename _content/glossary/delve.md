@@ -2,6 +2,7 @@
 {
   "title": "Delve (AI marker)",
   "seo_title": "Delve: why one word became an AI giveaway · Slop Mop",
+  "keyword": "delve",
   "description": "'Delve' became shorthand for chatbot writing after a study of 15 million abstracts found it surged in 2024. What the research showed, and what it doesn't.",
   "summary": "The word 'delve', and favourites like 'underscore' and 'showcasing', treated as a giveaway that a chatbot wrote or polished the text.",
   "updated": "2026-10-18",
@@ -24,15 +25,15 @@
   ]
 }
 ---
-## What it means
+## What "delve" means
 
 "Delve" is a perfectly good English word that became a running joke about AI writing. After chatbots arrived, readers noticed it turning up everywhere: reports that "delve into the key drivers", cover letters keen to "delve deeper", essays that "delve into the rich history" of almost anything. Spotting it became a quick, half-serious way of saying "a chatbot wrote this".
 
 The term now stands for a whole family of words that large language models seem to favour: "underscore", "showcase", "meticulous", "intricate" and "pivotal". When people say a text is "full of delves", they mean it reads as machine-polished.
 
-## Where it came from
+## Where the "delve" joke came from
 
-The best evidence comes from a study of biomedical writing by Dmitry Kobak and colleagues, first posted on 11 June 2024 and later published in *Science Advances*. They tracked word frequencies in more than 15 million PubMed abstracts from 2010 to 2024, projected how often each word should have appeared in 2024 from earlier years, and compared that with what actually appeared.
+The best evidence comes from [a study of biomedical writing](https://arxiv.org/abs/2406.07016) by Dmitry Kobak and colleagues, first posted on 11 June 2024 and later published in *Science Advances*. They tracked word frequencies in more than 15 million PubMed abstracts from 2010 to 2024, projected how often each word should have appeared in 2024 from earlier years, and compared that with what actually appeared.
 
 Some words jumped far above their expected level. "Delves" appeared 28 times as often as projected, "underscores" 13.8 times and "showcasing" 10.7 times. Most of the excess words were style words rather than words about new topics, unlike the Covid-era jumps in words such as "lockdown". From that excess vocabulary the authors estimated that at least 13.5% of 2024 abstracts were processed with an LLM, reaching 40% in some groups of papers.
 
@@ -55,4 +56,6 @@ A single word proves nothing about a single text. The Kobak study measures exces
 
 ## How Slop Mop sees it
 
-"Delve" is on Slop Mop's list of [hype words](/patterns/hype-words/), one of nine tells, and six of those tells come from Graphite's research comparing human writing with AI rewrites. One tell standing out on its own is cut from the score, so a single "delve" in an otherwise useful LinkedIn post won't get it folded. Slop Mop judges the writing, not who wrote it: the sentence that delves into nothing gets flagged, the one with the renewal numbers doesn't, whoever typed them.
+"Delve" is on Slop Mop's list of [hype words](/patterns/hype-words/), one of [nine tells](/how-it-works.html#tells), and six of those tells come from Graphite's research comparing human writing with AI rewrites. One tell standing out on its own is cut from the score, so a single "delve" in an otherwise useful post on LinkedIn, Reddit or Medium, or in an email, won't get it folded. Slop Mop judges the writing, not who wrote it: the sentence that delves into nothing gets flagged, the one with the renewal numbers doesn't, whoever typed them.
+
+[Add Slop Mop to your browser](/) and it folds the posts that stack these words with nothing behind them.

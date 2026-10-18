@@ -5,6 +5,7 @@
   "description": "Snooze hides someone for 30 days, unfollow hides them until you reconnect, Not interested trims one kind of post. Which to use, how, and how to undo each.",
   "summary": "What Facebook's snooze, unfollow and Not interested each hide, for how long, and how to undo them on the app and on a computer.",
   "updated": "2026-10-18",
+  "keyword": "facebook snooze vs unfollow",
   "network": "facebook",
   "publish_date": "2026-11-17",
   "verified": "2026-10-18",
@@ -21,7 +22,7 @@
 ---
 Use **Not interested** when one kind of post bothers you, **snooze** when a person, Page or group needs a 30-day break, and **unfollow** when you want their posts gone from your feed but want to stay friends or stay in the group. Facebook says snoozing doesn't notify anyone, and its help pages mention no notification for the other two. Block is for safety, and comes up briefly below.
 
-## The three feed controls side by side
+## Facebook snooze vs unfollow vs Not interested, side by side
 
 | Control | What it hides | How long | Still friends or a member? |
 |---|---|---|---|
@@ -37,6 +38,7 @@ Snoozed profiles, Pages and groups aren't notified ([Facebook Help](https://www.
 - **A school friend shares nothing but "share if you agree" posts.** Unfollow. You stay friends and stop seeing the shares.
 - **Your feed keeps showing a kind of post, from different sources.** Not interested on each one. Snoozing one Page won't stop the next.
 - **A Page you followed once now posts reaction-fishing pictures.** Unfollow the Page, or if you never followed it, use Not interested and the steps in the [suggested posts guide](/guides/facebook/facebook-reduce-suggested-posts/).
+- **A friend you'd miss mostly posts well but shares the odd bait post.** No Facebook control fits, because each one works on the whole person or a whole kind of post. Slop Mop does this job in a desktop browser: it reads each feed post and folds the ones that score as slop, such as [engagement bait](/patterns/engagement-bait/), while the friend's own news stays in your feed ([how it scores a post](/how-it-works.html)).
 - **Someone is harassing you.** Feed controls only change your feed. Block them from their profile, or under **Settings & privacy**, **Settings**, then **Blocking** ([Facebook Help](https://www.facebook.com/help/371675846332829)), and report if needed.
 
 ## 1. Not interested
@@ -122,4 +124,4 @@ You'd want the second from a friend. The first is a reason to unfollow whoever k
 - **You unfollowed, but still see them.** You may be seeing a friend's comment on their post, or their posts in a group you're both in. Unfollow the group, or use Not interested on those posts.
 - **The menu option isn't there.** Sponsored posts have their own ad options, and labels can differ between the app and a computer.
 
-Slop Mop, which folds away low-value posts on LinkedIn today and never unfollows, mutes or blocks anyone, is coming soon to Facebook.
+Slop Mop never snoozes, unfollows, mutes or blocks anyone, so none of these settings changes when you use it. [Add Slop Mop to your browser](/) and it folds the bait posts your friends share without you having to unfollow them.

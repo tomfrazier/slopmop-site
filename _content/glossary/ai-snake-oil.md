@@ -5,6 +5,7 @@
   "description": "AI snake oil is AI sold on claims it doesn't and can't live up to. Where Arvind Narayanan's term came from, what it covers and how to read the pitch.",
   "summary": "AI products sold on claims they don't and can't live up to, a term popularised by Princeton computer scientist Arvind Narayanan.",
   "updated": "2026-10-18",
+  "keyword": "ai snake oil",
   "term": "AI snake oil",
   "aliases": [],
   "punchline": "AI sold to do things AI can't do.",
@@ -26,15 +27,15 @@
   ]
 }
 ---
-## What it means
+## What AI snake oil means
 
 AI snake oil is a product sold as artificial intelligence that does not work, and often cannot work, the way its sellers say. The name borrows from the American idiom for a fraudulent remedy.
 
 The term is narrower than "AI hype". Hype exaggerates something real. Snake oil promises an outcome the technology has no route to, such as judging a job candidate's personality from a 30-second video. Arvind Narayanan, who popularised the phrase, called that kind of product "essentially an elaborate random number generator".
 
-## Where it came from
+## Where the term AI snake oil came from
 
-Narayanan, a computer scientist at Princeton, gave a talk in 2019 called "How to recognize AI snake oil". His slides opened with the claim that "much of what's being sold as 'AI' today is snake oil — it does not and cannot work".
+Narayanan, a computer scientist at Princeton, gave a talk in 2019 called "[How to recognize AI snake oil](https://www.cs.princeton.edu/~arvindn/talks/MIT-STS-AI-snakeoil.pdf)". His slides opened with the claim that "much of what's being sold as 'AI' today is snake oil — it does not and cannot work".
 
 His argument was that "AI" is an umbrella over several different technologies. Some have made real progress, so sellers attach the label to anything and let the public's confusion do the rest. He sorted applications into three rough groups:
 
@@ -65,4 +66,6 @@ A few questions that tend to separate the two:
 
 ## How Slop Mop sees it
 
-Slop Mop is an automating-judgment tool in Narayanan's terms, so it makes mistakes, and it is built around that: every verdict shows its reasons, and your vote overrules the model in your own feed. On LinkedIn, snake-oil pitches tend to trip the [no-catch promises](/patterns/no-catch-promises/) and [hype words](/patterns/hype-words/) tells, whoever wrote them.
+Slop Mop is an automating-judgment tool in Narayanan's terms, so it makes mistakes, and it is built around that: every verdict shows its reasons, and your vote overrules the model in your own feed. Snake-oil pitches turn up in LinkedIn and X posts, Substack and Medium articles, vendor websites and cold emails, and wherever Slop Mop reads them they tend to trip the [no-catch promises](/patterns/no-catch-promises/) and [hype words](/patterns/hype-words/) tells, whoever wrote them. [How it works](/how-it-works.html) covers the other seven.
+
+[Add Slop Mop to your browser](/) and it folds pitches like these for you.

@@ -46,11 +46,24 @@
       "publisher": "Yanis Varoufakis (reproducing the New Statesman)",
       "url": "https://www.yanisvaroufakis.eu/2023/10/07/the-new-statesman-reviews-my-technofeudalism/",
       "date": "2023-10-07"
+    },
+    {
+      "title": "Technofeudalism",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Technofeudalism",
+      "date": ""
+    },
+    {
+      "title": "Etzioni on AI: The colorful and cranky language of the AI era, from slop to slap",
+      "publisher": "GeekWire",
+      "url": "https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/",
+      "date": "2026-10-16"
     }
-  ]
+  ],
+  "keyword": "technofeudalism"
 }
 ---
-## What it means
+## What technofeudalism means
 
 Technofeudalism is the argument that the biggest technology platforms now behave less like companies competing in markets and more like feudal lords. In this picture, a handful of firms own the digital land: the app stores, marketplaces, cloud services and social networks. Everyone else, from sellers and app developers to ordinary users, has to work on that land and pay to be there, through fees, commissions, advertising or their data.
 
@@ -58,7 +71,7 @@ The people who make the argument say that profit in these businesses increasingl
 
 It's a theory about how the economy works, and it's disputed, including by many people who share its worries about big tech.
 
-## Where it came from
+## Where technofeudalism came from
 
 Feudal comparisons for the digital economy have been around for years under several names, including "digital feudalism" and "neo-feudalism". Two books did most to give "technofeudalism" its current shape.
 
@@ -66,6 +79,8 @@ Feudal comparisons for the digital economy have been around for years under seve
 - The Greek economist and former finance minister Yanis Varoufakis published *Technofeudalism: What Killed Capitalism* in 2023 (The Bodley Head in the UK). He goes further, arguing that capitalism has already been replaced. In his account, the owners of what he calls "cloud capital", whom he nicknames "cloudalists", now draw more wealth and power from rent than traditional capitalists draw from profit.
 
 Durand and Varoufakis both write from the left. Morozov's survey of the idea, below, finds feudal comparisons among writers on the right as well.
+
+In October 2026 Oren Etzioni and Daniel S. Weld included it in [their GeekWire glossary of AI-era language](https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/), as a see-also to the [Nerd Reich](/glossary/nerd-reich/) and [broligarchy](/glossary/broligarchy/).
 
 ## Examples
 
@@ -80,10 +95,12 @@ A critic replies that the same seller is still a business buying a service in a 
 
 ## The criticism
 
-The best-known critique is Evgeny Morozov's 2022 essay "Critique of Techno-Feudal Reason" in New Left Review. Morozov argues that the feudal label misreads the present: coercion, dispossession and rent-seeking have always been part of capitalism, so their prominence today shows capitalism at work. He surveys feudal comparisons from writers across the political spectrum and finds them more striking than accurate.
+The best-known critique is Evgeny Morozov's 2022 essay ["Critique of Techno-Feudal Reason"](https://newleftreview.org/issues/ii133/articles/evgeny-morozov-critique-of-techno-feudal-reason) in New Left Review. Morozov argues that the feudal label misreads the present: coercion, dispossession and rent-seeking have always been part of capitalism, so their prominence today shows capitalism at work. He surveys feudal comparisons from writers across the political spectrum and finds them more striking than accurate.
 
 Durand replied in the same journal later that year, accepting parts of the critique while defending the idea that the digital economy may be moving into new territory. Varoufakis, for his part, told the New Statesman in 2023 that he disagrees with reading companies such as Amazon as examples of monopoly capitalism, because "a company is not a market".
 
 ## How Slop Mop sees it
 
-Technofeudalism is a debate about economics and power, which is outside what Slop Mop judges. Slop Mop takes no side in it.
+Technofeudalism is a debate about economics and power, which is outside what Slop Mop judges. Slop Mop takes no side in it. It scores the writing of a post the same way whichever side it argues, on LinkedIn, X, Reddit, Facebook, Substack and Medium and in the articles you read; [How it works](/how-it-works.html) lists the twelve questions.
+
+[Add Slop Mop to your browser](/) and it folds the hollow posts on both sides of the argument.

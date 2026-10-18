@@ -5,6 +5,7 @@
   "description": "What X's For You and Following tabs show, how to switch between them on the app and the web, and how to tidy Following so it's worth staying in.",
   "summary": "For You mixes in recommendations; Following shows only accounts you follow. How to switch, when each is better, and how to tidy Following.",
   "updated": "2026-10-18",
+  "keyword": "x following vs for you",
   "network": "x",
   "publish_date": "2026-11-17",
   "verified": "2026-10-18",
@@ -21,7 +22,7 @@
 ---
 On X, the For You tab mixes posts from accounts you follow with posts X recommends, while the Following tab shows only posts from accounts you follow. Switch between them with the two tabs at the top of Home, in the app or on x.com; X remembers the last one you used. If most of your noise comes from strangers, stay in Following and spend ten minutes tidying who you follow.
 
-## What each tab shows
+## Following vs For You on X: what each tab shows
 
 X's help centre describes the two tabs this way ([X Help Center](https://help.x.com/en/using-x/x-timeline)):
 
@@ -49,7 +50,7 @@ X's page on recommendations confirms that posts from accounts you don't follow c
 
 X reopens the tab you last used, so if you choose Following and leave it there, that's what you'll see next time ([X Help Center](https://help.x.com/en/using-x/x-timeline)). X's help centre doesn't describe a setting that removes the For You tab altogether.
 
-## Which one to use
+## Following or For You on X: which one to use
 
 **Use Following when** you're on X to keep up with specific people: colleagues, reporters, a sports club, writers you like. You'll see less [engagement bait](/patterns/engagement-bait/) from strangers, because there aren't any strangers.
 
@@ -90,3 +91,7 @@ In April 2026 X began letting Premium subscribers pin topic-based timelines next
 ## If that doesn't work
 
 If Following is still noisy after a tidy, the next step is a List: a hand-picked set of accounts you can pin beside your Home tabs. X's help centre says a pinned List appears to the right of For You and Following ([X Help Center](https://help.x.com/en/using-x/x-lists)). For trimming For You itself, see [how to clean up your For You timeline](/guides/x/x-clean-up-for-you-timeline/), and for phrases you'd rather never see in either tab, [how to use muted words on X](/guides/x/x-muted-words/).
+
+Neither tab looks at what a post says. [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, does: it reads the posts and replies in your X timeline as you scroll, in For You, Following or a List, and folds likely slop into a one-line strip you can reopen (Hide mode) or marks it (Highlight mode). That means a "GM, who's building today?" post from an account you follow can fold while the planning committee notice stays put. [How it works](/how-it-works.html) explains what it scores. It runs on x.com in your desktop browser, not in the X app, and the free plan covers one feed with 250 checks a day. The [Slop Mop for X](/for/x/) page has more detail.
+
+[Add Slop Mop to your browser](/) and it folds the bait in whichever tab you choose.

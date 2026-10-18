@@ -5,6 +5,7 @@
   "description": "Use Medium's own controls to fix a stale or spammy For you feed: show less like this, mute topics, prune reading history and reset recommendations.",
   "summary": "Fix a Medium feed full of filler with show less like this, topic muting, reading history and the Refine recommendations page.",
   "updated": "2026-10-18",
+  "keyword": "clean up medium recommendations",
   "network": "medium",
   "publish_date": "2026-10-20",
   "verified": "2026-10-18",
@@ -21,7 +22,7 @@
 ---
 Medium builds your For you feed from what you follow and what you read, so the fastest fixes are to tell it what you don't want and to remove the reads that misled it. Use show less like this on bad stories, mute whole topics you never want, and prune your reading history on the Refine recommendations page. Expect the feed to change over a few days of use, not instantly.
 
-## Before you start
+## Before you clean up your Medium recommendations
 
 You need to be signed in. Everything below works in a desktop browser, and most of it works in the Medium app too. Where the app and the website differ, the steps say so. Medium changes its interface from time to time, so a button may be labelled or placed slightly differently from what's described here.
 
@@ -91,4 +92,6 @@ Some readers report that show less like this has little visible effect on its ow
 - Mute the writer or publication if one source is responsible for most of the filler. Medium lets you do this from the three-dot menu on a story preview.
 - Switch to the Following feed in the homepage sidebar for a while. It shows stories only from writers and publications you follow, newest first, with no recommendations mixed in.
 
-None of these controls judge the writing itself. They remove sources and subjects. A topic you like can still serve you a stream of [scroll-stopper](/patterns/scroll-stopper/) headlines padded with [hype words](/patterns/hype-words/), and Medium has no setting for "useful only". Slop Mop is coming soon to Medium to help with that part; until then, the controls above are the best tools you have.
+None of these controls judge the writing itself. They remove sources and subjects. A topic you like can still serve you a stream of [scroll-stopper](/patterns/scroll-stopper/) headlines padded with [hype words](/patterns/hype-words/), and Medium has no setting for "useful only". That part is what [Slop Mop](/how-it-works.html) does. It's a browser extension that reads the stories in your Medium feed and the articles you open, and scores the writing itself against nine tells of slop, with credit for stories that are useful or sound like a person. Hide mode folds likely filler into a one-line strip you can reopen; Highlight mode marks it and leaves it in place. It never mutes or unfollows anything for you, so the controls above still do the work on sources and subjects. It runs in desktop browsers, not the Medium app, and the free plan covers one feed with 250 checks a day.
+
+The same clean-up works on [LinkedIn](/guides/linkedin/linkedin-clean-up-feed/) and [Reddit](/guides/reddit/reddit-clean-up-home-feed/), where Slop Mop also runs. [Add Slop Mop to your browser](/) and it folds the filler that gets past your mutes.

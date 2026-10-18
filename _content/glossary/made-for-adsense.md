@@ -2,6 +2,7 @@
 {
   "title": "Made for AdSense",
   "seo_title": "Made for AdSense (MFA) sites: what they are · Slop Mop",
+  "keyword": "made for adsense",
   "description": "A Made for AdSense (MFA) site exists only to pull in visitors and get them clicking ads. Where the label came from and how to spot one.",
   "summary": "A website with no real value of its own, built only to draw visitors in and get them to click on ads.",
   "updated": "2026-10-18",
@@ -25,7 +26,7 @@
   ]
 }
 ---
-## What it means
+## What Made for AdSense means
 
 "Made for AdSense", shortened to MFA, is a derogatory label for a website built to earn advertising money and nothing else. Its pages exist to rank in search, catch a visitor, and put them in front of as many ad units as possible. Whatever text is on the page is there to give the ads something to sit beside.
 
@@ -33,9 +34,9 @@ AdSense is Google's programme for placing ads on other people's websites and sha
 
 Many MFA sites are [scraper sites](/glossary/scraper-site/): they copy content from elsewhere, rearrange it lightly, and wrap it in ads. Others are thin, generic articles written around popular search terms.
 
-## Where it came from
+## Where the Made for AdSense label came from
 
-The label comes from the search-optimisation world of the 2000s, when ad networks made it possible to earn money from almost any page that drew traffic. Wikipedia describes MFA sites as having "no redeeming value except to lure visitors to the website for the sole purpose of clicking on advertisements", and notes they are treated as search engine spam because they fill results with pages that repeat what better sources already say.
+The label comes from the search-optimisation world of the 2000s, when ad networks made it possible to earn money from almost any page that drew traffic. [Wikipedia](https://en.wikipedia.org/wiki/Scraper_site) describes MFA sites as having "no redeeming value except to lure visitors to the website for the sole purpose of clicking on advertisements", and notes they are treated as search engine spam because they fill results with pages that repeat what better sources already say.
 
 The economics haven't changed much since; the cost of producing the filler has. Pages that once had to be scraped or written cheaply by hand can now be generated in bulk.
 
@@ -61,4 +62,6 @@ Signs you've landed on an MFA page:
 
 ## How Slop Mop sees it
 
-The filler on MFA pages leans on [stiff phrasing](/patterns/stiff-phrasing/) and generic claims, which are among the signs Slop Mop scores. Slop Mop is live on LinkedIn today; support for the websites and articles you read is coming soon.
+The filler on MFA pages leans on [stiff phrasing](/patterns/stiff-phrasing/) and generic claims, which are among the signs Slop Mop scores. Slop Mop reads the websites and articles you open, as part of Slop Mop XL, so an introduction like the first one above can be folded or marked before you scroll past three ads looking for the answer. It doesn't block the ads themselves; [Slop Mop vs ad blockers](/compare/slop-mop-vs-ad-blockers/) covers the difference.
+
+[Add Slop Mop to your browser](/) and it folds this kind of filler for you.

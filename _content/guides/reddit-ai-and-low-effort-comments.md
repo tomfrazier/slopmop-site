@@ -5,6 +5,7 @@
   "description": "A four-question test for Reddit comments that skips filler and AI-sounding answers, keeps terse useful replies, and doesn't depend on guessing the author.",
   "summary": "A four-question test for Reddit comments: keep the specific, skip the generic, whether a person or a model wrote it.",
   "updated": "2026-10-18",
+  "keyword": "low-effort reddit comments",
   "network": "reddit",
   "publish_date": "2026-11-10",
   "verified": "2026-10-18",
@@ -25,7 +26,7 @@ Readers used to skim for length and grammar: long, careful answers were worth re
 
 Meanwhile some of the best comments on Reddit are short, blunt and full of typos. So length and polish tell you very little now. The content does.
 
-## The four-question test
+## The four-question test for low-effort Reddit comments
 
 ### 1. Is it about this post?
 
@@ -98,7 +99,9 @@ If a comment is generic, a downvote says so. If it looks like spam, report it.
 
 Reddit auto-collapses comments it detects as likely spam or low quality. Moderators see these uncollapsed and labelled "Potential Spam" in communities they moderate, and can approve them ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/32042638057748-Why-are-some-comments-labeled-as-Potential-Spam)). So a collapsed comment you open may already have been judged by the filter; the filter can be wrong, but it's a hint.
 
-The filter aims at spam. A polite, generic, rule-abiding answer will sail through it, and that's the kind this test is for. Slop Mop makes this kind of call about the writing on LinkedIn today, and it's coming soon to Reddit.
+The filter aims at spam. A polite, generic, rule-abiding answer will sail through it, and that's the kind this test is for.
+
+Slop Mop makes the same kind of call on Reddit. It reads the comments as well as the posts in your feed and scores the writing against [nine tells](/how-it-works.html#tells), with "useful to readers" counting in a reply's favour. Like the test above, it judges the writing rather than guessing who typed it, so it isn't an AI detector, and it can be wrong; your vote overrules it.
 
 ## What to do once you've judged
 
@@ -106,3 +109,5 @@ The filter aims at spam. A polite, generic, rule-abiding answer will sail throug
 - **Vote.** Reddiquette asks you to upvote comments that contribute and downvote ones that don't ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette)). Votes push the specific answers up for the next reader.
 - **Reply with the missing detail**, if you have it. A correction with a source helps everyone who reads the thread later.
 - **Report spam** when a comment is promotional, copied, or posted the same way across many threads. The karma-farming signs in [How to spot karma farming and repost bots on Reddit](/guides/reddit/reddit-spot-karma-farming/) apply to comments too.
+
+[Add Slop Mop to your browser](/) and it folds generic comments like these so the specific ones are easier to find.

@@ -5,6 +5,7 @@
   "description": "A scraper site copies other websites' content, often lightly reworded, and republishes it to earn from ads. How they work and what Google's policies say.",
   "summary": "A website that copies other sites' content, sometimes lightly reworded or run through AI, and republishes it to earn ad money.",
   "updated": "2026-10-18",
+  "keyword": "scraper site",
   "term": "Scraper site",
   "aliases": ["blog scraping"],
   "punchline": "Someone else's article, now with more ads.",
@@ -27,7 +28,7 @@
   ]
 }
 ---
-## What it means
+## What a scraper site is
 
 A scraper site takes content from other websites, usually automatically, and publishes it as its own. The usual aim is search traffic and the ad money that comes with it. The copied article ranks for the same searches as the original, the visitor lands on a page wrapped in adverts, and the person who wrote it gets nothing, not even a link.
 
@@ -35,11 +36,11 @@ Some scrapers copy word for word. Others disguise the copy by swapping in synony
 
 Scraping in itself is a neutral technique. Search engines and price-comparison sites collect content from other sites too. The term "scraper site" is for the ones that republish it without adding anything.
 
-## Where it came from
+## Where scraper sites came from
 
 Scraper sites are closely tied to search advertising. Wikipedia's article ties them to "Made for AdSense" sites, pages built only to attract visitors who might click an ad, and to the auto-blogs that were common among black-hat marketers before Google's Panda algorithm update. Some operators buy expired domains so the copied content inherits the old site's search ranking.
 
-Google's spam policies define abusive scraping as taking content from other sites, "often through automated means," and hosting it "with the purpose of manipulating search rankings". Examples include republishing without adding original content or citing the source, and copying content with only slight changes such as synonyms. In March 2024 Google added a broader "scaled content abuse" policy covering many pages made mainly to manipulate rankings, however they're produced, including scraping run through "automated transformations like synonymizing, translating, or other obfuscation techniques".
+[Google's spam policies](https://developers.google.com/search/docs/essentials/spam-policies) define abusive scraping as taking content from other sites, "often through automated means," and hosting it "with the purpose of manipulating search rankings". Examples include republishing without adding original content or citing the source, and copying content with only slight changes such as synonyms. In March 2024 Google added a broader [scaled content abuse](/glossary/scaled-content-abuse/) policy covering many pages made mainly to manipulate rankings, however they're produced, including scraping run through "automated transformations like synonymizing, translating, or other obfuscation techniques".
 
 ## Examples
 
@@ -60,4 +61,4 @@ A search for a niche software error returns a forum thread, then three near-iden
 
 ## How Slop Mop sees it
 
-Slop Mop judges the writing in front of you and can't tell copied text from the original. Spun text often trips [stiff phrasing](/patterns/stiff-phrasing/), but scraping itself is outside what Slop Mop judges. It's live on LinkedIn today; articles and websites are coming soon.
+Slop Mop judges the writing in front of you and can't tell copied text from the original. On the articles and websites you read (part of Slop Mop XL), spun text often trips [stiff phrasing](/patterns/stiff-phrasing/), but scraping itself is outside what it judges; [How it works](/how-it-works.html) explains what it does score. [Add Slop Mop to your browser](/) and it checks the writing on the sites you read.

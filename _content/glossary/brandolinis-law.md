@@ -5,6 +5,7 @@
   "description": "Brandolini’s law says refuting nonsense takes far more effort than producing it. Who coined it in 2013, what it explains, and why it matters for slop.",
   "summary": "The adage that refuting nonsense takes an order of magnitude more effort than producing it.",
   "updated": "2026-10-18",
+  "keyword": "brandolini's law",
   "term": "Brandolini’s law",
   "aliases": ["bullshit asymmetry principle"],
   "punchline": "Ten minutes to make it, three days to debunk it.",
@@ -24,9 +25,9 @@
   ]
 }
 ---
-## What it means
+## What Brandolini’s law means
 
-Brandolini’s law, also called the bullshit asymmetry principle, is an internet adage about effort. In its usual form:
+Brandolini’s law, also called the [bullshit](/glossary/bullshit/) asymmetry principle, is an internet adage about effort. In its usual form:
 
 > The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it.
 
@@ -34,13 +35,13 @@ Making a false or empty claim is quick. Checking it means finding the original s
 
 "Order of magnitude" means roughly ten times. The figure isn't a measurement. The adage is a rule of thumb, and its use is in naming the imbalance.
 
-## Where it came from
+## Where Brandolini’s law came from
 
-Alberto Brandolini, an Italian programmer, formulated it publicly in January 2013. He said he was inspired by reading Daniel Kahneman's *Thinking, Fast and Slow* shortly before watching an Italian political talk show featuring former Prime Minister Silvio Berlusconi and the journalist Marco Travaglio.
+Alberto Brandolini, an Italian programmer, [formulated it publicly](https://en.wikipedia.org/wiki/Brandolini%27s_law) in January 2013. He said he was inspired by reading Daniel Kahneman's *Thinking, Fast and Slow* shortly before watching an Italian political talk show featuring former Prime Minister Silvio Berlusconi and the journalist Marco Travaglio.
 
 The law is often cited in discussions of misinformation. A standard example is the false claim that the MMR vaccine causes autism: the 1998 paper behind it was retracted and its lead author lost his medical licence, yet decades of research and public education haven't made the claim go away. During the COVID-19 pandemic, the Radio-Canada disinformation journalist Jeff Yates described fact-checking a YouTube video full of medical claims: "It took this guy 15 minutes to make his video and it took me three days to fact-check."
 
-It has picked up new relevance with generative AI. When producing plausible text costs almost nothing, the side doing the checking falls further behind.
+It has picked up new relevance with generative AI. When producing plausible text costs almost nothing, and [AI slop](/glossary/ai-slop/) fills the gaps, the side doing the checking falls further behind.
 
 ## Examples
 
@@ -61,4 +62,6 @@ The first takes seconds to write and an afternoon to verify, because it names no
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't fact-check, so it can't refute anything. What it does is cheaper than refuting: it reads a post's writing for the signs of low effort and folds likely slop away before you spend attention on it. It's live on LinkedIn, where you can see why it made each call and overrule it.
+Slop Mop doesn't fact-check, so it can't refute anything. What it does is cheaper than refuting: it reads the writing for the signs of low effort and folds likely slop away before you spend attention on it. It reads posts on LinkedIn, X, Reddit, Facebook, Substack and Medium, the articles and websites you open and, with Slop Mop XL, your Gmail and Outlook. In your feeds you can see why it made each call and overrule it.
+
+[Add Slop Mop to your browser](/) and it does that first cheap pass for you.

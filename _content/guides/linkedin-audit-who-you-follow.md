@@ -5,6 +5,7 @@
   "description": "Prune your LinkedIn follows in one sitting: find the Following list, unfollow without disconnecting, review newsletters, and undo any mistakes.",
   "summary": "Open your Following list, unfollow in one sitting without disconnecting anyone, then clear out newsletters you no longer read.",
   "updated": "2026-10-18",
+  "keyword": "audit who you follow on linkedin",
   "network": "linkedin",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
@@ -21,7 +22,7 @@
 ---
 Your full list of follows lives under **My Network**, then **Manage my network**, on the left of the page on desktop. Open it, work down the list, and click **Following** next to anyone you want to drop, then confirm **Unfollow**. You stay connected to anyone you unfollow, nobody is told, and newsletters have their own list on the same page.
 
-## Before you start
+## Before you audit who you follow on LinkedIn
 
 Unfollowing one person at a time from the feed works, but it only catches people on the days they annoy you. A once-a-year pass through the whole list catches the rest: old colleagues who switched to posting motivational parables, Pages you followed for a single job ad, and influencers you followed during a career change three years ago.
 
@@ -100,4 +101,8 @@ In the app, tap your profile photo, then **Settings & Privacy**, **Account prefe
 
 ## Pruning versus filtering
 
-An audit removes people whose posts you never want. It can't help with the people who post one useful thing and four empty ones each month. For them, filtering by post fits better than unfollowing. Slop Mop, a free Chrome extension that's live on LinkedIn, folds individual posts by their writing and leaves the rest of that person's posts alone. It doesn't unfollow or mute anyone, so your Following list stays exactly as you left it.
+An audit removes people whose posts you never want. It can't help with the people who post one useful thing and four empty ones each month. For them, filtering by post fits better than unfollowing. [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads LinkedIn posts as you scroll, folds the ones that read like slop (bait, [too-tidy stories](/patterns/too-tidy-story/), hype) and leaves the rest of that person's posts alone. [How it works](/how-it-works.html) lists what it checks. It doesn't unfollow or mute anyone, so your Following list stays exactly as you left it. The free plan covers one feed with 250 checks a day.
+
+The same audit is worth doing on X, Reddit and Facebook, where follows pile up just as quietly. Slop Mop reads posts on those networks too, and Slop Mop XL covers every feed; the [X Lists guide](/guides/x/x-lists-cleaner-feed/) covers the X version of a pruned feed.
+
+[Add Slop Mop to your browser](/) and it folds the empty posts from the people you keep.

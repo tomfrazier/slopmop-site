@@ -4,6 +4,7 @@
   "seo_title": "How to tell if a product review site tested anything",
   "description": "Spot 'best of' lists by people who never touched the product: check for their own photos, measurements, drawbacks, test methods and disclosure.",
   "summary": "Six checks for review sites: own photos, numbers, drawbacks, comparisons, a test method and honesty about how the site earns money.",
+  "keyword": "product review sites",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-12-01",
@@ -18,13 +19,13 @@
 ---
 Look for proof that someone used the product: their own photos, measurements, a description of how they tested, and drawbacks. A review that only lists features and praise, with a "Check price" button under every item, was probably written from the product page. If a "best" list can't say why its winner beat the others, with evidence, treat it as advertising.
 
-## Why review sites are hard to judge
+## Why product review sites are hard to judge
 
 Most review sites earn money through affiliate links: when you buy through their link, the seller pays them a commission. That's a reasonable business, and plenty of careful testers rely on it. It also means a page can make money without anyone testing anything, as long as it ranks and you click.
 
 Google's guidance helps here, because it spells out what a good review should contain. Its [advice for review writers](https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews) asks for evidence "of your own experience" such as visuals, "quantitative measurements", benefits and drawbacks "based on your own original research", and, when something is called the best, "first-hand supporting evidence". Its [spam policies](https://developers.google.com/search/docs/essentials/spam-policies) name the opposite, "thin affiliation": affiliate pages whose product descriptions and reviews are "copied directly from the original merchant without any original content or added value". Those two documents make a good checklist for readers too.
 
-## Six checks
+## Six checks for product review sites
 
 ### 1. Whose photos are these?
 
@@ -88,4 +89,8 @@ Look for a disclosure near the top of the page or in the footer explaining affil
 
 Good review sites are worth keeping. Bookmark them, and for future searches add the site directly: `site:example-reviews.com cordless vacuum` searches only that site, using the operator from [How to get fewer slop results in Google search](/guides/websites/web-fewer-slop-search-results/). For a site that keeps failing these checks, [block it](/guides/websites/web-block-sites-search-results/) where your search engine allows.
 
-For claims that matter, such as safety ratings or health effects, trace them to the original source using the steps in [How to check a blog post's sources](/guides/websites/web-check-blog-post-sources/). Slop Mop is coming soon to websites; the checks above work on any review page today.
+For claims that matter, such as safety ratings or health effects, trace them to the original source using the steps in [How to check a blog post's sources](/guides/websites/web-check-blog-post-sources/). The checks above work on any review page, with nothing installed.
+
+Slop Mop can flag the weakest pages before you start. On the articles you read, it scores the text with the same twelve questions it uses on social posts, including no-catch promises and empty praise ([how it works](/how-it-works.html)), and marks or folds a low-value page. It can't tell whether anyone held the product, so photos, measurements and a test method are still yours to check. Websites are part of Slop Mop XL (US$5.99 a month).
+
+[Add Slop Mop to your browser](/) and it marks the review pages written from the box.

@@ -5,6 +5,7 @@
   "description": "Pink-slime journalism is cheap, templated local news that looks independent but serves a hidden agenda. Where the term came from, examples and criticism.",
   "summary": "Low-cost, often templated or automated 'local news' sites that look independent but quietly serve a political or commercial agenda.",
   "updated": "2026-10-18",
+  "keyword": "pink-slime journalism",
   "term": "Pink-slime journalism",
   "aliases": ["pink slime"],
   "punchline": "Local news, minus the news, plus an agenda.",
@@ -25,7 +26,7 @@
   ]
 }
 ---
-## What it means
+## What pink-slime journalism means
 
 Pink-slime journalism is "local news" that isn't what it appears to be. A site has a town's name in its masthead and a feed of stories about school boards, property sales and council meetings, but its articles are templated, automated or written cheaply by people far away, and the operation is funded by someone with an agenda the reader isn't told about.
 
@@ -37,9 +38,9 @@ According to the journalism institute Poynter, the defining traits are:
 
 The local framing is the point. Priyanjana Bengani of the Tow Center for Digital Journalism at Columbia University has said the sites mimic local outlets to take advantage of the trust people place in local journalism.
 
-## Where it came from
+## Where pink-slime journalism came from
 
-The journalist Ryan Smith coined the term in 2012. "Pink slime" was the nickname for a meat by-product used as filler in processed meat, sometimes passed off as something better. The comparison was to news that looks like the real thing and is mostly filler.
+The journalist Ryan Smith coined the term in 2012, according to [Wikipedia's account](https://en.wikipedia.org/wiki/Pink-slime_journalism). "Pink slime" was the nickname for a meat by-product used as filler in processed meat, sometimes passed off as something better. The comparison was to news that looks like the real thing and is mostly filler.
 
 Writers for one such network, some using pen names, were paid between $0.35 and $24 per article in 2012. In October 2020 the New York Times reported rates of $3 to $36 per article.
 
@@ -63,4 +64,4 @@ The main difficulty with the label is its width. It covers both thin automated f
 
 ## How Slop Mop sees it
 
-Slop Mop judges the writing in a post, not who funds the site it links to, so it can't spot pink slime by its ownership. That question is outside what it judges.
+Slop Mop judges the writing, not who funds the site, so it can't spot pink slime by its ownership. That question is outside what it judges. On the articles and websites you read (part of Slop Mop XL), it scores the text itself: a templated story with no reporting may score poorly, while a polished mouthpiece can pass, which is why checking who funds a site still matters. [How it works](/how-it-works.html) sets out what it does judge, and there's more for reporters on the page [for journalists](/for/journalists/); the related [content farm](/glossary/content-farm/) entry covers the commercial cousin. [Add Slop Mop to your browser](/) and it checks the writing on the local news you read.

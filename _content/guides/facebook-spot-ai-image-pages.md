@@ -5,6 +5,7 @@
   "description": "Repeated captions, a renamed Page, a link in the first comment: how to recognise Facebook Pages that farm reactions with AI images, and what to do about them.",
   "summary": "The signs of a Facebook Page farming reactions with AI images, from copied captions to a renamed Page, and how to check one in a minute.",
   "updated": "2026-10-18",
+  "keyword": "facebook ai image pages",
   "network": "facebook",
   "publish_date": "2026-10-27",
   "verified": "2026-10-18",
@@ -27,7 +28,7 @@ Image generators have got good enough that hunting for a sixth finger is unrelia
 
 The behaviour around the picture is harder to fake. The best public study of these Pages, by Renee DiResta and Josh Goldstein, followed 120 Facebook Pages that had each posted at least 50 AI-generated images. Their mean follower count was about 129,000, and one post with an AI image was among the 20 most viewed pieces of content on Facebook in the third quarter of 2023, with 40 million views ([arXiv](https://arxiv.org/abs/2403.12838)). The signs below come from what that study found and from how these posts are built.
 
-## What to look for
+## Signs of an AI image page on Facebook
 
 ### 1. A caption that's doing the asking
 
@@ -83,4 +84,4 @@ Meta said in April 2025 that accounts posting captions unrelated to their images
 3. **Report it if it's selling something that doesn't exist** or asking for personal details. Report post is in the same menu.
 4. **Tell the person who shared it, privately**, if it's a friend or relative. A public correction tends to embarrass rather than help.
 
-Slop Mop, which judges writing in LinkedIn posts today, is coming soon to Facebook. It reads the words, so for these Pages the copied, reaction-fishing caption is the part it would judge.
+Slop Mop reads Facebook feed posts, including those from Pages and groups you can see, and judges the words rather than the picture. For these Pages the copied, reaction-fishing caption is the part it scores, against tells such as engagement bait and the too-tidy sad backstory ([how the score works](/how-it-works.html)). It doesn't analyse images or check Page transparency, so the one-minute check above is still the surest test. [Add Slop Mop to your browser](/) and it folds reaction-fishing posts like these into a one-line strip you can reopen.

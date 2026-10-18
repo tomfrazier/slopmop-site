@@ -5,6 +5,7 @@
   "description": "How to judge a paid Substack before you subscribe: what to read first, trials and teaser posts, renewal, pausing, and Substack's 7-day refund rule.",
   "summary": "A reader's checklist for paid Substacks: what to read before paying, how trials and renewals work, and when you can get money back.",
   "updated": "2026-10-18",
+  "keyword": "substack worth paying for",
   "network": "substack",
   "publish_date": "2026-11-10",
   "verified": "2026-10-18",
@@ -26,7 +27,7 @@ A paid Substack is worth it when the paid posts give you something you'd otherwi
 Most publications give away enough to judge them. Spend 15 minutes here before spending any money.
 
 1. **Open the archive and sort by newest.** Check how often the writer actually published in the last three months, and how many of those posts were paid. A publication that promises weekly essays and managed four since summer is telling you something.
-2. **Read three recent free posts in full.** Free posts are the writer's advert. If they're padded, the paid ones are unlikely to be better. Our [guide to spotting padded posts](/guides/substack/substack-spot-padded-ai-posts/) has a two-minute test.
+2. **Read three recent free posts in full.** Free posts are the writer's advert. If they're padded, the paid ones are unlikely to be better. Our [guide to spotting padded posts](/guides/substack/substack-spot-padded-ai-posts/) has a two-minute test. If you read on a computer, [Slop Mop](/how-it-works.html) runs a similar check on the posts and Notes you open in Substack's web app and folds the likely slop, which gives you a quick read on how much of a writer's free output holds up.
 3. **Read the preview of a paid post.** Many paid posts show the opening before the paywall. Judge whether the opening is doing work or just warming up.
 4. **Look at the comments on a paid post.** Where they're visible, check whether there are any and whether they say anything. A paid community that's meant to be the main benefit should show signs of life.
 5. **Read the About page and the paid pitch.** Note exactly what's promised: how many posts, what kind, any extras such as chat or archives.
@@ -44,7 +45,7 @@ Paid subscribers get one long post a month on UK housing data, with the spreadsh
 
 The first could be on any publication. The second tells you the subject, the frequency, what you get on top and when you won't get it, which is everything you need to price it.
 
-## The worth-it checklist
+## Is a Substack newsletter worth paying for? The checklist
 
 Answer each of these with yes or no. Four or more yeses is a reasonable case for paying; two or fewer is a reasonable case for staying free.
 
@@ -78,8 +79,10 @@ Refunds are mainly up to the writer, and Substack asks you to contact them first
 2. **A dormant publication**: no posts for at least 6 months for an annual subscriber, or at least 1 month from payment for a monthly one.
 3. **Payment errors**, such as a duplicate charge on the same account at the same time.
 
-Refunds can take up to 10 business days to show. App Store purchases are refunded at Apple's discretion. These are Substack's published policies as of 18 October 2026; check the current page before relying on them.
+Refunds can take up to 10 business days to show. App Store purchases are refunded at Apple's discretion. These are Substack's published policies as of 18 October 2026; check the [current refund policy page](https://support.substack.com/hc/en-us/articles/8915992656660-What-is-Substack-s-refund-policy) before relying on them.
 
 ## If you're on the fence
 
 Pay monthly for two months instead of annually. That's long enough to see whether the writer keeps their schedule, and short enough that a disappointing run costs little. If you finish the two months having read most of what arrived, switch to annual if it's cheaper. If you haven't, cancel and stay on the free list.
+
+[Add Slop Mop to your browser](/) and it folds padded free posts while you're deciding.

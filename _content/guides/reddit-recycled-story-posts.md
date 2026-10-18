@@ -5,6 +5,7 @@
   "description": "How to spot recycled, invented and rage-bait story posts in Reddit advice and confession communities, and when a repeated question deserves an answer.",
   "summary": "Perfect villains, escalating updates and titles built for outrage: how to tell a recycled or invented Reddit story from a real one.",
   "updated": "2026-10-18",
+  "keyword": "recycled reddit story posts",
   "network": "reddit",
   "publish_date": "2026-11-24",
   "verified": "2026-10-18",
@@ -25,7 +26,7 @@ Story posts are the long text posts in advice, relationship, workplace and confe
 
 The account-level signs, like karma split and posting history, are in [How to spot karma farming and repost bots on Reddit](/guides/reddit/reddit-spot-karma-farming/). This guide is about reading the story itself.
 
-## What to look for
+## Signs of a recycled Reddit story post
 
 ### The title does the work
 
@@ -89,9 +90,11 @@ A repeated question from a real beginner deserves a pointer to the wiki or an ea
 1. **Decide whether to read on.** If three or more of the signs above stack up, skim the top comment and move on. The thread is entertainment, at best.
 2. **Don't add to the pile.** A comment on a farmed story helps it rank, whatever the comment says. That includes "this is fake".
 3. **Report it if it's a repost or breaks the rules.** Use the overflow menu (three dots) and **Report** ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/360058309512-How-do-I-report-a-post-or-comment)). Many story communities have rules against reposts and fiction; choose that rule if there is one.
-4. **Mute the community** if most of its top posts read like this. [How to mute a subreddit on Reddit](/guides/reddit/reddit-mute-communities/) has the steps.
+4. **Mute the community** if most of its top posts read like this. [How to mute Reddit communities (subreddits)](/guides/reddit/reddit-mute-communities/) has the steps.
 5. **Hold back in public.** Reddiquette asks for "innocent until proven guilty" unless there's obvious proof ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette)). A real person in a bad situation reading "obviously fake" in the replies is a worse outcome than a fake story getting one more upvote.
 
 ## Why it matters
 
-A story community where half the posts are invented trains readers to expect cartoon villains and tidy endings, and makes real, messy problems look less convincing by comparison. It also feeds the worry, scaled to the whole web, that most of what you read online is generated or staged; that's the [dead internet theory](/glossary/dead-internet-theory/). Reading for the signs above lets you keep enjoying the communities without taking every story at face value. Slop Mop, which makes this kind of call about posts on LinkedIn today, is coming soon to Reddit.
+A story community where half the posts are invented trains readers to expect cartoon villains and tidy endings, and makes real, messy problems look less convincing by comparison. It also feeds the worry, scaled to the whole web, that most of what you read online is generated or staged; that's the [dead internet theory](/glossary/dead-internet-theory/). Reading for the signs above lets you keep enjoying the communities without taking every story at face value.
+
+Slop Mop reads Reddit posts and comments with two of these signs built in: the outrage title is its scroll-stopper tell and the neat ending is its too-tidy story tell, two of the [nine tells it scores](/how-it-works.html#tells). It can't tell you whether a story happened, and it doesn't search for earlier versions, so the familiarity check is still yours. [Add Slop Mop to your browser](/) and it folds story posts built like these into a one-line strip you can reopen.

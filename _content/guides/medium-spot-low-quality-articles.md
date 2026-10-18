@@ -5,6 +5,7 @@
   "description": "A quick checklist for judging a Medium story before you spend ten minutes on it: claim density, sources, first-hand detail, repetition and a real ending.",
   "summary": "A two-minute check for Medium stories: look for specific claims, sources and first-hand detail before you commit to the full read.",
   "updated": "2026-10-18",
+  "keyword": "spot low-quality medium articles",
   "network": "medium",
   "publish_date": "2026-10-27",
   "verified": "2026-10-18",
@@ -24,7 +25,7 @@ Medium stories are long by design, and the reading time under the headline is a 
 
 The problem is old. In March 2024 Google [described](https://developers.google.com/search/blog/2024/03/core-update-spam-policies) a new spam policy against "scaled content abuse": large amounts of unoriginal content made to rank, whether produced by automation, people or both. Open platforms such as Medium attract the same kind of writing, and the check below works whoever or whatever wrote the piece.
 
-## The two-minute check
+## Spot a low-quality Medium article: the two-minute check
 
 ### 1. Read the headline against the reading time
 
@@ -92,4 +93,8 @@ One weak sign isn't a verdict. A fine engineering post can have a clumsy headlin
 
 ## What to do with a bad one
 
-Close it, then use show less like this from your feed so Medium learns from it. If one writer or publication keeps failing the check, mute them, and follow the writers who pass it. The [recommendations clean-up guide](/guides/medium/medium-clean-up-recommendations/) has the steps. Slop Mop, which applies a similar set of questions to posts automatically, is coming soon to Medium.
+Close it, then use show less like this from your feed so Medium learns from it. If one writer or publication keeps failing the check, mute them, and follow the writers who pass it. The [recommendations clean-up guide](/guides/medium/medium-clean-up-recommendations/) has the steps.
+
+If you'd rather not run the check by hand on every story, [Slop Mop](/how-it-works.html) applies a similar set of questions automatically. It reads the stories in your Medium feed and the articles you open, scores the writing against nine tells with credit for useful, first-hand detail, and folds the likely filler into a strip you can reopen. Like the check above, it judges the writing and isn't an AI detector. It runs in Chrome, Edge, Firefox, Safari and other Chromium browsers on a computer, not in the Medium app.
+
+The same check works on [articles elsewhere on the web](/guides/websites/web-spot-ai-slop-articles/), which Slop Mop also reads. [Add Slop Mop to your browser](/) and it folds stories that fail the check for you.

@@ -5,6 +5,7 @@
   "description": "There's no off switch for Facebook's suggested posts. Not interested, Hide, snooze and Your algorithm cut them down, and the Feeds tab skips them.",
   "summary": "No switch turns suggested posts off, but Not interested, Hide, snooze and the Feeds tab cut them down. What each does, on app and desktop.",
   "updated": "2026-10-18",
+  "keyword": "facebook suggested posts",
   "network": "facebook",
   "publish_date": "2026-10-20",
   "verified": "2026-10-18",
@@ -24,7 +25,7 @@
 ---
 Facebook has no setting that switches suggested posts off. What you can do is tell it, post by post, what you don't want: **Not interested** on a post you'd rather not see, **Hide** in the app, and a 30-day snooze for a Page or group you're sick of. For a feed with no suggestions at all, open the **Feeds** tab, which shows only recent posts from people, Pages and groups you follow.
 
-## Why your feed fills up with strangers
+## Why Facebook suggested posts fill your feed
 
 Facebook ranks your main feed with machine learning that predicts what you're likely to find valuable, based on what you've watched, liked and commented on, plus signals such as how many reactions a post already has ([Facebook Help](https://www.facebook.com/help/166738576721085)). Posts from accounts you don't follow are part of that mix. In a 2024 study of AI-generated image spam, researchers Renee DiResta and Josh Goldstein worked through Meta's own Widely Viewed Content Reports and found that views of "unconnected posts" (from Pages people didn't follow) rose from 8% of Feed views in mid-2021 to 24% in the third quarter of 2023 ([arXiv](https://arxiv.org/abs/2403.12838)).
 
@@ -74,6 +75,10 @@ When you want a session with no suggestions, skip the main feed. The **Feeds** t
 
 The catch: when you close and reopen the app, Facebook goes back to the ranked feed. A later guide in this series covers getting the most out of Feeds and Favorites.
 
+## 6. Optional: fold the slop that still gets through
+
+Not interested trains the ranking slowly, one tap at a time. If you use Facebook in a desktop browser, Slop Mop reads the feed posts in front of you, including suggested posts from Pages and groups, and scores the writing against nine tells such as engagement bait and scroll-stoppers. Likely slop folds into a one-line strip you can reopen, and you can vote to overrule it. It doesn't tap Not interested for you or unfollow anything, so the steps above still do the long-term work. [How it works](/how-it-works.html) explains the score; the free plan covers one feed with 250 checks a day.
+
 ## What to mark first
 
 You'll get the biggest change for the least effort by spending your Not interested taps on the posts that are built to make you stop. Those are the ones the ranking system learns most from, because they're the ones people pause on.
@@ -97,4 +102,4 @@ The first is a suggested post that wants a reaction. The second is from a group 
 - **Stop engaging with the junk, even to complain.** A comment saying "this is fake" is still a comment.
 - **Check what you follow.** Some posts that look suggested are from groups you joined years ago or from friends' activity, such as comments on public posts ([Facebook Help](https://www.facebook.com/help/132021603539177)). Those need unfollow or snooze, covered in a later guide.
 
-Slop Mop, which reads posts and folds away low-value ones on LinkedIn today, is coming soon to Facebook. Until then, the controls above are the tools you have.
+[Add Slop Mop to your browser](/) and it folds suggested posts like these while your feedback does its slower work.

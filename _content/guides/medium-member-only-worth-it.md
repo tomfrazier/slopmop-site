@@ -1,10 +1,11 @@
 ---
 {
-  "title": "Is this Medium member-only story worth reading? How to judge from the preview",
+  "title": "Is this Medium member-only story worth it? How to judge from the preview",
   "seo_title": "Is a Medium member-only story worth it? Judge the preview",
   "description": "How to decide from the free preview whether a Medium member-only story deserves one of your limited reads or your membership time, with a quick checklist.",
   "summary": "Use the free preview of a Medium member-only story to decide whether it's worth a limited read: what to check and what to ignore.",
   "updated": "2026-10-18",
+  "keyword": "medium member-only worth it",
   "network": "medium",
   "publish_date": "2026-11-24",
   "verified": "2026-10-18",
@@ -31,7 +32,7 @@ One policy point is useful for readers. Medium's [AI content policy](https://hel
 
 For a member, a weak story costs time. For a non-member, it also costs one of a few reads that month. Either way, the paywall gives writers a reason to make the visible part as gripping as possible, and some put all their effort there. A good preview isn't proof of a good story, but a bad preview is strong evidence of a bad one.
 
-## The preview checklist
+## Is a Medium member-only story worth it? The preview checklist
 
 ### 1. Does the opening state a specific problem?
 
@@ -88,4 +89,6 @@ Membership removes the read limit but not the time cost. The same checklist appl
 
 ## If that doesn't work
 
-If you keep being disappointed after the paywall by the same writers or publications, mute them so their previews stop tempting you; the [muting guide](/guides/medium/medium-mute-writers-publications/) has the steps. Slop Mop is coming soon to Medium. For now, the preview is the best free sample you'll get, so read it as one.
+If you keep being disappointed after the paywall by the same writers or publications, mute them so their previews stop tempting you; the [muting guide](/guides/medium/medium-mute-writers-publications/) has the steps. On a computer, [Slop Mop](/how-it-works.html) can make the first cut for you. It reads the stories in your Medium feed and the articles you open, and folds the ones heavy on tells like the cliffhanger opening and the no-catch headline above, so fewer of them reach the point of costing you a read. It judges the writing, not the star, and it can be wrong: vote on a folded story and your vote wins in your feed.
+
+The preview is still the best free sample you'll get, so read it as one. [Add Slop Mop to your browser](/) and it folds the all-hook previews before you spend a read on them.

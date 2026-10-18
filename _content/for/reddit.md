@@ -1,13 +1,14 @@
 ---
 {
-  "title": "Slop Mop for Reddit",
-  "seo_title": "Slop Mop for Reddit: karma farms and filler · Slop Mop",
-  "description": "Karma farming, repost bots and low-effort comments: what slop looks like on Reddit, what Slop Mop plans to do there, and Reddit's own mute controls.",
-  "summary": "Coming soon to Reddit. Until then: how karma farming and filler comments work, and how to mute communities with Reddit's own tools.",
+  "title": "Slop Mop for Reddit: a feed filter for karma farms and filler",
+  "seo_title": "Reddit feed filter for karma farms and filler · Slop Mop",
+  "description": "A Reddit feed filter for posts and comments: how karma farming and filler work, what Slop Mop does in your feed and threads, and Reddit's own mute tools.",
+  "summary": "Slop Mop reads Reddit posts and comments as you scroll and folds or marks the reposts, filler replies and empty advice.",
+  "keyword": "reddit feed filter",
   "updated": "2026-10-18",
   "kind": "network",
   "audience": "Reddit readers",
-  "network_status": "soon",
+  "network_status": "live",
   "related": ["/patterns/engagement-bait/", "/patterns/empty-praise/", "/glossary/dead-internet-theory/", "/glossary/ai-slop/", "/for/developers/", "/for/researchers/"],
   "sources": [
     {"title": "Spam wiki", "publisher": "r/funny moderators, Reddit", "url": "https://www.reddit.com/r/funny/wiki/spam/", "date": ""},
@@ -57,15 +58,27 @@ Rinse it until the water runs mostly clear. For basmati I use 1 cup rice to 1¼ 
 
 The first two are cheap ways to collect votes. The third is [empty praise](/patterns/empty-praise/) followed by a list that could answer any cooking question. Repeated across a big community, they make it harder to find the person who actually knows. That worry, scaled up to the whole web, is what people mean by the [dead internet theory](/glossary/dead-internet-theory/).
 
-## What Slop Mop does here
+## How Slop Mop works as a Reddit feed filter
 
-Slop Mop for Reddit is coming soon. It doesn't work on Reddit yet.
+On Reddit, Slop Mop reads the posts in your feed and the comments in the threads you open, shortly before you reach them. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet. For each post or comment it sends the text and its public engagement counts to its scoring service. Your username and the author's are never sent.
 
-The plan is for it to do the same job it does on LinkedIn today. It will read posts ahead of you as you scroll, ask its twelve questions about the writing (nine tells of slop and three counter-signals such as "useful to readers"), and then either fold likely slop into a one-line strip you can reopen or leave it visible and mark it. Every call will come with its reasons, and your vote will overrule the model in your own feed.
+An AI model designed for calibrated decisions answers twelve questions about the writing: nine tells of slop, such as [engagement bait](/patterns/engagement-bait/) and empty praise, and three counter-signals: sounds like a person, useful to readers, and reader response. The result is a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure. Not sure means the post is left alone.
 
-It judges writing, and it isn't an AI detector, so a helpful answer drafted with AI should survive while a hand-typed "this!!" may not. It won't delete, report, mute or block anything, which on Reddit means voting and moderation stay with you and the community's moderators.
+What you see depends on your mode:
 
-## What you can do today
+- **Hide mode** folds a post or comment past your threshold into a one-line strip where it was. In a long thread, forty "this!!" replies shrink to forty thin lines, and the reply with the actual fix stands out. Click Show post to open any of them in place.
+- **Highlight mode** hides nothing. The item's mop turns yellow for Possibly slop and red for Likely slop.
+- **Sensitivity** is Mild, Moderate or Aggressive.
+
+Click the mop to open the details panel: the score, the strongest signs, and the Slopprint, a nine-spoke chart with one spoke per tell. A reposted sob story and a padded advice answer make different shapes, which is often more useful than the number. Three blue bars show the counter-signals, and "useful to readers" does a lot of work on Reddit, where one reply with a part number, a measurement or a step you can follow is the reason the thread exists.
+
+You can vote Not sure, No, Maybe or Probably on anyone else's post. Slop Mop's vote is separate from Reddit's up and down arrows: it overrides the model in your own feed, and Reddit never sees it.
+
+It judges the writing, and it isn't an AI detector, so a helpful answer drafted with AI survives while a hand-typed "this!!" may not. It never deletes, reports, mutes or blocks anything, which means voting, reporting and moderation stay with you and the community's moderators.
+
+The free plan covers the one feed you pick, with 250 checks a day, so Reddit can be that feed. Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every other feed, the sites you read, Gmail and Outlook, and a higher daily limit. The scoring is explained on [how it works](/how-it-works.html).
+
+## Reddit's own feed controls, and how they fit with Slop Mop
 
 Reddit's own tools work at the level of whole communities and accounts.
 
@@ -73,7 +86,7 @@ Reddit's own tools work at the level of whole communities and accounts.
 2. **Report obvious spam.** Moderators rely on reports to catch reposts and copied comments, and the spam wiki above lists the signs: stolen content, long-dormant accounts that suddenly post, and accounts with lots of post karma but almost no comments ([r/funny spam wiki](https://www.reddit.com/r/funny/wiki/spam/)).
 3. **Read smaller communities.** Karma farms aim for size. A niche subreddit with active moderators often has less of this.
 
-Muting is a big hammer: it removes a whole community's posts, including the good ones. Folding post by post, once it arrives, is the finer tool.
+Muting is a big hammer: it removes a whole community's posts, including the good ones. Use it for communities you never want, keep reporting the spam you spot, and let Slop Mop fold the filler post by post in the communities you keep. [Slop Mop vs unfollowing and muting](/compare/slop-mop-vs-unfollowing-and-muting/) sets the two side by side.
 
 ## Who it's for
 
@@ -85,3 +98,5 @@ People who use Reddit as a search engine with opinions, and want the answers wit
 - Anyone who reads advice communities and has noticed answers getting longer and less useful.
 
 If you moderate a community, the tells are also a quick way to explain why a post felt off.
+
+[Add Slop Mop to your browser](/) and it folds Reddit posts and comments like these for you.

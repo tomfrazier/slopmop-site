@@ -5,6 +5,7 @@
   "description": "Type AMEN, only geniuses can solve this, share if you agree: how to spot Facebook engagement bait, which requests are fair, and what to do instead.",
   "summary": "The common forms of Facebook engagement bait, from 'type AMEN' to copy-and-paste chains, how to tell them from a fair request.",
   "updated": "2026-10-18",
+  "keyword": "facebook engagement bait",
   "network": "facebook",
   "publish_date": "2026-11-10",
   "verified": "2026-10-18",
@@ -28,7 +29,7 @@ Meta defines engagement bait as posts that explicitly ask for votes, shares, com
 
 So the bait still exists, but it gets less reach, and every reaction it collects pushes against that.
 
-## The common forms
+## Common forms of Facebook engagement bait
 
 ### Vote with a reaction
 
@@ -88,4 +89,4 @@ Much of the bait in your feed arrives through people you know, who shared it bec
 
 If you've shared one before, you're in large company. These posts work because they're designed around ordinary politeness, and spotting them is a habit you build quickly. The [AI image Pages guide](/guides/facebook/facebook-spot-ai-image-pages/) covers the Pages that pair bait captions with generated pictures.
 
-Slop Mop, which already flags engagement bait in LinkedIn posts, is coming soon to Facebook.
+The same habit turns up on LinkedIn ("comment GUIDE for the template"), X and Reddit, and [engagement bait](/patterns/engagement-bait/) is one of the nine tells Slop Mop scores on all of them. On Facebook it reads feed posts, including those from Pages and groups you can see, and folds the ones that score as slop into a one-line strip you can reopen; a fair request with a specific outcome, like the tombola rota, barely registers ([how the score works](/how-it-works.html)). [Add Slop Mop to your browser](/) and it folds "type AMEN" posts for you.

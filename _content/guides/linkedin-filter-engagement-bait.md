@@ -5,6 +5,7 @@
   "description": "LinkedIn has no engagement-bait filter. How to spot comment-for-DM offers and reaction polls, hide them, report the ones that break the rules.",
   "summary": "Spot comment-for-DM offers, reaction polls and chain posts, then hide, unfollow or report them without blocking the people behind them.",
   "updated": "2026-10-18",
+  "keyword": "linkedin engagement bait",
   "network": "linkedin",
   "publish_date": "2026-10-27",
   "verified": "2026-10-18",
@@ -23,7 +24,7 @@
 ---
 LinkedIn has no setting that filters engagement bait as a type. You can hide each bait post with **Not interested**, unfollow people who post it every week, and report the worst kinds, which LinkedIn's own spam policy names. To fold bait automatically before you read it, you need a filter that reads the post itself.
 
-## What counts as engagement bait
+## What counts as engagement bait on LinkedIn
 
 Engagement bait is the part of a post whose only job is to collect comments, reactions or reposts so the post travels further. LinkedIn has said it doesn't want it. In May 2022 it announced it would stop promoting posts that "expressly ask or encourage the community to engage with content via likes or reactions" purely to boost reach ([Social Media Today](https://www.socialmediatoday.com/news/linkedin-updates-feed-algorithm-to-downrank-engagement-baiting-posts-and-po/623313/)). The format survived anyway.
 
@@ -68,7 +69,7 @@ LinkedIn's Professional Community Policies also say not to "agree with others ah
 
 A comment-for-a-PDF post usually isn't against the rules. Hide it rather than report it.
 
-## How to filter it, step by step
+## How to filter LinkedIn engagement bait, step by step
 
 ### 1. Don't comment the keyword
 
@@ -97,9 +98,11 @@ To report a single comment, open the comments, click the **More** icon on that c
 
 ### 5. Fold bait automatically
 
-Steps 2 to 4 only work after you've seen the post. Slop Mop, a free extension for Chrome and other Chromium browsers, reads LinkedIn posts as you scroll and scores them on nine tells, one of which is engagement bait. A genuine question at the end of a useful post barely registers; keyword giveaways and repost prompts do.
+Steps 2 to 4 only work after you've seen the post. [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads LinkedIn posts as you scroll and scores them on nine tells, one of which is engagement bait ([How it works](/how-it-works.html) has all nine). A genuine question at the end of a useful post barely registers; keyword giveaways and repost prompts do.
 
 A single clumsy "follow for more" won't fold a post on its own, because the score is cut when only one tell stands out. Bait usually travels with a dramatic hook and some hype words, and that combination is what gets flagged. If you're unsure, start in Highlight mode, which marks posts and hides nothing, then switch to Hide once you trust the calls. Free covers one feed with 250 checks a day, and it doesn't touch the LinkedIn app.
+
+The same giveaways run on X ("Reply 'THREAD' and I'll DM you"), Facebook and Substack Notes. Slop Mop reads posts on those networks too, and Slop Mop XL (US$5.99 a month or US$59.99 a year) covers every feed at once.
 
 ## When it isn't bait
 
@@ -113,4 +116,6 @@ A quick test: if every reply vanished after a minute, would the writer lose anyt
 
 ## If that doesn't work
 
-If your feed is still full of bait after a fortnight, it may be coming from people you follow rather than recommendations. The [clean-up guide](/guides/linkedin/linkedin-clean-up-feed/) covers pruning who you follow and switching the feed to Recent.
+If your feed is still full of bait after a fortnight, it may be coming from people you follow rather than recommendations. The [clean-up guide](/guides/linkedin/linkedin-clean-up-feed/) covers pruning who you follow and switching the feed to Recent. For the X version of the same habit, see [engagement farming on X](/guides/x/x-engagement-farming/).
+
+[Add Slop Mop to your browser](/) and it folds bait posts like these for you.

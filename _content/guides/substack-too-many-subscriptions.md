@@ -5,6 +5,7 @@
   "description": "See every Substack you subscribe to, unsubscribe on web or app, drop single sections and stop recommendation digests. Steps checked 18 October 2026.",
   "summary": "Find your full Substack subscription list, then unsubscribe, trim sections or cancel paid plans without losing what you still read.",
   "updated": "2026-10-18",
+  "keyword": "too many substack subscriptions",
   "network": "substack",
   "publish_date": "2026-10-27",
   "verified": "2026-10-18",
@@ -30,7 +31,7 @@ The harder part is deciding what goes. The steps below cover both.
 
 - **Use the account you subscribed with.** Substack creates an account for every email address you subscribe with. If some newsletters are missing from your list, you probably signed up to them with a different address, and you'll need to sign in with that one too.
 - **Know the three levels of attachment.** Substack separates *following* (you see someone's Notes and some reading activity in your feed, but get no emails), *free subscription* (their free posts by email and/or in the app, plus their Notes) and *paid subscription* (everything they publish). Dropping a level is often enough. If you like someone's Notes but never open their emails, unsubscribe and follow instead.
-- **Paid plans need the web.** Substack says you can only fully manage a subscription on the web version of Substack, so cancellations are easiest on a computer or a mobile browser.
+- **Paid plans need the web.** [Substack says](https://support.substack.com/hc/en-us/articles/360037489252-How-do-I-cancel-my-paid-subscription-on-Substack) you can only fully manage a subscription on the web version of Substack, so cancellations are easiest on a computer or a mobile browser.
 
 ## 1. See everything you subscribe to
 
@@ -84,7 +85,7 @@ If you're unsure, Substack also lets you **pause** a paid plan for 1, 3 or 6 mon
 
 The **Danger Zone** section of Settings can unsubscribe you from every Substack publication and stop Substack emails altogether. Substack warns that this removes you completely: no emails, no posts in the app, nothing left under Subscriptions. Use it only if you're leaving Substack, not to tidy up.
 
-## What to look for when deciding
+## Which Substack subscriptions to drop when you have too many
 
 Volume isn't the only problem. A publication earns its place in your inbox when an issue gives you something you couldn't get from its headline. Compare two openings:
 
@@ -97,10 +98,14 @@ Three parking rules change in town this month. The one that affects most readers
 
 If most issues from a writer open like the first, that's a strong sign for the Go pile. [Hype words](/patterns/hype-words/) and long throat-clearing are cheap to produce, and they fill an inbox fast.
 
+If you'd like a second opinion while you sort, [Slop Mop](/how-it-works.html) gives one on both sides of Substack. In Substack's web app it reads the Notes and posts in your feed and folds the likely [AI slop](/glossary/ai-slop/). In Gmail and Outlook, the Slop Mop add-ons check what the sender of each newsletter wrote, with personal details replaced by placeholders before anything leaves your mailbox. A publication that gets folded week after week is a good candidate for the Go pile. The email add-ons are part of Slop Mop XL; the free plan covers one feed.
+
 ## If that doesn't work
 
 - **A newsletter isn't in your list.** Search your inbox for its emails and check which address they were sent to, then sign in to Substack with that address.
 - **Emails keep coming after you unsubscribed.** Check whether you have a second account or were subscribed to a section separately. If you've paid, check whether the plan has ended yet: cancelling leaves you on the free list until you unsubscribe too.
 - **You want fewer emails but not fewer writers.** Switch delivery to the Substack app instead; Settings has a Newsletter delivery option for app, email or both.
 
-For tidying the Notes side of Substack, see [how to clean up your Notes feed](/guides/substack/substack-clean-up-notes-feed/).
+For tidying the Notes side of Substack, see [how to clean up your Notes feed](/guides/substack/substack-clean-up-notes-feed/), and for newsletters from elsewhere, [managing subscriptions in Gmail](/guides/email/email-gmail-manage-subscriptions/).
+
+[Add Slop Mop for Gmail and Outlook](/) (part of Slop Mop XL) and it checks the newsletters that survive your clear-out.

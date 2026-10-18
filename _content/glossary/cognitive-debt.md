@@ -5,6 +5,7 @@
   "description": "Cognitive debt is the idea that letting AI do your thinking saves effort now and costs engagement and memory later. The MIT study behind it and its limits.",
   "summary": "The idea that leaning on an AI assistant to do your thinking saves effort now but weakens your own engagement and memory later.",
   "updated": "2026-10-18",
+  "keyword": "cognitive debt",
   "term": "Cognitive debt",
   "aliases": [],
   "punchline": "Let the chatbot think now, pay for it later.",
@@ -24,7 +25,7 @@
   ]
 }
 ---
-## What it means
+## What cognitive debt means
 
 Cognitive debt is the idea that handing your thinking to an AI assistant works like borrowing. You get the essay, the summary or the plan now, without the effort. The cost arrives later, as weaker engagement with the material, worse recall of what you produced and less sense that it's yours.
 
@@ -32,9 +33,9 @@ The metaphor echoes "technical debt" in software, where a quick fix today makes 
 
 The term describes a risk from a particular kind of use. Drafting with AI and then working hard on the draft is a different activity from accepting the first answer.
 
-## Where it came from
+## Where the term cognitive debt came from
 
-The phrase was popularised by a study from the MIT Media Lab, posted to arXiv on 10 June 2025 as "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task". Its authors, with Nataliya Kosmyna as first author and Pattie Maes among the team, split participants into three groups to write essays: one using a large language model, one using a search engine, and one using no tools.
+The phrase was popularised by a study from the MIT Media Lab, posted to [arXiv](https://arxiv.org/abs/2506.08872) on 10 June 2025 as "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task". Its authors, with Nataliya Kosmyna as first author and Pattie Maes among the team, split participants into three groups to write essays: one using a large language model, one using a search engine, and one using no tools.
 
 What they reported:
 
@@ -58,4 +59,6 @@ The main reasons for caution are in the paper's own description. The sample is s
 
 ## How Slop Mop sees it
 
-Cognitive debt is about what AI use does to the writer, which is outside what Slop Mop judges. It scores the post in front of you, and it doesn't penalise AI involvement, so a post drafted with a chatbot and then properly worked on is judged like any other.
+Cognitive debt is about what AI use does to the writer, which is outside what Slop Mop judges. It scores the post, article or email in front of you, and it doesn't penalise AI involvement, so a post drafted with a chatbot and then properly worked on is judged like any other. What it does catch is the unworked first draft, the kind of thing called [workslop](/glossary/workslop/) at the office. Teachers weighing this up may find [Slop Mop for educators](/for/educators/) useful.
+
+[Add Slop Mop to your browser](/) and it folds the unworked drafts in your feeds for you.

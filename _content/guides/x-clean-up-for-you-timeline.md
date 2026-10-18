@@ -5,6 +5,7 @@
   "description": "Six steps to make X's For You timeline less noisy: mark posts Not interested, snooze topics, mute recurring words and stop rewarding bait.",
   "summary": "Train X's For You tab with Not interested, topic snoozes and muted words, and stop feeding the posts you want less of.",
   "updated": "2026-10-18",
+  "keyword": "clean up x for you timeline",
   "network": "x",
   "publish_date": "2026-10-20",
   "verified": "2026-10-18",
@@ -21,7 +22,7 @@
 ---
 X's For You tab is a mix of posts from accounts you follow and posts X recommends, and it changes based on what you do. To clean it up, tell it directly with "Not interested in this post", mute the words that keep bringing in the same junk, and stop replying to bait, even to argue. If it still won't settle after a week, spend more of your time in the Following tab, which only shows accounts you follow.
 
-## Before you start
+## Before you clean up your For You timeline on X
 
 It helps to know what you're working with. X's help centre describes two tabs at the top of Home: **For you**, which includes recommended posts, and **Following**, which shows posts from the accounts you follow ([X Help Center](https://help.x.com/en/using-x/x-timeline)). X also says it reopens whichever tab you used last.
 
@@ -63,7 +64,13 @@ The same goes for bookmarking posts "to read later" that you never will. Keep bo
 
 Some of the noise in For You comes from accounts you followed years ago that now mostly post [engagement bait](/patterns/engagement-bait/). Go through your follows once and unfollow anyone whose last ten posts you'd have scrolled past. If you'd rather not unfollow someone, the post's **•••** menu also offers options to mute or block the account; the exact wording varies between the app and the web.
 
-## 6. Give it a week
+## 6. Fold low-value posts and replies as you scroll
+
+Steps 1 to 5 act after you've seen a post, or on whole accounts and words. None of X's controls reads what a post says before you reach it, so a bait post from someone you follow, or a formula reply that dodges your muted words, still lands on your screen.
+
+[Slop Mop](/) fills that gap on x.com. It's a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave and Arc, and it reads the posts and replies in your timeline as you scroll. In Hide mode it folds likely slop into a one-line strip you can reopen; in Highlight mode it marks it and hides nothing. You can set sensitivity to Mild, Moderate or Aggressive and vote to overrule any call, and [How it works](/how-it-works.html) explains the twelve questions behind each score. The limits: the free plan covers one feed with 250 checks a day, it runs in your desktop browser only, so the X app is unchanged, and it never mutes, blocks or reports anyone. The [Slop Mop for X](/for/x/) page has more on how it treats posts there.
+
+## 7. Give it a week
 
 Recommendation systems adjust gradually. Do steps 1 to 4 consistently for about a week before judging whether it worked. Keep a rough tally if it helps: how many of the first 20 posts each morning were worth reading.
 
@@ -93,4 +100,6 @@ The second post is dull and useful, which is the bar worth training the feed tow
 
 Some days For You won't cooperate, especially during big news events. Switch to the **Following** tab at the top of Home and stay there; it only shows accounts you follow, so the recommendation problem goes away. You can also build a List of accounts that reliably post substance and pin it beside your Home tabs, which X describes in its help centre on Lists.
 
-Slop Mop, a browser extension that folds low-value posts into a one-line strip, is coming soon to X. It doesn't work on X yet; until it does, the controls above are the tools you have.
+The same bait formats run on LinkedIn, Reddit and Facebook, and Slop Mop reads those feeds too; Slop Mop XL (US$5.99 a month or US$59.99 a year) covers every feed at once. The [LinkedIn clean-up guide](/guides/linkedin/linkedin-clean-up-feed/) covers that network's own controls.
+
+[Add Slop Mop to your browser](/) and it folds posts like these in your For You timeline for you.

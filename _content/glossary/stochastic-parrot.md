@@ -5,6 +5,7 @@
   "description": "Stochastic parrot describes language models as systems that stitch together plausible text without understanding it. The 2021 paper and the debate.",
   "summary": "A description of large language models as systems that stitch together plausible language without understanding what it means.",
   "updated": "2026-10-18",
+  "keyword": "stochastic parrot",
   "term": "Stochastic parrot",
   "aliases": ["stochastic parrots"],
   "punchline": "Fluent, confident, and repeating what it heard.",
@@ -25,15 +26,15 @@
   ]
 }
 ---
-## What it means
+## What stochastic parrot means
 
 "Stochastic parrot" is a metaphor for large language models. "Stochastic" means governed by probability; "parrot" refers to a bird that can repeat human speech. Together they describe a system that produces fluent text by predicting which words tend to follow which, without any grasp of what the words refer to.
 
 The original paper put it this way: a language model is "stitching together sequences of linguistic forms … observed in its vast training data, according to probabilistic information about how they combine, but without any reference to meaning." The authors' point was that people read meaning into fluent text, so a fluent model can seem to understand more than it does.
 
-## Where it came from
+## Where stochastic parrot came from
 
-The term comes from the 2021 paper "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?", by the linguist Emily M. Bender, the AI ethics researcher Timnit Gebru and co-authors, presented at the ACM Conference on Fairness, Accountability, and Transparency (FAccT). The paper set out risks of ever-larger language models, including environmental and financial costs, biases hidden in training data that is too large to inspect, and the potential to deceive.
+The term comes from the 2021 paper ["On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"](https://faculty.washington.edu/ebender/stochasticparrots/), by the linguist Emily M. Bender, the AI ethics researcher Timnit Gebru and co-authors, presented at the ACM Conference on Fairness, Accountability, and Transparency (FAccT). The paper set out risks of ever-larger language models, including environmental and financial costs, biases hidden in training data that is too large to inspect, and the potential to deceive.
 
 The paper became widely known partly because of a dispute before publication. Google, where Gebru then co-led an ethical AI team, asked her to withdraw it or remove the names of Google employees; in December 2020 Google told her it was accepting her resignation, and her departure sparked protests by employees.
 
@@ -51,4 +52,4 @@ The term is contested, and some read it as an insult to the technology. Research
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't take a side on whether models understand anything. It reads the finished writing and asks whether it's worth a reader's time, which applies the same way to text from a person, a model, or both.
+Slop Mop doesn't take a side on whether models understand anything. It reads the finished writing and asks whether it's worth a reader's time, which applies the same way to text from a person, a model, or both. That's why it isn't an AI detector, as its [comparison with AI detectors](/compare/slop-mop-vs-ai-detectors/) explains. Fluent text with nothing behind it often reads as [word salad](/glossary/word-salad/) or [botshit](/glossary/botshit/). [Add Slop Mop to your browser](/) and it folds that kind of writing in your feeds.

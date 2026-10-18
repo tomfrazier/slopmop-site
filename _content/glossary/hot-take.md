@@ -2,6 +2,7 @@
 {
   "title": "Hot take",
   "seo_title": "Hot take: meaning and origin of the phrase · Slop Mop",
+  "keyword": "hot take",
   "description": "A hot take is a fast, deliberately provocative opinion on the news. Where the phrase came from, and how a hot take differs from an informed one.",
   "summary": "A quickly produced, deliberately provocative opinion on the news, high on heat and low on research.",
   "updated": "2026-10-18",
@@ -19,7 +20,7 @@
   ]
 }
 ---
-## What it means
+## What a hot take is
 
 A hot take is an opinion produced fast and pitched to provoke. Something happens, and within hours there's a confident, contrarian verdict on it: this changes everything, this proves the doubters wrong, everyone has misread it. The speed is part of the definition. A hot take is written before the facts are in, so it can't depend on them.
 
@@ -27,9 +28,9 @@ The phrase is often used as mild mockery, and people also use it about themselve
 
 What separates a hot take from a strong opinion is the order of operations: the conclusion is chosen for the reaction it will get, and the reasoning, if any, comes after.
 
-## Where it came from
+## Where "hot take" came from
 
-The phrase grew out of sports talk radio, where hosts fill hours with loud verdicts on questions nobody can answer yet, in order to get callers phoning in. Merriam-Webster dates its first known use to 2012, the year it became common in American sports journalism.
+The phrase grew out of sports talk radio, where hosts fill hours with loud verdicts on questions nobody can answer yet, in order to get callers phoning in. [Merriam-Webster](https://www.merriam-webster.com/dictionary/hot%20take) dates its first known use to 2012, the year it became common in American sports journalism.
 
 It moved into general use in 2014, helped by a piece by John Herrman in The Awl that tied the hot take to the economics of online publishing: sites that are paid by the page view have a reason to publish a fast, arguable opinion on whatever is trending, because arguments travel.
 
@@ -52,4 +53,6 @@ The first post was written in a minute and picks a fight. The second is still an
 
 ## How Slop Mop sees it
 
-Having an opinion is fine. Slop Mop doesn't penalise a view for being strong or unpopular, though an opinion alone doesn't earn credit for being useful to readers. Hot takes tend to get caught by their delivery: the [scroll-stopper](/patterns/scroll-stopper/) opening, the ["not X, but Y"](/patterns/not-x-but-y/) framing and the "agree or disagree?" at the end, all of which it scores on LinkedIn.
+Having an opinion is fine. Slop Mop doesn't penalise a view for being strong or unpopular, though an opinion alone doesn't earn credit for being useful to readers. Hot takes tend to get caught by their delivery: the [scroll-stopper](/patterns/scroll-stopper/) opening, the ["not X, but Y"](/patterns/not-x-but-y/) framing and the "agree or disagree?" at the end, all of which it scores on LinkedIn, X, Reddit and the other feeds it reads.
+
+[Add Slop Mop to your browser](/) and it folds hot takes built that way, while opinions with something behind them stay put.

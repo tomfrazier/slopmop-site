@@ -1,8 +1,8 @@
 ---
 {
-  "title": "Slop Mop vs News Feed Eradicator",
-  "seo_title": "Slop Mop vs News Feed Eradicator: sort the feed or drop it?",
-  "description": "News Feed Eradicator replaces your social feeds with a quote. Slop Mop keeps your LinkedIn feed and folds the low-value posts. Which suits your problem.",
+  "title": "Slop Mop vs News Feed Eradicator: an alternative that keeps the feed",
+  "seo_title": "News Feed Eradicator alternative: Slop Mop compared",
+  "description": "News Feed Eradicator replaces your social feeds with a quote. Slop Mop keeps your feeds and folds only the low-value posts. Which one suits your problem.",
   "summary": "News Feed Eradicator removes the whole feed so you stop scrolling. Slop Mop keeps the feed and folds only the posts it judges low-value.",
   "updated": "2026-10-18",
   "kind": "product",
@@ -10,22 +10,76 @@
   "them_url": "https://west.io/news-feed-eradicator/",
   "checked": "2026-10-18",
   "table": [
-    {"row": "What it does", "slopmop": "Folds or marks low-value posts, one by one", "them": "Replaces the whole feed with a quote"},
-    {"row": "What it judges", "slopmop": "The writing of each post, against twelve questions", "them": "Nothing: every post in the feed goes"},
-    {"row": "Where it works", "slopmop": "LinkedIn today; other networks, websites and email coming soon", "them": "Facebook, X and several other social sites"},
-    {"row": "Browsers", "slopmop": "Chrome and other Chromium browsers", "them": "Chrome and Firefox"},
-    {"row": "Price", "slopmop": "Free for one feed, 250 checks a day; XL coming soon at US$5.99 a month", "them": "Free, open source (MIT)"},
-    {"row": "Shows its reasons", "slopmop": "Yes: score, strongest signs and a chart of the nine tells", "them": "Not needed; the rule is all or nothing"},
-    {"row": "You can overrule it", "slopmop": "Yes, vote on any post", "them": "Switch it off for a site"},
-    {"row": "Where it runs", "slopmop": "Post text, without names, is scored on Slop Mop's server", "them": "In your browser; the developer says it collects no data"}
+    {
+      "row": "What it does",
+      "slopmop": "Folds or marks low-value posts, one by one",
+      "them": "Replaces the whole feed with a quote"
+    },
+    {
+      "row": "What it judges",
+      "slopmop": "The writing of each post, against twelve questions",
+      "them": "Nothing: every post in the feed goes"
+    },
+    {
+      "row": "Where it works",
+      "slopmop": "LinkedIn, X, Reddit, Facebook, Substack, Medium, websites, Gmail and Outlook",
+      "them": "Facebook, X and several other social sites"
+    },
+    {
+      "row": "Browsers",
+      "slopmop": "Chrome, Edge, Firefox, Safari and Chromium browsers",
+      "them": "Chrome and Firefox"
+    },
+    {
+      "row": "Price",
+      "slopmop": "Free for one feed, 250 checks a day; XL US$5.99 a month for all",
+      "them": "Free, open source (MIT)"
+    },
+    {
+      "row": "Shows its reasons",
+      "slopmop": "Yes: score, strongest signs and a chart of the nine tells",
+      "them": "Not needed; the rule is all or nothing"
+    },
+    {
+      "row": "You can overrule it",
+      "slopmop": "Yes, vote on any post",
+      "them": "Switch it off for a site"
+    },
+    {
+      "row": "Where it runs",
+      "slopmop": "Post text, without names, is scored on Slop Mop's server",
+      "them": "In your browser; the developer says it collects no data"
+    }
   ],
-  "verdict": "Pick News Feed Eradicator if you want to stop reading feeds and keep only posting and messaging. Pick Slop Mop if you still want the LinkedIn feed, minus the filler.",
-  "related": ["/compare/slop-mop-vs-feed-blockers/", "/compare/slop-mop-vs-unhook/", "/compare/slop-mop-vs-linkedin-feed-controls/", "/glossary/brain-rot/", "/for/linkedin/"],
+  "verdict": "Pick News Feed Eradicator if you want to stop reading feeds and keep only posting and messaging. Pick Slop Mop if you still want your feeds, minus the filler.",
+  "related": [
+    "/compare/slop-mop-vs-feed-blockers/",
+    "/compare/slop-mop-vs-unhook/",
+    "/compare/slop-mop-vs-linkedin-feed-controls/",
+    "/glossary/brain-rot/",
+    "/for/linkedin/"
+  ],
   "sources": [
-    {"title": "News Feed Eradicator", "publisher": "Chrome Web Store", "url": "https://chromewebstore.google.com/detail/fjcldmjmjhkklehbacihaiopjklihlgg", "date": "2026-07-16"},
-    {"title": "News Feed Eradicator", "publisher": "Jordan West", "url": "https://west.io/news-feed-eradicator/", "date": "n.d."},
-    {"title": "jordwest/news-feed-eradicator", "publisher": "GitHub", "url": "https://github.com/jordwest/news-feed-eradicator", "date": "n.d."}
-  ]
+    {
+      "title": "News Feed Eradicator",
+      "publisher": "Chrome Web Store",
+      "url": "https://chromewebstore.google.com/detail/fjcldmjmjhkklehbacihaiopjklihlgg",
+      "date": "2026-07-16"
+    },
+    {
+      "title": "News Feed Eradicator",
+      "publisher": "Jordan West",
+      "url": "https://west.io/news-feed-eradicator/",
+      "date": "n.d."
+    },
+    {
+      "title": "jordwest/news-feed-eradicator",
+      "publisher": "GitHub",
+      "url": "https://github.com/jordwest/news-feed-eradicator",
+      "date": "n.d."
+    }
+  ],
+  "keyword": "news feed eradicator alternative"
 }
 ---
 If a feed is costing you time, there are two broad fixes: take the feed away, or make it worth reading. News Feed Eradicator is the first. Slop Mop is the second. Which one suits you depends on whether you want to read the feed at all.
@@ -34,7 +88,7 @@ If a feed is costing you time, there are two broad fixes: take the feed away, or
 
 **News Feed Eradicator** is a free, open-source browser extension by Jordan West, released under the MIT licence ([Jordan West](https://west.io/news-feed-eradicator/)). It removes the feed on Facebook, X and other social sites and puts an inspirational quote in its place. The rest of each site keeps working, so you can still post, message and visit profiles without being pulled into the scroll ([Chrome Web Store](https://chromewebstore.google.com/detail/fjcldmjmjhkklehbacihaiopjklihlgg)). It runs on Chrome and Firefox. The developer describes the project as mostly "done" and keeps it deliberately minimal ([GitHub](https://github.com/jordwest/news-feed-eradicator)). The Chrome listing shows the sites it currently supports.
 
-**Slop Mop** is a Chrome and Chromium extension that reads each LinkedIn post as you scroll and asks twelve questions about the writing: nine tells of slop, such as [scroll-stopper hooks](/patterns/scroll-stopper/) and [too-tidy stories](/patterns/too-tidy-story/), and three counter-signals, such as whether the post is useful to readers. Each post gets a score out of 100. Hide mode folds likely slop into a one-line strip you can reopen; Highlight mode marks it and hides nothing. LinkedIn is the only network it works on today. X, Reddit, Facebook, Substack, Medium, websites and email are coming soon.
+**Slop Mop** is a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers that reads each post as you scroll LinkedIn, X, Reddit, Facebook, Substack or Medium and asks twelve questions about the writing: nine tells of slop, such as [scroll-stopper hooks](/patterns/scroll-stopper/) and [too-tidy stories](/patterns/too-tidy-story/), and three counter-signals, such as whether the post is useful to readers. Each post gets a score out of 100. Hide mode folds likely slop into a one-line strip you can reopen; Highlight mode marks it and hides nothing. It also scores the articles you read and, with its Gmail and Outlook add-ons, your email. [How it works](/how-it-works.html) explains the scoring.
 
 ## Where they differ
 
@@ -46,23 +100,24 @@ If a feed is costing you time, there are two broad fixes: take the feed away, or
 
 **Privacy.** The Chrome Web Store listing says News Feed Eradicator's developer has disclosed that it does not collect or use your data. Slop Mop has to send post text (never your name or the author's) to its scoring service to judge it. The server keeps a one-way hash of the text and the scores, except when you vote against a score, when that post's text is kept so the miss can be reviewed.
 
-**Reach and cost.** News Feed Eradicator covers several social sites now, for free. Slop Mop covers LinkedIn only for now and is free for one feed with 250 checks a day; Slop Mop XL, coming soon, will be US$5.99 a month or US$59.99 a year.
+**Reach and cost.** News Feed Eradicator covers several social sites, for free. Slop Mop covers the main social networks plus websites and email; it is free for one feed with 250 checks a day, and Slop Mop XL, at US$5.99 a month or US$59.99 a year, adds every feed, the sites you read and email.
 
-## When to use News Feed Eradicator
+## When News Feed Eradicator is the better choice
 
 - You open a social site to send a message or post something and lose half an hour to the feed.
 - You've decided the feed isn't worth reading at all and want it gone with no exceptions.
 - You want something free, simple and fully local, across more than one site.
-- You use Firefox, where Slop Mop doesn't run yet.
 
-## When to use Slop Mop
+## When Slop Mop is the better News Feed Eradicator alternative
 
-- You get real value from your LinkedIn feed (job news, people you've worked with, posts in your field) and the problem is the bait and filler between them.
+- You get real value from your feeds (job news on LinkedIn, a good subreddit, people you follow on X) and the problem is the bait and filler between them.
 - You want to judge for yourself: Highlight mode marks likely slop without hiding anything, and Hide mode folds it into a strip you can reopen.
 - You'd rather see a feed of posts that passed a bar than no feed at all.
 
 ## Using both
 
-They can both run, on different sites. One way to split it is to drop the feed entirely on one network and filter it on another: News Feed Eradicator on the sites you only use for messaging, Slop Mop on LinkedIn, where you still want the feed. On the same site you'd have to choose, since an eradicated feed has no posts left to judge.
+They can both run, on different sites. One way to split it is to drop the feed entirely on one network and filter it on another: News Feed Eradicator on the sites you only use for messaging, Slop Mop on the networks where you still want the feed. On the same site you'd have to choose, since an eradicated feed has no posts left to judge.
 
 If the feed you want gone is YouTube's, [Slop Mop vs Unhook](/compare/slop-mop-vs-unhook/) compares a tool that hides recommendations and Shorts. For the wider category, see [Slop Mop vs feed blockers and hiders](/compare/slop-mop-vs-feed-blockers/). And before installing anything, it's worth knowing what LinkedIn's own settings can do; [Slop Mop vs LinkedIn's own feed controls](/compare/slop-mop-vs-linkedin-feed-controls/) covers them.
+
+If you'd rather keep your feeds and lose the filler, [add Slop Mop to your browser](/) and it folds the low-value posts for you. The habit side of this is covered in the glossary entry on [doomscrolling](/glossary/doomscrolling/).

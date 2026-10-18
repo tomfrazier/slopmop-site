@@ -5,6 +5,7 @@
   "description": "What you gain reading Substack in the app or by email, and how to switch delivery on iOS, Android and the web. Steps checked 18 October 2026.",
   "summary": "The trade-offs between reading Substack newsletters in the app and in your inbox, and the exact settings for switching between them.",
   "updated": "2026-10-18",
+  "keyword": "substack app vs email",
   "network": "substack",
   "publish_date": "2026-11-17",
   "verified": "2026-10-18",
@@ -22,7 +23,7 @@
 ---
 Read in the app if you want newsletters out of your inbox, in one queue, with Substack's reading tools (saving, archiving, listening, the AI scan). Stay with email if you want newsletters next to everything else you read, searchable with your mail tools and readable without a Substack login. You can switch at any time under **Newsletter delivery** in your notification settings, and you can pick both.
 
-## What each option gives you
+## Substack app vs email: what each gives you
 
 | | Substack app | Email |
 |---|---|---|
@@ -30,11 +31,11 @@ Read in the app if you want newsletters out of your inbox, in one queue, with Su
 | Keeping your inbox clear | Yes | No, unless you filter |
 | Archive and save | Swipe left to archive; Saved tab for later | Your mail client's own folders and labels |
 | Listen to posts | Text-to-speech on many English-language publications | No |
-| Scan for AI text | Yes, on iOS (Android coming soon) | Not available in emails |
+| Scan for AI text | Yes, on iOS (Substack lists Android as on the way) | Not available in emails |
 | Notes, chat and comments | All in the same app | Not in the email itself |
 | Search | Within Substack | Your mail client's search, across everything |
 
-A few details from Substack's help pages: text-to-speech is only in the app and only on posts written in English, and not every publication has it. The AI scan works in the app and the web Reader, but Substack says it isn't available in emails or on publications' own custom-domain sites.
+A few details from [Substack's help pages](https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack): text-to-speech is only in the app and only on posts written in English, and not every publication has it. The AI scan works in the app and the web Reader, but Substack says it isn't available in emails or on publications' own custom-domain sites.
 
 ## The catch with each
 
@@ -81,7 +82,7 @@ If you're staying with email:
 - **Filter them into one place.** Most mail clients can filter on sender or on words in the message. A rule per writer works, or one rule on a phrase that appears in every Substack footer you receive. Check your mail client's help for the exact steps.
 - **Trim at the source.** Fewer emails is better than a better folder. See [how to cut down your Substack subscriptions](/guides/substack/substack-too-many-subscriptions/).
 
-## What to look for, whichever you choose
+## What to look for in the app or by email
 
 Neither option fixes a newsletter that wastes your time. A good habit in both is to read the first paragraph before committing to the rest.
 
@@ -94,8 +95,12 @@ The council approved the new cycle lane on Tuesday. Work starts in March and clo
 
 The first is a [scroll-stopper](/patterns/scroll-stopper/) written for an inbox: it tells you to keep reading without saying why. The second tells you what happened and what it means for you, and you could stop there if that's all you needed.
 
+If you read on a computer, [Slop Mop](/how-it-works.html) can make that first-paragraph check for you on both routes. In Substack's web app it reads the Notes and posts in front of you and folds or marks the likely [AI slop](/glossary/ai-slop/); in Gmail and Outlook, the Slop Mop add-ons check what the sender wrote, with personal details swapped for placeholders first. It doesn't work in the phone apps, and the email add-ons are part of Slop Mop XL.
+
 ## If that doesn't work
 
 - **Emails stopped and you didn't change anything.** Check Promotions and Spam first, then your Newsletter delivery setting.
 - **You get every post twice.** You're on "Both". Pick one.
 - **A paid post won't open in email.** Make sure you're signed in to Substack with the same address the email was sent to. Substack says a paywall on a post you've paid for can mean a mistyped email address or a second account.
+
+[Add Slop Mop for Gmail and Outlook](/) (part of Slop Mop XL) and it checks the newsletters in your inbox as well as the posts in Substack's web app.

@@ -1,13 +1,14 @@
 ---
 {
-  "title": "Slop Mop for Substack",
-  "seo_title": "Slop Mop for Substack: Notes and padded posts · Slop Mop",
-  "description": "Growth-bait Notes and newsletters padded to length: what slop looks like on Substack, what Slop Mop plans to do there, and how to mute writers today.",
-  "summary": "Coming soon to Substack. Until then: the Notes formulas and padded newsletters to watch for, and how to use Substack's mute and block.",
+  "title": "Slop Mop for Substack: a filter for Notes and padded posts",
+  "seo_title": "Substack Notes filter and padded posts · Slop Mop",
+  "description": "A Substack Notes filter that also reads posts: the growth-bait Notes and padded newsletters it catches, what Slop Mop does, and Substack's mute and block.",
+  "summary": "Slop Mop reads Substack Notes and posts and folds or marks the growth bait, throat-clearing intros and padded lists.",
+  "keyword": "substack notes filter",
   "updated": "2026-10-18",
   "kind": "network",
   "audience": "Substack readers",
-  "network_status": "soon",
+  "network_status": "live",
   "related": ["/patterns/flowery-prose/", "/patterns/engagement-bait/", "/patterns/stiff-phrasing/", "/glossary/ai-slop/", "/for/creators/", "/for/journalists/"],
   "sources": [
     {"title": "Substack releases a platform that looks a hell of a lot like Twitter", "publisher": "SiliconANGLE", "url": "https://siliconangle.com/2023/04/11/substack-releases-platform-looks-hell-lot-like-twitter/", "date": "2023-04-11"},
@@ -57,15 +58,25 @@ The edit that helps my drafts most: I delete the first paragraph. It's almost al
 
 The first is [engagement bait](/patterns/engagement-bait/) for a subscriber count. The second is [flowery prose](/patterns/flowery-prose/) standing in for an opening. The third is the kind of advice that's true and so general it changes nothing. Each fine version could only have been written by someone who did the thing.
 
-## What Slop Mop does here
+## How Slop Mop filters Substack Notes and posts
 
-Slop Mop for Substack is coming soon. It doesn't work on Substack yet.
+Slop Mop reads both halves of Substack. In the Notes feed it reads each note shortly before you scroll to it, and it reads the posts you open on substack.com. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet. It sends the text and its public engagement counts to its scoring service, and never your name or the writer's.
 
-The plan is for it to work the way it does on LinkedIn today. It will read the content ahead of you, ask twelve questions about the writing (nine tells of slop and three counter-signals: sounds like a person, useful to readers, and reader response) and then fold likely slop into a one-line strip you can reopen, or leave it visible and mark it. Every call shows its reasons, and your vote overrides the model.
+An AI model designed for calibrated decisions answers twelve questions about the writing: nine tells of slop and three counter-signals (sounds like a person, useful to readers, and reader response). Each note or post gets a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure. Not sure means it's left alone.
 
-It judges the writing, and it isn't an AI detector. A newsletter drafted with AI help that's dense with useful detail should pass; a hand-written one that's mostly preamble may not. It won't delete, report, mute or block anything, and it won't touch your subscriptions.
+- **Hide mode** folds a note past your threshold into a one-line strip where it was. A run of "restack this and I'll subscribe" notes becomes a stack of thin lines, and the note from someone describing what they changed and what happened stays full size. Click Show post to open any of them.
+- **Highlight mode** hides nothing. The mop turns yellow for Possibly slop and red for Likely slop.
+- **Sensitivity** is Mild, Moderate or Aggressive.
 
-## What you can do today
+Click the mop to see the details panel: the score, the strongest signs and the Slopprint, a nine-spoke chart with one spoke per tell. On a long post this is the useful part. A padded newsletter tends to show [flowery prose](/patterns/flowery-prose/) and stiff phrasing together, where a mutual-growth note spikes on engagement bait, and the panel tells you which you're looking at before you've read 2,000 words. The "useful to readers" bar rewards figures, named examples and steps you could follow, which is what a paid post should have.
+
+You can vote Not sure, No, Maybe or Probably on anyone else's note or post, and your vote overrides the model for you. Substack never sees it, and nothing is sent to the writer.
+
+It judges the writing, and it isn't an AI detector. A newsletter drafted with AI help that's dense with useful detail passes; a hand-written one that's mostly preamble may not. It never deletes, reports, mutes or blocks anything, and it doesn't touch your subscriptions.
+
+Newsletters you read in your email inbox are handled by Slop Mop for Gmail and Slop Mop for Outlook, covered on the [email page](/for/email/). Plans: the free plan covers the one feed you pick, with 250 checks a day; Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every feed, the sites you read, Gmail and Outlook, and a higher daily limit. The scoring is explained on [how it works](/how-it-works.html).
+
+## Substack's own Notes controls, and how they fit with Slop Mop
 
 Substack's own controls work on writers rather than posts ([Substack Support](https://support.substack.com/hc/en-us/articles/14564821756308-Getting-started-on-Substack-Notes)).
 
@@ -74,7 +85,7 @@ Substack's own controls work on writers rather than posts ([Substack Support](ht
 3. **Review the list.** Everyone you've muted or blocked is listed under Content Preferences in your account settings.
 4. **Unsubscribe from padded newsletters.** It's the plainest control there is. A newsletter you skim past every week is costing you more attention than its price suggests.
 
-Muting is all or nothing per writer. Plenty of good newsletter writers also post growth formulas in Notes, and muting them loses both.
+Muting is all or nothing per writer. Plenty of good newsletter writers also post growth formulas in Notes, and muting them loses both. Slop Mop fills that gap: keep the writer, and let their growth-bait notes fold while their essays stay. Mute and block are still the right tools for people you don't want to hear from at all.
 
 ## Who it's for
 
@@ -85,3 +96,5 @@ People who read newsletters for the substance and use Notes to find more of them
 - [Consultants](/for/consultants/) who subscribe to industry newsletters to stay current.
 
 If you write a Substack, the nine tells make a decent pre-send checklist. The [stiff phrasing](/patterns/stiff-phrasing/) one catches a lot of first paragraphs.
+
+[Add Slop Mop to your browser](/) and it folds Substack Notes and posts like these for you.

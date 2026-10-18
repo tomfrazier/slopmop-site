@@ -5,6 +5,7 @@
   "description": "Undisclosed promotion in Reddit's 'what's the best…' threads: the signs in the comment, a profile check, the brand affiliate tag and what to do.",
   "summary": "Promotional replies posing as honest recommendations: the wording, the profile pattern, Reddit's brand affiliate tag and what to do about them.",
   "updated": "2026-10-18",
+  "keyword": "reddit stealth ads",
   "network": "reddit",
   "publish_date": "2026-12-08",
   "verified": "2026-10-18",
@@ -33,7 +34,7 @@ Reddit has a **Brand Affiliate** tag that users can put on posts or comments tha
 
 A tagged comment can still be useful, and the tag tells you how to weigh it. A plain "I work for them" in the comment does the same job. The problem is promotion with neither.
 
-## What to look for in the comment
+## Signs of Reddit stealth ads in a comment
 
 ### It names one product, fast, with a link
 
@@ -89,4 +90,6 @@ If you sell something and want to take part honestly, the rules are simple. Read
 
 ## Where judgement still matters
 
-Some promotion is careful enough to pass every check above: a real-looking account, a modest tone, one plausible complaint. You won't catch all of it, and you don't have to. Recommendations that agree across several unrelated, long-standing accounts, with specifics and trade-offs, are still the best evidence Reddit offers. Slop Mop, which already checks LinkedIn posts for hype words and no-catch promises, is coming soon to Reddit.
+Some promotion is careful enough to pass every check above: a real-looking account, a modest tone, one plausible complaint. You won't catch all of it, and you don't have to. Recommendations that agree across several unrelated, long-standing accounts, with specifics and trade-offs, are still the best evidence Reddit offers.
+
+Slop Mop checks Reddit posts and comments for two of the signs above, hype words and no-catch promises, along with the rest of its [nine tells](/how-it-works.html#tells). It reads the writing only: it doesn't look at profiles, links or disclosure tags, and it can't tell you who paid for a comment, so the profile check stays with you. [Add Slop Mop to your browser](/) and it folds replies that read like product copy so the ones with trade-offs are easier to find.

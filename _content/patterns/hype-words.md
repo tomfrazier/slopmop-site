@@ -5,6 +5,7 @@
   "description": "Hype words are marketing vocabulary like game-changing, unlock and elevate. Why they cost readers, when they're the right word, and what to write instead.",
   "summary": "Marketing vocabulary such as game-changing, unlock, elevate and seamless, used where a number or a plain verb would say more.",
   "updated": "2026-10-18",
+  "keyword": "hype words",
   "tell": "Hype words",
   "short": "marketing vocabulary",
   "order": 3,
@@ -16,7 +17,7 @@
 ---
 Hype words are the vocabulary of a product launch applied to everything: a reorganisation, a hiring tip, a lunch. Game-changing, unlock, elevate, supercharge, seamless, cutting-edge, unprecedented. Each one claims something is big without saying how big, or what changed.
 
-## What it looks like
+## What hype words look like
 
 :::slop
 Thrilled to announce our cutting-edge, AI-powered platform that will revolutionise how teams collaborate and unlock unprecedented productivity.
@@ -39,7 +40,7 @@ Delve into the dynamic landscape of sustainable finance and leverage robust insi
 Green bonds made up a bigger share of our client portfolios this year. This note explains which ones we bought, which we turned down, and why.
 :::
 
-The usual suspects fall into a few groups:
+They fall into a few groups:
 
 - **Size without a measure:** game-changing, unprecedented, massive, revolutionary.
 - **Motion without a destination:** unlock, elevate, supercharge, empower, accelerate, transform.
@@ -53,7 +54,7 @@ A hype word asks you to take a claim on trust. "Unprecedented growth" could mean
 
 The words also crowd out the useful sentence. A post that says "This tool will supercharge your workflow" has used its space on the adjective, and the fact (what the tool does, what it replaced, what it cost) never makes it onto the page.
 
-They have become a sign that nobody looked closely. Some of these words have grown more common in writing produced with AI help. One analysis of more than 15 million PubMed abstracts, published in *Science Advances* in July 2025, found sudden jumps in style words such as "delves", "showcasing" and "underscores" after chatbots became widely available. Marketing copy used most of the rest long before that. Either way, a reader who meets "elevate" and "seamless" in the first line has learned to expect filler, and often stops reading.
+They have become a sign that nobody looked closely. Some of these words have grown more common in writing produced with AI help. One [analysis of more than 15 million PubMed abstracts](https://www.science.org/doi/10.1126/sciadv.adt3813), published in *Science Advances* in July 2025, found sudden jumps in style words such as "delves", "showcasing" and "underscores" after chatbots became widely available. Marketing copy used most of the rest long before that. Either way, a reader who meets "elevate" and "seamless" in the first line has learned to expect filler, and often stops reading.
 
 ## When it's fine
 
@@ -69,9 +70,9 @@ Many hype words have plain, technical meanings, and in those meanings they're th
 
 Sales pages and adverts also use enthusiastic language openly, and readers know what they're looking at. The tell becomes a problem when that vocabulary turns up in a post presented as advice or news, with no figures behind it.
 
-## How Slop Mop scores it
+## How Slop Mop scores hype words
 
-Hype words is one of nine questions the model asks about every post, and one spoke on the Slopprint. The further out the point sits, the more of the tell the model found, so one "robust" in a technical post should sit much nearer the centre than a paragraph built from launch language.
+Hype words is one of the [nine questions the model asks](/how-it-works.html#tells) about every post, and one spoke on the Slopprint. The further out the point sits, the more of the tell the model found, so one "robust" in a technical post should sit much nearer the centre than a paragraph built from launch language.
 
 The model rates how sure it is, and unsure answers count for less. When hype words is the only tell that stands out, the score is cut: an enthusiastic founder announcing real news shouldn't be folded away for one excited adjective. Hype words often appear alongside [empty praise](/patterns/empty-praise/) and [no-catch promises](/patterns/no-catch-promises/), and several tells together is what gets flagged.
 
@@ -92,6 +93,8 @@ Our game-changing new dashboard empowers finance teams to unlock real-time insig
 The new dashboard shows cash in the bank as of this morning, refreshed every hour. Finance teams used to wait for a weekly export. It doesn't yet include card transactions; those arrive in December.
 :::
 
-## Where it shows up
+## Where hype words show up
 
-LinkedIn announcement posts are dense with launch language, and LinkedIn is where Slop Mop reads posts today. The same vocabulary fills press releases, job adverts, product pages, conference abstracts, newsletters and, increasingly, cover letters.
+Launch announcements on LinkedIn are dense with them, and so are sponsored posts on Facebook and X, product write-ups on Medium, and the "About" and pricing pages of the websites you read. They also fill press releases, job adverts, conference abstracts, newsletters and, increasingly, cover letters and sales email.
+
+Slop Mop reads for hype words on every network it covers: LinkedIn, X, Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium, articles and websites, and email in Gmail and Outlook, where it checks only what the sender wrote. [Add Slop Mop to your browser](/) and it folds posts like these for you.

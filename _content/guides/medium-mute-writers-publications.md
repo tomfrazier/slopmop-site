@@ -5,6 +5,7 @@
   "description": "Step-by-step: mute a Medium writer or publication from a story or a profile, what muting hides, what it leaves alone, and how to unmute later.",
   "summary": "Mute a Medium writer or publication from the three-dot menu, see what muting hides, and find your muted list to undo it.",
   "updated": "2026-10-18",
+  "keyword": "mute a writer on medium",
   "network": "medium",
   "publish_date": "2026-11-03",
   "verified": "2026-10-18",
@@ -20,7 +21,7 @@
 ---
 Open the three-dot menu on any story preview from the writer or publication and choose to mute them; you can also do it from the three-dot menu on their profile page. Their stories leave your homepage feed and your email digests, and they aren't told. You can unmute at any time from the Muted tab on the Refine recommendations page.
 
-## When muting is the right tool
+## When to mute a writer or publication on Medium
 
 Show less like this is a nudge about one story. Muting is a firm rule about a source. Reach for it when one account keeps turning up with the same kind of story:
 
@@ -104,4 +105,6 @@ If muted stories still show up:
 - Check that you muted the right thing. Writers and publications are muted separately, so muting one leaves the other in place.
 - Check whether the stories arrive through a topic you follow. If many different writers produce the same kind of filler under one topic, mute or unfollow the topic.
 
-Slop Mop is coming soon to Medium. For now, muting is the most precise tool Medium gives you for sources you've already judged.
+Muting is the most precise tool Medium gives you for sources you've already judged. For stories from sources you haven't judged yet, [Slop Mop](/how-it-works.html) reads the stories in your Medium feed and the articles you open, and folds the likely filler into a strip you can reopen. It never mutes, unfollows or reports anyone; it only changes what you see in your own browser, on a computer rather than the Medium app.
+
+The same habit works for [muting communities on Reddit](/guides/reddit/reddit-mute-communities/) and [muted words on X](/guides/x/x-muted-words/), and Slop Mop runs on both. [Add Slop Mop to your browser](/) and it folds the filler from sources you haven't muted yet.

@@ -5,6 +5,7 @@
   "description": "Start with one specific fact, write normal paragraphs, say what it cost, and cut the hook, the moral and the comment bait. A checklist and a full rewrite.",
   "summary": "Lead with one specific fact, say what it cost, write in plain paragraphs and drop the hook, the moral and the call for comments.",
   "updated": "2026-10-18",
+  "keyword": "write a linkedin post",
   "network": "linkedin",
   "publish_date": "2026-12-08",
   "verified": "2026-10-18",
@@ -20,7 +21,7 @@
 ---
 Start with one specific thing you know: a number, a decision, a mistake and what it cost. Write it in ordinary paragraphs, say who it's useful for, and stop when you've said it. Then cut the three things readers have learned to skip: the dramatic hook, the moral at the end and the request for comments.
 
-## Before you write
+## Before you write a LinkedIn post
 
 Answer two questions in a sentence each. If you can't, the post isn't ready.
 
@@ -85,7 +86,7 @@ Read the draft aloud, or the next morning. Then check:
 - Is there at least one name, date, number or place?
 - Would you send it to a colleague in an email? If it would feel odd there, it's probably performing.
 
-## A full rewrite
+## A full rewrite of a LinkedIn post
 
 Here's a whole post before and after, on the same facts.
 
@@ -114,7 +115,7 @@ The rewrite is longer and may get fewer comments in its first hour. The comments
 
 ## The nine-tell checklist
 
-These are the nine habits Slop Mop asks about when it reads a post in a LinkedIn feed. They make a decent editing checklist whether or not your readers use it.
+These are the nine habits [Slop Mop](/) asks about when it reads a post in a reader's LinkedIn feed, and on X, Reddit, Facebook, Substack and Medium too ([How it works](/how-it-works.html) explains how they add up to a score). They make a decent editing checklist whether or not your readers use it.
 
 | Tell | Check your draft for |
 |---|---|
@@ -133,3 +134,5 @@ One tell on its own is rarely a problem; a post that ticks three or four is the 
 ## If you draft with AI
 
 That's fine, as long as the facts are yours and you've read every line. A model can tidy your notes, but it can't supply the number, the cost or the detail, and if you ask it to, it may invent them. Posting the output unread is what the glossary calls [AI slap](/glossary/ai-slap/): it hands the checking to your readers. The earlier guide on [spotting AI-written posts](/guides/linkedin/linkedin-spot-ai-written-posts/) covers what readers notice.
+
+[Add Slop Mop to your browser](/) and you'll see which posts in your own feed fold, and why, which is quick training for spotting the tells in your drafts.

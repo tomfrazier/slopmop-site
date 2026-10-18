@@ -2,6 +2,7 @@
 {
   "title": "LinkedIn Lunatics",
   "seo_title": "LinkedIn Lunatics: the subreddit and the genre · Slop Mop",
+  "keyword": "linkedin lunatics",
   "description": "LinkedIn Lunatics is a Reddit community that collects absurd, self-congratulating LinkedIn posts, and a name for the genre it mocks. Its history and tells.",
   "summary": "A Reddit community, and now a label, for cringe-inducing, self-aggrandising or plainly absurd posts on LinkedIn.",
   "updated": "2026-10-18",
@@ -25,7 +26,7 @@
   ]
 }
 ---
-## What it means
+## What LinkedIn Lunatics means
 
 LinkedIn Lunatics started as a subreddit, r/LinkedInLunatics, where people share screenshots of the strangest posts they find on LinkedIn. The name has since become a label in its own right: calling a post "LinkedIn Lunatics material" means it's so self-congratulating, tone-deaf or detached from ordinary life that it deserves an audience outside LinkedIn.
 
@@ -39,9 +40,9 @@ The genre it mocks is recognisable within a line or two:
 
 Some of what gets shared is satire written to be screenshotted, and readers can't always tell which is which.
 
-## Where it came from
+## Where LinkedIn Lunatics came from
 
-According to Know Your Meme, r/LinkedInLunatics launched on 1 October 2019. Its description invited users to share "rampant virtue signaling, cringeworthy titles, and stories that could come from r/thathappened". It grew slowly at first, reaching 10,000 followers by mid-March 2021 and 100,000 by June 2022, and had more than 540,000 followers by early June 2024. Its posts regularly travel further, reshared on other social platforms.
+According to [Know Your Meme](https://knowyourmeme.com/memes/sites/rlinkedinlunatics-linkedin-lunatics), r/LinkedInLunatics launched on 1 October 2019. Its description invited users to share "rampant virtue signaling, cringeworthy titles, and stories that could come from r/thathappened". It grew slowly at first, reaching 10,000 followers by mid-March 2021 and 100,000 by June 2022, and had more than 540,000 followers by early June 2024. Its posts regularly travel further, reshared on other social platforms.
 
 ## Examples
 
@@ -68,4 +69,6 @@ The first is a too-tidy story, a scroll-stopper and engagement bait in one. The 
 
 ## How Slop Mop sees it
 
-The posts the subreddit collects tend to share the tells Slop Mop scores on LinkedIn, especially [too-tidy stories](/patterns/too-tidy-story/), [scroll-stopper](/patterns/scroll-stopper/) hooks and [engagement bait](/patterns/engagement-bait/). Slop Mop folds them into a one-line strip you can reopen, or marks them in Highlight mode. It never reports, mutes or blocks anyone.
+The posts the subreddit collects tend to share the tells Slop Mop scores on LinkedIn, especially [too-tidy stories](/patterns/too-tidy-story/), [scroll-stopper](/patterns/scroll-stopper/) hooks and [engagement bait](/patterns/engagement-bait/). The same habits turn up on X, Facebook and Substack Notes, and Slop Mop reads those feeds too. It folds them into a one-line strip you can reopen, or marks them in Highlight mode. It never reports, mutes or blocks anyone.
+
+[Add Slop Mop to your browser](/) and it folds this kind of post before you reach it.

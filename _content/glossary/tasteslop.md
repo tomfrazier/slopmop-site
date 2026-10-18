@@ -2,14 +2,14 @@
 {
   "title": "Tasteslop",
   "seo_title": "Tasteslop: curation with no taste in it · Slop Mop",
-  "description": "Tasteslop is mass-produced curation: reading lists, tool roundups and moodboards with the look of good taste and none of the judgment. A house term.",
+  "description": "Tasteslop is mass-produced curation: reading lists, tool roundups and moodboards with the look of good taste and none of the judgment behind it.",
   "summary": "Mass-produced curation and aesthetic content that copies the look of good taste without any actual choosing behind it.",
   "updated": "2026-10-18",
   "term": "Tasteslop",
   "aliases": [],
   "punchline": "Curation with the taste taken out.",
   "kind": "both",
-  "first_seen": "",
+  "first_seen": "2026",
   "coined_by": "",
   "sensitivity": "",
   "related": [
@@ -18,10 +18,25 @@
     "/glossary/workslop/",
     "/patterns/empty-praise/",
     "/patterns/hype-words/"
+  ],
+  "keyword": "tasteslop",
+  "sources": [
+    {
+      "title": "New words – 27 July 2026",
+      "publisher": "Cambridge Dictionary (About Words blog)",
+      "url": "https://dictionaryblog.cambridge.org/2026/07/27/new-words-27-july-2026/",
+      "date": "2026-07-27"
+    },
+    {
+      "title": "Etzioni on AI: The colorful and cranky language of the AI era, from slop to slap",
+      "publisher": "GeekWire",
+      "url": "https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/",
+      "date": "2026-10-16"
+    }
   ]
 }
 ---
-## What it means
+## What tasteslop means
 
 Tasteslop is curation that nobody really did. It's the reading list of ten books every founder must read, the roundup of "tools I can't live without", the moodboard of borrowed images captioned "this is the vibe", the newsletter that links the same five stories as every other newsletter that week. It has the outward signs of taste: a confident list, a clean layout, a little aesthetic polish. What's missing is the choosing.
 
@@ -29,9 +44,9 @@ Real curation tells you why one thing made the cut and another didn't. It reflec
 
 It can be made by hand or with AI. AI makes it cheaper, because a model will happily produce "15 essential productivity apps for 2026" on demand, with a confident blurb for each, whether or not anyone has opened them.
 
-## Where it came from
+## Where tasteslop came from
 
-Tasteslop is a Slop Mop house term, used here as a name for one variety of [AI slop](/glossary/ai-slop/) alongside [workslop](/glossary/workslop/) and [slopaganda](/glossary/slopaganda/). We haven't found earlier published use of the word, and it isn't an established term. If it catches on, that will be because the thing it describes is everywhere: recommendation posts, "best of" lists and aesthetic accounts were common long before generative AI, and they've become much easier to churn out since.
+Cambridge Dictionary's blog listed tasteslop among its [new words for 27 July 2026](https://dictionaryblog.cambridge.org/2026/07/27/new-words-27-july-2026/). In October 2026 Oren Etzioni and Daniel S. Weld included it in [their GeekWire glossary of AI-era language](https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/) as a relative of [AI slop](/glossary/ai-slop/), alongside [workslop](/glossary/workslop/) and [slopaganda](/glossary/slopaganda/). The word is recent and isn't yet in general use. The thing it describes is older: recommendation posts, "best of" lists and aesthetic accounts were common long before generative AI, and they've become much easier to churn out since.
 
 ## Examples
 
@@ -55,4 +70,6 @@ The first post praises every book with the same words and gives no reason to pre
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't judge taste. It does score the writing habits that tasteslop relies on: [empty praise](/patterns/empty-praise/), [hype words](/patterns/hype-words/) and [engagement bait](/patterns/engagement-bait/). On LinkedIn, where it's live today, a recommendation post with real reasons and trade-offs tends to pass, and a list of interchangeable superlatives tends not to.
+Slop Mop doesn't judge taste. It does score the writing habits that tasteslop relies on: [empty praise](/patterns/empty-praise/), [hype words](/patterns/hype-words/) and [engagement bait](/patterns/engagement-bait/). On LinkedIn, X, Reddit, Facebook, Substack and Medium, and in the articles you read, a recommendation post with real reasons and trade-offs tends to pass, and a list of interchangeable superlatives tends not to. [How it works](/how-it-works.html) explains the scoring.
+
+[Add Slop Mop to your browser](/) and it folds lists like the first one for you.

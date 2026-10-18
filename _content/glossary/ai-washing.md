@@ -5,6 +5,7 @@
   "description": "AI washing is overstating how much a product uses AI to impress buyers and investors. Where the term came from, how regulators treat it, how to spot it.",
   "summary": "Overstating how much a product actually uses AI, or labelling it 'AI-powered', to impress customers and investors.",
   "updated": "2026-10-18",
+  "keyword": "ai washing",
   "term": "AI washing",
   "aliases": [],
   "punchline": "Greenwashing, but the leaves are a chatbot.",
@@ -24,7 +25,7 @@
   ]
 }
 ---
-## What it means
+## What AI washing means
 
 AI washing is marketing that makes a product sound more AI-driven than it is. A spreadsheet macro becomes an "intelligent engine". A rules-based filter becomes "powered by machine learning". Sometimes there's no AI in the product at all, only the label.
 
@@ -32,9 +33,9 @@ The aim is the same as any inflated claim: win customers who want the latest thi
 
 The term has also stretched. In 2026 The Washington Post used it for bosses who blame layoffs on AI when the cuts may have more to do with ordinary cost-cutting.
 
-## Where it came from
+## Where the term AI washing came from
 
-The name is modelled on greenwashing, where companies overstate their environmental credentials. According to Wikipedia, the AI Now Institute, a research institute at New York University, first defined AI washing in 2019. It has been compared to the dot-com bubble, when companies added ".com" to their names to lift their valuations.
+The name is modelled on greenwashing, where companies overstate their environmental credentials. According to [Wikipedia](https://en.wikipedia.org/wiki/AI_washing), the AI Now Institute, a research institute at New York University, first defined AI washing in 2019. It has been compared to the dot-com bubble, when companies added ".com" to their names to lift their valuations.
 
 Regulators have started to act on it. In March 2024 the US Securities and Exchange Commission imposed its first civil penalties on two companies for misleading statements about their use of AI, and in July 2024 it charged an executive at a supposed AI hiring startup with fraud. One consumer example Wikipedia cites is Coca-Cola's Y3000 drink from September 2023, said to be "co-created with human and artificial intelligence", which drew accusations of AI washing because there was no evidence of what, if anything, the AI had contributed.
 
@@ -59,4 +60,6 @@ A quick test for any "AI-powered" claim:
 
 ## How Slop Mop sees it
 
-Slop Mop can't inspect a product to see whether the AI is real. What it can see is the language AI washing usually comes wrapped in: [hype words](/patterns/hype-words/) and [no-catch promises](/patterns/no-catch-promises/) with no cost or limit attached. Those are two of the tells it scores on LinkedIn posts.
+Slop Mop can't inspect a product to see whether the AI is real. What it can see is the language AI washing usually comes wrapped in: [hype words](/patterns/hype-words/) and [no-catch promises](/patterns/no-catch-promises/) with no cost or limit attached. Those are two of the tells it scores in posts on LinkedIn, X, Reddit, Facebook, Substack and Medium, on the product pages and articles you read, and in sales emails in Gmail and Outlook. The same habit has an older cousin in [AI snake oil](/glossary/ai-snake-oil/).
+
+[Add Slop Mop to your browser](/) and it folds pitches like these for you.

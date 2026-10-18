@@ -5,16 +5,19 @@
   "description": "“Not X, but Y” defines things by what they aren't: leadership isn't a title, it's a mindset. Why it's empty, when contrast helps, and how to rewrite it.",
   "summary": "Defining things by what they aren't, usually against a claim nobody made, so a slogan can stand in for an argument.",
   "updated": "2026-10-18",
+  "keyword": "not x but y",
   "tell": "“Not X, but Y”",
   "short": "defining things by what they aren't",
   "order": 6,
   "related": ["/patterns/no-catch-promises/", "/patterns/flowery-prose/", "/glossary/ai-slop/", "/glossary/ai-suspicion/"],
-  "sources": []
+  "sources": [
+    {"title": "Wikipedia:Signs of AI writing", "publisher": "WikiProject AI Cleanup, Wikipedia", "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing", "date": ""}
+  ]
 }
 ---
 “Not X, but Y” is a sentence shape that defines something by knocking down a version of it nobody was defending. Leadership isn't a title, it's a mindset. Success isn't a destination, it's a habit. It's not about the money, it's about the mission. The first half sets up a straw position; the second half delivers a slogan that sounds like a correction.
 
-## What it looks like
+## What “not X, but Y” looks like
 
 :::slop
 Leadership isn't a title. It's a mindset. It's not about being in charge, it's about taking care of those in your charge.
@@ -51,7 +54,7 @@ The shape feels like insight because it seems to overturn an assumption. Look cl
 
 It also hides the absence of a claim. "It's a mindset" sounds like a position, but it's hard to test or act on. A specific sentence about what good managers actually do would give you something to try on Monday.
 
-In bulk, it becomes a rhythm you can hear before you've read the words. Writers who lean on it tend to use it every few lines, and the reader learns to skim for the second half, then finds the second half is also empty.
+In bulk, it becomes a rhythm you can hear before you've read the words. Wikipedia's volunteer [guide to signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) lists these "negative parallelisms" among the habits its editors watch for. Writers who lean on it tend to use it every few lines, and the reader learns to skim for the second half, then finds the second half is also empty.
 
 ## When it's fine
 
@@ -64,11 +67,11 @@ Contrast is one of the most useful tools in writing when the thing being contras
 
 The test: does someone actually believe X? And can Y be checked? If both answers are yes, it's a correction worth making.
 
-## How Slop Mop scores it
+## How Slop Mop scores “not X, but Y”
 
-“Not X, but Y” is one of nine questions the model asks about every post, and one spoke on the Slopprint. It looks for things being defined by what they aren't, as opposed to plain corrections of fact.
+“Not X, but Y” is one of the [nine questions the model asks](/how-it-works.html#tells) about every post, and one spoke on the Slopprint. It looks for things being defined by what they aren't, as opposed to plain corrections of fact.
 
-The model gives its confidence too, and unsure answers count for less. When this is the only tell that stands out, the score is cut, because one neat contrast in an otherwise solid post is a stylistic habit, and plenty of people have it. It's often found alongside [flowery prose](/patterns/flowery-prose/) and a [too-tidy story](/patterns/too-tidy-story/), and several tells at once is what gets flagged.
+The model gives its confidence too, and unsure answers count for less. When this is the only tell that stands out, the score is cut, because one neat contrast in an otherwise solid post is a stylistic habit, and plenty of people have it. It often appears alongside [flowery prose](/patterns/flowery-prose/) and a [too-tidy story](/patterns/too-tidy-story/), and several tells at once is what gets flagged.
 
 Three counter-signals can only lower the score: sounds like a person, useful to readers and reader response. A post with one “not X, but Y” line and a concrete method below it gets a share taken off for being useful. Some tells count for more than others, and the weights aren't published. Your sensitivity setting decides where the verdict lands, and your vote overrides it in your own feed.
 
@@ -87,6 +90,8 @@ Networking isn't about collecting contacts. It's about building relationships. I
 I keep a short list of about 30 people I've worked with. Every month I message three of them with something specific: a job I've seen, an article about their area, a question. Two of my last three contracts came from that list.
 :::
 
-## Where it shows up
+## Where “not X, but Y” shows up
 
-LinkedIn thought-leadership posts use the shape constantly, and LinkedIn is where Slop Mop reads posts today. It's also a fixture of advertising slogans, motivational quote cards on Instagram, keynote talks and company values pages.
+Thought-leadership posts on LinkedIn use the shape constantly, and it's just as common in motivational threads on X, quote cards shared on Facebook, Substack essays and Medium self-help stories. Off the feeds, it's a fixture of advertising slogans, keynote talks and company values pages.
+
+Slop Mop reads for it on every network it covers: LinkedIn, X, Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium, articles and websites, and email in Gmail and Outlook, where it checks only what the sender wrote. [Add Slop Mop to your browser](/) and it folds posts like these for you.

@@ -1,9 +1,10 @@
 ---
 {
-  "title": "Workslop in your work inbox: how to spot it and what to reply",
+  "title": "Workslop in work email: how to spot it and what to reply",
   "seo_title": "Workslop in work email: spot it, reply to it · Slop Mop",
   "description": "How to recognise a polished but empty work email, reply in a way that gets you the missing decision, and avoid sending workslop yourself.",
   "summary": "How to spot a polished but empty work email, what to reply to get the missing facts, and how to keep your own emails out of the pile.",
+  "keyword": "workslop email",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-17",
@@ -19,7 +20,7 @@ Workslop is a work email or document that looks finished and doesn't move anythi
 
 The term comes from a [Harvard Business Review article](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity) published on 22 September 2025 by researchers at BetterUp Labs and the Stanford Social Media Lab. The [workslop glossary entry](/glossary/workslop/) covers their findings. This guide is about the email that's sitting in your inbox now.
 
-## What to look for
+## What to look for in a workslop email
 
 Read the email once, then check it against these. Three or more and you're probably holding workslop.
 
@@ -44,7 +45,7 @@ All three were in the Bristol office, where IT orders on Mondays only. Proposal:
 
 The second email could have been drafted with AI too. It works because someone put in the one fact, the one proposal and the one question.
 
-## What to reply
+## What to reply to a workslop email
 
 The aim is to get the missing piece without a row. Ask for the thing a useful version would contain. Pick the one that fits:
 
@@ -74,6 +75,8 @@ Not every empty email needs a reply. A quick rule:
 | Addressed to a big list, no ask | Archive; if it matters, someone will chase |
 | From your manager or a client, no ask | Reply asking what they need from you |
 
+Slop Mop for Gmail and Outlook can sort the archive pile for you. It scores what the sender wrote with the same tells described above ([how it works](/how-it-works.html)) and marks or folds the padded emails, whether a person or a model drafted them. Before an email is checked, personal details are replaced with placeholders in your mailbox; only the sender's own words are sent, never attachments or quoted earlier messages, and spam, private, legal, health and transactional mail is never read unless you check a message by hand. It's part of Slop Mop XL (US$5.99 a month). It won't write the reply for you; the questions above still do that.
+
 ## How not to send it yourself
 
 Most workslop comes from people short of time. Before you send an email that AI helped draft:
@@ -89,3 +92,5 @@ A few minutes on that saves your colleague a round of emails asking what you mea
 ## If it keeps happening
 
 If workslop is common across a team, it's often a process problem: people are being asked for updates nobody reads, or for documents of a set length. Shorter templates help. So does asking for "the decision and the evidence" in place of a "summary". Agreeing that a three-line email is acceptable gives people permission to stop padding.
+
+[Add Slop Mop for Gmail and Outlook](/) (part of Slop Mop XL) and it marks the workslop in your inbox for you.

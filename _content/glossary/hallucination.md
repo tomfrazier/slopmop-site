@@ -2,6 +2,7 @@
 {
   "title": "Hallucination (AI)",
   "seo_title": "AI hallucination: meaning, origin and criticism · Slop Mop",
+  "keyword": "hallucination",
   "description": "An AI hallucination is false or made-up information a model states as fact. Where the term came from, why some researchers dislike it, and an example.",
   "summary": "When an AI model states false or made-up information as if it were fact, such as an invented citation.",
   "updated": "2026-10-18",
@@ -26,7 +27,7 @@
   ]
 }
 ---
-## What it means
+## What an AI hallucination is
 
 In AI, a hallucination is an answer that contains false or misleading information presented as fact. The classic case is a chatbot that cites a paper, gives its authors, year and journal, and the paper doesn't exist.
 
@@ -34,9 +35,9 @@ What makes hallucinations awkward is their delivery. The false sentence sits amo
 
 Large language models produce text by predicting likely next words. A plausible-sounding citation is a likely shape of text, whether or not the source exists, which is part of why these errors happen and why they are hard to remove.
 
-## Where it came from
+## Where the term AI hallucination came from
 
-The word borrows loosely from psychology, where a hallucination is perceiving something that isn't there. In computer vision it was used from the 2000s for adding plausible detail to an image, as in "face hallucination", which was treated as a useful feature.
+The word borrows loosely from psychology, where a [hallucination](https://www.merriam-webster.com/dictionary/hallucination) is perceiving something that isn't there. In computer vision it was used from the 2000s for adding plausible detail to an image, as in "face hallucination", which was treated as a useful feature.
 
 The sense of an error came later. In 2015, Andrej Karpathy used "hallucinated" in a blog post about a language model that produced an incorrect citation link, and Google researchers used it in 2017 for machine translations unrelated to the source text. After ChatGPT's release in November 2022, news outlets took the term up for chatbots' made-up answers, and in 2023 the Cambridge Dictionary added the AI sense to its definition.
 
@@ -56,4 +57,6 @@ A sharper objection comes from Hicks, Humphries and Slater, who argued in *Ethic
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't fact-check, so it can't tell you whether a post's claims are true. It judges the writing, and a confidently wrong post with no hype or filler can read as fine.
+Slop Mop doesn't fact-check, so it can't tell you whether a post's claims are true, on LinkedIn, Reddit, Medium or anywhere else it reads. It judges the writing, and a confidently wrong post with no hype or filler can read as fine. Checking names, numbers and citations is still your job.
+
+[Add Slop Mop to your browser](/) and it folds the hype and filler, leaving the fact-checking to you.

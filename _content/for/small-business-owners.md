@@ -1,10 +1,11 @@
 ---
 {
   "title": "Slop Mop for small business owners",
-  "seo_title": "A quieter LinkedIn for small business owners · Slop Mop",
-  "description": "Small business owners have little time for LinkedIn. Slop Mop folds the growth-hack posts and AI tool pitches so local news, suppliers and customers show.",
-  "summary": "Fold the growth hacks and AI tool pitches so a small business owner's short LinkedIn check shows customers, suppliers and local news.",
+  "seo_title": "Slop Mop for small business owners: a quieter feed",
+  "description": "Small business owners have little time for Facebook, LinkedIn or a full inbox. Slop Mop folds the growth hacks and AI tool pitches so customers and suppliers show.",
+  "summary": "Fold the growth hacks and AI tool pitches on Facebook, LinkedIn, Reddit and email so a small business owner's short check shows what matters.",
   "updated": "2026-10-18",
+  "keyword": "slop mop for small business owners",
   "kind": "role",
   "audience": "small business owners",
   "related": [
@@ -14,16 +15,19 @@
     "/glossary/enshittification/",
     "/glossary/ai-slop/",
     "/for/freelancers/"
+  ],
+  "sources": [
+    {"title": "Snooze a person, Page or group on Facebook", "publisher": "Facebook Help Center", "url": "https://www.facebook.com/help/538433456491590", "date": ""}
   ]
 }
 ---
 ## What your feed looks like
 
-If you run a shop, a trade business, a practice or a small agency, LinkedIn is one channel among many, and you probably check it between jobs. It's useful for a few things: keeping in touch with suppliers and customers, seeing what's happening locally, the odd hire, and posting your own work.
+If you run a shop, a trade business, a practice or a small agency, social media is one channel among many, and you probably check it between jobs. Facebook is often the busiest: your business page, the local community groups where customers ask for recommendations, and the trade groups where owners compare notes. LinkedIn is for suppliers, bigger customers and the odd hire. Reddit has subreddits for small businesses and for most trades, where owners describe problems frankly. Your inbox gets orders and invoices, and also a steady stream of pitches.
 
-The feed, though, assumes you want to become someone else. It's full of posts telling owners to "work on the business, not in it", agencies promising "3x leads in 30 days", and AI tool pitches that will "automate your entire business while you sleep". Then come the screenshots of revenue dashboards with no business named, the "I fired my biggest client and doubled my income" story, and endless motivational lines about hustle and mindset. Plenty of it is aimed squarely at owners because owners buy things.
+All of these assume you want to become someone else. They're full of posts telling owners to "work on the business, not in it", agencies promising "3x leads in 30 days", and AI tool pitches that will "automate your entire business while you sleep". Then come the screenshots of revenue dashboards with no business named, the "I fired my biggest client and doubled my income" story, and endless motivational lines about hustle and mindset. Facebook groups add "type AMEN if you support small businesses" posts, and the inbox adds cold emails offering to "take your SEO to the next level". Plenty of it is aimed squarely at owners because owners buy things.
 
-What's worth your few minutes is ordinary: a supplier warning about a price rise, the local chamber posting about a road closure, a customer tagging you in a photo of a job, a peer explaining how they handled a late-paying client.
+What's worth your few minutes is ordinary: a supplier warning about a price rise, the local group posting about a road closure, a customer tagging you in a photo of a job, a peer explaining how they handled a late-paying client.
 
 ## Examples
 
@@ -47,25 +51,34 @@ This one AI tool will automate your entire business. Save 20 hours a week, cut c
 We use a scheduling app for bookings now. It cut phone calls by roughly half, costs £30 a month, and older customers still ring anyway. It double-booked us once in the first month.
 :::
 
-The slop examples are a too-tidy story with a moral and a follow request, and a no-catch promise with the link pushed into the comments. The fine versions give the cost, the downside and how long it took, which is what an owner needs before trying the same thing.
+The slop examples are a [too-tidy story](/patterns/too-tidy-story/) with a moral and a follow request, and a [no-catch promise](/patterns/no-catch-promises/) with the link pushed into the comments. The fine versions give the cost, the downside and how long it took, which is what an owner needs before trying the same thing.
 
-## How Slop Mop helps
+## How Slop Mop helps small business owners
 
-Slop Mop is a browser extension for Chrome and other Chromium browsers. It reads posts in your LinkedIn feed ahead of you, scores each one on nine tells of slop and three counter-signals, and folds or marks the ones that look like slop. Click the mop beside any post to see why.
+Slop Mop is a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave and Opera, on a desktop or laptop computer. It doesn't run in phone apps. It reads posts ahead of you, scores each one on nine tells of slop and three counter-signals, and folds or marks the ones that look like slop. Click the mop beside any post to see why, or read [how it works](/how-it-works.html).
+
+On the networks owners use:
+
+- **Facebook.** It reads the posts in your feed, group posts included. Facebook's own tools, such as [snoozing a person, Page or group](https://www.facebook.com/help/538433456491590) for 30 days, hide everything from one source; Slop Mop folds the bait post by post, so a useful local group stays in view. See [Slop Mop for Facebook](/for/facebook/).
+- **LinkedIn.** It reads the posts in your feed and folds the hustle stories.
+- **Reddit.** It reads posts and comments, which helps when the useful answer from another owner is buried under jokes.
+- **Websites.** It reads the articles you open while researching suppliers, rules and tools.
+- **Email.** Slop Mop for Gmail and Slop Mop for Outlook check what the sender wrote, so the cold SEO and lead-gen pitches get marked. Before a message is checked, personal details are replaced with placeholders in your mailbox, and attachments and quoted earlier messages are never sent. Transactional mail such as orders and invoices is never read unless you check one by hand.
 
 It doesn't try to work out who or what wrote a post. A supplier's update written with an AI assistant will usually pass if it says something useful; a hand-typed hustle post probably won't. It never deletes, reports or blocks anyone, so nobody you follow is affected.
 
-It's free for one feed with 250 checks a day, and that feed today is LinkedIn on a desktop computer. It doesn't run on the LinkedIn phone app. X, Reddit, Facebook, Substack, Medium, websites and email are coming soon. A paid plan, Slop Mop XL, is also coming soon at US$5.99 a month or US$59.99 a year, but you don't need it for LinkedIn.
-
-## Setting it up for small business owners
+## Setting up Slop Mop for small business owners
 
 Start with **Hide** mode at **Moderate** sensitivity, and leave it there.
 
-Hide is right if your time on LinkedIn is short. Likely slop folds into a one-line strip, so you scroll past it in a second and can reopen it with one click if the name catches your eye. Moderate catches the obvious hype and bait without folding the plain, short posts from suppliers and customers that you most want to see.
+Hide is right if your time online is short. Likely slop folds into a one-line strip, so you scroll past it in a second and can reopen it with one click if the name catches your eye. Moderate catches the obvious hype and bait without folding the plain, short posts from suppliers and customers that you most want to see.
 
-The 250 daily checks are plenty for a few short visits. If you ever hit the limit, posts already checked keep working and the count resets at midnight UTC.
+Pick your plan:
 
-If something useful gets folded, open it and vote **No**. That overrides the score in your feed. If a pitch slips through, vote **Probably**. Votes that disagree with the verdict are reviewed by a person at Artimovo. You don't need to vote on everything: a few votes when it's clearly wrong is enough.
+- **Free** covers the one feed you pick, with 250 checks a day. For many owners that's Facebook; for others it's LinkedIn. 250 checks is plenty for a few short visits. If you ever hit the limit, posts already checked keep working and the count resets at midnight UTC.
+- **Slop Mop XL** is US$5.99 a month or US$59.99 a year. It covers every feed, the sites you read, Gmail and Outlook, with a higher daily limit, on up to five browsers. It's worth it if the pitches in your inbox take more of your time than any feed does.
+
+If something useful gets folded, open it and vote **No**. That overrides the score in your feed. If a pitch slips through, vote **Probably**. Votes that disagree with the verdict are reviewed by a person at Artimovo. You don't need to vote on everything: a few votes when it's clearly wrong is enough. Voting isn't available for email.
 
 ## If you post too
 
@@ -75,4 +88,4 @@ Owners often post about their work, and the best of those posts are the ones tha
 - **Promises with no catch** in posts about your services. Say what it costs and how long it takes. See [no-catch promises](/patterns/no-catch-promises/).
 - **"Like and share to support a small business"**. A photo of real work usually does more. See [engagement bait](/patterns/engagement-bait/).
 
-Specific details from your own work, such as a street, a job or a customer who's happy to be named, are what the [sounds like a person](/how-it-works.html) counter-signal looks for.
+Specific details from your own work, such as a street, a job or a customer who's happy to be named, are what the [sounds like a person](/how-it-works.html) counter-signal looks for. [Add Slop Mop to your browser](/) and it folds the growth hacks so your customers and suppliers are easier to see.

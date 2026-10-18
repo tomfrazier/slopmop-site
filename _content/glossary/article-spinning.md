@@ -5,6 +5,7 @@
   "description": "Article spinning rewrites an existing text with synonyms and shuffled phrasing so it passes as original, usually to game search or hide plagiarism.",
   "summary": "Rewriting an existing article with synonyms and shuffled phrasing so it passes as new, usually to game search rankings or hide plagiarism.",
   "updated": "2026-10-18",
+  "keyword": "article spinning",
   "term": "Article spinning",
   "aliases": ["content spinning", "spinning", "Rogeting"],
   "punchline": "The same article, wearing a thesaurus.",
@@ -26,7 +27,7 @@
   ]
 }
 ---
-## What it means
+## What article spinning means
 
 Article spinning is taking a text someone has already written and rewording it just enough that it looks new. Words are swapped for synonyms, sentences are reordered, paragraphs are shuffled. The meaning stays roughly the same, and the result can be published as "original" on another site or handed in as someone's own work.
 
@@ -34,11 +35,11 @@ It can be done by hand or by software. Automated spinners work from a thesaurus 
 
 Another name for it is "Rogeting", after Roget's Thesaurus. Students use the same technique to slip copied work past plagiarism checkers such as Turnitin, and there are websites that offer spinning to them as a service.
 
-## Where it came from
+## Where article spinning came from
 
 Spinning grew up as a black-hat search engine optimisation trick in the 2000s and 2010s. Sites wanted large volumes of text that search engines wouldn't treat as duplicate content, and spinning one article into dozens of variants was a cheap way to get it. By the mid-2010s there were websites that would spin content automatically, often to fill pages with advertising.
 
-Generative AI made the trick easier and the output smoother. Wikipedia's entry collects reports from 2023 and 2024 of AI-reworded copies of news articles appearing in Google News, sometimes within minutes of the original. Google's spam policies now name the practice twice: under scraping ("substituting synonyms or using automated techniques") and under [scaled content abuse](/glossary/scaled-content-abuse/), which covers "synonymizing, translating, or other obfuscation techniques".
+Generative AI made the trick easier and the output smoother. Wikipedia's entry collects reports from 2023 and 2024 of AI-reworded copies of news articles appearing in Google News, sometimes within minutes of the original. [Google's spam policies](https://developers.google.com/search/docs/essentials/spam-policies) now name the practice twice: under scraping ("substituting synonyms or using automated techniques") and under [scaled content abuse](/glossary/scaled-content-abuse/), which covers "synonymizing, translating, or other obfuscation techniques".
 
 ## Examples
 
@@ -64,4 +65,6 @@ Reusing a fact is fine. The rewrite adds checking, context and reporting of its 
 
 ## How Slop Mop sees it
 
-Spinning is mostly a problem for search results and websites, and Slop Mop for websites is coming soon. In the LinkedIn feed, where Slop Mop works today, spun text tends to show itself through [stiff phrasing](/patterns/stiff-phrasing/) and a lack of anything a reader could use. It can't tell that a post was copied from somewhere else, only how the writing reads.
+Spinning is mostly a problem for search results and websites. Slop Mop reads the articles and websites you open as well as posts on LinkedIn, X, Reddit, Facebook, Substack and Medium, and wherever spun text turns up it tends to show itself through [stiff phrasing](/patterns/stiff-phrasing/) and a lack of anything a reader could use. Slop Mop can't tell that a page was copied from somewhere else, only how the writing reads. Spun pages often come from a [content farm](/glossary/content-farm/), which has its own signs.
+
+[Add Slop Mop to your browser](/) and it folds pages like these for you.

@@ -5,6 +5,7 @@
   "description": "The signs of a karma-farming account or repost bot on Reddit, a quick profile check that takes a minute, and what to do once you're fairly sure.",
   "summary": "Karma farmers recycle old hits and copied comments to build accounts worth using. The signs, a one-minute profile check and what to do.",
   "updated": "2026-10-18",
+  "keyword": "reddit karma farming",
   "network": "reddit",
   "publish_date": "2026-10-27",
   "verified": "2026-10-18",
@@ -28,12 +29,12 @@ Karma is the running total of upvotes on an account's posts and comments. Reddit
 
 Moderators have other tools too. Reddit gives every account a Contributor Quality Score, based on signals such as past actions on the account and whether it has verified its email, and mods can filter posts by it ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/19023371170196-What-is-the-Contributor-Quality-Score)). You can't see that score as a reader, so you're working from what's on the page.
 
-## What to look for in the post
+## Signs of Reddit karma farming in the post
 
 Farmed posts borrow something that already worked. Watch for:
 
 - **A post you've seen before** with a new title. The picture or story is old; the framing is new and usually more sentimental or more outraged.
-- **A title that asks for votes.** Reddit's reddiquette lists "Show me some love!" and "Is this front page worthy?" among the ways people hint at asking for votes ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette)). On LinkedIn the same move is [engagement bait](/patterns/engagement-bait/).
+- **A title that asks for votes.** Reddit's reddiquette lists "Show me some love!" and "Is this front page worthy?" among the ways people hint at asking for votes ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette)). On LinkedIn, X and Facebook the same move is [engagement bait](/patterns/engagement-bait/).
 - **No follow-up from the poster.** A real person who shares their project tends to answer questions in the comments. A farmer posts and leaves.
 - **A post that doesn't fit the community.** Generic, broadly appealing content in a niche community, or the same post across several loosely related ones.
 
@@ -89,4 +90,6 @@ No single sign is proof. Profiles can be hidden, people post in bursts, and plen
 
 ## Where it gets hard
 
-Some of the most convincing farming now uses text: a plausible question, or a tidy answer, generated in seconds. That's a separate judgement from the profile check above, because you're reading the writing, and suspicion of AI is a poor guide by itself ([AI suspicion](/glossary/ai-suspicion/) is its own problem). The question to ask is the same one you'd ask of a human post: does this add anything to this thread? Slop Mop, which makes that call post by post on LinkedIn today, is coming soon to Reddit.
+Some of the most convincing farming now uses text: a plausible question, or a tidy answer, generated in seconds. That's a separate judgement from the profile check above, because you're reading the writing, and suspicion of AI is a poor guide by itself ([AI suspicion](/glossary/ai-suspicion/) is its own problem). The question to ask is the same one you'd ask of a human post: does this add anything to this thread?
+
+Slop Mop asks that question for you on Reddit. It reads the posts and comments in your feed and scores the writing against nine tells, including vote-begging and filler replies that would fit under any post, without guessing whether a person or a model typed them ([how the score works](/how-it-works.html)). It doesn't check profiles or karma, and it never reports or blocks anyone, so the profile check above is still yours to do. [Add Slop Mop to your browser](/) and it folds farmed posts and copied comments like these into a one-line strip you can reopen.

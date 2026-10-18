@@ -5,6 +5,7 @@
   "description": "How formulaic Medium listicles are built, the headline and structure tells that give them away, and how to tell a padded list from a useful one.",
   "summary": "Formulaic Medium listicles share a shape: a number, a promise and filler items. Here is how to spot them before you click.",
   "updated": "2026-10-18",
+  "keyword": "seo listicles on medium",
   "network": "medium",
   "publish_date": "2026-11-10",
   "verified": "2026-10-18",
@@ -18,7 +19,7 @@
 ---
 A padded listicle has a big number in the headline, items that are each a sentence of advice with a paragraph of filler around it, and no evidence the writer tried any of it. The quickest test is to read the item headings alone: if the list still makes complete sense with the paragraphs removed, the paragraphs were padding. Useful lists have items you couldn't guess from the headline.
 
-## Why there are so many
+## Why Medium has so many SEO listicles
 
 Lists are easy to write, easy to skim and easy to rank for. A headline like "15 Python libraries every developer should know" matches what people type into a search engine, and Medium stories are often found that way as well as through the feed. That makes the format attractive to anyone writing for volume, and cheap text generation has made volume cheaper still.
 
@@ -97,4 +98,6 @@ That's a list with a method, a cost and an admission. You'd read the next line.
 - If a topic you follow is full of them, try a narrower topic.
 - Don't punish the format. A well-made list from a practitioner is often the most useful thing in a topic feed.
 
-Medium already gives extra reach to stories its curators pick under its [Boost distribution tier](https://help.medium.com/hc/en-us/articles/360006362473), but that doesn't stop thin lists reaching you through topic feeds and search. Slop Mop is coming soon to Medium; for now, the heading test is the fastest filter you have.
+Medium already gives extra reach to stories its curators pick under its [Boost distribution tier](https://help.medium.com/hc/en-us/articles/360006362473), but that doesn't stop thin lists reaching you through topic feeds and search. The heading test is the fastest filter you can run by hand. [Slop Mop](/how-it-works.html) runs a similar one for you: it reads the stories in your Medium feed and the articles you open, and folds lists heavy on hype words, no-catch promises and engagement bait into a strip you can reopen. A practitioner's list with a method and a cost should pass. It runs in desktop browsers, not the Medium app.
+
+Padded lists also fill search results, and Slop Mop checks the [web articles you read](/guides/websites/web-fewer-slop-search-results/) too, as part of Slop Mop XL. [Add Slop Mop to your browser](/) and it folds listicles like the first example for you.

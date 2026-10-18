@@ -4,6 +4,7 @@
   "seo_title": "How to spot an AI-written cold email · Slop Mop",
   "description": "Fake personalisation, flattery with no detail, a vague offer and a soft ask: the signs of a mass-produced cold email, and a 30-second test for any pitch.",
   "summary": "The signs of a mass-produced cold email, why 'written by AI' is the wrong question, and a 30-second test for any pitch.",
+  "keyword": "ai cold emails",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-03",
@@ -21,7 +22,7 @@ You can't tell for certain whether AI wrote a cold email, and you don't need to.
 
 Plenty of good sales emails are drafted with AI and then checked by someone who did the research. Plenty of bad ones were typed by hand from a template in 2015. Guessing at authorship leads to [AI suspicion](/glossary/ai-suspicion/), which feels useful and proves nothing. The question that saves you time is narrower: did anyone think about *you* before pressing send?
 
-## What to look for
+## What to look for in an AI-written cold email
 
 ### 1. Personalisation that could fit anyone
 
@@ -80,7 +81,7 @@ You might still say no. But you know what's on offer, what it costs and what the
 
 ## When to be careful
 
-Some cold emails are worse than generic. If a message asks you to log in, pay an invoice you don't recognise, open an attachment or move fast before something bad happens, treat it as possible phishing. Google's phishing guidance is to avoid clicking links, downloading files or entering personal information in messages from untrustworthy or unknown senders, and to check that the sender's name and email address match. Report it, don't reply to it.
+Some cold emails are worse than generic. If a message asks you to log in, pay an invoice you don't recognise, open an attachment or move fast before something bad happens, treat it as possible phishing. [Google's phishing guidance](https://support.google.com/mail/answer/8253) is to avoid clicking links, downloading files or entering personal information in messages from untrustworthy or unknown senders, and to check that the sender's name and email address match. Report it, don't reply to it.
 
 Generic isn't the same as malicious. A dull pitch from a real company is a waste of time; a convincing pitch with a dodgy link is a risk. Treat them differently.
 
@@ -89,9 +90,10 @@ Generic isn't the same as malicious. A dull pitch from a real company is a waste
 - **Archive, don't reply.** A "no thanks" tells the sender your address is read, and can restart the follow-up chain.
 - **Unsubscribe if there's a link and the sender is a real company.** Most legitimate senders include one. If the email looks suspicious, block instead of clicking.
 - **Filter repeat offenders.** If the same sequence tool keeps reaching you under different names, a filter on a phrase they always use ("just bumping this") can send them straight to a folder you check once a month.
+- **Let Slop Mop take the first pass.** Slop Mop for Gmail and Slop Mop for Outlook score the writing in each email with the same twelve questions it uses on posts, so a pitch heavy on [empty praise](/patterns/empty-praise/) and soft asks gets marked or folded before you read it. It judges the writing, not whether AI typed it. Personal details are swapped for placeholders before anything leaves your mailbox, only what the sender wrote is checked (never attachments or quoted earlier messages), and spam, private, legal, health and transactional mail is skipped unless you check a message by hand. It's part of Slop Mop XL, at US$5.99 a month.
 
 ## If you send cold email yourself
 
 The same test works in reverse. Before you send, delete every sentence that would survive being sent to a stranger, add the one fact you found, state the price or the limit, and ask a question someone can answer in one line. If your sales team drafts with AI, that edit is the part that can't be skipped.
 
-Slop Mop for Gmail and Outlook is coming soon; it will score the writing in emails like these, using the same tells, and leave authorship out of it.
+[Add Slop Mop for Gmail and Outlook](/) (part of Slop Mop XL) and it marks or folds pitches like these for you.

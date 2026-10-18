@@ -4,6 +4,7 @@
   "seo_title": "How to tell if a website is a content farm · Slop Mop",
   "description": "Signs a whole site is a content farm: dozens of posts a day on unrelated topics, generic authors, an empty About page and ads everywhere.",
   "summary": "Judge the whole site: publishing volume, topic sprawl, authors, ownership and ads reveal a content farm in minutes.",
+  "keyword": "content farm",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-12-08",
@@ -79,7 +80,7 @@ Mow less often in a dry spell and raise the blades to the highest setting. Longe
 
 The fine example is short and general, but it gives you something to do this weekend. The farm version never does.
 
-## Signs at a glance
+## Content farm signs at a glance
 
 | Signal | Farm | Real publisher |
 |---|---|---|
@@ -100,4 +101,6 @@ Farms are part of why people talk about the [dead internet theory](/glossary/dea
 
 Stop clicking it and keep it out of future searches. DuckDuckGo and Kagi let you block a domain, and Kagi lets you report it to SlopStop; on Google, use `-site:` or an extension. [How to block a site from your search results](/guides/websites/web-block-sites-search-results/) has the steps.
 
-Slop Mop is coming soon to websites. For now, the site check above takes about five minutes and you only need to do it once per site.
+The site check above takes about five minutes and you only need to do it once per site. For the farm articles that still reach you through links and shares, Slop Mop judges each page as you open it: it scores the article text with the same twelve questions it uses on social posts ([how it works](/how-it-works.html)) and marks or folds the thin ones. It doesn't block domains or report sites anywhere, and websites are part of Slop Mop XL (US$5.99 a month).
+
+[Add Slop Mop to your browser](/) and it folds content-farm articles like these for you.

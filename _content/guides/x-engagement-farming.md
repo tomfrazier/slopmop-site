@@ -5,6 +5,7 @@
   "description": "Engagement farming on X means posts built to harvest replies and reposts. Six common shapes, examples, and how to tell a farm from a real question.",
   "summary": "Six shapes of engagement farming on X, why they pay, and a quick test for telling a harvested reply from a real conversation.",
   "updated": "2026-10-18",
+  "keyword": "engagement farming on x",
   "network": "x",
   "publish_date": "2026-10-27",
   "verified": "2026-10-18",
@@ -19,7 +20,7 @@
 ---
 Engagement farming is posting designed to collect replies, likes, reposts and follows, where the reaction is the point and the content is an excuse. On X it usually looks like a formula question, a follow-back promise or a list with a gap left for you to fill. The quickest test: if the post would lose nothing by having every reply deleted, the replies were the harvest.
 
-## Why X has so much of it
+## Why X has so much engagement farming
 
 Engagement farming exists on every network, but X gives it a direct cash reason. In October 2024 X changed its creator revenue sharing so that payouts depend on engagement from Premium subscribers, rather than on ads shown in replies. TechCrunch pointed out at the time that this appeared to reward anything that drew replies, for whatever reason ([TechCrunch](https://techcrunch.com/2024/10/09/x-changes-creator-payouts-to-depend-on-engagement-not-ads/)).
 
@@ -93,13 +94,18 @@ Not every question or list is farming. People ask things because they want to kn
 
 A post that fails all four is safe to skip.
 
-## What to do when you see it
+## What to do when you see engagement farming on X
 
 1. **Don't reply, not even to mock it.** A mocking reply counts as a reply.
 2. **Mark it Not interested.** X says this feedback shapes what it recommends next ([X Help Center](https://help.x.com/en/rules-and-policies/recommendations)).
 3. **Mute the phrase if it keeps recurring.** "Wrong answers only", "follow everyone who" and "drop yours below" are good starting entries. See [how to clean up your For You timeline](/guides/x/x-clean-up-for-you-timeline/) for where muted words live.
 4. **Unfollow accounts that post mostly farms.** If you'd like to keep an eye on someone without seeing every post, X Lists let you read accounts without following them.
+5. **Let a filter fold them.** [Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads the posts and replies in your X timeline as you scroll. Hide mode folds likely slop into a one-line strip you can reopen; Highlight mode marks it. Engagement bait is one of the nine tells it scores, and a single "thoughts?" won't fold a post on its own, because the score is cut when only one tell stands out ([How it works](/how-it-works.html) explains why). The free plan covers one feed with 250 checks a day, and it runs on x.com in your desktop browser, not in the X app.
+
+The same shapes turn up as "Comment GUIDE" posts on LinkedIn and "Type AMEN" posts on Facebook. Slop Mop reads those feeds too; the [LinkedIn engagement bait guide](/guides/linkedin/linkedin-filter-engagement-bait/) covers that network's controls.
 
 ## If you post on X yourself
 
 Asking your readers a question is fine. Ask one you'll use the answers to, say why you're asking, and reply to the people who answer. The [engagement bait](/patterns/engagement-bait/) page has more on asking fairly, and if writing for reach is part of your job, the page for [creators](/for/creators/) covers the habits readers notice first.
+
+[Add Slop Mop to your browser](/) and it folds engagement farming like this in your timeline for you.

@@ -5,6 +5,7 @@
   "description": "Word salad is a string of words that sound like language but add up to no clear meaning. Where the term came from, and how to turn word salad into a point.",
   "summary": "A string of words and phrases that sound like language but add up to no clear meaning, now often said of rambling AI text.",
   "updated": "2026-10-18",
+  "keyword": "word salad",
   "term": "Word salad",
   "aliases": [],
   "punchline": "Sounds like a sentence. Means nothing.",
@@ -26,7 +27,7 @@
   ]
 }
 ---
-## What it means
+## What word salad means
 
 Word salad is language that has the shape of sense without the sense. The words are real, the grammar may be fine, and at the end you can't say what was claimed.
 
@@ -34,9 +35,9 @@ The phrase has two lives. In psychiatry and neurology it is a clinical descripti
 
 This page is about the everyday sense. The clinical sense describes a symptom that people don't choose, and it's no joke.
 
-## Where it came from
+## Where word salad came from
 
-Merriam-Webster dates the first known use of the clinical sense to 1904. Its definition: "unintelligible, extremely disorganized speech or writing manifested as a symptom of a mental disorder (such as schizophrenia)". Linguists also use the term for strings of words that native speakers judge to be ungrammatical.
+[Merriam-Webster](https://www.merriam-webster.com/dictionary/word%20salad) dates the first known use of the clinical sense to 1904. Its definition: "unintelligible, extremely disorganized speech or writing manifested as a symptom of a mental disorder (such as schizophrenia)". Linguists also use the term for strings of words that native speakers judge to be ungrammatical.
 
 In everyday speech the term became a put-down for empty, incoherent answers, and it is now often applied to AI text that strings fluent phrases together without saying anything in particular. Chatbot output is rarely word salad in the clinical sense. Its sentences are grammatical and on topic. They just often don't commit to anything.
 
@@ -57,4 +58,4 @@ A quick test for word salad: try to restate the passage in one plain sentence. I
 
 ## How Slop Mop sees it
 
-Word salad in posts usually shows up as several of Slop Mop's tells at once: [stiff phrasing](/patterns/stiff-phrasing/), [hype words](/patterns/hype-words/) and [flowery prose](/patterns/flowery-prose/), with nothing useful to readers underneath. Those are what it scores on LinkedIn, whether a person or an AI wrote the post.
+Word salad in posts usually shows up as several of Slop Mop's tells at once: [stiff phrasing](/patterns/stiff-phrasing/), [hype words](/patterns/hype-words/) and [flowery prose](/patterns/flowery-prose/), with nothing useful to readers underneath. Those are what it scores in posts, articles and email, whether a person or an AI wrote them; [How it works](/how-it-works.html) explains each tell. [Add Slop Mop to your browser](/) and it folds posts like the first example for you.

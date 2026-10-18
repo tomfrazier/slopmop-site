@@ -5,6 +5,7 @@
   "description": "Broetry is the LinkedIn post written one sentence per line, usually a parable with a moral. How to recognise it from the preview and skip it.",
   "summary": "One-sentence lines, a withheld hook, an unnamed taxi driver and a moral: how to recognise LinkedIn broetry before you click see more.",
   "updated": "2026-10-18",
+  "keyword": "linkedin broetry",
   "network": "linkedin",
   "publish_date": "2026-11-24",
   "verified": "2026-10-18",
@@ -42,7 +43,7 @@
 ---
 Broetry is the nickname for LinkedIn posts written as a column of one-sentence lines, usually telling a short story that ends in a business lesson. You can spot it from the preview: a hook that withholds something, line breaks after every sentence, and a "see more" that promises the payoff. If the visible lines contain no names, dates or numbers, the rest of the post almost never does either.
 
-## What [broetry](/glossary/broetry/) looks like
+## What LinkedIn [broetry](/glossary/broetry/) looks like
 
 The format has a fixed order. A dramatic opening line, a pause, a turn, a character, a lesson, and often an instruction to "read that again".
 
@@ -69,7 +70,7 @@ I was made redundant in March along with 40 others in our product org. The two t
 
 The slop version could be true. The problem is that nothing in it is checkable or useful, and its layout is built to make you click "see more" before you realise that.
 
-## What to look for
+## How to spot broetry on LinkedIn
 
 Each habit on its own is common in ordinary writing. [Broetry](/glossary/broetry/) stacks most of them in one post.
 
@@ -129,8 +130,10 @@ That post uses short lines too. Each one carries a fact.
 3. **Unfollow the habitual writers.** If someone posts a parable every morning, **Unfollow [name]** in the same menu keeps you connected without the posts ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/72150)).
 4. **Don't quote-post it to mock it.** A sarcastic repost spreads the original to your network and gives it more engagement.
 
-Slop Mop, the Chrome extension that's live on LinkedIn, asks about scroll-stopper hooks and too-tidy stories separately, so a post built on both is likely to fold. It needs more than one tell to flag a post, which means a short-line post full of real detail stays visible.
+[Slop Mop](/), a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers, reads LinkedIn posts as you scroll and asks about scroll-stopper hooks and too-tidy stories separately, so a post built on both is likely to fold into a one-line strip you can reopen. It needs more than one tell to flag a post, which means a short-line post full of real detail stays visible. [How it works](/how-it-works.html) explains why one spike isn't enough. The same parable format turns up on Facebook pages, in X threads and in Substack Notes, and Slop Mop reads those feeds too.
 
 ## If you write this way yourself
 
 Some people write this way simply because the format is everywhere, and the preview cuts long posts off after a few lines, so the opening does matter. You can keep a strong opening and drop the rest. Open with the most interesting fact, write in normal paragraphs, name what you can, and stop when you've said it. The [engagement bait guide](/guides/linkedin/linkedin-filter-engagement-bait/) covers the ending that usually comes with this format, the "agree?" or the comment-for-a-PDF offer, and why to drop it.
+
+[Add Slop Mop to your browser](/) and it folds broetry like this before you reach "see more".

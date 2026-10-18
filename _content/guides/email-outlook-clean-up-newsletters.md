@@ -4,6 +4,7 @@
   "seo_title": "Clean up newsletters in Outlook · Slop Mop",
   "description": "Unsubscribe from newsletters in Outlook.com's Subscriptions page, clear the backlog with Sweep, and block senders who won't stop. Verified steps.",
   "summary": "Three Outlook tools for newsletter clutter: Subscriptions to leave lists, Sweep to clear the backlog, and blocking for stubborn senders.",
+  "keyword": "clean up newsletters in outlook",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-10-27",
@@ -20,9 +21,9 @@
 ---
 In Outlook.com, go to **Settings**, then **Mail**, then **Subscriptions**: it lists the mailing lists Outlook has detected, each with an Unsubscribe button. Then use **Sweep** on one message from a sender to delete or move everything else they've sent, now and in future. Block only the senders who ignore your unsubscribe.
 
-## Before you start
+## Before you clean up newsletters in Outlook
 
-- **Which Outlook are you using?** Microsoft has several: Outlook.com (personal Hotmail, Live and Outlook accounts in a browser), Outlook on the web (work or school accounts in a browser), new Outlook for Windows, and classic Outlook. The Subscriptions steps below come from Microsoft's Outlook.com help page. Sweep is documented for Outlook.com, Outlook on the web and new Outlook. If a menu isn't where this guide says, your version may label it differently.
+- **Which Outlook are you using?** Microsoft has several: Outlook.com (personal Hotmail, Live and Outlook accounts in a browser), Outlook on the web (work or school accounts in a browser), new Outlook for Windows, and classic Outlook. The Subscriptions steps below come from [Microsoft's Outlook.com help page](https://support.microsoft.com/en-gb/office/how-to-manage-email-subscriptions-in-outlook-com-26c8f447-2141-4bff-8781-80a4e6b7f0c8). Sweep is documented for Outlook.com, Outlook on the web and new Outlook. If a menu isn't where this guide says, your version may label it differently.
 - **These are desktop and browser steps.** Microsoft's pages for these tools cover the browser and Windows versions, not the Outlook phone app, so do this on a computer.
 - **Know what each tool does.** Unsubscribing asks the sender to stop. Sweep tidies what's already arrived and can keep tidying. Blocking stops their mail reaching your inbox but doesn't take you off their list.
 
@@ -65,7 +66,7 @@ From the Subscriptions page:
 
 You can review everyone you've blocked under **Settings**, **Mail**, **Junk email**.
 
-## Picking which lists to cut
+## Picking which Outlook newsletters to cut
 
 The Subscriptions page gives you a list of names. Some questions to run down it:
 
@@ -84,6 +85,8 @@ The main pool is shut for a week from Monday 3 November. The learner pool stays 
 
 The first one wants your click. The second one has done its job before you've opened it.
 
+For the newsletters you keep, Slop Mop for Outlook does this check on each issue. It reads what the sender wrote, scores it on the same tells it uses on social posts ([how it works](/how-it-works.html)), and marks or folds the padded ones. Before an email is checked, personal details are replaced with placeholders in your mailbox; attachments and quoted earlier messages are never sent, and spam, private, legal, health and transactional mail is never read unless you check a message by hand. It's part of Slop Mop XL (US$5.99 a month), and it never unsubscribes, sweeps or blocks anything, so the three steps above still decide who reaches you.
+
 ## Messages to leave alone
 
 Don't Sweep or block senders whose mail you may need to act on, even if it's dull: banks, utilities, payroll, your employer's IT team, two-factor codes, delivery notices. If they're cluttering the inbox, move them to a folder with a rule rather than deleting them.
@@ -95,4 +98,4 @@ Don't Sweep or block senders whose mail you may need to act on, even if it's dul
 - **Sweep is greyed out.** Check you're not in Junk, Drafts, Sent Items or Deleted Items.
 - **The email looks like a scam.** Don't click anything inside it. Mark it as junk or block the sender.
 
-Slop Mop for Outlook is coming soon, for the newsletters that pass this cull but still pad every issue. Until then, the three steps above handle who reaches you; deciding what's worth reading inside is still up to you.
+[Add Slop Mop for Outlook](/) (part of Slop Mop XL) and it marks the padded issues in the newsletters that pass this cull.

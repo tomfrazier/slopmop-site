@@ -1,9 +1,10 @@
 ---
 {
   "title": "Slop Mop vs Originality.ai",
-  "seo_title": "Slop Mop vs Originality.ai: reader or publisher? · Slop Mop",
+  "keyword": "slop mop vs originality ai",
+  "seo_title": "Slop Mop vs Originality.ai: reader or publisher?",
   "description": "Originality.ai checks content you publish for AI, plagiarism and quality. Slop Mop filters low-value posts other people put in your feed. How they compare.",
-  "summary": "Originality.ai checks content before you publish it; Slop Mop screens what other people post in your LinkedIn feed.",
+  "summary": "Originality.ai checks content before you publish it; Slop Mop screens what other people post in your feeds and inbox.",
   "updated": "2026-10-18",
   "kind": "product",
   "them": "Originality.ai",
@@ -13,12 +14,13 @@
     {"row": "What it does", "slopmop": "Scores each feed post and folds or highlights likely slop", "them": "Checks submitted text for AI, plagiarism, facts, readability and grammar"},
     {"row": "What it judges", "slopmop": "Whether the writing is worth reading, whoever wrote it", "them": "AI authorship and copying, plus a Content Quality Score"},
     {"row": "Whose content", "slopmop": "Other people's posts in your feed", "them": "Usually your own or your writers' drafts"},
-    {"row": "Where it works", "slopmop": "LinkedIn today; more networks and email coming soon", "them": "Web app, Chrome and Firefox extensions, Google Docs, Moodle, API"},
-    {"row": "Price", "slopmop": "Free for one feed, 250 checks a day; XL coming soon", "them": "Pro US$14.95/month for 2,000 credits (1 credit = 100 words)"},
+    {"row": "Where it works", "slopmop": "LinkedIn, X, Reddit, Facebook, Substack, Medium, websites, Gmail and Outlook", "them": "Web app, Chrome and Firefox extensions, Google Docs, Moodle, API"},
+    {"row": "Browsers", "slopmop": "Chrome, Edge, Firefox, Safari and Chromium browsers", "them": "Chrome and Firefox extensions, plus any browser for the web app"},
+    {"row": "Price", "slopmop": "Free for one feed; XL US$5.99/month for all", "them": "Pro US$14.95/month for 2,000 credits (1 credit = 100 words)"},
     {"row": "What you get back", "slopmop": "Score, verdict and a nine-tell Slopprint", "them": "AI, plagiarism and quality scan reports"},
     {"row": "Built for", "slopmop": "People reading feeds", "them": "Publishers, content agencies and schools"}
   ],
-  "verdict": "Pick Originality.ai if you publish or commission content and need AI, plagiarism and quality checks before it goes live. Pick Slop Mop if you want to read less filler from other people. Someone who writes for a living might use both.",
+  "verdict": "Pick Originality.ai if you publish or commission content and need AI, plagiarism and quality checks before it goes live. Pick Slop Mop if you want less filler from other people folded out of your feeds, the sites you read and your inbox. Someone who writes for a living might use both.",
   "related": [
     "/compare/slop-mop-vs-gptzero/",
     "/compare/slop-mop-vs-pangram/",
@@ -32,15 +34,15 @@
   ]
 }
 ---
-## What each one does
+## Slop Mop vs Originality.ai: what each one does
 
 Originality.ai and Slop Mop sit at opposite ends of the same pipe. Originality.ai is for the people sending content out. Slop Mop is for the people receiving it.
 
 **Originality.ai** is an AI-content and plagiarism checker aimed at publishers, content agencies and schools. You submit text and it reports how likely it is to be AI-generated and whether it matches existing sources. Alongside that it offers fact-checking, readability and grammar checks, and a Content Quality Score. It runs as a web app, as Chrome and Firefox extensions (including scans and a writing replay in Google Docs), in Moodle and through an API. On the Enterprise plan, reports can be shared with colleagues without giving them your login.
 
-**Slop Mop** is a browser extension that reads the posts in your LinkedIn feed before you reach them. An AI model designed for calibrated decisions answers twelve questions about each post: nine tells of slop and three counter-signals (sounds like a person, useful to readers, reader response). Likely slop folds into a one-line strip you can reopen, or, in Highlight mode, stays visible with a marker.
+**Slop Mop** is a browser extension that reads the posts in your feeds on LinkedIn, X, Reddit, Facebook, Substack and Medium, and the articles you open, before you reach them. In Gmail and Outlook it checks what the sender wrote. An AI model designed for calibrated decisions answers twelve questions about each post: nine tells of slop and three counter-signals (sounds like a person, useful to readers, reader response). Likely slop folds into a one-line strip you can reopen, or, in Highlight mode, stays visible with a marker. [How it works](/how-it-works.html) explains the scoring.
 
-## Where they differ
+## Where Slop Mop and Originality.ai differ
 
 **Whose writing it looks at.** Originality.ai checks content you choose to submit, usually your own drafts or work you've paid someone to write. Slop Mop screens what other people post in a feed you're reading. You don't submit anything; it acts as you scroll.
 
@@ -48,9 +50,9 @@ Originality.ai and Slop Mop sit at opposite ends of the same pipe. Originality.a
 
 **Quality tools.** Both have something to say about quality, for different reasons. Originality.ai's readability, grammar and Content Quality Score help an editor improve a piece before it goes out. Slop Mop's tells help a reader decide to skip one. If you want suggestions on fixing your own copy, Originality.ai is the one with those tools. Slop Mop doesn't edit or rewrite anything.
 
-**Pricing model.** As of October 2026, Originality.ai's Pro plan is US$14.95 a month (US$12.95 a month billed yearly) for 2,000 credits, where one credit covers 100 words and unused subscription credits expire each month. There's a limited free Basic plan, pay-as-you-go credits and an Enterprise plan at US$179 a month (less if billed yearly). Slop Mop counts posts, not words: free for one feed with 250 checks a day, and Slop Mop XL (coming soon) at US$5.99 a month or US$59.99 a year.
+**Pricing model.** As of October 2026, Originality.ai's Pro plan is US$14.95 a month (US$12.95 a month billed yearly) for 2,000 credits, where one credit covers 100 words and unused subscription credits expire each month. There's a limited free Basic plan, pay-as-you-go credits and an Enterprise plan at US$179 a month (less if billed yearly), all listed on [Originality.ai's pricing page](https://originality.ai/pricing). Slop Mop counts posts, not words: free for one feed with 250 checks a day, and Slop Mop XL at US$5.99 a month or US$59.99 a year for every feed, the sites you read, and Gmail and Outlook.
 
-**Coverage.** Originality.ai works on any text you can give it. Slop Mop is live on LinkedIn only; X, Reddit, Facebook, Substack, Medium, websites and Gmail and Outlook are coming soon.
+**Coverage.** They cover different ground. Originality.ai works on any text you can give it, including Google Docs, Moodle submissions and anything sent through its API. Slop Mop works where you read: six social networks, the articles and websites you open, and Gmail and Outlook, in Chrome, Edge, Firefox, Safari and Chromium browsers. You can't paste a draft into Slop Mop for a report, so for checking a document Originality.ai is the one that fits.
 
 **Privacy.** Originality.ai processes what you submit under its own policy. Slop Mop never sends your name or the author's, and stores a one-way hash of each post's text plus its scores. When you vote against a score, that post's text is kept so the miss can be reviewed.
 
@@ -63,7 +65,7 @@ Originality.ai and Slop Mop sit at opposite ends of the same pipe. Originality.a
 
 ## When to use Slop Mop
 
-- You read LinkedIn every day and want fewer hooks, engagement bait, hype and filler.
+- You read LinkedIn, X, Reddit or Substack every day, or a busy inbox, and want fewer hooks, engagement bait, hype and filler.
 - You want each call explained, with a vote that overrides it in your own feed.
 - You want something free to start that works without pasting text anywhere.
 
@@ -71,4 +73,4 @@ Originality.ai and Slop Mop sit at opposite ends of the same pipe. Originality.a
 
 A content marketer or editor could reasonably use both: Originality.ai on the drafts going out, and Slop Mop on the feed coming in. The two never handle the same text. It can also help to read Slop Mop's nine tells as a checklist for your own posts. The [patterns pages](/patterns/) show each one with an example, and our page on [workslop](/glossary/workslop/) covers the office version of the same problem.
 
-If you're weighing detectors against each other, [Slop Mop vs GPTZero](/compare/slop-mop-vs-gptzero/) covers the one most common in classrooms, and [Slop Mop vs Pangram](/compare/slop-mop-vs-pangram/) covers one that labels social posts as you scroll.
+If you're weighing detectors against each other, [Slop Mop vs GPTZero](/compare/slop-mop-vs-gptzero/) covers the one most common in classrooms, and [Slop Mop vs Pangram](/compare/slop-mop-vs-pangram/) covers one that labels social posts as you scroll. [Add Slop Mop to your browser](/) and it folds the filler in your feeds before you read it.

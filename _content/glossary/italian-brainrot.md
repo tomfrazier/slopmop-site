@@ -2,6 +2,7 @@
 {
   "title": "Italian brainrot",
   "seo_title": "Italian brainrot: the AI meme wave explained · Slop Mop",
+  "keyword": "italian brainrot",
   "description": "Italian brainrot is the 2025 meme wave of absurd AI-generated creatures with mock-Italian names, like Tralalero Tralala. Where it started, and why.",
   "summary": "A 2025 meme wave of absurd AI-generated creatures with mock-Italian names and synthetic voiceovers, such as Tralalero Tralala.",
   "updated": "2026-10-18",
@@ -24,15 +25,15 @@
   ]
 }
 ---
-## What it means
+## What Italian brainrot is
 
 Italian brainrot is a family of internet memes made of AI-generated images and videos of surreal hybrid creatures, given Italian-sounding names and narrated by synthetic voices in Italian, usually saying nothing that makes sense. Typical characters combine an animal with a food, an object or a weapon, and the names lean on Italian endings such as -ini and -ello.
 
 Its fans know it's ridiculous; that's the joke. The deliberately sloppy look, the over-dramatic voiceovers and the nonsense storylines are part of the appeal, and fans have built running stories around the characters, which has been described as a kind of internet folklore.
 
-## Where it came from
+## Where Italian brainrot came from
 
-The exact origin is unclear, but Wikipedia says the first widely recognised character, Tralalero Tralala, appeared on TikTok in January 2025. Its audio borrowed a nonsense phrase from earlier memes, and one post on 13 January 2025 pairing it with an AI image of a shark wearing shoes reached 7 million views. The trend spread to Instagram and beyond.
+The exact origin is unclear, but [Wikipedia](https://en.wikipedia.org/wiki/Italian_brainrot) says the first widely recognised character, Tralalero Tralala, appeared on TikTok in January 2025. Its audio borrowed a nonsense phrase from earlier memes, and one post on 13 January 2025 pairing it with an AI image of a shark wearing shoes reached 7 million views. The trend spread to Instagram and beyond.
 
 Well-known characters include:
 
@@ -51,4 +52,6 @@ A 9-second clip: a cactus-elephant in sandals stomps through a desert while a sy
 
 ## How Slop Mop sees it
 
-Italian brainrot is short video and images, which is outside what Slop Mop reads. It's a useful reference point, though: it's AI slop that people seek out on purpose, which shows that how much a piece of content is enjoyed and how much it tells you are separate questions.
+Italian brainrot is short video and images, which is outside what Slop Mop reads: it reads text, in feed posts, articles and email. It's a useful reference point, though: it's [AI slop](/glossary/ai-slop/) that people seek out on purpose, which shows that how much a piece of content is enjoyed and how much it tells you are separate questions.
+
+For the written slop in your feeds, [add Slop Mop to your browser](/) and it folds it for you.

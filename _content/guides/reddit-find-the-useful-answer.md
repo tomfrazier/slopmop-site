@@ -5,6 +5,7 @@
   "description": "Search Reddit comments, filter by community and time, use Top and keyboard shortcuts, and check AI search citations to reach the reply that answers you.",
   "summary": "Search comments directly, narrow by community and date, jump through threads with shortcuts, and check what AI search summaries cite.",
   "updated": "2026-10-18",
+  "keyword": "useful answer on reddit",
   "network": "reddit",
   "publish_date": "2026-11-17",
   "verified": "2026-10-18",
@@ -83,7 +84,7 @@ A summary is only as good as the comments behind it. If the cited comments are g
 2. Check their dates and whether they match your version or situation.
 3. Look for disagreement in the replies under the cited comment. Summaries tend to smooth that away.
 
-## 7. Recognise the answer when you see it
+## 7. Recognise the useful answer in a Reddit thread
 
 Useful replies tend to share a few traits, whatever their length:
 
@@ -106,4 +107,6 @@ The full test for judging a reply is in [How to judge low-effort and AI-written 
 - **The comment count is higher than what you can see.** Removed comments still count, so a thread can claim 80 comments and show 60. Reddit says moderators, automod and its spam filter remove comments for breaking rules ([Reddit Help](https://support.reddithelp.com/hc/en-us/articles/204580009-Why-are-there-missing-comments-in-the-thread-I-m-in)).
 - **Every answer is old.** Sort by New with a past-year filter, and if nothing turns up, ask in the specialist community with your detail in the title.
 - **Search returns the wrong community.** Search from that community's page instead of the main bar.
-- **The thread is full of filler.** Collapse it and try another thread. Your Home feed settings won't help here; the tools in [How to clean up your Reddit home feed](/guides/reddit/reddit-clean-up-home-feed/) work on feeds, not on threads.
+- **The thread is full of filler.** Collapse it and try another thread. Your Home feed settings won't help here; the tools in [How to clean up your Reddit home feed](/guides/reddit/reddit-clean-up-home-feed/) work on feeds, not on threads. Slop Mop does read comments as well as posts, and on desktop it can fold the generic replies so the specific ones stand out. It scores the writing, using the same kind of traits as step 7 ([how the score works](/how-it-works.html)), and you can reopen anything it folds.
+
+[Add Slop Mop to your browser](/) and it folds filler replies like these as you read.

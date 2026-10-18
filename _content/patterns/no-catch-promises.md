@@ -5,6 +5,7 @@
   "description": "No-catch promises list the benefits and leave out the cost, the limits and who it won't work for. How to spot them and how to write an honest claim.",
   "summary": "Claims that list every benefit and leave out the price, the effort, the limits and the people it won't work for.",
   "updated": "2026-10-18",
+  "keyword": "no-catch promises",
   "tell": "No-catch promises",
   "short": "all benefit, no cost",
   "order": 5,
@@ -16,7 +17,7 @@
 ---
 A no-catch promise describes a result with every cost taken out. More output without more hours, growth without hiring, fitness without effort, savings without trade-offs. Real changes nearly always cost something: money, time, a skill to learn, a feature lost along the way. A post that names none of them is showing you half the ledger.
 
-## What it looks like
+## What no-catch promises look like
 
 :::slop
 Double your revenue without spending more on ads, without hiring and without working weekends. Anyone can do it.
@@ -53,7 +54,7 @@ A promise is only useful if you can compare it with your own situation. To decid
 
 It can also cost more than time. A reader who takes "without hiring" at face value might take on a workload that needed another person. The missing catch still exists, and it lands on whoever believed the post.
 
-Regulators have long expected advertisers to put the conditions next to the claim. The US Federal Trade Commission's guidance on digital advertising disclosures, published in 2013, says a qualifying disclosure works best close to the claim it qualifies. Readers of ordinary posts are owed the same courtesy, and this page isn't legal advice on when the rules apply to you.
+Regulators have long expected advertisers to put the conditions next to the claim. The US Federal Trade Commission's [guidance on digital advertising disclosures](https://www.ftc.gov/os/2013/03/130312dotcomdisclosures.pdf), published in 2013, says a qualifying disclosure works best close to the claim it qualifies. Readers of ordinary posts are owed the same courtesy, and this page isn't legal advice on when the rules apply to you.
 
 ## When it's fine
 
@@ -66,11 +67,11 @@ Some things genuinely have no catch worth mentioning, and some contexts make the
 
 The test: could a reader act on the post and later say, "Nobody told me about that"? If yes, the catch belonged in the post.
 
-## How Slop Mop scores it
+## How Slop Mop scores no-catch promises
 
-No-catch promises is one of nine questions the model asks about every post, one spoke on the Slopprint. It looks for benefits presented with no cost, limit or condition anywhere in the post.
+No-catch promises is one of the [nine questions the model asks](/how-it-works.html#tells) about every post, one spoke on the Slopprint. It looks for benefits presented with no cost, limit or condition anywhere in the post.
 
-The model gives its confidence with each answer, and unsure answers count for less. When no-catch promises is the only tell that stands out, the score is cut. An upbeat launch post with one big claim is common and often fine. The pattern usually comes bundled with [hype words](/patterns/hype-words/), [empty praise](/patterns/empty-praise/) and an [engagement bait](/patterns/engagement-bait/) ending ("comment PLAN for the full method"), and that cluster is what gets flagged.
+The model gives its confidence with each answer, and unsure answers count for less. When no-catch promises is the only tell that stands out, the score is cut. An upbeat launch post with one big claim is common and often fine. The pattern often appears with [hype words](/patterns/hype-words/), [empty praise](/patterns/empty-praise/) and an [engagement bait](/patterns/engagement-bait/) ending ("comment PLAN for the full method"), and that cluster is what gets flagged.
 
 Counter-signals can only bring a score down. A post that states its own trade-offs, gives numbers and reads like a particular person gets a share taken off. Some tells count for more than others, and the weights aren't published, so nobody can add a token caveat and slip through. Your sensitivity setting decides the verdict; your vote overrides it in your feed.
 
@@ -89,6 +90,8 @@ I cut my email time in half without missing anything important, and you can too.
 I cut my email time from about 2 hours a day to 1 by checking twice a day instead of constantly. It took three weeks to stop reaching for my phone, and I did miss one urgent request in the first week, so I now give my team a phone number for anything that can't wait. It would be harder in a client-facing role.
 :::
 
-## Where it shows up
+## Where no-catch promises show up
 
-Course launches, coaching offers and productivity tips on LinkedIn are frequent sources, and LinkedIn is where Slop Mop reads posts today. The same promises run through sponsored posts on every network, landing pages, webinar invitations and cold sales email.
+Course launches, coaching offers and productivity tips on LinkedIn are frequent sources. The same promises run through sponsored posts on Facebook and X, "how I made $10k a month" stories on Medium and Substack, side-hustle threads on Reddit, landing pages, webinar invitations and cold sales email.
+
+Slop Mop reads for no-catch promises on every network it covers: LinkedIn, X, Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium, articles and websites, and email in Gmail and Outlook, where it checks only what the sender wrote. Slop Mop has a catch of its own: the free version covers the one feed you pick, with 250 checks a day, and Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every other feed, the sites you read and email. [Add Slop Mop to your browser](/) and it folds posts like these for you.

@@ -5,6 +5,7 @@
   "description": "A 10-minute method for testing a Substack essay's claims: find the main claim, check the evidence and sources, and spot arguments that only sound strong.",
   "summary": "A short method for testing whether a Substack essay's argument holds up, from finding the main claim to checking its sources.",
   "updated": "2026-10-18",
+  "keyword": "judge substack essay argument",
   "network": "substack",
   "publish_date": "2026-12-08",
   "verified": "2026-10-18",
@@ -19,7 +20,7 @@ Find the one sentence the essay most wants you to believe, then check what holds
 
 This guide is about the argument. If the problem is that the post is long and empty, start with [how to spot a padded or AI-written post](/guides/substack/substack-spot-padded-ai-posts/) instead.
 
-## Before you start
+## Before you judge a Substack essay's argument
 
 - **Pick essays that matter to you.** This is worth doing for a post you might act on, share or pay for. Not for every issue.
 - **Keep a scrap of paper or a note open.** Writing down the main claim in your own words is most of the work.
@@ -87,8 +88,12 @@ Once you've done the steps, you'll usually land in one of three places:
 
 ## Sharing what you found
 
-If you restack an essay on Notes, Substack lets you highlight a snippet and restack it as a quote with your own text. Quote the actual claim and say what you think of the evidence, instead of just "Must read." It helps the next reader do the same check faster.
+If you restack an essay on Notes, [Substack lets you](https://support.substack.com/hc/en-us/articles/14671398684308-What-is-a-restack-on-Substack-Notes) highlight a snippet and restack it as a quote with your own text. Quote the actual claim and say what you think of the evidence, instead of just "Must read." It helps the next reader do the same check faster.
 
 ## If you're short of time
 
 Do steps 1 and 3 only: write down the main claim, and check the single source it depends on most. That catches most weak arguments in under five minutes.
+
+A filter can save you the first cut, though not the judgement. [Slop Mop](/how-it-works.html) reads Notes and posts in Substack's web app and folds the ones heavy on the habits in step 4, such as [stiff phrasing](/patterns/stiff-phrasing/) and empty framing, so fewer of them reach your reading list. It scores the writing, not whether the claims are true, so a well-written essay with bad sources still gets past it. Checking those is your job.
+
+[Add Slop Mop to your browser](/) and it folds the all-atmosphere posts before you spend 10 minutes on them.

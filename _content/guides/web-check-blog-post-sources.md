@@ -4,6 +4,7 @@
   "seo_title": "How to check a blog post's sources · Slop Mop",
   "description": "Do a blog post's links say what it claims? A five-minute method, based on lateral reading and SIFT, for testing sources, statistics and quotes.",
   "summary": "Open the links, trace the statistic, read about the site elsewhere: a five-minute way to test whether a blog post's sources hold up.",
+  "keyword": "check blog post sources",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-11-10",
@@ -26,7 +27,7 @@ A page full of links looks well sourced. That's why padded articles add them. Wi
 
 Researchers have studied how good checkers do this. In Sam Wineburg and Sarah McGrew's study of [lateral reading](https://purl.stanford.edu/yk133ht8603), which compared professional fact checkers with historians and students, the fact checkers judged unfamiliar sites faster and more accurately because they left the page early and read what other sources said about it. Mike Caulfield turned similar habits into four moves he calls [SIFT](https://hapgood.us/2019/06/19/sift-the-four-moves/): Stop, Investigate the source, Find better coverage, and Trace claims to the original context. The steps below borrow from both.
 
-## Before you start
+## Before you check a blog post's sources
 
 Decide how much the post matters. Caulfield's own advice is that most checks should be quick and shallow, saving the effort for things you'll act on. A tip about houseplants needs one minute. Advice you'll spend money on, or repeat to your team, needs five. For health, legal or money decisions, go to a qualified professional or an official body rather than relying on any blog post, checked or not.
 
@@ -94,3 +95,7 @@ Of the 14 clients who tried the new invoice template last quarter, 9 were paid f
 - **Sources misrepresented:** stop trusting the site as well as the post. A writer who upgrades "may" to "will" once tends to do it again.
 
 Posts that dress opinion up as fact for a cause are sometimes called [slopaganda](/glossary/slopaganda/). The checks are the same whichever side they come from. For a faster first pass before you start checking, see [How to spot an AI slop article](/guides/websites/web-spot-ai-slop-articles/). To keep a site you've caught out of future searches, see [How to block a site from your search results](/guides/websites/web-block-sites-search-results/).
+
+Slop Mop can do part of that first pass. On the articles you read, it scores the text for the same tells it checks on social posts, including vague praise and too-tidy stories ([how it works](/how-it-works.html)), and marks or folds a low-value page. It doesn't open links or check facts, so for any claim you'll act on, the four steps above are still the test. Websites are part of Slop Mop XL (US$5.99 a month).
+
+[Add Slop Mop to your browser](/) and it marks the padded posts before you spend five minutes on their sources.

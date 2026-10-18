@@ -2,6 +2,7 @@
 {
   "title": "Doorway page",
   "seo_title": "Doorway page: the SEO spam Google calls doorway abuse",
+  "keyword": "doorway page",
   "description": "A doorway page exists only to rank for a search query and then send visitors somewhere else. How Google defines doorway abuse, with examples.",
   "summary": "A page made only to rank for one search query, which then funnels the visitor somewhere else.",
   "updated": "2026-10-18",
@@ -19,7 +20,7 @@
   ]
 }
 ---
-## What it means
+## What a doorway page is
 
 A doorway page is built for a search engine, not for the person who lands on it. Its job is to rank for one query, catch the click and pass the visitor on to the page the site actually wanted them to see. The doorway itself says little or nothing of use.
 
@@ -29,11 +30,11 @@ There's nothing wrong with location pages as such. A business with real branches
 
 ## Where it came from
 
-Doorway pages are one of the older black-hat SEO tricks, in use since the early days of web search, which is why the term has no clear coiner or date. Early versions were sometimes stuffed with keywords and hidden from human visitors by an instant redirect.
+Doorway pages are one of the older black-hat SEO tricks, in use since the early days of web search, which is why the term has no clear coiner or date. Early versions were sometimes [stuffed with keywords](/glossary/keyword-stuffing/) and hidden from human visitors by an instant redirect.
 
-Google's spam policies now call the practice doorway abuse. They define it as sites or pages "created to rank for specific, similar search queries" that "lead users to intermediate pages that aren't as useful as the final destination." The examples Google lists include multiple domains or pages targeted at specific regions or cities that funnel users to one page, and substantially similar pages that are "closer to search results than a clearly defined, browseable hierarchy."
+[Google's spam policies](https://developers.google.com/search/docs/essentials/spam-policies) now call the practice doorway abuse. They define it as sites or pages "created to rank for specific, similar search queries" that "lead users to intermediate pages that aren't as useful as the final destination." The examples Google lists include multiple domains or pages targeted at specific regions or cities that funnel users to one page, and substantially similar pages that are "closer to search results than a clearly defined, browseable hierarchy."
 
-## Examples
+## Doorway page examples
 
 Two pages for a removals company. The first is one of 40 copies; the second is one of 3 real branches.
 
@@ -48,4 +49,6 @@ The first page would read the same with any town name. The second contains facts
 
 ## How Slop Mop sees it
 
-Doorway pages are a search-ranking problem, and Slop Mop isn't a search tool. Their copy does share the habits it scores, [hype words](/patterns/hype-words/) and nothing a reader can act on, but Slop Mop is live only on LinkedIn today; websites are coming soon.
+Doorway pages are a search-ranking problem, and Slop Mop doesn't change what a search engine shows you. Once you've clicked through, though, it reads the websites and articles you open the way it reads posts in a feed, and doorway copy shares the habits it scores: [hype words](/patterns/hype-words/) and nothing a reader can act on. Reading the sites you visit is part of Slop Mop XL.
+
+[Add Slop Mop to your browser](/) and it folds or marks copy like the first example for you.

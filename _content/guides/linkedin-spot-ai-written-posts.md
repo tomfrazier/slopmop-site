@@ -5,6 +5,7 @@
   "description": "You can't reliably tell if a LinkedIn post was written by AI, and detectors can't either. What you can judge quickly is whether it says anything.",
   "summary": "Authorship is hard to prove from text. The habits of unedited AI drafts are easy to see, and they waste your time whoever wrote them.",
   "updated": "2026-10-18",
+  "keyword": "spot ai-written linkedin posts",
   "network": "linkedin",
   "publish_date": "2026-11-10",
   "verified": "2026-10-18",
@@ -59,7 +60,7 @@ We gave our support team a model that drafts replies from our help docs. First-r
 
 Hook, short paragraphs, three lessons, a question at the end. Swap the subject from hiring to cloud costs and the post barely changes. That interchangeability is the strongest single sign, and it says nothing certain about authorship.
 
-## A 30-second test
+## A 30-second test to spot AI-written LinkedIn posts
 
 Read the post, then answer four questions:
 
@@ -95,4 +96,8 @@ The fine version might have been drafted with AI. It passes all four questions, 
 
 Scroll on, or tell LinkedIn. Click the **More** icon (three dots) at the top right of the post, or tap it in the app, and choose **Not interested** ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/13325)). LinkedIn says its feed weighs, among other things, whether a post "provides knowledge or advice" ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a1339724)), so feedback on empty posts points the same way.
 
-If you'd like the test run for you, Slop Mop does a version of it on LinkedIn in Chrome and other Chromium browsers. It scores the writing against nine tells and three counter-signals, including whether a post sounds like a particular person and whether it's useful to readers. It isn't an AI detector: a useful post written with AI stays visible, and an empty one typed by hand can be folded. You can see the reasons for every call and overrule it. The earlier guides on [cleaning up your feed](/guides/linkedin/linkedin-clean-up-feed/) and [filtering engagement bait](/guides/linkedin/linkedin-filter-engagement-bait/) cover LinkedIn's own controls in more detail.
+If you'd like the test run for you, [Slop Mop](/) does a version of it as you scroll LinkedIn, in Chrome, Edge, Firefox, Safari and Chromium browsers. It scores the writing against nine tells and three counter-signals, including whether a post sounds like a particular person and whether it's useful to readers ([How it works](/how-it-works.html) shows each one). It isn't an AI detector: a useful post written with AI stays visible, and an empty one typed by hand can be folded. You can see the reasons for every call and overrule it with a vote. The free plan covers one feed with 250 checks a day.
+
+The same unedited drafts turn up in X replies, Reddit comments, Substack Notes and Medium articles, and Slop Mop reads those too; Slop Mop XL covers every feed at once. The earlier guides on [cleaning up your feed](/guides/linkedin/linkedin-clean-up-feed/) and [filtering engagement bait](/guides/linkedin/linkedin-filter-engagement-bait/) cover LinkedIn's own controls in more detail.
+
+[Add Slop Mop to your browser](/) and it folds posts that fail the test for you.

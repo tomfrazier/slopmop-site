@@ -4,6 +4,7 @@
   "seo_title": "Outlook rules and Focused Inbox, step by step · Slop Mop",
   "description": "Turn on Focused Inbox, train it sender by sender, and write Outlook rules for the bulk mail it misses. Steps for new Outlook, classic Outlook and the web.",
   "summary": "Focused Inbox splits mail into Focused and Other; rules catch what it gets wrong. Steps for new and classic Outlook and the web.",
+  "keyword": "outlook rules focused inbox",
   "updated": "2026-10-18",
   "network": "email",
   "publish_date": "2026-11-24",
@@ -53,7 +54,7 @@ The tabs appear at the top of your message list straight away, and your existing
 
 ### 2. Train it
 
-Microsoft says Focused Inbox looks at who you email and interact with and filters out noisy sources such as automated or bulk email. It will get some senders wrong at first. Correct them:
+[Microsoft says](https://support.microsoft.com/en-gb/office/focused-inbox-for-outlook-f445ad7f-02f4-4294-a82e-71d8964e3978) Focused Inbox looks at who you email and interact with and filters out noisy sources such as automated or bulk email. It will get some senders wrong at first. Correct them:
 
 1. Right-click a message in the wrong tab.
 2. In new Outlook, Outlook.com and the web, select **Move**, then **Move to Other inbox** (or **Move to Focused inbox**). In classic Outlook, the options sit directly on the right-click menu.
@@ -106,9 +107,9 @@ In **Settings**, **Mail**, **Rules**:
 
 ## Rules or Sweep?
 
-Both can move a sender's mail. Microsoft's help page explains the difference: inbox rules run as soon as mail arrives, while Sweep rules run once a day. Use a rule when you don't want to see the message at all, and Sweep when you're tidying up a backlog.
+Both can move a sender's mail. [Microsoft's help page](https://support.microsoft.com/en-gb/topic/19eee6b9-09a1-4db6-b5d6-37644190884f) explains the difference: inbox rules run as soon as mail arrives, while Sweep rules run once a day. Use a rule when you don't want to see the message at all, and Sweep when you're tidying up a backlog.
 
-## What rules can't sort
+## What Outlook rules and Focused Inbox can't sort
 
 Rules and Focused Inbox work on who sent an email and what words it contains. They can't tell a useful update from a padded one sent by the same colleague. The status report that runs to four paragraphs without a decision in it (what some people call [workslop](/glossary/workslop/)) will still land in Focused, because it came from someone you work with. That part needs a reader.
 
@@ -121,9 +122,13 @@ Subject: Weekly update: launch moves to 9 December
 The payment provider's review takes 10 working days, not 5. Everything else is on track. No action needed unless you had launch-week leave booked.
 :::
 
+Slop Mop for Outlook can be that first reader. It checks what the sender wrote in each email against the same tells it uses on social posts ([how it works](/how-it-works.html)), then marks or folds the padded ones, whichever tab they land in. Before an email is checked, personal details are replaced with placeholders in your mailbox; only the sender's own words are sent, never attachments or quoted earlier messages, and spam, private, legal, health and transactional mail is never read unless you check a message by hand. It's part of Slop Mop XL (US$5.99 a month) and doesn't move or delete mail, so your rules keep doing the sorting.
+
 ## If that doesn't work
 
 - **No Focused and Other tabs after turning it on.** Your mailbox may use Clutter, an older folder-based version. Microsoft says Focused Inbox will replace it.
 - **Messages won't move between tabs.** You may be in a shared mailbox, where Focused Inbox doesn't work by design.
 - **A rule migrated from classic Outlook doesn't run.** Microsoft notes some classic rules are client-side and can't be processed by new Outlook. Create a new rule to replace it.
 - **A rule catches too much.** Add an exception, or move a more specific rule above it and tick **Stop processing more rules** on that one.
+
+[Add Slop Mop for Outlook](/) (part of Slop Mop XL) and it marks the padded updates your rules can't catch.

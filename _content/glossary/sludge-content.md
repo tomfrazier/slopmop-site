@@ -5,6 +5,7 @@
   "description": "Sludge content is split-screen short video that stacks unrelated clips, like a sitcom over mobile-game footage, to hold attention. Origins and concerns.",
   "summary": "Split-screen short videos that stack unrelated clips, such as a sitcom over mobile-game footage, to keep viewers watching.",
   "updated": "2026-10-18",
+  "keyword": "sludge content",
   "term": "Sludge content",
   "aliases": ["content sludge", "overstimulation videos"],
   "punchline": "Family Guy on top, Subway Surfers underneath.",
@@ -24,17 +25,17 @@
   ]
 }
 ---
-## What it means
+## What sludge content means
 
 Sludge content is a genre of split-screen short video on TikTok and YouTube Shorts. One half carries the "main" content, often a clip from a TV show, a Reddit story read by a synthetic voice, or another creator's video. The other half shows something unrelated that's easy to keep watching: footage of an endless-runner mobile game such as *Subway Surfers*, cooking, soap cutting or other "oddly satisfying" clips.
 
 The second panel is there to hold your eyes while the first plays. The result is two streams of low-effort content at once, which is why it's also called overstimulation video. Much of the main content is copyrighted material the uploader doesn't own.
 
-## Where it came from
+## Where sludge content came from
 
 The format grew out of tricks for dodging copyright detection on YouTube, particularly "funniest moments" compilations of *Family Guy*. Jump cuts, cropping and overlaid unrelated footage helped infringing uploads survive longer. On TikTok, the duet feature, which places two videos side by side, made split screens familiar, and the format spread because it's cheap to make and keeps people watching.
 
-Viewers describe a "*Family Guy* pipeline": watch one and the recommendation algorithm serves more. The style has since been used in adverts and, according to Wikipedia's article, by the New Zealand National Party to promote its policies in the 2023 general election. The developer of *Subway Surfers* has credited sludge content with the game's resurgence.
+Viewers describe a "*Family Guy* pipeline": watch one and the recommendation algorithm serves more. The style has since been used in adverts and, according to [Wikipedia's article](https://en.wikipedia.org/wiki/Sludge_content), by the New Zealand National Party to promote its policies in the 2023 general election. The developer of *Subway Surfers* has credited sludge content with the game's resurgence.
 
 ### The concerns
 
@@ -52,4 +53,4 @@ A synthetic voice reads a dramatic workplace story from a forum, word by word in
 
 ## How Slop Mop sees it
 
-Sludge content is outside what Slop Mop judges. It reads the text of posts, currently on LinkedIn, and doesn't look at video.
+Sludge content is outside what Slop Mop judges. It reads the text of posts on Facebook, X, Reddit and the other networks it covers, plus articles and email, and doesn't look at video. What it can help with is the text around the clips: padded captions and [engagement bait](/patterns/engagement-bait/) in the same feeds that feed [brain rot](/glossary/brain-rot/). [How it works](/how-it-works.html) explains what it scores. [Add Slop Mop to your browser](/) and it folds that text slop for you.

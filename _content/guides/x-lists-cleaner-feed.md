@@ -5,6 +5,7 @@
   "description": "Build a private X List of accounts worth reading, pin it beside For You and Following, and keep it tidy. Steps for the app and the web.",
   "summary": "Make a private X List of accounts that post substance, pin it to Home and use it as a hand-picked timeline with no recommendations.",
   "updated": "2026-10-18",
+  "keyword": "x lists",
   "network": "x",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
@@ -18,7 +19,7 @@
 ---
 An X List is a timeline made only of the accounts you add to it, with no recommended posts mixed in. To make one, open Lists from your profile menu, create a new List, switch on Private if you want it visible only to you, add accounts, then pin it so it sits beside For You and Following on Home. Keep it small, add accounts that post substance, and it becomes the cleanest feed X offers.
 
-## Why a List helps
+## Why X Lists make a cleaner feed
 
 The For You tab includes recommendations, and the Following tab includes everyone you've ever followed, including accounts that drifted into bait years ago. A List is a fresh start: it shows only accounts you choose for it, and you can make as many as you need for different subjects. You can add public accounts you don't follow, which lets you read someone without adding them to your main timeline.
 
@@ -66,7 +67,7 @@ To unpin it, go back to Lists and tap the pin icon again under **Pinned**. X say
 
 X reopens whichever Home tab you used last. If you open your List tab and leave the app there, it should be what you see next time. If X opens a different tab, swipe or click across to the List.
 
-## Lists that work well
+## X Lists that work well
 
 | List | What goes in it |
 |---|---|
@@ -98,3 +99,7 @@ If an account on your List starts posting the first kind more than the second, i
 ## If that doesn't work
 
 A List can still pick up noise if the accounts on it repost a lot of other people's posts. If one account keeps bringing in other people's bait through reposts, remove it from the List. For phrases you'd rather not see anywhere, add them as muted words; [how to use muted words on X](/guides/x/x-muted-words/) has the steps. For the trade-offs between your Home tabs, see [Following vs For You on X](/guides/x/x-following-vs-for-you/).
+
+For the odd bait post that still gets through, [Slop Mop](/) reads the posts and replies in your X timeline as you scroll, Lists included, and folds likely slop into a one-line strip you can reopen (Hide mode) or marks it (Highlight mode). It's a browser extension for Chrome, Edge, Firefox, Safari and Chromium browsers; it runs on x.com rather than in the X app, and the free plan covers one feed with 250 checks a day. [How it works](/how-it-works.html) explains what it looks for. It doesn't remove anyone from your Lists.
+
+[Add Slop Mop to your browser](/) and it keeps the bait out of your List for you.

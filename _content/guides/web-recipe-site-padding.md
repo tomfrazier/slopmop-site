@@ -1,9 +1,10 @@
 ---
 {
-  "title": "How to skip the life story on recipe sites, and spot recipes nobody tested",
+  "title": "Recipe site padding: how to skip the life story and spot recipes nobody tested",
   "seo_title": "Skip recipe site padding and spot untested recipes",
   "description": "Get straight to the recipe with jump links, reader mode and print view, then check whether anyone cooked it: weights, times, cues and comments.",
   "summary": "Three quick ways past recipe-site padding, and a short check for whether the recipe underneath was ever cooked by anyone.",
+  "keyword": "recipe site padding",
   "updated": "2026-10-18",
   "network": "websites",
   "publish_date": "2026-11-24",
@@ -26,7 +27,7 @@ Some of the length is personal writing that the cook's regular readers enjoy, an
 
 That writing isn't the problem. The problem is the generated version: pages that wrap a recipe nobody tested in paragraphs nobody needed, made in bulk to rank. Google's [spam policies](https://developers.google.com/search/docs/essentials/spam-policies) call that "scaled content abuse" when many unoriginal pages are made mainly to manipulate rankings. You'll still meet plenty of them.
 
-## Three ways to get to the recipe
+## Three ways past recipe site padding
 
 ### 1. Use the jump link
 
@@ -96,4 +97,6 @@ I've cut the sugar in the filling to 40g because Bramleys collapse into a sharp 
 
 Close it and search again, adding a detail that padded pages rarely include, such as a weight or a specific technique: `apple crumble 120g flour` will bring back different pages from `best apple crumble recipe`. If one site keeps serving untested recipes, leave it out with `-site:` or block it, as described in [How to block a site from your search results](/guides/websites/web-block-sites-search-results/).
 
-Slop Mop is coming soon to websites. The checks above work today, and they take less time than a failed bake.
+The checks above take less time than a failed bake. Slop Mop can do the first look for you: on the recipe pages and articles you open, it scores the text with the same twelve questions it uses on social posts, flowery prose and too-tidy stories among them ([how it works](/how-it-works.html)), and marks or folds the padded ones. It reads the writing, not the oven, so the quantities and cues are still yours to check. Websites are part of Slop Mop XL (US$5.99 a month).
+
+[Add Slop Mop to your browser](/) and it marks padded recipe pages like these for you.

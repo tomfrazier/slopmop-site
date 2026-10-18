@@ -2,6 +2,7 @@
 {
   "title": "Information pollution",
   "seo_title": "Information pollution: meaning, origin, examples · Slop Mop",
+  "keyword": "information pollution",
   "description": "Information pollution is the clogging of what we read with irrelevant, redundant or low-value material. Where the idea came from, with examples.",
   "summary": "Contamination of what we read with irrelevant, redundant, unsolicited or low-value material that buries what matters.",
   "updated": "2026-10-18",
@@ -19,7 +20,7 @@
   ]
 }
 ---
-## What it means
+## What information pollution means
 
 Information pollution is the idea that the information we receive can be contaminated, the way air or water can. Irrelevant detail, repeated messages, unwanted notices, warnings nobody needs and filler all mix in with the material that matters, and the reader pays for sorting it out.
 
@@ -27,9 +28,9 @@ The comparison with industrial pollution is deliberate. Each bit of waste looks 
 
 It overlaps with [information overload](/glossary/information-overload/), which describes having too much to take in. Information pollution puts the emphasis on quality: some of what's arriving shouldn't have been sent at all.
 
-## Where it came from
+## Where the term information pollution came from
 
-The term gained traction in 2003 through the usability expert Jakob Nielsen. In an article dated 10 August 2003, he argued that "Excessive word count and worthless details are making it harder for people to extract useful information," and that "Saying less often communicates more." His opening example was a hotel lobby sign near JFK Airport that cycled through four messages to explain that the monitor beneath it showed flight times.
+The term gained traction in 2003 through the usability expert Jakob Nielsen. In [an article dated 10 August 2003](https://www.nngroup.com/articles/information-pollution/), he argued that "Excessive word count and worthless details are making it harder for people to extract useful information," and that "Saying less often communicates more." His opening example was a hotel lobby sign near JFK Airport that cycled through four messages to explain that the monitor beneath it showed flight times.
 
 He described the effect on readers in terms of information foraging: polluting a page with useless material "is like packing the forest with cardboard rabbits: frustrated wolves are bound to hunt elsewhere."
 
@@ -50,4 +51,6 @@ The first notice runs to nearly 60 words and hasn't said what, when or for how l
 
 ## How Slop Mop sees it
 
-Information pollution is close to what Slop Mop was built for: text that takes attention and gives little back. The filler in the first notice is the kind of [stiff phrasing](/patterns/stiff-phrasing/) it scores. It works on LinkedIn today; Slop Mop for Gmail and Outlook, where a lot of this lands, is coming soon.
+Information pollution is close to what Slop Mop was built for: text that takes attention and gives little back. The filler in the first notice is the kind of [stiff phrasing](/patterns/stiff-phrasing/) it scores. It reads the posts in your feeds and the articles you open, and Slop Mop for Gmail and Outlook checks the email where a lot of this lands: personal details are replaced with placeholders first, and only what the sender wrote is sent.
+
+[Add Slop Mop to your browser](/) and it folds this kind of filler for you, with email covered by Slop Mop for Gmail and Outlook as part of Slop Mop XL.

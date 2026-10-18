@@ -5,6 +5,7 @@
   "description": "In Harry Frankfurt's sense, bullshit is speech made to impress or persuade with no concern for whether it's true. Why the idea is now applied to chatbots.",
   "summary": "Harry Frankfurt's term for speech made to persuade or impress with no concern for whether it is true, now often applied to chatbots.",
   "updated": "2026-10-18",
+  "keyword": "bullshit",
   "term": "Bullshit (Frankfurt)",
   "aliases": ["Frankfurtian bullshit"],
   "punchline": "Saying whatever works, true or not.",
@@ -26,7 +27,7 @@
   ]
 }
 ---
-## What it means
+## What bullshit means in Frankfurt's sense
 
 In everyday English, bullshit means nonsense. The philosopher Harry G. Frankfurt gave it a narrower meaning: speech produced without any concern for whether it is true. The bullshitter wants to impress, persuade or get through the meeting, and picks words for that purpose alone. Some of what they say may be accurate. They didn't check, and they wouldn't have changed it if they had.
 
@@ -34,11 +35,11 @@ Frankfurt's key move was to separate bullshit from lying. A liar knows the truth
 
 He also had a theory of why there is so much of it. People are expected to have an opinion on everything, and when they speak beyond what they know, bullshit fills the gap.
 
-## Where it came from
+## Where Frankfurt's idea of bullshit came from
 
 Frankfurt, an American philosopher, first published "On Bullshit" as an essay in the *Raritan Quarterly Review* in 1986. Princeton University Press reissued it as a small book in 2005, and it spent 27 weeks on *The New York Times* best-seller list. He followed it with *On Truth* in 2006.
 
-The idea found a second life with large language models. In June 2024 Michael Townsen Hicks, James Humphries and Joe Slater, published "ChatGPT is bullshit" in *Ethics and Information Technology*. They argued that chatbot falsehoods, usually called "hallucinations", are better described as bullshit in Frankfurt's sense, because the models are "in an important way indifferent to the truth of their outputs". The uncritical use of that output by people has its own name: [botshit](/glossary/botshit/).
+The idea found a second life with large language models. In June 2024 Michael Townsen Hicks, James Humphries and Joe Slater published "[ChatGPT is bullshit](https://link.springer.com/article/10.1007/s10676-024-09775-5)" in *Ethics and Information Technology*. They argued that chatbot falsehoods, usually called "hallucinations", are better described as bullshit in Frankfurt's sense, because the models are "in an important way indifferent to the truth of their outputs". The uncritical use of that output by people has its own name: [botshit](/glossary/botshit/).
 
 ## Examples
 
@@ -59,4 +60,6 @@ Frankfurt's book was a best seller and widely praised, and also criticised as to
 
 ## How Slop Mop sees it
 
-Slop Mop doesn't fact-check, so it can't tell you whether a claim is true. What it does score are the habits that tend to travel with truth-indifferent writing on LinkedIn: [empty praise](/patterns/empty-praise/), [no-catch promises](/patterns/no-catch-promises/), hype words and big claims with nothing a reader could check or use.
+Slop Mop doesn't fact-check, so it can't tell you whether a claim is true. What it does score are the habits that tend to travel with truth-indifferent writing, in posts on LinkedIn, X, Reddit, Facebook, Substack and Medium, on the websites you read and in email: [empty praise](/patterns/empty-praise/), [no-catch promises](/patterns/no-catch-promises/), hype words and big claims with nothing a reader could check or use. [How it works](/how-it-works.html) shows how those add up to a score.
+
+[Add Slop Mop to your browser](/) and it folds posts like these for you.

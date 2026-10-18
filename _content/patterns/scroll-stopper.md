@@ -1,20 +1,23 @@
 ---
 {
-  "title": "Scroll-stopper",
-  "seo_title": "Scroll-stopper: the dramatic-hook tell · Slop Mop",
+  "title": "Scroll-stopper hooks",
+  "seo_title": "Scroll-stopper hooks: the drumroll tell · Slop Mop",
   "description": "The scroll-stopper is a dramatic hook, a run of one-line paragraphs and a moral. How to spot it, when short lines are fine, and how to rewrite it.",
   "summary": "A dramatic hook, a drumroll of one-line paragraphs and a moral at the end, all wrapped around one ordinary idea.",
   "updated": "2026-10-18",
+  "keyword": "scroll-stopper hook",
   "tell": "Scroll-stopper",
   "short": "dramatic hook, one-line paragraphs, a moral",
   "order": 1,
-  "related": ["/patterns/too-tidy-story/", "/patterns/engagement-bait/", "/glossary/ai-slop/", "/glossary/brain-rot/", "/how-it-works.html"],
-  "sources": []
+  "related": ["/patterns/too-tidy-story/", "/patterns/engagement-bait/", "/glossary/broetry/", "/glossary/ai-slop/", "/how-it-works.html"],
+  "sources": [
+    {"title": "Broetry: Why is everyone suddenly writing in single line sentences on LinkedIn?", "publisher": "Fenwick", "url": "https://fenwick.media/rewild/magazine/dead-broets-society-behind-the-strange-story", "date": ""}
+  ]
 }
 ---
 A scroll-stopper is a post built to halt your thumb before it has given you anything to read. The shape barely changes from one to the next: a dramatic first line, a column of one-line paragraphs that hold the point back, and a moral at the bottom. The idea in the middle would usually fit in a sentence.
 
-## What it looks like
+## What a scroll-stopper hook looks like
 
 Three common versions, each next to a plain post on the same subject.
 
@@ -59,7 +62,7 @@ Best decision I ever made.
 We dropped the degree requirement for support roles in January. Of the 11 people hired since, 2 came without one. Both passed probation, and one now trains new starters.
 :::
 
-The signs travel together:
+What to look for:
 
 - An opening line that withholds the subject ("I almost quit", "Nobody talks about this").
 - One sentence per paragraph, with blank lines doing the work that "because" and "so" would normally do.
@@ -67,7 +70,7 @@ The signs travel together:
 - A reveal that arrives late and turns out to be modest.
 - A closing line that tells you what to think.
 
-## Why it wastes your time
+## Why a scroll-stopper hook wastes your time
 
 The hook makes a promise the rest of the post has to repay. In a scroll-stopper the repayment is usually one ordinary observation, stretched over ten lines so it fills more of the screen and the "see more" click feels earned. You spend the attention of a long read and get the information of a short one.
 
@@ -88,7 +91,7 @@ A quick test: cover everything after the first line. If the second line adds inf
 
 ## How Slop Mop scores it
 
-Scroll-stopper is one of nine questions the model asks about every post, and one spoke on the Slopprint chart in the details panel. The question covers the whole pattern in its gloss: the dramatic hook, the one-line paragraphs and the moral, taken together.
+Scroll-stopper is one of the [nine questions the model asks](/how-it-works.html#tells) about every post, and one spoke on the Slopprint chart in the details panel. The question covers the whole pattern in its gloss: the dramatic hook, the one-line paragraphs and the moral, taken together.
 
 The model also says how sure it is, and unsure answers count for less. If scroll-stopper is the only tell that stands out, the score is cut, because plenty of people simply like short lines and have nothing else wrong with their post. Slop usually shows several tells at once. A scroll-stopper often arrives with a [too-tidy story](/patterns/too-tidy-story/) in the middle and [engagement bait](/patterns/engagement-bait/) at the end, and that combination is what gets flagged.
 
@@ -117,8 +120,10 @@ Listen more than you talk.
 On my first sales call in 2019 I talked for most of the 90 seconds before the client hung up. I now open with two questions about their current setup and don't mention our product until the third minute. My calls run longer, and more of them end with a second meeting.
 :::
 
-The second version is shorter on screen and longer on substance. It also gives readers something to copy.
+The second version takes up less of the screen, says what happened and gives readers something to copy.
 
-## Where it shows up
+## Where scroll-stopper hooks show up
 
-LinkedIn is the home of the format today, and it's the network where Slop Mop reads posts. The same shape turns up in X threads, Instagram captions, newsletter intros and the opening paragraph of many blog posts, wherever a writer is paid in attention before they've delivered anything.
+LinkedIn made the format famous, and the one-line style there has its own name, [broetry](/glossary/broetry/). Fenwick's [long write-up on the style](https://fenwick.media/rewild/magazine/dead-broets-society-behind-the-strange-story) calls the line breaks "typographic mic drops for insights that aren't particularly insightful". The same shape opens X threads, Facebook posts, Substack Notes, Medium stories, blog posts and newsletter intros: anywhere a writer is paid in attention before they've delivered anything.
+
+Slop Mop reads for it on every network it covers. It checks posts on LinkedIn, X and Facebook, posts and comments in your Reddit feed, Substack Notes and posts, Medium stories, the articles and websites you read, and email in Gmail and Outlook, where it looks only at what the sender wrote. [Add Slop Mop to your browser](/) and it folds posts like these for you.

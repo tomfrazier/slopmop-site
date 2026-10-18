@@ -5,6 +5,7 @@
   "description": "How to judge AI-written Medium stories by their writing, what Medium's AI policy requires of writers, and why guessing who wrote it is a poor filter.",
   "summary": "Judge AI-written Medium stories on the writing. The tells of generated filler, Medium's disclosure rules, and why guessing misleads.",
   "updated": "2026-10-18",
+  "keyword": "ai-written articles on medium",
   "network": "medium",
   "publish_date": "2026-12-01",
   "verified": "2026-10-18",
@@ -39,7 +40,7 @@ Smooth, plain prose is also what careful human writers produce. Technical writer
 
 The question you need answered is narrower and easier: is this story going to tell me something? That you can check from the text.
 
-## What generated filler looks like
+## How to spot AI-written articles on Medium
 
 These patterns show up often in low-effort generated stories. Each one alone is weak evidence; several together are a strong signal.
 
@@ -100,6 +101,8 @@ The [two-minute check](/guides/medium/medium-spot-low-quality-articles/) is the 
 
 ## If that doesn't work
 
-If generated stories dominate one topic, unfollow or mute the topic and follow a few writers you trust instead, as in the [follow guide](/guides/medium/medium-follow-topics-vs-writers/). You can also read the Following feed, which shows only writers and publications you chose. Slop Mop is coming soon to Medium; like this guide, it judges the writing and isn't an AI detector.
+If generated stories dominate one topic, unfollow or mute the topic and follow a few writers you trust instead, as in the [follow guide](/guides/medium/medium-follow-topics-vs-writers/). You can also read the Following feed, which shows only writers and publications you chose. [Slop Mop](/how-it-works.html) can do the routine above for you on a computer. It reads the stories in your Medium feed and the articles you open, scores the writing against nine tells including stiff phrasing and flowery prose, and folds the likely filler into a strip you can reopen. Like this guide, it judges the writing and isn't an AI detector: a useful AI-assisted story with a disclosure and real numbers can pass, and a hand-typed one full of generalities can be folded.
 
-The broader problem has a name: [AI slop](/glossary/ai-slop/). On Medium it's best handled the same way as any other low-value writing, one story and one source at a time.
+The broader problem has a name: [AI slop](/glossary/ai-slop/). On Medium it's best handled the same way as any other low-value writing, one story and one source at a time. The same filler turns up in [LinkedIn posts](/guides/linkedin/linkedin-spot-ai-written-posts/) and on [ordinary websites](/guides/websites/web-spot-ai-slop-articles/), and Slop Mop handles those too.
+
+[Add Slop Mop to your browser](/) and it folds Medium stories like the slop examples above for you.

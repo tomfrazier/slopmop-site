@@ -1,13 +1,14 @@
 ---
 {
-  "title": "Slop Mop for websites",
-  "seo_title": "Slop Mop for websites: content farms and filler · Slop Mop",
-  "description": "Content farms, SEO filler and AI-written articles: what slop looks like on the open web, what Slop Mop plans to do there, and what you can do today.",
-  "summary": "Coming soon for the sites you read. Until then: how content farms work, what Google says about them, and a few ways to skip the filler.",
+  "title": "Slop Mop for websites: a content farm filter for the articles you read",
+  "seo_title": "Content farm filter for websites · Slop Mop",
+  "description": "A content farm filter for the articles, comments and reviews you read: what web slop looks like, what Slop Mop does on any site, and a few search tricks.",
+  "summary": "With Slop Mop XL, click the mop on any article, comment or review to see whether it's filler, with the reasons shown.",
+  "keyword": "content farm filter",
   "updated": "2026-10-18",
   "kind": "network",
   "audience": "people who read the web",
-  "network_status": "soon",
+  "network_status": "live",
   "related": ["/patterns/stiff-phrasing/", "/patterns/hype-words/", "/glossary/ai-slop/", "/glossary/enshittification/", "/glossary/dead-internet-theory/", "/for/researchers/"],
   "sources": [
     {"title": "Tracking AI-enabled misinformation: AI content farm sites", "publisher": "NewsGuard", "url": "https://www.newsguardtech.com/special-reports/ai-tracking-center/", "date": "2026-03-17"},
@@ -17,11 +18,11 @@
   ]
 }
 ---
-The web has had content farms for as long as search engines have sent traffic and ads have paid for it. A content farm publishes pages at volume to rank for searches and carry ads, and the cheaper each page is to make, the better the sums work. Generative AI made pages very cheap.
+The web has had [content farms](/glossary/content-farm/) for as long as search engines have sent traffic and ads have paid for it. A content farm publishes pages at volume to rank for searches and carry ads, and the cheaper each page is to make, the better the sums work. Generative AI made pages very cheap.
 
 NewsGuard, which rates news sites, has been counting sites it judges to be AI content farms: sites with a significant share of AI-produced content published without meaningful human oversight. Its first tally, in April 2023, found 49. By March 2026 the count was 3,006, across 16 languages ([NewsGuard](https://www.newsguardtech.com/special-reports/ai-tracking-center/)).
 
-Google has said it's acting on this. In March 2024 it introduced a spam policy on "scaled content abuse": many pages generated mainly to manipulate search rankings rather than help users. Google said the policy applies however the content is made, by automation, by people or by both ([Google Search Central](https://developers.google.com/search/blog/2024/03/core-update-spam-policies)). That last point matters. Filler has always been written by hand too, from recipe life stories to "What is X? X is a term that refers to X".
+Google has said it's acting on this. In March 2024 it introduced a spam policy on "[scaled content abuse](/glossary/scaled-content-abuse/)": many pages generated mainly to manipulate search rankings rather than help users. Google said the policy applies however the content is made, by automation, by people or by both ([Google Search Central](https://developers.google.com/search/blog/2024/03/core-update-spam-policies)). That last point matters. Filler has always been written by hand too, from recipe life stories to "What is X? X is a term that refers to X".
 
 ## What slop looks like on websites
 
@@ -56,15 +57,19 @@ We cooked the same 500g of frozen chips in six air fryers. Two left the middle s
 
 The first two are [stiff phrasing](/patterns/stiff-phrasing/) and [flowery prose](/patterns/flowery-prose/) standing between you and the information. The third uses [hype words](/patterns/hype-words/) where test results should be. On a page with ads every few paragraphs, every extra sentence is another place to put one. For the wider pattern of services getting worse for their users as they're squeezed for revenue, see Cory Doctorow's term [enshittification](/glossary/enshittification/).
 
-## What Slop Mop does here
+## How Slop Mop works as a content farm filter
 
-Slop Mop for websites is coming soon. It doesn't work on articles or general websites yet; today it only reads LinkedIn.
+Outside the social feeds, Slop Mop reads the articles, comments and reviews on the sites you visit. This is part of Slop Mop XL (US$5.99 a month or US$59.99 a year), and it only starts after you give your browser permission to read the pages you visit. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet.
 
-The plan is for it to read the articles and pages you visit the way it reads LinkedIn posts now: ask twelve questions about the writing (nine tells of slop and three counter-signals, including whether it's useful to readers), show its working, and let you overrule it. It judges the writing, and it isn't an AI detector, so a well-made page that used AI along the way can pass and a hand-padded one may not.
+On a website it works on request. Click the mop on an article, a comment or a review and the text is sent to the scoring service; nothing on the page is sent until you do. An AI model designed for calibrated decisions answers the same twelve questions it asks about a post: nine tells of slop and three counter-signals (sounds like a person, useful to readers, and reader response). You get a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure.
 
-It won't delete, report, mute or block anything. Reading the sites you visit is part of Slop Mop XL, which is also coming soon at US$5.99 a month or US$59.99 a year.
+The details panel shows the strongest signs and the Slopprint, a nine-spoke chart with one spoke per tell. The answer page that won't answer and the recipe preamble make different shapes: the first is mostly stiff phrasing, the second mostly flowery prose. The "useful to readers" bar looks for what a content farm leaves out: figures, test results, named examples, a step you can follow. On a review roundup that's the quickest way to tell a site that tested six air fryers from one that rewrote six product listings.
 
-## What you can do today
+You can vote Not sure, No, Maybe or Probably, and your vote overrides the model for you. The site never sees it.
+
+It judges the writing, and it isn't an AI detector, so a well-made page that used AI along the way can pass and a hand-padded one may not. It never deletes, reports, mutes or blocks anything, and it doesn't block ads or rewrite the page. The text is scored and not kept: the server stores a one-way hash of the text and the scores. Long-form slop on [Medium](/for/medium/) and [Substack](/for/substack/) has its own pages. The detail is on [how it works](/how-it-works.html).
+
+## The web's own tools, and how they fit with Slop Mop
 
 There's no built-in "skip the filler" button, but a few tools help.
 
@@ -73,7 +78,7 @@ There's no built-in "skip the filler" button, but a few tools help.
 3. **Search with a site in mind.** Adding `site:` and a source you trust, such as a manufacturer, a council or a university, skips the middlemen entirely.
 4. **Scroll to the end first.** On recipe and how-to pages the useful part is often at the bottom, in a card or a numbered list.
 
-All of these are manual and per search. They don't learn which pages wasted your time.
+All of these are manual and per search. They don't learn which pages wasted your time. They fit with Slop Mop in order: search tricks keep the worst sites out of your results, reading mode tidies the page, and the mop tells you whether the text left over is worth reading. When it flags the same domain twice, that's the one to add to your `-site:` list. [Slop Mop vs reading modes and summarisers](/compare/slop-mop-vs-reading-modes-and-summarisers/) compares the approaches.
 
 ## Who it's for
 
@@ -85,3 +90,5 @@ People who search for answers all day and keep landing on pages written for sear
 - [Small business owners](/for/small-business-owners/) researching suppliers, rules and tools without a day to spare.
 
 The [dead internet theory](/glossary/dead-internet-theory/) entry covers the bleaker version of where this ends up, and the case against it.
+
+[Add Slop Mop to your browser](/) and, with Slop Mop XL, it checks articles like these before you've read past the intro.
