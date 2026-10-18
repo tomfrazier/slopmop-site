@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs DeSlop",
   "seo_title": "Slop Mop vs DeSlop: two LinkedIn slop filters · Slop Mop",
-  "description": "DeSlop and Slop Mop both fold slop out of your LinkedIn feed. One looks mainly for signs of AI writing on your device; the other judges whether a post is worth reading.",
+  "description": "DeSlop and Slop Mop both filter slop from your LinkedIn feed. One hunts signs of AI writing on your device; the other judges if a post is worth reading.",
   "summary": "Two LinkedIn feed filters: DeSlop hunts signs of AI writing on your device, Slop Mop judges whether a post is worth reading.",
   "updated": "2026-10-18",
   "kind": "product",
@@ -35,7 +35,7 @@
 
 DeSlop and Slop Mop are the closest pair on this site. Both are Chrome extensions, both work on the LinkedIn feed today, and both read posts as they appear and quietly get the bad ones out of your way.
 
-**DeSlop**, made by Pineido, reads the posts on your screen, scores each one for signs of AI writing, and hides, collapses or dims the ones that score as slop. Its Chrome Web Store listing names the habits it goes after: "I'm thrilled to announce" openers, one-sentence-per-line "broetry" and "Agree?" bait. It has Lenient, Balanced and Strict sensitivity, a "Why hidden" panel that lists the signals that fired, and one-click "Show anyway" and "Always show this person" buttons. By default it leaves your first-degree connections and people you follow alone (you can switch that off). You can train it with "Add to slop", tune individual signals, filter AI-drafted messages and turn on a focus mode. As of October 2026 every feature is free, with an optional US$4.99 one-time contribution that unlocks nothing extra.
+**DeSlop**, made by Pineido, reads the posts on your screen, scores each one for signs of AI writing, and hides, collapses or dims the ones that score as slop. Its Chrome Web Store listing names the habits it goes after: "I'm thrilled to announce" openers, one-sentence-per-line "broetry" and "Agree?" bait. It has Lenient, Balanced and Strict sensitivity, a "Why hidden" panel that lists the signals that fired, and one-click "Show anyway" and "Always show this person" buttons. By default it leaves your first-degree connections and people you follow alone (you can switch that off). You can train it with "Add to slop", tune individual signals, filter AI-drafted messages and turn on a focus mode. As of October 2026 every feature is free, with an optional US$4.99 one-time contribution that adds no extra features.
 
 **Slop Mop** sends the text of each new post to its scoring service, where an AI model designed for calibrated decisions answers twelve questions about it: nine tells of slop and three counter-signals (sounds like a person, useful to readers, reader response). The post gets a score out of 100 and a verdict. In Hide mode likely slop folds into a one-line strip you can reopen; in Highlight mode nothing is hidden and the post is marked instead. Sensitivity is Mild, Moderate or Aggressive.
 

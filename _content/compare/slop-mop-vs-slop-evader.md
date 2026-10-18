@@ -62,7 +62,7 @@ Slop Evader is a poor fit when you need anything current: news, prices, new soft
 ## When to use Slop Mop
 
 - Your time goes on LinkedIn and the problem is the feed: hooks, bait, [empty praise](/patterns/empty-praise/) and filler between the posts worth reading.
-- You want new posts kept and judged on their merits, not discarded for being new.
+- You want new posts kept and judged on their merits.
 - You want to see why something was folded and be able to disagree.
 
 Slop Mop is a poor fit if your main problem is search results, or if you want a tool that sends nothing anywhere.

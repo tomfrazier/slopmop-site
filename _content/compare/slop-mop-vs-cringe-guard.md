@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs Cringe Guard",
   "seo_title": "Slop Mop vs Cringe Guard: LinkedIn feed filters · Slop Mop",
-  "description": "Cringe Guard and Slop Mop both hide low-value LinkedIn posts. One runs an LLM on your own API key with your rules; the other scores nine tells with no setup.",
+  "description": "Cringe Guard and Slop Mop both hide low-value LinkedIn posts. One runs an LLM on your API key with your rules; the other scores nine tells, no setup.",
   "summary": "Two LinkedIn filters for low-value posts: Cringe Guard uses an LLM on your API key, Slop Mop scores nine tells with no key needed.",
   "updated": "2026-10-18",
   "kind": "product",

@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs Kagi SlopStop",
   "seo_title": "Slop Mop vs Kagi SlopStop: feeds or search? · Slop Mop",
-  "description": "Kagi SlopStop downranks AI content farms in search results. Slop Mop folds low-value posts in your LinkedIn feed. Different places, different methods, compared.",
+  "description": "Kagi SlopStop downranks AI content farms in search results. Slop Mop folds low-value posts in your LinkedIn feed. How their places and methods differ.",
   "summary": "Kagi SlopStop cleans AI content farms out of search results; Slop Mop folds low-value posts in your LinkedIn feed.",
   "updated": "2026-10-18",
   "kind": "product",

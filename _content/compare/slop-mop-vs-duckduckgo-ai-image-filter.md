@@ -69,6 +69,8 @@ DuckDuckGo's "Hide AI-Generated Images" setting and Slop Mop both deal with slop
 
 ## Using both
 
-There's no overlap, so use both if both problems bother you. DuckDuckGo's switch takes a moment to flip and Slop Mop runs in the background on LinkedIn.
+There's no overlap, so use both if both problems bother you. DuckDuckGo's switch takes a moment to flip, and Slop Mop runs in the background on LinkedIn once you've picked a mode and a sensitivity level.
+
+One thing neither tool does today is deal with AI images in your social feed. DuckDuckGo's filter stops at its own search results, and Slop Mop reads only the words of a post. A LinkedIn post with a generated picture and a useful paragraph underneath will be judged by Slop Mop on the paragraph. If pictures in feeds are your main worry, you'll need to look elsewhere for now.
 
 If you use Kagi rather than DuckDuckGo, [Slop Mop vs Kagi SlopStop](/compare/slop-mop-vs-kagi-slopstop/) covers Kagi's approach, which also filters AI images and downranks AI content farms. The blocklists behind DuckDuckGo's filter come from the content-blocking world, so [Slop Mop vs uBlock Origin](/compare/slop-mop-vs-ublock-origin/) and the wider look at [ad blockers](/compare/slop-mop-vs-ad-blockers/) are useful next reads.

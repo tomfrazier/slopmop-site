@@ -63,7 +63,7 @@ This comparison comes with a big caveat up front. SaneBox works on email today. 
 - Your time goes on the LinkedIn feed, and the problem is the quality of the posts.
 - You want each post judged on its writing, with reasons you can see and a vote that overrules the model.
 - You'd like to try something free before paying for anything.
-- For email, Slop Mop is a future option, not a current one. If you want it there, watch for its Gmail and Outlook support.
+- For email, Slop Mop isn't available yet. If you want it there, watch for its Gmail and Outlook support.
 
 ## Using both
 

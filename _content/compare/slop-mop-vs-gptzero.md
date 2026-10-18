@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs GPTZero",
   "seo_title": "Slop Mop vs GPTZero: feed filter or AI detector? · Slop Mop",
-  "description": "GPTZero checks essays and documents for AI writing. Slop Mop filters low-value posts from your LinkedIn feed, whoever wrote them. Here's when each one fits.",
+  "description": "GPTZero checks essays and documents for AI writing. Slop Mop filters low-value posts from your LinkedIn feed, whoever wrote them. When each one fits.",
   "summary": "GPTZero checks documents for AI authorship on demand; Slop Mop filters low-value posts from your feed as you scroll.",
   "updated": "2026-10-18",
   "kind": "product",
