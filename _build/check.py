@@ -78,6 +78,14 @@ for path, (fam, slug, m, body) in sorted(pages.items()):
     if re.search(r"\bJev\b|TypeSafe|graphite\.io", body + json.dumps(m)):
         errors.append(f"{name}: names Jev/TypeSafe or links Graphite")
 
+# the share, header and figure images must not carry pre-launch wording either
+mf = f"{ROOT}/_build/images_manifest.json"
+if os.path.exists(mf):
+    for r in json.load(open(mf, encoding="utf-8")):
+        txt = json.dumps({k: v for k, v in r["spec"].items() if k not in ("text", "fine")}, ensure_ascii=False)
+        if re.search(r"coming soon|isn.t out yet|LinkedIn only|works on LinkedIn today", txt, re.I):
+            errors.append(f"{r['out']}: image text still says a network isn't live")
+
 print(f"{len(pages)} pages checked")
 for w in warns:
     print("warn ", w)
