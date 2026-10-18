@@ -2,7 +2,7 @@
 {
   "title": "How to see fewer suggested posts on Facebook",
   "seo_title": "How to see fewer suggested posts on Facebook · Slop Mop",
-  "description": "There's no off switch for Facebook's suggested posts. Not interested, Hide, snooze and the new Your algorithm tool cut them down, and the Feeds tab skips them.",
+  "description": "There's no off switch for Facebook's suggested posts. Not interested, Hide, snooze and Your algorithm cut them down, and the Feeds tab skips them.",
   "summary": "No switch turns suggested posts off, but Not interested, Hide, snooze and the Feeds tab cut them down. What each does, on app and desktop.",
   "updated": "2026-10-18",
   "network": "facebook",

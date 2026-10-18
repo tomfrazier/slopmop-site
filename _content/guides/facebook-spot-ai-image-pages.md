@@ -19,7 +19,7 @@
   ]
 }
 ---
-An AI image page is a Facebook Page that posts a steady stream of generated pictures (cabins, carvings, cakes, soldiers, babies) to collect reactions, then uses the audience for clicks, sales or a resale of the Page. You can usually tell from the Page rather than the picture: captions copied across unrelated Pages, a history of name changes, and a link waiting in the first comment. Checking takes about a minute.
+An AI image page is a Facebook Page that posts a steady stream of generated pictures (cabins, carvings, cakes, soldiers, babies) to collect reactions, then uses the audience for clicks or sales. You can usually tell from the Page rather than the picture: captions copied across unrelated Pages, a history of name changes, and a link waiting in the first comment. Checking takes about a minute.
 
 ## Why the picture alone won't tell you
 

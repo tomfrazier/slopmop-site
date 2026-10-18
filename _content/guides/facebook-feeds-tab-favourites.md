@@ -2,7 +2,7 @@
 {
   "title": "How to use the Feeds tab and Favorites on Facebook",
   "seo_title": "Facebook Feeds tab and Favorites: how to use them",
-  "description": "Facebook's Feeds tab shows only recent posts from people, Pages and groups you follow. How to open it, add up to 30 Favorites and pin it so it's one tap away.",
+  "description": "Facebook's Feeds tab shows only recent posts from people, Pages and groups you follow. How to open it, add up to 30 Favorites and pin it.",
   "summary": "Open Facebook's Feeds tab, add up to 30 Favorites, and pin it to your tab bar so a feed without suggestions is one tap away.",
   "updated": "2026-10-18",
   "network": "facebook",

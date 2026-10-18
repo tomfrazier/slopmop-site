@@ -2,8 +2,8 @@
 {
   "title": "How to spot engagement bait on Facebook",
   "seo_title": "How to spot engagement bait on Facebook · Slop Mop",
-  "description": "Type AMEN, only geniuses can solve this, share if you agree: how to recognise Facebook engagement bait, which requests are fair, and what to do instead of replying.",
-  "summary": "The common forms of Facebook engagement bait, from 'type AMEN' to copy-and-paste chains, how to tell them from a fair request, and what to do.",
+  "description": "Type AMEN, only geniuses can solve this, share if you agree: how to spot Facebook engagement bait, which requests are fair, and what to do instead.",
+  "summary": "The common forms of Facebook engagement bait, from 'type AMEN' to copy-and-paste chains, how to tell them from a fair request.",
   "updated": "2026-10-18",
   "network": "facebook",
   "publish_date": "2026-11-10",
@@ -15,6 +15,7 @@
     {"title": "Engagement bait", "publisher": "Meta Transparency Centre", "url": "https://transparency.meta.com/en-gb/features/approach-to-ranking/content-distribution-guidelines/engagement-bait/", "date": ""},
     {"title": "How Spammers and Scammers Leverage AI-Generated Images on Facebook for Audience Growth", "publisher": "arXiv (Renee DiResta and Josh A. Goldstein)", "url": "https://arxiv.org/abs/2403.12838", "date": "2024-03-19"},
     {"title": "Hide a post on your Facebook Feed", "publisher": "Facebook Help Center", "url": "https://www.facebook.com/help/268028706671439", "date": ""},
+    {"title": "Snooze a person, Page or group on Facebook", "publisher": "Facebook Help Center", "url": "https://www.facebook.com/help/538433456491590", "date": ""},
     {"title": "Avoiding scams on Facebook", "publisher": "Facebook Help Center", "url": "https://www.facebook.com/help/1674717642789671", "date": ""}
   ]
 }
@@ -73,6 +74,10 @@ Our school's PTA needs two more people for the Christmas fair tombola, 3pm to 5p
 :::
 
 The first dares you to share. The second tells you exactly what's needed, when, and how to help.
+
+## When a friend shares it
+
+Much of the bait in your feed arrives through people you know, who shared it because it seemed harmless or kind. That's fine to leave alone. If one friend shares it daily, you can unfollow them and stay friends, or snooze them for 30 days, and they won't be notified of the snooze ([Facebook Help](https://www.facebook.com/help/538433456491590)). If the post is a scam or a hoax that could cost someone money, a private message is kinder than a public correction, and more likely to be read.
 
 ## What to do instead of replying
 

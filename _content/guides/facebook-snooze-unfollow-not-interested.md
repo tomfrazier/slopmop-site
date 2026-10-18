@@ -3,7 +3,7 @@
   "title": "Snooze, unfollow or Not interested: which Facebook control to use",
   "seo_title": "Facebook snooze vs unfollow vs Not interested",
   "description": "Snooze hides someone for 30 days, unfollow hides them until you reconnect, Not interested trims one kind of post. Which to use, how, and how to undo each.",
-  "summary": "What Facebook's snooze, unfollow, Not interested and block each do, who finds out, and how to undo them on the app and on a computer.",
+  "summary": "What Facebook's snooze, unfollow and Not interested each hide, for how long, and how to undo them on the app and on a computer.",
   "updated": "2026-10-18",
   "network": "facebook",
   "publish_date": "2026-11-17",
@@ -19,7 +19,7 @@
   ]
 }
 ---
-Use **Not interested** when one kind of post bothers you, **snooze** when a person, Page or group needs a 30-day break, and **unfollow** when you want their posts gone from your feed but want to stay friends or stay in the group. Facebook says snoozing doesn't notify anyone, and its help pages mention no notification for the other two. Block is a safety tool rather than a feed tool.
+Use **Not interested** when one kind of post bothers you, **snooze** when a person, Page or group needs a 30-day break, and **unfollow** when you want their posts gone from your feed but want to stay friends or stay in the group. Facebook says snoozing doesn't notify anyone, and its help pages mention no notification for the other two. Block is for safety, and comes up briefly below.
 
 ## The three feed controls side by side
 
