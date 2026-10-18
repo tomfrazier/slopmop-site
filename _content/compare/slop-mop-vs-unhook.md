@@ -61,9 +61,10 @@ Unhook and Slop Mop both make a site quieter, but they work on different sites a
 - You read LinkedIn for work and want the posts worth reading to stand out.
 - You want each post judged on its writing, including posts from people you follow.
 - You'd like to see why something was folded, and to overrule it.
+- You want a choice between hiding likely slop and only marking it, so you can check the calls before trusting them.
 
 ## Using both
 
-There's nothing to choose between here if you use both sites: Unhook on YouTube, Slop Mop on LinkedIn. They don't overlap or interfere.
+There's nothing to choose between here if you use both sites: Unhook on YouTube, Slop Mop on LinkedIn. They don't overlap or interfere. Each one is free to try, so the cost of running both is a few minutes of setup and, for Slop Mop, the 250-checks-a-day limit on the free plan.
 
 If you'd rather remove a social feed entirely, the way Unhook removes YouTube's homepage, [Slop Mop vs News Feed Eradicator](/compare/slop-mop-vs-news-feed-eradicator/) covers that approach. If Facebook is the site you want to tame with rules and switches, see [Slop Mop vs Social Fixer](/compare/slop-mop-vs-social-fixer/).

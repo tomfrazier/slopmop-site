@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs uBlock Origin",
   "seo_title": "Slop Mop vs uBlock Origin: post filter or ad blocker?",
-  "description": "uBlock Origin blocks ads, trackers and page clutter across the web. Slop Mop judges the writing of LinkedIn posts. What each does, and why you might run both.",
+  "description": "uBlock Origin blocks ads, trackers and clutter across the web. Slop Mop judges the writing of LinkedIn posts. What each does, and why to run both.",
   "summary": "uBlock Origin blocks ads and trackers by filter list. Slop Mop reads the posts between them and folds the low-value ones.",
   "updated": "2026-10-18",
   "kind": "product",

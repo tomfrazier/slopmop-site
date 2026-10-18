@@ -36,7 +36,7 @@
 
 DuckDuckGo's "Hide AI-Generated Images" setting and Slop Mop both deal with slop, but they don't touch the same material. One works on pictures in search results; the other on written posts in a social feed.
 
-**DuckDuckGo's filter** is a search setting added in July 2025. Turn it on and DuckDuckGo hides AI-generated images from its image results. It does that with manually curated open-source blocklists, including uBlock Origin's and the uBlacklist Huge AI Blocklist, which list sites known for AI imagery. DuckDuckGo told TechRadar it won't catch every AI image but will greatly reduce how many you see. There's also a separate No-AI version of the search engine at noai.duckduckgo.com, where the image filter is on by default and DuckDuckGo's other AI features are removed.
+**DuckDuckGo's filter** is a search setting added in July 2025. Turn it on and DuckDuckGo hides AI-generated images from its image results. It does that with manually curated open-source blocklists, including uBlock Origin's and the uBlacklist Huge AI Blocklist, which list sites known for AI imagery. DuckDuckGo says it won't catch every AI image but will greatly reduce how many you see. There's also a separate No-AI version of the search engine at noai.duckduckgo.com, where the image filter is on by default and DuckDuckGo's other AI features are removed.
 
 **Slop Mop** is a browser extension that reads the posts in your LinkedIn feed before you reach them. An AI model designed for calibrated decisions answers twelve questions about each post's text: nine tells of slop and three counter-signals (sounds like a person, useful to readers, reader response). Likely slop folds into a one-line strip you can reopen, or, in Highlight mode, is marked and left visible.
 
@@ -46,7 +46,7 @@ DuckDuckGo's "Hide AI-Generated Images" setting and Slop Mop both deal with slop
 
 **Search or feed.** The filter works inside DuckDuckGo image search, in any browser and in DuckDuckGo's apps. Slop Mop works in Chrome and other Chromium browsers on LinkedIn today; X, Reddit, Facebook, Substack, Medium, websites and Gmail and Outlook are coming soon.
 
-**Lists or judgement.** A blocklist is fast, transparent and cheap to run, and it's good at the obvious cases: whole sites devoted to generated images. It can't judge an image from a site that isn't on the list, and the lists depend on volunteers keeping them current. Slop Mop scores every post individually, which lets it catch a first-time poster but means each call is a judgement that can be wrong. That's why it shows its reasons and lets your vote overrule it.
+**Lists or judgement.** A blocklist is fast, transparent and cheap to run, and it's good at the obvious cases: whole sites devoted to generated images. It can't judge an image from a site that isn't on the list, and it only knows what the list maintainers have added. Slop Mop scores every post individually, which lets it catch a first-time poster but means each call is a judgement that can be wrong. That's why it shows its reasons and lets your vote overrule it.
 
 **AI or not.** DuckDuckGo's filter is aimed squarely at AI-generated images. Slop Mop isn't an AI detector: it folds empty writing whoever wrote it, and leaves useful AI-assisted posts alone.
 

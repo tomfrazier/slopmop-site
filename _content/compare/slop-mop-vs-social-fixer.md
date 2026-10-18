@@ -2,7 +2,7 @@
 {
   "title": "Slop Mop vs Social Fixer",
   "seo_title": "Slop Mop vs Social Fixer: writing judge or Facebook rules?",
-  "description": "Social Fixer customises Facebook with keyword, author and post-type filters. Slop Mop judges the writing of LinkedIn posts. How they differ, and when to use each.",
+  "description": "Social Fixer customises Facebook with keyword, author and post-type filters. Slop Mop judges the writing of LinkedIn posts. When to use each.",
   "summary": "Social Fixer filters Facebook by rules you write. Slop Mop judges how each LinkedIn post is written, with Facebook coming soon.",
   "updated": "2026-10-18",
   "kind": "product",

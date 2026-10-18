@@ -37,7 +37,7 @@ Feed blockers and Slop Mop start from the same complaint, that the feed takes mo
 
 **Remove or filter.** A feed blocker removes everything in the feed, the good posts with the bad. That's the point: no feed, nothing to scroll. Slop Mop leaves the posts it judges worth reading exactly as they were and folds the rest. You still have a feed to scroll; there's just less in it to scroll past.
 
-**The goal.** Feed blockers are built for attention and habit. They help people who open a site for one thing and lose half an hour. Slop Mop is built for signal-to-noise, for people who want the feed and find too much of it is hooks and filler. It won't stop you scrolling. It will make the scrolling less of a waste.
+**The goal.** Feed blockers are built for attention and habit. They help people who open a site for one thing and lose half an hour. Slop Mop is built for signal-to-noise, for people who want the feed and find too much of it is hooks and filler. It does nothing to limit how long you scroll.
 
 **Judgement.** Feed blockers make no judgements, so they can never misjudge a post, and they need no server. Slop Mop judges every post, which means it can sometimes call one differently from you. It shows its reasons when you click the mop, and your vote overrides the model in your own feed. To judge posts it sends their text (never your name or the author's) to its scoring service, which keeps a one-way hash and the scores rather than the text.
 

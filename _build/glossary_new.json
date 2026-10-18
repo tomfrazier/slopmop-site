@@ -1,0 +1,1296 @@
+[
+  {
+    "slug": "ai-snake-oil",
+    "term": "AI snake oil",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2019",
+    "coined_by": "Arvind Narayanan",
+    "one_line": "AI products sold on claims that they do not and cannot live up to.",
+    "origin_note": "Popularized by Princeton computer scientist Arvind Narayanan's 2019 talk 'How to recognize AI snake oil', later expanded into a newsletter and book.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "How to recognize AI snake oil (slides)",
+        "publisher": "Arvind Narayanan, Princeton University",
+        "url": "https://www.cs.princeton.edu/~arvindn/talks/MIT-STS-AI-snakeoil.pdf",
+        "date": "2019"
+      }
+    ]
+  },
+  {
+    "slug": "ai-sycophancy",
+    "term": "AI sycophancy",
+    "aliases": [
+      "sycophancy"
+    ],
+    "kind": "ai",
+    "first_seen": "2020s",
+    "coined_by": "",
+    "one_line": "An AI assistant's tendency to flatter users, agree with them and validate their ideas whether or not they are right.",
+    "origin_note": "An AI-safety term for a failure linked to training on human feedback; it drew mass attention in April 2025 when OpenAI rolled back an overly flattering GPT-4o update.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Sycophancy (artificial intelligence)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sycophancy_(artificial_intelligence)",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "ai-washing",
+    "term": "AI washing",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2019",
+    "coined_by": "",
+    "one_line": "Overstating how much a product actually uses AI, or slapping 'AI-powered' on it, to impress customers and investors.",
+    "origin_note": "Modeled on 'greenwashing'; Wikipedia says the AI Now Institute first defined it in 2019,.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "AI washing",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/AI_washing",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "article-spinning",
+    "term": "Article spinning",
+    "aliases": [
+      "content spinning",
+      "spinning",
+      "Rogeting"
+    ],
+    "kind": "both",
+    "first_seen": "2000s",
+    "coined_by": "",
+    "one_line": "Rewriting an existing text by swapping in synonyms and shuffled phrasing so it passes as new, usually to game search rankings or hide plagiarism.",
+    "origin_note": "A black-hat SEO practice, done by hand or with automated 'spinner' software, that let sites dodge duplicate-content penalties; by 2024 the same trick was being run with generative AI.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Article spinning",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Article_spinning",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "astroturfing",
+    "term": "Astroturfing",
+    "aliases": [
+      "astroturf"
+    ],
+    "kind": "both",
+    "first_seen": "1985",
+    "coined_by": "Lloyd Bentsen",
+    "one_line": "Disguising an orchestrated campaign so it looks like spontaneous support from ordinary people.",
+    "origin_note": "US senator Lloyd Bentsen is credited with the usage in 1985, contrasting real grass roots with AstroTurf brand artificial grass; online it now covers fake accounts, bots and coordinated posting.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "Astroturfing",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Astroturfing",
+        "date": ""
+      },
+      {
+        "title": "Astroturfing (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/astroturfing",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "bacn",
+    "term": "Bacn",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2007",
+    "coined_by": "",
+    "one_line": "Email you technically signed up for, such as alerts, newsletters and notifications, that piles up unread: better than spam, worse than real mail.",
+    "origin_note": "Coined at a Pittsburgh conference (PodCamp Pittsburgh 2) in August 2007 as a pun on spam; NPR credited Canadian blogger Tommy Vallier with helping invent it.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Move Over, Spam: 'Bacn' Is the E-Mail Dish du Jour",
+        "publisher": "NPR",
+        "url": "https://www.npr.org/2007/08/29/14032271/move-over-spam-bacn-is-the-e-mail-dish-du-jour",
+        "date": "2007-08-29"
+      }
+    ]
+  },
+  {
+    "slug": "botshit",
+    "term": "Botshit",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2024",
+    "coined_by": "Timothy R. Hannigan, Ian P. McCarthy and André Spicer",
+    "one_line": "Made-up or inaccurate chatbot output that a person then uses uncritically in real work.",
+    "origin_note": "Introduced by business scholars Hannigan, McCarthy and Spicer in 'Beware of botshit', published in Business Horizons in 2024; they frame it as what happens when humans pick up AI hallucinations and act on them.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Beware of botshit: How to manage the epistemic risks of generative chatbots",
+        "publisher": "Business Horizons (Elsevier)",
+        "url": "https://doi.org/10.1016/j.bushor.2024.03.001",
+        "date": "2024"
+      }
+    ]
+  },
+  {
+    "slug": "brandolinis-law",
+    "term": "Brandolini’s law",
+    "aliases": [
+      "bullshit asymmetry principle"
+    ],
+    "kind": "both",
+    "first_seen": "2013",
+    "coined_by": "Alberto Brandolini",
+    "one_line": "The adage that refuting nonsense takes an order of magnitude more effort than producing it.",
+    "origin_note": "Coined in 2013 by Italian programmer Alberto Brandolini; often cited when cheap, high-volume falsehood or slop swamps the people trying to correct it.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Brandolini's law",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Brandolini%27s_law",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "broetry",
+    "term": "Broetry",
+    "aliases": [
+      "broem",
+      "broems"
+    ],
+    "kind": "human",
+    "first_seen": "2017",
+    "coined_by": "",
+    "one_line": "LinkedIn posts written one short sentence per line, building to a self-help or business lesson.",
+    "origin_note": "The style spread on LinkedIn in late 2017, partly because line breaks force a 'see more' click that the algorithm reads as engagement; the coinage is variously credited to BuzzFeed News or Bloomberg writer Lorcan Roche Kelly.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Broetry: Why is everyone suddenly writing in single line sentences on LinkedIn?",
+        "publisher": "Fenwick",
+        "url": "https://fenwick.media/rewild/magazine/dead-broets-society-behind-the-strange-story",
+        "date": ""
+      },
+      {
+        "title": "Meet the business leaders behind LinkedIn's 'broems' trend",
+        "publisher": "The Business of Business",
+        "url": "https://www.businessofbusiness.com/articles/linkedin-broetry-adam-grant-simon-sinek/",
+        "date": "2020-11-05"
+      }
+    ]
+  },
+  {
+    "slug": "bullshit",
+    "term": "Bullshit (Frankfurt)",
+    "aliases": [
+      "Frankfurtian bullshit"
+    ],
+    "kind": "both",
+    "first_seen": "2005",
+    "coined_by": "Harry G. Frankfurt",
+    "one_line": "Speech meant to persuade or impress without any regard for whether it is true.",
+    "origin_note": "Philosopher Harry G. Frankfurt's 1986 essay On Bullshit became a 2005 bestselling book; his definition is now often applied to fluent but truth-indifferent chatbot output.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "On Bullshit",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/On_Bullshit",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "chumbox",
+    "term": "Chumbox",
+    "aliases": [
+      "chum box",
+      "chum"
+    ],
+    "kind": "human",
+    "first_seen": "2015",
+    "coined_by": "",
+    "one_line": "A grid of sensational thumbnail ads at the bottom of web pages that funnels readers to low-quality clickbait.",
+    "origin_note": "Named after 'chumming', throwing fish scraps to attract fish; John Mahoney's 2015 article in The Awl popularized the term and catalogued its recurring themes.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Chumbox",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Chumbox",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "churnalism",
+    "term": "Churnalism",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2008",
+    "coined_by": "Waseem Zakir",
+    "one_line": "News stories churned out by lightly rewriting press releases and wire copy instead of doing original reporting.",
+    "origin_note": "A blend of 'churn' and 'journalism' credited to BBC journalist Waseem Zakir; Nick Davies popularized it in his 2008 book Flat Earth News.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Churnalism",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Churnalism",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "clanker",
+    "term": "Clanker",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2005",
+    "coined_by": "",
+    "one_line": "A derogatory slang term for robots and AI systems, including chatbots.",
+    "origin_note": "Used for battle droids in the 2005 game Star Wars: Republic Commando (and in earlier science fiction); in the 2020s, and especially 2025, it spread widely online as shorthand for distaste at AI being pushed into everyday life.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Clanker",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Clanker",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "click-farm",
+    "term": "Click farm",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "An operation where low-paid workers, or racks of phones, generate fake clicks, likes, follows and views to order.",
+    "origin_note": "A form of click fraud that grew alongside social media metrics; it sells the look of popularity rather than any real audience.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Click farm",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Click_farm",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "clickbait",
+    "term": "Clickbait",
+    "aliases": [
+      "click-bait",
+      "link bait",
+      "linkbait"
+    ],
+    "kind": "both",
+    "first_seen": "1999",
+    "coined_by": "",
+    "one_line": "A headline or thumbnail built to make you click, usually promising more than the content delivers.",
+    "origin_note": "Merriam-Webster dates the word to 1999; it became the defining complaint about ad-funded web publishing in the 2010s as headlines were tuned for the 'curiosity gap'.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Clickbait",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Clickbait",
+        "date": ""
+      },
+      {
+        "title": "Clickbait (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/clickbait",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "cognitive-debt",
+    "term": "Cognitive debt",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2025",
+    "coined_by": "",
+    "one_line": "The idea that leaning on an AI assistant to do your thinking saves effort now but weakens your own engagement and memory later.",
+    "origin_note": "Popularized by the 2025 MIT Media Lab study 'Your Brain on ChatGPT', which compared brain activity of people writing essays with and without an LLM.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task",
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/abs/2506.08872",
+        "date": "2025-06-10"
+      }
+    ]
+  },
+  {
+    "slug": "content-farm",
+    "term": "Content farm",
+    "aliases": [
+      "content mill",
+      "AI content farm"
+    ],
+    "kind": "both",
+    "first_seen": "2009",
+    "coined_by": "",
+    "one_line": "A company that pumps out huge volumes of cheap articles or videos aimed at search and ad revenue rather than readers.",
+    "origin_note": "Associated with sites like Demand Media's eHow around 2009–2010, which Google targeted with its 2011 Panda update; since 2023 NewsGuard has tracked thousands of AI-run content farms.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Content farm",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Content_farm",
+        "date": ""
+      },
+      {
+        "title": "Tracking AI-enabled Misinformation: AI Content Farm sites",
+        "publisher": "NewsGuard",
+        "url": "https://www.newsguardtech.com/special-reports/ai-tracking-center/",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "content-shock",
+    "term": "Content shock",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2014",
+    "coined_by": "Mark Schaefer",
+    "one_line": "The point where the amount of content being produced outstrips people's limited capacity to consume it.",
+    "origin_note": "Marketing writer Mark Schaefer coined it in a January 6, 2014 blog post arguing content marketing was not a sustainable strategy for most businesses.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "The Blog Post That Shocked the World",
+        "publisher": "{grow} by Mark Schaefer",
+        "url": "https://markschaefer.substack.com/p/the-blog-post-that-shocked-the-world",
+        "date": "2024-01-18"
+      }
+    ]
+  },
+  {
+    "slug": "copypasta",
+    "term": "Copypasta",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2006",
+    "coined_by": "",
+    "one_line": "A block of text copied and pasted across the internet over and over, often as a joke or to bait reactions.",
+    "origin_note": "From 'copy and paste'; Merriam-Webster and Wikipedia trace it to 4chan and Usenet in 2006.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Copypasta",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Copypasta",
+        "date": ""
+      },
+      {
+        "title": "Copypasta (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/copypasta",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "delve",
+    "term": "Delve (AI marker)",
+    "aliases": [
+      "delving"
+    ],
+    "kind": "ai",
+    "first_seen": "2024",
+    "coined_by": "",
+    "one_line": "The word 'delve' and similar favourites ('underscore', 'meticulous', 'showcasing') used as a giveaway that text was written or polished by an LLM.",
+    "origin_note": "Studies of millions of PubMed abstracts found 'delves' and other style words jumped abruptly after ChatGPT's release, estimating at least 13.5% of 2024 abstracts were LLM-processed.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Delving into LLM-assisted writing in biomedical publications through excess vocabulary",
+        "publisher": "arXiv (Kobak et al.; published in Science Advances)",
+        "url": "https://arxiv.org/abs/2406.07016",
+        "date": "2024-06-11"
+      }
+    ]
+  },
+  {
+    "slug": "doomscrolling",
+    "term": "Doomscrolling",
+    "aliases": [
+      "doomscroll"
+    ],
+    "kind": "both",
+    "first_seen": "2018",
+    "coined_by": "",
+    "one_line": "Compulsively scrolling through bad news or upsetting content even though it makes you feel worse.",
+    "origin_note": "First documented in a 2018 tweet and spread widely during the COVID-19 pandemic; Macquarie Dictionary named it a 2020 word of the year.",
+    "sensitivity": "health",
+    "sources": [
+      {
+        "title": "Doomscrolling",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Doomscrolling",
+        "date": ""
+      },
+      {
+        "title": "Doomscroll (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/doomscrolling",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "doorway-page",
+    "term": "Doorway page",
+    "aliases": [
+      "doorway abuse",
+      "bridge page",
+      "gateway page"
+    ],
+    "kind": "both",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "A page made only to rank for a particular search query, which then funnels visitors somewhere else.",
+    "origin_note": "An old black-hat SEO technique; Google's spam policies now call it 'doorway abuse', such as near-identical pages targeting every city name.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Doorway page",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Doorway_page",
+        "date": ""
+      },
+      {
+        "title": "Spam policies for Google web search",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "elsagate",
+    "term": "Elsagate",
+    "aliases": [],
+    "kind": "both",
+    "first_seen": "2017",
+    "coined_by": "",
+    "one_line": "The scandal over mass-produced, keyword-stuffed YouTube videos that looked child-friendly but showed disturbing or inappropriate content.",
+    "origin_note": "Named after Elsa from Frozen, the term was coined online in 2017; channels existed from 2014, and James Bridle's November 2017 essay drew wide attention to algorithm-driven kids' video.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Elsagate",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Elsagate",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "firehose-of-falsehood",
+    "term": "Firehose of falsehood",
+    "aliases": [],
+    "kind": "both",
+    "first_seen": "2016",
+    "coined_by": "",
+    "one_line": "A propaganda method of pumping out a fast, constant, high-volume stream of messages with no commitment to truth or consistency.",
+    "origin_note": "RAND researchers used the phrase in 2016 to characterize contemporary Russian propaganda: many channels, many messages, and a shameless willingness to spread partial truths or fictions.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "The Russian \"Firehose of Falsehood\" Propaganda Model",
+        "publisher": "RAND Corporation",
+        "url": "https://www.rand.org/pubs/perspectives/PE198.html",
+        "date": "2016-07-11"
+      }
+    ]
+  },
+  {
+    "slug": "flood-the-zone",
+    "term": "Flood the zone",
+    "aliases": [
+      "flood the zone with shit"
+    ],
+    "kind": "both",
+    "first_seen": "2018",
+    "coined_by": "Steve Bannon",
+    "one_line": "A strategy of overwhelming the public with so much content and claims that no one can keep up or sort truth from noise.",
+    "origin_note": "Steve Bannon described it to Michael Lewis in 2018 (\"flood the zone with shit\"); it is now a common description of volume-over-accuracy messaging.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "Flood the zone",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Flood_the_zone_with_shit",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "hallucination",
+    "term": "Hallucination (AI)",
+    "aliases": [
+      "AI hallucination",
+      "confabulation"
+    ],
+    "kind": "ai",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "When an AI model states false or made-up information as if it were fact.",
+    "origin_note": "Borrowed loosely from psychology; Cambridge Dictionary added the AI sense in 2023. Some researchers prefer 'confabulation' or 'bullshitting' to avoid anthropomorphizing.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Hallucination (artificial intelligence)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+        "date": ""
+      },
+      {
+        "title": "Hallucination (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/hallucination",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "hot-take",
+    "term": "Hot take",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2012",
+    "coined_by": "",
+    "one_line": "A quickly produced, deliberately provocative opinion on the news, high on heat and low on research.",
+    "origin_note": "From sports talk radio; Merriam-Webster dates it to 2012, and John Herrman's 2014 piece in The Awl tied it to the economics of online publishing.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Hot take",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hot_take",
+        "date": ""
+      },
+      {
+        "title": "Hot take (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/hot%20take",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "humblebrag",
+    "term": "Humblebrag",
+    "aliases": [
+      "humble-brag",
+      "humblebragging"
+    ],
+    "kind": "human",
+    "first_seen": "2010",
+    "coined_by": "Harris Wittels",
+    "one_line": "A boast disguised as modesty or complaint, as in 'so tired from accepting all these awards'.",
+    "origin_note": "Comedian Harris Wittels used it as the name of his @Humblebrag Twitter account in 2010 and wrote a 2012 book on it; the American Dialect Society named it 2011's most useful word.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Humblebrag",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Humblebrag",
+        "date": ""
+      },
+      {
+        "title": "Humblebrag (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/humblebrag",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "hustle-porn",
+    "term": "Hustle porn",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2010s",
+    "coined_by": "",
+    "one_line": "Social media content that glorifies working punishing hours and grinding without rest as the path to success.",
+    "origin_note": "Reddit co-founder Alexis Ohanian criticized it in talks such as a 2019 Wall Street Journal festival appearance, calling it one of the most toxic things in tech.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Reddit co-founder Alexis Ohanian blasts 'hustle porn' on social media: It's 'really toxic'",
+        "publisher": "Fox Business",
+        "url": "https://foxbusiness.com/business-leaders/reddit-co-founder-alexis-ohanian-hustle-porn-toxic",
+        "date": "2019-05-27"
+      }
+    ]
+  },
+  {
+    "slug": "infodemic",
+    "term": "Infodemic",
+    "aliases": [],
+    "kind": "both",
+    "first_seen": "2003",
+    "coined_by": "David Rothkopf",
+    "one_line": "An overabundance of information, accurate and not, that spreads alongside a crisis and makes reliable guidance hard to find.",
+    "origin_note": "Coined by David Rothkopf in a May 2003 Washington Post column about SARS; it became widely used in 2020 when the WHO applied it to COVID-19.",
+    "sensitivity": "health",
+    "sources": [
+      {
+        "title": "Infodemic",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Infodemic",
+        "date": ""
+      },
+      {
+        "title": "Infodemic",
+        "publisher": "World Health Organization",
+        "url": "https://www.who.int/health-topics/infodemic",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "information-overload",
+    "term": "Information overload",
+    "aliases": [
+      "infobesity",
+      "infoxication",
+      "information anxiety"
+    ],
+    "kind": "both",
+    "first_seen": "1960s",
+    "coined_by": "",
+    "one_line": "Having so much information coming at you that it becomes harder, not easier, to understand things and make decisions.",
+    "origin_note": "Used by management scholars in the 1960s (Bertram Gross, 1964) and popularized by Alvin Toffler's 1970 Future Shock; 'infobesity' is a later web-era variant.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Information overload",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Information_overload",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "information-pollution",
+    "term": "Information pollution",
+    "aliases": [
+      "info pollution",
+      "infollution"
+    ],
+    "kind": "both",
+    "first_seen": "2003",
+    "coined_by": "",
+    "one_line": "Contamination of the information supply with irrelevant, redundant, unsolicited or low-value material.",
+    "origin_note": "Framed as the digital equivalent of industrial pollution; the term gained traction in 2003 through usability expert Jakob Nielsen's writing.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Information pollution",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Information_pollution",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "italian-brainrot",
+    "term": "Italian brainrot",
+    "aliases": [
+      "Italian brain rot"
+    ],
+    "kind": "ai",
+    "first_seen": "2025",
+    "coined_by": "",
+    "one_line": "A 2025 meme wave of absurd AI-generated creatures with mock-Italian names and synthetic voiceovers, such as Tralalero Tralala.",
+    "origin_note": "Emerged on TikTok in January 2025 and spread to Instagram and beyond; Wikipedia notes its sloppy aesthetics and nonsense narratives as part of the appeal.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Italian brainrot",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Italian_brainrot",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "keyword-stuffing",
+    "term": "Keyword stuffing",
+    "aliases": [],
+    "kind": "both",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "Cramming a page with repeated search terms, lists of place names or hidden text so it ranks, at the cost of readability.",
+    "origin_note": "One of the oldest forms of spamdexing, a word recorded as early as 1996; Google's spam policies still list it by name.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Spam policies for Google web search",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+        "date": ""
+      },
+      {
+        "title": "Spamdexing",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Spamdexing",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "linkedin-lunatics",
+    "term": "LinkedIn Lunatics",
+    "aliases": [
+      "r/LinkedInLunatics"
+    ],
+    "kind": "human",
+    "first_seen": "2019",
+    "coined_by": "",
+    "one_line": "A label, from a popular Reddit community, for cringe-inducing, self-aggrandizing or absurd posts on LinkedIn.",
+    "origin_note": "The subreddit r/LinkedInLunatics was launched on October 1, 2019 and had over 540,000 followers by June 2024 by collecting the platform's strangest posts.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "/r/LinkedInLunatics / LinkedIn Lunatics",
+        "publisher": "Know Your Meme",
+        "url": "https://knowyourmeme.com/memes/sites/rlinkedinlunatics-linkedin-lunatics",
+        "date": "2024-06-05"
+      }
+    ]
+  },
+  {
+    "slug": "listicle",
+    "term": "Listicle",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2007",
+    "coined_by": "",
+    "one_line": "An article built as a numbered list, often padded around a thin idea for quick clicks.",
+    "origin_note": "A blend of 'list' and 'article' that Merriam-Webster dates to 2007; it became a staple of viral publishers and a by-word for cheap content creation.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Listicle",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Listicle",
+        "date": ""
+      },
+      {
+        "title": "Listicle (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/listicle",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "llm-grooming",
+    "term": "LLM grooming",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2025",
+    "coined_by": "American Sunlight Project",
+    "one_line": "Flooding the web with propaganda so it gets swept into AI training data and search results and repeated by chatbots.",
+    "origin_note": "Named in a 2025 American Sunlight Project report on the pro-Russia 'Pravda' network; NewsGuard later found leading chatbots repeating its narratives about a third of the time.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "Russian networks flood the Internet with propaganda, aiming to corrupt AI chatbots",
+        "publisher": "Bulletin of the Atomic Scientists",
+        "url": "https://thebulletin.org/2025/03/russian-networks-flood-the-internet-with-propaganda-aiming-to-corrupt-ai-chatbots/",
+        "date": "2025-03-26"
+      },
+      {
+        "title": "A Well-funded Moscow-based Global 'News' Network has Infected Western Artificial Intelligence Tools Worldwide with Russian Propaganda",
+        "publisher": "NewsGuard",
+        "url": "https://www.newsguardtech.com/special-reports/moscow-based-global-news-network-infected-western-artificial-intelligence-russian-propaganda/",
+        "date": "2025-03-06"
+      }
+    ]
+  },
+  {
+    "slug": "made-for-adsense",
+    "term": "Made for AdSense",
+    "aliases": [
+      "MFA site",
+      "made-for-advertising site"
+    ],
+    "kind": "both",
+    "first_seen": "2000s",
+    "coined_by": "",
+    "one_line": "A website with no real value of its own, built only to draw visitors in and get them to click on ads.",
+    "origin_note": "A derogatory SEO-era label for scraper and filler sites built around Google AdSense; considered search spam that dilutes results.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Scraper site",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Scraper_site",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "model-collapse",
+    "term": "Model collapse",
+    "aliases": [
+      "Habsburg AI",
+      "AI inbreeding",
+      "AI cannibalism",
+      "model autophagy disorder",
+      "MAD"
+    ],
+    "kind": "ai",
+    "first_seen": "2023",
+    "coined_by": "",
+    "one_line": "The degradation of AI models trained on output from other AI models, which lose the rare and varied parts of real data over generations.",
+    "origin_note": "Named by Shumailov and colleagues in a 2023 preprint and their 2024 Nature paper; the nickname 'Habsburg AI' compares it to royal inbreeding.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "AI models collapse when trained on recursively generated data",
+        "publisher": "Nature",
+        "url": "https://www.nature.com/articles/s41586-024-07566-y",
+        "date": "2024-07-24"
+      },
+      {
+        "title": "The Curse of Recursion: Training on Generated Data Makes Models Forget",
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/abs/2305.17493",
+        "date": "2023-05-27"
+      },
+      {
+        "title": "Model collapse",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Model_collapse",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "outrage-porn",
+    "term": "Outrage porn",
+    "aliases": [
+      "outrage media",
+      "outrage journalism"
+    ],
+    "kind": "human",
+    "first_seen": "2009",
+    "coined_by": "Tim Kreider",
+    "one_line": "Media designed to make you angry, served up because indignation drives views, shares and comments.",
+    "origin_note": "Coined by cartoonist and essayist Tim Kreider in a July 2009 New York Times piece.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Outrage porn",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Outrage_porn",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "pink-slime-journalism",
+    "term": "Pink-slime journalism",
+    "aliases": [
+      "pink slime"
+    ],
+    "kind": "both",
+    "first_seen": "2012",
+    "coined_by": "Ryan Smith",
+    "one_line": "Low-cost, often templated or automated 'local news' sites that look independent but quietly serve a political or commercial agenda.",
+    "origin_note": "Coined by journalist Ryan Smith in 2012 after the meat-filler nickname; the Columbia Journalism Review counted more than 1,200 such sites by 2020.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "Pink-slime journalism",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pink-slime_journalism",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "rage-bait",
+    "term": "Rage bait",
+    "aliases": [
+      "ragebait",
+      "rage-baiting",
+      "rage farming"
+    ],
+    "kind": "both",
+    "first_seen": "2002",
+    "coined_by": "",
+    "one_line": "Online content deliberately designed to make people angry so they engage with it.",
+    "origin_note": "First recorded on Usenet in 2002; Oxford University Press named it the 2025 Word of the Year.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "The Oxford Word of the Year 2025 is rage bait",
+        "publisher": "Oxford University Press",
+        "url": "https://corp.oup.com/news/the-oxford-word-of-the-year-2025-is-rage-bait/",
+        "date": "2025-12-01"
+      }
+    ]
+  },
+  {
+    "slug": "reply-guy",
+    "term": "Reply guy",
+    "aliases": [],
+    "kind": "human",
+    "first_seen": "2012",
+    "coined_by": "",
+    "one_line": "Someone, usually a man, who compulsively replies to other people's posts, especially women's or famous accounts', in an unwanted or condescending way.",
+    "origin_note": "Used neutrally from around 2012 (an Applebee's social media manager was dubbed its 'Reply Guy'); by 2015 it had become a pejorative.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Reply guy",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Reply_guy",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "scaled-content-abuse",
+    "term": "Scaled content abuse",
+    "aliases": [
+      "mass-produced content"
+    ],
+    "kind": "both",
+    "first_seen": "2024",
+    "coined_by": "",
+    "one_line": "Google's term for generating many pages, by AI, scraping or cheap writers, mainly to manipulate search rankings rather than help readers.",
+    "origin_note": "Introduced as a named spam policy in Google's March 2024 core update, alongside expired domain abuse and site reputation abuse.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "What web creators should know about our March 2024 core update and new spam policies",
+        "publisher": "Google Search Central Blog",
+        "url": "https://developers.google.com/search/blog/2024/03/core-update-spam-policies",
+        "date": "2024-03-05"
+      },
+      {
+        "title": "Spam policies for Google web search",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "scraper-site",
+    "term": "Scraper site",
+    "aliases": [
+      "blog scraping"
+    ],
+    "kind": "both",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "A website that copies other sites' content wholesale and republishes it to earn ad money.",
+    "origin_note": "Scraper sites mirror other pages to earn ad revenue; Google's 2024 policies also cover AI-'transformed' scraped content.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Scraper site",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Scraper_site",
+        "date": ""
+      },
+      {
+        "title": "Spam policies for Google web search",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "shitposting",
+    "term": "Shitposting",
+    "aliases": [
+      "shitpost"
+    ],
+    "kind": "human",
+    "first_seen": "mid-2000s",
+    "coined_by": "",
+    "one_line": "Posting deliberately absurd, low-quality or provocative content, often ironically, to derail a conversation or get a rise.",
+    "origin_note": "Merriam-Webster finds the word in the 1990s; it took its current ironic form on image boards like 4chan in the mid-2000s and became a political tactic around 2016.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Shitposting",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Shitposting",
+        "date": ""
+      },
+      {
+        "title": "Shitpost (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/shitposting",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "site-reputation-abuse",
+    "term": "Site reputation abuse",
+    "aliases": [
+      "parasite SEO"
+    ],
+    "kind": "both",
+    "first_seen": "2024",
+    "coined_by": "",
+    "one_line": "Publishing low-value third-party pages on a trusted website to borrow its search ranking, such as casino reviews on a news or university site.",
+    "origin_note": "Google named it as a spam policy in March 2024; SEO practitioners commonly call the tactic parasite SEO.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "What web creators should know about our March 2024 core update and new spam policies",
+        "publisher": "Google Search Central Blog",
+        "url": "https://developers.google.com/search/blog/2024/03/core-update-spam-policies",
+        "date": "2024-03-05"
+      },
+      {
+        "title": "Spam policies for Google web search",
+        "publisher": "Google Search Central",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "slopper",
+    "term": "Slopper",
+    "aliases": [
+      "sloppers"
+    ],
+    "kind": "ai",
+    "first_seen": "2025",
+    "coined_by": "",
+    "one_line": "A mocking label for someone who relies on AI chatbots for everything, from what to order to how to reply to a text.",
+    "origin_note": "Spread on TikTok in mid-2025 and was picked up by Rusty Foster's Today in Tabs and Futurism.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "People Are Becoming \"Sloppers\" Who Have to Ask AI Before They Do Anything",
+        "publisher": "Futurism",
+        "url": "https://futurism.com/sloppers-ask-ai-everything",
+        "date": "2025-07-29"
+      }
+    ]
+  },
+  {
+    "slug": "slopsquatting",
+    "term": "Slopsquatting",
+    "aliases": [],
+    "kind": "ai",
+    "first_seen": "2025",
+    "coined_by": "Seth Larson",
+    "one_line": "Registering software package names that AI coding tools hallucinate, so that developers who trust the suggestion install malware.",
+    "origin_note": "Coined in April 2025 by Python Software Foundation security developer Seth Larson and popularized by Andrew Nesbitt; a play on typosquatting.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Slopsquatting",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Slopsquatting",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "sludge-content",
+    "term": "Sludge content",
+    "aliases": [
+      "content sludge",
+      "overstimulation videos"
+    ],
+    "kind": "both",
+    "first_seen": "2020s",
+    "coined_by": "",
+    "one_line": "Split-screen short videos that stack unrelated clips, like Family Guy over Subway Surfers gameplay, to hold attention.",
+    "origin_note": "Grew out of tricks to evade copyright detection on YouTube compilations and became a TikTok and Shorts staple; raised concerns about very young viewers.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Sludge content",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sludge_content",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "sock-puppet",
+    "term": "Sock puppet",
+    "aliases": [
+      "sockpuppet",
+      "sock puppet account",
+      "sock"
+    ],
+    "kind": "both",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "A fake online identity used to praise yourself, attack critics or fake a crowd.",
+    "origin_note": "Long-standing internet slang; also used in stealth marketing and as a building block of troll farms and astroturfing.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "Sock puppet account",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sockpuppet_account",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "spam-blog",
+    "term": "Spam blog",
+    "aliases": [
+      "splog",
+      "auto blog",
+      "autoblog"
+    ],
+    "kind": "both",
+    "first_seen": "2005",
+    "coined_by": "",
+    "one_line": "A fake blog filled with scraped or junk text, made only to boost other sites' search rankings or serve ads.",
+    "origin_note": "The word 'splog' was popularized around August 2005 when Mark Cuban used it publicly.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Spam blog",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Spam_blog",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "stochastic-parrot",
+    "term": "Stochastic parrot",
+    "aliases": [
+      "stochastic parrots"
+    ],
+    "kind": "ai",
+    "first_seen": "2021",
+    "coined_by": "Emily M. Bender, Timnit Gebru and co-authors",
+    "one_line": "A description of large language models as systems that stitch together plausible language without understanding what it means.",
+    "origin_note": "From the 2021 paper 'On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?' presented at ACM FAccT; the American Dialect Society nominated it as 2023's AI-related word of the year.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Stochastic parrot",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_parrot",
+        "date": ""
+      },
+      {
+        "title": "Stochastic Parrots (paper and media coverage)",
+        "publisher": "Emily M. Bender, University of Washington",
+        "url": "https://faculty.washington.edu/ebender/stochasticparrots/",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "troll-farm",
+    "term": "Troll farm",
+    "aliases": [
+      "troll factory"
+    ],
+    "kind": "both",
+    "first_seen": "2010s",
+    "coined_by": "",
+    "one_line": "An organized group paid to post propaganda and harassment using fake or coordinated accounts.",
+    "origin_note": "Best known from Russia's Internet Research Agency and its interference around the 2016 US election; Freedom House found 30 governments paying such 'keyboard armies' in 2017.",
+    "sensitivity": "political",
+    "sources": [
+      {
+        "title": "Troll farm",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Troll_farm",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "vagueposting",
+    "term": "Vagueposting",
+    "aliases": [
+      "vaguebooking",
+      "vaguebook"
+    ],
+    "kind": "human",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "Posting something cryptic and context-free, like 'some people, honestly', to fish for concern or questions.",
+    "origin_note": "'Vaguebooking' was coined for deliberately vague Facebook statuses; 'vagueposting' is the platform-neutral form.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Vagueposting",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Vagueposting",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "slug": "word-salad",
+    "term": "Word salad",
+    "aliases": [],
+    "kind": "both",
+    "first_seen": "",
+    "coined_by": "",
+    "one_line": "A string of words and phrases that sound like language but add up to no clear meaning.",
+    "origin_note": "Originally a psychiatric term for disorganized speech; in everyday use it is a put-down for empty, incoherent answers, and is now often applied to rambling AI text.",
+    "sensitivity": "",
+    "sources": [
+      {
+        "title": "Word salad",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Word_salad",
+        "date": ""
+      },
+      {
+        "title": "Word salad (definition)",
+        "publisher": "Merriam-Webster",
+        "url": "https://www.merriam-webster.com/dictionary/word%20salad",
+        "date": ""
+      }
+    ]
+  }
+]
