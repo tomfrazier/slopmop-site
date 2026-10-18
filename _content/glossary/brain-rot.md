@@ -2,7 +2,7 @@
 {
   "title": "Brain rot",
   "seo_title": "Brain rot: meaning, origin and the debate · Slop Mop",
-  "description": "Brain rot is slang for the feeling that hours of trivial online content are dulling your mind. Oxford's 2024 Word of the Year, with roots in Thoreau's Walden.",
+  "description": "Brain rot is slang for the feeling that trivial online content is dulling your mind. Oxford's 2024 Word of the Year, first recorded in Thoreau's Walden.",
   "summary": "Slang for the supposed dulling of your mind from too much trivial online content. Oxford's 2024 Word of the Year.",
   "updated": "2026-10-18",
   "term": "Brain rot",
@@ -45,7 +45,7 @@ I tracked my phone use for a week: 19 hours, 11 of them in one app. I moved it o
 How the word tends to turn up in conversation:
 
 :::example
-"I spent the whole train ride watching cooking videos I'll never make. My brain is rotting." Said with a laugh, and meant as a mild complaint about a habit, not a health claim.
+"I spent the whole train ride watching cooking videos I'll never make. My brain is rotting." Said with a laugh, as a mild complaint about a habit.
 :::
 
 ## The criticism

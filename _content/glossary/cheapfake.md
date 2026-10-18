@@ -2,7 +2,7 @@
 {
   "title": "Cheapfake",
   "seo_title": "Cheapfake: low-tech media manipulation explained · Slop Mop",
-  "description": "A cheapfake is misleading media made with simple edits: cropping, slowing, splicing or a false caption. No AI needed. What it means and how it differs from a deepfake.",
+  "description": "A cheapfake is misleading media made with simple edits: a crop, a slowed clip or a false caption. No AI needed. How it differs from a deepfake.",
   "summary": "Misleading media made with simple tools: a crop, a slowed clip or a false caption. No AI required.",
   "updated": "2026-10-18",
   "term": "Cheapfake",

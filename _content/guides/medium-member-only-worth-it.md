@@ -25,7 +25,7 @@ Medium lets writers in its Partner Program put stories behind a paywall. Those a
 
 Non-members see a preview of a member-only story and can read a limited number in full each month. Medium has changed the allowance more than once, so check the count shown on the story itself rather than relying on a number from an old blog post.
 
-One policy point is useful for readers. Medium's [AI content policy](https://help.medium.com/hc/en-us/articles/22576852947223-Artificial-Intelligence-AI-content-policy) says stories with AI-generated writing, disclosed or not, can't be paywalled in the Partner Program. That's a rule, not a guarantee: it depends on enforcement, and it says nothing about whether a human-written paywalled story is any good.
+One policy point is useful for readers. Medium's [AI content policy](https://help.medium.com/hc/en-us/articles/22576852947223-Artificial-Intelligence-AI-content-policy) says stories with AI-generated writing, disclosed or not, can't be paywalled in the Partner Program. The rule depends on enforcement, and it says nothing about whether a human-written paywalled story is any good.
 
 ## Why the preview matters more on Medium
 
@@ -79,7 +79,7 @@ A 3-minute member-only story is mostly preview. A 25-minute one on a simple ques
 ## Things that don't tell you much
 
 - **The star.** It means the story is paywalled, not that it's better. Plenty of excellent stories on Medium are free.
-- **Clap counts.** Members clap more freely than they read, and early stories have had no time to collect any.
+- **Clap counts.** One reader can clap many times for one story, and new stories have had no time to collect any.
 - **Publication logos.** Standards vary by publication and by editor.
 
 ## If you're a member

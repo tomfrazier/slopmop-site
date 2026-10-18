@@ -1,8 +1,8 @@
 ---
 {
   "title": "Counterfeit people",
-  "seo_title": "Counterfeit people: Dennett's term for fake humans · Slop Mop",
-  "description": "Counterfeit people are AI systems or synthetic profiles passed off as real humans without disclosure. Daniel Dennett's 2023 term, his argument and its critics.",
+  "seo_title": "Counterfeit people: Dennett's term explained · Slop Mop",
+  "description": "Counterfeit people are AI systems or fake profiles passed off as real humans. Philosopher Daniel Dennett's 2023 term, his argument and its critics.",
   "summary": "AI systems or synthetic profiles presented as real humans without saying so. Philosopher Daniel Dennett's 2023 term.",
   "updated": "2026-10-18",
   "term": "Counterfeit people",

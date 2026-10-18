@@ -1,8 +1,8 @@
 ---
 {
   "title": "Liar's dividend",
-  "seo_title": "Liar's dividend: when real evidence is called fake · Slop Mop",
-  "description": "The liar's dividend is the benefit someone gets by calling genuine evidence fake, made easier now that deepfakes exist. Who coined it and what research shows.",
+  "seo_title": "Liar's dividend: calling real evidence fake · Slop Mop",
+  "description": "The liar's dividend is the benefit of calling genuine evidence fake, easier now deepfakes exist. Who coined it and what the research has found.",
   "summary": "The benefit someone gets from dismissing genuine evidence as fake, now that everyone knows fakes are possible.",
   "updated": "2026-10-18",
   "term": "Liar's dividend",

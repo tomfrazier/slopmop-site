@@ -25,7 +25,7 @@
 
 Broligarchy blends "bro" and "oligarchy". Cambridge Dictionary, which added it in August 2025, defines it as "a small group of men, especially men owning or involved in a technology business, who are extremely rich and powerful, and who have or want political influence." A member is a broligarch.
 
-It's a critical term. People who use it are making an argument: that a handful of technology executives have gained too much influence over politics and public life, and that the platforms they own give them unusual power over what people see. People who reject that argument tend to reject the word too. Read it as political rhetoric, a label with a point of view, and not as a neutral description of who governs.
+It's a critical term. People who use it are making an argument: that a handful of technology executives have gained too much influence over politics and public life, and that the platforms they own give them unusual power over what people see. People who reject that argument tend to reject the word too. Read it as political rhetoric: a label with a point of view about who holds power, which plenty of people dispute.
 
 ## Where it came from
 
@@ -35,7 +35,7 @@ The current political sense was popularised by the British journalist Carole Cad
 
 ## Examples
 
-The word turns up in three main settings. These are our own illustrations:
+Three typical ways the word turns up, in our own illustrations:
 
 :::example
 **Commentary:** "The broligarchy now owns the platforms where the election will be argued about." An opinion writer using the term to make a case.
@@ -51,7 +51,7 @@ The second form is the one to use if you want to describe the debate without tak
 
 ## The criticism
 
-Critics say the word does more work as an insult than as analysis. Writing in the Daily Sceptic in December 2024, James Alexander argued that "bro" turns an argument about power into one about the sex of the people holding it, and that calling them oligarchs would be the more serious charge. He also urged critics to stop lumping everything together under one label. Some dispute Cadwalladr's claim to have coined it, given the older uses.
+Critics say the word does more work as an insult than as analysis. Writing in the Daily Sceptic in December 2024, James Alexander argued that "bro" turns an argument about power into one about the sex of the people holding it, and that calling them oligarchs would be the more serious charge. He also urged critics on the left to stop lumping everything together. Some dispute Cadwalladr's claim to have coined it, given the older uses.
 
 Cadwalladr's defence, as quoted in the same piece, is that "to name is to understand": a short, memorable word helps people see a pattern she thinks deserves attention.
 

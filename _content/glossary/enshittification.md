@@ -2,7 +2,7 @@
 {
   "title": "Enshittification",
   "seo_title": "Enshittification: Cory Doctorow's term explained · Slop Mop",
-  "description": "Enshittification is Cory Doctorow's term for how platforms decay: good to users, then to business customers, then only to themselves. Origin, examples, criticism.",
+  "description": "Cory Doctorow's term for how platforms decay: good to users, then to business customers, then only to themselves. Its origin, examples and criticism.",
   "summary": "Cory Doctorow's term for platforms that serve users, then advertisers and sellers, then only themselves, getting worse at each step.",
   "updated": "2026-10-18",
   "term": "Enshittification",

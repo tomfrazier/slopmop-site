@@ -1,8 +1,8 @@
 ---
 {
   "title": "Deepfake",
-  "seo_title": "Deepfake: meaning, origin and how to think about it · Slop Mop",
-  "description": "A deepfake is realistic audio, video or imagery generated or altered with AI, usually to show someone saying or doing something they didn't. Origin and examples.",
+  "seo_title": "Deepfake: meaning, origin and examples · Slop Mop",
+  "description": "A deepfake is realistic audio, video or imagery made or altered with AI, usually showing someone doing what they didn't. Origin, examples and limits.",
   "summary": "Realistic fake audio, video or images made with AI, usually showing a real person saying or doing something they didn't.",
   "updated": "2026-10-18",
   "term": "Deepfake",

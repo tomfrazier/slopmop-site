@@ -79,7 +79,7 @@ LinkedIn says your feed includes posts, comments and reactions from your network
 1. Click the **More** icon (three dots) at the top right of the post. In the app, tap the three dots to the right of the post.
 2. Choose **Not interested**.
 
-This removes the post and asks the feed to show fewer similar ones ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/13325)). The author isn't told. Where LinkedIn asks for a reason, give one; it's the only way to tell the feed what you disliked about the post.
+This removes the post and asks the feed to show fewer similar ones ([LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/13325)). The author isn't told. Where LinkedIn asks for a reason, give one, so the feed learns what you disliked about the post.
 
 ### 3. Unfollow or hide the repeat offenders
 

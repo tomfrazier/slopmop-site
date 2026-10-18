@@ -1,7 +1,7 @@
 ---
 {
   "title": "Dead internet theory",
-  "seo_title": "Dead internet theory: what it claims and what's true · Slop Mop",
+  "seo_title": "Dead internet theory: the claims and the facts · Slop Mop",
   "description": "Dead internet theory claims most online activity is bots and AI, not people. Where it came from, the parts with evidence behind them and the parts without.",
   "summary": "The theory that bots and AI now produce most of what you see online. Part conspiracy theory, part real worry.",
   "updated": "2026-10-18",
