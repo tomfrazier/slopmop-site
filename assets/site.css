@@ -759,3 +759,7 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
 .ask-brief { padding-top: var(--space-6); }
 .ask-brief h1 { margin: 0 0 var(--space-6); font: var(--weight-bold) clamp(36px, 5vw, 56px)/1.1 var(--font-display); letter-spacing: -0.02em; color: var(--text-body); }
 .ask-brief li + li { margin-top: 6px; }
+
+/* hero: X and Medium brand in ink (--text-body), so they flip to light text in dark mode; their logo tile flips too,
+   so the knocked-out white logo goes back to black there */
+[data-theme="dark"] .net-word[data-ink] .net-logo img { filter: none; }

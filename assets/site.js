@@ -171,7 +171,7 @@
       i = order.indexOf(net);
       chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
       word.classList.add("swap");
-      setTimeout(function () { wordText.textContent = chip.getAttribute("data-label"); logo.src = chip.getAttribute("data-logo"); word.style.setProperty("--c", chip.getAttribute("data-color")); word.classList.remove("swap"); }, reduceMotion ? 0 : 200);
+      setTimeout(function () { wordText.textContent = chip.getAttribute("data-label"); logo.src = chip.getAttribute("data-logo"); word.style.setProperty("--c", chip.getAttribute("data-color")); word.toggleAttribute("data-ink", chip.hasAttribute("data-ink")); word.classList.remove("swap"); }, reduceMotion ? 0 : 200);
       document.dispatchEvent(new CustomEvent("slopmop:network", { detail: { net: net } }));
       if (user) stop();
     }
