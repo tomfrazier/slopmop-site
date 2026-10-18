@@ -317,6 +317,11 @@ def hub_page(family, title, lede, inner, desc, depth=1, extra_ld=None, visual=""
 
 
 # ---------------------------------------------------------------- glossary
+def alias_page(s, p):
+    """Whether an alias gets its own forwarding address: not for acronyms (/glossary/mad/ would mislead) or clashes."""
+    return len(s) > 3 and s != p["slug"] and not os.path.exists(f"{CONTENT}/glossary/{s}.md")
+
+
 TELLS = sorted(LIVE_PAGES["patterns"], key=lambda p: p.get("order", 99))
 
 
@@ -355,7 +360,7 @@ def glossary():
         # aliases get their own short address that forwards to the term, so "slopmop.lol/glossary/ai-dar" works too
         for a in aka:
             s = slugify(a)
-            if s and s != p["slug"] and not os.path.exists(f"{CONTENT}/glossary/{s}.md"):
+            if alias_page(s, p):
                 target = SITE + p["path"]
                 write(f"glossary/{s}/index.html", f'<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8"><title>{esc(a)} · Slop Mop glossary</title>'
                       f'<link rel="canonical" href="{target}"><meta name="robots" content="noindex, follow">'
@@ -582,7 +587,7 @@ def clean_stale():
     for f in FAMILIES:
         keep = {p["path"] for p in LIVE_PAGES[f]}
         if f == "glossary":
-            keep |= {f"glossary/{slugify(a)}/" for p in LIVE_PAGES[f] for a in p.get("aliases") or []}
+            keep |= {f"glossary/{slugify(a)}/" for p in LIVE_PAGES[f] for a in p.get("aliases") or [] if alias_page(slugify(a), p)}
         if f == "guides":
             keep |= {f"guides/{p['network']}/" for p in LIVE_PAGES[f]}
         for idx in glob.glob(f"{ROOT}/{f}/**/index.html", recursive=True):

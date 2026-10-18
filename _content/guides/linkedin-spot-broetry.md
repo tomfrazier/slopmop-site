@@ -9,17 +9,40 @@
   "publish_date": "2026-11-24",
   "verified": "2026-10-18",
   "minutes": 6,
-  "related": ["/patterns/scroll-stopper/", "/patterns/too-tidy-story/", "/patterns/flowery-prose/", "/patterns/empty-praise/", "/for/linkedin/", "/for/founders/"],
+  "related": [
+    "/glossary/broetry/",
+    "/patterns/scroll-stopper/",
+    "/patterns/too-tidy-story/",
+    "/patterns/flowery-prose/",
+    "/patterns/empty-praise/",
+    "/for/linkedin/",
+    "/for/founders/"
+  ],
   "sources": [
-    {"title": "Hide content in your feed", "publisher": "LinkedIn Help", "url": "https://www.linkedin.com/help/linkedin/answer/13325", "date": ""},
-    {"title": "LinkedIn relevance - Optimizing the member experience", "publisher": "LinkedIn Help", "url": "https://www.linkedin.com/help/linkedin/answer/a1339724", "date": ""},
-    {"title": "Follow or unfollow people", "publisher": "LinkedIn Help", "url": "https://www.linkedin.com/help/linkedin/answer/72150", "date": ""}
+    {
+      "title": "Hide content in your feed",
+      "publisher": "LinkedIn Help",
+      "url": "https://www.linkedin.com/help/linkedin/answer/13325",
+      "date": ""
+    },
+    {
+      "title": "LinkedIn relevance - Optimizing the member experience",
+      "publisher": "LinkedIn Help",
+      "url": "https://www.linkedin.com/help/linkedin/answer/a1339724",
+      "date": ""
+    },
+    {
+      "title": "Follow or unfollow people",
+      "publisher": "LinkedIn Help",
+      "url": "https://www.linkedin.com/help/linkedin/answer/72150",
+      "date": ""
+    }
   ]
 }
 ---
 Broetry is the nickname for LinkedIn posts written as a column of one-sentence lines, usually telling a short story that ends in a business lesson. You can spot it from the preview: a hook that withholds something, line breaks after every sentence, and a "see more" that promises the payoff. If the visible lines contain no names, dates or numbers, the rest of the post almost never does either.
 
-## What broetry looks like
+## What [broetry](/glossary/broetry/) looks like
 
 The format has a fixed order. A dramatic opening line, a pause, a turn, a character, a lesson, and often an instruction to "read that again".
 
@@ -48,7 +71,7 @@ The slop version could be true. The problem is that nothing in it is checkable o
 
 ## What to look for
 
-Each habit on its own is common in ordinary writing. Broetry stacks most of them in one post.
+Each habit on its own is common in ordinary writing. [Broetry](/glossary/broetry/) stacks most of them in one post.
 
 ### One sentence per line
 
