@@ -37,8 +37,8 @@ OFFERS = [
 # When each page's content last changed (ISO dates). Shown in the footer, written to JSON-LD as dateModified and to
 # sitemap.xml as lastmod. Bump a page's date when its content changes, not for site-wide chrome like the footer.
 UPDATED = {
-    "": "2026-10-16", "how-it-works.html": "2026-10-14", "about.html": "2026-10-14", "help.html": "2026-10-14",
-    "privacy.html": "2026-10-14", "terms": "2026-10-14", "open-source": "2026-10-14", "contact.html": "2026-10-14",
+    "": "2026-10-19", "how-it-works.html": "2026-10-19", "about.html": "2026-10-14", "help.html": "2026-10-19",
+    "privacy.html": "2026-10-19", "terms": "2026-10-14", "open-source": "2026-10-14", "contact.html": "2026-10-14",
     "account-deleted": "2026-10-14",
     "ask-ai": "2026-10-17", "ask-ai.md": "2026-10-17", "llms.txt": "2026-10-18",
 }

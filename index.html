@@ -233,7 +233,7 @@
           "name": "What happens when it gets one wrong?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. Nothing that leads to you or the author is saved with it: it judges writing, not people. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word."
+            "text": "Click the mop beside the post and vote: No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed straight away, with or without an account. It also counts toward the community vote on that post: in full once you have an account, and as a hundredth of a vote while you're trying Slop Mop without one. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. Nothing that leads to you or the author is saved with it: it judges writing, not people. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word."
           }
         },
         {
@@ -242,6 +242,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Slop Mop is free for one feed, with 250 checks a day, for good. LinkedIn is the first feed it reads; X, Reddit and Facebook are coming soon. Slop Mop XL, coming soon, takes the mop to every feed, the sites you read and your inbox, for $5.99 a month or $59.99 a year. It renews automatically until you cancel, and you can cancel any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an account to vote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can vote from the first post you see, and your vote changes your own feed straight away. Without an account, each vote counts as a hundredth of a community vote, so a hundred trial votes add up to one. Free and XL accounts count the same. Signing up makes every vote that browser has already cast count in full, so the votes you made while trying Slop Mop stick. Votes still can't be traced to anyone: the server stores how much each vote counts, never which account cast it. If you've used Slop Mop since its early versions (0.x), every vote you've cast counts in full."
           }
         },
         {
@@ -282,7 +290,7 @@
       "@type": "WebPage",
       "@id": "https://slopmop.lol/#page",
       "url": "https://slopmop.lol/",
-      "dateModified": "2026-10-16",
+      "dateModified": "2026-10-19",
       "isPartOf": {
         "@id": "https://slopmop.lol/#website"
       }
@@ -687,8 +695,9 @@
     <details><summary>Is Slop Mop an AI detector?</summary><div class="a"><p>No. Slop Mop is a bad-writing detector. AI-assisted writing can be excellent and human writing can be spectacular slop, so it asks a more useful question: is this worth your attention?</p></div></details>
     <details><summary>How does it decide whether a post is slop?</summary><div class="a"><p>An AI model designed for calibrated decisions answers twelve questions about each post in parallel: nine tells of slop, two counter-signals (does it sound like a person, is it useful to readers) and how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is the third counter-signal.</p><p>The answers become one score out of 100. Counter-signals can only lower it. <a href="how-it-works.html">How the score adds up</a>.</p></div></details>
     <details><summary>Does it block, delete, mute or report posts?</summary><div class="a"><p>No. Slop Mop only changes what you see, locally in your browser. Hide folds a post into a strip you can reopen; Highlight leaves it visible and tints its mop icon yellow or red. Nothing is sent to LinkedIn and no author is ever reported.</p></div></details>
-    <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: Not sure, No, Maybe or Probably. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. Nothing that leads to you or the author is saved with it: it judges writing, not people. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
+    <details><summary>What happens when it gets one wrong?</summary><div class="a"><p>Click the mop beside the post and vote: No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed straight away, with or without an account. It also counts toward the community vote on that post: in full once you have an account, and as a hundredth of a vote while you're trying Slop Mop without one.</p><p>When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the posts it got wrong become training examples for tuning the tells and the score. Nothing that leads to you or the author is saved with it: it judges writing, not people. You can't vote on your own posts: the vote panel doesn't appear on them. It will be wrong sometimes. That's why it shows its working and gives you the last word.</p></div></details>
     <details><summary>Is it free?</summary><div class="a"><p>Slop Mop is free for one feed, with 250 checks a day, for good. LinkedIn is the first feed it reads; X, Reddit and Facebook are coming soon. Slop Mop XL, coming soon, takes the mop to every feed, the sites you read and your inbox, for $5.99 a month or $59.99 a year. It renews automatically until you cancel, and you can cancel any time.</p></div></details>
+    <details><summary>Do I need an account to vote?</summary><div class="a"><p>No. You can vote from the first post you see, and your vote changes your own feed straight away. Without an account, each vote counts as a hundredth of a community vote, so a hundred trial votes add up to one. Free and XL accounts count the same.</p><p>Signing up makes every vote that browser has already cast count in full, so the votes you made while trying Slop Mop stick. Votes still can't be traced to anyone: the server stores how much each vote counts, never which account cast it. If you've used Slop Mop since its early versions (0.x), every vote you've cast counts in full.</p></div></details>
     <details><summary>What leaves my browser?</summary><div class="a"><p>The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text, unless your vote disagrees with its verdict: then that post's text is kept for review and training. The <a href="privacy.html">privacy policy</a> lists everything it stores.</p></div></details>
     <details><summary>Does Slop Mop read my email?</summary><div class="a"><p>Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. We take every step we can to catch names written in the body of an email, but can't guarantee every one. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The <a href="privacy.html#slop-mop-for-email">privacy policy</a> has the details.</p></div></details>
     <details><summary>Can Slop Mop see who I email?</summary><div class="a"><p>No. Slop Mop never sees who an email is from or who it's to: the sender and recipient names and addresses are taken out in your mailbox before anything is sent. Slop Mop judges the writing in an email, never who sent it or who it's for.</p></div></details>

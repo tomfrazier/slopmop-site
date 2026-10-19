@@ -88,10 +88,10 @@ def how():
 <li><span><strong>The score, out of 100.</strong> Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</span></li>
 <li><span><strong>The verdict.</strong> Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
 <li><span><strong>The range bar.</strong> Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</span></li>
-<li><span><strong>Your vote.</strong> Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel. There's no vote on your own posts.</span></li>
+<li><span><strong>Your vote.</strong> Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel, with or without an account. There's no vote on your own posts.</span></li>
 <li><span><strong>The Slopprint.</strong> Nine tells of slop, one per spoke. The further out a point sits, the more of that tell the model found. <a href="#tells">All nine, with examples.</a></span></li>
 <li><span><strong>In its favour.</strong> Three counter-signals: sounds like a person, useful to readers and reader response. More blue means more evidence the post is worth reading. They can only lower the score, never raise it.</span></li>
-<li><span><strong>Community votes and checks today.</strong> How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left.</span></li>
+<li><span><strong>Community votes and checks today.</strong> How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left. Votes from accounts, free or XL, count in full. Votes from a browser trying Slop Mop without an account count as a hundredth each, until that browser signs up.</span></li>
 </ol>"""),
         sec("tells", f"""<h2>Nine tells of slop</h2>
 <p>The model asks nine separate questions about the writing, one per spoke of the Slopprint. The shape tells you <em>what kind</em> of slop a post is, not just how much. Six tells come from Graphite's research on AI tells, which compared human and model writing. The last three are feed habits we added ourselves.</p>
@@ -146,7 +146,8 @@ def how():
 <li><span><strong>Your threshold.</strong> The final score is compared with your sensitivity. Looks fine is left alone. In Highlight mode, the post's mop turns yellow for Possibly slop and red for Likely slop. In Hide mode, posts past your threshold fold away into a strip you can reopen.</span></li>
 </ol>"""),
         sec("wrong", f"""<h2>When it gets one wrong</h2>
-<p>Click the mop beside the post's “…” menu and vote No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the ones it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the panel has no vote on them. Try it on this folded post:</p>
+<p>Click the mop beside the post's “…” menu and vote No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the ones it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the panel has no vote on them.</p>
+<p>You don't need an account to vote. Before you sign up, each vote counts as a hundredth of a community vote; signing up makes every vote that browser has already cast count in full. Try it on this folded post:</p>
 <div class="demo">{island("VoteDemo")}</div>
 <p>If a bar looks badly off, email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a> with the post's link and which bar surprised you.</p>"""),
     ])
@@ -247,7 +248,8 @@ def help_page():
 <p>Click the strip's Show post button and the post unfolds in place. Click any post's mop to see what the model noticed.</p>
 <div class="demo">{island("FoldStrip", {"tone": "red", "density": "full", "label": "This post was hidden", "stats": {"today": 17, "week": 86, "month": 341, "total": 2904}, "style": {"width": "100%"}})}</div>
 <h3>When it gets one wrong</h3>
-<p>Click the mop icon beside the post's “…” menu and vote No, Maybe or Probably. Not sure clears your vote. Your vote overrides the score for your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the ones it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the panel has no vote on them. Three common cases:</p>
+<p>Click the mop icon beside the post's “…” menu and vote No, Maybe or Probably. Not sure clears your vote. Your vote overrides the score for your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the ones it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the panel has no vote on them.</p>
+<p>You can vote before you have an account. Your vote changes your feed straight away; in the community tally it counts as a hundredth of a vote until you sign up, and then every vote that browser has cast counts in full. Three common cases:</p>
 <div class="vote-exs">{"".join(island("VoteExample", ex, cls="") for ex in VOTE_EXAMPLES)}</div>
 <h3>Turning it off</h3>
 <p>Use the switch in the popup to pause it: off is a real off, with no scanning and no server calls. To remove it, right-click the mop and choose Remove (Chrome, Edge and Chromium browsers), or remove it from your browser's extensions settings (Firefox and Safari).</p>

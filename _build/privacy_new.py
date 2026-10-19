@@ -6,7 +6,7 @@ B = lambda t: f'<strong style="font-weight: var(--weight-semibold)">{t}</strong>
 M = lambda t: f'<code>{t}</code>'
 MAIL = '<a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>'
 VOTE_CHANGE_DATE = "14 October 2026"
-UPDATED = "last updated 14 october 2026"
+UPDATED = "last updated 19 october 2026"
 BACKUP_DAYS = 30
 
 
@@ -45,6 +45,7 @@ def privacy():
 <p>Your account is never attached to a post's score, and nothing about you is sent with the text being judged.</p>"""))
     S.append(("your-votes", "Your votes", f"""
 <p>When you vote No, Maybe or Probably on a judgment, the vote is stored under a one-way key made from your browser's install id. That key matches nothing else we store: not your account, not the browser records linked to your account, and not the check log. Only your own browser, by sending its install id, can find its votes again (to show your vote or change it). Nobody at Slop Mop can look up what you voted, and votes are only ever counted in aggregate. Votes are never shown to anyone or sent to the author. You can't vote on your own posts: the vote panel doesn't appear on them.</p>
+<p>Each vote also records whether the browser that cast it had an account (free or XL), because votes from a browser without an account count as a hundredth of a vote in the community tally. It never records which account. When a browser signs up, its earlier votes are marked as counting in full.</p>
 <p>{B("If you vote against the score, the post's text is kept with the vote's key,")} so our team can review it by hand and use it to improve the tells and the scoring. The text is the post's, not anything you wrote, and it carries nothing that leads to you or to its author: the author's name and profile are never stored, because Slop Mop judges writing, not people. Posts that nobody has reviewed within 90 days are deleted; reviewed posts are kept as anonymous training examples.</p>
 <p>Votes made before {VOTE_CHANGE_DATE} were stored under a key that our database could link to your browser and account. Each one moves to the new key the next time you vote, and deleting your account removes that link for all of them.</p>"""))
     S.append(("payments-for-slop-mop-xl", "Payments for Slop Mop XL", f"""
