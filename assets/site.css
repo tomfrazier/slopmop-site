@@ -765,5 +765,5 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
 [data-theme="dark"] .net-word[data-ink] .net-logo img { filter: none; }
 
 /* interactive tell figures (assets/figures/), each sized from inside its frame */
-.tell-fig { margin: var(--space-5) 0 var(--space-7); }
+.tell-fig { margin: var(--space-6) 0; max-width: 70ch; }
 .tell-fig iframe { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; background: transparent; }
