@@ -936,3 +936,6 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
 .calc-marked mark.c { background: var(--blue-100); color: var(--blue-700); border-radius: 3px; padding: 0 2px; }
 .calc-marked mark.f { background: var(--mop-200, #FFE9A8); color: var(--mop-900); border-radius: 3px; padding: 0 2px; }
 @media (max-width: 760px) { .calc-grid { grid-template-columns: 1fr; } .calc { padding: var(--space-6); } }
+/* interactive tell figures (assets/figures/), each sized from inside its frame */
+.tell-fig { margin: var(--space-6) 0; max-width: 70ch; }
+.tell-fig iframe { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; background: transparent; }
