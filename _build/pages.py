@@ -60,7 +60,7 @@ def kv(rows):
 
 def fig(slug, name):
     """An interactive isometric figure from assets/figures/, sized and themed from inside the frame."""
-    return (f'<figure class="tell-fig"><iframe src="assets/figures/{slug}.html" loading="lazy" '
+    return (f'<figure class="tell-fig"><iframe src="assets/figures/{slug}.html" loading="lazy" scrolling="no" '
             f'title="{name}: interactive figure. Drag across it, or use the arrow keys, to go from clean to sloppy."></iframe></figure>')
 
 
@@ -82,8 +82,8 @@ def how():
         ("Too-tidy story", "an anecdote that exists to prove the moral", "A junior employee once asked me a question I'll never forget. That day, I realised leadership is about listening.", "Last Tuesday our intern found a bug in the billing export that three of us had missed for a month. We now review exports in pairs."),
     ]
     tell_html = "".join(f"""<h3>{n} <span class="mono" style="font-weight:400">{d}</span></h3>
-{kv([('<span class="badge badge-soon" style="background:var(--mop-100);color:var(--mop-900);border-color:var(--mop-500)">slop</span>', s), ('<span class="badge badge-live">fine</span>', f)])}
-{fig(slug, re.sub("[“”]", "", n))}""" for (n, d, s, f), slug in zip(tells, ["scroll-stopper", "engagement-bait", "hype-words", "empty-praise", "no-catch-promises", "not-x-but-y", "flowery-prose", "stiff-phrasing", "too-tidy-story"]))
+{fig(slug, re.sub("[“”]", "", n))}
+{kv([('<span class="badge badge-soon" style="background:var(--mop-100);color:var(--mop-900);border-color:var(--mop-500)">slop</span>', s), ('<span class="badge badge-live">fine</span>', f)])}""" for (n, d, s, f), slug in zip(tells, ["scroll-stopper", "engagement-bait", "hype-words", "empty-praise", "no-catch-promises", "not-x-but-y", "flowery-prose", "stiff-phrasing", "too-tidy-story"]))
 
     demo = island("WhyCard", {"verdict": "likely", "score": 72, "mode": "hide", "tells": {"engagementBait": 0.81, "contrastFraming": 0.74, "formulaicHook": 0.55, "hypeMarketing": 0.3, "emptyEvaluation": 0.42},
                               "humanVoice": 0.18, "usefulness": 0.12, "readerResponse": 0.4, "community": {"probably": 6, "maybe": 0, "no": 1}, "checksToday": {"used": 41, "limit": 250}, "interactive": True})
