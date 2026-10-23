@@ -2,7 +2,7 @@
 
 > A browser extension that reads online content ahead of you and folds away low-value writing ("slop"), whether a person or an AI wrote it. Live on LinkedIn today, with X, Reddit, Facebook, Substack, Medium, websites and email coming soon. It shows why it made each call, and you can overrule it. Free for one feed. Website: https://slopmop.lol
 
-Last updated: 17 October 2026
+Last updated: 23 October 2026
 
 ## What it is
 
@@ -21,7 +21,7 @@ Slop Mop started in September 2026 as a test of a new kind of AI model: a calibr
 
 The timing lined up. The same week, Graphite published its "AI Tells" study, built on 100,000 articles: 10,000 human-written articles from before ChatGPT, and 90,000 rewrites of them by nine AI models. It found about 13,000 words and phrases that appear at least twice as often in AI writing as in human writing. That research became Slop Mop's starting point: six of its nine tells come from it, and the other three are feed habits added on top.
 
-Slop Mop brought three things together: solid research on what slop looks like, a model built to make calibrated calls, and a problem almost everyone online recognises. It launched as a free, open-source (MIT-licensed) Chrome extension and quickly drew attention, including coverage in The Register and a discussion on Hacker News. Artimovo has since turned it into a commercial product, tuned on more than 70 million tokens of real posts.
+Slop Mop brought three things together: solid research on what slop looks like, a model built to make calibrated calls, and a problem almost everyone online recognises. It launched as a free, open-source (MIT-licensed) Chrome extension and quickly drew attention, including coverage in The Register and a discussion on Hacker News. Artimovo has since turned it into a commercial product, tuned on more than 100 million tokens of real posts.
 
 ## Who makes it
 
@@ -65,9 +65,8 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 
 ## By the numbers
 
-- **70 million tokens** of posts read in the three weeks to 16 October 2026.
+- **100M+ tokens** of posts read so far.
 - **5-star rating** on the Chrome Web Store: https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho
-- **Hundreds of users** so far.
 
 ## Pricing
 
