@@ -87,7 +87,7 @@ PRESS = [("theregister", "The Register", "news", "https://www.theregister.com/ai
          ("ycombinator", "Hacker News", "discussion", "https://news.ycombinator.com/item?id=49819820"),
          ("producthunt", "Product Hunt", "launch", "https://www.producthunt.com/products/slop-mop"),
          ("googlechrome", "Chrome Web Store", "listing", STORE)]
-TOKENS = ("70M", "tokens of posts Slop Mop has read in the past three weeks", "2026-10-16")
+TOKENS = ("100M+", "tokens of posts Slop Mop has read so far", "2026-10-23")
 
 
 # (logo, name, live). Edge, Safari and Firefox are coming soon.
