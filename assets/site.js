@@ -535,3 +535,20 @@
   var q0 = new URLSearchParams(location.search).get("q");
   if (q0) { input.value = q0; apply(); }
 })();
+
+/* tell figures on How it works: each runs its own WebGL lamp, and browsers keep only a handful of WebGL
+   contexts alive (fewer on phones), dropping the oldest. Unload the figures far off screen so the ones
+   in view keep their lamps; the frame keeps its height, so nothing moves. */
+(function () {
+  var frames = document.querySelectorAll(".tell-fig iframe");
+  if (!frames.length || !("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      var f = e.target, src = f.getAttribute("data-src") || f.getAttribute("src");
+      f.setAttribute("data-src", src);
+      if (e.isIntersecting) { if (f.getAttribute("src") !== src) f.setAttribute("src", src); }
+      else if (f.getAttribute("src") !== "about:blank") f.setAttribute("src", "about:blank");
+    });
+  }, { rootMargin: "1200px 0px" });
+  frames.forEach(function (f) { io.observe(f); });
+})();
