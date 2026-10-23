@@ -1,0 +1,740 @@
+[
+  {
+    "slug": "slop-mop-vs-deslop",
+    "kind": "product",
+    "them": "DeSlop",
+    "them_url": "https://chromewebstore.google.com/detail/ceeofbgdnlfkbmejalfggfkigjmkdkib",
+    "what_it_does": "A Chrome extension by Pineido that scores LinkedIn posts for signs of AI writing, bots and engagement bait, then hides, collapses or dims them. It shows a \"Why hidden\" panel with the signals that fired, offers \"Show anyway\" and \"Always show this person\", and runs entirely on your device.",
+    "platforms": "Chrome extension; LinkedIn feed",
+    "price": "Free (all features); optional US$4.99 one-time supporter contribution",
+    "judges_quality": "partly: it scores posts mainly for signs of AI writing, though its listing says it also targets engagement bait and lets you train it with \"Add to slop\"",
+    "key_differences": [
+      "DeSlop's headline signal is \"signs of AI writing\"; Slop Mop says it is not an AI detector and judges whether the writing is worth reading, whoever wrote it.",
+      "DeSlop runs fully on-device and makes no network calls with your feed; Slop Mop sends post text (never names) to its scoring service and keeps only a hash and scores.",
+      "DeSlop is entirely free; Slop Mop is free for one feed with 250 checks a day, with a paid XL tier coming.",
+      "Both explain each decision and let you overrule it; DeSlop can skip 1st-degree connections and people you follow, while Slop Mop uses your vote to override the model.",
+      "Both are LinkedIn-only today; Slop Mop plans X, Reddit, Facebook, Substack, Medium, websites and email."
+    ],
+    "who_should_pick_them": "Pick DeSlop if you mainly want AI-looking posts hidden and want every bit of processing to stay inside your browser at no cost.",
+    "sources": [
+      {
+        "title": "DeSlop: AI Slop Filter for Your Feed, Hide AI Posts",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/ceeofbgdnlfkbmejalfggfkigjmkdkib",
+        "date": "2026-07-16"
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-cringe-guard",
+    "kind": "product",
+    "them": "Cringe Guard",
+    "them_url": "https://chromewebstore.google.com/detail/noaafhfibcojghlilpedjjmlflmpamia",
+    "what_it_does": "An open-source Chrome extension by Pankaj Tanwar that uses an LLM of your choice (with your own API key) to check LinkedIn posts in real time for \"cringe\" indicators such as excessive self-promotion, clickbait and irrelevant personal stories, and hides posts that fail. It also has mute words, custom filter rules and a stats dashboard.",
+    "platforms": "Chrome extension; LinkedIn feed",
+    "price": "Free and open source; you supply your own LLM API key (any model costs are yours)",
+    "judges_quality": "yes: it rates posts against low-value indicators such as clickbait and self-promotion, not on whether AI wrote them",
+    "key_differences": [
+      "Both judge low-value writing rather than authorship; Cringe Guard asks a general-purpose LLM you choose, while Slop Mop uses a model built for calibrated decisions scored against nine named tells and three counter-signals.",
+      "Cringe Guard needs your own API key; Slop Mop works on install with no key.",
+      "Slop Mop shows a score, verdict and per-tell \"Slopprint\" for each post and has a Highlight mode; Cringe Guard's listing describes hiding plus a filtered-posts dashboard.",
+      "Cringe Guard adds mute words and editable rules; Slop Mop offers three sensitivity levels and a per-post vote.",
+      "Cringe Guard's listing was last updated July 2025 (version 0.0.6); Slop Mop is under active development."
+    ],
+    "who_should_pick_them": "Pick Cringe Guard if you are happy to bring your own LLM API key and want to write your own filter rules.",
+    "sources": [
+      {
+        "title": "Cringe Guard: filter out cringe content on your LinkedIn feed using AI",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/noaafhfibcojghlilpedjjmlflmpamia",
+        "date": "2025-07-06"
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-pangram",
+    "kind": "product",
+    "them": "Pangram",
+    "them_url": "https://www.pangram.com/",
+    "what_it_does": "Pangram Labs makes an AI-text detector used by universities, publishers and businesses. Its Chrome extension labels posts \"Human\", \"AI-Assisted\" or \"AI\" as you scroll X, LinkedIn, Substack, Reddit and Medium, shows a human-vs-AI breakdown of your feed, and checks any highlighted text or Google Doc.",
+    "platforms": "Web app, Chrome and Firefox extensions, Google Docs, Gmail, API",
+    "price": "Free plan (individual scans); Individual US$20/month, Professional US$65/month; automatic feed scanning needs a paid plan",
+    "judges_quality": "no: it classifies whether text was written by AI, AI-assisted or a human",
+    "key_differences": [
+      "Pangram answers \"did AI write this?\"; Slop Mop answers \"is this worth reading?\", so a useful AI-assisted post can pass Slop Mop and a human-written bait post can fail it.",
+      "Pangram labels posts and leaves them in place; Slop Mop can fold low-value posts away or highlight them.",
+      "Pangram already covers X, LinkedIn, Substack, Reddit and Medium plus documents and email; Slop Mop is live on LinkedIn only for now.",
+      "Pangram publishes third-party accuracy studies for AI detection; Slop Mop shows its reasoning per post and lets your vote override it.",
+      "Automatic feed scanning is a paid Pangram feature; Slop Mop's free plan scores one feed automatically (250 checks a day)."
+    ],
+    "who_should_pick_them": "Pick Pangram if you need to know whether text was written by AI, for example in teaching, publishing or hiring.",
+    "sources": [
+      {
+        "title": "Pangram AI Detection",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/eakpippijmmohmdlpgcjnipolcgciaga",
+        "date": "2026-10-14"
+      },
+      {
+        "title": "Pricing | Pangram",
+        "publisher": "Pangram Labs",
+        "url": "https://www.pangram.com/pricing",
+        "date": "n.d."
+      },
+      {
+        "title": "Can I use Pangram AI detector with LinkedIn?",
+        "publisher": "Pangram Labs",
+        "url": "https://www.pangram.com/knowledge-hub/can-i-use-pangram-ai-detector-with-linkedin",
+        "date": "2026-07-24"
+      },
+      {
+        "title": "AI Detector: Free AI Checker for ChatGPT, Claude & Gemini",
+        "publisher": "Pangram Labs",
+        "url": "https://www.pangram.com/",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-gptzero",
+    "kind": "product",
+    "them": "GPTZero",
+    "them_url": "https://gptzero.me/",
+    "what_it_does": "GPTZero is an AI-content detector: paste or upload text and it gives an overall AI score and sentence-level highlighting, with plagiarism checking, writing feedback and Google Docs writing replay. It is widely used in education, and its Chrome extension offers AI detection on Gmail, Google Docs, Classroom and social media.",
+    "platforms": "Web app, Chrome extension, Google Docs add-on, LMS integrations, API",
+    "price": "Free tier; paid individual and team plans (prices shown on gptzero.me/pricing)",
+    "judges_quality": "partly: its core product detects AI authorship; it separately offers writing feedback and says it \"checks writing quality\"",
+    "key_differences": [
+      "GPTZero is built to tell AI writing from human writing; Slop Mop deliberately does not do that and judges value instead.",
+      "GPTZero is mostly a check-on-demand tool for documents and essays; Slop Mop works passively as you scroll a feed.",
+      "GPTZero gives an AI-probability score; Slop Mop gives a slop score with named tells and can fold the post away.",
+      "GPTZero targets educators, students and organisations; Slop Mop targets everyday readers of social feeds."
+    ],
+    "who_should_pick_them": "Pick GPTZero if you need to check essays or documents for AI authorship, especially in a school setting.",
+    "sources": [
+      {
+        "title": "AI Detector - Free AI Checker for ChatGPT, GPT-6 & Gemini",
+        "publisher": "GPTZero",
+        "url": "https://gptzero.me/",
+        "date": "n.d."
+      },
+      {
+        "title": "Pricing",
+        "publisher": "GPTZero",
+        "url": "https://gptzero.me/pricing",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-originality-ai",
+    "kind": "product",
+    "them": "Originality.ai",
+    "them_url": "https://originality.ai/",
+    "what_it_does": "Originality.ai is an AI-content and plagiarism checker aimed at publishers, content agencies and schools. Alongside AI detection it offers fact-checking, readability, grammar and a Content Quality Score, through a web app, Chrome/Firefox extension, Google Docs, Moodle and an API.",
+    "platforms": "Web app, Chrome and Firefox extensions, Google Docs, Moodle, API",
+    "price": "Pro from US$14.95/month (US$12.95/month billed yearly) for 2,000 credits (1 credit = 100 words); pay-as-you-go credits and Enterprise also available",
+    "judges_quality": "partly: AI and plagiarism detection is the core, with separate readability and Content Quality Score tools for writers and editors",
+    "key_differences": [
+      "Originality.ai checks content you submit, usually your own or your writers'; Slop Mop screens content other people post in your feed.",
+      "Originality.ai is credit-based by word count; Slop Mop's free plan gives 250 post checks a day.",
+      "Originality.ai flags AI authorship and plagiarism; Slop Mop ignores authorship and folds low-value posts.",
+      "Originality.ai's quality tools help editors improve writing; Slop Mop's verdicts help readers skip it."
+    ],
+    "who_should_pick_them": "Pick Originality.ai if you publish or commission content and need AI, plagiarism and quality checks before it goes live.",
+    "sources": [
+      {
+        "title": "AI Detector - Accurate AI Checker for ChatGPT, GPT-5 & Gemini",
+        "publisher": "Originality.ai",
+        "url": "https://originality.ai/",
+        "date": "n.d."
+      },
+      {
+        "title": "Pricing",
+        "publisher": "Originality.ai",
+        "url": "https://originality.ai/pricing",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-kagi-slopstop",
+    "kind": "product",
+    "them": "Kagi SlopStop",
+    "them_url": "https://help.kagi.com/kagi/features/slopstop.html",
+    "what_it_does": "SlopStop is a feature of Kagi, a paid ad-free search engine, launched in November 2025. Users report suspected AI slop in web, image and video results; Kagi reviews reports and flags pages, and downranks domains and channels found to be mostly AI-generated, with filters for AI images and videos.",
+    "platforms": "Kagi Search (web and apps)",
+    "price": "Part of Kagi Search: free trial of 100 searches, then Starter US$5/month, Professional US$10/month, Ultimate US$25/month",
+    "judges_quality": "partly: it targets mass-produced, deceptive AI content in search results; mixed sites are flagged per page rather than downranked",
+    "key_differences": [
+      "SlopStop works on search results; Slop Mop works on social feeds (LinkedIn today).",
+      "SlopStop is driven by community reports and Kagi review at the domain or channel level; Slop Mop scores each individual post as you scroll.",
+      "SlopStop focuses on AI-generated content; Slop Mop judges low-value writing whether a person or AI wrote it.",
+      "SlopStop downranks rather than removes; Slop Mop folds posts into a strip you can reopen, or just highlights them.",
+      "SlopStop needs a Kagi account; Slop Mop is a browser extension with a free tier."
+    ],
+    "who_should_pick_them": "Pick Kagi with SlopStop if your main problem is AI content farms clogging your search results.",
+    "sources": [
+      {
+        "title": "SlopStop | Kagi's Docs",
+        "publisher": "Kagi",
+        "url": "https://help.kagi.com/kagi/features/slopstop.html",
+        "date": "n.d."
+      },
+      {
+        "title": "Introducing SlopStop: Community-driven AI slop detection in Kagi Search",
+        "publisher": "Kagi Blog",
+        "url": "https://blog.kagi.com/slopstop",
+        "date": "2025-11-12"
+      },
+      {
+        "title": "Kagi Search Pricing and Plans",
+        "publisher": "Kagi",
+        "url": "https://kagi.com/pricing",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-duckduckgo-ai-image-filter",
+    "kind": "product",
+    "them": "DuckDuckGo \"Hide AI-Generated Images\"",
+    "them_url": "https://noai.duckduckgo.com/",
+    "what_it_does": "A DuckDuckGo search setting, added in July 2025, that hides AI-generated images from image results using curated open-source blocklists (including uBlock Origin's and uBlacklist's AI lists). DuckDuckGo's No-AI search (noai.duckduckgo.com) turns the filter on by default and removes its other AI features.",
+    "platforms": "DuckDuckGo search on any browser; DuckDuckGo apps",
+    "price": "Free",
+    "judges_quality": "no: it filters images from domains on AI blocklists; it does not assess writing",
+    "key_differences": [
+      "DuckDuckGo's filter covers image search results; Slop Mop covers the written posts in your social feed.",
+      "DuckDuckGo relies on blocklists of known AI image sources and says it will not catch everything; Slop Mop scores each post's text.",
+      "DuckDuckGo's filter is a simple on/off setting; Slop Mop offers Hide or Highlight, three sensitivity levels and per-post reasons.",
+      "Both are free to start; Slop Mop's free tier is limited to one feed and 250 checks a day."
+    ],
+    "who_should_pick_them": "Pick DuckDuckGo's filter if AI-generated images in search results are what bothers you.",
+    "sources": [
+      {
+        "title": "Sick of seeing AI images everywhere online? DuckDuckGo will let you filter out the slop from your search results",
+        "publisher": "TechRadar",
+        "url": "https://www.techradar.com/computing/artificial-intelligence/sick-of-seeing-ai-images-everywhere-online-duckduckgo-will-let-you-filter-out-the-slop-from-your-search-results",
+        "date": "2025-07-21"
+      },
+      {
+        "title": "DuckDuckGo No-AI: Private Search Without AI",
+        "publisher": "DuckDuckGo",
+        "url": "https://noai.duckduckgo.com/",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-slop-evader",
+    "kind": "product",
+    "them": "Slop Evader",
+    "them_url": "https://tegabrain.com/Slop-Evader",
+    "what_it_does": "A free, open-source Chrome and Firefox extension by artist Tega Brain that limits Google searches to pages published before ChatGPT's release on 30 November 2022. It adds Google's date-range filter to your query and includes shortcuts for Reddit, Quora, Stack Exchange, Mumsnet, Pinterest and YouTube.",
+    "platforms": "Chrome and Firefox extensions; Google search",
+    "price": "Free, open source",
+    "judges_quality": "no: it filters by publication date as a proxy for \"before generative AI\", not by reading the content",
+    "key_differences": [
+      "Slop Evader cuts off everything after November 2022, including good new material; Slop Mop reads current posts and keeps the useful ones.",
+      "Slop Evader changes search queries; Slop Mop works inside your social feed.",
+      "Slop Evader makes no judgment about individual pages; Slop Mop scores each post and explains its verdict.",
+      "Slop Evader is framed by its author as a protest and \"just a convenience\"; Slop Mop is a maintained commercial product with a free tier."
+    ],
+    "who_should_pick_them": "Pick Slop Evader if you want search results from before the generative-AI era and don't need anything recent.",
+    "sources": [
+      {
+        "title": "This extension limits Google searches to the pre-ChatGPT era",
+        "publisher": "The Register",
+        "url": "https://www.theregister.com/2025/12/01/pregpt_slop_evader_browser/",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Slop Evader",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/slop-evader/mlofdhcgaaimlpbjlhpfnpjfpebjpdpp",
+        "date": "2026-05-07"
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-ublock-origin",
+    "kind": "product",
+    "them": "uBlock Origin",
+    "them_url": "https://github.com/gorhill/uBlock",
+    "what_it_does": "A free, open-source content blocker by Raymond Hill that blocks ads, trackers and malicious domains using community filter lists, and can hide page elements with custom filters. On current Chrome it is offered as uBlock Origin Lite (Manifest V3); the full version is best supported on Firefox.",
+    "platforms": "Firefox (full uBO); Chrome, Edge and other browsers (uBO Lite)",
+    "price": "Free, open source",
+    "judges_quality": "no: it blocks by filter-list rules (URLs and page elements), not by reading what posts say",
+    "key_differences": [
+      "uBlock Origin removes ads, trackers and clutter; Slop Mop leaves ads alone and judges the organic posts between them.",
+      "uBlock Origin follows fixed filter rules; Slop Mop scores each post's writing with a model and explains why.",
+      "uBlock Origin works on nearly every site; Slop Mop is live on LinkedIn only for now.",
+      "They complement each other: many people could run both."
+    ],
+    "who_should_pick_them": "Pick uBlock Origin if you want ads, trackers and page clutter gone across the whole web.",
+    "sources": [
+      {
+        "title": "uBlock Origin Lite",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/ddkjiahejlhfcafbddmgiahcphecmpfh",
+        "date": "2026-10-12"
+      },
+      {
+        "title": "uBlock Origin - Free, open-source ad blocker extension (unofficial website)",
+        "publisher": "ublockorigin.com (unofficial, not affiliated)",
+        "url": "https://ublockorigin.com/",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-news-feed-eradicator",
+    "kind": "product",
+    "them": "News Feed Eradicator",
+    "them_url": "https://west.io/news-feed-eradicator/",
+    "what_it_does": "An open-source extension by Jordan West that removes the news feed on Facebook, Twitter/X and other social sites and replaces it with an inspirational quote. The rest of each site still works, so you can post and message without being pulled into scrolling.",
+    "platforms": "Chrome and Firefox extensions; several social networks",
+    "price": "Free, open source (MIT)",
+    "judges_quality": "no: it removes the whole feed regardless of content",
+    "key_differences": [
+      "News Feed Eradicator hides the entire feed; Slop Mop keeps the feed and folds only the posts it judges low-value.",
+      "News Feed Eradicator is about breaking the scrolling habit; Slop Mop is about making the scrolling you do worth it.",
+      "News Feed Eradicator needs no server; Slop Mop sends post text to a scoring service.",
+      "News Feed Eradicator covers several social sites now; Slop Mop is LinkedIn-only today."
+    ],
+    "who_should_pick_them": "Pick News Feed Eradicator if you want to stop reading feeds altogether.",
+    "sources": [
+      {
+        "title": "News Feed Eradicator",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/fjcldmjmjhkklehbacihaiopjklihlgg",
+        "date": "2026-07-16"
+      },
+      {
+        "title": "News Feed Eradicator",
+        "publisher": "Jordan West",
+        "url": "https://west.io/news-feed-eradicator/",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-unhook",
+    "kind": "product",
+    "them": "Unhook",
+    "them_url": "https://unhook.app/",
+    "what_it_does": "A browser extension that removes YouTube distractions: the homepage feed, recommended sidebar, Shorts, end-screen suggestions, comments and more, each toggled from a popup. It has over a million users on Chrome.",
+    "platforms": "Chrome, Firefox and Edge extensions; YouTube only",
+    "price": "Free; donations accepted",
+    "judges_quality": "no: it hides whole sections of YouTube by toggle, not by content",
+    "key_differences": [
+      "Unhook is for YouTube; Slop Mop is for LinkedIn today, with other feeds planned.",
+      "Unhook hides interface sections; Slop Mop reads individual posts and decides which to fold.",
+      "Unhook makes no network calls about what you see; Slop Mop scores post text on its server.",
+      "Unhook's controls are simple on/off switches; Slop Mop gives scores, reasons and sensitivity levels."
+    ],
+    "who_should_pick_them": "Pick Unhook if YouTube recommendations and Shorts are your main distraction.",
+    "sources": [
+      {
+        "title": "Unhook - Remove YouTube Recommended & Shorts",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/khncfooichmfjbepaaaebmommgaepoid",
+        "date": "n.d."
+      },
+      {
+        "title": "Unhook - Remove YouTube Recommended Videos and More",
+        "publisher": "Unhook",
+        "url": "https://unhook.app/",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-social-fixer",
+    "kind": "product",
+    "them": "Social Fixer",
+    "them_url": "https://socialfixer.com/",
+    "what_it_does": "A long-running free browser extension by Matt Kruse that customises the Facebook website: hide sponsored and political posts, filter the feed by keyword or author, hide posts you've read, and hide page sections. Filters can be written by hand or picked from shared filter subscriptions.",
+    "platforms": "Browser extension (Chrome, Firefox and others); Facebook desktop web only",
+    "price": "Free; donations accepted",
+    "judges_quality": "no: it filters by rules you set (keywords, authors, post types), not by judging the writing",
+    "key_differences": [
+      "Social Fixer is for Facebook; Slop Mop is live on LinkedIn, with Facebook listed as coming soon.",
+      "Social Fixer's filters match words, authors and post types; Slop Mop judges how a post is written.",
+      "Social Fixer offers many interface tweaks; Slop Mop does one job, scoring and folding posts.",
+      "The version shown on Social Fixer's site is 31.1.0 from September 2023; check it still works with today's Facebook."
+    ],
+    "who_should_pick_them": "Pick Social Fixer if you want detailed rule-based control over the Facebook website.",
+    "sources": [
+      {
+        "title": "Social Fixer for Facebook",
+        "publisher": "Social Fixer",
+        "url": "https://socialfixer.com/",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-sanebox",
+    "kind": "product",
+    "them": "SaneBox",
+    "them_url": "https://www.sanebox.com/",
+    "what_it_does": "An AI email assistant that works with any email provider and client, moving unimportant mail out of your inbox into separate folders. It adds a Daily Digest of unread low-priority mail, BlackHole for unwanted senders, one-click unsubscribe, follow-up reminders and snooze.",
+    "platforms": "Any email account (works server-side with IMAP, Gmail, Outlook and others); all devices",
+    "price": "Paid after a 14-day free trial; plans from about US$7/month (Snack), US$12 (Lunch), US$36 (Dinner) per third-party pricing trackers",
+    "judges_quality": "partly: it ranks email by importance to you (largely sender and behaviour signals), not by the quality of the writing",
+    "key_differences": [
+      "SaneBox works on email today; Slop Mop's Gmail and Outlook support is coming soon, and its live product is LinkedIn.",
+      "SaneBox sorts by who sent it and how you treat that sender; Slop Mop judges the text of each item.",
+      "SaneBox moves mail into folders on your mail server; Slop Mop only changes what you see in the browser and never deletes anything.",
+      "SaneBox has no free tier; Slop Mop's free plan covers one feed."
+    ],
+    "who_should_pick_them": "Pick SaneBox if an overloaded inbox, not a social feed, is what's costing you time.",
+    "sources": [
+      {
+        "title": "SaneBox | Email Management for Any Inbox",
+        "publisher": "SaneBox",
+        "url": "https://www.sanebox.com/",
+        "date": "n.d."
+      },
+      {
+        "title": "SaneBox Pricing 2026: Plans, Hidden Costs & Alternatives",
+        "publisher": "Toolradar",
+        "url": "https://toolradar.com/tools/sanebox/pricing",
+        "date": "2026-10"
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-unroll-me",
+    "kind": "product",
+    "them": "Unroll.Me",
+    "them_url": "https://unroll.me/",
+    "what_it_does": "A free email tool that lists your subscription emails so you can keep, block or \"roll up\" each one into a single daily digest. It is owned by NielsenIQ, and its data page says it uses information from your commercial emails for advertising, measurement and market-analysis products for its clients.",
+    "platforms": "Web and mobile app; major email providers",
+    "price": "Free (funded by commercial-email data use, as described on its data page)",
+    "judges_quality": "no: you decide sender by sender; it does not assess the content of the emails",
+    "key_differences": [
+      "Unroll.Me manages newsletter subscriptions by sender; Slop Mop judges individual pieces of writing.",
+      "Unroll.Me works on email today; Slop Mop's email support is coming soon.",
+      "Unroll.Me's free service is supported by sharing data about your commercial emails; Slop Mop says it never sends names and stores only a hash of post text with its scores.",
+      "Unroll.Me can block senders; Slop Mop never blocks, mutes or deletes anything."
+    ],
+    "who_should_pick_them": "Pick Unroll.Me if you want a quick free way to clear out newsletter subscriptions and are comfortable with its data terms.",
+    "sources": [
+      {
+        "title": "Block emails, instantly - Unroll.Me",
+        "publisher": "Unroll.Me",
+        "url": "https://unroll.me/",
+        "date": "n.d."
+      },
+      {
+        "title": "Your privacy is important - Unroll.Me",
+        "publisher": "Unroll.Me",
+        "url": "https://unroll.me/your-data",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-ad-blockers",
+    "kind": "category",
+    "them": "Ad blockers",
+    "what_it_does": "Ad blockers such as uBlock Origin stop ads, trackers and pop-ups from loading, using community-maintained filter lists, and can hide page elements you pick. They work across most websites in the browser where they are installed.",
+    "platforms": "Browser extensions; some apps and DNS services",
+    "price": "Usually free; some paid options",
+    "judges_quality": "no: they match known ad and tracker URLs and page elements, not the content of posts",
+    "key_differences": [
+      "Ad blockers remove paid placements; Slop Mop judges the organic posts that remain.",
+      "Ad blockers follow rules; Slop Mop scores each post's writing and explains why.",
+      "Ad blockers work across the web; Slop Mop is live on LinkedIn only for now.",
+      "The two do different jobs and can run side by side."
+    ],
+    "who_should_pick_them": "Pick an ad blocker if ads and trackers, not low-value posts, are your main annoyance.",
+    "sources": [
+      {
+        "title": "uBlock Origin Lite",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/ddkjiahejlhfcafbddmgiahcphecmpfh",
+        "date": "2026-10-12"
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-spam-filters",
+    "kind": "category",
+    "them": "Spam filters",
+    "what_it_does": "Spam filters, like Gmail's, automatically move unwanted or dangerous email (bulk mail, scams, phishing) out of the inbox, learning from what users report. They sit on the mail server and work across all your devices.",
+    "platforms": "Built into email services",
+    "price": "Free with most email services",
+    "judges_quality": "partly: they target unwanted and malicious mail, not dull or low-value writing from legitimate senders",
+    "key_differences": [
+      "Spam filters catch unsolicited and malicious messages; Slop Mop targets legitimate posts that waste your time.",
+      "Spam filters run on the server for every message; Slop Mop runs in your browser on the feed you choose.",
+      "Spam filters move items to a Spam folder; Slop Mop folds posts in place with one click to reopen.",
+      "Slop Mop's email support is coming soon and would sit on top of, not replace, your spam filter."
+    ],
+    "who_should_pick_them": "Rely on your spam filter for junk and scams; it is already on and free.",
+    "sources": [
+      {
+        "title": "Report spam in Gmail",
+        "publisher": "Google (Gmail Help)",
+        "url": "https://support.google.com/mail/answer/1366858?hl=en",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-ai-detectors",
+    "kind": "category",
+    "them": "AI detectors",
+    "what_it_does": "AI detectors such as Pangram, GPTZero and Originality.ai estimate whether text was written by a person, by AI or with AI help. They are used most in education, publishing and hiring, and some now label social posts as you scroll.",
+    "platforms": "Web apps, browser extensions, document and LMS integrations, APIs",
+    "price": "Usually a free tier, then paid plans (e.g. Originality.ai Pro from US$14.95/month, Pangram Individual US$20/month)",
+    "judges_quality": "no: they judge authorship, not whether the writing is worth reading",
+    "key_differences": [
+      "AI detectors ask \"who wrote this?\"; Slop Mop asks \"is it worth your time?\" and treats a useful AI-assisted post as fine.",
+      "AI detectors give a probability of AI authorship; Slop Mop gives a slop score with named tells and acts on it.",
+      "Independent research has found some detectors misjudge non-native English writing (Stanford, 2023); vendors report big accuracy gains since, and Slop Mop sidesteps the question by not judging authorship.",
+      "AI detectors are needed where authorship itself matters, such as coursework; Slop Mop is for everyday reading."
+    ],
+    "who_should_pick_them": "Pick an AI detector when knowing whether AI wrote something genuinely matters, such as in grading or editorial checks.",
+    "sources": [
+      {
+        "title": "Pangram AI Detection",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/eakpippijmmohmdlpgcjnipolcgciaga",
+        "date": "2026-10-14"
+      },
+      {
+        "title": "AI Detector - Free AI Checker for ChatGPT, GPT-6 & Gemini",
+        "publisher": "GPTZero",
+        "url": "https://gptzero.me/",
+        "date": "n.d."
+      },
+      {
+        "title": "AI-Detectors Biased Against Non-Native English Writers",
+        "publisher": "Stanford HAI",
+        "url": "https://hai.stanford.edu/news/ai-detectors-biased-against-non-native-english-writers",
+        "date": "2023-05-15"
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-keyword-filters",
+    "kind": "category",
+    "them": "Keyword and mute-word filters",
+    "what_it_does": "Keyword filters hide posts or articles that contain words or phrases you list. They are built into some platforms and readers (for example Mastodon's filters and Feedly's Mute Filters) and into many extensions.",
+    "platforms": "Built into some social apps and feed readers; browser extensions",
+    "price": "Often free; some are paid features (Feedly Mute Filters need a Pro+ or Enterprise plan)",
+    "judges_quality": "no: they match the words you choose, whatever the quality of the post",
+    "key_differences": [
+      "Keyword filters only catch words you think of in advance; Slop Mop recognises patterns such as bait and hype without a list.",
+      "Keyword filters can hide good posts that happen to use a muted word; Slop Mop weighs the whole post, including counter-signals like usefulness.",
+      "Keyword filters are predictable and fully under your control; Slop Mop explains its calls and lets you overrule them.",
+      "Slop Mop needs no word list to set up; keyword filters need you to maintain one."
+    ],
+    "who_should_pick_them": "Pick keyword filters if you want to avoid a specific topic, name or spoiler entirely.",
+    "sources": [
+      {
+        "title": "Dealing with unwanted content",
+        "publisher": "Mastodon documentation",
+        "url": "https://docs.joinmastodon.org/user/moderating/",
+        "date": "n.d."
+      },
+      {
+        "title": "How can I add/create a Mute Filter?",
+        "publisher": "Feedly Documentation",
+        "url": "https://docs.feedly.com/article/109-how-can-i-add-create-a-mute-filter",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-linkedin-feed-controls",
+    "kind": "category",
+    "them": "LinkedIn's own feed controls",
+    "what_it_does": "LinkedIn lets you tell it \"I don't want to see this post\" with a reason, report inappropriate content, follow or unfollow sources, and sort the desktop feed by most relevant or most recent. These signals shape what LinkedIn's algorithm shows you over time.",
+    "platforms": "LinkedIn web and apps",
+    "price": "Free",
+    "judges_quality": "partly: LinkedIn uses your feedback to tune its feed, but you have to flag each post yourself and its ranking is not shown",
+    "key_differences": [
+      "LinkedIn's controls are built in and need no install; Slop Mop is a Chromium browser extension.",
+      "With LinkedIn's controls you flag posts after you've read them; Slop Mop reads ahead and folds likely slop before you reach it.",
+      "LinkedIn's controls work on the mobile app too; Slop Mop works in desktop Chromium browsers.",
+      "LinkedIn does not explain how your feedback changes ranking; Slop Mop shows the score and reasons for each post."
+    ],
+    "who_should_pick_them": "Use LinkedIn's own controls if you only need to dismiss the occasional post and want to stay inside the app.",
+    "sources": [
+      {
+        "title": "Best practices to customize what you see on your LinkedIn feed",
+        "publisher": "LinkedIn Help",
+        "url": "https://www.linkedin.com/help/linkedin/answer/62570",
+        "date": "n.d."
+      },
+      {
+        "title": "Manage your LinkedIn feed preferences",
+        "publisher": "LinkedIn Help",
+        "url": "https://www.linkedin.com/help/linkedin/answer/72151",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-unfollowing-and-muting",
+    "kind": "category",
+    "them": "Unfollowing and muting people",
+    "what_it_does": "Unfollowing or muting a person or company removes all their posts from your feed without disconnecting from them. It is available on every major social platform, including LinkedIn.",
+    "platforms": "Built into social platforms",
+    "price": "Free",
+    "judges_quality": "no: it removes everything from a source, good or bad",
+    "key_differences": [
+      "Muting is all-or-nothing per person; Slop Mop judges each post, so you still see a contact's good posts.",
+      "Muting is a decision about a person; Slop Mop judges writing, not people.",
+      "Muting needs no extension and works on every device; Slop Mop runs in desktop Chromium browsers.",
+      "Muting is permanent until you undo it; Slop Mop's folded posts reopen with one click."
+    ],
+    "who_should_pick_them": "Unfollow or mute when a particular person or company consistently posts things you don't want.",
+    "sources": [
+      {
+        "title": "Best practices to customize what you see on your LinkedIn feed",
+        "publisher": "LinkedIn Help",
+        "url": "https://www.linkedin.com/help/linkedin/answer/62570",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-rss-readers",
+    "kind": "category",
+    "them": "RSS and feed readers",
+    "what_it_does": "Feed readers such as Feedly collect articles from sites, blogs and newsletters you choose into one chronological list, outside any platform's algorithm. Some add AI features such as topic tracking and mute filters.",
+    "platforms": "Web and mobile apps",
+    "price": "Free tiers common; paid plans for advanced features",
+    "judges_quality": "partly: you curate the sources; some paid readers add AI topic filtering, but most don't rate individual items",
+    "key_differences": [
+      "Feed readers replace the platform feed with sources you pick; Slop Mop keeps you on the platform and cleans up what it shows.",
+      "A feed reader only sees sources that publish feeds, which doesn't include your LinkedIn home feed; Slop Mop works there directly.",
+      "Feed readers filter by source (and sometimes keyword); Slop Mop judges the writing of each post.",
+      "Feed readers are a good long-term home for blogs and newsletters; Slop Mop plans to cover Substack, Medium and websites too."
+    ],
+    "who_should_pick_them": "Pick a feed reader if you'd rather follow a hand-picked set of blogs and newsletters than a social feed.",
+    "sources": [
+      {
+        "title": "How can I add/create a Mute Filter?",
+        "publisher": "Feedly Documentation",
+        "url": "https://docs.feedly.com/article/109-how-can-i-add-create-a-mute-filter",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-email-triage-tools",
+    "kind": "category",
+    "them": "Newsletter unsubscribe and email triage tools",
+    "what_it_does": "Tools such as SaneBox and Unroll.Me sort incoming mail by importance, roll newsletters into digests, and unsubscribe or block senders in one click. They act on whole senders or message categories.",
+    "platforms": "Email (connect to Gmail, Outlook, IMAP and others)",
+    "price": "Free (Unroll.Me, funded by data use) to paid subscriptions (SaneBox from about US$7/month)",
+    "judges_quality": "partly: they judge how important a sender is to you, not how good a particular email is",
+    "key_differences": [
+      "Email triage tools act on senders; Slop Mop acts on each piece of writing.",
+      "Email triage tools work today on email; Slop Mop's Gmail and Outlook support is coming soon.",
+      "Triage tools move, block or unsubscribe; Slop Mop never deletes, blocks or unsubscribes and only folds items in view.",
+      "Data handling varies widely across these tools; check each one's privacy terms."
+    ],
+    "who_should_pick_them": "Pick an email triage tool if newsletters and low-priority mail are swamping your inbox right now.",
+    "sources": [
+      {
+        "title": "SaneBox | Email Management for Any Inbox",
+        "publisher": "SaneBox",
+        "url": "https://www.sanebox.com/",
+        "date": "n.d."
+      },
+      {
+        "title": "Your privacy is important - Unroll.Me",
+        "publisher": "Unroll.Me",
+        "url": "https://unroll.me/your-data",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-feed-blockers",
+    "kind": "category",
+    "them": "Feed blockers and hiders",
+    "what_it_does": "Feed blockers such as News Feed Eradicator and Unhook remove a site's feed or recommendation panels entirely, so you can use the site without endless scrolling. Smaller LinkedIn-specific extensions hide promoted and suggested posts.",
+    "platforms": "Browser extensions",
+    "price": "Mostly free",
+    "judges_quality": "no: they hide whole feeds or post types regardless of content",
+    "key_differences": [
+      "Feed blockers remove the feed; Slop Mop keeps it and folds only the posts it judges low-value.",
+      "Feed blockers are aimed at screen-time and habit; Slop Mop is aimed at signal-to-noise.",
+      "Feed blockers make no judgments and need no server; Slop Mop scores posts on its service.",
+      "Feed blockers already cover YouTube, Facebook, X and others; Slop Mop is LinkedIn-only today."
+    ],
+    "who_should_pick_them": "Pick a feed blocker if you want to stop scrolling a site altogether.",
+    "sources": [
+      {
+        "title": "News Feed Eradicator",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/fjcldmjmjhkklehbacihaiopjklihlgg",
+        "date": "2026-07-16"
+      },
+      {
+        "title": "Unhook - Remove YouTube Recommended & Shorts",
+        "publisher": "Chrome Web Store",
+        "url": "https://chromewebstore.google.com/detail/khncfooichmfjbepaaaebmommgaepoid",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  },
+  {
+    "slug": "slop-mop-vs-reading-modes-and-summarisers",
+    "kind": "category",
+    "them": "Browser reading modes and AI summarisers",
+    "what_it_does": "Reading modes, such as Chrome's reading mode in the side panel, strip a page down to its text to reduce distractions. AI summarisers condense an article or thread into a few lines so you can decide whether to read it.",
+    "platforms": "Built into browsers; extensions and AI assistants",
+    "price": "Reading modes free; summarisers free to paid",
+    "judges_quality": "no: they reformat or shorten content you've already chosen to open; they don't decide whether it's worth reading",
+    "key_differences": [
+      "Reading modes clean up one page at a time; Slop Mop screens a whole feed before you open anything.",
+      "Summarisers condense text, including slop; Slop Mop folds the slop and leaves good posts as written.",
+      "Summarisers work on request, one item at a time; Slop Mop scores posts automatically as you scroll.",
+      "They can work together: Slop Mop decides what's worth reading, a reading mode makes it easier to read."
+    ],
+    "who_should_pick_them": "Use a reading mode or summariser when you've already found a long article worth reading and want it cleaner or shorter.",
+    "sources": [
+      {
+        "title": "Use reading mode in Chrome",
+        "publisher": "Google Chrome Help",
+        "url": "https://support.google.com/chrome/answer/14218344?hl=en",
+        "date": "n.d."
+      }
+    ],
+    "checked": "2026-10-18"
+  }
+]
