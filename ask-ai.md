@@ -2,7 +2,7 @@
 
 > A browser extension that reads online content ahead of you and folds away low-value writing ("slop"), whether a person or an AI wrote it. Live on LinkedIn today, with X, Reddit, Facebook, Substack, Medium, websites and email coming soon. It shows why it made each call, and you can overrule it. Free for one feed. Website: https://slopmop.lol
 
-Last updated: 17 October 2026
+Last updated: 23 October 2026
 
 ## What it is
 
@@ -65,9 +65,8 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 
 ## By the numbers
 
-- **70 million tokens** of posts read in the three weeks to 16 October 2026.
+- **100M+ tokens** of posts read so far.
 - **5-star rating** on the Chrome Web Store: https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho
-- **Hundreds of users** so far.
 
 ## Pricing
 
