@@ -30,7 +30,19 @@
 .mk-asset-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .mk-asset-stage.mk-dark { background: #16181A; }
 .mk-asset-stage.mk-mark img, .mk-asset-stage.mk-icon img { height: 88px; }
-.mk-asset-stage.mk-og, .mk-asset-stage.mk-sos { padding: var(--space-4); }
+.mk-asset-stage { overflow: hidden; }
+.mk-asset-stage.mk-og, .mk-asset-stage.mk-sos { height: auto; display: block; padding: var(--space-4); }
+.mk-asset-stage.mk-og img, .mk-asset-stage.mk-sos img { display: block; width: 100%; height: auto; max-height: none; aspect-ratio: 1200 / 630; }
+
+.mk-video { margin: var(--space-7) 0 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--surface-card); overflow: hidden; }
+.mk-video-stage { position: relative; background: var(--ink-900); cursor: pointer; }
+.mk-video-stage video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; max-width: 100%; }
+.mk-video-play { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; border: 0; border-radius: 50%; background: var(--mop-500); color: var(--ink-900); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow-raised); transition: opacity .15s ease; }
+.mk-video-play svg { width: 28px; height: 28px; margin-left: 4px; }
+.mk-video-play:focus-visible { outline: 3px solid var(--blue-500, #2F6FBF); outline-offset: 3px; }
+.mk-video.is-playing .mk-video-play { opacity: 0; pointer-events: none; }
+.mk-video .mk-asset-text { grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: var(--space-5); }
+.mk-video .mk-asset-dl { margin-top: 0; grid-row: 1 / span 2; grid-column: 2; }
 .mk-asset-text { padding: var(--space-6); display: grid; gap: 4px; align-content: start; }
 .mk-asset-text b { font: var(--type-heading); font-size: var(--text-md); color: var(--text-body); }
 .mk-asset-text span { font: var(--type-body-sm); color: var(--text-muted); }
@@ -40,4 +52,6 @@
   .mk-stats, .mk-assets { grid-template-columns: 1fr; }
   .mk-founder { grid-template-columns: 1fr; gap: var(--space-5); }
   .mk-quote figcaption .mk-copy { margin-left: 0; }
+  .mk-video .mk-asset-text { grid-template-columns: 1fr; }
+  .mk-video .mk-asset-dl { grid-row: auto; grid-column: auto; margin-top: var(--space-4); }
 }

@@ -425,8 +425,9 @@ def page(head, header, footer, scripts):
 <section id="assets">
 <h2>Logos and images</h2>
 <p>Use them as they are: don't rotate, recolor or outline the mop. Write the name as Slop Mop, two words. Everything below is in the <a href="press/slop-mop-press-kit.zip" download>press kit zip</a>.</p>
+<div class="mk-video"><div class="mk-video-stage"><video src="slopmop-video.mp4" poster="assets/video/tour-poster.jpg" playsinline preload="metadata" width="1920" height="1080" controlslist="noplaybackrate" disablepictureinpicture aria-label="Slop Mop product video, 50 seconds, with sound"></video><button class="mk-video-play" type="button" aria-label="Play the video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg></button></div><div class="mk-asset-text"><b>Product video</b><span>Fifty seconds on what Slop Mop does in a LinkedIn feed, with sound. 1080p MP4, 16 MB.</span><div class="mk-asset-dl"><a class="btn btn-secondary btn-sm" href="slopmop-video.mp4" download>{dl}MP4</a></div></div></div>
 <div class="mk-assets">{assets}</div>
-<div class="mk-row" style="margin-top:var(--space-7)"><a class="btn btn-primary btn-sm" href="press/slop-mop-press-kit.zip" download>{dl}Download everything (.zip)</a><a class="btn btn-secondary btn-sm" href="slopmop-video.mp4" download>{dl}Product video (MP4, 16 MB)</a></div>
+<div class="mk-row" style="margin-top:var(--space-7)"><a class="btn btn-primary btn-sm" href="press/slop-mop-press-kit.zip" download>{dl}Download everything (.zip)</a></div>
 <p class="mk-foot"><span class="mk-tbd">placeholder</span> Product screenshots of the fold strip and details panel in a real feed are still to come.</p>
 </section>
 <section id="coverage">
