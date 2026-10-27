@@ -1,0 +1,57 @@
+/* /media: the press page. Layout comes from site.css (page-head, page-grid, prose, kv, faq) and state-of-slop.css (sos-stats). */
+.mk-short { width: 360px; }
+.page-head .hero-ctas { display: flex; flex-wrap: wrap; gap: var(--space-5); }
+.mk-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: var(--space-5) 0; }
+.mk-foot { font: var(--type-body-sm); color: var(--text-faint) !important; }
+.mk-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mk-tbd { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border: 1px dashed var(--mop-500); border-radius: var(--radius-xs); background: var(--mop-100); color: var(--mop-900); font: var(--type-mono); font-size: var(--text-2xs); vertical-align: 1px; }
+
+.mk-quotes { display: grid; gap: var(--space-5); margin: var(--space-7) 0; }
+.mk-quote { margin: 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--surface-card); padding: var(--space-7); display: grid; gap: var(--space-6); }
+.mk-quote blockquote { margin: 0; }
+.mk-quote blockquote p { margin: 0; font: var(--weight-semibold) var(--text-lg)/1.4 var(--font-display); color: var(--text-body); text-wrap: pretty; }
+.mk-quote blockquote p::before { content: "\201C"; } .mk-quote blockquote p::after { content: "\201D"; }
+.mk-quote figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); }
+.mk-quote figcaption .mono { font-size: var(--text-2xs); color: var(--text-faint); }
+.mk-quote figcaption .mk-copy { margin-left: auto; }
+.mk-who { display: grid; }
+.mk-who b { font: var(--type-ui); color: var(--text-body); }
+.mk-who span { font: var(--type-body-sm); color: var(--text-faint); }
+
+.mk-founder { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: var(--space-8); align-items: start; margin: var(--space-7) 0; }
+.mk-headshot { display: grid; gap: var(--space-3); justify-items: start; }
+.mk-headshot img { width: 128px; height: 128px; border-radius: var(--radius-md); background: var(--paper-200); }
+.mk-headshot .mono { font-size: var(--text-2xs); color: var(--text-faint); }
+.mk-role { font: var(--type-body-sm); color: var(--text-faint) !important; margin-top: 2px; }
+
+.mk-assets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); margin: var(--space-7) 0 0; }
+.mk-asset { border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--surface-card); overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.mk-asset-stage { height: 160px; display: grid; place-items: center; padding: var(--space-6); border-bottom: 1px solid var(--border-hairline); background: #F7F8F9; }
+.mk-asset-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.mk-asset-stage.mk-dark { background: #16181A; }
+.mk-asset-stage.mk-mark img, .mk-asset-stage.mk-icon img { height: 88px; }
+.mk-asset-stage { overflow: hidden; }
+.mk-asset-stage.mk-og, .mk-asset-stage.mk-sos { height: auto; display: block; padding: var(--space-4); }
+.mk-asset-stage.mk-og img, .mk-asset-stage.mk-sos img { display: block; width: 100%; height: auto; max-height: none; aspect-ratio: 1200 / 630; }
+
+.mk-video { margin: var(--space-7) 0 0; border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--surface-card); overflow: hidden; }
+.mk-video-stage { position: relative; background: var(--ink-900); cursor: pointer; }
+.mk-video-stage video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; max-width: 100%; }
+.mk-video-play { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; border: 0; border-radius: 50%; background: var(--mop-500); color: var(--ink-900); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow-raised); transition: opacity .15s ease; }
+.mk-video-play svg { width: 28px; height: 28px; margin-left: 4px; }
+.mk-video-play:focus-visible { outline: 3px solid var(--blue-500, #2F6FBF); outline-offset: 3px; }
+.mk-video.is-playing .mk-video-play { opacity: 0; pointer-events: none; }
+.mk-video .mk-asset-text { grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: var(--space-5); }
+.mk-video .mk-asset-dl { margin-top: 0; grid-row: 1 / span 2; grid-column: 2; }
+.mk-asset-text { padding: var(--space-6); display: grid; gap: 4px; align-content: start; }
+.mk-asset-text b { font: var(--type-heading); font-size: var(--text-md); color: var(--text-body); }
+.mk-asset-text span { font: var(--type-body-sm); color: var(--text-muted); }
+.mk-asset-dl { display: flex; gap: var(--space-3); margin-top: var(--space-4); }
+
+@media (max-width: 640px) {
+  .mk-stats, .mk-assets { grid-template-columns: 1fr; }
+  .mk-founder { grid-template-columns: 1fr; gap: var(--space-5); }
+  .mk-quote figcaption .mk-copy { margin-left: 0; }
+  .mk-video .mk-asset-text { grid-template-columns: 1fr; }
+  .mk-video .mk-asset-dl { grid-row: auto; grid-column: auto; margin-top: var(--space-4); }
+}
