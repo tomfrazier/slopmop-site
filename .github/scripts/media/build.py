@@ -72,7 +72,8 @@ BIO_LONG = [
     "fund focused on Bitcoin and AI infrastructure.",
     "Tom is the author of The Idea Chose You: The Operator's Playbook for Founders in the AI Age (September 2026), which argues that AI has "
     "made building cheap and the old startup playbook obsolete. His work has been featured in the Wall Street Journal, and he has spoken at "
-    "DCD, the Pacific Telecommunications Council, Frost & Sullivan and Smart Cities Connect. He writes at tomfrazier.com.",
+    "DCD, the Pacific Telecommunications Council, Frost & Sullivan and Smart Cities Connect, and is a regular featured guest on podcasts. "
+    "He writes at tomfrazier.com.",
 ]
 TOPICS = [
     ("Slop and what it costs readers", "Why feeds fill up with writing nobody needed, and what one in five posts being slop means for anyone who reads for work."),
@@ -403,7 +404,7 @@ def page(head, header, footer, scripts):
 <p class="mk-foot">Headshots are approved for editorial use. Credit “Courtesy of Tom Frazier.”</p>
 <h3>Tom talks about</h3>
 <ul>{topics}</ul>
-<p>He has spoken at DCD, the Pacific Telecommunications Council, Frost &amp; Sullivan, Smart Cities Connect, Infra/STRUCTURE and e27, and appeared on The Jeff Bullas Show and SHI Innovation Heroes. For interviews, TV, podcasts and speaking, email <a href="mailto:{email}">{email}</a> or use <a href="{contact}" target="_blank" rel="noopener">tomfrazier.com/contact</a>.</p>
+<p>He has spoken at DCD, the Pacific Telecommunications Council, Frost &amp; Sullivan, Smart Cities Connect, Infra/STRUCTURE and e27, and is a regular featured guest on podcasts, with dozens of appearances. For interviews, TV, podcasts and speaking, email <a href="mailto:{email}">{email}</a> or use <a href="{contact}" target="_blank" rel="noopener">tomfrazier.com/contact</a>.</p>
 <div class="kv"><div><span class="k">Website</span><span class="v"><a href="{tom}" target="_blank" rel="noopener">tomfrazier.com</a></span></div><div><span class="k">LinkedIn</span><span class="v"><a href="{li}" target="_blank" rel="noopener">linkedin.com/in/tomfrazier</a></span></div><div><span class="k">X</span><span class="v"><a href="{x}" target="_blank" rel="noopener">@tomfrazier</a></span></div><div><span class="k">Book</span><span class="v"><a href="{book}" target="_blank" rel="noopener"><em>The Idea Chose You: The Operator's Playbook for Founders in the AI Age</em></a> (8 September 2026)</span></div></div>
 </section>
 <section id="artimovo">
