@@ -51,9 +51,17 @@ a:hover { text-decoration: underline; }
 .badge-paid { background: var(--mop-100); color: var(--mop-900); border-color: var(--mop-500); }
 
 /* ---------- announcement bar & nav ---------- */
-.ph-bar { display: block; background: var(--surface-inverse); color: var(--text-inverse); text-align: center; padding: 9px var(--space-6); font: var(--type-ui); }
-.ph-bar:hover { text-decoration: none; background: var(--ink-800); }
-.ph-bar b { color: var(--mop-300); font-weight: var(--weight-semibold); }
+.announce { display: flex; align-items: center; background: var(--mop-500); color: var(--text-on-accent); font: var(--type-ui); }
+.announce-link { flex: 1 1 auto; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 10px; padding: 9px var(--space-6) 9px max(var(--space-6), 40px); color: inherit; text-align: center; text-decoration: none !important; }
+.announce-mark { width: 18px; height: 18px; flex: none; }
+.announce-tag { font: var(--type-mono-label); font-size: var(--text-3xs); letter-spacing: var(--tracking-wide); text-transform: lowercase; padding: 2px 7px; border-radius: var(--radius-xs); border: 1px solid currentColor; }
+.announce-text { font-weight: var(--weight-medium); }
+.announce-cta { font-weight: var(--weight-semibold); text-decoration: underline; text-underline-offset: 3px; }
+.announce-cta::after { content: " \2192"; }
+.announce-link:hover .announce-cta { text-decoration-thickness: 2px; }
+.announce-link:focus-visible, .announce-x:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
+.announce-x { all: unset; border: 0; background: none; padding: 0; margin: 0; flex: none; width: 40px; align-self: stretch; text-align: center; font-size: 20px; line-height: 1; cursor: pointer; color: inherit; opacity: .7; }
+.announce-x:hover { opacity: 1; }
 .nav { position: sticky; top: 0; z-index: 50; background: var(--surface-card); border-bottom: 1px solid var(--border-hairline); }
 .nav .wrap { display: flex; align-items: center; gap: var(--space-8); height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 8px; color: var(--text-body); font: var(--weight-semibold) 20px/1 var(--font-display); letter-spacing: var(--tracking-tight); text-decoration: none !important; }
@@ -515,7 +523,7 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 @media (max-width: 560px) { .glance { grid-template-columns: 1fr; } .ph-visual { display: none; } }
 
 /* ---------- round 3 ---------- */
-.ph-bar[hidden] { display: none; }
+.announce[hidden] { display: none; }
 .plan { display: flex; flex-direction: column; }
 .plan .btn { margin-top: auto; }
 .plan ul { margin-bottom: var(--space-4); }

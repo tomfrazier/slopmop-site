@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#F7F8F9"/>
+<rect width="1200" height="8" fill="#F5B400"/>
+<text x="64" y="72" font-family="JetBrains Mono" font-size="19" fill="#6E757D">state of slop · 27 sep to 27 oct 2026 · linkedin · 124M tokens read</text>
+<text x="60" y="206" font-family="Archivo" font-weight="700" font-size="150" letter-spacing="-3" fill="#16181A">1 in 5</text>
+<text x="64" y="262" font-family="Archivo" font-weight="600" font-size="40" letter-spacing="-0.4" fill="#16181A">posts in your LinkedIn</text>
+<text x="64" y="310" font-family="Archivo" font-weight="600" font-size="40" letter-spacing="-0.4" fill="#16181A">feed is slop.*</text>
+<rect x="64" y="352" width="100" height="116" rx="10" fill="#FFFFFF" stroke="#E6E9EC" stroke-width="1.5"/>
+<circle cx="87" cy="378" r="9" fill="#E6E9EC"/>
+<path d="M104 378 h34" stroke="#E6E9EC" stroke-width="6" stroke-linecap="round"/>
+<path d="M78 408 h72" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M78 425 h62" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M78 442 h44" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<rect x="178" y="352" width="100" height="116" rx="10" fill="#FFFFFF" stroke="#E6E9EC" stroke-width="1.5"/>
+<circle cx="201" cy="378" r="9" fill="#E6E9EC"/>
+<path d="M218 378 h34" stroke="#E6E9EC" stroke-width="6" stroke-linecap="round"/>
+<path d="M192 408 h72" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M192 425 h62" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M192 442 h44" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<rect x="292" y="352" width="100" height="116" rx="10" fill="#FFFFFF" stroke="#E6E9EC" stroke-width="1.5"/>
+<circle cx="315" cy="378" r="9" fill="#E6E9EC"/>
+<path d="M332 378 h34" stroke="#E6E9EC" stroke-width="6" stroke-linecap="round"/>
+<path d="M306 408 h72" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M306 425 h62" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M306 442 h44" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<rect x="406" y="352" width="100" height="116" rx="10" fill="#FDF3D3" stroke="#F5B400" stroke-width="2"/>
+<rect x="420" y="368" width="56" height="22" rx="11" fill="#F5B400"/>
+<text x="448" y="384" text-anchor="middle" font-family="JetBrains Mono" font-weight="500" font-size="13" fill="#16181A">slop</text>
+<text x="420" y="418" font-family="Archivo" font-weight="500" font-size="14" fill="#7A5A00">folded</text>
+<path d="M420 440 h58" stroke="#E9C766" stroke-width="6" stroke-linecap="round"/>
+<rect x="520" y="352" width="100" height="116" rx="10" fill="#FFFFFF" stroke="#E6E9EC" stroke-width="1.5"/>
+<circle cx="543" cy="378" r="9" fill="#E6E9EC"/>
+<path d="M560 378 h34" stroke="#E6E9EC" stroke-width="6" stroke-linecap="round"/>
+<path d="M534 408 h72" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M534 425 h62" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<path d="M534 442 h44" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
+<text x="64" y="512" font-family="JetBrains Mono" font-size="15" fill="#6E757D">* Across Slop Mop readers, after LinkedIn&#x27;s own feed filtering.</text>
+<rect x="716" y="104" width="420" height="420" rx="16" fill="#FFFFFF" stroke="#E6E9EC"/>
+<text x="744" y="140" font-family="JetBrains Mono" font-size="16" fill="#6E757D">when slop peaks · pdt</text>
+<circle cx="920" cy="268" r="118" fill="#F7F8F9" stroke="#16181A" stroke-width="4"/>
+<line x1="920.0" y1="166.0" x2="920.0" y2="155.0" stroke="#16181A" stroke-width="4" stroke-linecap="round"/>
+<line x1="974.0" y1="174.5" x2="976.5" y2="170.1" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="1013.5" y1="214.0" x2="1017.9" y2="211.5" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="1022.0" y1="268.0" x2="1033.0" y2="268.0" stroke="#16181A" stroke-width="4" stroke-linecap="round"/>
+<line x1="1013.5" y1="322.0" x2="1017.9" y2="324.5" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="974.0" y1="361.5" x2="976.5" y2="365.9" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="920.0" y1="370.0" x2="920.0" y2="381.0" stroke="#16181A" stroke-width="4" stroke-linecap="round"/>
+<line x1="866.0" y1="361.5" x2="863.5" y2="365.9" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="826.5" y1="322.0" x2="822.1" y2="324.5" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="818.0" y1="268.0" x2="807.0" y2="268.0" stroke="#16181A" stroke-width="4" stroke-linecap="round"/>
+<line x1="826.5" y1="214.0" x2="822.1" y2="211.5" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<line x1="866.0" y1="174.5" x2="863.5" y2="170.1" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
+<text x="920.0" y="193.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">12</text>
+<text x="1002.0" y="275.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">3</text>
+<text x="920.0" y="357.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">6</text>
+<text x="838.0" y="275.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">9</text>
+<line x1="920" y1="268" x2="982.0" y2="268.0" stroke="#2F6FBF" stroke-width="10" stroke-linecap="round"/>
+<line x1="920" y1="268" x2="889.0" y2="214.3" stroke="#D93025" stroke-width="10" stroke-linecap="round"/>
+<circle cx="920" cy="268" r="9" fill="#16181A"/>
+<rect x="744" y="418" width="14" height="14" rx="3" fill="#D93025"/>
+<text x="768" y="431" font-family="Archivo" font-size="21" fill="#16181A"><tspan font-weight="700">Worst hour</tspan> 11pm PDT</text>
+<rect x="744" y="452" width="14" height="14" rx="3" fill="#2F6FBF"/>
+<text x="768" y="465" font-family="Archivo" font-size="21" fill="#16181A"><tspan font-weight="700">Best hour</tspan> 3pm PDT</text>
+<text x="744" y="499" font-family="Archivo" font-size="21" fill="#565C63">Late nights are the sloppiest.</text>
+<rect y="550" width="1200" height="80" fill="#16181A"/>
+<g transform="translate(58 567) scale(1.9)"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="#F5B400"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="#F5B400"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="#16181A" stroke-width="1.15" stroke-linecap="round"/></g>
+<text x="112" y="600" font-family="Archivo" font-weight="600" font-size="28" fill="#FFFFFF">Slop Mop<tspan font-family="JetBrains Mono" font-weight="400" font-size="20" fill="#B2B8BE"> .lol</tspan></text>
+<text x="1136" y="598" text-anchor="end" font-family="JetBrains Mono" font-size="19" fill="#B2B8BE">slopmop.lol/reports/state-of-slop-october-2026</text>
+</svg>
