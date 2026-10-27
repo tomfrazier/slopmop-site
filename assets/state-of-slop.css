@@ -124,3 +124,15 @@
 .sos .faq { max-width: 70ch; margin: var(--space-4) 0 var(--space-6); }
 .sos .faq summary { font-size: var(--text-base); padding: var(--space-5) 0; }
 .sos .faq .a { padding-bottom: var(--space-5); }
+
+/* one column: the hero graphic sits under the title, above the intro, instead of after it (or hidden on phones) */
+@media (max-width: 980px) {
+  .sos-head .ph-grid { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-6); }
+  .sos-head .ph-copy { display: contents; }
+  .sos-head .ph-copy > * { margin-top: 0; }
+  .sos-head .ph-copy > .eyebrow { order: 1; }
+  .sos-head .ph-copy > .h-1 { order: 2; }
+  .sos-head .sos-hero { order: 3; display: block; width: 100%; max-width: 560px; justify-self: auto; }
+  .sos-head .ph-copy > .lede { order: 4; }
+  .sos-head .ph-copy > .sos-byline { order: 5; }
+}
