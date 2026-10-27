@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
 <rect width="1200" height="630" fill="#F7F8F9"/>
 <rect width="1200" height="8" fill="#F5B400"/>
-<text x="64" y="76" font-family="JetBrains Mono" font-size="20" fill="#6E757D">state of slop · october 2026 · linkedin</text>
+<text x="64" y="76" font-family="JetBrains Mono" font-size="20" fill="#6E757D">state of slop · 27 sep to 27 oct 2026 · linkedin</text>
 <text x="64" y="146" font-family="Archivo" font-weight="700" font-size="58" letter-spacing="-0.6" fill="#16181A">Most AI-likely posts were fine.</text>
 <rect x="64" y="186" width="1072" height="316" rx="12" fill="#FFFFFF" stroke="#E6E9EC"/>
 <text x="104" y="300" font-family="Archivo" font-weight="700" font-size="104" letter-spacing="-1" fill="#16181A">54.3<tspan font-size="56">%</tspan></text>
@@ -20,5 +20,5 @@
 <rect y="550" width="1200" height="80" fill="#16181A"/>
 <g transform="translate(58 567) scale(1.9)"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="#F5B400"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="#F5B400"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="#16181A" stroke-width="1.15" stroke-linecap="round"/></g>
 <text x="112" y="600" font-family="Archivo" font-weight="600" font-size="28" fill="#FFFFFF">Slop Mop<tspan font-family="JetBrains Mono" font-weight="400" font-size="20" fill="#B2B8BE"> .lol</tspan></text>
-<text x="1136" y="598" text-anchor="end" font-family="JetBrains Mono" font-size="19" fill="#B2B8BE">41,018 posts · 27 sep – 27 oct 2026</text>
+<text x="1136" y="598" text-anchor="end" font-family="JetBrains Mono" font-size="19" fill="#B2B8BE">41,018 posts · 30 days</text>
 </svg>

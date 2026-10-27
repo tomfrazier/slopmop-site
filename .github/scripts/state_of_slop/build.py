@@ -43,6 +43,17 @@ def date_short(iso):
     return "%d %s" % (d, MONTHS[m - 1][:3].lower())
 
 
+def range_long(w):
+    """'27 September to 27 October 2026', with the year once when both ends share it."""
+    a, b = date_long(w["from"]), date_long(w["to"])
+    return "%s to %s" % (a[:-5] if a[-4:] == b[-4:] else a, b)
+
+
+def range_short(w):
+    a, b = date_short(w["from"]), date_short(w["to"])
+    return "%s to %s %s" % (a, b, w["to"][:4]) if w["from"][:4] == w["to"][:4] else "%s %s to %s %s" % (a, w["from"][:4], b, w["to"][:4])
+
+
 def pct(x, nd=1):
     return ("%." + str(nd) + "f%%") % x
 
@@ -339,7 +350,7 @@ def report(d, c, head, header, footer, months):
       <span class="eyebrow">state of slop · {period} · {sources}</span>
       <h1 class="h-1">{headline}</h1>
       <p class="lede">{dek}</p>
-      <p class="sos-byline mono">{window} · published {pub}</p>
+      <p class="sos-byline mono">covers {window} · {posts} posts</p>
     </div>
     <div class="ph-visual sos-hero"><img src="{slug}.png" width="1200" height="630" alt="{alt}"></div>
   </div>
@@ -361,15 +372,15 @@ def report(d, c, head, header, footer, months):
 <script src="../assets/site.js"></script>
 </body>
 </html>
-""".format(head=head, meta=meta, header=header, footer=footer, period=e(d["period_label"].lower()), sources=e(src_label.lower()),
-           headline=e(c["headline"]), dek=e(c["dek"]), window="%s to %s" % (date_long(w["from"]), date_long(w["to"])),
+""".format(head=head, meta=meta, header=header, footer=footer, period=e(range_short(w)), sources=e(src_label.lower()), posts=num(d["totals"]["items_scored"]),
+           headline=e(c["headline"]), dek=e(c["dek"]), window=range_long(w),
            pub=date_long(d["published"]), slug=slug, alt=e(c["hero_alt"]), glance=glance, toc="\n      ".join(toc), sections="\n".join(sections))
 
 
 def archive(months, head, header, footer):
     items = "".join(
         '<li class="sos-arch"><a href="{slug}"><img src="{slug}.png" width="1200" height="630" alt="" loading="lazy"><span class="mono">{period}</span><b>{headline}</b><span>{dek}</span></a></li>'.format(
-            slug=m["slug"], period=e(m["period_label"].lower()), headline=e(m["headline"]), dek=e(m["dek"])) for m in months)
+            slug=m["slug"], period=e(range_short(m["data"]["window"])), headline=e(m["headline"]), dek=e(m["dek"])) for m in months)
     desc = "Every month, Slop Mop publishes what it found in the feeds it read: how much was slop, how much read as AI-likely, and the signs that showed up most."
     meta = ('<title>State of Slop — Slop Mop</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s/state-of-slop/">\n'
             '<meta property="og:type" content="website">\n<meta property="og:title" content="State of Slop — Slop Mop">\n<meta property="og:description" content="%s">\n'
@@ -409,8 +420,8 @@ def hero_svg(d, c):
     ai, slop, lik, pos = h["ai_likely_percent"], h["slop_percent"], h["likely_percent"], h["possibly_percent"]
     bw = 452  # bar width per column
     x1, x2 = 104, 644
-    kicker = "state of slop · %s · %s" % (d["period_label"].lower(), named.lower())
-    foot = "%s posts · %s – %s" % (num(d["totals"]["items_scored"]), date_short(w["from"]), date_short(w["to"]) + " " + w["to"][:4])
+    kicker = "state of slop · %s · %s" % (range_short(w), named.lower())
+    foot = "%s posts · %d days" % (num(d["totals"]["items_scored"]), w["days"])
     return """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
 <rect width="1200" height="630" fill="#F7F8F9"/>
 <rect width="1200" height="8" fill="#F5B400"/>
