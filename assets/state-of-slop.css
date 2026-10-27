@@ -119,3 +119,8 @@
   .sos-ex { grid-template-columns: 1fr; }
   .sos-tip { left: auto; right: -12px; }
 }
+
+/* questions and answers: the site's FAQ accordion, held to the report's measure */
+.sos .faq { max-width: 70ch; margin: var(--space-4) 0 var(--space-6); }
+.sos .faq summary { font-size: var(--text-base); padding: var(--space-5) 0; }
+.sos .faq .a { padding-bottom: var(--space-5); }

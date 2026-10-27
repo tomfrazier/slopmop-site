@@ -6,10 +6,10 @@
 
 Each month is two files in state-of-slop/data/:
   YYYY-MM.json       the numbers, as shares and flags only (no raw post counts)
-  YYYY-MM.copy.json  the words: headline, dek and a few paragraphs per section
+  YYYY-MM.copy.json  the words: headline, dek, a few paragraphs per section, and the FAQ
 
 It writes state-of-slop/<slug>.html, the archive at state-of-slop/index.html, and the
-share image state-of-slop/<slug>.png (1200x630). The image needs `pip install cairosvg`
+share image state-of-slop/<slug>.png (1200x630), and adds each report to sitemap.xml. The image needs `pip install cairosvg`
 and the Archivo and JetBrains Mono fonts installed locally; without them the PNG step
 is skipped and says so. The header, footer and analytics tags are copied from
 how-it-works.html, so the report pages stay in step with the rest of the site.
@@ -306,6 +306,14 @@ def report(d, c, head, header, footer, months):
             '<p class="sos-note">AI-likely means an AI-likelihood of %s or more on a 0 to 1 scale.</p>' % d["ai"]["threshold"])
     add("method", "How this was measured", method + ai + "<h3>Where the mop misses</h3>" + paras(c, "misses"))
 
+    faq = [(g["group"], q, a) for g in c.get("faq", []) for q, a in g["items"]]
+    if faq:
+        body = ""
+        for g in c["faq"]:
+            body += "<h3>%s</h3>" % e(g["group"]) + '<div class="faq">%s</div>' % "".join(
+                "<details><summary>%s</summary><div class=\"a\"><p>%s</p></div></details>" % (e(q), e(a)) for q, a in g["items"])
+        add("faq", "Questions and answers", body)
+
     past = [m for m in months if m["slug"] != slug]
     more = ""
     if past:
@@ -327,13 +335,34 @@ def report(d, c, head, header, footer, months):
     tiles.append(("text read", "%s tokens" % tokens_short(tot["tokens_read"]), "of %s posts" % e(src_label), token_tip(tot["tokens_read"])))
     glance = "".join('<div class="glance-tile"><span class="mono">%s</span><b>%s%s</b><span>%s</span></div>' % (a, b, tip, cc) for a, b, cc, tip in tiles)
 
-    ld = {
-        "@context": "https://schema.org",
-        "@type": "Article", "@id": url + "#article", "url": url, "headline": "%s: %s" % (title, c["headline"]), "description": c["description"],
-        "image": img, "datePublished": d["published"], "dateModified": d["published"], "inLanguage": "en",
-        "author": {"@type": "Person", "name": "Tom Frazier", "url": "https://tomfrazier.com"},
-        "publisher": {"@type": "Organization", "name": "Artimovo LLC", "url": SITE + "/"},
-        "isPartOf": {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": "Slop Mop"}}
+    modified = d.get("modified", d["published"])
+    org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo LLC", "url": SITE + "/",
+           "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png", "width": 512, "height": 512}, "brand": {"@type": "Brand", "name": "Slop Mop"}}
+    tom = {"@type": "Person", "@id": SITE + "/#tom", "name": "Tom Frazier", "url": "https://tomfrazier.com", "sameAs": ["https://linkedin.com/in/tomfrazier"]}
+    graph = [
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": "%s: %s" % (title, c["headline"]), "description": c["description"],
+         "inLanguage": "en", "isPartOf": {"@id": SITE + "/#website"}, "primaryImageOfPage": {"@id": img + "#image"},
+         "breadcrumb": {"@id": url + "#breadcrumb"}, "datePublished": d["published"], "dateModified": modified},
+        {"@type": "Article", "@id": url + "#article", "url": url, "mainEntityOfPage": {"@id": url + "#webpage"},
+         "headline": "%s: %s" % (title, c["headline"]), "description": c["description"], "articleSection": "State of Slop",
+         "image": {"@type": "ImageObject", "@id": img + "#image", "url": img, "width": 1200, "height": 630, "caption": c["hero_alt"]},
+         "datePublished": d["published"], "dateModified": modified, "inLanguage": "en", "isAccessibleForFree": True,
+         "temporalCoverage": "%s/%s" % (w["from"][:10], w["to"][:10]),
+         "keywords": ["slop", "State of Slop", "Slop Mop", "bad writing"] + [s["label"] for s in named] + [t["name"] for t in tells[:3]],
+         "about": [{"@type": "Thing", "name": "Slop", "description": "Writing that takes the reader's attention and gives little back, whoever or whatever wrote it."},
+                   {"@id": SITE + "/#app"}],
+         "author": tom, "publisher": org, "isPartOf": {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": "Slop Mop"}},
+        {"@type": "SoftwareApplication", "@id": SITE + "/#app", "name": "Slop Mop", "applicationCategory": "BrowserApplication",
+         "operatingSystem": "Chrome, Chromium browsers", "url": SITE + "/",
+         "description": "A browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. A bad-writing detector, not an AI detector."},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Slop Mop", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "State of Slop", "item": SITE + "/state-of-slop/"},
+            {"@type": "ListItem", "position": 3, "name": title, "item": url}]}]
+    if faq:
+        graph.append({"@type": "FAQPage", "@id": url + "#faq", "url": url + "#faq", "isPartOf": {"@id": url + "#webpage"}, "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for _, q, a in faq]})
+    ld = {"@context": "https://schema.org", "@graph": graph}
 
     meta = (
         "<title>{t} — Slop Mop</title>\n"
@@ -348,13 +377,21 @@ def report(d, c, head, header, footer, months):
         '<meta property="og:image" content="{img}">\n'
         '<meta property="og:image:width" content="1200">\n'
         '<meta property="og:image:height" content="630">\n'
+        '<meta property="og:image:type" content="image/png">\n'
         '<meta property="og:image:alt" content="{alt}">\n'
+        '<meta property="og:locale" content="en_US">\n'
         '<meta property="article:published_time" content="{pub}">\n'
+        '<meta property="article:modified_time" content="{mod}">\n'
+        '<meta property="article:author" content="https://tomfrazier.com">\n'
+        '<meta property="article:section" content="State of Slop">\n'
+        '{tags}'
         '<meta name="twitter:card" content="summary_large_image">\n'
         '<meta name="twitter:title" content="{t}">\n'
         '<meta name="twitter:description" content="{desc}">\n'
         '<meta name="twitter:image" content="{img}">\n'
+        '<meta name="twitter:image:alt" content="{alt}">\n'
         '<meta name="author" content="Tom Frazier">\n'
+        '<link rel="alternate" type="text/markdown" href="../ask-ai.md" title="Slop Mop in brief, for AI assistants">\n'
         '<link rel="icon" href="../favicon.svg" type="image/svg+xml">\n'
         '<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">\n'
         '<link rel="apple-touch-icon" href="../apple-touch-icon.png">\n'
@@ -366,7 +403,8 @@ def report(d, c, head, header, footer, months):
         '<link rel="stylesheet" href="../assets/site.css">\n'
         '<link rel="stylesheet" href="../assets/state-of-slop.css">\n'
         '<script type="application/ld+json">\n{ld}\n</script>\n').format(
-        t=e(title), desc=e(c["description"]), url=url, img=img, alt=e(c["hero_alt"]), pub=d["published"], ld=json.dumps(ld, indent=1, ensure_ascii=False))
+        t=e(title), desc=e(c["description"]), url=url, img=img, alt=e(c["hero_alt"]), pub=d["published"], mod=modified, ld=json.dumps(ld, indent=1, ensure_ascii=False),
+        tags="".join('<meta property="article:tag" content="%s">\n' % e(k) for k in ["Slop"] + [s["label"] for s in named]))
 
     return """<!DOCTYPE html>
 <html lang="en">
@@ -412,12 +450,29 @@ def archive(months, head, header, footer):
         '<li class="sos-arch"><a href="{slug}"><img src="{slug}.png" width="1200" height="630" alt="" loading="lazy"><span class="mono">{period}</span><b>{headline}</b><span>{dek}</span></a></li>'.format(
             slug=m["slug"], period=e(range_short(m["data"]["window"])), headline=e(m["headline"]), dek=e(m["dek"])) for m in months)
     desc = "Every month, Slop Mop publishes what it found in the feeds it read: how much was slop, the signs that showed up most, and when slop peaked."
-    meta = ('<title>State of Slop — Slop Mop</title>\n<meta name="description" content="%s">\n<link rel="canonical" href="%s/state-of-slop/">\n'
-            '<meta property="og:type" content="website">\n<meta property="og:title" content="State of Slop — Slop Mop">\n<meta property="og:description" content="%s">\n'
-            '<meta property="og:image" content="%s/state-of-slop/%s.png">\n<meta name="twitter:card" content="summary_large_image">\n'
-            '<link rel="icon" href="../favicon.svg" type="image/svg+xml">\n<meta name="theme-color" content="#16181A">\n'
-            '<link rel="stylesheet" href="../_ds/slopmop/styles.css">\n<link rel="stylesheet" href="../assets/site.css">\n<link rel="stylesheet" href="../assets/state-of-slop.css">\n') % (
-        e(desc), SITE, e(desc), SITE, months[0]["slug"])
+    url = SITE + "/state-of-slop/"
+    img = "%s/state-of-slop/%s.png" % (SITE, months[0]["slug"])
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": "State of Slop", "description": desc, "inLanguage": "en",
+         "isPartOf": {"@id": SITE + "/#website"}, "breadcrumb": {"@id": url + "#breadcrumb"},
+         "mainEntity": {"@type": "ItemList", "itemListElement": [
+             {"@type": "ListItem", "position": i + 1, "url": "%s%s" % (url, m["slug"]), "name": "%s: %s" % (m["data"]["title"], m["headline"])}
+             for i, m in enumerate(months)]}},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Slop Mop", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "State of Slop", "item": url}]}]}
+    meta = ('<title>State of Slop — Slop Mop</title>\n<meta name="description" content="{d}">\n<link rel="canonical" href="{u}">\n'
+            '<meta name="robots" content="index, follow, max-image-preview:large">\n'
+            '<meta property="og:type" content="website">\n<meta property="og:site_name" content="Slop Mop">\n<meta property="og:url" content="{u}">\n'
+            '<meta property="og:title" content="State of Slop — Slop Mop">\n<meta property="og:description" content="{d}">\n'
+            '<meta property="og:image" content="{i}">\n<meta property="og:image:type" content="image/png">\n'
+            '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:locale" content="en_US">\n'
+            '<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="State of Slop — Slop Mop">\n'
+            '<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{i}">\n'
+            '<link rel="icon" href="../favicon.svg" type="image/svg+xml">\n<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">\n'
+            '<link rel="apple-touch-icon" href="../apple-touch-icon.png">\n<meta name="theme-color" content="#16181A">\n'
+            '<link rel="stylesheet" href="../_ds/slopmop/styles.css">\n<link rel="stylesheet" href="../assets/site.css">\n<link rel="stylesheet" href="../assets/state-of-slop.css">\n'
+            '<script type="application/ld+json">\n{ld}\n</script>\n').format(d=e(desc), u=url, i=img, ld=json.dumps(ld, indent=1, ensure_ascii=False))
     return """<!DOCTYPE html>
 <html lang="en">
 <head>{head}{meta}</head>
@@ -555,6 +610,26 @@ def load_months():
     return months
 
 
+def update_sitemap(months):
+    """Add or refresh each report, and the archive, in sitemap.xml, with the share image for image search."""
+    path = os.path.join(ROOT, "sitemap.xml")
+    xml = open(path, encoding="utf-8").read()
+    if "xmlns:image=" not in xml:
+        xml = xml.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+                          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">', 1)
+    latest = max(m["data"].get("modified", m["data"]["published"]) for m in months)
+    entries = [("%s/state-of-slop/" % SITE, latest, "monthly", "0.7", "%s/state-of-slop/%s.png" % (SITE, months[0]["slug"]))]
+    entries += [("%s/state-of-slop/%s" % (SITE, m["slug"]), m["data"].get("modified", m["data"]["published"]), "yearly", "0.8",
+                 "%s/state-of-slop/%s.png" % (SITE, m["slug"])) for m in reversed(months)]
+    for loc, mod, freq, prio, image in entries:
+        line = ("  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority>"
+                "<image:image><image:loc>%s</image:loc></image:image></url>") % (loc, mod, freq, prio, image)
+        pat = re.compile(r"  <url><loc>%s</loc>.*?</url>" % re.escape(loc))
+        xml = pat.sub(lambda _: line, xml, 1) if pat.search(xml) else xml.replace("</urlset>", line + "\n</urlset>", 1)
+    open(path, "w", encoding="utf-8").write(xml)
+    print("  updated sitemap.xml")
+
+
 def main(argv):
     months = load_months()
     if not months:
@@ -574,7 +649,7 @@ def main(argv):
     out = os.path.join(DIR, "index.html")
     open(out, "w", encoding="utf-8").write(archive(months, head, header, footer))
     print("  wrote", os.path.relpath(out, ROOT))
-    print("Add any new month to sitemap.xml.")
+    update_sitemap(months)
 
 
 if __name__ == "__main__":
