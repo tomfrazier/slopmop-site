@@ -36,7 +36,7 @@
 <path d="M534 442 h44" stroke="#D5DADF" stroke-width="6" stroke-linecap="round"/>
 <text x="64" y="512" font-family="JetBrains Mono" font-size="15" fill="#6E757D">* Across Slop Mop readers, after LinkedIn&#x27;s own feed filtering.</text>
 <rect x="716" y="104" width="420" height="420" rx="16" fill="#FFFFFF" stroke="#E6E9EC"/>
-<text x="744" y="140" font-family="JetBrains Mono" font-size="16" fill="#6E757D">when slop peaks · utc</text>
+<text x="744" y="140" font-family="JetBrains Mono" font-size="16" fill="#6E757D">when slop peaks · pdt</text>
 <circle cx="920" cy="268" r="118" fill="#F7F8F9" stroke="#16181A" stroke-width="4"/>
 <line x1="920.0" y1="166.0" x2="920.0" y2="155.0" stroke="#16181A" stroke-width="4" stroke-linecap="round"/>
 <line x1="974.0" y1="174.5" x2="976.5" y2="170.1" stroke="#16181A" stroke-width="2" stroke-linecap="round"/>
@@ -54,14 +54,14 @@
 <text x="1002.0" y="275.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">3</text>
 <text x="920.0" y="357.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">6</text>
 <text x="838.0" y="275.0" text-anchor="middle" font-family="Archivo" font-weight="600" font-size="20" fill="#3B4045">9</text>
-<line x1="920" y1="268" x2="866.3" y2="237.0" stroke="#2F6FBF" stroke-width="10" stroke-linecap="round"/>
-<line x1="920" y1="268" x2="920.0" y2="330.0" stroke="#D93025" stroke-width="10" stroke-linecap="round"/>
+<line x1="920" y1="268" x2="982.0" y2="268.0" stroke="#2F6FBF" stroke-width="10" stroke-linecap="round"/>
+<line x1="920" y1="268" x2="889.0" y2="214.3" stroke="#D93025" stroke-width="10" stroke-linecap="round"/>
 <circle cx="920" cy="268" r="9" fill="#16181A"/>
 <rect x="744" y="418" width="14" height="14" rx="3" fill="#D93025"/>
-<text x="768" y="431" font-family="Archivo" font-size="21" fill="#16181A"><tspan font-weight="700">Worst hour</tspan> 6am UTC</text>
+<text x="768" y="431" font-family="Archivo" font-size="21" fill="#16181A"><tspan font-weight="700">Worst hour</tspan> 11pm PDT</text>
 <rect x="744" y="452" width="14" height="14" rx="3" fill="#2F6FBF"/>
-<text x="768" y="465" font-family="Archivo" font-size="21" fill="#16181A"><tspan font-weight="700">Best hour</tspan> 10pm UTC</text>
-<text x="744" y="499" font-family="Archivo" font-size="21" fill="#565C63">Mondays are the sloppiest day.</text>
+<text x="768" y="465" font-family="Archivo" font-size="21" fill="#16181A"><tspan font-weight="700">Best hour</tspan> 3pm PDT</text>
+<text x="744" y="499" font-family="Archivo" font-size="21" fill="#565C63">Late nights are the sloppiest.</text>
 <rect y="550" width="1200" height="80" fill="#16181A"/>
 <g transform="translate(58 567) scale(1.9)"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="#F5B400"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="#F5B400"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="#16181A" stroke-width="1.15" stroke-linecap="round"/></g>
 <text x="112" y="600" font-family="Archivo" font-weight="600" font-size="28" fill="#FFFFFF">Slop Mop<tspan font-family="JetBrains Mono" font-weight="400" font-size="20" fill="#B2B8BE"> .lol</tspan></text>

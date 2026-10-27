@@ -1,8 +1,8 @@
 {
  "headline": "One LinkedIn post in five was slop",
  "dek": "From 27 September to 27 October, Slop Mop read 124 million tokens of LinkedIn posts, after LinkedIn's own feed filtering had done its work. One post in five was slop. Here are the signs it showed most, with examples, and when it peaked.",
- "description": "27 September to 27 October 2026: one LinkedIn post in five was slop, even after LinkedIn's own filtering. The signs that showed up most, with examples, and the days and hours slop peaked.",
- "hero_alt": "State of Slop, 27 September to 27 October 2026. One in five posts in your LinkedIn feed is slop. Slop was worst at 6am UTC and lightest at 10pm UTC, and Monday was the sloppiest day.",
+ "description": "27 September to 27 October 2026: one LinkedIn post in five was slop, even after LinkedIn's own filtering. The signs that showed up most, with examples, and the hours slop peaked.",
+ "hero_alt": "State of Slop, 27 September to 27 October 2026. One in five posts in your LinkedIn feed is slop. Slop was worst at 11pm Pacific and lightest at 3pm Pacific, and late nights were the sloppiest.",
  "callout": {
   "title": "Slop Mop judges the writing",
   "lead": "AI writing can be good. Human writing can be bad. So a post never gets folded just because it reads as AI-written. Slop Mop looks at the writing itself, so you read only the posts worth your time.",
@@ -35,8 +35,8 @@
   ],
   "examples_intro": "Each pair makes the same point twice. The first trips the sign and the second says it plainly. We wrote these for this report, so they aren't anyone's real posts.",
   "timing": [
-   "Slop peaks on Monday, when 21% of what people scrolled past was slop, and is lightest on Sunday, at 16%. By hour, the worst stretch is 06:00 UTC at 24%, and the cleanest is 22:00 UTC at 15%.",
-   "These are shares of what people actually scrolled past, so a post seen twice counts twice."
+   "Slop peaks late at night, Pacific time. Every hour from 10pm to 2am PDT ran at 22% slop or more, and 11pm was the worst at 24%. The cleanest hour was 3pm, at 15%.",
+   "All times are Pacific Daylight Time. These are shares of what people actually scrolled past, so a post seen twice counts twice."
   ],
   "readers": [
    "Every verdict is a calibrated decision. Slop Mop scores each sign as a strength from 0 to 1, and sets the verdict from those strengths at the sensitivity you choose. The method is probabilistic, so some verdicts will be wrong.",
@@ -70,7 +70,8 @@
    "posts in your LinkedIn",
    "feed is slop.*"
   ],
-  "footnote": "Across Slop Mop readers, after LinkedIn's own feed filtering."
+  "footnote": "Across Slop Mop readers, after LinkedIn's own feed filtering.",
+  "clock_note": "Late nights are the sloppiest."
  },
  "post": "One LinkedIn post in five was slop."
 }

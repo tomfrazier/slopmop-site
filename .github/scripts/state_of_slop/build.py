@@ -267,7 +267,7 @@ def report(d, c, head, header, footer, months):
         if tm.get("by_day_of_week"):
             body += "<h3>By day of the week</h3>" + dow_rows(tm["by_day_of_week"])
         if tm.get("by_hour"):
-            body += "<h3>By hour (%s)</h3>" % tm["tz"] + column_chart(tm["by_hour"], 3, "Share of what people scrolled past that was slop, by hour " + tm["tz"], lambda s: s + ":00")
+            body += "<h3>By hour (%s)</h3>" % tm["tz"] + column_chart(tm["by_hour"], 3, "Share of what people scrolled past that was slop, by hour " + tm["tz"], hour12)
             body += ('<p class="sos-note"><i class="sos-key sos-possibly"></i> slop share &nbsp; <i class="sos-key sos-likely"></i> the likely-slop part of it. '
                      'Faded columns had too little reading to call.</p>')
         add("when", "When slop peaks", body)
@@ -320,6 +320,10 @@ def report(d, c, head, header, footer, months):
         days = [x for x in tm["by_day_of_week"] if not x.get("low_sample")]
         hi, lo = max(days, key=lambda x: x["slop_percent"]), min(days, key=lambda x: x["slop_percent"])
         tiles.append(("worst day", hi["label"], "%s slop, against %s on %s" % (pct(hi["slop_percent"]), pct(lo["slop_percent"]), lo["label"]), ""))
+    elif tm.get("by_hour"):
+        hours = [x for x in tm["by_hour"] if not x.get("low_sample")]
+        hi, lo = max(hours, key=lambda x: x["slop_percent"]), min(hours, key=lambda x: x["slop_percent"])
+        tiles.append(("worst hour", "%s %s" % (hour12(hi["label"]), e(tm["tz"])), "%s slop, against %s at %s" % (pct(hi["slop_percent"]), pct(lo["slop_percent"]), hour12(lo["label"])), ""))
     tiles.append(("text read", "%s tokens" % tokens_short(tot["tokens_read"]), "of %s posts" % e(src_label), token_tip(tot["tokens_read"])))
     glance = "".join('<div class="glance-tile"><span class="mono">%s</span><b>%s%s</b><span>%s</span></div>' % (a, b, tip, cc) for a, b, cc, tip in tiles)
 
@@ -514,6 +518,8 @@ def hero_svg(d, c):
         if days:
             dh = max(days, key=lambda x: x["slop_percent"])
             out.append('<text x="744" y="499" font-family="Archivo" font-size="21" fill="#565C63">%ss are the sloppiest day.</text>' % e(dh["label"]))
+        elif sh.get("clock_note"):
+            out.append('<text x="744" y="499" font-family="Archivo" font-size="21" fill="#565C63">%s</text>' % e(sh["clock_note"]))
 
     out.append('<rect y="550" width="1200" height="80" fill="#16181A"/>')
     out.append(MOP.format(x=58, y=567, k=1.9, c="#F5B400", bg="#16181A"))
