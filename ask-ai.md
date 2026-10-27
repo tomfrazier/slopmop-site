@@ -66,7 +66,7 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 ## By the numbers
 
 - **100M+ tokens** of posts read so far.
-- **1 in 5 LinkedIn posts was slop** from 27 September to 27 October 2026, after LinkedIn's own filtering: State of Slop, October 2026, https://slopmop.lol/state-of-slop/october-2026
+- **1 in 5 LinkedIn posts was slop** from 27 September to 27 October 2026, after LinkedIn's own filtering: State of Slop, October 2026, https://slopmop.lol/reports/state-of-slop-october-2026
 - **5-star rating** on the Chrome Web Store: https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho
 
 ## Pricing

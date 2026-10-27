@@ -8,8 +8,8 @@
 - [About](https://slopmop.lol/about.html): canonical product information
 
 ## Reports
-- [State of Slop](https://slopmop.lol/state-of-slop/): monthly report on how much of what people scroll past is slop, the signs that show up most and when slop peaks
-- [State of Slop, October 2026](https://slopmop.lol/state-of-slop/october-2026): one LinkedIn post in five was slop, 27 September to 27 October 2026
+- [State of Slop](https://slopmop.lol/state-of-slop): always the latest monthly report on how much of what people scroll past is slop, the signs that show up most and when slop peaks
+- [State of Slop, October 2026](https://slopmop.lol/reports/state-of-slop-october-2026): one LinkedIn post in five was slop, 27 September to 27 October 2026
 
 ## Policies
 - [Privacy policy](https://slopmop.lol/privacy.html)

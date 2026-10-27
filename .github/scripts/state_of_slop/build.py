@@ -4,12 +4,22 @@
     python3 .github/scripts/state_of_slop/build.py            # every month in state-of-slop/data/
     python3 .github/scripts/state_of_slop/build.py 2026-10    # one month
 
-Each month is two files in state-of-slop/data/:
+URLs:
+  /reports/                              every report, newest first (CollectionPage)
+  /reports/state-of-slop-<month>-<year>  one report: its canonical URL, never moved
+  /reports/state-of-slop-<month>-<year>.png  its share image, also the og:image, printed
+                                         with the report's own address
+  /state-of-slop                         forwards to the latest report (meta refresh 0, which
+                                         search engines treat as a permanent redirect; GitHub
+                                         Pages can't send a 301). Not in the sitemap.
+
+Each month is two files in reports/data/state-of-slop/:
   YYYY-MM.json       the numbers, as shares and flags only (no raw post counts)
   YYYY-MM.copy.json  the words: headline, dek, a few paragraphs per section, and the FAQ
 
-It writes state-of-slop/<slug>.html, the archive at state-of-slop/index.html, and the
-share image state-of-slop/<slug>.png (1200x630), and adds each report to sitemap.xml. The image needs `pip install cairosvg`
+It writes reports/<slug>.html with its share image reports/<slug>.png (1200x630), the
+archive at reports/index.html and the redirect at state-of-slop/index.html, and keeps
+sitemap.xml in step. The image needs `pip install cairosvg`
 and the Archivo and JetBrains Mono fonts installed locally; without them the PNG step
 is skipped and says so. The header, footer and analytics tags are copied from
 how-it-works.html, so the report pages stay in step with the rest of the site.
@@ -28,8 +38,9 @@ import re
 import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-DIR = os.path.join(ROOT, "state-of-slop")
-DATA = os.path.join(DIR, "data")
+DIR = os.path.join(ROOT, "reports")
+DATA = os.path.join(DIR, "data", "state-of-slop")
+LATEST = os.path.join(ROOT, "state-of-slop")
 SITE = "https://slopmop.lol"
 
 e = html.escape
@@ -214,7 +225,7 @@ def figure(t):
 
 def report(d, c, head, header, footer, months):
     slug = d["slug"]
-    url = "%s/state-of-slop/%s" % (SITE, slug)
+    url = "%s/reports/%s" % (SITE, slug)
     h = d["headline"]
     tot = d["totals"]
     w = d["window"]
@@ -222,7 +233,7 @@ def report(d, c, head, header, footer, months):
     others = [s for s in d["sources"] if not s.get("in_copy")]
     src_label = " and ".join(s["label"] for s in named)
     title = d["title"]
-    img = "%s/state-of-slop/%s.png" % (SITE, slug)
+    img = "%s/reports/%s.png" % (SITE, slug)
     tells = d["tells"]
     ex = c.get("examples", {})
     sens = d.get("sensitivity", "moderate")
@@ -319,7 +330,7 @@ def report(d, c, head, header, footer, months):
     if past:
         more = '<h3>Earlier reports</h3><ul>%s</ul>' % "".join('<li><a href="%s">%s</a></li>' % (m["slug"], e(m["period_label"])) for m in past)
     add("next", "Next month",
-        "<p>A new State of Slop comes out every month. Get it by email with the form below, or bookmark the <a href=\"./\">archive</a>.</p>" + more)
+        "<p>A new State of Slop comes out every month. Get it by email with the form below. <a href=\"/state-of-slop\">slopmop.lol/state-of-slop</a> always opens the latest one, and <a href=\"./\">every report</a> stays at its own address.</p>" + more)
 
     t0 = tells[0]
     tiles = [("slop", one_in(h["slop_percent"]), "posts that reached the feed were slop", ""),
@@ -357,7 +368,7 @@ def report(d, c, head, header, footer, months):
          "description": "A browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. A bad-writing detector, not an AI detector."},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Slop Mop", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "State of Slop", "item": SITE + "/state-of-slop/"},
+            {"@type": "ListItem", "position": 2, "name": "Reports", "item": SITE + "/reports/"},
             {"@type": "ListItem", "position": 3, "name": title, "item": url}]}]
     if faq:
         graph.append({"@type": "FAQPage", "@id": url + "#faq", "url": url + "#faq", "isPartOf": {"@id": url + "#webpage"}, "mainEntity": [
@@ -449,25 +460,25 @@ def archive(months, head, header, footer):
     items = "".join(
         '<li class="sos-arch"><a href="{slug}"><img src="{slug}.png" width="1200" height="630" alt="" loading="lazy"><span class="mono">{period}</span><b>{headline}</b><span>{dek}</span></a></li>'.format(
             slug=m["slug"], period=e(range_short(m["data"]["window"])), headline=e(m["headline"]), dek=e(m["dek"])) for m in months)
-    desc = "Every month, Slop Mop publishes what it found in the feeds it read: how much was slop, the signs that showed up most, and when slop peaked."
-    url = SITE + "/state-of-slop/"
-    img = "%s/state-of-slop/%s.png" % (SITE, months[0]["slug"])
+    desc = "Slop Mop's reports on what people scroll past. Every month, State of Slop shows how much of it was slop, the signs that showed up most, and when slop peaked."
+    url = SITE + "/reports/"
+    img = "%s/reports/%s.png" % (SITE, months[0]["slug"])
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": "State of Slop", "description": desc, "inLanguage": "en",
+        {"@type": "CollectionPage", "@id": url + "#webpage", "url": url, "name": "Slop Mop reports", "description": desc, "inLanguage": "en",
          "isPartOf": {"@id": SITE + "/#website"}, "breadcrumb": {"@id": url + "#breadcrumb"},
          "mainEntity": {"@type": "ItemList", "itemListElement": [
              {"@type": "ListItem", "position": i + 1, "url": "%s%s" % (url, m["slug"]), "name": "%s: %s" % (m["data"]["title"], m["headline"])}
              for i, m in enumerate(months)]}},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Slop Mop", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "State of Slop", "item": url}]}]}
-    meta = ('<title>State of Slop — Slop Mop</title>\n<meta name="description" content="{d}">\n<link rel="canonical" href="{u}">\n'
+            {"@type": "ListItem", "position": 2, "name": "Reports", "item": url}]}]}
+    meta = ('<title>Reports — Slop Mop</title>\n<meta name="description" content="{d}">\n<link rel="canonical" href="{u}">\n'
             '<meta name="robots" content="index, follow, max-image-preview:large">\n'
             '<meta property="og:type" content="website">\n<meta property="og:site_name" content="Slop Mop">\n<meta property="og:url" content="{u}">\n'
-            '<meta property="og:title" content="State of Slop — Slop Mop">\n<meta property="og:description" content="{d}">\n'
+            '<meta property="og:title" content="Reports — Slop Mop">\n<meta property="og:description" content="{d}">\n'
             '<meta property="og:image" content="{i}">\n<meta property="og:image:type" content="image/png">\n'
             '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:locale" content="en_US">\n'
-            '<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="State of Slop — Slop Mop">\n'
+            '<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="Reports — Slop Mop">\n'
             '<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{i}">\n'
             '<link rel="icon" href="../favicon.svg" type="image/svg+xml">\n<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">\n'
             '<link rel="apple-touch-icon" href="../apple-touch-icon.png">\n<meta name="theme-color" content="#16181A">\n'
@@ -479,8 +490,8 @@ def archive(months, head, header, footer):
 <body>
 {header}<main id="main">
 <section class="page-head ph-dark" data-theme="dark"><div class="wrap">
-  <span class="eyebrow">state of slop</span>
-  <h1 class="h-1">State of Slop</h1>
+  <span class="eyebrow">reports</span>
+  <h1 class="h-1">State of Slop and other reports</h1>
   <p class="lede">{desc}</p>
 </div></section>
 <div class="page-body"><div class="wrap"><ol class="sos-archive">{items}</ol></div></div>
@@ -508,8 +519,8 @@ def hero_svg(d, c):
     w = d["window"]
     sh = c.get("share", {})
     named = " and ".join(s["label"] for s in d["sources"] if s.get("in_copy"))
-    kicker = "state of slop · %s · %s" % (range_short(w), named.lower())
-    foot = "%s tokens read · slopmop.lol/state-of-slop" % tokens_short(d["totals"]["tokens_read"])
+    kicker = "state of slop · %s · %s · %s tokens read" % (range_short(w), named.lower(), tokens_short(d["totals"]["tokens_read"]))
+    foot = "slopmop.lol/reports/%s" % d["slug"]
     out = ['<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">',
            '<rect width="1200" height="630" fill="#F7F8F9"/>', '<rect width="1200" height="8" fill="#F5B400"/>',
            '<text x="64" y="72" font-family="JetBrains Mono" font-size="19" fill="#6E757D">%s</text>' % e(kicker)]
@@ -610,6 +621,40 @@ def load_months():
     return months
 
 
+def latest_redirect(m):
+    """/state-of-slop: forwards to the latest report, and shares as that report."""
+    d, c = m["data"], m["copy"]
+    url = "%s/reports/%s" % (SITE, d["slug"])
+    img = url + ".png"
+    title = "%s: %s" % (d["title"], c.get("headline", ""))
+    return """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{t} — Slop Mop</title>
+<link rel="canonical" href="{u}">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url=/reports/{slug}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="{u}">
+<meta property="og:title" content="{t}">
+<meta property="og:description" content="{desc}">
+<meta property="og:image" content="{img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{img}">
+<script>location.replace("/reports/{slug}" + location.hash)</script>
+</head>
+<body>
+<p>The latest State of Slop is at <a href="/reports/{slug}">{u}</a>.</p>
+</body>
+</html>
+""".format(t=e(title), u=url, slug=d["slug"], desc=e(c.get("description", "")), img=img)
+
+
 def update_sitemap(months):
     """Add or refresh each report, and the archive, in sitemap.xml, with the share image for image search."""
     path = os.path.join(ROOT, "sitemap.xml")
@@ -618,9 +663,11 @@ def update_sitemap(months):
         xml = xml.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
                           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">', 1)
     latest = max(m["data"].get("modified", m["data"]["published"]) for m in months)
-    entries = [("%s/state-of-slop/" % SITE, latest, "monthly", "0.7", "%s/state-of-slop/%s.png" % (SITE, months[0]["slug"]))]
-    entries += [("%s/state-of-slop/%s" % (SITE, m["slug"]), m["data"].get("modified", m["data"]["published"]), "yearly", "0.8",
-                 "%s/state-of-slop/%s.png" % (SITE, m["slug"])) for m in reversed(months)]
+    # /state-of-slop only forwards, so it stays out; drop any entry left from before the move
+    xml = re.sub(r"  <url><loc>%s/state-of-slop[^<]*</loc>.*?</url>\n" % re.escape(SITE), "", xml)
+    entries = [("%s/reports/" % SITE, latest, "monthly", "0.7", "%s/reports/%s.png" % (SITE, months[0]["slug"]))]
+    entries += [("%s/reports/%s" % (SITE, m["slug"]), m["data"].get("modified", m["data"]["published"]), "yearly", "0.8",
+                 "%s/reports/%s.png" % (SITE, m["slug"])) for m in reversed(months)]
     for loc, mod, freq, prio, image in entries:
         line = ("  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority>"
                 "<image:image><image:loc>%s</image:loc></image:image></url>") % (loc, mod, freq, prio, image)
@@ -633,7 +680,7 @@ def update_sitemap(months):
 def main(argv):
     months = load_months()
     if not months:
-        sys.exit("No data files in state-of-slop/data/")
+        sys.exit("No data files in reports/data/state-of-slop/")
     head, header, footer = chrome()
     only = argv[1] if len(argv) > 1 else None
     for m in months:
@@ -649,6 +696,10 @@ def main(argv):
     out = os.path.join(DIR, "index.html")
     open(out, "w", encoding="utf-8").write(archive(months, head, header, footer))
     print("  wrote", os.path.relpath(out, ROOT))
+    os.makedirs(LATEST, exist_ok=True)
+    out = os.path.join(LATEST, "index.html")
+    open(out, "w", encoding="utf-8").write(latest_redirect(months[0]))
+    print("  wrote", os.path.relpath(out, ROOT), "->", months[0]["slug"])
     update_sitemap(months)
 
 
