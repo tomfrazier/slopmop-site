@@ -1,0 +1,627 @@
+{
+ "schema": 1,
+ "slug": "october-2026",
+ "title": "State of Slop: October 2026",
+ "period_label": "October 2026",
+ "published": "2026-10-28",
+ "window": {
+  "from": "2026-09-27",
+  "to": "2026-10-27",
+  "days": 30,
+  "basis": "Every post someone with Slop Mop scrolled past in the window, scored once in production."
+ },
+ "sources": [
+  {
+   "id": "linkedin",
+   "label": "LinkedIn",
+   "kind": "posts",
+   "items": 40520,
+   "in_copy": true
+  },
+  {
+   "id": "other",
+   "label": "Early testing on other sites",
+   "kind": "posts",
+   "items": 498,
+   "in_copy": false
+  }
+ ],
+ "sensitivity": "moderate",
+ "thresholds": {
+  "ai_likely": 0.5,
+  "strong_tell": 0.5,
+  "slop": "Possibly or Likely slop at the chosen sensitivity"
+ },
+ "totals": {
+  "items_scored": 41018,
+  "checks": 46534,
+  "active_installs_30d": 156,
+  "tokens_read": 124269925,
+  "items_seen_not_yet_scored": 536
+ },
+ "headline": {
+  "slop_percent": 19.5,
+  "possibly_percent": 13.1,
+  "likely_percent": 6.4,
+  "ai_likely_percent": 54.3,
+  "slop_gap_points": 34.8,
+  "top_tell": "Empty praise",
+  "reader_agreement_percent": 53.3
+ },
+ "verdicts": {
+  "mild": {
+   "looks_fine": {
+    "posts": 35559,
+    "percent": 86.7
+   },
+   "possibly": {
+    "posts": 3911,
+    "percent": 9.5
+   },
+   "likely": {
+    "posts": 1548,
+    "percent": 3.8
+   },
+   "not_sure": {
+    "posts": 0,
+    "percent": 0.0
+   }
+  },
+  "moderate": {
+   "looks_fine": {
+    "posts": 33037,
+    "percent": 80.5
+   },
+   "possibly": {
+    "posts": 5358,
+    "percent": 13.1
+   },
+   "likely": {
+    "posts": 2623,
+    "percent": 6.4
+   },
+   "not_sure": {
+    "posts": 0,
+    "percent": 0.0
+   }
+  },
+  "aggressive": {
+   "looks_fine": {
+    "posts": 22965,
+    "percent": 56.0
+   },
+   "possibly": {
+    "posts": 8376,
+    "percent": 20.4
+   },
+   "likely": {
+    "posts": 9677,
+    "percent": 23.6
+   },
+   "not_sure": {
+    "posts": 0,
+    "percent": 0.0
+   }
+  }
+ },
+ "verdicts_per_check": {
+  "looks_fine": 80.5,
+  "possibly": 13.0,
+  "likely": 6.5
+ },
+ "score": {
+  "average": 23.9,
+  "median": 18,
+  "share_scoring_70_plus": 6.4
+ },
+ "slop_gap": {
+  "cells": {
+   "slop_and_ai_likely": {
+    "posts": 6352,
+    "percent": 15.5
+   },
+   "slop_not_ai_likely": {
+    "posts": 1629,
+    "percent": 4.0
+   },
+   "ai_likely_not_slop": {
+    "posts": 15932,
+    "percent": 38.8
+   },
+   "neither": {
+    "posts": 17105,
+    "percent": 41.7
+   }
+  },
+  "share_of_slop_not_ai_likely": 20.4,
+  "share_of_ai_likely_not_slop": 71.5
+ },
+ "tells": [
+  {
+   "id": "empty-praise",
+   "name": "Empty praise",
+   "description": "Evaluation with nothing behind it: 'game-changer', 'incredible', 'so proud' without saying what or why.",
+   "strongest_percent": 33.6,
+   "strongest_items": 13786,
+   "strong_percent": 26.0,
+   "strong_in_slop_percent": 54.1,
+   "average_strength": 0.34
+  },
+  {
+   "id": "not-x-but-y",
+   "name": "Not X, but Y",
+   "description": "Contrast framing: knocking down a claim nobody made so the real point sounds like a reveal.",
+   "strongest_percent": 31.1,
+   "strongest_items": 12759,
+   "strong_percent": 28.7,
+   "strong_in_slop_percent": 51.0,
+   "average_strength": 0.31
+  },
+  {
+   "id": "engagement-bait",
+   "name": "Engagement bait",
+   "description": "Asking for likes, comments or 'agree?' instead of earning them.",
+   "strongest_percent": 10.3,
+   "strongest_items": 4229,
+   "strong_percent": 7.3,
+   "strong_in_slop_percent": 13.1,
+   "average_strength": 0.14
+  },
+  {
+   "id": "scroll-stopper",
+   "name": "Scroll-stopper",
+   "description": "A formulaic hook line built to stop the scroll rather than say something.",
+   "strongest_percent": 6.5,
+   "strongest_items": 2677,
+   "strong_percent": 7.2,
+   "strong_in_slop_percent": 16.7,
+   "average_strength": 0.19
+  },
+  {
+   "id": "too-tidy-story",
+   "name": "Too-tidy story",
+   "description": "A manufactured narrative arc: the anecdote that lands exactly on the lesson.",
+   "strongest_percent": 4.9,
+   "strongest_items": 1998,
+   "strong_percent": 5.1,
+   "strong_in_slop_percent": 13.5,
+   "average_strength": 0.15
+  },
+  {
+   "id": "hype-words",
+   "name": "Hype words",
+   "description": "Marketing vocabulary standing in for a claim. Big verbs, no numbers.",
+   "strongest_percent": 4.8,
+   "strongest_items": 1966,
+   "strong_percent": 4.2,
+   "strong_in_slop_percent": 11.7,
+   "average_strength": 0.12
+  },
+  {
+   "id": "flowery-prose",
+   "name": "Flowery prose",
+   "description": "Mannered, ornamental writing: rhythm and imagery over substance.",
+   "strongest_percent": 4.1,
+   "strongest_items": 1689,
+   "strong_percent": 4.0,
+   "strong_in_slop_percent": 11.2,
+   "average_strength": 0.17
+  },
+  {
+   "id": "stiff-phrasing",
+   "name": "Stiff phrasing",
+   "description": "Formal hedging and corporate register where a person would just say it.",
+   "strongest_percent": 2.8,
+   "strongest_items": 1159,
+   "strong_percent": 0.5,
+   "strong_in_slop_percent": 1.2,
+   "average_strength": 0.08
+  },
+  {
+   "id": "no-catch-promises",
+   "name": "No-catch promises",
+   "description": "Benefits with no trade-off or cost mentioned.",
+   "strongest_percent": 1.2,
+   "strongest_items": 485,
+   "strong_percent": 1.0,
+   "strong_in_slop_percent": 2.7,
+   "average_strength": 0.05
+  }
+ ],
+ "readers": {
+  "votes": 241,
+  "sided_votes": 199,
+  "voters": 31,
+  "by_vote": {
+   "maybe": 34,
+   "no": 128,
+   "probably": 79
+  },
+  "agree_with_verdict_percent": 53.3,
+  "agree_with_ai_likelihood_percent": 46.2,
+  "caveat": "Small sample from a few dozen voters; treat as directional."
+ },
+ "timing": {
+  "tz": "UTC",
+  "min_checks": 200,
+  "by_day_of_week": [
+   {
+    "label": "Sunday",
+    "checks": 2458,
+    "slop_percent": 16.1,
+    "likely_percent": 4.8
+   },
+   {
+    "label": "Monday",
+    "checks": 11066,
+    "slop_percent": 20.7,
+    "likely_percent": 6.9
+   },
+   {
+    "label": "Tuesday",
+    "checks": 9842,
+    "slop_percent": 19.4,
+    "likely_percent": 6.6
+   },
+   {
+    "label": "Wednesday",
+    "checks": 7385,
+    "slop_percent": 19.4,
+    "likely_percent": 6.4
+   },
+   {
+    "label": "Thursday",
+    "checks": 7286,
+    "slop_percent": 19.8,
+    "likely_percent": 7.0
+   },
+   {
+    "label": "Friday",
+    "checks": 6521,
+    "slop_percent": 18.6,
+    "likely_percent": 6.0
+   },
+   {
+    "label": "Saturday",
+    "checks": 1976,
+    "slop_percent": 19.4,
+    "likely_percent": 5.2
+   }
+  ],
+  "by_hour": [
+   {
+    "label": "00",
+    "checks": 667,
+    "slop_percent": 17.8,
+    "likely_percent": 4.6
+   },
+   {
+    "label": "01",
+    "checks": 638,
+    "slop_percent": 15.4,
+    "likely_percent": 5.2
+   },
+   {
+    "label": "02",
+    "checks": 655,
+    "slop_percent": 18.2,
+    "likely_percent": 5.5
+   },
+   {
+    "label": "03",
+    "checks": 786,
+    "slop_percent": 15.4,
+    "likely_percent": 4.8
+   },
+   {
+    "label": "04",
+    "checks": 720,
+    "slop_percent": 16.2,
+    "likely_percent": 3.9
+   },
+   {
+    "label": "05",
+    "checks": 1096,
+    "slop_percent": 21.7,
+    "likely_percent": 8.3
+   },
+   {
+    "label": "06",
+    "checks": 1758,
+    "slop_percent": 24.0,
+    "likely_percent": 8.8
+   },
+   {
+    "label": "07",
+    "checks": 1462,
+    "slop_percent": 22.2,
+    "likely_percent": 8.5
+   },
+   {
+    "label": "08",
+    "checks": 2825,
+    "slop_percent": 21.8,
+    "likely_percent": 8.0
+   },
+   {
+    "label": "09",
+    "checks": 2930,
+    "slop_percent": 19.2,
+    "likely_percent": 6.9
+   },
+   {
+    "label": "10",
+    "checks": 2745,
+    "slop_percent": 20.7,
+    "likely_percent": 6.9
+   },
+   {
+    "label": "11",
+    "checks": 2650,
+    "slop_percent": 21.2,
+    "likely_percent": 6.7
+   },
+   {
+    "label": "12",
+    "checks": 2992,
+    "slop_percent": 20.0,
+    "likely_percent": 7.1
+   },
+   {
+    "label": "13",
+    "checks": 3314,
+    "slop_percent": 19.3,
+    "likely_percent": 7.0
+   },
+   {
+    "label": "14",
+    "checks": 4346,
+    "slop_percent": 19.1,
+    "likely_percent": 5.8
+   },
+   {
+    "label": "15",
+    "checks": 3009,
+    "slop_percent": 18.6,
+    "likely_percent": 5.6
+   },
+   {
+    "label": "16",
+    "checks": 3081,
+    "slop_percent": 19.9,
+    "likely_percent": 6.8
+   },
+   {
+    "label": "17",
+    "checks": 2422,
+    "slop_percent": 21.6,
+    "likely_percent": 7.3
+   },
+   {
+    "label": "18",
+    "checks": 1723,
+    "slop_percent": 18.3,
+    "likely_percent": 6.8
+   },
+   {
+    "label": "19",
+    "checks": 1910,
+    "slop_percent": 17.7,
+    "likely_percent": 4.8
+   },
+   {
+    "label": "20",
+    "checks": 1762,
+    "slop_percent": 17.1,
+    "likely_percent": 5.0
+   },
+   {
+    "label": "21",
+    "checks": 1382,
+    "slop_percent": 16.0,
+    "likely_percent": 5.1
+   },
+   {
+    "label": "22",
+    "checks": 954,
+    "slop_percent": 15.1,
+    "likely_percent": 3.0
+   },
+   {
+    "label": "23",
+    "checks": 707,
+    "slop_percent": 15.6,
+    "likely_percent": 4.5
+   }
+  ],
+  "by_date": [
+   {
+    "label": "2026-09-27",
+    "checks": 193,
+    "slop_percent": 7.8,
+    "likely_percent": 2.1
+   },
+   {
+    "label": "2026-09-28",
+    "checks": 1242,
+    "slop_percent": 18.4,
+    "likely_percent": 5.5
+   },
+   {
+    "label": "2026-09-29",
+    "checks": 1546,
+    "slop_percent": 17.8,
+    "likely_percent": 4.9
+   },
+   {
+    "label": "2026-09-30",
+    "checks": 1377,
+    "slop_percent": 15.9,
+    "likely_percent": 5.3
+   },
+   {
+    "label": "2026-10-01",
+    "checks": 1500,
+    "slop_percent": 23.8,
+    "likely_percent": 10.1
+   },
+   {
+    "label": "2026-10-02",
+    "checks": 1525,
+    "slop_percent": 18.9,
+    "likely_percent": 6.6
+   },
+   {
+    "label": "2026-10-03",
+    "checks": 299,
+    "slop_percent": 22.4,
+    "likely_percent": 4.7
+   },
+   {
+    "label": "2026-10-04",
+    "checks": 831,
+    "slop_percent": 14.0,
+    "likely_percent": 4.0
+   },
+   {
+    "label": "2026-10-05",
+    "checks": 2239,
+    "slop_percent": 18.7,
+    "likely_percent": 5.8
+   },
+   {
+    "label": "2026-10-06",
+    "checks": 2660,
+    "slop_percent": 19.4,
+    "likely_percent": 6.2
+   },
+   {
+    "label": "2026-10-07",
+    "checks": 2183,
+    "slop_percent": 19.8,
+    "likely_percent": 7.0
+   },
+   {
+    "label": "2026-10-08",
+    "checks": 1776,
+    "slop_percent": 16.6,
+    "likely_percent": 4.4
+   },
+   {
+    "label": "2026-10-09",
+    "checks": 1404,
+    "slop_percent": 16.2,
+    "likely_percent": 4.5
+   },
+   {
+    "label": "2026-10-10",
+    "checks": 541,
+    "slop_percent": 20.1,
+    "likely_percent": 5.9
+   },
+   {
+    "label": "2026-10-11",
+    "checks": 370,
+    "slop_percent": 14.9,
+    "likely_percent": 5.1
+   },
+   {
+    "label": "2026-10-12",
+    "checks": 1418,
+    "slop_percent": 19.0,
+    "likely_percent": 6.5
+   },
+   {
+    "label": "2026-10-13",
+    "checks": 1786,
+    "slop_percent": 17.7,
+    "likely_percent": 6.8
+   },
+   {
+    "label": "2026-10-14",
+    "checks": 1644,
+    "slop_percent": 19.9,
+    "likely_percent": 5.7
+   },
+   {
+    "label": "2026-10-15",
+    "checks": 2014,
+    "slop_percent": 18.6,
+    "likely_percent": 5.6
+   },
+   {
+    "label": "2026-10-16",
+    "checks": 1759,
+    "slop_percent": 17.5,
+    "likely_percent": 5.8
+   },
+   {
+    "label": "2026-10-17",
+    "checks": 686,
+    "slop_percent": 16.9,
+    "likely_percent": 5.5
+   },
+   {
+    "label": "2026-10-18",
+    "checks": 509,
+    "slop_percent": 19.3,
+    "likely_percent": 6.1
+   },
+   {
+    "label": "2026-10-19",
+    "checks": 3146,
+    "slop_percent": 22.7,
+    "likely_percent": 8.5
+   },
+   {
+    "label": "2026-10-20",
+    "checks": 2464,
+    "slop_percent": 21.0,
+    "likely_percent": 6.9
+   },
+   {
+    "label": "2026-10-21",
+    "checks": 2181,
+    "slop_percent": 20.7,
+    "likely_percent": 7.1
+   },
+   {
+    "label": "2026-10-22",
+    "checks": 1996,
+    "slop_percent": 20.7,
+    "likely_percent": 8.3
+   },
+   {
+    "label": "2026-10-23",
+    "checks": 1833,
+    "slop_percent": 21.4,
+    "likely_percent": 7.0
+   },
+   {
+    "label": "2026-10-24",
+    "checks": 450,
+    "slop_percent": 20.2,
+    "likely_percent": 4.2
+   },
+   {
+    "label": "2026-10-25",
+    "checks": 555,
+    "slop_percent": 20.0,
+    "likely_percent": 5.8
+   },
+   {
+    "label": "2026-10-26",
+    "checks": 3021,
+    "slop_percent": 21.8,
+    "likely_percent": 6.8
+   },
+   {
+    "label": "2026-10-27",
+    "checks": 1386,
+    "slop_percent": 20.6,
+    "likely_percent": 8.4
+   }
+  ]
+ },
+ "by_source": null
+}

@@ -1,0 +1,34 @@
+{
+ "headline": "Most AI-likely posts were fine",
+ "dek": "Slop Mop read more than 40,000 LinkedIn posts between 27 September and 27 October. One in five read as slop. More than half read as AI-likely. They were mostly different posts.",
+ "description": "October 2026: one LinkedIn post in five read as slop, more than half read as AI-likely, and 71.5% of the AI-likely posts were fine. The Slop Gap, the signs that showed up most, and when slop peaks.",
+ "hero_alt": "State of Slop, October 2026. 54.3% of LinkedIn posts read as AI-likely and 19.5% read as slop: a Slop Gap of 34.8 points.",
+ "sections": {
+  "overview": [
+   "At the default sensitivity, 80.5% of posts looked fine. 13.1% were possibly slop and 6.4% were likely slop. The average post scored 23.9 out of 100, and the median 18.",
+   "Sensitivity moves the line a long way. On Mild, 13.3% of posts count as slop. On Aggressive, 44% do. Everything else on this page uses Moderate, the default."
+  ],
+  "gap": [
+   "Slop Mop asks two separate questions about every post: is this slop, and does it read as AI-written? This month the answers came apart. 54.3% of posts read as AI-likely and 19.5% read as slop. We call the distance between those two numbers the Slop Gap. In October it was 34.8 points.",
+   "71.5% of the AI-likely posts were fine. A model may well have helped write them, and they were still worth reading. Going the other way, 20.4% of the slop sat under the AI-likely line. Plenty of slop needs no help from a model.",
+   "That's why Slop Mop judges the writing. An AI-likely reading never flags a post on its own."
+  ],
+  "tells": [
+   "Empty praise was the strongest sign in 33.6% of posts: “game-changer”, “incredible”, “so proud”, with nothing said about what or why. It was strong in more than half of the slop.",
+   "“Not X, but Y” came a close second, the strongest sign in 31.1% of posts. It knocks down a claim nobody made so the real point sounds like a reveal. After those two there's a long drop to Engagement bait at 10.3% and Scroll-stopper at 6.5%."
+  ],
+  "timing": [
+   "Slop peaks on Monday, when 20.7% of what readers scrolled past was slop, and dips on Sunday, at 16.1%. By hour, the high point is 06:00 UTC at 24.0% and the low is 22:00 UTC at 15.1%.",
+   "These are shares of checks, so a post seen twice counts twice: they describe what people actually scrolled past. Hours are UTC."
+  ],
+  "readers": [
+   "Readers who voted sided with Slop Mop's verdict 53.3% of the time. That's 199 votes with a side, from 31 people: a small sample and close to a coin flip, so treat it as a first read.",
+   "Voters agreed with the slop verdict a little more often than with the AI-likelihood reading, which they matched 46.2% of the time. When a reader disagrees, their vote wins in their own feed and the post goes to a person for review."
+  ],
+  "misses": [
+   "Judging writing is subjective, and Slop Mop will be wrong. The reader votes above are the clearest measure of that we have so far, and they say there's work to do. Every vote that disagrees with a verdict is reviewed, and the ones Slop Mop got wrong are used to tune the tells and the score.",
+   "If a verdict looks badly off, email hello@slopmop.lol with the post's link."
+  ]
+ },
+ "post": "54% of LinkedIn posts read like AI wrote them. Most of those were fine."
+}
