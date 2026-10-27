@@ -12,11 +12,13 @@
     emailEndpoint: "https://formspree.io/f/xaenejjw",
     /* The top announcement bar on every page. Set show to false to hide it. Each new
        url counts as a new announcement, so it comes back for people who dismissed the last one.
-       It stays hidden on the page it links to. */
+       It stays hidden on the page it links to. shortText replaces text on phones, where
+       the bar also drops the mop and the tag so it fits on two lines. */
     announcement: {
       show: true,
       tag: "New report",
       text: "State of Slop, October 2026: one LinkedIn post in five was slop.",
+      shortText: "State of Slop, October 2026: 1 LinkedIn post in 5 was slop.",
       cta: "Read the report",
       url: "/reports/state-of-slop-october-2026"
     },
@@ -70,7 +72,10 @@
     var link = $(".announce-link", bar);
     link.href = an.url;
     $("[data-announce-tag]", bar).textContent = an.tag || "New";
-    $("[data-announce-text]", bar).textContent = an.text || "";
+    var text = $("[data-announce-text]", bar), full = document.createElement("span"), short = document.createElement("span");
+    full.className = "announce-full"; full.textContent = an.text || "";
+    short.className = "announce-short"; short.textContent = an.shortText || an.text || "";
+    text.textContent = ""; text.appendChild(full); text.appendChild(short);
     $("[data-announce-cta]", bar).textContent = an.cta || "";
     bar.hidden = false;
     link.addEventListener("click", function () { gaEvent("announcement_click", { link_url: an.url, link_location: where(link) }); });
