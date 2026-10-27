@@ -9,20 +9,26 @@ in the page and the FAQPage markup can't drift apart.
   python3 .github/scripts/media/build.py
 
 The header, footer and analytics head are lifted from about.html. The images need
-`pip install cairosvg` and the Archivo and JetBrains Mono fonts installed locally.
+`pip install cairosvg` and the Archivo and JetBrains Mono fonts installed locally; the
+press kit's document needs beautifulsoup4, python-docx, pandoc and LibreOffice (see press_doc.py).
 """
 import html
 import json
 import os
 import shutil
 import sys
+import tempfile
 import zipfile
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import press_doc  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 SITE = "https://slopmop.lol"
 URL = SITE + "/media"
 IMG = SITE + "/media.png"
 UPDATED = "2026-10-27"
+UPDATED_LONG = "27 October 2026"
 e = html.escape
 
 # ---------- facts ----------
@@ -294,7 +300,7 @@ def page(head, header, footer, scripts):
     quotes = "".join(
         '<figure class="mk-quote" id="quote-%d"><blockquote><p>%s</p></blockquote>'
         '<figcaption><span class="mk-who"><b>Tom Frazier</b><span>Founder, Slop Mop and Artimovo</span></span>'
-        '<span class="mono">on %s</span><span class="badge badge-paid">draft</span>%s</figcaption></figure>'
+        '<span class="mono">on %s</span>%s</figcaption></figure>'
         % (i, e(q), e(topic), copy_btn("quote-%d" % i)) for i, (q, topic) in enumerate(QUOTES, 1))
 
     topics = "".join("<li><strong>%s.</strong> %s</li>" % (e(t), e(d)) for t, d in TOPICS)
@@ -384,13 +390,13 @@ def page(head, header, footer, scripts):
 </section>
 <section id="quotes">
 <h2>Quotes you can use</h2>
-<p>Attribute to Tom Frazier, founder of Slop Mop and Artimovo. <span class="mk-tbd">placeholder</span> These are drafts waiting for Tom's sign-off.</p>
+<p>Attribute to Tom Frazier, founder of Slop Mop and Artimovo.</p>
 <div class="mk-quotes">{quotes}</div>
 </section>
 <section id="founder">
 <h2>About the founder</h2>
 <div class="mk-founder">
-  <div class="mk-headshot"><img src="assets/img/tom.webp" alt="Tom Frazier" width="128" height="128"><span class="mk-tbd">placeholder</span><span class="mono">small preview only; hi-res below</span></div>
+  <div class="mk-headshot"><img src="assets/img/tom.webp" alt="Tom Frazier" width="128" height="128"></div>
   <div>
     <h3 style="margin-top:0">Tom Frazier</h3>
     <p class="mk-role">Founder of Artimovo and Slop Mop · author of <em>The Idea Chose You</em></p>
@@ -424,11 +430,10 @@ def page(head, header, footer, scripts):
 </section>
 <section id="assets">
 <h2>Logos and images</h2>
-<p>Use them as they are: don't rotate, recolor or outline the mop. Write the name as Slop Mop, two words. Everything below is in the <a href="press/slop-mop-press-kit.zip" download>press kit zip</a>.</p>
+<p>Use them as they are: don't rotate, recolor or outline the mop. Write the name as Slop Mop, two words. The <a href="press/slop-mop-press-kit.zip" download>press kit zip</a> has everything below, plus this whole page as a PDF, Word and plain-text document.</p>
 <div class="mk-video"><div class="mk-video-stage"><video src="slopmop-video.mp4" poster="assets/video/tour-poster.jpg" playsinline preload="metadata" width="1920" height="1080" controlslist="noplaybackrate" disablepictureinpicture aria-label="Slop Mop product video, 50 seconds, with sound"></video><button class="mk-video-play" type="button" aria-label="Play the video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg></button></div><div class="mk-asset-text"><b>Product video</b><span>Fifty seconds on what Slop Mop does in a LinkedIn feed, with sound. 1080p MP4, 16 MB.</span><div class="mk-asset-dl"><a class="btn btn-secondary btn-sm" href="slopmop-video.mp4" download>{dl}MP4</a></div></div></div>
 <div class="mk-assets">{assets}</div>
-<div class="mk-row" style="margin-top:var(--space-7)"><a class="btn btn-primary btn-sm" href="press/slop-mop-press-kit.zip" download>{dl}Download everything (.zip)</a></div>
-<p class="mk-foot"><span class="mk-tbd">placeholder</span> Product screenshots of the fold strip and details panel in a real feed are still to come.</p>
+<div class="mk-row" style="margin-top:var(--space-7)"><a class="btn btn-primary btn-sm" href="press/slop-mop-press-kit.zip" download>{dl}Download everything (.zip, 16 MB)</a></div>
 </section>
 <section id="coverage">
 <h2>Coverage so far</h2>
@@ -440,7 +445,7 @@ def page(head, header, footer, scripts):
 </section>
 <section id="contact">
 <h2>Press contact</h2>
-<p>For interviews, TV and podcast bookings, speaking and data requests, email <a href="mailto:{email}">{email}</a>. <span class="mk-tbd">placeholder</span></p>
+<p>For interviews, TV and podcast bookings, speaking and data requests, email <a href="mailto:{email}">{email}</a>.</p>
 <p>To try Slop Mop, <a href="{store}" data-add>add it to your browser</a>. It's free for one feed.</p>
 </section>
 <section id="faq">
@@ -556,9 +561,11 @@ def images():
         z.write(os.path.join(ROOT, "og-image-4.png"), "slop-mop-press-kit/images/slop-mop-share-card.png")
         z.write(os.path.join(ROOT, "reports", "state-of-slop-october-2026.png"), "slop-mop-press-kit/images/state-of-slop-october-2026.png")
         z.write(os.path.join(ROOT, "media.png"), "slop-mop-press-kit/images/slop-mop-media-kit.png")
-        z.writestr("slop-mop-press-kit/boilerplate.txt",
-                   "About Slop Mop\n\n%s\n\nIn one sentence\n\n%s\n\nFounder\n\n%s\n\nPress contact: %s\nMedia kit: %s\n"
-                   % (BOILERPLATE, BOILERPLATE_SHORT, BIO_SHORT, PRESS_EMAIL, URL))
+        z.write(os.path.join(ROOT, "slopmop-video.mp4"), "slop-mop-press-kit/video/slop-mop-product-video.mp4")
+        # The kit's document is the page itself, as PDF, Word and plain text.
+        with tempfile.TemporaryDirectory() as tmp:
+            for path in press_doc.write(open(os.path.join(ROOT, "media.html"), encoding="utf-8").read(), tmp, UPDATED_LONG):
+                z.write(path, "slop-mop-press-kit/" + os.path.basename(path))
 
 
 def main(argv):
