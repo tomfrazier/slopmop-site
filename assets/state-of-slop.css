@@ -37,27 +37,45 @@
 .sos-table .sos-current { background: var(--surface-page); }
 .sos-table th .mono { font-size: var(--text-3xs); color: var(--text-faint); margin-left: 6px; }
 
-/* slop gap */
-.sos-gapnums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin: var(--space-8) 0 var(--space-7); max-width: 70ch; }
-.sos-gapnums > div { display: grid; gap: 4px; padding-top: var(--space-4); border-top: 3px solid var(--ink-400); }
-.sos-gapnums > div:nth-child(2) { border-top-color: var(--mop-500); }
-.sos-gapnums .sos-gapnum-gap { border-top-color: var(--ink-900); }
-.sos-gapnums b { font: var(--weight-bold) var(--text-4xl)/1 var(--font-display); letter-spacing: -0.01em; color: var(--text-body); }
-.sos-gapnums small { font-size: var(--text-lg); }
-.sos-gapnums span { font: var(--type-body-sm); color: var(--text-muted); }
+/* callout: the writing, not the writer */
+.sos-callout { margin: var(--space-9) 0; padding: var(--space-8); max-width: 70ch; border-radius: var(--radius-md); background: var(--surface-sunken); border: 1px solid var(--border-hairline); display: grid; gap: var(--space-5); }
+.sos .sos-callout h2 { margin: 0; }
+.sos-callout-lead { font: var(--weight-medium) var(--text-lg)/1.5 var(--font-body); color: var(--text-body); margin: 0; }
+.sos-callout-note { font: var(--type-body-sm); color: var(--text-muted); margin: 0; }
+.sos-matrix { border-collapse: separate; border-spacing: 6px; font: var(--type-body-sm); margin: 0 -6px; }
+.sos-matrix th { text-align: left; font-weight: 600; color: var(--text-body); padding: 4px 8px; white-space: nowrap; }
+.sos-matrix thead th { color: var(--text-muted); font-weight: 500; }
+.sos-matrix td { padding: 0; }
+.sos-pill { display: block; padding: 10px 14px; border-radius: var(--radius-md); font-weight: 600; white-space: nowrap; }
+.sos-pill-shown { background: var(--surface-card); color: var(--text-body); border: 1px solid var(--blue-200); }
+.sos-pill-shown::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--flag-clean); margin-right: 8px; }
+.sos-pill-folded { background: var(--flag-warn-wash); color: var(--text-body); border: 1px solid var(--mop-300); }
+.sos-pill-folded::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--flag-warn); margin-right: 8px; }
 
-.sos-gap { position: relative; max-width: 70ch; padding: 0 0 28px 28px; margin: var(--space-6) 0 var(--space-4); }
-.sos-axis { position: absolute; font-size: var(--text-3xs); color: var(--text-faint); }
-.sos-axis-x { left: 28px; bottom: 0; }
-.sos-axis-y { left: 0; top: 0; transform: rotate(-90deg) translateX(-100%); transform-origin: 0 0; white-space: nowrap; }
-.sos-gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.sos-cell { border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: var(--space-6); display: grid; gap: 4px; align-content: start; background: var(--surface-card); }
-.sos-cell b { font: var(--weight-bold) var(--text-2xl)/1.1 var(--font-display); color: var(--text-body); }
-.sos-cell-t { font-weight: 600; color: var(--text-body); }
-.sos-cell .mono { font-size: var(--text-2xs); color: var(--text-faint); }
-.sos-cell-n { font: var(--type-body-sm); color: var(--text-muted); }
-.sos-c-slop, .sos-c-both { background: var(--flag-warn-wash); border-color: var(--mop-300); }
-.sos-c-ai { background: var(--surface-sunken); }
+/* examples */
+.sos h4 { margin: var(--space-8) 0 var(--space-2); font: var(--weight-semibold) var(--text-lg)/1.3 var(--font-display); color: var(--text-body); }
+.sos h4 .mono { font-size: var(--text-2xs); font-weight: 400; color: var(--text-faint); margin-left: 8px; }
+.sos-ex { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); max-width: 70ch; margin: var(--space-5) 0; }
+.sos-ex-card { margin: 0; padding: var(--space-5) var(--space-6); border-radius: var(--radius-md); border: 1px solid var(--border-hairline); background: var(--surface-card); display: grid; gap: 8px; align-content: start; }
+.sos-ex-card figcaption { font-size: var(--text-2xs); color: var(--text-faint); }
+.sos-ex-card blockquote { margin: 0; padding: 0; border: 0; font: var(--type-body-sm); color: var(--text-body); }
+.sos-ex-slop { background: var(--flag-warn-wash); border-color: var(--mop-300); }
+.sos-ex-slop figcaption::before, .sos-ex-fine figcaption::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.sos-ex-slop figcaption::before { background: var(--flag-warn); }
+.sos-ex-fine figcaption::before { background: var(--flag-clean); }
+
+/* token info: hover, focus or tap shows it; the close button or Escape hides it */
+.sos-info { position: relative; display: inline-block; vertical-align: 0.1em; margin-left: 6px; }
+.sos-info-btn { all: unset; box-sizing: border-box; display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; border: 1px solid currentColor; font: 600 11px/1 var(--font-mono); color: var(--text-muted); cursor: pointer; }
+.sos-info-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.sos-tip { display: none; position: absolute; z-index: 20; top: calc(100% + 8px); left: -12px; width: 280px; max-width: calc(100vw - 48px); padding: var(--space-5) 36px var(--space-5) var(--space-5); border-radius: var(--radius-md); background: var(--surface-card); color: var(--text-body); border: 1px solid var(--border-default); box-shadow: var(--shadow-pop); font: var(--weight-regular) var(--text-sm)/1.5 var(--font-body); letter-spacing: 0; text-transform: none; white-space: normal; }
+.sos-tip b { display: block; margin-bottom: 4px; font-weight: 600; }
+.sos-tip-x { all: unset; position: absolute; top: 6px; right: 8px; width: 24px; height: 24px; text-align: center; font-size: 18px; line-height: 24px; color: var(--text-muted); cursor: pointer; border-radius: 4px; }
+.sos-tip-x:focus-visible { outline: 2px solid currentColor; }
+.sos-info:hover .sos-tip, .sos-info:focus-within .sos-tip, .sos-info.is-open .sos-tip { display: block; }
+.sos-info.is-dismissed .sos-tip { display: none; }
+.glance-tile .sos-info { margin-left: 8px; }
+.sos-stats-1 { grid-template-columns: minmax(0, 280px); }
 
 /* ranked rows */
 .sos-rows-head { display: flex; justify-content: flex-end; gap: var(--space-6); max-width: 70ch; font-size: var(--text-3xs); color: var(--text-faint); margin-top: var(--space-7); }
@@ -94,11 +112,10 @@
 .sos-arch a:hover b { text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .sos-stats, .sos-gapnums { grid-template-columns: 1fr; }
+  .sos-stats { grid-template-columns: 1fr; }
   .sos-row { grid-template-columns: 110px minmax(0, 1fr) 56px; }
   .sos-row-s, .sos-rows-head span:last-child { display: none; }
   .sos-row-dow { grid-template-columns: 110px minmax(0, 1fr) 56px; }
-  .sos-gap-grid { grid-template-columns: 1fr; }
-  .sos-axis { display: none; }
-  .sos-gap { padding: 0; }
+  .sos-ex { grid-template-columns: 1fr; }
+  .sos-tip { left: auto; right: -12px; }
 }
