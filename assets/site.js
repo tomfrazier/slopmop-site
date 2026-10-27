@@ -10,8 +10,16 @@
     safariStoreUrl: "",
     productHuntUrl: "https://www.producthunt.com/products/slop-mop",
     emailEndpoint: "https://formspree.io/f/xaenejjw",
-    /* The top announcement bar (Product Hunt). Set to true to show it again. */
-    announcementBar: false,
+    /* The top announcement bar on every page. Set show to false to hide it. Each new
+       url counts as a new announcement, so it comes back for people who dismissed the last one.
+       It stays hidden on the page it links to. */
+    announcement: {
+      show: true,
+      tag: "New report",
+      text: "State of Slop, October 2026: one LinkedIn post in five was slop.",
+      cta: "Read the report",
+      url: "/reports/state-of-slop-october-2026"
+    },
     /* Social icons in the footer stay hidden until a URL is filled in. */
     social: {
       linkedin: "",
@@ -51,7 +59,26 @@
     /* Key event: someone heading to their browser's store to install. */
     a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser }); });
   });
-  $$("[data-ph]").forEach(function (a) { if (SITE.productHuntUrl) { a.href = SITE.productHuntUrl; } a.hidden = !(SITE.announcementBar && SITE.productHuntUrl); });
+  /* announcement bar */
+  (function () {
+    var bar = $("[data-announce]"), an = SITE.announcement;
+    if (!bar || !an || !an.show || !an.url) return;
+    var here = location.pathname.replace(/\.html$/, "").replace(/\/$/, "");
+    if (here === an.url.replace(/\/$/, "")) return;
+    var key = "slopmop:announce-dismissed";
+    try { if (localStorage.getItem(key) === an.url) return; } catch (e) {}
+    var link = $(".announce-link", bar);
+    link.href = an.url;
+    $("[data-announce-tag]", bar).textContent = an.tag || "New";
+    $("[data-announce-text]", bar).textContent = an.text || "";
+    $("[data-announce-cta]", bar).textContent = an.cta || "";
+    bar.hidden = false;
+    link.addEventListener("click", function () { gaEvent("announcement_click", { link_url: an.url, link_location: where(link) }); });
+    $("[data-announce-x]", bar).addEventListener("click", function () {
+      bar.hidden = true;
+      try { localStorage.setItem(key, an.url); } catch (e) {}
+    });
+  })();
   $$("[data-social]").forEach(function (a) {
     var url = SITE.social[a.getAttribute("data-social")];
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
