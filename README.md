@@ -86,3 +86,11 @@ MIT.
 The title, description, Open Graph, Twitter and JSON-LD tags **must stay inside `<head>`**, above `<body>`. LinkedIn, Facebook, Slack and X read the raw HTML without running JavaScript and ignore tags in `<body>`. 
 
 After deploying, re-scrape: https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ . To force a refresh, rename the image (og-image-4.png) and update every og:image / twitter:image.
+
+## Security headers
+
+GitHub Pages can't set response headers, so each page carries its Content-Security-Policy as a `<meta http-equiv>` tag right after `<meta charset>`. The policy is in `.github/scripts/csp.py`: the site's own files, Google Analytics, Google Fonts, Formspree, the API (for the XL checkout link) and Polar's checkout, plus the sha256 of each inline `<script>` on that page, so a script injected into a page doesn't run.
+
+- **After changing any inline script or adding a page, run `python3 .github/scripts/csp.py`** and commit. The CSP workflow fails a PR whose tags are stale. The media and State of Slop builders run it themselves.
+- **Loading something new** (another font host, a widget, an embed) means adding its host to `POLICY` in `csp.py`, or the browser blocks it. An external `<script src>` is allowed by its exact URL automatically.
+- **What a meta tag can't do:** `frame-ancestors` (clickjacking), reporting, and HSTS only work as real headers. GitHub Pages sends no HSTS for a custom domain, so `Strict-Transport-Security` needs a proxy in front (Cloudflare) or a host that sets headers.
