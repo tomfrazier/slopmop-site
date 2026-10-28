@@ -136,3 +136,34 @@
   .sos-head .ph-copy > .lede { order: 4; }
   .sos-head .ph-copy > .sos-byline { order: 5; }
 }
+
+/* get slop mop: the "become a user" band, between the findings and the method */
+.prose > section.sos-join { counter-increment: none; scroll-margin-top: 88px; }
+.sos-join { margin: var(--space-11) 0; padding: var(--space-10); border-radius: var(--radius-lg); background: var(--surface-page); color: var(--text-body);
+  border: 1px solid var(--border-hairline); display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: var(--space-10); align-items: center; }
+.sos .sos-join h2 { margin: var(--space-5) 0 0; font: var(--weight-bold) clamp(32px, 4.4vw, 48px)/1.05 var(--font-display); letter-spacing: -0.02em; color: var(--text-body); }
+.prose > section.sos-join > .sos-join-copy h2::before { content: none; }
+.sos-join h2 .hl { box-shadow: inset 0 -0.14em 0 var(--mop-500); }
+.sos-join-lede { margin: var(--space-6) 0 0; font: var(--weight-regular) var(--text-lg)/1.5 var(--font-body); color: var(--text-muted); max-width: 46ch; }
+.sos .sos-join-points { margin: var(--space-7) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-4); }
+.sos .sos-join-points li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; margin: 0; padding: 0; font: var(--type-body); color: var(--text-body); }
+.sos-join-points svg { width: 18px; height: 18px; margin-top: 3px; color: var(--mop-500); }
+.sos-join-ctas { margin-top: var(--space-8); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
+.sos-join-ctas .btn { height: 48px; padding: 0 var(--space-8); font-size: 16px; }
+.sos-join-ctas .btn svg { width: 18px; height: 18px; }
+.sos-join-ctas .mono { font-size: var(--text-2xs); color: var(--text-faint); }
+/* a tiny feed with two posts mopped, in the extension's own fold-strip copy */
+.sos-join-feed { display: grid; gap: 8px; }
+.sos-join-post { display: grid; gap: 7px; padding: 14px; border-radius: var(--radius-md); background: var(--surface-raised); border: 1px solid var(--border-hairline); }
+.sos-join-post i { display: block; height: 6px; border-radius: 3px; background: var(--track); }
+.sos-join-post i:nth-child(2) { width: 82%; }
+.sos-join-post i:nth-child(3) { width: 58%; }
+.sos-join-fold { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border-radius: var(--radius-md); background: var(--surface-sunken);
+  border: 1px dashed var(--border-default); font: var(--weight-medium) 12px/1 var(--font-body); color: var(--text-muted); }
+.sos-join-fold img { border-radius: 4px; }
+.sos-join-fold b { margin-left: auto; font-weight: 500; color: var(--text-link); }
+@media (max-width: 760px) {
+  .sos-join { grid-template-columns: 1fr; padding: var(--space-8) var(--space-7); gap: var(--space-8); }
+  .sos-join-feed { display: none; }
+  .sos-join-ctas .btn { width: 100%; }
+}

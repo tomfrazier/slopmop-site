@@ -171,6 +171,44 @@ def callout(co):
         e(co["title"]), e(co["lead"]), head, rows, e(co["note"]))
 
 
+STORE_URL = "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"
+DOWNLOAD_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+                 '<path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>')
+CHECK_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+              '<path d="M20 6 9 17l-5-5"/></svg>')
+JOIN = {
+    "eyebrow": "get slop mop · free",
+    "headline": ["Only the posts", "worth your time."],
+    "lede": "{one_in} posts in this report read as slop. Slop Mop reads your feed ahead of you and folds away the junk, whoever wrote it.",
+    "points": ["Slop folds into a strip you can reopen with one click",
+               "Every verdict shows the signs behind it",
+               "Your vote overrides the mop in your feed"],
+    "cta": "Add to browser — free",
+    "note": "free for one feed · 250 checks a day · no account needed",
+}
+
+
+def join(d, c, store_url):
+    """The "become a user" band: the homepage promise, what you get, and the same Add to browser link as the site.
+    Wording can be changed for one month with a "join" object in its copy file; anything left out uses JOIN."""
+    j = dict(JOIN, **c.get("join", {}))
+    lede = j["lede"].replace("{one_in}", one_in(d["headline"]["slop_percent"]))
+    first, hl = j["headline"]
+    points = "".join("<li>%s<span>%s</span></li>" % (CHECK_ICON, e(x)) for x in j["points"])
+    feed = ('<div class="sos-join-feed" aria-hidden="true">'
+            '<div class="sos-join-post"><i></i><i></i><i></i></div>'
+            '<div class="sos-join-fold"><img src="../assets/img/mark.svg" alt="" width="18" height="18"><span>This post was hidden</span><b>Show post</b></div>'
+            '<div class="sos-join-post"><i></i><i></i></div>'
+            '<div class="sos-join-fold"><img src="../assets/img/mark.svg" alt="" width="18" height="18"><span>This post was hidden</span><b>Show post</b></div>'
+            '<div class="sos-join-post"><i></i><i></i><i></i></div></div>')
+    return ('<section class="sos-join" id="get-slop-mop" data-theme="dark" aria-labelledby="sos-join-h">'
+            '<div class="sos-join-copy"><span class="eyebrow">%s</span>'
+            '<h2 id="sos-join-h">%s <span class="hl">%s</span></h2><p class="sos-join-lede">%s</p>'
+            '<ul class="sos-join-points">%s</ul>'
+            '<div class="sos-join-ctas"><a class="btn btn-primary" data-add href="%s">%s%s</a><span class="mono">%s</span></div></div>'
+            '%s</section>') % (e(j["eyebrow"]), e(first), e(hl), e(lede), points, e(store_url), DOWNLOAD_ICON, e(j["cta"]), e(j["note"]), feed)
+
+
 def tell_rows(tells):
     top = max(t["strongest_percent"] for t in tells) or 1
     rows = []
@@ -224,6 +262,8 @@ def figure(t):
 # ---------- the report page ----------
 
 def report(d, c, head, header, footer, months):
+    m = re.search(r'nav-cta" data-add href="([^"]+)"', header)
+    store_url = m.group(1) if m else STORE_URL
     slug = d["slug"]
     url = "%s/reports/%s" % (SITE, slug)
     h = d["headline"]
@@ -272,6 +312,7 @@ def report(d, c, head, header, footer, months):
                 e(t["name"]), pct(t["strongest_percent"]), e(t["description"]), example_pair(ex[t["id"]]), figure(t) if i < 2 else "")
     body += '<p><a href="../how-it-works.html#tells">All nine signs, with examples</a></p>'
     add("tells", "The signs that showed up most", body)
+    sections.append(join(d, c, store_url))
 
     if tm:
         body = paras(c, "timing")
