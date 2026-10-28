@@ -37,6 +37,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import csp  # noqa: E402
+
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 DIR = os.path.join(ROOT, "reports")
 DATA = os.path.join(DIR, "data", "state-of-slop")
@@ -742,6 +745,7 @@ def main(argv):
     open(out, "w", encoding="utf-8").write(latest_redirect(months[0]))
     print("  wrote", os.path.relpath(out, ROOT), "->", months[0]["slug"])
     update_sitemap(months)
+    csp.run()  # the new pages' inline scripts need their hashes in each page's Content-Security-Policy
 
 
 if __name__ == "__main__":
