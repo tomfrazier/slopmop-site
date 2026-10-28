@@ -90,3 +90,8 @@ word-salad	Word salad
 shrimp-jesus	Shrimp Jesus
 wireborn	Wireborn
 your-ai-slop-bores-me	Your AI Slop Bores Me
+chatbait	Chatbait
+fakecast	Fakecast
+liquid-content	Liquid content
+magic-tokens	Magic tokens
+sloppypasta	Sloppypasta

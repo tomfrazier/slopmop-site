@@ -308,7 +308,69 @@ def figure_html(path, fig):
             f'<figcaption>{esc(fig["caption"])}</figcaption></figure>')
 
 
-def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", ld_extra=None, network=None, share_text=None):
+# ---------------------------------------------------------------- FAQ
+# Glossary pages and the glossary hub end with a short FAQ: an accordion on the page plus FAQPage JSON-LD for search
+# engines and LLMs. Answers are inline Markdown.
+def faq_ld(url, qa):
+    return {"@type": "FAQPage", "@id": url + "#faq", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": H.unescape(re.sub(r"<[^>]+>", "", inline(a)))}}
+        for q, a in qa]}
+
+
+def faq_html(title, qa):
+    items = "\n".join(f'  <details><summary>{esc(q)}</summary><div class="a"><p>{inline(a)}</p></div></details>' for q, a in qa)
+    return f'<div class="related page-faq" id="faq"><h2>{esc(title)}</h2>\n<div class="faq">\n{items}\n</div></div>'
+
+
+def sections(body):
+    """The body's H2 sections as [(heading, markdown)]."""
+    parts = re.split(r"^## (.+)$", body, flags=re.M)
+    return [(parts[i].strip(), parts[i + 1]) for i in range(1, len(parts) - 1, 2)]
+
+
+def first_para(text, n=2):
+    """The first plain paragraph of a section, cut to its first n sentences (initials like "S. Weld" don't end one)."""
+    text = re.sub(r":::(slop|fine|example)\n.*?\n:::", "", text, flags=re.S)
+    for block in re.split(r"\n\s*\n", text):
+        b = " ".join(block.split())
+        if b and not re.match(r"(- |\d+\. |> |\||#)", b):
+            return " ".join(re.split(r"(?<=[.!?])(?<![A-Z]\.)\s+(?=[A-Z\"“\[*])", b)[:n])
+    return ""
+
+
+PROPER = {"Brandolini’s law", "Elsagate", "Italian brainrot"}
+
+
+def in_sentence(term):
+    """A term as it reads mid-sentence: no disambiguating bracket, and lower case unless it's a name or acronym."""
+    t = re.sub(r" \([^)]*\)$", "", term)
+    return t if t in PROPER or re.search(r"[A-Z]", t[1:]) else t[:1].lower() + t[1:]
+
+
+def term_faq(p):
+    """The term's own questions from its frontmatter "faq", plus ones drawn from its summary and its sections."""
+    t = in_sentence(p["term"])
+    qa = [(f"What does {t} mean?", p["summary"])] + [(x["q"], x["a"]) for x in p.get("faq") or []]
+    for h, text in sections(p["body"]):
+        a, hl = first_para(text), h.lower()
+        if not a:
+            continue
+        if hl.startswith("where"):
+            qa.append((f"Where does the term {t} come from?", a))
+        elif hl.startswith("the criticism"):
+            qa.append((f"What's the criticism of the term {t}?", a))
+        elif "slop mop" in hl:
+            # "handle a troll farm" but "handle clickbait": borrow the article the page itself uses, if any
+            art = re.search(rf"^## .*\b(an?) {re.escape(t)}\b", p["body"], re.I | re.M)
+            qa.append((f"How does Slop Mop handle {art.group(1).lower() + ' ' if art else ''}{t}?", a))
+    seen, out = set(), []
+    for q, a in qa:
+        if q.lower() not in seen:
+            seen.add(q.lower()); out.append((q, a))
+    return out
+
+
+def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", ld_extra=None, network=None, share_text=None, faq=None):
     body, toc = md(p["body"])
     url = SITE + p["path"]
     spec = page_images(p)
@@ -326,6 +388,8 @@ def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", l
     if ld_extra:
         ld_extra.setdefault("image", imgs[0]["url"])
         ld["@graph"].append(ld_extra)
+    if faq:
+        ld["@graph"].append(faq_ld(url, faq[1]))
     h = head(p["seo_title"], p["description"], p["path"], og_title=p["title"], ld=ld, og_image=og_for(p["path"]))
     h = h.replace('<meta property="og:image:alt" content="Slop Mop: time is the one thing you can\'t get back. Stop spending it on slop, whether a person or an AI wrote it.">',
                   f'<meta property="og:image:alt" content="{esc(p["title"])}">')
@@ -333,6 +397,8 @@ def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", l
     # the "Slop Mop at work" figure goes after the first section, where the page has explained the idea
     cut = body.find("</section>")
     body = body[:cut + 10] + figure_html(p["path"], fig) + body[cut + 10:] if cut >= 0 else figure_html(p["path"], fig) + body
+    if faq:
+        body += faq_html(*faq)
     tail = (f'<div class="page-tail">{sh}<span class="mono">updated {nice_date(p["lastmod"]).lower()}</span></div>'
             + after + related_html(p) + sources_html(p) + cta(network) + explore(p["path"]))
     main = P.page_head(eyebrow, esc(p["title"]), lede, meta=meta, visual=hero_img(p["path"], hero_alt))
@@ -346,7 +412,7 @@ def emit(path, h, main, depth):
     write(path + "index.html", rel(page_shell(h, "", main, islands=False, extra_scripts=extra), depth))
 
 
-def hub_page(family, title, lede, inner, desc, depth=1, extra_ld=None, visual=""):
+def hub_page(family, title, lede, inner, desc, depth=1, extra_ld=None, visual="", faq=None):
     path = f"{family}/"
     url = SITE + path
     crumbs = [("Home", ""), (FAMILIES[family][0], path)]
@@ -358,6 +424,9 @@ def hub_page(family, title, lede, inner, desc, depth=1, extra_ld=None, visual=""
         dict(crumbs_ld(crumbs), **{"@id": url + "#crumbs"})]}
     if extra_ld:
         ld["@graph"].append(extra_ld)
+    if faq:
+        ld["@graph"].append(faq_ld(url, faq[1]))
+        inner += "\n" + faq_html(*faq)
     h = head(f"{title} · Slop Mop", desc, path, og_title=title, ld=ld, og_image=og_for(path))
     main = P.page_head(FAMILIES[family][0].lower(), esc(title), lede, visual=hero_img(path, alt))
     main = main.replace('<span class="eyebrow">', crumbs_html(crumbs, last=True) + '<span class="eyebrow">', 1)
@@ -372,6 +441,28 @@ def alias_page(s, p):
 
 
 TELLS = sorted(LIVE_PAGES["patterns"], key=lambda p: p.get("order", 99))
+
+
+def GLOSSARY_FAQ(n):
+    return [
+        ("What is the slop glossary?",
+         f"An A–Z of {n} words for low-value content, by people and by AI, from [clickbait](/glossary/clickbait/) and content farms to "
+         "[workslop](/glossary/workslop/) and [AI slop](/glossary/ai-slop/). Each term has its own page with where the word came from, examples and sources."),
+        ("What does slop mean?",
+         "Slop is writing that takes your time and gives nothing back: filler, bait, hype and posts that could have been written about anything. "
+         "AI made a lot more of it, but people were writing it long before. [AI slop](/glossary/ai-slop/) has the full story."),
+        ("Is Slop Mop an AI detector?",
+         "No. Slop Mop is a bad-writing detector. It judges the writing, never the writer or the reader, so a useful post written with AI stays "
+         "and an empty one written by a person can be folded. [How it works](/how-it-works.html) explains what it checks."),
+        ("What are the nine tells?",
+         "The nine patterns Slop Mop looks for in every post: scroll-stopper, engagement bait, hype words, empty praise, no-catch promises, "
+         "\"not X, but Y\", flowery prose, stiff phrasing and the too-tidy story. They're in the glossary too, marked as tells, and on [their own pages](/patterns/)."),
+        ("Where do these terms come from?",
+         "Every page credits the people, papers and publications that coined or spread the word, with links in its sources. Many were gathered by "
+         "Oren Etzioni and Daniel S. Weld in their October 2026 GeekWire glossary of AI-era language."),
+        ("Can I suggest a term?",
+         "Yes. Send it through the [contact page](/contact.html), ideally with a link to somewhere you've seen it used."),
+    ]
 
 
 def glossary():
@@ -404,7 +495,7 @@ def glossary():
 </nav>'''
         h, main = article(p, [("Home", ""), ("Glossary", "glossary/"), (p["term"], p["path"])], "glossary",
                           esc(p["punchline"]), meta=" · ".join(bits), visual=visual, after=nav_, ld_extra=dt,
-                          share_text=f'{p["term"]}: {p["punchline"]}')
+                          share_text=f'{p["term"]}: {p["punchline"]}', faq=(f'{p["term"]}: common questions', term_faq(p)))
         emit(p["path"], h, main, 2)
         # aliases get their own short address that forwards to the term, so "slopmop.lol/glossary/ai-dar" works too
         for a in aka:
@@ -460,7 +551,7 @@ def glossary():
     hub_page("glossary", "The slop glossary",
              f"{n_terms} words for the junk that fills feeds and inboxes, from content farms and clickbait to workslop and AI slop, plus the nine tells Slop Mop looks for. Each has its own page you can share.",
              inner, f"A searchable A–Z of {n_terms} terms for low-value content, by people and by AI: AI slop, workslop, clickbait, engagement bait and more, each with examples.",
-             extra_ld=dts)
+             extra_ld=dts, faq=("Questions about the glossary", GLOSSARY_FAQ(n_terms)))
 
 
 # ---------------------------------------------------------------- patterns (the nine tells)

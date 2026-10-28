@@ -1813,6 +1813,80 @@
   }
  },
  {
+  "out": "assets/og/glossary-chatbait.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "glossary",
+   "title": "Chatbait",
+   "pos": "noun · about AI content · since 2025",
+   "line": "\"Would you like me to also…\" Forever.",
+   "url": "slopmop.lol/glossary/chatbait"
+  }
+ },
+ {
+  "out": "assets/hero/glossary-chatbait.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "glossary",
+   "title": "Chatbait",
+   "aka": "",
+   "line": "\"Would you like me to also…\" Forever.",
+   "tags": [
+    "glossary",
+    "about AI content",
+    "since 2025"
+   ],
+   "see": "Clickbait, AI sycophancy, Rage bait, AI addiction",
+   "letter": "C"
+  }
+ },
+ {
+  "out": "assets/fig/glossary-chatbait.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "email",
+   "text": "Great question! The capital of Australia is Canberra. 🇦🇺 Would you like me to plan a 7-day Canberra itinerary, explain why it isn't Sydney, or quiz you on every capital in Oceania? Just say the word!",
+   "author": "Hana Sato",
+   "initials": "HS",
+   "avColor": "#4D7C0F",
+   "byline": "to me · 09:14",
+   "acts": [
+    "Reply",
+    "Forward"
+   ],
+   "subject": "A quick win for you",
+   "verdict": "possibly",
+   "score": 71,
+   "tells": [
+    0.24,
+    0.92,
+    0.24,
+    0.15,
+    0.21,
+    0.82,
+    0.18,
+    0.24,
+    0.18
+   ],
+   "humanVoice": 0.3,
+   "usefulness": 0.17,
+   "readerResponse": 0.7,
+   "community": {
+    "probably": 11,
+    "maybe": 5,
+    "no": 2
+   },
+   "used": 79,
+   "fine": "Canberra.",
+   "fineAuthor": "Sam Okafor",
+   "fineInitials": "SO",
+   "fineColor": "#0F766E",
+   "fineByline": "to me · 09:14",
+   "caption": "Illustration: Slop Mop on Email, marking an email like the example on this page. It scores 71 out of 100 (Possibly slop); the strongest signs are engagement bait and “not x, but y”. In Highlight mode it stays visible and its mop turns yellow; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Email email marked Possibly slop by Slop Mop, with the panel showing Engagement bait and “Not X, but Y” as the strongest signs"
+  }
+ },
+ {
   "out": "assets/og/glossary-chatfishing.jpg",
   "spec": {
    "mode": "og",
@@ -3245,6 +3319,81 @@
   }
  },
  {
+  "out": "assets/og/glossary-fakecast.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "glossary",
+   "title": "Fakecast",
+   "pos": "noun · about AI content · since 2020s",
+   "line": "Two hosts, zero humans, endless \"right, exactly\".",
+   "url": "slopmop.lol/glossary/fakecast"
+  }
+ },
+ {
+  "out": "assets/hero/glossary-fakecast.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "glossary",
+   "title": "Fakecast",
+   "aka": "fake cast",
+   "line": "Two hosts, zero humans, endless \"right, exactly\".",
+   "tags": [
+    "glossary",
+    "about AI content",
+    "since 2020s"
+   ],
+   "see": "Liquid content, Counterfeit people, Deepfake, AI slop",
+   "letter": "F"
+  }
+ },
+ {
+  "out": "assets/fig/glossary-fakecast.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "reddit",
+   "text": "In this electrifying deep dive, our hosts unpack the fascinating world of municipal bin collection, exploring the surprising insights that will change how you think about waste forever! 🎧✨",
+   "author": "Priya Nair",
+   "initials": "PN",
+   "avColor": "#C2410C",
+   "byline": "u/priya23 · r/productivity · 5h",
+   "acts": [
+    "⬆ 2.3k",
+    "💬 418 comments",
+    "Share"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 73,
+   "tells": [
+    0.18,
+    0.82,
+    0.21,
+    0.92,
+    0.18,
+    0.18,
+    0.18,
+    0.3,
+    0.27
+   ],
+   "humanVoice": 0.1,
+   "usefulness": 0.09,
+   "readerResponse": 0.38,
+   "community": {
+    "probably": 7,
+    "maybe": 3,
+    "no": 1
+   },
+   "used": 145,
+   "fine": "AI-generated audio summary of the council's 2026 waste report: two synthetic voices, about 9 minutes. Read the full report at the link below.",
+   "fineAuthor": "Tom Brennan",
+   "fineInitials": "TB",
+   "fineColor": "#B45309",
+   "fineByline": "u/tom61 · r/productivity · 5h",
+   "caption": "Illustration: Slop Mop on Reddit, marking a post like the example on this page. It scores 73 out of 100 (Likely slop); the strongest signs are empty praise and engagement bait. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Reddit post marked Likely slop by Slop Mop, with the panel showing Empty praise and Engagement bait as the strongest signs"
+  }
+ },
+ {
   "out": "assets/og/glossary-feel-the-agi.jpg",
   "spec": {
    "mode": "og",
@@ -4303,6 +4452,82 @@
   }
  },
  {
+  "out": "assets/og/glossary-liquid-content.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "glossary",
+   "title": "Liquid content",
+   "pos": "noun · about AI content · since 2020s",
+   "line": "Your article, now available as a smoothie.",
+   "url": "slopmop.lol/glossary/liquid-content"
+  }
+ },
+ {
+  "out": "assets/hero/glossary-liquid-content.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "glossary",
+   "title": "Liquid content",
+   "aka": "",
+   "line": "Your article, now available as a smoothie.",
+   "tags": [
+    "glossary",
+    "about AI content",
+    "since 2020s"
+   ],
+   "see": "Fakecast, Content shock, Article spinning, AI slop",
+   "letter": "L"
+  }
+ },
+ {
+  "out": "assets/fig/glossary-liquid-content.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "x",
+   "text": "🚨 The council just dropped its waste report and it's WILD. Recycling is the hero we didn't know we needed. Swipe to discover 7 mind-blowing takeaways ➡️",
+   "author": "Sam Okafor",
+   "initials": "SO",
+   "avColor": "#0F766E",
+   "byline": "@sam71 · 2h",
+   "acts": [
+    "💬 312",
+    "🔁 1.1K",
+    "❤️ 8.4K",
+    "📊 220K"
+   ],
+   "subject": "",
+   "verdict": "possibly",
+   "score": 65,
+   "tells": [
+    0.15,
+    0.3,
+    0.82,
+    0.18,
+    0.3,
+    0.3,
+    0.92,
+    0.15,
+    0.15
+   ],
+   "humanVoice": 0.1,
+   "usefulness": 0.13,
+   "readerResponse": 0.46,
+   "community": {
+    "probably": 8,
+    "maybe": 4,
+    "no": 2
+   },
+   "used": 170,
+   "fine": "Summary of the council's 2026 waste report: recycling rose, general waste fell, and food-waste collection starts in April. Figures and caveats are in section 3 of the full report.",
+   "fineAuthor": "Aisha Rahman",
+   "fineInitials": "AR",
+   "fineColor": "#BE185D",
+   "fineByline": "@aisha13 · 2h",
+   "caption": "Illustration: Slop Mop on X, marking a post like the example on this page. It scores 65 out of 100 (Possibly slop); the strongest signs are flowery prose and hype words. In Highlight mode it stays visible and its mop turns yellow; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a X post marked Possibly slop by Slop Mop, with the panel showing Flowery prose and Hype words as the strongest signs"
+  }
+ },
+ {
   "out": "assets/og/glossary-listicle.jpg",
   "spec": {
    "mode": "og",
@@ -4524,6 +4749,81 @@
    "fineByline": "to me · 09:14",
    "caption": "Illustration: Slop Mop on Email, marking an email like the example on this page. It scores 92 out of 100 (Likely slop); the strongest signs are stiff phrasing and scroll-stopper. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
    "alt": "Mock-up of a Email email marked Likely slop by Slop Mop, with the panel showing Stiff phrasing and Scroll-stopper as the strongest signs"
+  }
+ },
+ {
+  "out": "assets/og/glossary-magic-tokens.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "glossary",
+   "title": "Magic tokens",
+   "pos": "noun · about AI content · since 2020s",
+   "line": "Abracadabra, but make it \"let's think step by step\".",
+   "url": "slopmop.lol/glossary/magic-tokens"
+  }
+ },
+ {
+  "out": "assets/hero/glossary-magic-tokens.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "glossary",
+   "title": "Magic tokens",
+   "aka": "magical tokens, magic words",
+   "line": "Abracadabra, but make it \"let's think step by step\".",
+   "tags": [
+    "glossary",
+    "about AI content",
+    "since 2020s"
+   ],
+   "see": "Vibe coding, Hallucination (AI), Stochastic parrot, AI slop",
+   "letter": "M"
+  }
+ },
+ {
+  "out": "assets/fig/glossary-magic-tokens.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "facebook",
+   "text": "You are a world-class award-winning genius copywriter with 40 years of experience. Take a deep breath. Think step by step. Write a viral post that will blow people's minds. This is very important to my career.",
+   "author": "Maya Lindqvist",
+   "initials": "ML",
+   "avColor": "#9333EA",
+   "byline": "Yesterday at 18:20 · 🌐",
+   "acts": [
+    "👍❤️ 3.1K",
+    "870 comments",
+    "412 shares"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 72,
+   "tells": [
+    0.92,
+    0.24,
+    0.27,
+    0.24,
+    0.27,
+    0.24,
+    0.21,
+    0.3,
+    0.82
+   ],
+   "humanVoice": 0.15,
+   "usefulness": 0.17,
+   "readerResponse": 0.7,
+   "community": {
+    "probably": 14,
+    "maybe": 5,
+    "no": 2
+   },
+   "used": 91,
+   "fine": "Write a 100-word update for our customers: the app's offline mode ships on 3 November, it works on Android and iOS, and it syncs changes when you reconnect. Plain English, no exclamation marks.",
+   "fineAuthor": "Luis Ortega",
+   "fineInitials": "LO",
+   "fineColor": "#1D4ED8",
+   "fineByline": "Yesterday at 18:20 · 🌐",
+   "caption": "Illustration: Slop Mop on Facebook, marking a post like the example on this page. It scores 72 out of 100 (Likely slop); the strongest signs are scroll-stopper and too-tidy story. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Facebook post marked Likely slop by Slop Mop, with the panel showing Scroll-stopper and Too-tidy story as the strongest signs"
   }
  },
  {
@@ -5807,6 +6107,81 @@
   }
  },
  {
+  "out": "assets/og/glossary-sloppypasta.jpg",
+  "spec": {
+   "mode": "og",
+   "family": "glossary",
+   "title": "Sloppypasta",
+   "pos": "noun · about AI content · since 2026",
+   "line": "Copypasta, but nobody read it. Not even you.",
+   "url": "slopmop.lol/glossary/sloppypasta"
+  }
+ },
+ {
+  "out": "assets/hero/glossary-sloppypasta.jpg",
+  "spec": {
+   "mode": "hero",
+   "family": "glossary",
+   "title": "Sloppypasta",
+   "aka": "sloppy pasta",
+   "line": "Copypasta, but nobody read it. Not even you.",
+   "tags": [
+    "glossary",
+    "about AI content",
+    "since 2026"
+   ],
+   "see": "AI slap, Meat proxy, Copypasta, Workslop",
+   "letter": "S"
+  }
+ },
+ {
+  "out": "assets/fig/glossary-sloppypasta.jpg",
+  "spec": {
+   "mode": "fig",
+   "net": "substack",
+   "text": "Great question! Office opening hours can vary depending on a number of factors, including public holidays, company policy and local regulations. It's important to check your organisation's official communications for the most accurate information. Additionally, you may wish to contact your HR department. I hope this helps! 😊",
+   "author": "Tom Brennan",
+   "initials": "TB",
+   "avColor": "#B45309",
+   "byline": "Note · 4h",
+   "acts": [
+    "♡ 96",
+    "💬 41",
+    "↻ Restack"
+   ],
+   "subject": "",
+   "verdict": "likely",
+   "score": 92,
+   "tells": [
+    0.21,
+    0.3,
+    0.27,
+    0.27,
+    0.82,
+    0.21,
+    0.3,
+    0.92,
+    0.27
+   ],
+   "humanVoice": 0.1,
+   "usefulness": 0.05,
+   "readerResponse": 0.62,
+   "community": {
+    "probably": 10,
+    "maybe": 2,
+    "no": 1
+   },
+   "used": 180,
+   "fine": "Yes, normal hours. The holiday closure is the Monday after, the 12th.",
+   "fineAuthor": "Hana Sato",
+   "fineInitials": "HS",
+   "fineColor": "#4D7C0F",
+   "fineByline": "Note · 4h",
+   "caption": "Illustration: Slop Mop on Substack, marking a post like the example on this page. It scores 92 out of 100 (Likely slop); the strongest signs are stiff phrasing and no-catch promises. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.",
+   "alt": "Mock-up of a Substack post marked Likely slop by Slop Mop, with the panel showing Stiff phrasing and No-catch promises as the strongest signs"
+  }
+ },
+ {
   "out": "assets/og/glossary-slopsquatting.jpg",
   "spec": {
    "mode": "og",
@@ -6939,7 +7314,7 @@
    "mode": "hero",
    "family": "hub",
    "title": "The slop glossary",
-   "count": "92 terms",
+   "count": "97 terms",
    "chips": [
     "Agent FOMO",
     "Agentsomnia",

@@ -4,7 +4,7 @@
   "seo_title": "Copypasta: text pasted across the internet · Slop Mop",
   "description": "Copypasta is a block of text copied and pasted across the internet again and again, usually as a joke or to bait reactions. Origins and examples.",
   "summary": "A block of text copied and pasted across the internet over and over, usually as a joke or to bait reactions.",
-  "updated": "2026-10-18",
+  "updated": "2026-10-28",
   "keyword": "copypasta",
   "term": "Copypasta",
   "aliases": [],
@@ -43,7 +43,7 @@ Some copypastas have lasted for well over a decade. The "Navy Seal" text, a thre
 
 The joke can turn serious. Wikipedia notes a 2024 case in the Philippines in which an actor filed a cyberlibel complaint against a creator who had posted a well-known copypasta about a celebrity behaving badly in a shop, with the actor's name swapped in.
 
-AI has added a new strain. "Sloppypasta" is used for chatbot output pasted at someone without being read, which on this site we file under [AI slap](/glossary/ai-slap/).
+AI has added a new strain. [Sloppypasta](/glossary/sloppypasta/) is chatbot output pasted at someone without being read, and sending it is an [AI slap](/glossary/ai-slap/).
 
 ## Examples
 

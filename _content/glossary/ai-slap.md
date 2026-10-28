@@ -4,7 +4,7 @@
   "seo_title": "AI slap: sending AI output you never read · Slop Mop",
   "description": "AI slap is Etzioni and Weld's term for sending AI-generated text blindly, without reading it first, so the person on the other end does the checking.",
   "summary": "Sending AI output without reading it first, so the reader has to do the checking. It stings.",
-  "updated": "2026-10-18",
+  "updated": "2026-10-28",
   "keyword": "ai slap",
   "term": "AI slap",
   "aliases": [],
@@ -35,7 +35,7 @@ AI slap is a narrow charge. Using AI to draft, then reading, cutting and correct
 
 Oren Etzioni and Daniel S. Weld coined it in their [October 2026 GeekWire glossary of AI-era language](https://www.geekwire.com/2026/etzioni-on-ai-the-colorful-and-cranky-language-of-the-ai-era-from-slop-to-slap/), which takes its headline from it: "We call the action of sending AI-generated text blindly an AI slap. It stings." They pair it with meat proxy, which they quote from [SFisms](https://sfisms.org/meat-proxy) as "a person who forwards AI-generated text, code, or other output without reading, understanding, or validating it."
 
-Other people have named the same habit. "Sloppypasta", a blend of slop and copypasta, is used for verbatim chatbot output pasted at someone without being read, refined or requested. The "Stop Sloppypasta" page that popularised it argues that pasting asks the recipient to do work the sender didn't bother to do. At work, the result often gets called [workslop](/glossary/workslop/).
+Other people have named the same habit. [Sloppypasta](/glossary/sloppypasta/), a blend of slop and copypasta, is used for verbatim chatbot output pasted at someone without being read, refined or requested. The "Stop Sloppypasta" page that popularised it argues that pasting asks the recipient to do work the sender didn't bother to do. At work, the result often gets called [workslop](/glossary/workslop/).
 
 ## Examples
 
