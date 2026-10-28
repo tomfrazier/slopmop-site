@@ -1,0 +1,202 @@
+[
+ [
+  "Who runs it",
+  [
+   [
+    "p",
+    "Slop Mop is operated by Artimovo LLC, a Delaware limited liability company (\"Artimovo\", \"we\", \"us\"). \"The service\" means the Slop Mop browser extension, this website, and the judging server at <span style=\"font: var(--type-mono); color: var(--text-body)\">api.slopmop.lol</span>."
+   ]
+  ]
+ ],
+ [
+  "Who can use it",
+  [
+   [
+    "p",
+    "You must be at least 18 years old, or the age of majority where you live if that is higher, to use Slop Mop. By using it you confirm that you are, and that you are allowed to use LinkedIn under its own terms."
+   ]
+  ]
+ ],
+ [
+  "The judging server is private",
+  [
+   [
+    "p",
+    "The server at <span style=\"font: var(--type-mono); color: var(--text-body)\">api.slopmop.lol</span> is privately operated and its code is not open source. Using Slop Mop gives you permission to send posts to it for judging through the extension, for your own personal use. It does not give you a licence to its code, its prompts, its weights or the scores it produces."
+   ],
+   [
+    "p",
+    "The original <a href=\"open-source.html\">open-source version of Slop Mop</a> is still available under the MIT licence. That licence covers that code only. It grants no rights to the hosted service, and it does not let you use the Slop Mop name or the server described here."
+   ]
+  ]
+ ],
+ [
+  "What you can do",
+  [
+   [
+    "p",
+    "Install the extension, use it on your own LinkedIn feed, change your threshold and mode, and vote on judgments. It is free to use."
+   ]
+  ]
+ ],
+ [
+  "What you agree not to do",
+  [
+   [
+    "p",
+    "Call <span style=\"font: var(--type-mono); color: var(--text-body)\">api.slopmop.lol</span> from anything other than the Slop Mop extension, or script, scrape or bulk-query it."
+   ],
+   [
+    "p",
+    "Try to get around the daily check limit, the install id, or any other limit or security measure."
+   ],
+   [
+    "p",
+    "Attempt to copy, reverse engineer or extract the server's judging logic, prompts or stored data."
+   ],
+   [
+    "p",
+    "Stuff votes, or use Slop Mop to harass, target or publicly shame the authors of posts."
+   ],
+   [
+    "p",
+    "Use the service in a way that breaks the law or LinkedIn's own terms."
+   ]
+  ]
+ ],
+ [
+  "Judgments are opinions",
+  [
+   [
+    "p",
+    "A slop score is an automated opinion about writing, produced with the help of TypeSafe's Jev. <strong style=\"font-weight: var(--weight-semibold)\">It is not a finding of fact about a post, and it is not a claim about whether AI or a person wrote it.</strong> Scores will sometimes be wrong. Don't rely on them for hiring, moderation, legal, or any other decision about a person."
+   ]
+  ]
+ ],
+ [
+  "Your votes and feedback",
+  [
+   [
+    "p",
+    "When you vote on a judgment or send us feedback, you let us use it, without payment or attribution, to run, study and improve Slop Mop, including in aggregated research. Votes are stored as described in the <a href=\"privacy.html\">privacy policy</a>."
+   ]
+  ]
+ ],
+ [
+  "Limits and changes",
+  [
+   [
+    "p",
+    "Usage is capped at 250 checks per install per day. We may change limits, change features, pause the service, or shut it down at any time, with or without notice. We may block an install that breaks these terms."
+   ],
+   [
+    "p",
+    "If these terms change, the date at the top of this page changes with them. Continuing to use Slop Mop after that means you accept the new version."
+   ]
+  ]
+ ],
+ [
+  "No warranty",
+  [
+   [
+    "p",
+    "Slop Mop is a research project, provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose and non-infringement. We don't promise it will be accurate, available, or error-free."
+   ]
+  ]
+ ],
+ [
+  "Limitation of liability",
+  [
+   [
+    "p",
+    "To the fullest extent the law allows, we are not liable for any indirect, incidental, special, consequential or punitive damages, or for lost data, profits or opportunities, arising from your use of Slop Mop. Our total liability for any claim arising from Slop Mop is limited to one hundred US dollars (US$100)."
+   ]
+  ]
+ ],
+ [
+  "Indemnity",
+  [
+   [
+    "p",
+    "If you break these terms or misuse Slop Mop, and that leads to a claim against Artimovo by someone else, you agree to cover Artimovo's reasonable losses and costs from that claim, including reasonable legal fees."
+   ]
+  ]
+ ],
+ [
+  "Not affiliated with the sites it works on",
+  [
+   [
+    "p",
+    "Slop Mop is an independent product of Artimovo LLC. It is not affiliated with, endorsed by, sponsored by or approved by any website, social network, publishing platform, email service, browser or other service it works with or on, including LinkedIn, X, Reddit, Facebook, Instagram, Threads, Substack, Medium, Gmail, Outlook, Chrome and Edge, or the companies that own them, such as Meta, Google and Microsoft."
+   ],
+   [
+    "p",
+    "Those names, logos and trademarks belong to their owners. We use them only to say where Slop Mop works, and that use does not mean any of them supports Slop Mop. Slop Mop's scores are its own opinions, not those of any site it runs on."
+   ],
+   [
+    "p",
+    "Your use of each of those services stays governed by its own terms. You are responsible for making sure that using Slop Mop alongside a service is allowed under that service's terms."
+   ]
+  ]
+ ],
+ [
+  "Disputes, arbitration and class-action waiver",
+  [
+   [
+    "p",
+    "<strong style=\"font-weight: var(--weight-semibold)\">Please read this section carefully. It affects your legal rights, including your right to go to court.</strong>"
+   ],
+   [
+    "p",
+    "These terms are governed by the laws of the State of Delaware, USA, and applicable US federal law, including the Federal Arbitration Act, without regard to conflict-of-law rules."
+   ],
+   [
+    "p",
+    "If you have a problem with Slop Mop, email <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a> first. We will try to resolve it informally within 60 days."
+   ],
+   [
+    "p",
+    "If we can't, <strong style=\"font-weight: var(--weight-semibold)\">you and Artimovo agree to resolve any dispute arising from these terms or from Slop Mop through final and binding individual arbitration</strong>, not in court. The arbitration will be run by the American Arbitration Association under its Consumer Arbitration Rules, before a single arbitrator, and may be held by video or phone, or in the county where you live. Either of us may instead bring an individual claim in small-claims court, and either of us may ask a court to stop infringement or misuse of intellectual property."
+   ],
+   [
+    "p",
+    "<strong style=\"font-weight: var(--weight-semibold)\">Class-action waiver:</strong> you and Artimovo may bring claims only individually, not as a plaintiff or class member in any class, consolidated or representative action. <strong style=\"font-weight: var(--weight-semibold)\">Jury-trial waiver:</strong> you and Artimovo each give up the right to a jury trial."
+   ],
+   [
+    "p",
+    "You can opt out of arbitration by emailing <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a> within 30 days of first accepting these terms, with your name and a clear statement that you are opting out. If you opt out, or if this arbitration section is found unenforceable, disputes will be heard only in the state or federal courts located in Delaware, and you and Artimovo consent to their jurisdiction."
+   ]
+  ]
+ ],
+ [
+  "Privacy",
+  [
+   [
+    "p",
+    "What the extension sends, what the server stores and how long it is kept are covered in the <a href=\"privacy.html\">privacy policy</a>, which is part of these terms."
+   ]
+  ]
+ ],
+ [
+  "General",
+  [
+   [
+    "p",
+    "These terms and the privacy policy are the whole agreement between you and Artimovo about Slop Mop. If any part of them is found unenforceable, the rest still applies. Our not enforcing a term is not a waiver of it. You may not transfer these terms; we may transfer them as part of a reorganisation, merger or sale."
+   ]
+  ]
+ ],
+ [
+  "Contact",
+  [
+   [
+    "p",
+    "Questions about these terms: <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a>."
+   ],
+   [
+    "p",
+    "By post: Artimovo LLC, 1522 Western Ave STE 79205, Seattle, WA 98101, USA."
+   ]
+  ]
+ ]
+]

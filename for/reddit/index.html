@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]});
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted'});
+  (function () {
+    var c = null; try { c = JSON.parse(localStorage.getItem('slopmop:consent')); } catch (e) {}
+    if (c && c.v === 1 && Date.now() - c.t < 365 * 864e5) gtag('consent', 'update', {analytics_storage: c.analytics ? 'granted' : 'denied'});
+    else if (navigator.globalPrivacyControl === true) gtag('consent', 'update', {analytics_storage: 'denied'});
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<title>Reddit feed filter for karma farms and filler · Slop Mop</title>
+<meta name="description" content="A Reddit feed filter for posts and comments: how karma farming and filler work, what Slop Mop does in your feed and threads, and Reddit&#x27;s own mute tools.">
+<link rel="canonical" href="https://slopmop.lol/for/reddit/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/for/reddit/">
+<meta property="og:title" content="Slop Mop for Reddit: a feed filter for karma farms and filler">
+<meta property="og:description" content="A Reddit feed filter for posts and comments: how karma farming and filler work, what Slop Mop does in your feed and threads, and Reddit&#x27;s own mute tools.">
+<meta property="og:image" content="https://slopmop.lol/assets/og/for-reddit.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Slop Mop for Reddit: a feed filter for karma farms and filler">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Slop Mop for Reddit: a feed filter for karma farms and filler">
+<meta name="twitter:description" content="A Reddit feed filter for posts and comments: how karma farming and filler work, what Slop Mop does in your feed and threads, and Reddit&#x27;s own mute tools.">
+<meta name="twitter:image" content="https://slopmop.lol/assets/og/for-reddit.jpg">
+<meta name="author" content="Tom Frazier">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../_ds/slopmop/styles.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sites.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://slopmop.lol/for/reddit/#page",
+      "url": "https://slopmop.lol/for/reddit/",
+      "name": "Slop Mop for Reddit: a feed filter for karma farms and filler",
+      "headline": "Reddit feed filter for karma farms and filler · Slop Mop",
+      "description": "A Reddit feed filter for posts and comments: how karma farming and filler work, what Slop Mop does in your feed and threads, and Reddit's own mute tools.",
+      "inLanguage": "en",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "keywords": "reddit feed filter",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://slopmop.lol/assets/hero/for-reddit.jpg",
+        "width": 960,
+        "height": 720,
+        "caption": "Slop Mop for Reddit: Reads posts and comments as you scroll; Folds karma farming and low-effort replies; Shows why, and you get the last word"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/hero/for-reddit.jpg",
+          "width": 960,
+          "height": 720,
+          "caption": "Slop Mop for Reddit: Reads posts and comments as you scroll; Folds karma farming and low-effort replies; Shows why, and you get the last word"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/fig/for-reddit.jpg",
+          "width": 1200,
+          "height": 720,
+          "caption": "Mock-up of a Reddit post marked Likely slop by Slop Mop, with the panel showing Engagement bait and Empty praise as the strongest signs"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/og/for-reddit.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Slop Mop for Reddit: a feed filter for karma farms and filler"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://slopmop.lol/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://slopmop.lol/for/reddit/#crumbs"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://slopmop.lol/#app",
+        "name": "Slop Mop"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop",
+        "url": "https://slopmop.lol/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Artimovo LLC",
+        "url": "https://slopmop.lol/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slopmop.lol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Slop Mop for",
+          "item": "https://slopmop.lol/for/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reddit: a feed filter for karma farms and filler",
+          "item": "https://slopmop.lol/for/reddit/"
+        }
+      ],
+      "@id": "https://slopmop.lol/for/reddit/#crumbs"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../index.html" aria-label="Slop Mop home"><img src="../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../how-it-works.html">How it works</a>
+      <a href="../../index.html#tells">The tells</a>
+      <a href="../../index.html#networks">Networks</a>
+      <a href="../../index.html#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/for/">Slop Mop for</a></nav><span class="eyebrow">slop mop for</span>
+      <h1 class="h-1">Slop Mop for Reddit: a feed filter for karma farms and filler</h1>
+      <p class="lede">Slop Mop reads Reddit posts and comments as you scroll and folds or marks the reposts, filler replies and empty advice.</p>
+      <p class="mono"><span class="badge badge-live">live</span></p>
+    </div>
+    <div class="ph-visual"><img class="ph-img" src="/assets/hero/for-reddit.jpg" width="960" height="720" alt="Slop Mop for Reddit: Reads posts and comments as you scroll; Folds karma farming and low-effort replies; Shows why, and you get the last word" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#what-slop-looks-like-on-reddit">What slop looks like on Reddit</a>
+      <a href="#how-slop-mop-works-as-a-reddit-feed-filter">How Slop Mop works as a Reddit feed filter</a>
+      <a href="#reddit-s-own-feed-controls-and-how-they-fit-with-slop-mop">Reddit's own feed controls, and how they fit with Slop Mop</a>
+      <a href="#who-it-s-for">Who it's for</a>
+    </nav>
+    <div class="prose">
+<p>Reddit runs on votes, and votes add up to karma. Many communities set a minimum karma or account age before you can post, which makes an old account with a high score worth something to people who want to advertise or push an agenda. That's the root of most Reddit slop.</p>
+<p>The pattern has a name: karma farming. The <a href="https://www.reddit.com/r/funny/wiki/spam/" rel="noopener">r/funny moderators' spam wiki</a> describes the cycle. New accounts repost submissions that did well before, copy other users' comments and drop low-effort posts in several loosely related communities, building a believable history and enough karma to clear posting thresholds. Then the accounts are held in reserve, sold, or put to work for advertising and astroturfing.</p>
+<p>Not all Reddit slop comes from bots. People write empty comments too, and advice threads now attract tidy, generic answers that read like a model wrote them, whether or not one did.</p>
+<section id="what-slop-looks-like-on-reddit">
+<h2>What slop looks like on Reddit</h2>
+<p>Reddit slop is short and repetitive more often than it's long. These are the three shapes to watch for.</p>
+<p>The repost, usually an old hit with a new sentimental title:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>My grandpa (91) made this table out of an old barn door. He still goes to his workshop every single day 🥹 Give him some love!</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Built a coffee table from a salvaged pine door. Took three weekends. The hardest part was filling the old lock hole so it didn't show. Cut list in the comments if anyone wants it.</p></span></div></div>
+<p>The comment that adds nothing but agreement:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>This is so true!! Great post, thanks for sharing 🙌</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Same problem on mine. Replacing the thermal paste dropped idle temperatures by about 10°C, but it didn't touch the fan noise, so I suspect the bearing.</p></span></div></div>
+<p>The answer that has the structure of help without the help:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>Great question! Cooking rice is both an art and a science. Here are 5 key tips to elevate your rice game:<br>1. Choose quality rice<br>2. Measure carefully<br>3. Be patient</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Rinse it until the water runs mostly clear. For basmati I use 1 cup rice to 1¼ cups water, lid on, lowest heat for 12 minutes, then 10 minutes off the heat without lifting the lid.</p></span></div></div>
+<p>The first two are cheap ways to collect votes. The third is <a href="/patterns/empty-praise/">empty praise</a> followed by a list that could answer any cooking question. Repeated across a big community, they make it harder to find the person who actually knows. That worry, scaled up to the whole web, is what people mean by the <a href="/glossary/dead-internet-theory/">dead internet theory</a>.</p>
+</section><figure class="shot"><img src="/assets/fig/for-reddit.jpg" width="1200" height="720" loading="lazy" alt="Mock-up of a Reddit post marked Likely slop by Slop Mop, with the panel showing Engagement bait and Empty praise as the strongest signs"><figcaption>Illustration: Slop Mop on Reddit, marking a post like the example on this page. It scores 90 out of 100 (Likely slop); the strongest signs are engagement bait and empty praise. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.</figcaption></figure>
+<section id="how-slop-mop-works-as-a-reddit-feed-filter">
+<h2>How Slop Mop works as a Reddit feed filter</h2>
+<p>On Reddit, Slop Mop reads the posts in your feed and the comments in the threads you open, shortly before you reach them. It runs on desktop in Chrome, Edge, Firefox, Safari and Chromium browsers such as Brave, Opera, Arc, Vivaldi and Comet. For each post or comment it sends the text and its public engagement counts to its scoring service. Your username and the author's are never sent.</p>
+<p>An AI model designed for calibrated decisions answers twelve questions about the writing: nine tells of slop, such as <a href="/patterns/engagement-bait/">engagement bait</a> and empty praise, and three counter-signals: sounds like a person, useful to readers, and reader response. The result is a score out of 100 and a verdict: Likely slop, Possibly slop, Looks fine or Not sure. Not sure means the post is left alone.</p>
+<p>What you see depends on your mode:</p>
+<ul><li>
+<strong>Hide mode</strong> folds a post or comment past your threshold into a one-line strip where it was. In a long thread, forty "this!!" replies shrink to forty thin lines, and the reply with the actual fix stands out. Click Show post to open any of them in place.
+</li><li>
+<strong>Highlight mode</strong> hides nothing. The item's mop turns yellow for Possibly slop and red for Likely slop.
+</li><li>
+<strong>Sensitivity</strong> is Mild, Moderate or Aggressive.
+</li></ul>
+<p>Click the mop to open the details panel: the score, the strongest signs, and the Slopprint, a nine-spoke chart with one spoke per tell. A reposted sob story and a padded advice answer make different shapes, which is often more useful than the number. Three blue bars show the counter-signals, and "useful to readers" does a lot of work on Reddit, where one reply with a part number, a measurement or a step you can follow is the reason the thread exists.</p>
+<p>You can vote Not sure, No, Maybe or Probably on anyone else's post. Slop Mop's vote is separate from Reddit's up and down arrows: it overrides the model in your own feed, and Reddit never sees it.</p>
+<p>It judges the writing, and it isn't an AI detector, so a helpful answer drafted with AI survives while a hand-typed "this!!" may not. It never deletes, reports, mutes or blocks anything, which means voting, reporting and moderation stay with you and the community's moderators.</p>
+<p>The free plan covers the one feed you pick, with 250 checks a day, so Reddit can be that feed. Slop Mop XL (US$5.99 a month or US$59.99 a year) adds every other feed, the sites you read, Gmail and Outlook, and a higher daily limit. The scoring is explained on <a href="/how-it-works.html">how it works</a>.</p>
+</section>
+<section id="reddit-s-own-feed-controls-and-how-they-fit-with-slop-mop">
+<h2>Reddit's own feed controls, and how they fit with Slop Mop</h2>
+<p>Reddit's own tools work at the level of whole communities and accounts.</p>
+<ol><li>
+<strong>Mute a community.</strong> Open the three-dot menu on the community's page, or on a post from it in Home or Popular, and choose to mute it. You can also manage muted communities in your settings. Muting removes that community's posts from your Home and Popular feeds and from notifications, while you can still visit and take part. You need to be logged in, and you can mute up to 1,000 communities (<a href="https://techcrunch.com/2022/11/10/reddits-latest-feature-lets-you-mute-entire-communities/" rel="noopener">TechCrunch</a>).
+</li><li>
+<strong>Report obvious spam.</strong> Moderators rely on reports to catch reposts and copied comments, and the spam wiki above lists the signs: stolen content, long-dormant accounts that suddenly post, and accounts with lots of post karma but almost no comments (<a href="https://www.reddit.com/r/funny/wiki/spam/" rel="noopener">r/funny spam wiki</a>).
+</li><li>
+<strong>Read smaller communities.</strong> Karma farms aim for size. A niche subreddit with active moderators often has less of this.
+</li></ol>
+<p>Muting is a big hammer: it removes a whole community's posts, including the good ones. Use it for communities you never want, keep reporting the spam you spot, and let Slop Mop fold the filler post by post in the communities you keep. <a href="/compare/slop-mop-vs-unfollowing-and-muting/">Slop Mop vs unfollowing and muting</a> sets the two side by side.</p>
+</section>
+<section id="who-it-s-for">
+<h2>Who it's for</h2>
+<p>People who use Reddit as a search engine with opinions, and want the answers without wading through filler:</p>
+<ul><li>
+<a href="/for/developers/">Developers</a> reading troubleshooting threads, where one specific reply is worth fifty "same here" comments.
+</li><li>
+<a href="/for/researchers/">Researchers</a> and <a href="/for/journalists/">journalists</a> gauging what real users think, who need to discount farmed accounts.
+</li><li>
+<a href="/for/small-business-owners/">Small business owners</a> checking what customers say about their trade.
+</li><li>
+Anyone who reads advice communities and has noticed answers getting longer and less useful.
+</li></ul>
+<p>If you moderate a community, the tells are also a quick way to explain why a post felt off.</p>
+<p><a href="/">Add Slop Mop to your browser</a> and it folds Reddit posts and comments like these for you.</p>
+</section><div class="page-tail"><div class="share" aria-label="Share">
+  <button class="share-btn share-copy" type="button" data-copy="https://slopmop.lol/for/reddit/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copy link</span></button>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fslopmop.lol%2Ffor%2Freddit%2F" target="_blank" rel="noopener" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn"><img src="/assets/logos/linkedin.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://x.com/intent/post?text=Slop%20Mop%20for%20Reddit%3A%20a%20feed%20filter%20for%20karma%20farms%20and%20filler&url=https%3A%2F%2Fslopmop.lol%2Ffor%2Freddit%2F" target="_blank" rel="noopener" data-share="x" aria-label="Share on X" title="Share on X"><img src="/assets/logos/x.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://bsky.app/intent/compose?text=Slop%20Mop%20for%20Reddit%3A%20a%20feed%20filter%20for%20karma%20farms%20and%20filler%20https%3A%2F%2Fslopmop.lol%2Ffor%2Freddit%2F" target="_blank" rel="noopener" data-share="bluesky" aria-label="Share on Bluesky" title="Share on Bluesky"><img src="/assets/logos/bluesky.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://www.threads.net/intent/post?text=Slop%20Mop%20for%20Reddit%3A%20a%20feed%20filter%20for%20karma%20farms%20and%20filler%20https%3A%2F%2Fslopmop.lol%2Ffor%2Freddit%2F" target="_blank" rel="noopener" data-share="threads" aria-label="Share on Threads" title="Share on Threads"><img src="/assets/logos/threads.svg" alt="" width="15" height="15"></a>
+</div><span class="mono">updated 18 october 2026</span></div><div class="related"><h2>Read next</h2><div class="cards-3"><a class="card link-card" href="/patterns/engagement-bait/"><span class="mono">The nine tells</span><h3>Engagement bait</h3><p>Formula requests for comments, reposts and follows, added to a post to buy reach rather than start a conversation.</p></a><a class="card link-card" href="/patterns/empty-praise/"><span class="mono">The nine tells</span><h3>Empty praise</h3><p>Big verdicts like incredible, powerful and transformative, with no detail to show what the writer actually saw.</p></a><a class="card link-card" href="/glossary/dead-internet-theory/"><span class="mono">Glossary</span><h3>Dead internet theory</h3><p>The theory that bots and AI now produce most of what you see online. Part conspiracy theory, part real worry.</p></a><a class="card link-card" href="/glossary/ai-slop/"><span class="mono">Glossary</span><h3>AI slop</h3><p>Low-quality content made in bulk, usually with generative AI. Merriam-Webster&#x27;s word of the year for 2025.</p></a><a class="card link-card" href="/for/developers/"><span class="mono">Slop Mop for</span><h3>Slop Mop for developers: a feed filter for the hype</h3><p>Fold the vibe-coding boasts and &#x27;developers are finished&#x27; takes on Reddit, X, Medium and LinkedIn so releases and write-ups stay in view.</p></a><a class="card link-card" href="/for/researchers/"><span class="mono">Slop Mop for</span><h3>Slop Mop for researchers</h3><p>Fold away the &#x27;this study changes everything&#x27; posts on every feed so a researcher sees papers, datasets and methods first.</p></a></div></div><div class="sources"><h2>Sources</h2><ol><li><a href="https://www.reddit.com/r/funny/wiki/spam/" rel="noopener">Spam wiki</a>, r/funny moderators, Reddit</li><li><a href="https://techcrunch.com/2022/11/10/reddits-latest-feature-lets-you-mute-entire-communities/" rel="noopener">Reddit&#x27;s latest feature lets you mute entire communities</a>, TechCrunch, 10 November 2022</li></ol></div><aside class="cta-card">
+  <div><h2>Fold the slop out of your feed</h2><p>Slop Mop reads Reddit ahead of you, folds away the slop and shows its working. Works in Chrome, Edge, Firefox and Safari. Free for one feed, 250 checks a day.</p></div>
+  <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser, free</a>
+</aside><nav class="explore" aria-label="Explore Slop Mop"><b>Explore</b><a href="/">Slop Mop home</a><a href="/how-it-works.html">How it works</a><a href="/glossary/">The slop glossary</a><a href="/patterns/">The nine tells</a><a href="/for/">Who it's for</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/learn/">Learn</a><a href="/calculators/">Calculators</a></nav>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working.</p>
+        <div class="made"><img src="../../assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <div class="footer-side">
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note" aria-live="polite"></p>
+      </form>
+      <div class="ask-ai">
+        <p class="ask-ai-label">Ask AI about Slop Mop</p>
+        <div class="ask-ai-row">
+          <a class="ask-ai-btn" data-ask="chatgpt" href="https://chatgpt.com/?hints=search&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Slop Mop" title="Ask ChatGPT"><img src="../../assets/ai/chatgpt.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="claude" href="https://claude.ai/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Claude about Slop Mop" title="Ask Claude"><img src="../../assets/ai/claude.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="perplexity" href="https://www.perplexity.ai/search/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Perplexity about Slop Mop" title="Ask Perplexity"><img src="../../assets/ai/perplexity.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="meta" href="https://www.meta.ai/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Meta AI about Slop Mop" title="Ask Meta AI"><img src="../../assets/ai/meta.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="grok" href="https://grok.com/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Grok about Slop Mop" title="Ask Grok"><img src="../../assets/ai/grok.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="gemini" href="https://www.google.com/search?udm=50&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Gemini about Slop Mop" title="Ask Gemini"><img src="../../assets/ai/gemini.svg" alt="" width="22" height="22"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="../../how-it-works.html">How it works</a></li>
+        <li><a href="../../patterns/">The nine tells</a></li>
+        <li><a href="../../index.html#networks">Networks</a></li>
+        <li><a href="../../index.html#pricing">Pricing</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="../../glossary/">Glossary</a></li>
+        <li><a href="../../guides/">Guides</a></li>
+        <li><a href="../../compare/">Compare</a></li>
+        <li><a href="../../learn/">Learn</a></li>
+        <li><a href="../../calculators/">Calculators</a></li>
+        <li><a href="../../help.html">Help</a></li>
+        <li><a href="../../about.html">About</a></li>
+        <li><a href="../../media.html">Media</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul></div>
+      <div><h3>Slop Mop for</h3><ul>
+        <li><a href="../../for/linkedin/">LinkedIn</a></li>
+        <li><a href="../../for/reddit/">Reddit</a></li>
+        <li><a href="../../for/x/">X</a></li>
+        <li><a href="../../for/facebook/">Facebook</a></li>
+        <li><a href="../../for/substack/">Substack</a></li>
+        <li><a href="../../for/medium/">Medium</a></li>
+        <li><a href="../../for/websites/">Websites</a></li>
+        <li><a href="../../for/email/">Email</a></li>
+      </ul></div>
+      <div><h3>Who it's for</h3><ul>
+        <li><a href="../../for/recruiters/">Recruiters</a></li>
+        <li><a href="../../for/job-seekers/">Job seekers</a></li>
+        <li><a href="../../for/founders/">Founders</a></li>
+        <li><a href="../../for/ceos/">CEOs</a></li>
+        <li><a href="../../for/sales-teams/">Sales teams</a></li>
+        <li><a href="../../for/marketers/">Marketers</a></li>
+        <li><a href="../../for/creators/">Creators</a></li>
+        <li><a href="../../for/journalists/">Journalists</a></li>
+        <li><a href="../../for/">Everyone else</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="../../privacy.html">Privacy policy</a></li>
+        <li><a href="../../terms.html">Terms of service</a></li>
+        <li><a href="../../open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+      </ul></div>
+      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+        <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="../../assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="../../assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="../../assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="../../assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="../../assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="../../assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="../../assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

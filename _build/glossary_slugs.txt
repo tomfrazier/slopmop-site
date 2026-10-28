@@ -1,0 +1,97 @@
+agent-fomo	Agent FOMO
+agentsomnia	Agentsomnia
+ai-addiction	AI addiction
+ai-cream	AI cream
+ai-fatigue	AI fatigue
+ai-genie	AI genie
+ai-psychosis	AI psychosis
+ai-shaming	AI shaming
+ai-slap	AI slap
+ai-slop	AI slop
+ai-suspicion	AI suspicion
+bragawatts	Bragawatts
+brain-rot	Brain rot
+broligarchy	Broligarchy
+chatfishing	Chatfishing
+cheapfake	Cheapfake
+counterfeit-people	Counterfeit people
+dead-internet-theory	Dead internet theory
+deepfake	Deepfake
+enshittification	Enshittification
+feel-the-agi	Feel the AGI
+liars-dividend	Liar’s dividend
+meat-proxy	Meat proxy
+nerd-reich	Nerd Reich
+parasocial	Parasocial
+p-doom	P(doom)
+promptatory	Promptatory
+slopaganda	Slopaganda
+tasteslop	Tasteslop
+technofeudalism	Technofeudalism
+vibe-coding	Vibe coding
+vibe-revenue	Vibe revenue
+workslop	Workslop
+ai-snake-oil	AI snake oil
+ai-sycophancy	AI sycophancy
+ai-washing	AI washing
+article-spinning	Article spinning
+astroturfing	Astroturfing
+bacn	Bacn
+botshit	Botshit
+brandolinis-law	Brandolini’s law
+broetry	Broetry
+bullshit	Bullshit (Frankfurt)
+chumbox	Chumbox
+churnalism	Churnalism
+clanker	Clanker
+click-farm	Click farm
+clickbait	Clickbait
+cognitive-debt	Cognitive debt
+content-farm	Content farm
+content-shock	Content shock
+copypasta	Copypasta
+delve	Delve (AI marker)
+doomscrolling	Doomscrolling
+doorway-page	Doorway page
+elsagate	Elsagate
+firehose-of-falsehood	Firehose of falsehood
+flood-the-zone	Flood the zone
+hallucination	Hallucination (AI)
+hot-take	Hot take
+humblebrag	Humblebrag
+hustle-porn	Hustle porn
+infodemic	Infodemic
+information-overload	Information overload
+information-pollution	Information pollution
+italian-brainrot	Italian brainrot
+keyword-stuffing	Keyword stuffing
+linkedin-lunatics	LinkedIn Lunatics
+listicle	Listicle
+llm-grooming	LLM grooming
+made-for-adsense	Made for AdSense
+model-collapse	Model collapse
+outrage-porn	Outrage porn
+pink-slime-journalism	Pink-slime journalism
+rage-bait	Rage bait
+reply-guy	Reply guy
+scaled-content-abuse	Scaled content abuse
+scraper-site	Scraper site
+shitposting	Shitposting
+site-reputation-abuse	Site reputation abuse
+slopper	Slopper
+slopsquatting	Slopsquatting
+sludge-content	Sludge content
+sock-puppet	Sock puppet
+spam-blog	Spam blog
+stochastic-parrot	Stochastic parrot
+troll-farm	Troll farm
+vagueposting	Vagueposting
+word-salad	Word salad
+shrimp-jesus	Shrimp Jesus
+wireborn	Wireborn
+your-ai-slop-bores-me	Your AI Slop Bores Me
+chatbait	Chatbait
+fakecast	Fakecast
+liquid-content	Liquid content
+magic-tokens	Magic tokens
+sloppypasta	Sloppypasta

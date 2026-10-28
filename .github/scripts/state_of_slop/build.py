@@ -19,7 +19,7 @@ Each month is two files in reports/data/state-of-slop/:
 
 It writes reports/<slug>.html with its share image reports/<slug>.png (1200x630), the
 archive at reports/index.html and the redirect at state-of-slop/index.html, and keeps
-sitemap.xml in step. The image needs `pip install cairosvg`
+sitemap-reports.xml (and its line in the sitemap.xml index) in step. The image needs `pip install cairosvg`
 and the Archivo and JetBrains Mono fonts installed locally; without them the PNG step
 is skipped and says so. The header, footer and analytics tags are copied from
 how-it-works.html, so the report pages stay in step with the rest of the site.
@@ -656,25 +656,25 @@ def latest_redirect(m):
 
 
 def update_sitemap(months):
-    """Add or refresh each report, and the archive, in sitemap.xml, with the share image for image search."""
-    path = os.path.join(ROOT, "sitemap.xml")
-    xml = open(path, encoding="utf-8").read()
-    if "xmlns:image=" not in xml:
-        xml = xml.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-                          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">', 1)
+    """Write the reports and the archive to sitemap-reports.xml, with the share image for image search, and keep its
+    entry in the sitemap.xml index in step. _build/content.py writes the other children and leaves this one alone."""
     latest = max(m["data"].get("modified", m["data"]["published"]) for m in months)
-    # /state-of-slop only forwards, so it stays out; drop any entry left from before the move
-    xml = re.sub(r"  <url><loc>%s/state-of-slop[^<]*</loc>.*?</url>\n" % re.escape(SITE), "", xml)
+    # /state-of-slop only forwards, so it stays out
     entries = [("%s/reports/" % SITE, latest, "monthly", "0.7", "%s/reports/%s.png" % (SITE, months[0]["slug"]))]
     entries += [("%s/reports/%s" % (SITE, m["slug"]), m["data"].get("modified", m["data"]["published"]), "yearly", "0.8",
                  "%s/reports/%s.png" % (SITE, m["slug"])) for m in reversed(months)]
-    for loc, mod, freq, prio, image in entries:
-        line = ("  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority>"
-                "<image:image><image:loc>%s</image:loc></image:image></url>") % (loc, mod, freq, prio, image)
-        pat = re.compile(r"  <url><loc>%s</loc>.*?</url>" % re.escape(loc))
-        xml = pat.sub(lambda _: line, xml, 1) if pat.search(xml) else xml.replace("</urlset>", line + "\n</urlset>", 1)
+    rows = "\n".join(("  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority>"
+                      "<image:image><image:loc>%s</image:loc></image:image></url>") % e for e in entries)
+    open(os.path.join(ROOT, "sitemap-reports.xml"), "w", encoding="utf-8").write(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n%s\n</urlset>\n' % rows)
+    path = os.path.join(ROOT, "sitemap.xml")
+    xml = open(path, encoding="utf-8").read()
+    line = "  <sitemap><loc>%s/sitemap-reports.xml</loc><lastmod>%s</lastmod></sitemap>" % (SITE, latest)
+    pat = re.compile(r"  <sitemap><loc>%s/sitemap-reports\.xml</loc>.*?</sitemap>" % re.escape(SITE))
+    xml = pat.sub(lambda _: line, xml, 1) if pat.search(xml) else xml.replace("</sitemapindex>", line + "\n</sitemapindex>", 1)
     open(path, "w", encoding="utf-8").write(xml)
-    print("  updated sitemap.xml")
+    print("  updated sitemap-reports.xml and sitemap.xml")
 
 
 def main(argv):

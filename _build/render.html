@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Renders the three images every content page gets (share image, header image, "Slop Mop at work" figure) from a
+     spec in _build/images_manifest.json. Driven by _build/images.js through Playwright; not linked from the site. -->
+<link rel="stylesheet" href="../_ds/slopmop/styles.css">
+<style>
+* { box-sizing: border-box; margin: 0; }
+html, body { background: transparent; }
+body { font-family: var(--font-body); color: #16181A; }
+#frame { position: relative; overflow: hidden; }
+.mono { font-family: var(--font-mono); letter-spacing: .06em; text-transform: lowercase; }
+.mark { display: inline-flex; align-items: center; gap: 12px; font-weight: 600; }
+.mark img { width: 40px; height: 40px; }
+.url { font-family: var(--font-mono); color: #8A929B; }
+.y { color: #F5B400; }
+.dot { position: absolute; border-radius: 50%; background: #F5B400; }
+
+/* ---------- share images (1200x630) ---------- */
+.og { width: 1200px; height: 630px; padding: 64px 76px; display: flex; flex-direction: column; }
+.og .ft { margin-top: auto; display: flex; align-items: center; font-size: 26px; position: relative; z-index: 2; }
+.og .ft .url { margin-left: auto; font-size: 21px; }
+.og h1 { font-weight: 700; letter-spacing: -.028em; line-height: 1.02; position: relative; z-index: 2; }
+.og p { position: relative; z-index: 2; }
+/* glossary: a dictionary entry on paper */
+.og.glossary { background: #FAF9F6; color: #16181A; }
+.og.glossary .eb { font-size: 21px; color: #B58400; }
+.og.glossary h1 { margin-top: 26px; font-size: 104px; }
+.og.glossary .pos { margin-top: 14px; font-size: 22px; color: #5B636B; }
+.og.glossary .rule { height: 6px; width: 140px; background: #F5B400; border-radius: 3px; margin-top: 30px; }
+.og.glossary p { margin-top: 26px; font-size: 38px; line-height: 1.25; max-width: 980px; }
+.og.glossary .ft .url { color: #8A929B; }
+/* patterns: dark with the slopprint */
+.og.patterns { background: #16181A; color: #F1F3F5; }
+.og.patterns .eb { font-size: 21px; color: #F5B400; }
+.og.patterns h1 { margin-top: 26px; font-size: 92px; max-width: 640px; }
+.og.patterns p { margin-top: 26px; font-size: 32px; color: #C9CED4; max-width: 620px; line-height: 1.3; }
+.og.patterns svg.radar { position: absolute; right: 56px; top: 70px; width: 440px; height: 440px; }
+/* for: mop yellow */
+.og.for { background: #F5B400; color: #16181A; }
+.og.for .eb { font-size: 22px; color: #7A5A00; }
+.og.for h1 { margin-top: 22px; font-size: 96px; max-width: 1000px; }
+.og.for p { margin-top: 24px; font-size: 32px; line-height: 1.3; max-width: 900px; color: #3A2C00; }
+.og.for .logos { display: flex; gap: 14px; margin-top: 30px; position: relative; z-index: 2; }
+.logo-chip { width: 64px; height: 64px; border-radius: 16px; background: #FFFFFF; display: grid; place-items: center; box-shadow: 0 2px 0 rgba(0,0,0,.08); }
+.logo-chip img { width: 34px; height: 34px; }
+.og.for .ft .url { color: #5C4500; }
+/* compare: split */
+.og.compare { background: #FAF9F6; padding: 0; flex-direction: row; }
+.og.compare .side { width: 50%; padding: 64px 70px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+.og.compare .l { background: #16181A; color: #F1F3F5; }
+.og.compare .side .eb { font-size: 20px; }
+.og.compare .l .eb { color: #F5B400; } .og.compare .r .eb { color: #8A929B; }
+.og.compare .side b { font-size: 70px; line-height: 1.02; letter-spacing: -.025em; }
+.og.compare .side span.d { font-size: 26px; line-height: 1.3; }
+.og.compare .l span.d { color: #C9CED4; } .og.compare .r span.d { color: #5B636B; }
+.og.compare .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; border-radius: 50%; background: #F5B400; display: grid; place-items: center; font-weight: 800; font-size: 44px; color: #16181A; box-shadow: 0 0 0 10px #FAF9F6; }
+.og.compare .foot { position: absolute; left: 70px; right: 70px; bottom: 44px; display: flex; font-size: 20px; }
+.og.compare .foot .url { margin-left: auto; }
+/* guides: network band */
+.og.guides { background: #FFFFFF; padding-left: 116px; }
+.og.guides .band { position: absolute; left: 0; top: 0; bottom: 0; width: 40px; }
+.og.guides .eb { display: flex; align-items: center; gap: 14px; font-size: 22px; color: #5B636B; }
+.og.guides .eb img { width: 36px; height: 36px; }
+.og.guides h1 { margin-top: 28px; font-size: 70px; max-width: 980px; }
+.og.guides p { margin-top: 24px; font-size: 29px; color: #5B636B; line-height: 1.32; max-width: 960px; }
+/* hubs */
+.og.hub { background: #16181A; color: #F1F3F5; }
+.og.hub .eb { font-size: 21px; color: #F5B400; }
+.og.hub h1 { margin-top: 30px; font-size: 100px; max-width: 960px; }
+.og.hub p { margin-top: 26px; font-size: 32px; color: #C9CED4; max-width: 900px; line-height: 1.3; }
+
+/* ---------- header images (960x720) ---------- */
+.hero { width: 960px; height: 720px; padding: 56px; display: flex; flex-direction: column; }
+.card { background: #FFFFFF; border-radius: 22px; box-shadow: 0 1px 0 rgba(0,0,0,.05), 0 20px 50px rgba(22,24,26,.12); position: relative; z-index: 2; }
+.hero.glossary { background: linear-gradient(160deg, #FFF6DC, #FAF9F6 60%); justify-content: center; }
+.hero.glossary .card { padding: 54px 58px; display: grid; gap: 18px; }
+.hero.glossary .card .mono { font-size: 17px; color: #B58400; }
+.hero.glossary .card b { font-size: 76px; line-height: 1; letter-spacing: -.03em; }
+.hero.glossary .card .aka { font-size: 22px; color: #8A929B; }
+.hero.glossary .card p { font-size: 32px; line-height: 1.25; color: #16181A; }
+.hero.glossary .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.tag { font-family: var(--font-mono); font-size: 15px; padding: 8px 12px; border-radius: 8px; background: #F2F0EB; color: #5B636B; text-transform: lowercase; }
+.tag.y { background: #FFE9A8; color: #7A5A00; }
+.hero.glossary .see { font-size: 19px; color: #5B636B; } .hero.glossary .see b { font-size: 19px; letter-spacing: 0; color: #16181A; }
+.hero.patterns { background: #16181A; color: #F1F3F5; flex-direction: row; align-items: center; gap: 30px; }
+.hero.patterns svg.radar { width: 470px; height: 470px; flex: none; }
+.hero.patterns .t { display: grid; gap: 18px; }
+.hero.patterns .t .mono { color: #F5B400; font-size: 18px; }
+.hero.patterns .t b { font-size: 58px; line-height: 1.02; letter-spacing: -.02em; }
+.hero.patterns .t p { font-size: 25px; color: #C9CED4; line-height: 1.3; }
+.hero.patterns .t .q { margin-top: 10px; padding: 16px 18px; border-left: 4px solid #F5B400; background: #202327; font-size: 20px; color: #E3E6EA; line-height: 1.4; border-radius: 0 10px 10px 0; }
+.hero.for { background: #F5B400; justify-content: center; }
+.hero.for .card { padding: 46px 50px; display: grid; gap: 22px; }
+.hero.for .card .mono { font-size: 17px; color: #B58400; }
+.hero.for .card b { font-size: 62px; line-height: 1.02; letter-spacing: -.025em; }
+.hero.for ul { list-style: none; padding: 0; display: grid; gap: 12px; }
+.hero.for li { display: flex; gap: 14px; align-items: flex-start; font-size: 24px; line-height: 1.3; color: #2B2F33; }
+.hero.for li i { flex: none; width: 30px; height: 30px; border-radius: 50%; background: #16181A; color: #F5B400; display: grid; place-items: center; font-style: normal; font-size: 18px; margin-top: 1px; }
+.hero.for .logos { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero.for .logo-chip { background: #F7F5F0; width: 56px; height: 56px; }
+.hero.for .logo-chip img { width: 30px; height: 30px; }
+.hero.compare { background: #FAF9F6; justify-content: center; }
+.hero.compare .card { padding: 0; overflow: hidden; }
+.hero.compare table { width: 100%; border-collapse: collapse; font-size: 21px; }
+.hero.compare th, .hero.compare td { text-align: left; vertical-align: top; padding: 18px 22px; border-bottom: 1px solid #ECE9E2; line-height: 1.3; }
+.hero.compare thead th { font-size: 24px; background: #F7F5F0; }
+.hero.compare thead th:nth-child(2) { background: #FFE9A8; color: #7A5A00; }
+.hero.compare tbody th { width: 26%; color: #16181A; }
+.hero.compare tbody td { color: #4A5158; }
+.hero.compare tr:last-child > * { border-bottom: 0; }
+.hero.compare .cap { margin-bottom: 20px; font-size: 18px; color: #8A929B; }
+.hero.guides { background: #EEF1F4; justify-content: center; }
+.hero.guides .card { padding: 44px 50px; display: grid; gap: 20px; }
+.hero.guides .card .top { display: flex; align-items: center; gap: 14px; font-size: 18px; color: #5B636B; }
+.hero.guides .card .top img { width: 40px; height: 40px; }
+.hero.guides .card b.h { font-size: 44px; line-height: 1.08; letter-spacing: -.02em; }
+.hero.guides ol { list-style: none; padding: 0; display: grid; gap: 12px; counter-reset: s; }
+.hero.guides li { counter-increment: s; display: flex; gap: 16px; align-items: center; font-size: 23px; color: #2B2F33; padding: 14px 16px; border-radius: 12px; background: #F7F8FA; }
+.hero.guides li::before { content: counter(s); flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--net, #16181A); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 18px; }
+.hero.hub { background: #16181A; color: #F1F3F5; justify-content: center; gap: 22px; }
+.hero.hub .mono { color: #F5B400; font-size: 20px; }
+.hero.hub b { font-size: 80px; line-height: 1; letter-spacing: -.03em; }
+.hero.hub .chips { display: flex; flex-wrap: wrap; gap: 10px; max-width: 840px; }
+.hero.hub .chips span { font-size: 20px; padding: 10px 14px; border-radius: 10px; background: #202327; color: #E3E6EA; }
+
+/* ---------- "Slop Mop at work" figures (1200x720) ---------- */
+.fig { width: 1200px; height: 720px; display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 30px; padding: 40px; background: var(--bg, #F3F2EF); }
+.fig .post { align-self: start; background: #FFFFFF; border-radius: 14px; border: 1px solid #E2DED6; box-shadow: 0 10px 30px rgba(22,24,26,.08); overflow: hidden; }
+.fig .chrome { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #ECE9E2; font-size: 16px; color: #5B636B; }
+.fig .chrome img { width: 26px; height: 26px; }
+.fig .chrome .u { font-family: var(--font-mono); font-size: 13px; color: #8A929B; margin-left: auto; }
+.fig .who { display: flex; align-items: center; gap: 14px; padding: 20px 22px 6px; }
+.fig .av { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; background: var(--av, #5B636B); flex: none; }
+.fig .who b { display: block; font-size: 18px; }
+.fig .who small { display: block; font-size: 14px; color: #8A929B; }
+.fig .who .mop { margin-left: auto; }
+.fig .subject { padding: 18px 22px 0; font-size: 22px; font-weight: 700; }
+.fig .text { padding: 14px 22px 20px; font-size: 20px; line-height: 1.42; white-space: pre-line; color: #1F2327; max-height: 280px; overflow: hidden; }
+.fig .text.marked { box-shadow: inset 4px 0 0 var(--flag, #F5B400); background: var(--wash, #FFFBEF); }
+.fig .acts { display: flex; gap: 26px; padding: 12px 22px 16px; border-top: 1px solid #ECE9E2; font-size: 15px; color: #8A929B; }
+.fig .strip { margin-top: 14px; }
+.fig .col { display: grid; gap: 18px; align-content: start; }
+.fig .post.fine { opacity: .96; }
+.fig .post.fine .text { font-size: 18px; padding-top: 8px; max-height: 150px; }
+.fig .why { align-self: start; height: 640px; overflow: hidden; }
+.fig .why-scale { transform: scale(.84); transform-origin: top left; width: 476px; }
+.fig .why .caption-chip { margin-top: 14px; font-family: var(--font-mono); font-size: 13px; color: #8A929B; text-transform: lowercase; letter-spacing: .05em; }
+/* learn: editorial, paper with a mop band */
+.og.learn { background: #FAF9F6; color: #16181A; border-top: 22px solid #F5B400; }
+.og.learn .eb { font-size: 21px; color: #B58400; }
+.og.learn h1 { margin-top: 24px; font-size: 74px; max-width: 1040px; }
+.og.learn p { margin-top: 24px; font-size: 30px; line-height: 1.32; color: #4A5158; max-width: 980px; }
+/* calculators: a readout */
+.og.calculators { background: #16181A; color: #F1F3F5; flex-direction: row; gap: 56px; align-items: center; }
+.og.calculators .l { flex: 1; display: grid; gap: 22px; align-self: stretch; align-content: start; }
+.og.calculators .eb { font-size: 21px; color: #F5B400; }
+.og.calculators h1 { font-size: 66px; }
+.og.calculators p { font-size: 27px; color: #C9CED4; line-height: 1.32; }
+.readout { flex: none; width: 380px; border-radius: 22px; background: #202327; border: 2px solid #33383D; padding: 34px 32px; display: grid; gap: 10px; }
+.readout .mono { font-size: 17px; color: #8A929B; }
+.readout b { font-size: 92px; line-height: 1; letter-spacing: -.03em; color: #F5B400; font-variant-numeric: tabular-nums; }
+.readout span.l2 { font-size: 22px; color: #E3E6EA; line-height: 1.3; }
+.og.calculators .ft { position: absolute; left: 76px; right: 76px; bottom: 56px; }
+.hero.learn { background: linear-gradient(170deg, #FFF6DC, #FAF9F6 55%); justify-content: center; }
+.hero.learn .card { padding: 46px 50px; display: grid; gap: 22px; border-top: 10px solid #F5B400; }
+.hero.learn .card .mono { font-size: 17px; color: #B58400; }
+.hero.learn .card b.h { font-size: 46px; line-height: 1.08; letter-spacing: -.02em; }
+.hero.learn ol, .hero.calculators ol { list-style: none; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.hero.learn li { counter-increment: s; display: flex; gap: 16px; align-items: center; font-size: 22px; color: #2B2F33; }
+.hero.learn li::before { content: counter(s, decimal-leading-zero); font-family: var(--font-mono); font-size: 16px; color: #B58400; flex: none; width: 34px; }
+.hero.calculators { background: #16181A; justify-content: center; align-items: center; }
+.hero.calculators .readout { width: 640px; padding: 48px 50px; gap: 16px; }
+.hero.calculators .readout b { font-size: 132px; }
+.hero.calculators .readout .t { font-size: 30px; font-weight: 700; color: #F1F3F5; line-height: 1.15; }
+.hero.calculators .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+.hero.calculators .keys i { height: 34px; border-radius: 8px; background: #2B2F33; }
+.hero.calculators .keys i:nth-child(4n) { background: #F5B400; opacity: .85; }
+</style>
+</head>
+<body>
+<div id="frame"></div>
+<script src="../vendor/react.production.min.js"></script>
+<script src="../vendor/react-dom.production.min.js"></script>
+<script src="../_ds/slopmop/_ds_bundle.js"></script>
+<script>
+(function () {
+  var DS = window.SlopMopDesignSystem_ca9143, h = React.createElement;
+  var NET = {
+    linkedin: { name: "LinkedIn", logo: "linkedin-color", color: "#0A66C2", bg: "#F3F2EF", url: "linkedin.com/feed" },
+    x: { name: "X", logo: "x", color: "#0F1419", bg: "#FFFFFF", url: "x.com/home" },
+    reddit: { name: "Reddit", logo: "reddit-color", color: "#FF4500", bg: "#DAE0E6", url: "reddit.com" },
+    facebook: { name: "Facebook", logo: "facebook", color: "#1877F2", bg: "#F0F2F5", url: "facebook.com" },
+    substack: { name: "Substack", logo: "substack", color: "#FF6719", bg: "#FFFFFF", url: "substack.com/home" },
+    medium: { name: "Medium", logo: "medium", color: "#1A8917", bg: "#F7F7F7", url: "medium.com" },
+    websites: { name: "Websites", logo: "web", color: "#5B636B", bg: "#EEF1F4", url: "example.com/article" },
+    email: { name: "Email", logo: "gmail", color: "#EA4335", bg: "#F6F8FC", url: "mail.google.com" }
+  };
+  var TELLS = ["formulaicHook", "engagementBait", "hypeMarketing", "emptyEvaluation", "tradeoffFreePromises", "contrastFraming", "manneredProse", "formalHedging", "manufacturedNarrative"];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function logo(k) { return '<span class="logo-chip"><img src="../assets/logos/' + NET[k].logo + '.svg" alt=""></span>'; }
+  function radar(on, values, dark) {
+    var cx = 110, cy = 110, r = 86, sp = "", pts = [], rings = "";
+    [0.33, 0.66, 1].forEach(function (k) { rings += '<circle cx="110" cy="110" r="' + (r * k) + '" fill="none" stroke="' + (dark ? "#33383D" : "#E4E1DA") + '"/>'; });
+    for (var i = 0; i < 9; i++) {
+      var a = -Math.PI / 2 + i * 2 * Math.PI / 9, x = cx + r * Math.cos(a), y = cy + r * Math.sin(a), lit = i === on;
+      sp += '<line x1="110" y1="110" x2="' + x.toFixed(1) + '" y2="' + y.toFixed(1) + '" stroke="' + (lit ? "#F5B400" : (dark ? "#3D4247" : "#D9D5CC")) + '" stroke-width="' + (lit ? 4 : 1.2) + '" stroke-linecap="round"/>';
+      var v = values[i]; pts.push((cx + r * v * Math.cos(a)).toFixed(1) + "," + (cy + r * v * Math.sin(a)).toFixed(1));
+    }
+    return '<svg class="radar" viewBox="0 0 220 220">' + rings + sp + '<polygon points="' + pts.join(" ") + '" fill="rgba(245,180,0,.30)" stroke="#F5B400" stroke-width="2" stroke-linejoin="round"/></svg>';
+  }
+  var MARK = '<img src="../assets/img/mark.svg" alt="">';
+  var foot = function (url, dark) { return '<div class="ft"><span class="mark">' + MARK + "Slop Mop</span><span class=\"url\">" + esc(url) + "</span></div>"; };
+
+  function og(s) {
+    var f = s.family, o = '<div class="og ' + f + '">';
+    if (f === "glossary") o += '<span class="eb mono">the slop glossary</span><h1>' + esc(s.title) + '</h1><span class="pos mono">' + esc(s.pos) + '</span><div class="rule"></div><p>' + esc(s.line) + "</p>" + foot(s.url);
+    else if (f === "patterns") o += '<span class="eb mono">the nine tells · ' + s.order + ' of 9</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + radar(s.order - 1, s.values, true) + foot(s.url);
+    else if (f === "for") o += '<span class="eb mono">slop mop for</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + '</p><div class="logos">' + s.nets.map(logo).join("") + "</div>" + foot(s.url);
+    else if (f === "compare") return '<div class="og compare"><div class="side l"><span class="eb mono">slop mop</span><b>Slop Mop</b><span class="d">' + esc(s.us) + '</span></div><div class="side r"><span class="eb mono">compared with</span><b>' + esc(s.them) + '</b><span class="d">' + esc(s.themLine) + '</span></div><div class="vs">vs</div><div class="foot"><span class="mark" style="color:#F1F3F5">' + MARK + 'Slop Mop</span><span class="url">' + esc(s.url) + "</span></div></div>";
+    else if (f === "guides") o += '<span class="band" style="background:' + NET[s.net].color + '"></span><span class="eb mono"><img src="../assets/logos/' + NET[s.net].logo + '.svg" alt="">guide · ' + esc(NET[s.net].name.toLowerCase()) + " · " + s.minutes + " min</span><h1>" + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + foot(s.url);
+    else if (f === "learn") o += '<span class="eb mono">slop mop · learn</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + foot(s.url);
+    else if (f === "calculators") return '<div class="og calculators"><div class="l"><span class="eb mono">slop calculator · free</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + '</p></div><div class="readout"><span class="mono">example</span><b>' + esc(s.big) + '</b><span class="l2">' + esc(s.bigLabel) + "</span></div>" + foot(s.url) + "</div>";
+    else o = '<div class="og hub"><span class="eb mono">slop mop</span><h1>' + esc(s.title) + "</h1><p>" + esc(s.line) + "</p>" + foot(s.url);
+    if (f !== "hub") o += '<span class="dot" style="right:-110px;bottom:-150px;width:420px;height:420px;opacity:' + (f === "for" ? ".0" : ".14") + '"></span>';
+    return o + "</div>";
+  }
+
+  function hero(s) {
+    var f = s.family;
+    if (f === "glossary") return '<div class="hero glossary"><div class="card"><span class="mono">slop mop glossary · ' + esc(s.letter) + '</span><b>' + esc(s.title) + "</b>" + (s.aka ? '<span class="aka">also ' + esc(s.aka) + "</span>" : "") + "<p>" + esc(s.line) + '</p><div class="meta">' + s.tags.map(function (t, i) { return '<span class="tag' + (i === 0 ? " y" : "") + '">' + esc(t) + "</span>"; }).join("") + "</div>" + (s.see ? '<span class="see">See also <b>' + esc(s.see) + "</b></span>" : "") + "</div></div>";
+    if (f === "patterns") return '<div class="hero patterns">' + radar(s.order - 1, s.values, true) + '<div class="t"><span class="mono">tell ' + s.order + ' of 9 · the slopprint</span><b>' + esc(s.title) + "</b><p>" + esc(s.line) + "</p>" + (s.quote ? '<div class="q">' + esc(s.quote) + "</div>" : "") + "</div></div>";
+    if (f === "for") return '<div class="hero for"><div class="card"><span class="mono">slop mop for</span><b>' + esc(s.title) + "</b><ul>" + s.points.map(function (p) { return "<li><i>✓</i><span>" + esc(p) + "</span></li>"; }).join("") + '</ul><div class="logos">' + s.nets.map(logo).join("") + "</div></div></div>";
+    if (f === "compare") return '<div class="hero compare"><span class="cap mono">at a glance · checked ' + esc(s.checked) + '</span><div class="card"><table><thead><tr><th></th><th>Slop Mop</th><th>' + esc(s.them) + "</th></tr></thead><tbody>" + s.rows.map(function (r) { return "<tr><th>" + esc(r[0]) + "</th><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>"; }).join("") + "</tbody></table></div></div>";
+    if (f === "guides") return '<div class="hero guides" style="--net:' + NET[s.net].color + '"><div class="card"><span class="top"><img src="../assets/logos/' + NET[s.net].logo + '.svg" alt="">' + esc(NET[s.net].name) + " guide · " + s.minutes + ' min read</span><b class="h">' + esc(s.title) + "</b><ol>" + s.steps.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></div></div>";
+    if (f === "learn") return '<div class="hero learn"><div class="card"><span class="mono">slop mop · learn</span><b class="h">' + esc(s.title) + "</b><ol>" + s.steps.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></div></div>";
+    if (f === "calculators") return '<div class="hero calculators"><div class="readout"><span class="mono">slop calculator · example</span><b>' + esc(s.big) + '</b><span class="l2">' + esc(s.bigLabel) + '</span><span class="t">' + esc(s.title) + '</span><div class="keys"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>';
+    return '<div class="hero hub"><span class="mono">slop mop · ' + esc(s.count) + '</span><b>' + esc(s.title) + '</b><div class="chips">' + s.chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div></div>";
+  }
+
+  function Fig(p) {
+    var s = p.s, n = NET[s.net], tells = {};
+    TELLS.forEach(function (k, i) { if (s.tells[i] > 0.05) tells[k] = s.tells[i]; });
+    var tone = s.verdict === "likely" ? "red" : "yellow";
+    var post = h("div", { className: "post" },
+      h("div", { className: "chrome" }, h("img", { src: "../assets/logos/" + n.logo + ".svg", alt: "" }), n.name, h("span", { className: "u" }, n.url)),
+      h("div", { className: "who" }, h("span", { className: "av", style: { "--av": s.avColor } }, s.initials),
+        h("span", null, h("b", null, s.author), h("small", null, s.byline)),
+        h("span", { className: "mop" }, h(DS.MopIcon, { state: tone, label: "Is this slop?" }))),
+      s.subject ? h("div", { className: "subject" }, s.subject) : null,
+      h("div", { className: "text marked", style: { "--flag": tone === "red" ? "var(--red-500)" : "var(--mop-500)", "--wash": tone === "red" ? "var(--red-100)" : "var(--mop-100)" } }, s.text),
+      h("div", { className: "acts" }, s.acts.map(function (a) { return h("span", { key: a }, a); })));
+    var card = { verdict: s.verdict, score: s.score, mode: s.mode, tells: tells, humanVoice: s.humanVoice, usefulness: s.usefulness, readerResponse: s.net === "email" ? undefined : s.readerResponse, checksToday: { used: s.used, limit: 250 } };
+    if (s.net !== "email") card.community = s.community;
+    var fine = s.fine ? h("div", { className: "post fine" },
+      h("div", { className: "who" }, h("span", { className: "av", style: { "--av": s.fineColor } }, s.fineInitials),
+        h("span", null, h("b", null, s.fineAuthor), h("small", null, s.fineByline)),
+        h("span", { className: "mop" }, h(DS.MopIcon, { state: "blue", label: "Looks fine" }))),
+      h("div", { className: "text" }, s.fine)) : null;
+    return h("div", { className: "fig", style: { "--bg": n.bg } },
+      h("div", { className: "col" }, post, fine),
+      h("div", { className: "why" }, h("div", { className: "why-scale" }, h(DS.WhyCard, Object.assign({ interactive: false, vote: null, onVote: function () {} }, card)))));
+  }
+
+  var root = null;
+  window.render = function (spec) {
+    var el = document.getElementById("frame");
+    if (root) { root.unmount(); root = null; }
+    el.innerHTML = "";
+    if (spec.mode === "fig") { root = ReactDOM.createRoot(el); root.render(h(Fig, { s: spec })); }
+    else el.innerHTML = spec.mode === "og" ? og(spec) : hero(spec);
+    return new Promise(function (res) { setTimeout(function () { document.fonts.ready.then(function () { requestAnimationFrame(function () { requestAnimationFrame(res); }); }); }, 30); });
+  };
+})();
+</script>
+</body>
+</html>

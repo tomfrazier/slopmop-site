@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]});
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted'});
+  (function () {
+    var c = null; try { c = JSON.parse(localStorage.getItem('slopmop:consent')); } catch (e) {}
+    if (c && c.v === 1 && Date.now() - c.t < 365 * 864e5) gtag('consent', 'update', {analytics_storage: c.analytics ? 'granted' : 'denied'});
+    else if (navigator.globalPrivacyControl === true) gtag('consent', 'update', {analytics_storage: 'denied'});
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<title>Slop filter for Gmail and Outlook · Slop Mop</title>
+<meta name="description" content="A slop filter for Gmail and Outlook: what inbox slop looks like, how the Slop Mop add-ons check email privately, and the filters and rules to set as well.">
+<link rel="canonical" href="https://slopmop.lol/for/email/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/for/email/">
+<meta property="og:title" content="Slop Mop for email: a slop filter for Gmail and Outlook">
+<meta property="og:description" content="A slop filter for Gmail and Outlook: what inbox slop looks like, how the Slop Mop add-ons check email privately, and the filters and rules to set as well.">
+<meta property="og:image" content="https://slopmop.lol/assets/og/for-email.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Slop Mop for email: a slop filter for Gmail and Outlook">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Slop Mop for email: a slop filter for Gmail and Outlook">
+<meta name="twitter:description" content="A slop filter for Gmail and Outlook: what inbox slop looks like, how the Slop Mop add-ons check email privately, and the filters and rules to set as well.">
+<meta name="twitter:image" content="https://slopmop.lol/assets/og/for-email.jpg">
+<meta name="author" content="Tom Frazier">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../_ds/slopmop/styles.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sites.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://slopmop.lol/for/email/#page",
+      "url": "https://slopmop.lol/for/email/",
+      "name": "Slop Mop for email: a slop filter for Gmail and Outlook",
+      "headline": "Slop filter for Gmail and Outlook · Slop Mop",
+      "description": "A slop filter for Gmail and Outlook: what inbox slop looks like, how the Slop Mop add-ons check email privately, and the filters and rules to set as well.",
+      "inLanguage": "en",
+      "datePublished": "2026-10-18",
+      "dateModified": "2026-10-18",
+      "keywords": "slop filter for gmail and outlook",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://slopmop.lol/assets/hero/for-email.jpg",
+        "width": 960,
+        "height": 720,
+        "caption": "Slop Mop for Email: Checks what each sender wrote, in Gmail and Outlook; Marks cold-pitch filler and workslop; Replaces personal details before checking"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/hero/for-email.jpg",
+          "width": 960,
+          "height": 720,
+          "caption": "Slop Mop for Email: Checks what each sender wrote, in Gmail and Outlook; Marks cold-pitch filler and workslop; Replaces personal details before checking"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/fig/for-email.jpg",
+          "width": 1200,
+          "height": 720,
+          "caption": "Mock-up of a Email email marked Possibly slop by Slop Mop, with the panel showing Stiff phrasing and Empty praise as the strongest signs"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/og/for-email.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Slop Mop for email: a slop filter for Gmail and Outlook"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://slopmop.lol/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://slopmop.lol/for/email/#crumbs"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://slopmop.lol/#app",
+        "name": "Slop Mop"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop",
+        "url": "https://slopmop.lol/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Artimovo LLC",
+        "url": "https://slopmop.lol/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slopmop.lol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Slop Mop for",
+          "item": "https://slopmop.lol/for/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "email: a slop filter for Gmail and Outlook",
+          "item": "https://slopmop.lol/for/email/"
+        }
+      ],
+      "@id": "https://slopmop.lol/for/email/#crumbs"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../index.html" aria-label="Slop Mop home"><img src="../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../how-it-works.html">How it works</a>
+      <a href="../../index.html#tells">The tells</a>
+      <a href="../../index.html#networks">Networks</a>
+      <a href="../../index.html#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/for/">Slop Mop for</a></nav><span class="eyebrow">slop mop for</span>
+      <h1 class="h-1">Slop Mop for email: a slop filter for Gmail and Outlook</h1>
+      <p class="lede">Slop Mop for Gmail and Outlook checks the emails you open for cold-sequence filler, padded newsletters and workslop.</p>
+      <p class="mono"><span class="badge badge-live">live</span></p>
+    </div>
+    <div class="ph-visual"><img class="ph-img" src="/assets/hero/for-email.jpg" width="960" height="720" alt="Slop Mop for Email: Checks what each sender wrote, in Gmail and Outlook; Marks cold-pitch filler and workslop; Replaces personal details before checking" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#what-slop-looks-like-in-your-inbox">What slop looks like in your inbox</a>
+      <a href="#how-the-slop-filter-works-in-gmail-and-outlook">How the slop filter works in Gmail and Outlook</a>
+      <a href="#gmail-s-and-outlook-s-own-filters-and-how-they-fit-with-slop-mop">Gmail's and Outlook's own filters, and how they fit with Slop Mop</a>
+      <a href="#who-it-s-for">Who it's for</a>
+    </nav>
+    <div class="prose">
+<p>Inbox slop comes from three directions. Strangers send cold outreach in automated sequences. Newsletters you once signed up for arrive padded to a length nobody asked for. And colleagues send long, polished documents that turn out to say very little.</p>
+<p>That third kind has a name. In September 2025, researchers from BetterUp Labs and the Stanford Social Media Lab wrote in Harvard Business Review about <a href="/glossary/workslop/">workslop</a>: AI-generated work content that looks like good work but lacks the substance to move a task forward. In their survey of US desk workers, 40% said they'd received some in the previous month (<a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" rel="noopener">Harvard Business Review</a>). The cost lands on whoever receives it, who has to work out what it means, fix it or redo it.</p>
+<p>Email slop isn't only an AI problem. Sales sequences were formulaic long before language models, and "I hope this email finds you well" has been opening empty emails for decades.</p>
+<section id="what-slop-looks-like-in-your-inbox">
+<h2>What slop looks like in your inbox</h2>
+<p>Inbox slop is usually polite, long and vague. The three kinds look like this.</p>
+<p>The cold email from a sequence:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>Hi {First name}, I hope this email finds you well! I came across your impressive profile and was truly inspired. Our cutting-edge platform empowers teams like yours to unlock seamless growth. Do you have 15 minutes this week?</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Hi Priya, you posted a data engineer role on 3 October. We place contract data engineers in Leeds, usually within two weeks, for a 15% fee. Worth a call, or not a fit?</p></span></div></div>
+<p>The internal update that's all framing:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>Hi team, please find below a comprehensive overview of key considerations regarding Q4 priorities. Furthermore, alignment across stakeholders remains essential to driving impactful outcomes.</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Q4: we're dropping the Android widget and moving both engineers to billing. Sam, I need your decision by Friday on whether the price change ships in November.</p></span></div></div>
+<p>The newsletter that opens with weather:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>Welcome back to another edition! This week has been an absolute whirlwind, and I can't wait to share some truly exciting updates with you all...</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Three things this week: the library reopens on Monday, bin collection moves to Thursdays, and nominations for the village hall committee close on 31 October.</p></span></div></div>
+<p>The cold email stacks <a href="/patterns/empty-praise/">empty praise</a> and <a href="/patterns/hype-words/">hype words</a>. The update is <a href="/patterns/stiff-phrasing/">stiff phrasing</a> from top to bottom. The newsletter makes you read a paragraph to find out there's nothing in it yet. Each fine version can be acted on from the first sentence.</p>
+</section><figure class="shot"><img src="/assets/fig/for-email.jpg" width="1200" height="720" loading="lazy" alt="Mock-up of a Email email marked Possibly slop by Slop Mop, with the panel showing Stiff phrasing and Empty praise as the strongest signs"><figcaption>Illustration: Slop Mop on Email, marking an email like the example on this page. It scores 65 out of 100 (Possibly slop); the strongest signs are stiff phrasing and empty praise. In Highlight mode it stays visible and its mop turns yellow; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.</figcaption></figure>
+<section id="how-the-slop-filter-works-in-gmail-and-outlook">
+<h2>How the slop filter works in Gmail and Outlook</h2>
+<p>Email works through two add-ons, Slop Mop for Gmail and Slop Mop for Outlook. Both are part of Slop Mop XL, at US$5.99 a month or US$59.99 a year, which also covers every feed and the sites you read, on up to five browsers and add-ons.</p>
+<p>The add-ons check the emails you open, and any draft you ask them to check. An AI model designed for calibrated decisions answers the same questions it asks of a post: the nine tells of slop, plus "sounds like a person" and "useful to readers". You get a score out of 100, a verdict (Likely slop, Possibly slop, Looks fine or Not sure) and the signs behind it, so you can see that the Q4 overview is mostly <a href="/patterns/stiff-phrasing/">stiff phrasing</a> before you've read page two. Reader response doesn't apply, because an email has no public reactions to count.</p>
+<p>Nothing in your mailbox is hidden, moved or deleted. In Outlook the verdict is saved on the email as a Slop Mop category, which you can see and remove in Outlook. In Gmail it's saved in your Google account's storage for the add-on. Each email is checked once, and voting isn't available for email.</p>
+<p>Email is private, so the add-ons handle it differently from the browser extension:</p>
+<ul><li>
+<strong>Personal details are taken out in your mailbox, before anything is sent.</strong> Names, email addresses, phone numbers, street addresses, links, card and bank numbers, ID numbers and dates of birth are replaced with placeholders such as [NAME] and [PHONE], and the add-on shows you what it took out. A name written in the body that isn't on the sender or recipient lines can occasionally get through.
+</li><li>
+<strong>Only what the sender wrote is sent.</strong> The earlier messages quoted below it, the signature, attachments, your contacts and your other mail stay put.
+</li><li>
+<strong>Some mail is never read unless you check it by hand:</strong> spam and junk, mail marked private or confidential or with a sensitivity label, encrypted mail, legal and health mail, and transactional mail such as sign-in codes, password resets, receipts and deliveries. You can change these in your account's email settings.
+</li><li>
+<strong>Email text isn't stored or used for training.</strong> The server keeps a one-way hash of the redacted text and the scores, so the same email isn't judged twice.
+</li></ul>
+<p>The full detail is in the <a href="/privacy.html">privacy policy</a>, and the scoring is explained on <a href="/how-it-works.html">how it works</a>. It judges the writing, and it isn't an AI detector, so a clear email drafted with AI help can pass while a hand-written one that's all preamble may not. It doesn't unsubscribe you from anything either.</p>
+</section>
+<section id="gmail-s-and-outlook-s-own-filters-and-how-they-fit-with-slop-mop">
+<h2>Gmail's and Outlook's own filters, and how they fit with Slop Mop</h2>
+<p>Both Gmail and Outlook have useful built-in tools. They sort by sender and keyword, which handles bulk mail well and colleagues not at all.</p>
+<p><strong>In Gmail</strong></p>
+<ol><li>
+<strong>Filter messages like these.</strong> Open an email, choose "Filter messages like these" from its menu, set the criteria (sender, words, subject) and choose an action such as skip the inbox, apply a label or delete. Edit filters later under Settings, then Filters and Blocked Addresses (<a href="https://support.google.com/mail/answer/6579" rel="noopener">Gmail Help</a>).
+</li><li>
+<strong>Manage subscriptions.</strong> In the left-hand menu, choose More, then Manage subscriptions, to see your mailing lists in one place and unsubscribe. Google says it's rolling out gradually, and unsubscribing can take a few days to take effect (<a href="https://support.google.com/mail/answer/15621070" rel="noopener">Gmail Help</a>).
+</li></ol>
+<p><strong>In Outlook</strong></p>
+<ol><li>
+<strong>Focused Inbox.</strong> It splits your inbox into Focused and Other, moving bulk and automatically generated mail into Other based on what you interact with. In classic Outlook, turn it on from the View tab. It's available for Microsoft 365, Exchange and Outlook.com accounts (<a href="https://support.microsoft.com/help/f714d94d-9e63-4217-9ccb-6cb2986aa1b2" rel="noopener">Microsoft Support</a>).
+</li><li>
+<strong>Inbox rules.</strong> In Outlook.com and new Outlook, go to Settings, then Mail, then Rules, to move, flag or delete messages that match conditions you set. Rules run in list order, and in Outlook.com they apply only to new mail (<a href="https://support.microsoft.com/office/use-inbox-rules-in-outlook-com-4b094371-a5d7-49bd-8b1b-4e4896a7cc5d" rel="noopener">Microsoft Support</a>).
+</li></ol>
+<p>A filter can catch "I hope this email finds you well". It can't tell you the five-page Q4 overview from your manager is mostly filler. Let filters, rules and Focused Inbox sort the bulk mail by sender, unsubscribe from what you never open, and use Slop Mop on what's left: the colleague's report, the newsletter you pay for, the cold email that might be worth a reply. <a href="/compare/slop-mop-vs-email-triage-tools/">Slop Mop vs email triage tools</a> and <a href="/compare/slop-mop-vs-spam-filters/">Slop Mop vs spam filters</a> go further into the split.</p>
+</section>
+<section id="who-it-s-for">
+<h2>Who it's for</h2>
+<p>Anyone whose inbox is a large part of their job:</p>
+<ul><li>
+<a href="/for/ceos/">CEOs</a> and <a href="/for/founders/">founders</a> getting a steady stream of pitches alongside internal reports they need to read properly.
+</li><li>
+<a href="/for/sales-teams/">Sales teams</a> who send outreach as well as receive it, and want to know what reads as a template.
+</li><li>
+<a href="/for/recruiters/">Recruiters</a> and <a href="/for/investors/">investors</a>, whose addresses are on every cold-email list.
+</li><li>
+<a href="/for/comms-teams/">Comms teams</a> and <a href="/for/journalists/">journalists</a> fielding press releases that bury the one line that matters.
+</li></ul>
+<p>If your inbox looks like this, <a href="/">Slop Mop for Gmail and Outlook</a> comes with Slop Mop XL and checks these emails for you.</p>
+</section><div class="page-tail"><div class="share" aria-label="Share">
+  <button class="share-btn share-copy" type="button" data-copy="https://slopmop.lol/for/email/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copy link</span></button>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fslopmop.lol%2Ffor%2Femail%2F" target="_blank" rel="noopener" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn"><img src="/assets/logos/linkedin.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://x.com/intent/post?text=Slop%20Mop%20for%20email%3A%20a%20slop%20filter%20for%20Gmail%20and%20Outlook&url=https%3A%2F%2Fslopmop.lol%2Ffor%2Femail%2F" target="_blank" rel="noopener" data-share="x" aria-label="Share on X" title="Share on X"><img src="/assets/logos/x.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://bsky.app/intent/compose?text=Slop%20Mop%20for%20email%3A%20a%20slop%20filter%20for%20Gmail%20and%20Outlook%20https%3A%2F%2Fslopmop.lol%2Ffor%2Femail%2F" target="_blank" rel="noopener" data-share="bluesky" aria-label="Share on Bluesky" title="Share on Bluesky"><img src="/assets/logos/bluesky.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://www.threads.net/intent/post?text=Slop%20Mop%20for%20email%3A%20a%20slop%20filter%20for%20Gmail%20and%20Outlook%20https%3A%2F%2Fslopmop.lol%2Ffor%2Femail%2F" target="_blank" rel="noopener" data-share="threads" aria-label="Share on Threads" title="Share on Threads"><img src="/assets/logos/threads.svg" alt="" width="15" height="15"></a>
+</div><span class="mono">updated 18 october 2026</span></div><div class="related"><h2>Read next</h2><div class="cards-3"><a class="card link-card" href="/glossary/workslop/"><span class="mono">Glossary</span><h3>Workslop</h3><p>Polished-looking AI work output that doesn&#x27;t advance the task and hands the real effort to whoever receives it.</p></a><a class="card link-card" href="/patterns/stiff-phrasing/"><span class="mono">The nine tells</span><h3>Stiff phrasing</h3><p>Stock transitions and hedges such as furthermore, moreover and may potentially, bolted onto sentences that don&#x27;t need them.</p></a><a class="card link-card" href="/patterns/empty-praise/"><span class="mono">The nine tells</span><h3>Empty praise</h3><p>Big verdicts like incredible, powerful and transformative, with no detail to show what the writer actually saw.</p></a><a class="card link-card" href="/patterns/hype-words/"><span class="mono">The nine tells</span><h3>Hype words</h3><p>Marketing vocabulary such as game-changing, unlock, elevate and seamless, used where a number or a plain verb would say more.</p></a><a class="card link-card" href="/for/sales-teams/"><span class="mono">Slop Mop for</span><h3>Slop Mop for sales teams: a LinkedIn feed filter, plus email, X and Reddit</h3><p>For sellers and SDRs: fold the sales-influencer bait on LinkedIn, X, Reddit and email, and keep the prospect posts that tell you who to call.</p></a><a class="card link-card" href="/for/ceos/"><span class="mono">Slop Mop for</span><h3>Slop Mop for CEOs</h3><p>For chief executives: a gentle setup that folds vendor bait and peer platitudes on LinkedIn, X and email while keeping your staff in view.</p></a></div></div><div class="sources"><h2>Sources</h2><ol><li><a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" rel="noopener">AI-generated &quot;workslop&quot; is destroying productivity</a>, Harvard Business Review, 22 September 2025</li><li><a href="https://support.google.com/mail/answer/6579" rel="noopener">Create rules to filter your emails</a>, Gmail Help</li><li><a href="https://support.google.com/mail/answer/15621070" rel="noopener">Manage your subscriptions in Gmail</a>, Gmail Help</li><li><a href="https://support.microsoft.com/help/f714d94d-9e63-4217-9ccb-6cb2986aa1b2" rel="noopener">Focused Inbox for Outlook</a>, Microsoft Support</li><li><a href="https://support.microsoft.com/office/use-inbox-rules-in-outlook-com-4b094371-a5d7-49bd-8b1b-4e4896a7cc5d" rel="noopener">Use inbox rules in Outlook.com</a>, Microsoft Support</li></ol></div><aside class="cta-card">
+  <div><h2>Fold the slop out of your inbox</h2><p>Slop Mop for Gmail and Outlook checks what each sender wrote, marks the filler and folds the rest, with personal details replaced before anything is sent. Part of Slop Mop XL, with every feed and the sites you read.</p></div>
+  <div class="cta-btns"><a class="btn btn-primary" href="/index.html#pricing">Get Slop Mop XL</a><a class="btn btn-ghost" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser, free</a></div>
+</aside><nav class="explore" aria-label="Explore Slop Mop"><b>Explore</b><a href="/">Slop Mop home</a><a href="/how-it-works.html">How it works</a><a href="/glossary/">The slop glossary</a><a href="/patterns/">The nine tells</a><a href="/for/">Who it's for</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/learn/">Learn</a><a href="/calculators/">Calculators</a></nav>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html"><img src="../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working.</p>
+        <div class="made"><img src="../../assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <div class="footer-side">
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note" aria-live="polite"></p>
+      </form>
+      <div class="ask-ai">
+        <p class="ask-ai-label">Ask AI about Slop Mop</p>
+        <div class="ask-ai-row">
+          <a class="ask-ai-btn" data-ask="chatgpt" href="https://chatgpt.com/?hints=search&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Slop Mop" title="Ask ChatGPT"><img src="../../assets/ai/chatgpt.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="claude" href="https://claude.ai/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Claude about Slop Mop" title="Ask Claude"><img src="../../assets/ai/claude.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="perplexity" href="https://www.perplexity.ai/search/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Perplexity about Slop Mop" title="Ask Perplexity"><img src="../../assets/ai/perplexity.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="meta" href="https://www.meta.ai/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Meta AI about Slop Mop" title="Ask Meta AI"><img src="../../assets/ai/meta.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="grok" href="https://grok.com/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Grok about Slop Mop" title="Ask Grok"><img src="../../assets/ai/grok.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="gemini" href="https://www.google.com/search?udm=50&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Gemini about Slop Mop" title="Ask Gemini"><img src="../../assets/ai/gemini.svg" alt="" width="22" height="22"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="../../how-it-works.html">How it works</a></li>
+        <li><a href="../../patterns/">The nine tells</a></li>
+        <li><a href="../../index.html#networks">Networks</a></li>
+        <li><a href="../../index.html#pricing">Pricing</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="../../glossary/">Glossary</a></li>
+        <li><a href="../../guides/">Guides</a></li>
+        <li><a href="../../compare/">Compare</a></li>
+        <li><a href="../../learn/">Learn</a></li>
+        <li><a href="../../calculators/">Calculators</a></li>
+        <li><a href="../../help.html">Help</a></li>
+        <li><a href="../../about.html">About</a></li>
+        <li><a href="../../media.html">Media</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul></div>
+      <div><h3>Slop Mop for</h3><ul>
+        <li><a href="../../for/linkedin/">LinkedIn</a></li>
+        <li><a href="../../for/reddit/">Reddit</a></li>
+        <li><a href="../../for/x/">X</a></li>
+        <li><a href="../../for/facebook/">Facebook</a></li>
+        <li><a href="../../for/substack/">Substack</a></li>
+        <li><a href="../../for/medium/">Medium</a></li>
+        <li><a href="../../for/websites/">Websites</a></li>
+        <li><a href="../../for/email/">Email</a></li>
+      </ul></div>
+      <div><h3>Who it's for</h3><ul>
+        <li><a href="../../for/recruiters/">Recruiters</a></li>
+        <li><a href="../../for/job-seekers/">Job seekers</a></li>
+        <li><a href="../../for/founders/">Founders</a></li>
+        <li><a href="../../for/ceos/">CEOs</a></li>
+        <li><a href="../../for/sales-teams/">Sales teams</a></li>
+        <li><a href="../../for/marketers/">Marketers</a></li>
+        <li><a href="../../for/creators/">Creators</a></li>
+        <li><a href="../../for/journalists/">Journalists</a></li>
+        <li><a href="../../for/">Everyone else</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="../../privacy.html">Privacy policy</a></li>
+        <li><a href="../../terms.html">Terms of service</a></li>
+        <li><a href="../../open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+      </ul></div>
+      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+        <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="../../assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="../../assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="../../assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="../../assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="../../assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="../../assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="../../assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
