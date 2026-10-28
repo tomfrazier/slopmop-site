@@ -2,7 +2,7 @@
 
 > A browser extension that reads online content ahead of you and folds away low-value writing ("slop"), whether a person or an AI wrote it. Live on LinkedIn today, with X, Reddit, Facebook, Substack, Medium, websites and email coming soon. It shows why it made each call, and you can overrule it. Free for one feed. Website: https://slopmop.lol
 
-Last updated: 23 October 2026
+Last updated: 27 October 2026
 
 ## What it is
 
@@ -25,7 +25,7 @@ Slop Mop brought three things together: solid research on what slop looks like, 
 
 ## Who makes it
 
-Slop Mop is from **Artimovo**, Tom Frazier's new company. Artimovo is built around one of the biggest problems facing us today: execution is scaling faster than judgment. AI makes it cheap to produce more of everything, but not to know what is worth acting on. Artimovo builds products that help with judgment, clarity and autonomy, and Slop Mop is the first of them.
+Slop Mop is from **Artimovo**, Tom Frazier's new company. Artimovo is built around one of the biggest problems facing us today: execution is scaling faster than judgment. AI makes it cheap to produce more of everything, but not to know what is worth acting on. Artimovo is a venture studio: each of its ventures is tied to one of three dimensions of human agency, judgment, clarity and autonomy. Slop Mop is its venture in the Clarity pillar, and the first to launch (https://www.artimovo.com/ventures/).
 
 ### About Tom Frazier
 
@@ -66,6 +66,7 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 ## By the numbers
 
 - **100M+ tokens** of posts read so far.
+- **1 in 5 LinkedIn posts was slop** from 27 September to 27 October 2026, after LinkedIn's own filtering: State of Slop, October 2026, https://slopmop.lol/reports/state-of-slop-october-2026
 - **5-star rating** on the Chrome Web Store: https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho
 
 ## Pricing
@@ -75,6 +76,7 @@ Slop Mop never deletes, reports, mutes or blocks anything.
 
 ## In the press
 
+- Media kit (facts, numbers, quotes, founder bio, logos): https://slopmop.lol/media
 - The Register: "Mop the slop from your LinkedIn feed with a new open source Chrome extension" (23 September 2026) https://www.theregister.com/ai-and-ml/2026/09/23/mop-the-slop-from-your-linkedin-feed-with-a-new-open-source-chrome-extension/5298679
 - Hacker News discussion: https://news.ycombinator.com/item?id=49819820
 - Product Hunt: https://www.producthunt.com/products/slop-mop
@@ -88,6 +90,7 @@ Add Slop Mop to your browser, free: https://chromewebstore.google.com/detail/slo
 
 - How it works, in detail: https://slopmop.lol/how-it-works.html
 - About Slop Mop: https://slopmop.lol/about.html
+- Media kit: https://slopmop.lol/media
 - Help: https://slopmop.lol/help.html
 - Privacy policy: https://slopmop.lol/privacy.html
 - Contact: hello@slopmop.lol

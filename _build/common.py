@@ -39,7 +39,7 @@ OFFERS = [
 UPDATED = {
     "": "2026-10-23", "how-it-works.html": "2026-10-23", "about.html": "2026-10-14", "help.html": "2026-10-19",
     "privacy.html": "2026-10-19", "terms": "2026-10-14", "open-source": "2026-10-14", "contact.html": "2026-10-14",
-    "account-deleted": "2026-10-14",
+    "account-deleted": "2026-10-14", "media": "2026-10-27",
     "ask-ai": "2026-10-23", "ask-ai.md": "2026-10-23", "llms.txt": "2026-10-18",
 }
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -167,7 +167,7 @@ def head(title, desc, path, og_title=None, ld=None, og_image="og-image-4.png", e
 def nav(active=""):
     links = "\n".join(
         f'      <a href="{h}"{" aria-current=\"page\"" if h == active else ""}>{t}</a>' for h, t in NAV)
-    return f"""<a class="ph-bar" data-ph hidden href="https://www.producthunt.com/products/slop-mop" target="_blank" rel="noopener">Slop Mop is on Product Hunt · <b>Upvote the mop</b></a>
+    return f"""<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
@@ -236,6 +236,7 @@ def footer(path=None):
         <li><a href="calculators/">Calculators</a></li>
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="media.html">Media</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div><h3>Slop Mop for</h3><ul>

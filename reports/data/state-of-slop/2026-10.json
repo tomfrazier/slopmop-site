@@ -1,0 +1,321 @@
+{
+ "schema": 2,
+ "slug": "state-of-slop-october-2026",
+ "title": "State of Slop: October 2026",
+ "period_label": "October 2026",
+ "published": "2026-10-27",
+ "window": {
+  "from": "2026-09-27",
+  "to": "2026-10-27",
+  "days": 30,
+  "basis": "Every post someone with Slop Mop scrolled past in the window, scored once in production."
+ },
+ "sources": [
+  {
+   "id": "linkedin",
+   "label": "LinkedIn",
+   "kind": "posts",
+   "in_copy": true,
+   "share_percent": 98.8
+  },
+  {
+   "id": "other",
+   "label": "Early testing on other sites",
+   "kind": "posts",
+   "in_copy": false,
+   "share_percent": 1.2
+  }
+ ],
+ "sensitivity": "moderate",
+ "thresholds": {
+  "strong_tell": 0.5,
+  "slop": "Possibly or Likely slop at the chosen sensitivity"
+ },
+ "totals": {
+  "tokens_read": 124269925,
+  "not_yet_scored_percent": 1.3
+ },
+ "headline": {
+  "slop_percent": 19.5,
+  "possibly_percent": 13.1,
+  "likely_percent": 6.4,
+  "top_tell": "Empty praise",
+  "reader_agreement_percent": 53.3
+ },
+ "verdicts": {
+  "mild": {
+   "looks_fine": 86.7,
+   "possibly": 9.5,
+   "likely": 3.8,
+   "not_sure": 0.0
+  },
+  "moderate": {
+   "looks_fine": 80.5,
+   "possibly": 13.1,
+   "likely": 6.4,
+   "not_sure": 0.0
+  },
+  "aggressive": {
+   "looks_fine": 56.0,
+   "possibly": 20.4,
+   "likely": 23.6,
+   "not_sure": 0.0
+  }
+ },
+ "verdicts_per_check": {
+  "looks_fine": 80.5,
+  "possibly": 13.0,
+  "likely": 6.5
+ },
+ "score": {
+  "average": 23.9,
+  "median": 18,
+  "share_scoring_70_plus": 6.4
+ },
+ "tells": [
+  {
+   "id": "empty-praise",
+   "name": "Empty praise",
+   "description": "Evaluation with nothing behind it: 'game-changer', 'incredible', 'so proud' without saying what or why.",
+   "strongest_percent": 33.6,
+   "strong_percent": 26.0,
+   "strong_in_slop_percent": 54.1,
+   "average_strength": 0.34
+  },
+  {
+   "id": "not-x-but-y",
+   "name": "Not X, but Y",
+   "description": "Contrast framing: knocking down a claim nobody made so the real point sounds like a reveal.",
+   "strongest_percent": 31.1,
+   "strong_percent": 28.7,
+   "strong_in_slop_percent": 51.0,
+   "average_strength": 0.31
+  },
+  {
+   "id": "engagement-bait",
+   "name": "Engagement bait",
+   "description": "Asking for likes, comments or 'agree?' instead of earning them.",
+   "strongest_percent": 10.3,
+   "strong_percent": 7.3,
+   "strong_in_slop_percent": 13.1,
+   "average_strength": 0.14
+  },
+  {
+   "id": "scroll-stopper",
+   "name": "Scroll-stopper",
+   "description": "A formulaic hook line built to stop the scroll rather than say something.",
+   "strongest_percent": 6.5,
+   "strong_percent": 7.2,
+   "strong_in_slop_percent": 16.7,
+   "average_strength": 0.19
+  },
+  {
+   "id": "too-tidy-story",
+   "name": "Too-tidy story",
+   "description": "A manufactured narrative arc: the anecdote that lands exactly on the lesson.",
+   "strongest_percent": 4.9,
+   "strong_percent": 5.1,
+   "strong_in_slop_percent": 13.5,
+   "average_strength": 0.15
+  },
+  {
+   "id": "hype-words",
+   "name": "Hype words",
+   "description": "Marketing vocabulary standing in for a claim. Big verbs, no numbers.",
+   "strongest_percent": 4.8,
+   "strong_percent": 4.2,
+   "strong_in_slop_percent": 11.7,
+   "average_strength": 0.12
+  },
+  {
+   "id": "flowery-prose",
+   "name": "Flowery prose",
+   "description": "Mannered, ornamental writing: rhythm and imagery over substance.",
+   "strongest_percent": 4.1,
+   "strong_percent": 4.0,
+   "strong_in_slop_percent": 11.2,
+   "average_strength": 0.17
+  },
+  {
+   "id": "stiff-phrasing",
+   "name": "Stiff phrasing",
+   "description": "Formal hedging and corporate register where a person would just say it.",
+   "strongest_percent": 2.8,
+   "strong_percent": 0.5,
+   "strong_in_slop_percent": 1.2,
+   "average_strength": 0.08
+  },
+  {
+   "id": "no-catch-promises",
+   "name": "No-catch promises",
+   "description": "Benefits with no trade-off or cost mentioned.",
+   "strongest_percent": 1.2,
+   "strong_percent": 1.0,
+   "strong_in_slop_percent": 2.7,
+   "average_strength": 0.05
+  }
+ ],
+ "readers": {
+  "agree_with_verdict_percent": 53.3,
+  "agree_with_ai_likelihood_percent": 46.2,
+  "small_sample": true
+ },
+ "timing": {
+  "tz": "PDT",
+  "by_hour": [
+   {
+    "label": "00",
+    "slop_percent": 22.2,
+    "likely_percent": 8.5,
+    "low_sample": false
+   },
+   {
+    "label": "01",
+    "slop_percent": 21.8,
+    "likely_percent": 8.0,
+    "low_sample": false
+   },
+   {
+    "label": "02",
+    "slop_percent": 19.2,
+    "likely_percent": 6.9,
+    "low_sample": false
+   },
+   {
+    "label": "03",
+    "slop_percent": 20.7,
+    "likely_percent": 6.9,
+    "low_sample": false
+   },
+   {
+    "label": "04",
+    "slop_percent": 21.2,
+    "likely_percent": 6.7,
+    "low_sample": false
+   },
+   {
+    "label": "05",
+    "slop_percent": 20.0,
+    "likely_percent": 7.1,
+    "low_sample": false
+   },
+   {
+    "label": "06",
+    "slop_percent": 19.3,
+    "likely_percent": 7.0,
+    "low_sample": false
+   },
+   {
+    "label": "07",
+    "slop_percent": 19.1,
+    "likely_percent": 5.8,
+    "low_sample": false
+   },
+   {
+    "label": "08",
+    "slop_percent": 18.6,
+    "likely_percent": 5.6,
+    "low_sample": false
+   },
+   {
+    "label": "09",
+    "slop_percent": 19.9,
+    "likely_percent": 6.8,
+    "low_sample": false
+   },
+   {
+    "label": "10",
+    "slop_percent": 21.6,
+    "likely_percent": 7.3,
+    "low_sample": false
+   },
+   {
+    "label": "11",
+    "slop_percent": 18.3,
+    "likely_percent": 6.8,
+    "low_sample": false
+   },
+   {
+    "label": "12",
+    "slop_percent": 17.7,
+    "likely_percent": 4.8,
+    "low_sample": false
+   },
+   {
+    "label": "13",
+    "slop_percent": 17.1,
+    "likely_percent": 5.0,
+    "low_sample": false
+   },
+   {
+    "label": "14",
+    "slop_percent": 16.0,
+    "likely_percent": 5.1,
+    "low_sample": false
+   },
+   {
+    "label": "15",
+    "slop_percent": 15.1,
+    "likely_percent": 3.0,
+    "low_sample": false
+   },
+   {
+    "label": "16",
+    "slop_percent": 15.6,
+    "likely_percent": 4.5,
+    "low_sample": false
+   },
+   {
+    "label": "17",
+    "slop_percent": 17.8,
+    "likely_percent": 4.6,
+    "low_sample": false
+   },
+   {
+    "label": "18",
+    "slop_percent": 15.4,
+    "likely_percent": 5.2,
+    "low_sample": false
+   },
+   {
+    "label": "19",
+    "slop_percent": 18.2,
+    "likely_percent": 5.5,
+    "low_sample": false
+   },
+   {
+    "label": "20",
+    "slop_percent": 15.4,
+    "likely_percent": 4.8,
+    "low_sample": false
+   },
+   {
+    "label": "21",
+    "slop_percent": 16.2,
+    "likely_percent": 3.9,
+    "low_sample": false
+   },
+   {
+    "label": "22",
+    "slop_percent": 21.7,
+    "likely_percent": 8.3,
+    "low_sample": false
+   },
+   {
+    "label": "23",
+    "slop_percent": 24.0,
+    "likely_percent": 8.8,
+    "low_sample": false
+   }
+  ],
+  "tz_name": "America/Los_Angeles",
+  "source_tz_note": "Hours shifted from UTC by -7; the whole window is Pacific daylight time. Weekdays left out: the export groups them by UTC day."
+ },
+ "by_source": null,
+ "ai": {
+  "ai_likely_percent": 54.3,
+  "fine_among_ai_likely_percent": 71.5,
+  "slop_not_ai_likely_percent": 20.4,
+  "threshold": 0.5
+ }
+}

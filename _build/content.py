@@ -728,9 +728,12 @@ def calculators():
 
 
 # ---------------------------------------------------------------- sitemaps
-CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "open-source", "contact.html",
+CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "open-source", "media", "contact.html",
         # the brief for AI assistants: an orphan HTML page plus its Markdown source, and llms.txt
         "ask-ai", "ask-ai.md", "llms.txt"]
+# Children another script writes: .github/scripts/state_of_slop/build.py owns sitemap-reports.xml. Listed in the index, never
+# rewritten or removed here.
+EXTERNAL = ["reports"]
 
 
 def urlset(rows):
@@ -752,11 +755,15 @@ def sitemaps():
         hub_mod = max(m for _, m in rows)
         kids[f] = [(f"{f}/", hub_mod)] + sorted(rows)
     for old in glob.glob(f"{ROOT}/sitemap-*.xml"):
-        if os.path.basename(old)[8:-4] not in kids:
+        if os.path.basename(old)[8:-4] not in kids and os.path.basename(old)[8:-4] not in EXTERNAL:
             os.remove(old)
     for k, rows in kids.items():
         write(f"sitemap-{k}.xml", urlset(rows))
-    idx = "\n".join(f"  <sitemap><loc>{SITE}sitemap-{k}.xml</loc><lastmod>{max(m for _, m in rows)}</lastmod></sitemap>" for k, rows in kids.items())
+    mods = {k: max(m for _, m in rows) for k, rows in kids.items()}
+    for k in EXTERNAL:
+        if os.path.exists(f"{ROOT}/sitemap-{k}.xml"):
+            mods[k] = max(re.findall(r"<lastmod>([^<]+)</lastmod>", open(f"{ROOT}/sitemap-{k}.xml", encoding="utf-8").read()))
+    idx = "\n".join(f"  <sitemap><loc>{SITE}sitemap-{k}.xml</loc><lastmod>{m}</lastmod></sitemap>" for k, m in mods.items())
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{idx}\n</sitemapindex>\n')
 
 

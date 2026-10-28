@@ -1,0 +1,146 @@
+{
+ "headline": "One LinkedIn post in five was slop",
+ "dek": "From 27 September to 27 October, Slop Mop read 124 million tokens of LinkedIn posts, after LinkedIn's own feed filtering had done its work. One post in five was slop. Here are the signs it showed most, with examples, and when it peaked.",
+ "description": "27 September to 27 October 2026: one LinkedIn post in five was slop, even after LinkedIn's own filtering. The signs that showed up most, with examples, and the hours slop peaked.",
+ "hero_alt": "State of Slop, 27 September to 27 October 2026. One in five posts in your LinkedIn feed is slop. Slop was worst at 11pm Pacific and lightest at 3pm Pacific, and late nights were the sloppiest.",
+ "callout": {
+  "title": "Slop Mop judges the writing",
+  "lead": "AI writing can be good. Human writing can be bad. So a post never gets folded just because it reads as AI-written. Slop Mop looks at the writing itself, so you read only the posts worth your time.",
+  "rows": [
+   [
+    "Written by a person",
+    "Shown",
+    "Folded"
+   ],
+   [
+    "Written with AI",
+    "Shown",
+    "Folded"
+   ]
+  ],
+  "cols": [
+   "Worth your time",
+   "Slop"
+  ],
+  "note": "Slop Mop judges the content only. It never scores the person who wrote a post or the person reading it."
+ },
+ "sections": {
+  "overview": [
+   "At the default sensitivity, 81% of posts looked fine, 13% were possibly slop and 6% were likely slop. That's measured after LinkedIn's own feed filtering, so it's what actually reached people's feeds.",
+   "The average post scored 24 out of 100, and the median 18. Sensitivity moves the line a long way: on Mild, 13% of posts count as slop, and on Aggressive, 44% do. Everything else on this page uses Moderate, the default."
+  ],
+  "tells": [
+   "Empty praise was the strongest sign in 34% of posts: “game-changer”, “incredible”, “so proud”, with nothing said about what or why. It was strong in more than half of the slop.",
+   "“Not X, but Y” came a close second, the strongest sign in 31% of posts. It knocks down a claim nobody made so the real point sounds like a reveal. After those two there's a long drop to Engagement bait at 10% and Scroll-stopper at 7%."
+  ],
+  "examples_intro": "Each pair makes the same point twice. The first trips the sign and the second says it plainly. We wrote these for this report, so they aren't anyone's real posts.",
+  "timing": [
+   "Slop peaks late at night, Pacific time. Every hour from 10pm through 1am PDT ran at 22% slop or more, and 11pm was the worst at 24%. The cleanest hour was 3pm, at 15%.",
+   "All times are Pacific Daylight Time. These are shares of what people actually scrolled past, so a post seen twice counts twice."
+  ],
+  "readers": [
+   "Every verdict is a calibrated decision. Slop Mop scores each sign as a strength from 0 to 1, and sets the verdict from those strengths at the sensitivity you choose. The method is probabilistic, so some verdicts will be wrong.",
+   "That's why every reader can vote. When you disagree with a verdict, your vote overrides it in your own feed, and the post goes to a person for review. So far voters have sided with Slop Mop 53% of the time. It's an early, small sample, and it says there's tuning to do."
+  ],
+  "ai": [
+   "Slop Mop catches AI slop as part of catching all slop. It also estimates how likely each post is to be AI-written, and that reading never folds a post by itself. This month 54% of posts read as AI-likely, and 72% of those were worth reading. One slop post in five didn't read as AI-likely at all."
+  ],
+  "misses": [
+   "Judging writing is subjective, and Slop Mop will get some calls wrong. Every vote that disagrees with a verdict is reviewed, and the calls it got wrong are used to tune the signs and the score.",
+   "If a verdict looks badly off, email hello@slopmop.lol with the post's link."
+  ]
+ },
+ "examples": {
+  "empty-praise": {
+   "slop": "Incredibly proud of this amazing team. Truly game-changing work, and this is just the beginning!",
+   "fine": "The team cut onboarding from three weeks to four days by rewriting the setup guide and pairing each new hire with a buddy."
+  },
+  "not-x-but-y": {
+   "slop": "Leadership isn't about having all the answers. It's about asking the right questions.",
+   "fine": "I used to answer every question in our team meeting. Now I ask one first, and the meeting runs ten minutes shorter."
+  },
+  "engagement-bait": {
+   "slop": "Agree? Comment YES below and I'll send you my full framework.",
+   "fine": "The full framework is linked in the comments, free to copy."
+  }
+ },
+ "share": {
+  "big": "1 in 5",
+  "lines": [
+   "posts in your LinkedIn",
+   "feed is slop.*"
+  ],
+  "footnote": "Across Slop Mop readers, after LinkedIn's own feed filtering.",
+  "clock_note": "Late nights are the sloppiest."
+ },
+ "post": "One LinkedIn post in five was slop.",
+ "faq": [
+  {
+   "group": "About slop",
+   "items": [
+    [
+     "What is slop?",
+     "Slop is writing that takes your attention and gives little back. It's the post that praises without saying what was good, sets up a reveal with nothing behind it, or asks you to comment “YES” to get a framework. A person or an AI can write it, and Slop Mop judges the writing either way."
+    ],
+    [
+     "Is slop the same as AI slop?",
+     "No. “AI slop” usually means low-quality text made with AI, but people wrote slop long before AI, and plenty of AI-assisted writing is worth reading. In October 2026, 54% of LinkedIn posts read as AI-likely and 72% of those were worth reading, while one slop post in five didn't read as AI-likely at all."
+    ],
+    [
+     "What are the signs of slop?",
+     "Slop Mop looks for nine signs: Empty praise, “Not X, but Y”, Engagement bait, Scroll-stopper, Too-tidy story, Hype words, Flowery prose, Stiff phrasing and No-catch promises. It weighs them against two counter-signals, whether a post sounds like a person and whether it's useful to readers, and counts readers' reactions as a third."
+    ]
+   ]
+  },
+  {
+   "group": "About this report",
+   "items": [
+    [
+     "What is the State of Slop report?",
+     "State of Slop is Slop Mop's monthly report on how much of what people scroll past is slop, which signs show up most and when slop peaks. The October 2026 edition covers LinkedIn from 27 September to 27 October 2026. Later editions will cover more of what Slop Mop reads."
+    ],
+    [
+     "How much of LinkedIn is slop?",
+     "One post in five, from 27 September to 27 October 2026. At Slop Mop's default sensitivity, 13% of LinkedIn posts were possibly slop, 6% were likely slop and 81% looked fine. That's measured after LinkedIn's own feed filtering, so it's what actually reached people's feeds."
+    ],
+    [
+     "What is the most common sign of slop on LinkedIn?",
+     "Empty praise: “game-changer”, “incredible”, “so proud”, with nothing about what or why. It was the strongest sign in 34% of LinkedIn posts in October 2026, with “Not X, but Y” close behind at 31%."
+    ],
+    [
+     "When is LinkedIn the sloppiest?",
+     "Late at night, Pacific time. In October 2026 the worst hour was 11pm PDT, when 24% of what people scrolled past was slop, and every hour from 10pm through 1am PDT ran at 22% or more. The cleanest hour was 3pm PDT, at 15%."
+    ],
+    [
+     "How was this report measured?",
+     "Slop Mop read 124 million tokens of LinkedIn posts that its readers scrolled past, roughly 93 million words. Each post was scored at the default Moderate sensitivity with calibrated decisions on nine signs of slop. The method is probabilistic, so any reader can vote to override a verdict, and voters sided with Slop Mop 53% of the time."
+    ],
+    [
+     "Can I cite the State of Slop numbers?",
+     "Yes. Cite “State of Slop, October 2026, Slop Mop” and link to this page. For questions about the data, email hello@slopmop.lol."
+    ]
+   ]
+  },
+  {
+   "group": "About Slop Mop",
+   "items": [
+    [
+     "What is Slop Mop?",
+     "Slop Mop is a browser extension that reads the posts in your feed before you reach them, judges the writing and folds away what reads like slop, so you read only the posts worth your time. Nothing is deleted: a folded post reopens with one click, and every verdict shows the signs behind it. It works on LinkedIn today, in desktop Chrome and other Chromium browsers."
+    ],
+    [
+     "Is Slop Mop an AI detector?",
+     "No. Slop Mop is a bad-writing detector. AI writing can be good and human writing can be bad, so a post is never folded just because it reads as AI-written. Slop Mop asks whether a post is worth your attention."
+    ],
+    [
+     "Does Slop Mop judge the person who wrote a post?",
+     "No. Slop Mop judges the content only. It never scores the person who wrote a post or the person reading it, and it never reports, mutes or deletes anything. It only changes what you see in your own browser."
+    ],
+    [
+     "Is Slop Mop free?",
+     "Yes. Slop Mop is free for one feed, with 250 checks a day. Slop Mop XL, coming soon, takes it to every feed, the sites you read and your inbox, for US$5.99 a month or US$59.99 a year."
+    ]
+   ]
+  }
+ ]
+}

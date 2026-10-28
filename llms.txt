@@ -6,6 +6,11 @@
 - [Slop Mop in brief](https://slopmop.lol/ask-ai.md): what it is, how it works, who it's for, pricing, privacy, press
 - [How it works](https://slopmop.lol/how-it-works.html): the nine tells, the counter-signals, the score
 - [About](https://slopmop.lol/about.html): canonical product information
+- [Media kit](https://slopmop.lol/media): for press, producers and event organisers: facts, the State of Slop numbers, quotes, founder bio, boilerplate, logos, and how Slop Mop relates to Artimovo
+
+## Reports
+- [State of Slop](https://slopmop.lol/state-of-slop): always the latest monthly report on how much of what people scroll past is slop, the signs that show up most and when slop peaks
+- [State of Slop, October 2026](https://slopmop.lol/reports/state-of-slop-october-2026): one LinkedIn post in five was slop, 27 September to 27 October 2026
 
 ## Library
 - [The slop glossary](https://slopmop.lol/glossary/): an A–Z of terms for low-value content by people and by AI, each with its own page

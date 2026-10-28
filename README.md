@@ -12,6 +12,7 @@ help.html           install + troubleshooting
 privacy.html        privacy policy
 terms.html          terms of service (served at /terms)
 open-source.html    the MIT-licensed version, links to the public repo (served at /open-source)
+media.html          press kit (served at /media), built by .github/scripts/media/build.py with media.png and press/
 _ds/slopmop/        Slop Mop design system: tokens, styles.css, _ds_bundle.js (components), mop.svg
 assets/site.css     site layout on top of the design-system tokens
 assets/site.js      site settings + behaviour (store link, Product Hunt, social URLs, signup, tour video)
