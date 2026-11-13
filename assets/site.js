@@ -435,10 +435,11 @@
   }
 
 
-  /* ---------- cookie banner (UK/EEA/US). Google Analytics is the only thing it covers.
-     The page head sets Consent Mode defaults; this records the visitor's choice and updates them. ---------- */
-  var CONSENT_KEY = "slopmop:consent";
-  function readConsent() { try { var c = JSON.parse(localStorage.getItem(CONSENT_KEY)); return c && c.v === 1 && Date.now() - c.t < 365 * 864e5 ? c : null; } catch (e) { return null; } }
+  /* ---------- cookies: the GetTerms banner (first script in the head) asks, keeps the choice and
+     sends Consent Mode updates to Google Analytics. Footer "Cookie settings" buttons carry
+     data-gt-cookie-widget-show, which the banner wires up. When Analytics is off, clear any _ga
+     cookies set before, since Consent Mode stops new ones but leaves old ones behind. ---------- */
+  try { localStorage.removeItem("slopmop:consent"); } catch (e) {} // the old banner's choice
   function clearGaCookies() {
     document.cookie.split(";").forEach(function (c) {
       var n = c.split("=")[0].trim();
@@ -447,30 +448,9 @@
       });
     });
   }
-  function setConsent(analytics) {
-    try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ v: 1, analytics: analytics, t: Date.now() })); } catch (e) {}
-    if (window.gtag) window.gtag("consent", "update", { analytics_storage: analytics ? "granted" : "denied" });
-    if (!analytics) clearGaCookies();
-  }
-  var banner = null;
-  function showBanner() {
-    if (!banner) {
-      banner = document.createElement("div");
-      banner.className = "consent"; banner.setAttribute("role", "dialog"); banner.setAttribute("aria-live", "polite"); banner.setAttribute("aria-label", "Cookie choice");
-      var priv = (document.querySelector('a[href$="privacy.html"]') || { getAttribute: function () { return "privacy.html"; } }).getAttribute("href");
-      banner.innerHTML = '<p><b>Cookies, just for counting visits.</b> We use Google Analytics cookies to see which pages are useful. No ads, no selling data. ' +
-        '<a href="' + priv + '#this-website-and-google-analytics">How it works</a></p>' +
-        '<div class="consent-btns"><button class="btn btn-secondary btn-sm" type="button" data-consent="0">Reject</button>' +
-        '<button class="btn btn-secondary btn-sm" type="button" data-consent="1">Accept</button></div>';
-      $$("[data-consent]", banner).forEach(function (b) {
-        b.addEventListener("click", function () { setConsent(b.getAttribute("data-consent") === "1"); banner.hidden = true; });
-      });
-      document.body.appendChild(banner);
-    }
-    banner.hidden = false;
-  }
-  if (!readConsent()) showBanner();
-  $$("[data-consent-open]").forEach(function (b) { b.addEventListener("click", showBanner); });
+  function onConsent(c) { if (c && c.decided && c.preferences && !c.preferences.Analytics) clearGaCookies(); }
+  window.addEventListener("getterms:consent", function (ev) { onConsent(ev.detail); });
+  if (window.GetTermsCMP) onConsent(window.GetTermsCMP.consent); // its page-load event may have fired already
 
   /* ---------- theme: system / light / dark. The head script sets data-theme before paint; this keeps it in step. ---------- */
   var themeMq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
