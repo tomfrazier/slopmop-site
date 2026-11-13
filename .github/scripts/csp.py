@@ -27,7 +27,8 @@ SKIP_DIRS = {".git", ".github", "node_modules", "vendor"}
 # What every page may load beyond itself. Google Analytics' hosts are as Google
 # documents them for GA4; Formspree takes the newsletter and contact forms; the XL
 # pages ask the API for a checkout link and embed Polar's checkout. The GetTerms cookie banner
-# loads from gettermscmp.com and logs each consent choice there.
+# loads from gettermscmp.com and logs each consent choice there; GetTerms policy embeds load
+# the policy in a hidden frame from gettermscdn.com.
 POLICY = [
     ("default-src", ["'self'"]),
     ("script-src", ["'self'", "https://*.googletagmanager.com"]),
@@ -38,7 +39,7 @@ POLICY = [
                      "https://*.googletagmanager.com", "https://formspree.io",
                      "https://api.slopmop.lol", "https://staging-api.slopmop.lol",
                      "https://gettermscmp.com"]),
-    ("frame-src", ["'self'", "https://polar.sh", "https://*.polar.sh"]),
+    ("frame-src", ["'self'", "https://polar.sh", "https://*.polar.sh", "https://gettermscdn.com"]),
     ("media-src", ["'self'"]),
     ("object-src", ["'none'"]),
     ("base-uri", ["'self'"]),

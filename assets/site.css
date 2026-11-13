@@ -775,3 +775,7 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
 /* interactive tell figures (assets/figures/), each sized from inside its frame */
 .tell-fig { margin: var(--space-6) 0; max-width: 70ch; }
 .tell-fig iframe { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; background: transparent; }
+
+/* GetTerms policy embeds (acceptable-use.html): the page head already has the h1, so hide the policy's own */
+.legal-embed .getterms-document-embed h1 { display: none; }
+.legal-embed .getterms-document-embed > :first-child, .legal-embed .getterms-document-embed h1 + * { margin-top: 0; }
