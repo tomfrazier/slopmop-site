@@ -15,3 +15,4 @@
 ## Policies
 - [Privacy policy](https://slopmop.lol/privacy.html)
 - [Terms of service](https://slopmop.lol/terms)
+- [Acceptable use policy](https://slopmop.lol/acceptable-use): what you can't do with Slop Mop (automate it, get around limits, resell or copy scores, game votes or referrals, aim scores at people)
