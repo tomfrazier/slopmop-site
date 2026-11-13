@@ -1,6 +1,6 @@
 """Tell IndexNow (Bing, Yandex, Seznam, Naver and others) which pages changed, so they re-crawl them quickly.
 
-Run after GitHub Pages has deployed. With --all it submits every page in sitemap.xml; otherwise the .html files changed by
+Run after GitHub Pages has deployed. With --all it submits every page in the sitemap (sitemap.xml and its child sitemaps); otherwise the .html files changed by
 the deployed commit, plus any changed .md or .txt file the sitemap lists. Pages marked noindex are skipped. The key is the 32-hex-character .txt file at the
 repository root, which IndexNow fetches from https://slopmop.lol/<key>.txt to check we own the site.
 """
@@ -26,13 +26,24 @@ def page_url(path):
     return canon.group(1) if canon else None
 
 
+def sitemap_urls():
+    """Every page URL in the sitemap. sitemap.xml is an index of child sitemaps, read here from the checkout."""
+    top = open("sitemap.xml", encoding="utf-8").read()
+    if "<sitemapindex" not in top:
+        return re.findall(r"<loc>([^<]+)</loc>", top)
+    out = []
+    for child in re.findall(r"<loc>https://[^/]+/([^<]+)</loc>", top):
+        out += re.findall(r"<loc>([^<]+)</loc>", open(child, encoding="utf-8").read())
+    return out
+
+
 if "--all" in sys.argv:
-    urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read())
+    urls = sitemap_urls()
 else:
     changed = subprocess.run(["git", "diff", "--name-only", "HEAD^1", "HEAD"], capture_output=True, text=True, check=True).stdout.split()
     urls = {u for f in changed if f.endswith(".html") for u in [page_url(f)] if u}
     # Markdown and text files (ask-ai.md, llms.txt) have no canonical tag: submit them when the sitemap lists them.
-    listed = set(re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read()))
+    listed = set(sitemap_urls())
     urls |= {f"https://{HOST}/{f}" for f in changed if f.endswith((".md", ".txt"))} & listed
     urls = sorted(urls)
 

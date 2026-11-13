@@ -435,10 +435,11 @@
   }
 
 
-  /* ---------- cookie banner (UK/EEA/US). Google Analytics is the only thing it covers.
-     The page head sets Consent Mode defaults; this records the visitor's choice and updates them. ---------- */
-  var CONSENT_KEY = "slopmop:consent";
-  function readConsent() { try { var c = JSON.parse(localStorage.getItem(CONSENT_KEY)); return c && c.v === 1 && Date.now() - c.t < 365 * 864e5 ? c : null; } catch (e) { return null; } }
+  /* ---------- cookies: the GetTerms banner (first script in the head) asks, keeps the choice and
+     sends Consent Mode updates to Google Analytics. Footer "Cookie settings" buttons carry
+     data-gt-cookie-widget-show, which the banner wires up. When Analytics is off, clear any _ga
+     cookies set before, since Consent Mode stops new ones but leaves old ones behind. ---------- */
+  try { localStorage.removeItem("slopmop:consent"); } catch (e) {} // the old banner's choice
   function clearGaCookies() {
     document.cookie.split(";").forEach(function (c) {
       var n = c.split("=")[0].trim();
@@ -447,30 +448,9 @@
       });
     });
   }
-  function setConsent(analytics) {
-    try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ v: 1, analytics: analytics, t: Date.now() })); } catch (e) {}
-    if (window.gtag) window.gtag("consent", "update", { analytics_storage: analytics ? "granted" : "denied" });
-    if (!analytics) clearGaCookies();
-  }
-  var banner = null;
-  function showBanner() {
-    if (!banner) {
-      banner = document.createElement("div");
-      banner.className = "consent"; banner.setAttribute("role", "dialog"); banner.setAttribute("aria-live", "polite"); banner.setAttribute("aria-label", "Cookie choice");
-      var priv = (document.querySelector('a[href$="privacy.html"]') || { getAttribute: function () { return "privacy.html"; } }).getAttribute("href");
-      banner.innerHTML = '<p><b>Cookies, just for counting visits.</b> We use Google Analytics cookies to see which pages are useful. No ads, no selling data. ' +
-        '<a href="' + priv + '#this-website-and-google-analytics">How it works</a></p>' +
-        '<div class="consent-btns"><button class="btn btn-secondary btn-sm" type="button" data-consent="0">Reject</button>' +
-        '<button class="btn btn-secondary btn-sm" type="button" data-consent="1">Accept</button></div>';
-      $$("[data-consent]", banner).forEach(function (b) {
-        b.addEventListener("click", function () { setConsent(b.getAttribute("data-consent") === "1"); banner.hidden = true; });
-      });
-      document.body.appendChild(banner);
-    }
-    banner.hidden = false;
-  }
-  if (!readConsent()) showBanner();
-  $$("[data-consent-open]").forEach(function (b) { b.addEventListener("click", showBanner); });
+  function onConsent(c) { if (c && c.decided && c.preferences && !c.preferences.Analytics) clearGaCookies(); }
+  window.addEventListener("getterms:consent", function (ev) { onConsent(ev.detail); });
+  if (window.GetTermsCMP) onConsent(window.GetTermsCMP.consent); // its page-load event may have fired already
 
   /* ---------- theme: system / light / dark. The head script sets data-theme before paint; this keeps it in step. ---------- */
   var themeMq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
@@ -521,6 +501,51 @@
     }, { threshold: 0.25 }).observe(v);
     v.addEventListener("play", function once() { v.removeEventListener("play", once); gaEvent("preview_play", {}); });
   });
+})();
+
+// Content library: copy-link buttons and the glossary's search and filters.
+(function () {
+  function ga(name, p) { try { if (window.gtag) window.gtag("event", name, p || {}); } catch (e) {} }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (b) {
+    b.addEventListener("click", function () {
+      var url = b.getAttribute("data-copy");
+      var done = function () { b.classList.add("done"); setTimeout(function () { b.classList.remove("done"); }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () {}); else { window.prompt("Copy this link", url); }
+      ga("share", { method: "copy", item_id: location.pathname });
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-share]"), function (a) {
+    a.addEventListener("click", function () { ga("share", { method: a.getAttribute("data-share"), item_id: location.pathname }); });
+  });
+  var input = document.querySelector("[data-gl-search]");
+  if (!input) return;
+  var kind = "all";
+  var items = Array.prototype.slice.call(document.querySelectorAll(".gl-list li"));
+  var groups = Array.prototype.slice.call(document.querySelectorAll(".gl-group"));
+  var empty = document.querySelector(".gl-empty");
+  var jump = document.querySelector(".gl-jump");
+  function apply() {
+    var q = input.value.trim().toLowerCase(), shown = 0;
+    items.forEach(function (li) {
+      var k = li.getAttribute("data-kind");
+      var okKind = kind === "all" || k === kind || (k === "both" && (kind === "ai" || kind === "human"));
+      var ok = okKind && (!q || li.getAttribute("data-q").indexOf(q) !== -1);
+      li.hidden = !ok; if (ok) shown++;
+    });
+    groups.forEach(function (g) { g.hidden = !g.querySelector("li:not([hidden])"); });
+    empty.hidden = shown > 0;
+    if (jump) jump.hidden = !!q || kind !== "all";
+  }
+  input.addEventListener("input", apply);
+  Array.prototype.forEach.call(document.querySelectorAll("[data-gl-kind]"), function (b) {
+    b.addEventListener("click", function () {
+      kind = b.getAttribute("data-gl-kind");
+      Array.prototype.forEach.call(document.querySelectorAll("[data-gl-kind]"), function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      apply();
+    });
+  });
+  var q0 = new URLSearchParams(location.search).get("q");
+  if (q0) { input.value = q0; apply(); }
 })();
 
 /* tell figures on How it works: each runs its own WebGL lamp, and browsers keep only a handful of WebGL
