@@ -38,7 +38,7 @@ OFFERS = [
 # sitemap.xml as lastmod. Bump a page's date when its content changes, not for site-wide chrome like the footer.
 UPDATED = {
     "": "2026-10-23", "how-it-works.html": "2026-10-23", "about.html": "2026-10-14", "help.html": "2026-10-19",
-    "privacy.html": "2026-10-19", "terms": "2026-10-14", "open-source": "2026-10-14", "contact.html": "2026-10-14",
+    "privacy.html": "2026-11-13", "terms": "2026-10-14", "open-source": "2026-10-14", "contact.html": "2026-10-14",
     "account-deleted": "2026-10-14", "media": "2026-10-27",
     "ask-ai": "2026-10-23", "ask-ai.md": "2026-10-23", "llms.txt": "2026-10-18",
 }
@@ -76,22 +76,33 @@ ASK_AI = [("chatgpt", "ChatGPT", "https://chatgpt.com/?hints=search&q="), ("clau
 
 
 GA_ID = "G-QLWD48WK07"
-# Google tag with Consent Mode v2. Analytics cookies wait for a choice in the UK, EEA and Switzerland (Google applies
-# the region list from the visitor's IP); elsewhere they are on unless the visitor rejects them or sends Global
-# Privacy Control. A saved choice from the cookie banner (assets/site.js) is applied before the tag loads.
-# No ads features are used, so the ad signals are always denied.
-CONSENT_REGIONS = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU",
-                   "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]
-GA_HEAD = """<!-- Google tag (gtag.js) with Consent Mode v2 -->
+# The GetTerms cookie banner (app.getterms.io holds its settings, wording and regions). It must be the first script in
+# the head: its blocker sets window.GetTermsDefaults, the visitor's Consent Mode defaults for their region (opt-in in
+# Europe, the UK and anywhere not listed; opt-out in the US and Canada; no banner in Australia), and its widget sends
+# gtag('consent', 'update', ...) when the visitor chooses. csp.py allows both script URLs and the consent log host.
+GETTERMS_URL = "https://gettermscmp.com/cookie-consent/{}/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"
+GETTERMS = f"""<!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
+<link rel="preload" href="{GETTERMS_URL.format('blocker')}" as="script">
+<script src="{GETTERMS_URL.format('blocker')}"></script>
+<script async src="{GETTERMS_URL.format('widget')}"></script>
+"""
+# Google tag with Consent Mode v2. GetTerms' manual embed neither sends the default nor re-sends a saved choice on
+# later visits, so the tag does: the visitor's saved GetTerms choice (Marketing -> ad_*, Analytics -> analytics_storage,
+# Functional -> functionality/personalization_storage), else the region default from the blocker, else all denied.
+GA_HEAD = """<!-- Google tag (gtag.js). The GetTerms banner above works out this visitor's Consent Mode defaults (by region) and sends updates when they choose. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: REGIONS});
-  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted'});
   (function () {
-    var c = null; try { c = JSON.parse(localStorage.getItem('slopmop:consent')); } catch (e) {}
-    if (c && c.v === 1 && Date.now() - c.t < 365 * 864e5) gtag('consent', 'update', {analytics_storage: c.analytics ? 'granted' : 'denied'});
-    else if (navigator.globalPrivacyControl === true) gtag('consent', 'update', {analytics_storage: 'denied'});
+    // A visitor who already chose: their choice (GetTerms only re-sends it when it changes). Otherwise the region's default.
+    var d = window.GetTermsDefaults || {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500};
+    try {
+      var c = JSON.parse(localStorage.getItem('getterms_cookie_consent')), p = c && c.cookie_preferences;
+      if (p) { var g = function (on) { return on ? 'granted' : 'denied'; };
+        d = {ad_storage: g(p.Marketing), ad_user_data: g(p.Marketing), ad_personalization: g(p.Marketing), analytics_storage: g(p.Analytics),
+             functionality_storage: g(p.Functional), personalization_storage: g(p.Functional), security_storage: 'granted'}; }
+    } catch (e) {}
+    gtag('consent', 'default', d);
   })();
   gtag('js', new Date());
   gtag('config', 'GAID'CONFIG);
@@ -103,7 +114,7 @@ GA_HEAD = """<!-- Google tag (gtag.js) with Consent Mode v2 -->
 def ga(strip_query=False):
     """The Google tag. strip_query keeps a page's query string (checkout ids and the like) out of Analytics."""
     cfg = ", { page_location: location.origin + location.pathname }" if strip_query else ""
-    return GA_HEAD.replace("REGIONS", json.dumps(CONSENT_REGIONS)).replace("GAID", GA_ID).replace("CONFIG", cfg)
+    return GA_HEAD.replace("GAID", GA_ID).replace("CONFIG", cfg)
 
 
 GA = ga()
@@ -128,7 +139,7 @@ def head(title, desc, path, og_title=None, ld=None, og_image="og-image-4.png", e
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{GETTERMS}<meta name="viewport" content="width=device-width, initial-scale=1">
 {THEME_BOOT}
 {GA}<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -250,7 +261,7 @@ def footer(path=None):
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="terms.html">Terms of service</a></li>
         <li><a href="open-source.html">Open source</a></li>
-        <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+        <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
       </ul></div>
       <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
         <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>

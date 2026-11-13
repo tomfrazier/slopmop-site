@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
+<link rel="preload" href="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true" as="script">
+<script src="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<script async src="https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<!-- Google tag (gtag.js). The GetTerms banner above works out this visitor's Consent Mode defaults (by region) and sends updates when they choose. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    // A visitor who already chose: their choice (GetTerms only re-sends it when it changes). Otherwise the region's default.
+    var d = window.GetTermsDefaults || {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500};
+    try {
+      var c = JSON.parse(localStorage.getItem('getterms_cookie_consent')), p = c && c.cookie_preferences;
+      if (p) { var g = function (on) { return on ? 'granted' : 'denied'; };
+        d = {ad_storage: g(p.Marketing), ad_user_data: g(p.Marketing), ad_personalization: g(p.Marketing), analytics_storage: g(p.Analytics),
+             functionality_storage: g(p.Functional), personalization_storage: g(p.Functional), security_storage: 'granted'}; }
+    } catch (e) {}
+    gtag('consent', 'default', d);
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<title>Gmail filters for newsletters: a reading folder · Slop Mop</title>
+<meta name="description" content="Set up Gmail filters and a label so newsletters you want to keep skip the inbox and wait in one place. Search operators, steps and a weekly routine.">
+<link rel="canonical" href="https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/">
+<meta property="og:title" content="How to use Gmail filters to keep newsletters out of your inbox">
+<meta property="og:description" content="Set up Gmail filters and a label so newsletters you want to keep skip the inbox and wait in one place. Search operators, steps and a weekly routine.">
+<meta property="og:image" content="https://slopmop.lol/assets/og/guides-email-email-gmail-filters-for-newsletters.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to use Gmail filters to keep newsletters out of your inbox">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to use Gmail filters to keep newsletters out of your inbox">
+<meta name="twitter:description" content="Set up Gmail filters and a label so newsletters you want to keep skip the inbox and wait in one place. Search operators, steps and a weekly routine.">
+<meta name="twitter:image" content="https://slopmop.lol/assets/og/guides-email-email-gmail-filters-for-newsletters.jpg">
+<meta name="author" content="Tom Frazier">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../_ds/slopmop/styles.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="stylesheet" href="../../../assets/sites.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/#page",
+      "url": "https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/",
+      "name": "How to use Gmail filters to keep newsletters out of your inbox",
+      "headline": "Gmail filters for newsletters: a reading folder · Slop Mop",
+      "description": "Set up Gmail filters and a label so newsletters you want to keep skip the inbox and wait in one place. Search operators, steps and a weekly routine.",
+      "inLanguage": "en",
+      "datePublished": "2026-11-10",
+      "dateModified": "2026-11-10",
+      "keywords": "gmail filters for newsletters",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://slopmop.lol/assets/hero/guides-email-email-gmail-filters-for-newsletters.jpg",
+        "width": 960,
+        "height": 720,
+        "caption": "Email guide: How to use Gmail filters to keep newsletters out of your inbox, in 4 parts"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/hero/guides-email-email-gmail-filters-for-newsletters.jpg",
+          "width": 960,
+          "height": 720,
+          "caption": "Email guide: How to use Gmail filters to keep newsletters out of your inbox, in 4 parts"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/fig/guides-email-email-gmail-filters-for-newsletters.jpg",
+          "width": 1200,
+          "height": 720,
+          "caption": "Mock-up of a Email email marked Possibly slop by Slop Mop, with the panel showing Scroll-stopper and Engagement bait as the strongest signs"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/og/guides-email-email-gmail-filters-for-newsletters.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "How to use Gmail filters to keep newsletters out of your inbox"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://slopmop.lol/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/#crumbs"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://slopmop.lol/#app",
+        "name": "Slop Mop"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop",
+        "url": "https://slopmop.lol/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Artimovo LLC",
+        "url": "https://slopmop.lol/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slopmop.lol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://slopmop.lol/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Email",
+          "item": "https://slopmop.lol/guides/email/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to use Gmail filters to keep newsletters out of your inbox",
+          "item": "https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/"
+        }
+      ],
+      "@id": "https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/#crumbs"
+    },
+    {
+      "@type": "Article",
+      "headline": "How to use Gmail filters to keep newsletters out of your inbox",
+      "datePublished": "2026-11-10",
+      "dateModified": "2026-11-10",
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop"
+      },
+      "mainEntityOfPage": "https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/",
+      "image": "https://slopmop.lol/assets/hero/guides-email-email-gmail-filters-for-newsletters.jpg"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html" aria-label="Slop Mop home"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../../how-it-works.html">How it works</a>
+      <a href="../../../index.html#tells">The tells</a>
+      <a href="../../../index.html#networks">Networks</a>
+      <a href="../../../index.html#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><a href="/guides/email/">Email</a></nav><span class="eyebrow">guides · email</span>
+      <h1 class="h-1">How to use Gmail filters to keep newsletters out of your inbox</h1>
+      <p class="lede">For newsletters you want but not in your inbox: a Gmail label, a filter that sends them there, and the search operators that make it work.</p>
+      <p class="mono">6 min read · steps checked 18 october 2026</p>
+    </div>
+    <div class="ph-visual"><img class="ph-img" src="/assets/hero/guides-email-email-gmail-filters-for-newsletters.jpg" width="960" height="720" alt="Email guide: How to use Gmail filters to keep newsletters out of your inbox, in 4 parts" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#before-you-start">Before you start</a>
+      <a href="#1-create-a-label">1. Create a label</a>
+      <a href="#2-write-a-search-that-finds-your-newsletters">2. Write a search that finds your newsletters</a>
+      <a href="#3-turn-the-search-into-a-filter">3. Turn the search into a filter</a>
+      <a href="#4-make-a-habit-of-the-label">4. Make a habit of the label</a>
+      <a href="#or-use-gmail-s-own-categories">Or use Gmail's own categories</a>
+      <a href="#what-gmail-filters-can-t-do-for-newsletters">What Gmail filters can't do for newsletters</a>
+      <a href="#managing-your-filters-later">Managing your filters later</a>
+      <a href="#if-that-doesn-t-work">If that doesn't work</a>
+    </nav>
+    <div class="prose">
+<p>Make a label called something like <em>Reading</em>, then create a Gmail filter that matches your newsletters, applies that label and archives them so they skip the inbox. They'll wait in one place until you choose to read them. Filters can only be set up in Gmail on a computer, but the label shows up in the phone app too.</p>
+<p>This guide is for the newsletters you want to keep. If you'd rather stop them arriving, start with <a href="/guides/email/email-gmail-manage-subscriptions/">Gmail's Manage subscriptions page</a> instead.</p>
+<section id="before-you-start">
+<h2>Before you start</h2>
+<ul><li>
+<strong>Use a computer.</strong> <a href="https://support.google.com/mail/answer/6579" rel="noopener">Google's filter instructions</a> are for Gmail in a browser.
+</li><li>
+<strong>Plan for the backlog.</strong> Google's help page says a forwarding filter only affects new messages, and doesn't promise any filter will re-sort what you already have. Step 3 covers labelling the old issues by hand.
+</li><li>
+<strong>Don't catch the wrong mail.</strong> A filter on a broad word like "update" will scoop up your bank's security updates. Test every search before you turn it into a filter (step 2 below).
+</li></ul>
+</section><figure class="shot"><img src="/assets/fig/guides-email-email-gmail-filters-for-newsletters.jpg" width="1200" height="720" loading="lazy" alt="Mock-up of a Email email marked Possibly slop by Slop Mop, with the panel showing Scroll-stopper and Engagement bait as the strongest signs"><figcaption>Illustration: Slop Mop on Email, marking an email like the example on this page. It scores 66 out of 100 (Possibly slop); the strongest signs are scroll-stopper and engagement bait. In Highlight mode it stays visible and its mop turns yellow; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.</figcaption></figure>
+<section id="1-create-a-label">
+<h2>1. Create a label</h2>
+<ol><li>
+Open Gmail on your computer.
+</li><li>
+On the left, next to <strong>Labels</strong>, click <strong>Create new label</strong>.
+</li><li>
+Name it. <em>Reading</em>, <em>Newsletters</em> or <em>Weekend</em> all work.
+</li><li>
+Click <strong>Create</strong>.
+</li></ol>
+<p>Google points out that labels are different from folders: one email can carry several labels, and only you can see them. You can have up to 5,000.</p>
+</section>
+<section id="2-write-a-search-that-finds-your-newsletters">
+<h2>2. Write a search that finds your newsletters</h2>
+<p>This is the part that decides whether the filter works. <a href="https://support.google.com/mail/answer/7190" rel="noopener">Gmail's search operators</a> let you be precise:</p>
+<div class="table-wrap"><table class="md-table"><thead><tr><th>You want</th><th>Type this in the search box</th></tr></thead><tbody><tr><td>Everything from one sender</td><td><code>from:digest@example.com</code></td></tr><tr><td>Several senders at once</td><td><code>from:a@example.com OR from:b@example.com</code></td></tr><tr><td>Everything from a mailing list</td><td><code>list:info@example.com</code></td></tr><tr><td>A phrase that appears in every issue</td><td><code>"weekly roundup"</code></td></tr><tr><td>One sender, but not their receipts</td><td><code>from:shop@example.com -receipt</code></td></tr></tbody></table></div>
+<p>The <code>list:</code> operator finds email sent from a mailing list, which is how most newsletters arrive. If you don't know a newsletter's list address, <code>from:</code> with the sender's address does the same job in most cases.</p>
+<p>Click <strong>Search</strong> and look at the results. If anything appears that you'd want in your inbox, narrow the search with <code>-word</code> until it doesn't.</p>
+</section>
+<section id="3-turn-the-search-into-a-filter">
+<h2>3. Turn the search into a filter</h2>
+<ol><li>
+In the search box at the top, click <strong>Show search options</strong> and enter the same search.
+</li><li>
+At the bottom of the search window, click <strong>Create filter</strong>.
+</li><li>
+Choose what the filter should do. For a reading folder, tick the options to apply the label you made and to archive the email so it skips the inbox. Google's help page lists the actions as sending to a label, archiving, deleting, starring and forwarding; the exact checkbox wording may differ on your screen.
+</li><li>
+Click <strong>Create filter</strong>.
+</li></ol>
+<p>There's a quicker route if you have one example in front of you: tick the box next to the email, click <strong>More</strong>, then <strong>Filter messages like these</strong>. You then enter or adjust the filter criteria and click <strong>Create filter</strong>.</p>
+<p>To label issues that arrived before the filter existed, run the search again, tick the box to select the results, click <strong>Labels</strong> at the top and choose your label. Then archive them.</p>
+</section>
+<section id="4-make-a-habit-of-the-label">
+<h2>4. Make a habit of the label</h2>
+<p>The filter only helps if you visit the label. A routine that works for a lot of people:</p>
+<ul><li>
+<strong>Pick one slot a week</strong> for the Reading label, and read the newest issue of each newsletter first.
+</li><li>
+<strong>Clear the rest in bulk.</strong> Search <code>label:reading older_than:1m</code> (swap in your label's name), select all and archive. Anything you haven't opened in a month you probably won't.
+</li><li>
+<strong>Notice what you skip.</strong> If you've archived a newsletter unread three weeks running, unsubscribe from it.
+</li></ul>
+</section>
+<section id="or-use-gmail-s-own-categories">
+<h2>Or use Gmail's own categories</h2>
+<p>If you don't want to build filters, Gmail can do some of the sorting for you. With the <strong>Default</strong> inbox type, it sorts mail into Primary, Social, Promotions, Updates and Forums. Mailing lists often land in Forums or Promotions.</p>
+<ol><li>
+Click <strong>Settings</strong> at the top right.
+</li><li>
+In <strong>Quick settings</strong>, under <strong>Inbox type</strong>, choose <strong>Default</strong>.
+</li><li>
+Click <strong>Customise</strong> and tick the categories you want as tabs.
+</li><li>
+Click <strong>Save</strong>.
+</li></ol>
+<p>If a newsletter lands in the wrong tab, drag it to the right one; Google says this helps Gmail learn. You can't create your own categories, which is why a label and a filter give you more control. You can search a category with <code>category:promotions</code> or <code>category:forums</code>, and a filter can send a sender's mail to a specific category.</p>
+</section>
+<section id="what-gmail-filters-can-t-do-for-newsletters">
+<h2>What Gmail filters can't do for newsletters</h2>
+<p>A filter sorts by who sent the email and which words appear in it. It has no idea whether this week's issue is any good. A newsletter you love can send a padded issue built around a <a href="/patterns/scroll-stopper/">scroll-stopper</a> subject line, and the filter will file it next to the good ones.</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>Subject: The one thing nobody is telling you about AI 🤯<br>This week, everything changed. Again. Let's dive in…</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Subject: Issue 112: the new EU AI Act deadlines, and two tools we dropped<br>Three dates for your calendar, and why we stopped recommending two note-taking apps after testing them for a month.</p></span></div></div>
+<p>Both would land in your Reading label. Only one is worth opening first. Skimming subject lines in the label, rather than opening issues in order, is the quickest way to tell them apart.</p>
+<p>If you'd rather not judge every issue yourself, Slop Mop for Gmail reads what the sender wrote in each newsletter and marks or folds the padded ones, using the same tells it checks on posts (<a href="/how-it-works.html">how it works</a>). Personal details are replaced with placeholders before an email is checked, attachments and quoted earlier messages are never sent, and spam, private, legal, health and transactional mail is left alone unless you check a message by hand. It's part of Slop Mop XL, which costs US$5.99 a month, and it works alongside your filters rather than replacing them.</p>
+</section>
+<section id="managing-your-filters-later">
+<h2>Managing your filters later</h2>
+<ol><li>
+Click <strong>Settings</strong>, then <strong>See all settings</strong>.
+</li><li>
+Click <strong>Filters and blocked addresses</strong>.
+</li><li>
+Find the filter and click <strong>Edit</strong> or <strong>Delete</strong>.
+</li><li>
+If editing, click <strong>Continue</strong>, then <strong>Update filter</strong>.
+</li></ol>
+<p>From the same page you can export your filters as an .xml file, which is worth doing once you've built a few. If you ever move accounts, <strong>Import filters</strong> brings them back.</p>
+</section>
+<section id="if-that-doesn-t-work">
+<h2>If that doesn't work</h2>
+<ul><li>
+<strong>The filter missed an issue.</strong> The sender may have changed address. Search for the issue, check the sender, and add it to your filter with <code>OR</code>.
+</li><li>
+<strong>Important email went to the label.</strong> Your search was too broad. Edit the filter and add <code>-word</code> exclusions, or switch from a word match to <code>from:</code> or <code>list:</code>.
+</li><li>
+<strong>Replies in a thread got filtered.</strong> Google notes that a reply is only filtered if it matches the same criteria, so threads can behave unexpectedly. Filters on <code>from:</code> are the most predictable.
+</li></ul>
+<p><a href="/">Add Slop Mop for Gmail</a> (part of Slop Mop XL) and it marks the weak issues in your Reading label for you.</p>
+</section><div class="page-tail"><div class="share" aria-label="Share">
+  <button class="share-btn share-copy" type="button" data-copy="https://slopmop.lol/guides/email/email-gmail-filters-for-newsletters/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copy link</span></button>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fslopmop.lol%2Fguides%2Femail%2Femail-gmail-filters-for-newsletters%2F" target="_blank" rel="noopener" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn"><img src="/assets/logos/linkedin.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://x.com/intent/post?text=How%20to%20use%20Gmail%20filters%20to%20keep%20newsletters%20out%20of%20your%20inbox&url=https%3A%2F%2Fslopmop.lol%2Fguides%2Femail%2Femail-gmail-filters-for-newsletters%2F" target="_blank" rel="noopener" data-share="x" aria-label="Share on X" title="Share on X"><img src="/assets/logos/x.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://bsky.app/intent/compose?text=How%20to%20use%20Gmail%20filters%20to%20keep%20newsletters%20out%20of%20your%20inbox%20https%3A%2F%2Fslopmop.lol%2Fguides%2Femail%2Femail-gmail-filters-for-newsletters%2F" target="_blank" rel="noopener" data-share="bluesky" aria-label="Share on Bluesky" title="Share on Bluesky"><img src="/assets/logos/bluesky.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://www.threads.net/intent/post?text=How%20to%20use%20Gmail%20filters%20to%20keep%20newsletters%20out%20of%20your%20inbox%20https%3A%2F%2Fslopmop.lol%2Fguides%2Femail%2Femail-gmail-filters-for-newsletters%2F" target="_blank" rel="noopener" data-share="threads" aria-label="Share on Threads" title="Share on Threads"><img src="/assets/logos/threads.svg" alt="" width="15" height="15"></a>
+</div><span class="mono">updated 10 november 2026</span></div><div class="related"><h2>More Email guides</h2><div class="cards-3"><a class="card link-card" href="/guides/email/email-ai-sounding-cold-emails/"><h3>How to spot an AI-written cold email (and when it doesn&#x27;t matter)</h3><p>The signs of a mass-produced cold email, why &#x27;written by AI&#x27; is the wrong question, and a 30-second test for any pitch.</p></a><a class="card link-card" href="/guides/email/email-outlook-clean-up-newsletters/"><h3>How to clean up newsletters in Outlook: Subscriptions, Sweep and blocking</h3><p>Three Outlook tools for newsletter clutter: Subscriptions to leave lists, Sweep to clear the backlog, and blocking for stubborn senders.</p></a><a class="card link-card" href="/guides/email/email-gmail-manage-subscriptions/"><h3>How to unsubscribe from newsletters in Gmail with Manage subscriptions</h3><p>Gmail&#x27;s Manage subscriptions page lists your mailing lists in one place. How to use it, what unsubscribing does, and when to block instead.</p></a></div></div><div class="related"><h2>Read next</h2><div class="cards-3"><a class="card link-card" href="/for/email/"><span class="mono">Slop Mop for</span><h3>Slop Mop for email: a slop filter for Gmail and Outlook</h3><p>Slop Mop for Gmail and Outlook checks the emails you open for cold-sequence filler, padded newsletters and workslop.</p></a><a class="card link-card" href="/patterns/scroll-stopper/"><span class="mono">The nine tells</span><h3>Scroll-stopper</h3><p>A dramatic hook, a drumroll of one-line paragraphs and a moral at the end, all wrapped around one ordinary idea.</p></a><a class="card link-card" href="/glossary/ai-slop/"><span class="mono">Glossary</span><h3>AI slop</h3><p>Low-quality content made in bulk, usually with generative AI. Merriam-Webster&#x27;s word of the year for 2025.</p></a><a class="card link-card" href="/for/researchers/"><span class="mono">Slop Mop for</span><h3>Slop Mop for researchers</h3><p>Fold away the &#x27;this study changes everything&#x27; posts on every feed so a researcher sees papers, datasets and methods first.</p></a><a class="card link-card" href="/for/journalists/"><span class="mono">Slop Mop for</span><h3>Slop Mop for journalists</h3><p>Mark the press-release padding and viral hooks across X, Reddit, Substack, LinkedIn, websites and email so reporters spot the posts with facts.</p></a></div></div><div class="sources"><h2>Sources</h2><ol><li><a href="https://support.google.com/mail/answer/6579" rel="noopener">Create rules to filter your emails</a>, Google (Gmail Help)</li><li><a href="https://support.google.com/mail/answer/7190" rel="noopener">Refine searches in Gmail</a>, Google (Gmail Help)</li><li><a href="https://support.google.com/mail/answer/118708" rel="noopener">Create and manage labels in Gmail</a>, Google (Gmail Help)</li><li><a href="https://support.google.com/mail/answer/3094499" rel="noopener">Organise your emails into categories</a>, Google (Gmail Help)</li></ol></div><aside class="cta-card">
+  <div><h2>Fold the slop out of your inbox</h2><p>Slop Mop for Gmail and Outlook checks what each sender wrote, marks the filler and folds the rest, with personal details replaced before anything is sent. Part of Slop Mop XL, with every feed and the sites you read.</p></div>
+  <div class="cta-btns"><a class="btn btn-primary" href="/index.html#pricing">Get Slop Mop XL</a><a class="btn btn-ghost" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser, free</a></div>
+</aside><nav class="explore" aria-label="Explore Slop Mop"><b>Explore</b><a href="/">Slop Mop home</a><a href="/how-it-works.html">How it works</a><a href="/glossary/">The slop glossary</a><a href="/patterns/">The nine tells</a><a href="/for/">Who it's for</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/learn/">Learn</a><a href="/calculators/">Calculators</a></nav>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../../../index.html"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working.</p>
+        <div class="made"><img src="../../../assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <div class="footer-side">
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note" aria-live="polite"></p>
+      </form>
+      <div class="ask-ai">
+        <p class="ask-ai-label">Ask AI about Slop Mop</p>
+        <div class="ask-ai-row">
+          <a class="ask-ai-btn" data-ask="chatgpt" href="https://chatgpt.com/?hints=search&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Slop Mop" title="Ask ChatGPT"><img src="../../../assets/ai/chatgpt.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="claude" href="https://claude.ai/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Claude about Slop Mop" title="Ask Claude"><img src="../../../assets/ai/claude.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="perplexity" href="https://www.perplexity.ai/search/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Perplexity about Slop Mop" title="Ask Perplexity"><img src="../../../assets/ai/perplexity.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="meta" href="https://www.meta.ai/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Meta AI about Slop Mop" title="Ask Meta AI"><img src="../../../assets/ai/meta.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="grok" href="https://grok.com/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Grok about Slop Mop" title="Ask Grok"><img src="../../../assets/ai/grok.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="gemini" href="https://www.google.com/search?udm=50&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Gemini about Slop Mop" title="Ask Gemini"><img src="../../../assets/ai/gemini.svg" alt="" width="22" height="22"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="../../../how-it-works.html">How it works</a></li>
+        <li><a href="../../../patterns/">The nine tells</a></li>
+        <li><a href="../../../index.html#networks">Networks</a></li>
+        <li><a href="../../../index.html#pricing">Pricing</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="../../../glossary/">Glossary</a></li>
+        <li><a href="../../../guides/">Guides</a></li>
+        <li><a href="../../../compare/">Compare</a></li>
+        <li><a href="../../../learn/">Learn</a></li>
+        <li><a href="../../../calculators/">Calculators</a></li>
+        <li><a href="../../../help.html">Help</a></li>
+        <li><a href="../../../about.html">About</a></li>
+        <li><a href="../../../media.html">Media</a></li>
+        <li><a href="../../../contact.html">Contact</a></li>
+      </ul></div>
+      <div><h3>Slop Mop for</h3><ul>
+        <li><a href="../../../for/linkedin/">LinkedIn</a></li>
+        <li><a href="../../../for/reddit/">Reddit</a></li>
+        <li><a href="../../../for/x/">X</a></li>
+        <li><a href="../../../for/facebook/">Facebook</a></li>
+        <li><a href="../../../for/substack/">Substack</a></li>
+        <li><a href="../../../for/medium/">Medium</a></li>
+        <li><a href="../../../for/websites/">Websites</a></li>
+        <li><a href="../../../for/email/">Email</a></li>
+      </ul></div>
+      <div><h3>Who it's for</h3><ul>
+        <li><a href="../../../for/recruiters/">Recruiters</a></li>
+        <li><a href="../../../for/job-seekers/">Job seekers</a></li>
+        <li><a href="../../../for/founders/">Founders</a></li>
+        <li><a href="../../../for/ceos/">CEOs</a></li>
+        <li><a href="../../../for/sales-teams/">Sales teams</a></li>
+        <li><a href="../../../for/marketers/">Marketers</a></li>
+        <li><a href="../../../for/creators/">Creators</a></li>
+        <li><a href="../../../for/journalists/">Journalists</a></li>
+        <li><a href="../../../for/">Everyone else</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="../../../privacy.html">Privacy policy</a></li>
+        <li><a href="../../../terms.html">Terms of service</a></li>
+        <li><a href="../../../open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
+      </ul></div>
+      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+        <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="../../../assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="../../../assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="../../../assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="../../../assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="../../../assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="../../../assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="../../../assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+    </div>
+  </div>
+</footer>
+<script src="../../../assets/site.js"></script>
+</body>
+</html>

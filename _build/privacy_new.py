@@ -6,7 +6,7 @@ B = lambda t: f'<strong style="font-weight: var(--weight-semibold)">{t}</strong>
 M = lambda t: f'<code>{t}</code>'
 MAIL = '<a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>'
 VOTE_CHANGE_DATE = "14 October 2026"
-UPDATED = "last updated 19 october 2026"
+UPDATED = "last updated 13 november 2026"
 BACKUP_DAYS = 30
 
 
@@ -55,7 +55,7 @@ def privacy():
 <p>The free plan involves no payment and nothing is sent to Polar.</p>"""))
     S.append(("this-website-and-google-analytics", "This website and Google Analytics", f"""
 <p>This website, {M("slopmop.lol")}, uses Google Analytics to count visits and see which pages are useful. With your consent, Google Analytics sets cookies in your browser and collects information such as the pages you view, the site that sent you, your browser and device type, and your approximate location, which Google derives from your IP address. Google processes that data under <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">its own policies</a>. We don't use it for advertising and we don't combine it with anything the extension sends.</p>
-<p>{B("Cookie choice.")} In the UK, the EEA and Switzerland, Google Analytics sets no cookies until you choose Accept on the cookie banner. Until then, and if you choose Reject, it sends only cookieless pings with no identifier, as Google's consent mode does. Elsewhere, analytics cookies are on unless you choose Reject or your browser sends a Global Privacy Control signal. Change your choice any time with Cookie settings at the bottom of every page. Your choice is saved in your browser for a year.</p>
+<p>{B("Cookie choice.")} The cookie banner is run by GetTerms. In the UK, the EEA, Switzerland and most other countries, Google Analytics sets no cookies until you choose Accept. Until then, and if you choose Reject, it sends only cookieless pings with no identifier, as Google's consent mode does. In the US, Canada and Australia, analytics cookies are on unless you choose Reject. Change your choice any time with Cookie settings at the bottom of every page or the cookie icon. Your choice is saved in your browser, and GetTerms keeps a record of it (a random consent id, what you chose and when) so we can show you agreed.</p>
 <p>You can also block analytics with your browser's cookie or tracking settings, a content blocker, or <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google's opt-out add-on</a>. The site works the same either way.</p>
 <p>The site's fonts are served by Google Fonts. Forms on this site go through Formspree. If you sign up for updates, your email address is used only to send you Slop Mop news, and every email has an unsubscribe link. If you use the contact form, your name, email address and message are used only to reply to you. If you tell us why you deleted your account, what you write is used only to improve Slop Mop and, if you leave your email, to reply.</p>
 <p>{B("Google Analytics runs on this website only.")} The extension and the email add-ons do not load it, and nothing from your feed or your mail is sent to Google Analytics.</p>"""))
@@ -68,6 +68,7 @@ def privacy():
     ("Resend (USA)", "sends sign-in emails · your email address and the sign-in link"),
     ("Google", "Sign in with Google; this website's analytics and fonts · as described above"),
     ("Polar (USA)", "merchant of record for Slop Mop XL · payment and billing data"),
+    ("GetTerms", "this website's cookie banner · your cookie choice and a random consent id"),
     ("Formspree (USA)", "this website's forms · what you type into them")])}
 <p>We don't sell your personal data, and we don't share it for advertising.</p>
 <p>{B("International transfers.")} If you are in the UK, the EEA or Switzerland, your data is processed in the United States. Where a provider is outside your region, we rely on the safeguards the law provides for that transfer: the European Commission's Standard Contractual Clauses and the UK International Data Transfer Addendum in the provider's data processing agreement, or the provider's certification under the EU-U.S. Data Privacy Framework and its UK and Swiss extensions. Our agreements with Turso and Formspree are still being put in place; until they are, transfers to those two providers don't yet have these contractual safeguards.</p>"""))

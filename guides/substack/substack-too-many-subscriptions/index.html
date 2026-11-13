@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
+<link rel="preload" href="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true" as="script">
+<script src="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<script async src="https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<!-- Google tag (gtag.js). The GetTerms banner above works out this visitor's Consent Mode defaults (by region) and sends updates when they choose. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    // A visitor who already chose: their choice (GetTerms only re-sends it when it changes). Otherwise the region's default.
+    var d = window.GetTermsDefaults || {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500};
+    try {
+      var c = JSON.parse(localStorage.getItem('getterms_cookie_consent')), p = c && c.cookie_preferences;
+      if (p) { var g = function (on) { return on ? 'granted' : 'denied'; };
+        d = {ad_storage: g(p.Marketing), ad_user_data: g(p.Marketing), ad_personalization: g(p.Marketing), analytics_storage: g(p.Analytics),
+             functionality_storage: g(p.Functional), personalization_storage: g(p.Functional), security_storage: 'granted'}; }
+    } catch (e) {}
+    gtag('consent', 'default', d);
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<title>Too many Substack subscriptions? How to cut them down</title>
+<meta name="description" content="See every Substack you subscribe to, unsubscribe on web or app, drop single sections and stop recommendation digests. Steps checked 18 October 2026.">
+<link rel="canonical" href="https://slopmop.lol/guides/substack/substack-too-many-subscriptions/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/guides/substack/substack-too-many-subscriptions/">
+<meta property="og:title" content="Too many Substack subscriptions: how to cut them down">
+<meta property="og:description" content="See every Substack you subscribe to, unsubscribe on web or app, drop single sections and stop recommendation digests. Steps checked 18 October 2026.">
+<meta property="og:image" content="https://slopmop.lol/assets/og/guides-substack-substack-too-many-subscriptions.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Too many Substack subscriptions: how to cut them down">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Too many Substack subscriptions: how to cut them down">
+<meta name="twitter:description" content="See every Substack you subscribe to, unsubscribe on web or app, drop single sections and stop recommendation digests. Steps checked 18 October 2026.">
+<meta name="twitter:image" content="https://slopmop.lol/assets/og/guides-substack-substack-too-many-subscriptions.jpg">
+<meta name="author" content="Tom Frazier">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../_ds/slopmop/styles.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="stylesheet" href="../../../assets/sites.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://slopmop.lol/guides/substack/substack-too-many-subscriptions/#page",
+      "url": "https://slopmop.lol/guides/substack/substack-too-many-subscriptions/",
+      "name": "Too many Substack subscriptions: how to cut them down",
+      "headline": "Too many Substack subscriptions? How to cut them down",
+      "description": "See every Substack you subscribe to, unsubscribe on web or app, drop single sections and stop recommendation digests. Steps checked 18 October 2026.",
+      "inLanguage": "en",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "keywords": "too many substack subscriptions",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://slopmop.lol/assets/hero/guides-substack-substack-too-many-subscriptions.jpg",
+        "width": 960,
+        "height": 720,
+        "caption": "Substack guide: Too many Substack subscriptions: how to cut them down, in 4 parts"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/hero/guides-substack-substack-too-many-subscriptions.jpg",
+          "width": 960,
+          "height": 720,
+          "caption": "Substack guide: Too many Substack subscriptions: how to cut them down, in 4 parts"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/fig/guides-substack-substack-too-many-subscriptions.jpg",
+          "width": 1200,
+          "height": 720,
+          "caption": "Mock-up of a Substack post marked Likely slop by Slop Mop, with the panel showing Hype words and No-catch promises as the strongest signs"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/og/guides-substack-substack-too-many-subscriptions.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Too many Substack subscriptions: how to cut them down"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://slopmop.lol/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://slopmop.lol/guides/substack/substack-too-many-subscriptions/#crumbs"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://slopmop.lol/#app",
+        "name": "Slop Mop"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop",
+        "url": "https://slopmop.lol/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Artimovo LLC",
+        "url": "https://slopmop.lol/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slopmop.lol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://slopmop.lol/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Substack",
+          "item": "https://slopmop.lol/guides/substack/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Too many Substack subscriptions: how to cut them down",
+          "item": "https://slopmop.lol/guides/substack/substack-too-many-subscriptions/"
+        }
+      ],
+      "@id": "https://slopmop.lol/guides/substack/substack-too-many-subscriptions/#crumbs"
+    },
+    {
+      "@type": "Article",
+      "headline": "Too many Substack subscriptions: how to cut them down",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop"
+      },
+      "mainEntityOfPage": "https://slopmop.lol/guides/substack/substack-too-many-subscriptions/",
+      "image": "https://slopmop.lol/assets/hero/guides-substack-substack-too-many-subscriptions.jpg"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html" aria-label="Slop Mop home"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../../how-it-works.html">How it works</a>
+      <a href="../../../index.html#tells">The tells</a>
+      <a href="../../../index.html#networks">Networks</a>
+      <a href="../../../index.html#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><a href="/guides/substack/">Substack</a></nav><span class="eyebrow">guides · substack</span>
+      <h1 class="h-1">Too many Substack subscriptions: how to cut them down</h1>
+      <p class="lede">Find your full Substack subscription list, then unsubscribe, trim sections or cancel paid plans without losing what you still read.</p>
+      <p class="mono">6 min read · steps checked 18 october 2026</p>
+    </div>
+    <div class="ph-visual"><img class="ph-img" src="/assets/hero/guides-substack-substack-too-many-subscriptions.jpg" width="960" height="720" alt="Substack guide: Too many Substack subscriptions: how to cut them down, in 4 parts" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#before-you-start">Before you start</a>
+      <a href="#1-see-everything-you-subscribe-to">1. See everything you subscribe to</a>
+      <a href="#2-sort-the-list-into-three-piles">2. Sort the list into three piles</a>
+      <a href="#3-unsubscribe-from-a-free-publication">3. Unsubscribe from a free publication</a>
+      <a href="#4-trim-sections-instead-of-leaving">4. Trim sections instead of leaving</a>
+      <a href="#5-stop-recommendation-digests">5. Stop recommendation digests</a>
+      <a href="#6-cancel-a-paid-subscription">6. Cancel a paid subscription</a>
+      <a href="#7-the-nuclear-option">7. The nuclear option</a>
+      <a href="#which-substack-subscriptions-to-drop-when-you-have-too-many">Which Substack subscriptions to drop when you have too many</a>
+      <a href="#if-that-doesn-t-work">If that doesn't work</a>
+    </nav>
+    <div class="prose">
+<p>Open substack.com/settings and scroll to <strong>Subscriptions</strong>: that's your full list, free and paid, in one place. From there, click any publication to unsubscribe, switch off the sections you don't read, or cancel a paid plan. In the iOS or Android app, tap your profile picture, pick a publication, then the three dots and <strong>Unsubscribe</strong>.</p>
+<p>The harder part is deciding what goes. The steps below cover both.</p>
+<section id="before-you-start">
+<h2>Before you start</h2>
+<ul><li>
+<strong>Use the account you subscribed with.</strong> Substack creates an account for every email address you subscribe with. If some newsletters are missing from your list, you probably signed up to them with a different address, and you'll need to sign in with that one too.
+</li><li>
+<strong>Know the three levels of attachment.</strong> Substack separates <em>following</em> (you see someone's Notes and some reading activity in your feed, but get no emails), <em>free subscription</em> (their free posts by email and/or in the app, plus their Notes) and <em>paid subscription</em> (everything they publish). Dropping a level is often enough. If you like someone's Notes but never open their emails, unsubscribe and follow instead.
+</li><li>
+<strong>Paid plans need the web.</strong> <a href="https://support.substack.com/hc/en-us/articles/360037489252-How-do-I-cancel-my-paid-subscription-on-Substack" rel="noopener">Substack says</a> you can only fully manage a subscription on the web version of Substack, so cancellations are easiest on a computer or a mobile browser.
+</li></ul>
+</section><figure class="shot"><img src="/assets/fig/guides-substack-substack-too-many-subscriptions.jpg" width="1200" height="720" loading="lazy" alt="Mock-up of a Substack post marked Likely slop by Slop Mop, with the panel showing Hype words and No-catch promises as the strongest signs"><figcaption>Illustration: Slop Mop on Substack, marking a post like the example on this page. It scores 81 out of 100 (Likely slop); the strongest signs are hype words and no-catch promises. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.</figcaption></figure>
+<section id="1-see-everything-you-subscribe-to">
+<h2>1. See everything you subscribe to</h2>
+<ol><li>
+Go to <strong>substack.com/settings</strong> (or click your profile icon and choose <strong>Settings</strong>).
+</li><li>
+Scroll to <strong>Subscriptions</strong>.
+</li></ol>
+<p>On desktop there's also your <strong>Library</strong> at substack.com/library, which lists free and paid subscriptions together. It's a good place to do the triage below, because you can see the whole set at once.</p>
+</section>
+<section id="2-sort-the-list-into-three-piles">
+<h2>2. Sort the list into three piles</h2>
+<p>Before clicking anything, go down the list and give each publication one of three labels. Be honest about the last month, not about who you'd like to be.</p>
+<ul><li>
+<strong>Keep:</strong> you opened at least two of its last four issues and something in them changed what you did or thought.
+</li><li>
+<strong>Trim:</strong> you read one section or one kind of post and skip the rest.
+</li><li>
+<strong>Go:</strong> you archive it unopened, or you subscribed for one post and stayed out of politeness.
+</li></ul>
+<p>A quick test for the Go pile: if the newsletter stopped tomorrow, would you notice within a month? If not, unsubscribe. You can always resubscribe later.</p>
+</section>
+<section id="3-unsubscribe-from-a-free-publication">
+<h2>3. Unsubscribe from a free publication</h2>
+<p>There are three ways, and they do the same thing.</p>
+<ul><li>
+<strong>From an email:</strong> scroll to the bottom of any issue and click <strong>Unsubscribe</strong>, then choose <strong>Unsubscribe from all</strong> in the window that opens.
+</li><li>
+<strong>On the web:</strong> in Settings, under <strong>Subscriptions</strong>, click the publication. On the next page, go to <strong>Notifications</strong> and click <strong>Unsubscribe</strong>.
+</li><li>
+<strong>In the iOS or Android app:</strong> tap your profile picture to open your library, pick the publication, tap the three dots at the top right and choose <strong>Unsubscribe</strong>.
+</li></ul>
+</section>
+<section id="4-trim-sections-instead-of-leaving">
+<h2>4. Trim sections instead of leaving</h2>
+<p>Many publications split their output into sections: a weekly essay, a links roundup, a podcast. When you subscribe, you get every section by default.</p>
+<ol><li>
+In Settings, under <strong>Subscriptions</strong>, click the publication.
+</li><li>
+Slide the toggle off next to each section you don't want. A grey toggle means emails and app notifications are off for that section.
+</li></ol>
+<p>This is the right fix for the Trim pile. One caveat from Substack: if a writer adds a <em>new</em> section later, existing subscribers aren't added to it automatically, so you won't suddenly start receiving it.</p>
+</section>
+<section id="5-stop-recommendation-digests">
+<h2>5. Stop recommendation digests</h2>
+<p>When a writer you subscribe to recommends another publication, Substack can send you a recommendations digest email. You can unsubscribe from the digest itself, using the link in the email, and it won't affect your subscription to the writer. Substack notes you'll still get these emails if <em>other</em> writers you read make new recommendations, so you may need to do this more than once.</p>
+</section>
+<section id="6-cancel-a-paid-subscription">
+<h2>6. Cancel a paid subscription</h2>
+<ol><li>
+Go to <strong>substack.com/settings</strong> and, under <strong>Subscriptions</strong>, select the publication.
+</li><li>
+On the <strong>Manage subscription</strong> page, scroll to <strong>Account actions</strong> and click the link next to <strong>To cancel your paid subscription, click here</strong>.
+</li><li>
+On the next page, click <strong>Cancel subscription</strong>, pick a reason, and click <strong>Cancel subscription</strong> again. Some publications offer a free month at this point; click <strong>Continue to cancel</strong> if you still want to go.
+</li></ol>
+<p>You keep paid access until the end of the period you've paid for, and cancelling doesn't give a refund. After that you drop to a free subscription, so unsubscribe as well if you want the emails to stop. If you subscribed inside the iOS app, cancel through the Apple App Store instead.</p>
+<p>If you're unsure, Substack also lets you <strong>pause</strong> a paid plan for 1, 3 or 6 months, once every 6 months. Pausing stops both the charges and your paid access, and your remaining paid time is restored when it resumes.</p>
+</section>
+<section id="7-the-nuclear-option">
+<h2>7. The nuclear option</h2>
+<p>The <strong>Danger Zone</strong> section of Settings can unsubscribe you from every Substack publication and stop Substack emails altogether. Substack warns that this removes you completely: no emails, no posts in the app, nothing left under Subscriptions. Use it only if you're leaving Substack, not to tidy up.</p>
+</section>
+<section id="which-substack-subscriptions-to-drop-when-you-have-too-many">
+<h2>Which Substack subscriptions to drop when you have too many</h2>
+<p>Volume isn't the only problem. A publication earns its place in your inbox when an issue gives you something you couldn't get from its headline. Compare two openings:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>This week has been a whirlwind. So many thoughts swirling. Before we dive in, a quick reminder that paid subscribers get exclusive access to our community.</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Three parking rules change in town this month. The one that affects most readers is the new 2-hour limit on Mill Street, from 4 November.</p></span></div></div>
+<p>If most issues from a writer open like the first, that's a strong sign for the Go pile. <a href="/patterns/hype-words/">Hype words</a> and long throat-clearing are cheap to produce, and they fill an inbox fast.</p>
+<p>If you'd like a second opinion while you sort, <a href="/how-it-works.html">Slop Mop</a> gives one on both sides of Substack. In Substack's web app it reads the Notes and posts in your feed and folds the likely <a href="/glossary/ai-slop/">AI slop</a>. In Gmail and Outlook, the Slop Mop add-ons check what the sender of each newsletter wrote, with personal details replaced by placeholders before anything leaves your mailbox. A publication that gets folded week after week is a good candidate for the Go pile. The email add-ons are part of Slop Mop XL; the free plan covers one feed.</p>
+</section>
+<section id="if-that-doesn-t-work">
+<h2>If that doesn't work</h2>
+<ul><li>
+<strong>A newsletter isn't in your list.</strong> Search your inbox for its emails and check which address they were sent to, then sign in to Substack with that address.
+</li><li>
+<strong>Emails keep coming after you unsubscribed.</strong> Check whether you have a second account or were subscribed to a section separately. If you've paid, check whether the plan has ended yet: cancelling leaves you on the free list until you unsubscribe too.
+</li><li>
+<strong>You want fewer emails but not fewer writers.</strong> Switch delivery to the Substack app instead; Settings has a Newsletter delivery option for app, email or both.
+</li></ul>
+<p>For tidying the Notes side of Substack, see <a href="/guides/substack/substack-clean-up-notes-feed/">how to clean up your Notes feed</a>, and for newsletters from elsewhere, <a href="/guides/email/email-gmail-manage-subscriptions/">managing subscriptions in Gmail</a>.</p>
+<p><a href="/">Add Slop Mop for Gmail and Outlook</a> (part of Slop Mop XL) and it checks the newsletters that survive your clear-out.</p>
+</section><div class="page-tail"><div class="share" aria-label="Share">
+  <button class="share-btn share-copy" type="button" data-copy="https://slopmop.lol/guides/substack/substack-too-many-subscriptions/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copy link</span></button>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-too-many-subscriptions%2F" target="_blank" rel="noopener" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn"><img src="/assets/logos/linkedin.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://x.com/intent/post?text=Too%20many%20Substack%20subscriptions%3A%20how%20to%20cut%20them%20down&url=https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-too-many-subscriptions%2F" target="_blank" rel="noopener" data-share="x" aria-label="Share on X" title="Share on X"><img src="/assets/logos/x.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://bsky.app/intent/compose?text=Too%20many%20Substack%20subscriptions%3A%20how%20to%20cut%20them%20down%20https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-too-many-subscriptions%2F" target="_blank" rel="noopener" data-share="bluesky" aria-label="Share on Bluesky" title="Share on Bluesky"><img src="/assets/logos/bluesky.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://www.threads.net/intent/post?text=Too%20many%20Substack%20subscriptions%3A%20how%20to%20cut%20them%20down%20https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-too-many-subscriptions%2F" target="_blank" rel="noopener" data-share="threads" aria-label="Share on Threads" title="Share on Threads"><img src="/assets/logos/threads.svg" alt="" width="15" height="15"></a>
+</div><span class="mono">updated 27 october 2026</span></div><div class="related"><h2>More Substack guides</h2><div class="cards-3"><a class="card link-card" href="/guides/substack/substack-worth-paying-for/"><h3>Is a Substack newsletter worth paying for?</h3><p>A reader&#x27;s checklist for paid Substacks: what to read before paying, how trials and renewals work, and when you can get money back.</p></a><a class="card link-card" href="/guides/substack/substack-spot-padded-ai-posts/"><h3>How to spot a padded or AI-written Substack post</h3><p>Signs that a Substack post is padding, how Substack&#x27;s own AI scan works, and why the writing matters more than who typed it.</p></a><a class="card link-card" href="/guides/substack/substack-clean-up-notes-feed/"><h3>How to clean up your Substack Notes feed</h3><p>Use Substack&#x27;s Content preferences to hide words, mute or block accounts, and set the topics and formats your Notes feed shows.</p></a></div></div><div class="related"><h2>Read next</h2><div class="cards-3"><a class="card link-card" href="/for/substack/"><span class="mono">Slop Mop for</span><h3>Slop Mop for Substack: a filter for Notes and padded posts</h3><p>Slop Mop reads Substack Notes and posts and folds or marks the growth bait, throat-clearing intros and padded lists.</p></a><a class="card link-card" href="/guides/substack/substack-clean-up-notes-feed/"><span class="mono">Guides</span><h3>How to clean up your Substack Notes feed</h3><p>Use Substack&#x27;s Content preferences to hide words, mute or block accounts, and set the topics and formats your Notes feed shows.</p></a><a class="card link-card" href="/glossary/ai-fatigue/"><span class="mono">Glossary</span><h3>AI fatigue</h3><p>Feeling worn out by nonstop AI news, new tools, AI content and the pressure to keep up.</p></a><a class="card link-card" href="/patterns/hype-words/"><span class="mono">The nine tells</span><h3>Hype words</h3><p>Marketing vocabulary such as game-changing, unlock, elevate and seamless, used where a number or a plain verb would say more.</p></a><a class="card link-card" href="/for/researchers/"><span class="mono">Slop Mop for</span><h3>Slop Mop for researchers</h3><p>Fold away the &#x27;this study changes everything&#x27; posts on every feed so a researcher sees papers, datasets and methods first.</p></a></div></div><div class="sources"><h2>Sources</h2><ol><li><a href="https://support.substack.com/hc/en-us/articles/360047187972-How-do-I-see-a-list-of-all-my-subscriptions-on-Substack" rel="noopener">How do I see a list of all my subscriptions on Substack?</a>, Substack Support, 17 October 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/360059788812-How-do-I-unsubscribe-from-a-free-subscription" rel="noopener">How do I unsubscribe from a free subscription?</a>, Substack Support, 18 October 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/4474826883732-How-do-I-unsubscribe-from-a-publication-on-the-Substack-iOS-app" rel="noopener">How do I unsubscribe from a publication on the Substack iOS app?</a>, Substack Support, 27 September 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/9816830938516-How-do-I-unsubscribe-from-a-publication-on-the-Android-app" rel="noopener">How do I unsubscribe from a publication on the Android app?</a>, Substack Support, 6 October 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack" rel="noopener">How do I subscribe to or unsubscribe from a section on Substack?</a>, Substack Support, 17 October 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/7208782994580-What-are-recommendations-digests" rel="noopener">What are recommendations digests?</a>, Substack Support, 6 September 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/360037489252-How-do-I-cancel-my-paid-subscription-on-Substack" rel="noopener">How do I cancel my paid subscription on Substack?</a>, Substack Support, 18 October 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/18163273015700-What-is-following-on-Substack" rel="noopener">What is following on Substack?</a>, Substack Support, 9 October 2026</li></ol></div><aside class="cta-card">
+  <div><h2>Fold the slop out of your feed</h2><p>Slop Mop reads Substack ahead of you, folds away the slop and shows its working. Works in Chrome, Edge, Firefox and Safari. Free for one feed, 250 checks a day.</p></div>
+  <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser, free</a>
+</aside><nav class="explore" aria-label="Explore Slop Mop"><b>Explore</b><a href="/">Slop Mop home</a><a href="/how-it-works.html">How it works</a><a href="/glossary/">The slop glossary</a><a href="/patterns/">The nine tells</a><a href="/for/">Who it's for</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/learn/">Learn</a><a href="/calculators/">Calculators</a></nav>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../../../index.html"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working.</p>
+        <div class="made"><img src="../../../assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <div class="footer-side">
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note" aria-live="polite"></p>
+      </form>
+      <div class="ask-ai">
+        <p class="ask-ai-label">Ask AI about Slop Mop</p>
+        <div class="ask-ai-row">
+          <a class="ask-ai-btn" data-ask="chatgpt" href="https://chatgpt.com/?hints=search&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Slop Mop" title="Ask ChatGPT"><img src="../../../assets/ai/chatgpt.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="claude" href="https://claude.ai/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Claude about Slop Mop" title="Ask Claude"><img src="../../../assets/ai/claude.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="perplexity" href="https://www.perplexity.ai/search/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Perplexity about Slop Mop" title="Ask Perplexity"><img src="../../../assets/ai/perplexity.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="meta" href="https://www.meta.ai/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Meta AI about Slop Mop" title="Ask Meta AI"><img src="../../../assets/ai/meta.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="grok" href="https://grok.com/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Grok about Slop Mop" title="Ask Grok"><img src="../../../assets/ai/grok.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="gemini" href="https://www.google.com/search?udm=50&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Gemini about Slop Mop" title="Ask Gemini"><img src="../../../assets/ai/gemini.svg" alt="" width="22" height="22"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="../../../how-it-works.html">How it works</a></li>
+        <li><a href="../../../patterns/">The nine tells</a></li>
+        <li><a href="../../../index.html#networks">Networks</a></li>
+        <li><a href="../../../index.html#pricing">Pricing</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="../../../glossary/">Glossary</a></li>
+        <li><a href="../../../guides/">Guides</a></li>
+        <li><a href="../../../compare/">Compare</a></li>
+        <li><a href="../../../learn/">Learn</a></li>
+        <li><a href="../../../calculators/">Calculators</a></li>
+        <li><a href="../../../help.html">Help</a></li>
+        <li><a href="../../../about.html">About</a></li>
+        <li><a href="../../../media.html">Media</a></li>
+        <li><a href="../../../contact.html">Contact</a></li>
+      </ul></div>
+      <div><h3>Slop Mop for</h3><ul>
+        <li><a href="../../../for/linkedin/">LinkedIn</a></li>
+        <li><a href="../../../for/reddit/">Reddit</a></li>
+        <li><a href="../../../for/x/">X</a></li>
+        <li><a href="../../../for/facebook/">Facebook</a></li>
+        <li><a href="../../../for/substack/">Substack</a></li>
+        <li><a href="../../../for/medium/">Medium</a></li>
+        <li><a href="../../../for/websites/">Websites</a></li>
+        <li><a href="../../../for/email/">Email</a></li>
+      </ul></div>
+      <div><h3>Who it's for</h3><ul>
+        <li><a href="../../../for/recruiters/">Recruiters</a></li>
+        <li><a href="../../../for/job-seekers/">Job seekers</a></li>
+        <li><a href="../../../for/founders/">Founders</a></li>
+        <li><a href="../../../for/ceos/">CEOs</a></li>
+        <li><a href="../../../for/sales-teams/">Sales teams</a></li>
+        <li><a href="../../../for/marketers/">Marketers</a></li>
+        <li><a href="../../../for/creators/">Creators</a></li>
+        <li><a href="../../../for/journalists/">Journalists</a></li>
+        <li><a href="../../../for/">Everyone else</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="../../../privacy.html">Privacy policy</a></li>
+        <li><a href="../../../terms.html">Terms of service</a></li>
+        <li><a href="../../../open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
+      </ul></div>
+      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+        <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="../../../assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="../../../assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="../../../assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="../../../assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="../../../assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="../../../assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="../../../assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+    </div>
+  </div>
+</footer>
+<script src="../../../assets/site.js"></script>
+</body>
+</html>

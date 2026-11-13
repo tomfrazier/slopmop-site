@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
+<link rel="preload" href="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true" as="script">
+<script src="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<script async src="https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<!-- Google tag (gtag.js). The GetTerms banner above works out this visitor's Consent Mode defaults (by region) and sends updates when they choose. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    // A visitor who already chose: their choice (GetTerms only re-sends it when it changes). Otherwise the region's default.
+    var d = window.GetTermsDefaults || {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500};
+    try {
+      var c = JSON.parse(localStorage.getItem('getterms_cookie_consent')), p = c && c.cookie_preferences;
+      if (p) { var g = function (on) { return on ? 'granted' : 'denied'; };
+        d = {ad_storage: g(p.Marketing), ad_user_data: g(p.Marketing), ad_personalization: g(p.Marketing), analytics_storage: g(p.Analytics),
+             functionality_storage: g(p.Functional), personalization_storage: g(p.Functional), security_storage: 'granted'}; }
+    } catch (e) {}
+    gtag('consent', 'default', d);
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<title>How to spot AI image pages on Facebook · Slop Mop</title>
+<meta name="description" content="Repeated captions, a renamed Page, a link in the first comment: how to recognise Facebook Pages that farm reactions with AI images, and what to do about them.">
+<link rel="canonical" href="https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/">
+<meta property="og:title" content="How to spot AI image pages on Facebook">
+<meta property="og:description" content="Repeated captions, a renamed Page, a link in the first comment: how to recognise Facebook Pages that farm reactions with AI images, and what to do about them.">
+<meta property="og:image" content="https://slopmop.lol/assets/og/guides-facebook-facebook-spot-ai-image-pages.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to spot AI image pages on Facebook">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to spot AI image pages on Facebook">
+<meta name="twitter:description" content="Repeated captions, a renamed Page, a link in the first comment: how to recognise Facebook Pages that farm reactions with AI images, and what to do about them.">
+<meta name="twitter:image" content="https://slopmop.lol/assets/og/guides-facebook-facebook-spot-ai-image-pages.jpg">
+<meta name="author" content="Tom Frazier">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../_ds/slopmop/styles.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="stylesheet" href="../../../assets/sites.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/#page",
+      "url": "https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/",
+      "name": "How to spot AI image pages on Facebook",
+      "headline": "How to spot AI image pages on Facebook · Slop Mop",
+      "description": "Repeated captions, a renamed Page, a link in the first comment: how to recognise Facebook Pages that farm reactions with AI images, and what to do about them.",
+      "inLanguage": "en",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "keywords": "facebook ai image pages",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://slopmop.lol/assets/hero/guides-facebook-facebook-spot-ai-image-pages.jpg",
+        "width": 960,
+        "height": 720,
+        "caption": "Facebook guide: How to spot AI image pages on Facebook, in 4 parts"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/hero/guides-facebook-facebook-spot-ai-image-pages.jpg",
+          "width": 960,
+          "height": 720,
+          "caption": "Facebook guide: How to spot AI image pages on Facebook, in 4 parts"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/fig/guides-facebook-facebook-spot-ai-image-pages.jpg",
+          "width": 1200,
+          "height": 720,
+          "caption": "Mock-up of a Facebook post marked Likely slop by Slop Mop, with the panel showing Engagement bait and No-catch promises as the strongest signs"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/og/guides-facebook-facebook-spot-ai-image-pages.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "How to spot AI image pages on Facebook"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://slopmop.lol/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/#crumbs"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://slopmop.lol/#app",
+        "name": "Slop Mop"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop",
+        "url": "https://slopmop.lol/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Artimovo LLC",
+        "url": "https://slopmop.lol/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slopmop.lol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://slopmop.lol/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Facebook",
+          "item": "https://slopmop.lol/guides/facebook/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to spot AI image pages on Facebook",
+          "item": "https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/"
+        }
+      ],
+      "@id": "https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/#crumbs"
+    },
+    {
+      "@type": "Article",
+      "headline": "How to spot AI image pages on Facebook",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop"
+      },
+      "mainEntityOfPage": "https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/",
+      "image": "https://slopmop.lol/assets/hero/guides-facebook-facebook-spot-ai-image-pages.jpg"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html" aria-label="Slop Mop home"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../../how-it-works.html">How it works</a>
+      <a href="../../../index.html#tells">The tells</a>
+      <a href="../../../index.html#networks">Networks</a>
+      <a href="../../../index.html#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><a href="/guides/facebook/">Facebook</a></nav><span class="eyebrow">guides · facebook</span>
+      <h1 class="h-1">How to spot AI image pages on Facebook</h1>
+      <p class="lede">The signs of a Facebook Page farming reactions with AI images, from copied captions to a renamed Page, and how to check one in a minute.</p>
+      <p class="mono">7 min read · steps checked 18 october 2026</p>
+    </div>
+    <div class="ph-visual"><img class="ph-img" src="/assets/hero/guides-facebook-facebook-spot-ai-image-pages.jpg" width="960" height="720" alt="Facebook guide: How to spot AI image pages on Facebook, in 4 parts" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#why-the-picture-alone-won-t-tell-you">Why the picture alone won't tell you</a>
+      <a href="#signs-of-an-ai-image-page-on-facebook">Signs of an AI image page on Facebook</a>
+      <a href="#what-it-means-when-you-find-one">What it means when you find one</a>
+      <a href="#what-to-do">What to do</a>
+    </nav>
+    <div class="prose">
+<p>An AI image page is a Facebook Page that posts a steady stream of generated pictures (cabins, carvings, cakes, soldiers, babies) to collect reactions, then uses the audience for clicks or sales. You can usually tell from the Page rather than the picture: captions copied across unrelated Pages, a history of name changes, and a link waiting in the first comment. Checking takes about a minute.</p>
+<section id="why-the-picture-alone-won-t-tell-you">
+<h2>Why the picture alone won't tell you</h2>
+<p>Image generators have got good enough that hunting for a sixth finger is unreliable, and some real photos look odd. Meta labels some AI content with <strong>AI info</strong>, but only when it detects industry-standard signals in the file or the uploader discloses it. In September 2024 Meta said that for images only edited with AI, it would move the label into the post's menu (<a href="https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/" rel="noopener">Meta</a>). A missing label proves nothing.</p>
+<p>The behaviour around the picture is harder to fake. The best public study of these Pages, by Renee DiResta and Josh Goldstein, followed 120 Facebook Pages that had each posted at least 50 AI-generated images. Their mean follower count was about 129,000, and one post with an AI image was among the 20 most viewed pieces of content on Facebook in the third quarter of 2023, with 40 million views (<a href="https://arxiv.org/abs/2403.12838" rel="noopener">arXiv</a>). The signs below come from what that study found and from how these posts are built.</p>
+</section><figure class="shot"><img src="/assets/fig/guides-facebook-facebook-spot-ai-image-pages.jpg" width="1200" height="720" loading="lazy" alt="Mock-up of a Facebook post marked Likely slop by Slop Mop, with the panel showing Engagement bait and No-catch promises as the strongest signs"><figcaption>Illustration: Slop Mop on Facebook, marking a post like the example on this page. It scores 80 out of 100 (Likely slop); the strongest signs are engagement bait and no-catch promises. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.</figcaption></figure>
+<section id="signs-of-an-ai-image-page-on-facebook">
+<h2>Signs of an AI image page on Facebook</h2>
+<h3>1. A caption that's doing the asking</h3>
+<p>The caption usually asks for a reaction or a kind word, and often has nothing to do with the image. The study found the same phrases repeated across Pages that seemed unconnected: "Made it with my own hands", "No one ever blessed me" and "This is my first cake! will be glad for your marks" (<a href="https://arxiv.org/abs/2403.12838" rel="noopener">arXiv</a>). One AI image of a crab-shaped Jesus carried the "Made it with my own hands" caption and still collected 209,000 engagements.</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>I'm 92 and made this table from one oak tree. My family says it's ugly 😔 Do you like it?</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>Finished the oak table for my sister's kitchen. Took about six weekends. The top's slightly bowed at one end because I didn't let the boards dry long enough.</p></span></div></div>
+<p>The first gives you a sad backstory and a question. The second gives you details the writer would have no reason to invent, including a mistake.</p>
+<p>If you suspect a caption, copy a distinctive phrase and search for it on Facebook. When the same words turn up under different pictures on several Pages, you've found a template.</p>
+<h3>2. A Page whose history doesn't match its posts</h3>
+<p>Every Facebook Page has a <strong>Page transparency</strong> section showing when it was created and its previous names, among other details (<a href="https://www.facebook.com/help/323314944866264" rel="noopener">Facebook Help</a>). To open it:</p>
+<ol><li>
+Go to the Page by tapping or clicking its name on the post.
+</li><li>
+Tap or click the Page's name under the cover photo.
+</li><li>
+Choose <strong>Transparency</strong> (Facebook's help page lists it as "Transparency and privacy policy"; the label may differ slightly on your device).
+</li></ol>
+<p>Look at the creation date and the name history. In the DiResta and Goldstein sample, 46 of the Pages had changed their names, often from a completely different subject. One had been a touring band's Page since 2011, then renamed itself "Life Nature" in December 2023 and started posting AI images (<a href="https://arxiv.org/abs/2403.12838" rel="noopener">arXiv</a>). Others had been a church and a windmill seller. A nature Page that used to sell windmills was bought, borrowed or taken over.</p>
+<h3>3. A link in the first comment</h3>
+<p>Spam Pages in the study often posted the image with a copied caption and left a link to an outside website in the first comment (<a href="https://arxiv.org/abs/2403.12838" rel="noopener">arXiv</a>). The sites tended to be ad-heavy content farms, some full of AI-written text. A Page about tiny cabins that links to "plans" on a site you've never heard of is selling your click.</p>
+<h3>4. A posting rate no person could keep up</h3>
+<p>Open the Page and scroll. Ten flawless "handmade" sculptures a day, each by a different elderly maker, from a Page that also posts celebrity babies and soldiers, isn't a hobby.</p>
+<h3>5. Comments that never touch the picture</h3>
+<p>Read a few comments. Rows of "Amen", "Beautiful" and "Happy birthday" with no one asking how anything was made suggest people reacting to the caption, not the image. The study found many commenters seemed unaware the images were synthetic, while a smaller number left warnings (<a href="https://arxiv.org/abs/2403.12838" rel="noopener">arXiv</a>). Those warning comments are a useful clue in their own right.</p>
+<h3>The picture itself, as a last check</h3>
+<p>When the Page signs are mixed, look closely at the image. Text in the background that isn't quite letters, hands and tools that merge, and repeated faces in a crowd are common tells. Treat them as supporting evidence. Some real photos are blurry, and the best generated ones have none of these faults.</p>
+</section>
+<section id="what-it-means-when-you-find-one">
+<h2>What it means when you find one</h2>
+<p>A Page posting AI pictures isn't automatically a scam. The study sorted its 120 Pages into spam, scam and "other creator" (<a href="https://arxiv.org/abs/2403.12838" rel="noopener">arXiv</a>), and plenty of people enjoy AI art that says what it is. The problem is the combination: unlabelled pictures presented as real, a caption fishing for sympathy, and a business model that depends on you not noticing. That's <a href="/glossary/ai-slop/">AI slop</a> in its plainest form, and the reaction-fishing caption is <a href="/patterns/engagement-bait/">engagement bait</a>.</p>
+<p>Meta said in April 2025 that accounts posting captions unrelated to their images, or running networks that share the same content, would have their reach and monetisation cut (<a href="https://about.fb.com/news/2025/04/cracking-down-spammy-content-facebook/" rel="noopener">Meta</a>). Plenty still get through to feeds.</p>
+</section>
+<section id="what-to-do">
+<h2>What to do</h2>
+<ol><li>
+<strong>Don't react or comment.</strong> Even a comment calling it fake counts as engagement.
+</li><li>
+<strong>Choose Not interested</strong> from the post's three-dot menu (<a href="https://www.facebook.com/help/268028706671439" rel="noopener">Facebook Help</a>). The <a href="/guides/facebook/facebook-reduce-suggested-posts/">first guide in this series</a> covers that and the other ways to see fewer suggested posts.
+</li><li>
+<strong>Report it if it's selling something that doesn't exist</strong> or asking for personal details. Report post is in the same menu.
+</li><li>
+<strong>Tell the person who shared it, privately</strong>, if it's a friend or relative. A public correction tends to embarrass rather than help.
+</li></ol>
+<p>Slop Mop reads Facebook feed posts, including those from Pages and groups you can see, and judges the words rather than the picture. For these Pages the copied, reaction-fishing caption is the part it scores, against tells such as engagement bait and the too-tidy sad backstory (<a href="/how-it-works.html">how the score works</a>). It doesn't analyse images or check Page transparency, so the one-minute check above is still the surest test. <a href="/">Add Slop Mop to your browser</a> and it folds reaction-fishing posts like these into a one-line strip you can reopen.</p>
+</section><div class="page-tail"><div class="share" aria-label="Share">
+  <button class="share-btn share-copy" type="button" data-copy="https://slopmop.lol/guides/facebook/facebook-spot-ai-image-pages/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copy link</span></button>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fslopmop.lol%2Fguides%2Ffacebook%2Ffacebook-spot-ai-image-pages%2F" target="_blank" rel="noopener" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn"><img src="/assets/logos/linkedin.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://x.com/intent/post?text=How%20to%20spot%20AI%20image%20pages%20on%20Facebook&url=https%3A%2F%2Fslopmop.lol%2Fguides%2Ffacebook%2Ffacebook-spot-ai-image-pages%2F" target="_blank" rel="noopener" data-share="x" aria-label="Share on X" title="Share on X"><img src="/assets/logos/x.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://bsky.app/intent/compose?text=How%20to%20spot%20AI%20image%20pages%20on%20Facebook%20https%3A%2F%2Fslopmop.lol%2Fguides%2Ffacebook%2Ffacebook-spot-ai-image-pages%2F" target="_blank" rel="noopener" data-share="bluesky" aria-label="Share on Bluesky" title="Share on Bluesky"><img src="/assets/logos/bluesky.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://www.threads.net/intent/post?text=How%20to%20spot%20AI%20image%20pages%20on%20Facebook%20https%3A%2F%2Fslopmop.lol%2Fguides%2Ffacebook%2Ffacebook-spot-ai-image-pages%2F" target="_blank" rel="noopener" data-share="threads" aria-label="Share on Threads" title="Share on Threads"><img src="/assets/logos/threads.svg" alt="" width="15" height="15"></a>
+</div><span class="mono">updated 27 october 2026</span></div><div class="related"><h2>More Facebook guides</h2><div class="cards-3"><a class="card link-card" href="/guides/facebook/facebook-engagement-bait-posts/"><h3>How to spot engagement bait on Facebook</h3><p>The common forms of Facebook engagement bait, from &#x27;type AMEN&#x27; to copy-and-paste chains, how to tell them from a fair request.</p></a><a class="card link-card" href="/guides/facebook/facebook-feeds-tab-favourites/"><h3>How to use the Feeds tab and Favorites on Facebook</h3><p>Open Facebook&#x27;s Feeds tab, add up to 30 Favorites, and pin it to your tab bar so a feed without suggestions is one tap away.</p></a><a class="card link-card" href="/guides/facebook/facebook-reduce-suggested-posts/"><h3>How to see fewer suggested posts on Facebook</h3><p>No switch turns suggested posts off, but Not interested, Hide, snooze and the Feeds tab cut them down. What each does, on app and desktop.</p></a></div></div><div class="related"><h2>Read next</h2><div class="cards-3"><a class="card link-card" href="/glossary/ai-slop/"><span class="mono">Glossary</span><h3>AI slop</h3><p>Low-quality content made in bulk, usually with generative AI. Merriam-Webster&#x27;s word of the year for 2025.</p></a><a class="card link-card" href="/glossary/cheapfake/"><span class="mono">Glossary</span><h3>Cheapfake</h3><p>Misleading media made with simple tools: a crop, a slowed clip or a false caption. No AI required.</p></a><a class="card link-card" href="/glossary/dead-internet-theory/"><span class="mono">Glossary</span><h3>Dead internet theory</h3><p>The theory that bots and AI now produce most of what you see online. Part conspiracy theory, part real worry.</p></a><a class="card link-card" href="/patterns/engagement-bait/"><span class="mono">The nine tells</span><h3>Engagement bait</h3><p>Formula requests for comments, reposts and follows, added to a post to buy reach rather than start a conversation.</p></a><a class="card link-card" href="/for/facebook/"><span class="mono">Slop Mop for</span><h3>Slop Mop for Facebook: a feed filter for bait posts and AI pages</h3><p>Slop Mop reads the writing in Facebook posts as you scroll and folds or marks the bait captions, fake quizzes and sob-story links.</p></a></div></div><div class="sources"><h2>Sources</h2><ol><li><a href="https://arxiv.org/abs/2403.12838" rel="noopener">How Spammers and Scammers Leverage AI-Generated Images on Facebook for Audience Growth</a>, arXiv (Renee DiResta and Josh A. Goldstein), 19 March 2024</li><li><a href="https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/" rel="noopener">Our Approach to Labeling AI-Generated Content and Manipulated Media</a>, Meta Newsroom, 5 April 2024</li><li><a href="https://www.facebook.com/help/323314944866264" rel="noopener">About Page transparency</a>, Facebook Help Center</li><li><a href="https://about.fb.com/news/2025/04/cracking-down-spammy-content-facebook/" rel="noopener">Cracking Down on Spammy Content on Facebook</a>, Meta Newsroom, 24 April 2025</li><li><a href="https://www.facebook.com/help/268028706671439" rel="noopener">Hide a post on your Facebook Feed</a>, Facebook Help Center</li></ol></div><aside class="cta-card">
+  <div><h2>Fold the slop out of your feed</h2><p>Slop Mop reads Facebook ahead of you, folds away the slop and shows its working. Works in Chrome, Edge, Firefox and Safari. Free for one feed, 250 checks a day.</p></div>
+  <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser, free</a>
+</aside><nav class="explore" aria-label="Explore Slop Mop"><b>Explore</b><a href="/">Slop Mop home</a><a href="/how-it-works.html">How it works</a><a href="/glossary/">The slop glossary</a><a href="/patterns/">The nine tells</a><a href="/for/">Who it's for</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/learn/">Learn</a><a href="/calculators/">Calculators</a></nav>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../../../index.html"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working.</p>
+        <div class="made"><img src="../../../assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <div class="footer-side">
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note" aria-live="polite"></p>
+      </form>
+      <div class="ask-ai">
+        <p class="ask-ai-label">Ask AI about Slop Mop</p>
+        <div class="ask-ai-row">
+          <a class="ask-ai-btn" data-ask="chatgpt" href="https://chatgpt.com/?hints=search&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Slop Mop" title="Ask ChatGPT"><img src="../../../assets/ai/chatgpt.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="claude" href="https://claude.ai/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Claude about Slop Mop" title="Ask Claude"><img src="../../../assets/ai/claude.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="perplexity" href="https://www.perplexity.ai/search/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Perplexity about Slop Mop" title="Ask Perplexity"><img src="../../../assets/ai/perplexity.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="meta" href="https://www.meta.ai/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Meta AI about Slop Mop" title="Ask Meta AI"><img src="../../../assets/ai/meta.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="grok" href="https://grok.com/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Grok about Slop Mop" title="Ask Grok"><img src="../../../assets/ai/grok.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="gemini" href="https://www.google.com/search?udm=50&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Gemini about Slop Mop" title="Ask Gemini"><img src="../../../assets/ai/gemini.svg" alt="" width="22" height="22"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="../../../how-it-works.html">How it works</a></li>
+        <li><a href="../../../patterns/">The nine tells</a></li>
+        <li><a href="../../../index.html#networks">Networks</a></li>
+        <li><a href="../../../index.html#pricing">Pricing</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="../../../glossary/">Glossary</a></li>
+        <li><a href="../../../guides/">Guides</a></li>
+        <li><a href="../../../compare/">Compare</a></li>
+        <li><a href="../../../learn/">Learn</a></li>
+        <li><a href="../../../calculators/">Calculators</a></li>
+        <li><a href="../../../help.html">Help</a></li>
+        <li><a href="../../../about.html">About</a></li>
+        <li><a href="../../../media.html">Media</a></li>
+        <li><a href="../../../contact.html">Contact</a></li>
+      </ul></div>
+      <div><h3>Slop Mop for</h3><ul>
+        <li><a href="../../../for/linkedin/">LinkedIn</a></li>
+        <li><a href="../../../for/reddit/">Reddit</a></li>
+        <li><a href="../../../for/x/">X</a></li>
+        <li><a href="../../../for/facebook/">Facebook</a></li>
+        <li><a href="../../../for/substack/">Substack</a></li>
+        <li><a href="../../../for/medium/">Medium</a></li>
+        <li><a href="../../../for/websites/">Websites</a></li>
+        <li><a href="../../../for/email/">Email</a></li>
+      </ul></div>
+      <div><h3>Who it's for</h3><ul>
+        <li><a href="../../../for/recruiters/">Recruiters</a></li>
+        <li><a href="../../../for/job-seekers/">Job seekers</a></li>
+        <li><a href="../../../for/founders/">Founders</a></li>
+        <li><a href="../../../for/ceos/">CEOs</a></li>
+        <li><a href="../../../for/sales-teams/">Sales teams</a></li>
+        <li><a href="../../../for/marketers/">Marketers</a></li>
+        <li><a href="../../../for/creators/">Creators</a></li>
+        <li><a href="../../../for/journalists/">Journalists</a></li>
+        <li><a href="../../../for/">Everyone else</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="../../../privacy.html">Privacy policy</a></li>
+        <li><a href="../../../terms.html">Terms of service</a></li>
+        <li><a href="../../../open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
+      </ul></div>
+      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+        <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="../../../assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="../../../assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="../../../assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="../../../assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="../../../assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="../../../assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="../../../assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+    </div>
+  </div>
+</footer>
+<script src="../../../assets/site.js"></script>
+</body>
+</html>

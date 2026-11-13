@@ -71,10 +71,12 @@ var SITE = {
 
 A social icon stays hidden until its URL is filled in.
 
-Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2:
+Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2. The cookie banner is GetTerms (app.getterms.io; banner settings, wording and regions live there, not in this repo):
 
-- In the UK, EEA and Switzerland, analytics cookies stay off until the visitor clicks Accept on the cookie banner; until then GA sends cookieless pings. Elsewhere they are on unless the visitor clicks Reject or sends Global Privacy Control. Ads signals are always denied.
-- The banner and the footer's "Cookie settings" button live in `assets/site.js`; the choice is kept in `localStorage` (`slopmop:consent`) for a year.
+- GetTerms' embed must be the **first script** in each page's `<head>`. Its blocker script sets `window.GetTermsDefaults` (the visitor's region default: opt-in in Europe, the UK and anywhere not listed; opt-out in the US and Canada; no banner in Australia). The gtag snippet right after it sends `gtag('consent', 'default', …)`: the visitor's saved choice (`localStorage.getterms_cookie_consent`) if they have one, otherwise that region default. GetTerms sends `gtag('consent', 'update', …)` when the visitor chooses.
+- Generated pages get both from `GETTERMS` and `GA_HEAD` in `_build/common.py` (`head()` puts the embed right after `<meta charset>`, where `csp.py` adds the policy before it); the footer comes from `footer()` there too. The hand-edited pages (`media.html`, `reports/`, `xl/`) carry the same snippets; keep them in step.
+- The footer's "Cookie settings" buttons carry `data-gt-cookie-widget-show`, which reopens GetTerms' preferences. `assets/site.js` clears old `_ga` cookies when Analytics is off.
+- GetTerms logs each choice to `gettermscmp.com` (allowed in `csp.py`). Script and iframe blocking are off: Consent Mode covers GA, and blocking would break Polar's checkout.
 - The XL pages strip the query string from `page_location`, so checkout ids never reach GA.
 
 Events sent (register `link_location` and `lead_source` as custom dimensions in GA; mark `add_to_browser` and `generate_lead` as key events):

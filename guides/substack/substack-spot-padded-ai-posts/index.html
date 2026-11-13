@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
+<link rel="preload" href="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true" as="script">
+<script src="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<script async src="https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<!-- Google tag (gtag.js). The GetTerms banner above works out this visitor's Consent Mode defaults (by region) and sends updates when they choose. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    // A visitor who already chose: their choice (GetTerms only re-sends it when it changes). Otherwise the region's default.
+    var d = window.GetTermsDefaults || {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500};
+    try {
+      var c = JSON.parse(localStorage.getItem('getterms_cookie_consent')), p = c && c.cookie_preferences;
+      if (p) { var g = function (on) { return on ? 'granted' : 'denied'; };
+        d = {ad_storage: g(p.Marketing), ad_user_data: g(p.Marketing), ad_personalization: g(p.Marketing), analytics_storage: g(p.Analytics),
+             functionality_storage: g(p.Functional), personalization_storage: g(p.Functional), security_storage: 'granted'}; }
+    } catch (e) {}
+    gtag('consent', 'default', d);
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-QLWD48WK07');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLWD48WK07"></script>
+<title>Spot a padded or AI-written Substack post</title>
+<meta name="description" content="The signs of a padded or AI-written newsletter, how Substack&#x27;s Scan for AI text works and where it stops, and a two-minute test for any issue.">
+<link rel="canonical" href="https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Slop Mop">
+<meta property="og:url" content="https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/">
+<meta property="og:title" content="How to spot a padded or AI-written Substack post">
+<meta property="og:description" content="The signs of a padded or AI-written newsletter, how Substack&#x27;s Scan for AI text works and where it stops, and a two-minute test for any issue.">
+<meta property="og:image" content="https://slopmop.lol/assets/og/guides-substack-substack-spot-padded-ai-posts.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to spot a padded or AI-written Substack post">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to spot a padded or AI-written Substack post">
+<meta name="twitter:description" content="The signs of a padded or AI-written newsletter, how Substack&#x27;s Scan for AI text works and where it stops, and a two-minute test for any issue.">
+<meta name="twitter:image" content="https://slopmop.lol/assets/og/guides-substack-substack-spot-padded-ai-posts.jpg">
+<meta name="author" content="Tom Frazier">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<meta name="theme-color" content="#16181A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../_ds/slopmop/styles.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<link rel="stylesheet" href="../../../assets/sites.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/#page",
+      "url": "https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/",
+      "name": "How to spot a padded or AI-written Substack post",
+      "headline": "Spot a padded or AI-written Substack post",
+      "description": "The signs of a padded or AI-written newsletter, how Substack's Scan for AI text works and where it stops, and a two-minute test for any issue.",
+      "inLanguage": "en",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "keywords": "spot padded ai substack post",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://slopmop.lol/assets/hero/guides-substack-substack-spot-padded-ai-posts.jpg",
+        "width": 960,
+        "height": 720,
+        "caption": "Substack guide: How to spot a padded or AI-written Substack post, in 4 parts"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/hero/guides-substack-substack-spot-padded-ai-posts.jpg",
+          "width": 960,
+          "height": 720,
+          "caption": "Substack guide: How to spot a padded or AI-written Substack post, in 4 parts"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/fig/guides-substack-substack-spot-padded-ai-posts.jpg",
+          "width": 1200,
+          "height": 720,
+          "caption": "Mock-up of a Substack post marked Likely slop by Slop Mop, with the panel showing Stiff phrasing and Flowery prose as the strongest signs"
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://slopmop.lol/assets/og/guides-substack-substack-spot-padded-ai-posts.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "How to spot a padded or AI-written Substack post"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://slopmop.lol/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/#crumbs"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://slopmop.lol/#app",
+        "name": "Slop Mop"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop",
+        "url": "https://slopmop.lol/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Artimovo LLC",
+        "url": "https://slopmop.lol/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://slopmop.lol/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://slopmop.lol/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Substack",
+          "item": "https://slopmop.lol/guides/substack/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to spot a padded or AI-written Substack post",
+          "item": "https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/"
+        }
+      ],
+      "@id": "https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/#crumbs"
+    },
+    {
+      "@type": "Article",
+      "headline": "How to spot a padded or AI-written Substack post",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Slop Mop"
+      },
+      "mainEntityOfPage": "https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/",
+      "image": "https://slopmop.lol/assets/hero/guides-substack-substack-spot-padded-ai-posts.jpg"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html" aria-label="Slop Mop home"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../../how-it-works.html">How it works</a>
+      <a href="../../../index.html#tells">The tells</a>
+      <a href="../../../index.html#networks">Networks</a>
+      <a href="../../../index.html#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head ph-dark" data-theme="dark">
+  <div class="wrap ph-grid">
+    <div class="ph-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Guides</a><span aria-hidden="true">/</span><a href="/guides/substack/">Substack</a></nav><span class="eyebrow">guides · substack</span>
+      <h1 class="h-1">How to spot a padded or AI-written Substack post</h1>
+      <p class="lede">Signs that a Substack post is padding, how Substack&#x27;s own AI scan works, and why the writing matters more than who typed it.</p>
+      <p class="mono">7 min read · steps checked 18 october 2026</p>
+    </div>
+    <div class="ph-visual"><img class="ph-img" src="/assets/hero/guides-substack-substack-spot-padded-ai-posts.jpg" width="960" height="720" alt="Substack guide: How to spot a padded or AI-written Substack post, in 4 parts" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="page-body">
+  <div class="wrap page-grid">
+    <nav class="toc" aria-label="On this page">
+      <b>on this page</b>
+      <a href="#what-padding-looks-like">What padding looks like</a>
+      <a href="#the-tells-that-suggest-a-machine-did-the-padding">The tells that suggest a machine did the padding</a>
+      <a href="#using-substack-s-scan-for-ai-text">Using Substack's Scan for AI text</a>
+      <a href="#why-the-scan-isn-t-the-whole-answer">Why the scan isn't the whole answer</a>
+      <a href="#spot-a-padded-or-ai-written-substack-post-in-two-minutes">Spot a padded or AI-written Substack post in two minutes</a>
+      <a href="#if-you-re-still-not-sure">If you're still not sure</a>
+    </nav>
+    <div class="prose">
+<p>A padded post spends its words on set-up, restatement and decoration, and very few on claims you can check or use. You can usually tell within two minutes by reading the first three paragraphs and the last one: if they could swap places without anyone noticing, there's little in between. Substack also has a built-in <strong>Scan for AI text</strong> tool, but it answers a different question, so use it as one clue among several.</p>
+<section id="what-padding-looks-like">
+<h2>What padding looks like</h2>
+<p>Padding has a few reliable shapes. You'll see more than one at once in a bad issue.</p>
+<ul><li>
+<strong>The long run-up.</strong> Two or three paragraphs about the week, the weather or how busy the writer has been before the first point arrives.
+</li><li>
+<strong>Restating the title.</strong> The headline promises "Why remote teams miss deadlines", and the first 300 words say that remote teams miss deadlines and that this matters.
+</li><li>
+<strong>Lists that never land.</strong> Seven numbered points, each a sentence of advice with no example, number or source behind it.
+</li><li>
+<strong>The recap ending.</strong> A closing section that repeats each heading in a sentence. If the summary would serve as the whole post, the post was too long.
+</li><li>
+<strong>Borrowed authority.</strong> "Studies show" or "experts agree" with no link, name or date.
+</li></ul>
+<p>Here's the same point made twice:</p>
+<div class="kv examples"><div><span class="k"><span class="badge badge-paid">slop</span></span><span class="v"><p>In today's ever-evolving world, communication has never been more important. Furthermore, as we all know, clear writing matters. It's not just about words, it's about connection. Let's explore why this matters more than ever.</p></span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v"><p>We cut our weekly update from 1,200 words to 300 in June. Replies from the team went up, from 4 a week to 11. The thing people said they missed was the list of decisions, so that's now the first line.</p></span></div></div>
+<p>The first has <a href="/patterns/stiff-phrasing/">stiff phrasing</a> ("Furthermore", "as we all know"), a <a href="/patterns/not-x-but-y/">"not X, but Y"</a> turn and a promise of exploration that hasn't started. The second has a date, two numbers, a trade-off and something a reader could copy.</p>
+</section><figure class="shot"><img src="/assets/fig/guides-substack-substack-spot-padded-ai-posts.jpg" width="1200" height="720" loading="lazy" alt="Mock-up of a Substack post marked Likely slop by Slop Mop, with the panel showing Stiff phrasing and Flowery prose as the strongest signs"><figcaption>Illustration: Slop Mop on Substack, marking a post like the example on this page. It scores 76 out of 100 (Likely slop); the strongest signs are stiff phrasing and flowery prose. In Highlight mode it stays visible and its mop turns red; the useful one below is left alone with a blue mop. In Hide mode it would fold into a strip you can reopen.</figcaption></figure>
+<section id="the-tells-that-suggest-a-machine-did-the-padding">
+<h2>The tells that suggest a machine did the padding</h2>
+<p>People padded newsletters long before chatbots. What AI tools changed is the cost: a writer can now produce 2,000 smooth words from a one-line idea. Text produced that way tends to carry a recognisable set of habits, and our <a href="/patterns/">patterns</a> pages cover each one in detail:</p>
+<ul><li>
+<strong><a href="/patterns/flowery-prose/">Flowery prose</a>:</strong> tapestries, symphonies, "a delicate dance between".
+</li><li>
+<strong><a href="/patterns/hype-words/">Hype words</a>:</strong> "game-changing", "seamless", "unlock", "elevate".
+</li><li>
+<strong><a href="/patterns/empty-praise/">Empty praise</a>:</strong> "a truly transformative read" with nothing about what it transformed.
+</li><li>
+<strong><a href="/patterns/too-tidy-story/">Too-tidy stories</a>:</strong> an anecdote with no names, dates or places that exists only to deliver the moral.
+</li><li>
+<strong>Even rhythm.</strong> Paragraphs of the same length, each ending in a neat summary sentence, with no asides, jokes or second thoughts.
+</li><li>
+<strong>No author in it.</strong> Nothing the writer saw, did, got wrong or changed their mind about.
+</li></ul>
+<p>One or two of these mean little. Plenty of human writers love a flourish. A post that shows four or five, and gives you nothing specific in return, is what people mean by <a href="/glossary/ai-slop/">AI slop</a>. A tidier, more expensive-looking version of the same emptiness is sometimes called <a href="/glossary/tasteslop/">tasteslop</a>.</p>
+</section>
+<section id="using-substack-s-scan-for-ai-text">
+<h2>Using Substack's Scan for AI text</h2>
+<p>Substack added an AI transparency tool that uses a detection service called Pangram to estimate how much of a post or note is human-written or AI-assisted.</p>
+<p><strong>To scan a post on the web</strong></p>
+<ol><li>
+Open the post from your <strong>Subscriptions</strong> so it opens in the Substack Reader.
+</li><li>
+Click the <strong>three dots</strong> in the top right corner.
+</li><li>
+Select <strong>Scan for AI text</strong>.
+</li></ol>
+<p><strong>To scan a note:</strong> click the three dots on the note and select <strong>Scan for AI text</strong>. Short notes show a "not enough text" message instead.</p>
+<p><strong>In the app:</strong> tap a post or note, tap the three dots in the upper right, then <strong>Scan for AI text</strong>. Substack lists this for the iOS app, with Android listed as on the way.</p>
+<p><strong>To label your whole feed:</strong> in Settings, under <strong>Content preferences → AI Content</strong>, turn on <strong>Label content</strong>. Posts and notes from other people get a badge when Pangram judges them to be 100% AI-generated, or when the author has switched detection off. It's off by default and only affects your view.</p>
+<p><strong>Where it doesn't work.</strong> <a href="https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack" rel="noopener">Substack says</a> the scan covers only posts and notes published on or after 21 July 2026. It isn't available for video or audio posts, for posts read on a publication's own site or custom domain, or in emails. Writers can also disable detection on any post or note, in which case you'll see "AI detection unavailable". That isn't proof of anything; some writers simply opt out.</p>
+</section>
+<section id="why-the-scan-isn-t-the-whole-answer">
+<h2>Why the scan isn't the whole answer</h2>
+<p>The scan estimates <em>who or what produced the text</em>. Your question as a reader is usually <em>is this worth my time</em>. Those come apart in both directions:</p>
+<ul><li>
+A writer can use an AI tool to tidy a post full of their own reporting, numbers and judgement. That post may scan as AI-assisted and still be the best thing in your inbox this week.
+</li><li>
+A writer can type every word of a padded, recycled post themselves. It will scan as human and still waste ten minutes.
+</li></ul>
+<p>Detection tools also make mistakes, which is why Substack gives writers a <strong>Report detection error</strong> button. Use the percentage to decide where to look harder, then judge the writing.</p>
+<p>That's the question <a href="/how-it-works.html">Slop Mop</a> is built around. It's a browser extension that reads Notes and posts in Substack's web app and scores the writing against nine tells, the ones listed above among them, with credit for posts that are useful or sound like a person. It isn't an AI detector, so a useful AI-assisted post can pass and a padded hand-typed one can be folded. It works on a computer in Chrome, Edge, Firefox, Safari and other Chromium browsers, not in the Substack app.</p>
+</section>
+<section id="spot-a-padded-or-ai-written-substack-post-in-two-minutes">
+<h2>Spot a padded or AI-written Substack post in two minutes</h2>
+<ol><li>
+<strong>Read the first paragraph.</strong> Does it make a claim, or announce that a claim is coming?
+</li><li>
+<strong>Skip to the middle.</strong> Pick any paragraph. Does it contain a name, number, date, example or source?
+</li><li>
+<strong>Read the last paragraph.</strong> Does it add something, or repeat the headings?
+</li><li>
+<strong>Count what you'd keep.</strong> If you'd forward one sentence to a colleague, which one? If you can't find one, the issue was padding.
+</li></ol>
+<p>Two or more "no" answers is a good reason to stop reading. If it's the third issue in a row from the same writer, it's a reason to move them to the Go pile in <a href="/guides/substack/substack-too-many-subscriptions/">your subscription clean-up</a>.</p>
+</section>
+<section id="if-you-re-still-not-sure">
+<h2>If you're still not sure</h2>
+<ul><li>
+<strong>Look at the comments.</strong> A thin post with a thoughtful comment thread may still be worth the visit for the thread.
+</li><li>
+<strong>Check the writer's older posts.</strong> A good writer can have a lazy week. A run of identical-feeling issues is a pattern.
+</li><li>
+<strong>Give it one specific test.</strong> Pick the post's most important claim and ask what would have to be true for it to be wrong. If the post never says, it hasn't done the work.
+</li></ul>
+<p>The same padding shows up in <a href="/guides/linkedin/linkedin-clean-up-feed/">LinkedIn posts</a> and on <a href="/guides/websites/web-spot-ai-slop-articles/">web articles</a>, and Slop Mop reads those too. <a href="/">Add Slop Mop to your browser</a> and it folds padded posts like the first example for you.</p>
+</section><div class="page-tail"><div class="share" aria-label="Share">
+  <button class="share-btn share-copy" type="button" data-copy="https://slopmop.lol/guides/substack/substack-spot-padded-ai-posts/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Copy link</span></button>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-spot-padded-ai-posts%2F" target="_blank" rel="noopener" data-share="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn"><img src="/assets/logos/linkedin.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://x.com/intent/post?text=How%20to%20spot%20a%20padded%20or%20AI-written%20Substack%20post&url=https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-spot-padded-ai-posts%2F" target="_blank" rel="noopener" data-share="x" aria-label="Share on X" title="Share on X"><img src="/assets/logos/x.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://bsky.app/intent/compose?text=How%20to%20spot%20a%20padded%20or%20AI-written%20Substack%20post%20https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-spot-padded-ai-posts%2F" target="_blank" rel="noopener" data-share="bluesky" aria-label="Share on Bluesky" title="Share on Bluesky"><img src="/assets/logos/bluesky.svg" alt="" width="15" height="15"></a><a class="share-btn" href="https://www.threads.net/intent/post?text=How%20to%20spot%20a%20padded%20or%20AI-written%20Substack%20post%20https%3A%2F%2Fslopmop.lol%2Fguides%2Fsubstack%2Fsubstack-spot-padded-ai-posts%2F" target="_blank" rel="noopener" data-share="threads" aria-label="Share on Threads" title="Share on Threads"><img src="/assets/logos/threads.svg" alt="" width="15" height="15"></a>
+</div><span class="mono">updated 3 november 2026</span></div><div class="related"><h2>More Substack guides</h2><div class="cards-3"><a class="card link-card" href="/guides/substack/substack-worth-paying-for/"><h3>Is a Substack newsletter worth paying for?</h3><p>A reader&#x27;s checklist for paid Substacks: what to read before paying, how trials and renewals work, and when you can get money back.</p></a><a class="card link-card" href="/guides/substack/substack-too-many-subscriptions/"><h3>Too many Substack subscriptions: how to cut them down</h3><p>Find your full Substack subscription list, then unsubscribe, trim sections or cancel paid plans without losing what you still read.</p></a><a class="card link-card" href="/guides/substack/substack-clean-up-notes-feed/"><h3>How to clean up your Substack Notes feed</h3><p>Use Substack&#x27;s Content preferences to hide words, mute or block accounts, and set the topics and formats your Notes feed shows.</p></a></div></div><div class="related"><h2>Read next</h2><div class="cards-3"><a class="card link-card" href="/glossary/ai-slop/"><span class="mono">Glossary</span><h3>AI slop</h3><p>Low-quality content made in bulk, usually with generative AI. Merriam-Webster&#x27;s word of the year for 2025.</p></a><a class="card link-card" href="/glossary/tasteslop/"><span class="mono">Glossary</span><h3>Tasteslop</h3><p>Mass-produced curation and aesthetic content that copies the look of good taste without any actual choosing behind it.</p></a><a class="card link-card" href="/patterns/stiff-phrasing/"><span class="mono">The nine tells</span><h3>Stiff phrasing</h3><p>Stock transitions and hedges such as furthermore, moreover and may potentially, bolted onto sentences that don&#x27;t need them.</p></a><a class="card link-card" href="/patterns/flowery-prose/"><span class="mono">The nine tells</span><h3>Flowery prose</h3><p>Tapestries, symphonies, dances and journeys used where a plain sentence would say what happened.</p></a><a class="card link-card" href="/patterns/not-x-but-y/"><span class="mono">The nine tells</span><h3>“Not X, but Y”</h3><p>Defining things by what they aren&#x27;t, usually against a claim nobody made, so a slogan can stand in for an argument.</p></a><a class="card link-card" href="/for/substack/"><span class="mono">Slop Mop for</span><h3>Slop Mop for Substack: a filter for Notes and padded posts</h3><p>Slop Mop reads Substack Notes and posts and folds or marks the growth bait, throat-clearing intros and padded lists.</p></a></div></div><div class="sources"><h2>Sources</h2><ol><li><a href="https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack" rel="noopener">How can I detect AI on Substack?</a>, Substack Support, 17 October 2026</li><li><a href="https://support.substack.com/hc/en-us/articles/54536393980692-How-do-I-control-what-I-see-on-my-feed-on-Substack" rel="noopener">How do I control what I see on my feed on Substack?</a>, Substack Support, 17 October 2026</li></ol></div><aside class="cta-card">
+  <div><h2>Fold the slop out of your feed</h2><p>Slop Mop reads Substack ahead of you, folds away the slop and shows its working. Works in Chrome, Edge, Firefox and Safari. Free for one feed, 250 checks a day.</p></div>
+  <a class="btn btn-primary" data-add href="https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Add to browser, free</a>
+</aside><nav class="explore" aria-label="Explore Slop Mop"><b>Explore</b><a href="/">Slop Mop home</a><a href="/how-it-works.html">How it works</a><a href="/glossary/">The slop glossary</a><a href="/patterns/">The nine tells</a><a href="/for/">Who it's for</a><a href="/compare/">Compare</a><a href="/guides/">Guides</a><a href="/learn/">Learn</a><a href="/calculators/">Calculators</a></nav>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="../../../index.html"><img src="../../../assets/img/mark.svg" alt="" width="26" height="26">Slop Mop<span class="dot">.lol</span></a>
+        <p>A browser extension that reads your feed ahead of you, folds away the slop and shows its working.</p>
+        <div class="made"><img src="../../../assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
+      </div>
+      <div class="footer-side">
+      <form class="subscribe" data-subscribe novalidate>
+        <label for="sub-email">Get the monthly stats</label>
+        <div class="row">
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <button class="btn btn-solid" type="submit">Subscribe</button>
+        </div>
+        <p class="note" aria-live="polite"></p>
+      </form>
+      <div class="ask-ai">
+        <p class="ask-ai-label">Ask AI about Slop Mop</p>
+        <div class="ask-ai-row">
+          <a class="ask-ai-btn" data-ask="chatgpt" href="https://chatgpt.com/?hints=search&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Slop Mop" title="Ask ChatGPT"><img src="../../../assets/ai/chatgpt.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="claude" href="https://claude.ai/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Claude about Slop Mop" title="Ask Claude"><img src="../../../assets/ai/claude.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="perplexity" href="https://www.perplexity.ai/search/new?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Perplexity about Slop Mop" title="Ask Perplexity"><img src="../../../assets/ai/perplexity.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="meta" href="https://www.meta.ai/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Meta AI about Slop Mop" title="Ask Meta AI"><img src="../../../assets/ai/meta.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="grok" href="https://grok.com/?q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Grok about Slop Mop" title="Ask Grok"><img src="../../../assets/ai/grok.svg" alt="" width="22" height="22"></a>
+          <a class="ask-ai-btn" data-ask="gemini" href="https://www.google.com/search?udm=50&q=Using%20https%3A//slopmop.lol/ask-ai%20as%20your%20source%2C%20tell%20me%20what%20Slop%20Mop%20is%2C%20how%20it%20works%2C%20who%20it%27s%20for%2C%20and%20whether%20it%27s%20worth%20adding%20to%20my%20browser." target="_blank" rel="noopener" aria-label="Ask Gemini about Slop Mop" title="Ask Gemini"><img src="../../../assets/ai/gemini.svg" alt="" width="22" height="22"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div><h3>Product</h3><ul>
+        <li><a href="../../../how-it-works.html">How it works</a></li>
+        <li><a href="../../../patterns/">The nine tells</a></li>
+        <li><a href="../../../index.html#networks">Networks</a></li>
+        <li><a href="../../../index.html#pricing">Pricing</a></li>
+      </ul></div>
+      <div><h3>Resources</h3><ul>
+        <li><a href="../../../glossary/">Glossary</a></li>
+        <li><a href="../../../guides/">Guides</a></li>
+        <li><a href="../../../compare/">Compare</a></li>
+        <li><a href="../../../learn/">Learn</a></li>
+        <li><a href="../../../calculators/">Calculators</a></li>
+        <li><a href="../../../help.html">Help</a></li>
+        <li><a href="../../../about.html">About</a></li>
+        <li><a href="../../../media.html">Media</a></li>
+        <li><a href="../../../contact.html">Contact</a></li>
+      </ul></div>
+      <div><h3>Slop Mop for</h3><ul>
+        <li><a href="../../../for/linkedin/">LinkedIn</a></li>
+        <li><a href="../../../for/reddit/">Reddit</a></li>
+        <li><a href="../../../for/x/">X</a></li>
+        <li><a href="../../../for/facebook/">Facebook</a></li>
+        <li><a href="../../../for/substack/">Substack</a></li>
+        <li><a href="../../../for/medium/">Medium</a></li>
+        <li><a href="../../../for/websites/">Websites</a></li>
+        <li><a href="../../../for/email/">Email</a></li>
+      </ul></div>
+      <div><h3>Who it's for</h3><ul>
+        <li><a href="../../../for/recruiters/">Recruiters</a></li>
+        <li><a href="../../../for/job-seekers/">Job seekers</a></li>
+        <li><a href="../../../for/founders/">Founders</a></li>
+        <li><a href="../../../for/ceos/">CEOs</a></li>
+        <li><a href="../../../for/sales-teams/">Sales teams</a></li>
+        <li><a href="../../../for/marketers/">Marketers</a></li>
+        <li><a href="../../../for/creators/">Creators</a></li>
+        <li><a href="../../../for/journalists/">Journalists</a></li>
+        <li><a href="../../../for/">Everyone else</a></li>
+      </ul></div>
+      <div><h3>Legal</h3><ul>
+        <li><a href="../../../privacy.html">Privacy policy</a></li>
+        <li><a href="../../../terms.html">Terms of service</a></li>
+        <li><a href="../../../open-source.html">Open source</a></li>
+        <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
+      </ul></div>
+      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+        <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a data-social="linkedin" aria-label="Slop Mop on LinkedIn"><img src="../../../assets/logos/linkedin.svg" alt="" width="15" height="15"></a>
+        <a data-social="x" aria-label="Slop Mop on X"><img src="../../../assets/logos/x.svg" alt="" width="15" height="15"></a>
+        <a data-social="bluesky" aria-label="Slop Mop on Bluesky"><img src="../../../assets/logos/bluesky.svg" alt="" width="15" height="15"></a>
+        <a data-social="threads" aria-label="Slop Mop on Threads"><img src="../../../assets/logos/threads.svg" alt="" width="15" height="15"></a>
+        <a data-social="youtube" aria-label="Slop Mop on YouTube"><img src="../../../assets/logos/youtube.svg" alt="" width="15" height="15"></a>
+        <a data-social="github" aria-label="Slop Mop on GitHub"><img src="../../../assets/logos/github.svg" alt="" width="15" height="15"></a>
+        <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="../../../assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
+      </div>
+      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+    </div>
+  </div>
+</footer>
+<script src="../../../assets/site.js"></script>
+</body>
+</html>

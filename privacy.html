@@ -2,19 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-f6yW04A/mqcQJaC7lrZQZ6saxHVnUXrnmHlTL9RNods='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
+<link rel="preload" href="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true" as="script">
+<script src="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
+<script async src="https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
-<!-- Google tag (gtag.js) with Consent Mode v2 -->
+<!-- Google tag (gtag.js). The GetTerms banner above works out this visitor's Consent Mode defaults (by region) and sends updates when they choose. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]});
-  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted'});
   (function () {
-    var c = null; try { c = JSON.parse(localStorage.getItem('slopmop:consent')); } catch (e) {}
-    if (c && c.v === 1 && Date.now() - c.t < 365 * 864e5) gtag('consent', 'update', {analytics_storage: c.analytics ? 'granted' : 'denied'});
-    else if (navigator.globalPrivacyControl === true) gtag('consent', 'update', {analytics_storage: 'denied'});
+    // A visitor who already chose: their choice (GetTerms only re-sends it when it changes). Otherwise the region's default.
+    var d = window.GetTermsDefaults || {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500};
+    try {
+      var c = JSON.parse(localStorage.getItem('getterms_cookie_consent')), p = c && c.cookie_preferences;
+      if (p) { var g = function (on) { return on ? 'granted' : 'denied'; };
+        d = {ad_storage: g(p.Marketing), ad_user_data: g(p.Marketing), ad_personalization: g(p.Marketing), analytics_storage: g(p.Analytics),
+             functionality_storage: g(p.Functional), personalization_storage: g(p.Functional), security_storage: 'granted'}; }
+    } catch (e) {}
+    gtag('consent', 'default', d);
   })();
   gtag('js', new Date());
   gtag('config', 'G-QLWD48WK07');
@@ -73,7 +81,7 @@
     "name": "Artimovo LLC",
     "url": "https://slopmop.lol/"
   },
-  "dateModified": "2026-10-19"
+  "dateModified": "2026-11-13"
 }
 </script>
 </head>
@@ -100,7 +108,7 @@
       <span class="eyebrow">privacy</span>
       <h1 class="h-1">Privacy policy</h1>
       <p class="lede">Slop Mop is a browser extension and email add-on from Artimovo LLC. It reads the posts and emails you choose to have checked, sends the text out to be judged, and keeps as little as it can afterwards. Your account holds your email address, your plan and your settings. Your votes are kept apart from it, in a form that can't be traced back to you. This site uses Google Analytics, and Slop Mop XL is billed through Polar. This page says exactly what all of that means, how to delete your account, and what rights you have.</p>
-      <p class="mono">last updated 19 october 2026</p>
+      <p class="mono">last updated 13 november 2026</p>
     </div>
     <div class="ph-visual"><div class="tv-stack">
   <div class="tv-card"><span class="tv-label">what leaves your browser</span>
@@ -182,7 +190,7 @@
 <section id="this-website-and-google-analytics">
 <h2>This website and Google Analytics</h2>
 <p>This website, <code>slopmop.lol</code>, uses Google Analytics to count visits and see which pages are useful. With your consent, Google Analytics sets cookies in your browser and collects information such as the pages you view, the site that sent you, your browser and device type, and your approximate location, which Google derives from your IP address. Google processes that data under <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">its own policies</a>. We don't use it for advertising and we don't combine it with anything the extension sends.</p>
-<p><strong style="font-weight: var(--weight-semibold)">Cookie choice.</strong> In the UK, the EEA and Switzerland, Google Analytics sets no cookies until you choose Accept on the cookie banner. Until then, and if you choose Reject, it sends only cookieless pings with no identifier, as Google's consent mode does. Elsewhere, analytics cookies are on unless you choose Reject or your browser sends a Global Privacy Control signal. Change your choice any time with Cookie settings at the bottom of every page. Your choice is saved in your browser for a year.</p>
+<p><strong style="font-weight: var(--weight-semibold)">Cookie choice.</strong> The cookie banner is run by GetTerms. In the UK, the EEA, Switzerland and most other countries, Google Analytics sets no cookies until you choose Accept. Until then, and if you choose Reject, it sends only cookieless pings with no identifier, as Google's consent mode does. In the US, Canada and Australia, analytics cookies are on unless you choose Reject. Change your choice any time with Cookie settings at the bottom of every page or the cookie icon. Your choice is saved in your browser, and GetTerms keeps a record of it (a random consent id, what you chose and when) so we can show you agreed.</p>
 <p>You can also block analytics with your browser's cookie or tracking settings, a content blocker, or <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google's opt-out add-on</a>. The site works the same either way.</p>
 <p>The site's fonts are served by Google Fonts. Forms on this site go through Formspree. If you sign up for updates, your email address is used only to send you Slop Mop news, and every email has an unsubscribe link. If you use the contact form, your name, email address and message are used only to reply to you. If you tell us why you deleted your account, what you write is used only to improve Slop Mop and, if you leave your email, to reply.</p>
 <p><strong style="font-weight: var(--weight-semibold)">Google Analytics runs on this website only.</strong> The extension and the email add-ons do not load it, and nothing from your feed or your mail is sent to Google Analytics.</p>
@@ -190,7 +198,7 @@
 <section id="who-else-handles-your-data">
 <h2>Who else handles your data</h2>
 <p>We use these providers to run Slop Mop. Each handles data only to provide its service to us:</p>
-<div class="kv"><div><span class="k">Vercel (USA)</span><span class="v">runs <code>api.slopmop.lol</code> · every request to the server</span></div><div><span class="k">Turso (ChiselStrike, USA)</span><span class="v">our database, hosted in the US · everything listed under What is stored and Your account</span></div><div><span class="k">A third-party AI scoring provider</span><span class="v">answers the questions behind each score · the text being judged (redacted, for email)</span></div><div><span class="k">Resend (USA)</span><span class="v">sends sign-in emails · your email address and the sign-in link</span></div><div><span class="k">Google</span><span class="v">Sign in with Google; this website's analytics and fonts · as described above</span></div><div><span class="k">Polar (USA)</span><span class="v">merchant of record for Slop Mop XL · payment and billing data</span></div><div><span class="k">Formspree (USA)</span><span class="v">this website's forms · what you type into them</span></div></div>
+<div class="kv"><div><span class="k">Vercel (USA)</span><span class="v">runs <code>api.slopmop.lol</code> · every request to the server</span></div><div><span class="k">Turso (ChiselStrike, USA)</span><span class="v">our database, hosted in the US · everything listed under What is stored and Your account</span></div><div><span class="k">A third-party AI scoring provider</span><span class="v">answers the questions behind each score · the text being judged (redacted, for email)</span></div><div><span class="k">Resend (USA)</span><span class="v">sends sign-in emails · your email address and the sign-in link</span></div><div><span class="k">Google</span><span class="v">Sign in with Google; this website's analytics and fonts · as described above</span></div><div><span class="k">Polar (USA)</span><span class="v">merchant of record for Slop Mop XL · payment and billing data</span></div><div><span class="k">GetTerms</span><span class="v">this website's cookie banner · your cookie choice and a random consent id</span></div><div><span class="k">Formspree (USA)</span><span class="v">this website's forms · what you type into them</span></div></div>
 <p>We don't sell your personal data, and we don't share it for advertising.</p>
 <p><strong style="font-weight: var(--weight-semibold)">International transfers.</strong> If you are in the UK, the EEA or Switzerland, your data is processed in the United States. Where a provider is outside your region, we rely on the safeguards the law provides for that transfer: the European Commission's Standard Contractual Clauses and the UK International Data Transfer Addendum in the provider's data processing agreement, or the provider's certification under the EU-U.S. Data Privacy Framework and its UK and Swiss extensions. Our agreements with Turso and Formspree are still being put in place; until they are, transfers to those two providers don't yet have these contractual safeguards.</p>
 </section>
@@ -297,7 +305,7 @@
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="terms.html">Terms of service</a></li>
         <li><a href="open-source.html">Open source</a></li>
-        <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+        <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
       </ul></div>
       <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
         <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
