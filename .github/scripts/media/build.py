@@ -21,7 +21,9 @@ import tempfile
 import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import press_doc  # noqa: E402
+import csp  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 SITE = "https://slopmop.lol"
@@ -572,6 +574,7 @@ def main(argv):
     head, header, footer, scripts = chrome()
     open(os.path.join(ROOT, "media.html"), "w", encoding="utf-8").write(page(head, header, footer, scripts))
     print("wrote media.html")
+    csp.run()  # its inline scripts need their hashes in the page's Content-Security-Policy
     if "--no-images" not in argv:
         images()
         print("wrote media.png and press/")

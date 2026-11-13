@@ -1,0 +1,20 @@
+# Every page carries its Content-Security-Policy in a <meta> tag that lists the sha256 of each inline script.
+# Change an inline script without refreshing the tag and that script stops running, so this fails the check instead.
+# Fix: python3 .github/scripts/csp.py, then commit.
+name: CSP
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every page's policy matches its inline scripts
+        run: python3 .github/scripts/csp.py --check
