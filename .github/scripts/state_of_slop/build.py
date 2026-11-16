@@ -391,7 +391,7 @@ def report(d, c, head, header, footer, months):
     glance = "".join('<div class="glance-tile"><span class="mono">%s</span><b>%s%s</b><span>%s</span></div>' % (a, b, tip, cc) for a, b, cc, tip in tiles)
 
     modified = d.get("modified", d["published"])
-    org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo LLC", "url": SITE + "/",
+    org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo, LLC", "url": SITE + "/",
            "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png", "width": 512, "height": 512}, "brand": {"@type": "Brand", "name": "Slop Mop"}}
     tom = {"@type": "Person", "@id": SITE + "/#tom", "name": "Tom Frazier", "url": "https://tomfrazier.com", "sameAs": ["https://linkedin.com/in/tomfrazier"]}
     graph = [

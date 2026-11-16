@@ -138,7 +138,7 @@ FAQ = [
     ]),
     ("About the company", [
         ("Who makes Slop Mop?",
-         ["Slop Mop is made by Artimovo LLC, a venture studio founded by Tom Frazier. Artimovo identifies opportunities, develops products, launches brands and builds businesses."]),
+         ["Slop Mop is made by Artimovo, LLC, a venture studio founded by Tom Frazier. Artimovo identifies opportunities, develops products, launches brands and builds businesses."]),
         ("How is Slop Mop related to Artimovo?",
          ["Slop Mop is an Artimovo venture. Artimovo is a venture studio, and each of its ventures addresses a need tied to one of three dimensions of human agency: judgment, clarity and autonomy. Slop Mop sits under the Clarity pillar, which asks “Can I understand what's happening?” AI has raised the volume of content online, and more information doesn't make more understanding on its own. Slop Mop helps people spend less attention on noise and more on what matters. Artimovo's ventures page lists Slop Mop and how it fits: https://www.artimovo.com/ventures/"]),
         ("Who is Tom Frazier?",
@@ -180,7 +180,7 @@ def jsonld():
                                 "caption": "Slop Mop media kit. Read only the posts worth your time."},
          "breadcrumb": {"@id": URL + "#breadcrumb"}, "datePublished": UPDATED, "dateModified": UPDATED},
         {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": "Slop Mop", "publisher": {"@id": SITE + "/#org"}},
-        {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo LLC", "alternateName": "Artimovo",
+        {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo, LLC", "alternateName": "Artimovo",
          "url": ARTIMOVO["url"], "slogan": "Advancing human agency in the age of AI.",
          "description": "A venture studio that identifies opportunities, develops products, launches brands and builds businesses, each tied to one of three dimensions of human agency: judgment, clarity and autonomy.",
          "founder": {"@id": SITE + "/#tom"}, "brand": {"@type": "Brand", "@id": SITE + "/#brand", "name": "Slop Mop", "logo": SITE + "/icon-512.png"},
@@ -284,7 +284,7 @@ def page(head, header, footer, scripts):
     glance = [
         ("What it is", "A browser extension that reads your feed ahead of you, folds away the slop and shows why."),
         ("Category", "Feed-filtering browser extension. A bad-writing detector, not an AI detector."),
-        ("Made by", 'Artimovo LLC, a venture studio. Slop Mop is its venture in the <a href="%s" target="_blank" rel="noopener">Clarity pillar</a>.' % ARTIMOVO["clarity"]),
+        ("Made by", 'Artimovo, LLC, a venture studio. Slop Mop is its venture in the <a href="%s" target="_blank" rel="noopener">Clarity pillar</a>.' % ARTIMOVO["clarity"]),
         ("Founder", 'Tom Frazier, author of <a href="%s" target="_blank" rel="noopener"><em>The Idea Chose You</em></a>' % TOM["book"]),
         ("Started", "September 2026. Launched on Product Hunt on 24 September 2026."),
         ("Live on", 'LinkedIn <span class="badge badge-live">live</span> · X, Reddit, Facebook, Substack, Medium, websites, Gmail and Outlook <span class="badge badge-soon">coming soon</span>'),
@@ -419,7 +419,7 @@ def page(head, header, footer, scripts):
 <h2>About Artimovo</h2>
 <p>Artimovo is a venture studio. It identifies opportunities, develops products, launches brands and builds businesses, and each venture addresses a need tied to one of three dimensions of human agency: judgment, clarity and autonomy. Its line is “Advancing human agency in the age of AI.”</p>
 <p>Slop Mop is Artimovo's venture in the <strong>Clarity</strong> pillar, which asks a plain question: can I understand what's happening? AI has raised the volume of content online, and more information doesn't make more understanding on its own. Slop Mop helps people spend less attention on noise and more on what matters, and it supports the reader's judgment instead of replacing it.</p>
-<div class="kv"><div><span class="k">Company</span><span class="v">Artimovo LLC, a Delaware company</span></div><div><span class="k">What it is</span><span class="v">A venture studio</span></div><div><span class="k">Pillars</span><span class="v">Judgment · Clarity · Autonomy</span></div><div><span class="k">Slop Mop's pillar</span><span class="v">Clarity</span></div><div><span class="k">More</span><span class="v"><a href="{ventures}" target="_blank" rel="noopener">Artimovo ventures</a> · <a href="{am_slopmop}" target="_blank" rel="noopener">Slop Mop at Artimovo</a></span></div></div>
+<div class="kv"><div><span class="k">Company</span><span class="v">Artimovo, LLC, a Delaware company</span></div><div><span class="k">What it is</span><span class="v">A venture studio</span></div><div><span class="k">Pillars</span><span class="v">Judgment · Clarity · Autonomy</span></div><div><span class="k">Slop Mop's pillar</span><span class="v">Clarity</span></div><div><span class="k">More</span><span class="v"><a href="{ventures}" target="_blank" rel="noopener">Artimovo ventures</a> · <a href="{am_slopmop}" target="_blank" rel="noopener">Slop Mop at Artimovo</a></span></div></div>
 </section>
 <section id="boilerplate">
 <h2>Boilerplate</h2>
