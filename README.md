@@ -71,15 +71,17 @@ Phones can't install a browser extension, so `assets/site.js` changes every `[da
 
 - **Desktop:** unchanged. "Add to browser" goes to the browser's own store.
 - **Chrome on a phone:** "Send to my computer", to the Chrome Web Store, where a signed-in person can queue the install for their computer (Tom, 2026-11-16).
-- **Any other phone:** "Add to Desktop". It opens an email form in place; the link is emailed once, with no reminder.
+- **Any other phone:** "Add to Desktop". Every install button on every page, the nav's included, opens the same pop-up (a `<dialog>` built by `sendDialog` in `assets/site.js`): an email address, "Send link", then "Sent". The API emails the link now and schedules one reminder for the first business hours (Mon–Fri, 9–5 in the visitor's time zone, sent as `tz`) at least 24 hours later. Opening the link cancels the reminder.
   - The form posts to `<apiUrl>/api/v1/account/send-install`. The API only accepts it from slopmop.lol's origin, rate-limits it, and sends one link per address a day.
   - The email's link (`api.slopmop.lol/get?t=…`) counts the open and lands on the home page with `utm_source=slopmop_email&utm_medium=email&utm_campaign=send_to_computer`.
   - Those tags are added to the Chrome Web Store link, so the store's own stats count the installs the email led to.
   - Test against staging with `?api=staging` (it's remembered; `?api=prod` goes back). The API's change must be in production before this goes live.
 
+**Adding an install button to a page** (every page, now and later): use an `<a>` with `data-add` and `href` set to the Chrome Web Store listing, and load `assets/site.js`. The script handles the rest: the label for each device, the store for each desktop browser, and the pop-up on phones. Don't link to a store without `data-add`, and don't write device-specific buttons by hand. The nav's button is `class="btn btn-primary btn-sm nav-cta" data-add`; the page builders in `.github/scripts/` write theirs the same way.
+
 The funnel, end to end:
 - **CTA clicks** (`install_cta_click`) and **emails captured** (`generate_lead`, `send_to_computer`): Google Analytics.
-- **Sent and opened**: admin → Referrals → Install emails from the website.
+- **Sent, opened and reminded**: admin → Referrals → Install emails from the website.
 - **Completed installs**: the Chrome Web Store developer dashboard, by UTM source `slopmop_email`.
 
 "Take a tour" is a text-only button with a ▶︎ (U+25B6 U+FE0E, so iOS doesn't draw it as an emoji).
