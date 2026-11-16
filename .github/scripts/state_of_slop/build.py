@@ -124,7 +124,7 @@ def rel(fragment):
     return re.sub(r'\b(href|src)="([^"]*)"', fix, fragment)
 
 
-# ---------- charts (static HTML, coloured by design-system tokens) ----------
+# ---------- charts (static HTML, colored by design-system tokens) ----------
 
 TIP_IDS = iter(range(1, 1000))
 

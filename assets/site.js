@@ -1,4 +1,4 @@
-/* slopmop.lol — page behaviour. No framework; the design-system components are mounted by islands.js. */
+/* slopmop.lol — page behavior. No framework; the design-system components are mounted by islands.js. */
 (function () {
   /* ---------- site settings: edit here ---------- */
   var SITE = {
@@ -307,6 +307,24 @@
     check();
   });
 
+  /* Arriving at a #section from another page (the footer's Pricing link goes to index.html#pricing). The browser jumps
+     to the section at once, but the home page's horizontal "how it works" section sets its own height a moment later
+     (hf.style.height below), and the islands mount: everything above the target grows by thousands of pixels and the
+     visitor is left inside that section. So land again as the page settles, until the visitor scrolls themselves. */
+  (function () {
+    var id = "";
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) {}
+    var target = id && document.getElementById(id);
+    if (!target) return;
+    var moved = false, done = Date.now() + 4000, ro = null;
+    function stop() { moved = true; if (ro) ro.disconnect(); }
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { window.addEventListener(ev, stop, { once: true, passive: true }); });
+    function land() { if (!moved && Date.now() < done) target.scrollIntoView({ block: "start" }); }
+    if (window.ResizeObserver) { ro = new ResizeObserver(land); ro.observe(document.body); setTimeout(function () { if (ro) ro.disconnect(); }, 4000); }
+    window.addEventListener("load", land);
+    [150, 600, 1500, 3000].forEach(function (t) { setTimeout(land, t); });
+  })();
+
   /* tour video */
   var dlg = $("dialog.tour");
   $$("[data-tour]").forEach(function (b) { b.addEventListener("click", function () { gaEvent("tour_open", { link_location: where(b) }); if (dlg && dlg.showModal) { dlg.showModal(); var v = $("video", dlg); if (v) v.play().catch(function () {}); } }); });
@@ -373,7 +391,7 @@
     m.addEventListener("focusout", function () { hover = false; });
     $$("[data-marquee-step]", m).forEach(function (b) {
       b.addEventListener("click", function () {
-        /* Centre the next card in the direction pressed. Measured from where the current move will land,
+        /* Center the next card in the direction pressed. Measured from where the current move will land,
            so quick repeat presses step one card each. */
         var dir = +b.getAttribute("data-marquee-step"), base = tween ? tween.to : offset;
         var mr = m.getBoundingClientRect(), mid = mr.left + mr.width / 2, shift = base - offset, best = null;
@@ -383,7 +401,7 @@
         });
         var to = base + (best === null ? dir * step() : best);
         tween = { from: offset, to: to, t0: performance.now(), d: reduceMotion ? 1 : 420 };
-        hold = performance.now() + 4000; /* let the centred card be read before autoplay resumes */
+        hold = performance.now() + 4000; /* let the centered card be read before autoplay resumes */
       });
     });
     if (toggle) {
@@ -416,7 +434,7 @@
     } else grows.forEach(function (g) { g.classList.add("in"); });
   }
 
-  /* ---------- horizontal flow: pinned while the track slides; the blue line's tip stays at the viewport centre ---------- */
+  /* ---------- horizontal flow: pinned while the track slides; the blue line's tip stays at the viewport center ---------- */
   var hf = $("[data-hflow]");
   if (hf) {
     var track = $(".hflow-track", hf), steps2 = $$(".hstep", hf), base2 = $(".hflow-line .base", hf), drawn2 = $(".hflow-line .drawn", hf), svg2 = $(".hflow-line", hf);
@@ -462,7 +480,7 @@
   /* ---------- help: "turning it off" plays once when it comes into view; Replay runs it again ---------- */
   $$("[data-offdemo]").forEach(function (d) {
     var cap = $(".od-cap", d), timers = [];
-    var lines = ["Click the mop in your toolbar…", "…and flip the switch.", "Off is a real off: no scanning, no server calls, every mop goes grey."];
+    var lines = ["Click the mop in your toolbar…", "…and flip the switch.", "Off is a real off: no scanning, no server calls, every mop goes gray."];
     function run() {
       timers.forEach(clearTimeout); timers = [];
       d.classList.remove("s1", "s2", "s3"); cap.textContent = lines[0];

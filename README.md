@@ -16,7 +16,7 @@ open-source.html    the MIT-licensed version, links to the public repo (served a
 media.html          press kit (served at /media), built by .github/scripts/media/build.py with media.png and press/
 _ds/slopmop/        Slop Mop design system: tokens, styles.css, _ds_bundle.js (components), mop.svg
 assets/site.css     site layout on top of the design-system tokens
-assets/site.js      site settings + behaviour (store link, Product Hunt, social URLs, signup, tour video)
+assets/site.js      site settings + behavior (store link, Product Hunt, social URLs, signup, tour video)
 assets/islands.js   mounts live design-system components into the pages
 assets/sites.js     hero mockups of each host site (LinkedIn, X, Reddit, Facebook, Substack, Medium, email, websites)
 assets/sites.css    styles for those mockups

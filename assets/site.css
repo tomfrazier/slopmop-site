@@ -38,11 +38,11 @@ a:hover { text-decoration: underline; }
 .btn svg { width: 17px; height: 17px; flex: 0 0 auto; }
 .btn-sm { height: 36px; padding: 0 var(--space-6); font-size: var(--text-sm); }
 .btn-primary { background: var(--mop-500); color: var(--text-on-accent); }
-.btn-primary:hover { background: var(--mop-300); }
+.btn-primary:hover { background: var(--mop-300); color: var(--text-on-accent); }
 .btn-solid { background: var(--surface-inverse); color: var(--text-inverse); }
-.btn-solid:hover { background: var(--ink-800); }
+.btn-solid:hover { background: var(--ink-800); color: var(--text-inverse); }
 .btn-secondary { background: var(--surface-card); color: var(--text-body); border-color: var(--border-default); }
-.btn-secondary:hover { background: var(--paper-100); }
+.btn-secondary:hover { background: var(--paper-100); color: var(--text-body); }
 .btn:active { box-shadow: var(--shadow-inset-crease); }
 .badge { display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 7px; border-radius: var(--radius-xs);
   font: var(--type-mono-label); font-size: var(--text-3xs); letter-spacing: var(--tracking-wide); white-space: nowrap; border: 1px solid; }
@@ -739,7 +739,7 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 /* ---------- dark theme: the design system flips the ramps under [data-theme="dark"]; these are the site's own exceptions ---------- */
 /* host-site mockups keep the host's light look, so Slop Mop's pieces inside them stay light too */
 [data-theme="dark"] .win { color-scheme: light; --ink-900:#16181A;--ink-800:#24282B;--ink-700:#3B4045;--ink-600:#565C63;--ink-500:#6E757D;--ink-400:#8D949B;--ink-300:#B2B8BE;--ink-200:#D3D7DB;--ink-100:#E6E9EC;--ink-050:#F1F3F5;--paper-000:#FFFFFF;--paper-100:#F7F8F9;--paper-200:#EFF1F3;--paper-300:#E4E7EA;--mop-900:#7A5A00;--mop-700:#B58400;--mop-500:#F5B400;--mop-300:#FFD24A;--mop-200:#FFE9A8;--mop-100:#FFF6DC;--red-700:#9B211A;--red-500:#D93025;--red-200:#F6C6C2;--red-100:#FDECEA;--blue-700:#1A4E8A;--blue-500:#2F6FBF;--blue-200:#C6DCF4;--blue-100:#EDF3FB;--surface-page:var(--paper-100);--surface-card:var(--paper-000);--surface-sunken:var(--paper-200);--surface-inverse:var(--ink-900);--surface-accent:var(--mop-500);--text-body:var(--ink-900);--text-muted:var(--ink-600);--text-faint:var(--ink-500);--text-inverse:var(--paper-000);--text-on-accent:var(--ink-900);--text-link:var(--blue-700);--border-hairline:var(--ink-100);--border-default:var(--ink-200);--border-strong:var(--ink-400);--border-accent:var(--mop-500);--flag-warn:var(--mop-500);--flag-warn-wash:var(--mop-100);--flag-danger:var(--red-500);--flag-danger-wash:var(--red-100);--flag-clean:var(--blue-500);--flag-unsure:var(--ink-400);--flag-unsure-wash:var(--paper-200);--focus-ring:var(--blue-500);--focus-ring-halo:var(--blue-200);--text-on-solid:#FFFFFF;--surface-raised:var(--paper-000);--surface-raised-foot:var(--paper-100);--chart-grid:var(--ink-200);--track:var(--paper-200);--mini-feed:#F4F2EE;--mini-feed-on:#E9E5DD;--mini-post:var(--paper-000);--fold-crease:var(--ink-200);--fold-face:var(--paper-200);--fold-shade:rgba(22,24,26,.08);--shadow-card:0 1px 2px rgba(22,24,26,.05);--shadow-raised:0 2px 8px rgba(22,24,26,.08);--shadow-pop:0 8px 24px rgba(22,24,26,.14); }
-/* one-colour logos are black SVGs: knock them out to white on dark surfaces (brand-colour "-color" logos stay as they are) */
+/* one-color logos are black SVGs: knock them out to white on dark surfaces (brand-color "-color" logos stay as they are) */
 [data-theme="dark"] :where(img[src*="logos/"]:not([src*="-color"])) { filter: invert(1); }
 [data-theme="dark"] .win :where(img[src*="logos/"]) { filter: none; }
 [data-theme="dark"] .socials img, [data-theme="dark"] .btn-gh img { filter: invert(1); }
@@ -791,6 +791,9 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
 .text-link { all: unset; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 var(--space-2); cursor: pointer;
   font: var(--weight-semibold) var(--text-md)/1 var(--font-body); color: var(--text-body); text-underline-offset: 3px; }
 .text-link:hover { text-decoration: underline; }
+/* The tour link underlines its words only, never the play mark (Tom, 2026-11-16). */
+.tour-link:hover { text-decoration: none; }
+.tour-link:hover .label { text-decoration: underline; }
 .text-link:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; border-radius: var(--radius-xs); }
 .tour-link .play { font-size: 0.8em; line-height: 1; }
 /* The phones' "Add to Desktop" pop-up (assets/site.js sendDialog), the same from every install button, the nav's included. */
@@ -821,4 +824,26 @@ dialog.send-dialog .close { position: absolute; top: 8px; right: 8px; }
 main { overflow-wrap: break-word; }
 .prose a, .prose code, main li a, main p a, main p code, main li code { overflow-wrap: anywhere; }
 @media (max-width: 374px) { .subscribe .row { flex-direction: column; } .subscribe .row .btn, .subscribe .row button { width: 100%; } }
+
+/* A section reached by its #anchor clears the sticky header. */
+main section[id], main [id].section { scroll-margin-top: 72px; }
+
+/* ---------- Bento grids on How it works (Tom, 2026-11-16): "Reading the breakdown" and "How it adds up". Four columns;
+   a big panel spans two columns and two rows, a small one two columns and one row; one column on phones. ---------- */
+.prose .bento { list-style: none; padding: 0; margin: var(--space-7) 0; max-width: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: row dense; gap: var(--space-5); }
+.bento-card { grid-column: span 2; display: grid; align-content: start; gap: var(--space-3); padding: var(--space-6) var(--space-7);
+  background: var(--surface-card); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+.bento-card.lg { grid-row: span 2; padding: var(--space-8); gap: var(--space-4); border-top: 3px solid var(--mop-500); }
+.bento-n { font: var(--type-mono-label); font-size: var(--text-2xs); letter-spacing: var(--tracking-caps); color: var(--text-faint); }
+.bento-card.lg .bento-n { color: var(--mop-700); }
+.prose .bento-card h3 { margin: 0; padding: 0; font: var(--type-heading); font-size: var(--text-md); color: var(--text-body); max-width: none; }
+.prose .bento-card.lg h3 { font-size: var(--text-xl); line-height: 1.2; letter-spacing: -0.01em; }
+.prose .bento-card p { margin: 0; font: var(--type-body-sm); color: var(--text-muted); max-width: none; }
+.prose .bento-card.lg p { font: var(--type-body); color: var(--text-muted); }
+.bento-adds .bento-card:last-child { grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .prose .bento { grid-template-columns: minmax(0, 1fr); }
+  .bento-card, .bento-card.lg, .bento-adds .bento-card:last-child { grid-column: 1 / -1; grid-row: auto; }
+}
 

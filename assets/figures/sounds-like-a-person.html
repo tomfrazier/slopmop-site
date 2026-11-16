@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com 'sha256-dksH4PDVcGisGtLAP6DuqmCA8MQbPLyf9dUXVzjtVJY=' 'sha256-bm9YDmxR7GWyxCJoZaNsi4LYkRUUF1Sw3m/aM+vk14o='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh https://gettermscdn.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com 'sha256-dksH4PDVcGisGtLAP6DuqmCA8MQbPLyf9dUXVzjtVJY=' 'sha256-PkVisGBVYKYmbs42WQ5m3eBjQls4KPKS1IFBQ/Ouv88='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh https://gettermscdn.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex">
 <style>html,body{background:transparent!important}html,body{overflow:hidden!important}body{margin:0!important;padding:1px 1px 10px!important}.sm-page{width:auto!important;max-width:none!important;margin:0!important;padding:0!important}.sm-head,.iso-legend{display:none!important}.iso-figure{margin:0!important}</style>
 <script>(function(){var R=document.documentElement;try{var P=parent.document.documentElement;if(P!==R){var s=function(){var t=P.getAttribute("data-theme");if(t)R.setAttribute("data-theme",t);else R.removeAttribute("data-theme")};s();new MutationObserver(s).observe(P,{attributes:true,attributeFilter:["data-theme"]})}}catch(e){}
 var h=function(){var f=window.frameElement;if(f&&document.body)f.style.height=Math.ceil(document.body.getBoundingClientRect().height)+"px"};addEventListener("load",h);addEventListener("resize",h);if(window.ResizeObserver)addEventListener("DOMContentLoaded",function(){new ResizeObserver(h).observe(document.body)});
@@ -1063,7 +1063,7 @@ const D = {"W":600,"H":400,"P":{"origin":[300,203.29339049676767],"scale":1.4000
 // read. A person's writing is like a fingerprint and an iris: ridges that end and fork in places only theirs do, an iris
 // with its own crypts and furrows. Writing with no one behind it reads like a template: even rings, evenly spaced, the
 // same as anyone's. The score is printed: high for that person, low for no one.
-// Inlined into the page as source (no imports). Patterns are drawn in their own planes, centred on 0, 0.
+// Inlined into the page as source (no imports). Patterns are drawn in their own planes, centered on 0, 0.
 
 const scoreOf = (s) => Math.round(94 - 88 * s);
 const voiceOf = (s) => 1 - s; // how much of one person is in the post
@@ -1156,7 +1156,7 @@ const bench = (() => {
     if (layer) stage.setAttribute("data-gl", "");
     return layer;
   };
-  // white: 0 shows the score colour, 1 the lamp's idle white (no reading yet)
+  // white: 0 shows the score color, 1 the lamp's idle white (no reading yet)
   const drawLamp = (stage, score, level, time, white = 0) => {
     const c = colourOf(score);
     const col = c.map((v, i) => v * (1 - white) + pal[3][i] * white);

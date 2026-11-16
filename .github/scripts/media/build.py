@@ -313,9 +313,11 @@ def page(head, header, footer, scripts):
         if svg:
             links.append('<a class="btn btn-secondary btn-sm" href="%s" download>%sSVG</a>' % (svg, DL))
         links.append('<a class="btn btn-secondary btn-sm" href="%s" download>%sPNG</a>' % (png, DL))
-        assets.append('<div class="mk-asset"><div class="mk-asset-stage mk-%s"><img src="%s" alt="" loading="lazy"></div>'
+        # The preview shows the PNG, loaded with the page: the dark wordmark's stage is near-black, so a preview that never
+        # loads (lazy loading, or a browser that won't draw the SVG's glyph <use> refs) reads as an empty black box.
+        assets.append('<div class="mk-asset"><div class="mk-asset-stage mk-%s"><img src="%s" alt="" decoding="async"></div>'
                       '<div class="mk-asset-text"><b>%s</b><span>%s</span><div class="mk-asset-dl">%s</div></div></div>'
-                      % (kind, svg or png, e(name), e(desc), "".join(links)))
+                      % (kind, png, e(name), e(desc), "".join(links)))
     assets = "".join(assets)
 
     faq_html = "".join(
@@ -329,7 +331,7 @@ def page(head, header, footer, scripts):
     <div class="ph-copy">
       <span class="eyebrow">media kit</span>
       <h1 class="h-1">Read only the posts worth your time</h1>
-      <p class="lede">Slop Mop reads your feed ahead of you and folds away the slop. This page has what reporters, producers and event organisers ask for: the facts, the numbers, quotes you can use, the founder's bio and the logos.</p>
+      <p class="lede">Slop Mop reads your feed ahead of you and folds away the slop. This page has what reporters, producers and event organizers ask for: the facts, the numbers, quotes you can use, the founder's bio and the logos.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="press/slop-mop-press-kit.zip" download>{dl}Download the press kit</a>
         <a class="btn btn-secondary" href="mailto:{email}">{mail}{email}</a>
@@ -482,7 +484,7 @@ INK, MOPY, PAPER, WHITE = "#16181A", "#F5B400", "#F7F8F9", "#FFFFFF"
 
 def mop(x, y, k, c, _id=None):
     """The mop mark at 24-unit scale. The bristles are cut out of the head (even-odd),
-    not painted in a background colour, so the mark works on any background."""
+    not painted in a background color, so the mark works on any background."""
     slots = "".join("M%.3f 16.6v4.6a.575 .575 0 0 0 1.15 0v-4.6a.575 .575 0 0 0 -1.15 0z" % (bx - .575) for bx in (8.6, 12, 15.4))
     return ('<g transform="translate({x} {y}) scale({k})"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="{c}"/>'
             '<path d="M5.2 13.6h13.6l-1.6 8.2H6.8z{s}" fill="{c}" fill-rule="evenodd"/></g>').format(x=x, y=y, k=k, c=c, s=slots)
