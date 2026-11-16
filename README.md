@@ -49,7 +49,7 @@ A social icon stays hidden until its URL is filled in.
 Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2. The cookie banner is GetTerms (app.getterms.io; banner settings, wording and regions live there, not in this repo):
 
 - GetTerms' embed must be the **first script** in each page's `<head>`. Its blocker script sets `window.GetTermsDefaults` (the visitor's region default: opt-in in Europe, the UK and anywhere not listed; opt-out in the US and Canada; no banner in Australia). The gtag snippet right after it sends `gtag('consent', 'default', …)`: the visitor's saved choice (`localStorage.getterms_cookie_consent`) if they have one, otherwise that region default. GetTerms sends `gtag('consent', 'update', …)` when the visitor chooses.
-- The footer's "Cookie settings" buttons carry `data-gt-cookie-widget-show`, which reopens GetTerms' preferences. `assets/site.js` clears old `_ga` cookies when Analytics is off.
+- The footer's "Cookie settings" link, and the cookie icon button `assets/site.js` adds directly left of the theme switcher on every page (Tom, 2026-11-16), carry `data-gt-cookie-widget-show`, which reopens GetTerms' preferences. GetTerms' own floating button is switched off in its dashboard ("persistent preferences control"); keep it off, since these buttons replace it. `assets/site.js` clears old `_ga` cookies when Analytics is off.
 - GetTerms logs each choice to `gettermscmp.com` (allowed in `csp.py`). Script and iframe blocking are off: Consent Mode covers GA, and blocking would break Polar's checkout.
 - The XL pages strip the query string from `page_location`, so checkout ids never reach GA.
 
@@ -57,12 +57,34 @@ Events sent (register `link_location` and `lead_source` as custom dimensions in 
 
 | Event | When | Parameters |
 | --- | --- | --- |
-| `add_to_browser` | any "Add to browser" link is clicked | `link_location` (nav, footer, hero, pricing…), `link_url` |
-| `generate_lead` | newsletter signup or contact form is sent successfully | `lead_source` (`newsletter` or `contact_form`), `form_location` |
+| `add_to_browser` | any "Add to browser" link is clicked (on desktop, or "Send to my computer" on Chrome on a phone) | `link_location` (nav, footer, hero, pricing…), `link_url` |
+| `install_cta_click` | any install button is pressed | `variant` (`desktop`, `chrome_mobile`, `other_mobile`), `link_location` |
+| `generate_lead` | newsletter signup, contact form, or "send to my computer" is sent successfully | `lead_source` (`newsletter`, `contact_form` or `send_to_computer`), `form_location`; for `send_to_computer` also `variant` |
 | `tour_open` | "Take a tour" opens the video | `link_location` |
 | `begin_checkout` | the XL checkout opens on `xl/checkout` | `currency` |
 
 Page views, scrolls, outbound clicks and form starts come from GA's enhanced measurement.
+
+## Install buttons on phones
+
+Phones can't install a browser extension, so `assets/site.js` changes every `[data-add]` by device:
+
+- **Desktop:** unchanged. "Add to browser" goes to the browser's own store.
+- **Chrome on a phone:** "Send to my computer", to the Chrome Web Store, where a signed-in person can queue the install for their computer (Tom, 2026-11-16).
+- **Any other phone:** "Add to Desktop". Every install button on every page, the nav's included, opens the same pop-up (a `<dialog>` built by `sendDialog` in `assets/site.js`): an email address, "Send link", then "Sent". The API emails the link now and schedules one reminder for the first business hours (Mon–Fri, 7am–7pm in the visitor's time zone, sent as `tz`) at least 24 hours later. Opening the link cancels the reminder.
+  - The form posts to `<apiUrl>/api/v1/account/send-install`. The API only accepts it from slopmop.lol's origin, rate-limits it, and sends one link per address a day.
+  - The email's link (`api.slopmop.lol/get?t=…`) counts the open and lands on the home page with `utm_source=slopmop_email&utm_medium=email&utm_campaign=send_to_computer`.
+  - Those tags are added to the Chrome Web Store link, so the store's own stats count the installs the email led to.
+  - Test against staging with `?api=staging` (it's remembered; `?api=prod` goes back). The API's change must be in production before this goes live.
+
+**Adding an install button to a page** (every page, now and later): use an `<a>` with `data-add` and `href` set to the Chrome Web Store listing, and load `assets/site.js`. The script handles the rest: the label for each device, the store for each desktop browser, and the pop-up on phones. Don't link to a store without `data-add`, and don't write device-specific buttons by hand. The nav's button is `class="btn btn-primary btn-sm nav-cta" data-add`; the page builders in `.github/scripts/` write theirs the same way.
+
+The funnel, end to end:
+- **CTA clicks** (`install_cta_click`) and **emails captured** (`generate_lead`, `send_to_computer`): Google Analytics.
+- **Sent, opened and reminded**: admin → Referrals → Install emails from the website.
+- **Completed installs**: the Chrome Web Store developer dashboard, by UTM source `slopmop_email`.
+
+"Take a tour" is a text-only button with a ▶︎ (U+25B6 U+FE0E, so iOS doesn't draw it as an emoji).
 
 ## Slop Mop XL checkout
 

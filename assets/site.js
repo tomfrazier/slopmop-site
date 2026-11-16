@@ -8,6 +8,9 @@
     edgeStoreUrl: "",
     firefoxStoreUrl: "",
     safariStoreUrl: "",
+    /* The Slop Mop API ("Send Slop Mop to my computer" emails the link from here). For testing, ?api=staging uses staging
+       (remembered in this browser) and ?api=prod goes back. */
+    apiUrl: "https://api.slopmop.lol",
     productHuntUrl: "https://www.producthunt.com/products/slop-mop",
     emailEndpoint: "https://formspree.io/f/xaenejjw",
     /* The top announcement bar on every page. Set show to false to hide it. Each new
@@ -52,15 +55,136 @@
   }
   window.slopmopTrack = gaEvent;
 
-  /* store + product hunt + social links */
+  /* ---------- install buttons ([data-add]): what they say and do depends on the device (Tom, 2026-11-16) ----------
+     1. Desktop: "Add to browser", to the browser's own store (unchanged).
+     2. Chrome on a phone: "Send to my computer", to the Chrome Web Store, where a signed-in person can queue the install
+        for their computer.
+     3. Any other phone: "Add to Desktop", which opens the email pop-up below (no store to go to). The API
+        emails a link (POST account/send-install); opened on a computer, it lands here with UTM tags, which go on to the
+        Chrome Web Store link, so the store's stats count the installs the email led to. */
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search).get("api");
+      if (q === "staging") localStorage.setItem("slopmop:api", "https://staging-api.slopmop.lol");
+      if (q === "prod") localStorage.removeItem("slopmop:api");
+      SITE.apiUrl = localStorage.getItem("slopmop:api") || SITE.apiUrl;
+    } catch (e) {}
+  })();
   var ua = navigator.userAgent;
+  var mobile = /Android|iPhone|iPad|iPod|Mobile/.test(ua) || !!(navigator.userAgentData && navigator.userAgentData.mobile);
+  var chromeMobile = mobile && (/CriOS\//.test(ua) || (/Android/.test(ua) && /Chrome\//.test(ua) && !/SamsungBrowser|EdgA|OPR|Opera|Firefox|FxiOS|YaBrowser|UCBrowser|DuckDuckGo|Brave|Vivaldi|MiuiBrowser|HuaweiBrowser|; wv\)/.test(ua)));
+  var device = !mobile ? "desktop" : chromeMobile ? "chrome_mobile" : "other_mobile";
   var browser = /Edg\//.test(ua) ? "edge" : /Firefox\//.test(ua) ? "firefox" : (/Safari\//.test(ua) && !/Chrome\/|Chromium\/|CriOS|Android/.test(ua)) ? "safari" : "chrome";
+  /* What the phone is, for the admin's funnel by browser ("ios-safari", "android-samsung"…). */
+  var phoneBrowser = !mobile ? browser : (/iPhone|iPad|iPod/.test(ua) ? "ios-" : /Android/.test(ua) ? "android-" : "") +
+    (/CriOS|Chrome\//.test(ua) && chromeMobile ? "chrome" : /SamsungBrowser/.test(ua) ? "samsung" : /FxiOS|Firefox/.test(ua) ? "firefox" : /EdgA|EdgiOS/.test(ua) ? "edge" : /OPR|OPT\//.test(ua) ? "opera" : /DuckDuckGo/.test(ua) ? "duckduckgo" : /Safari\//.test(ua) ? "safari" : "other");
   var storeUrl = { edge: SITE.edgeStoreUrl, firefox: SITE.firefoxStoreUrl, safari: SITE.safariStoreUrl }[browser] || SITE.storeUrl;
+  if (chromeMobile) storeUrl = SITE.storeUrl;
+  /* Landed from the install email (utm_* in the address): the Chrome Web Store link carries the same tags. */
+  if (storeUrl === SITE.storeUrl) {
+    try {
+      var here = new URLSearchParams(location.search), tagged = new URL(storeUrl), any = false;
+      ["utm_source", "utm_medium", "utm_campaign"].forEach(function (k) { var v = here.get(k); if (v) { tagged.searchParams.set(k, v); any = true; } });
+      if (any) storeUrl = tagged.toString();
+    } catch (e) {}
+  }
+  var LABEL = { chrome_mobile: { big: "Send to my computer", nav: "Send to my computer" }, other_mobile: { big: "Add to Desktop", nav: "Add to Desktop" } };
+  function relabel(a, text) {
+    /* Keep the button's icon; replace only its words. A plain text link becomes the words. */
+    var nodes = Array.prototype.slice.call(a.childNodes).filter(function (n) { return n.nodeType === 3 && n.textContent.trim(); });
+    if (nodes.length) { nodes.forEach(function (n, k) { n.textContent = k ? "" : text; }); } else a.appendChild(document.createTextNode(text));
+  }
+  var isNav = function (a) { return !!a.closest(".nav"); };
   $$("[data-add]").forEach(function (a) {
+    if (device !== "desktop" && LABEL[device]) relabel(a, isNav(a) ? LABEL[device].nav : a.classList.contains("btn") ? LABEL[device].big : device === "other_mobile" ? "get Slop Mop on your computer" : "send Slop Mop to your computer");
+    if (device === "other_mobile") {
+      a.setAttribute("href", "#send-to-computer");
+      a.removeAttribute("target");
+      a.setAttribute("role", "button");
+      a.setAttribute("aria-expanded", "false");
+      a.setAttribute("aria-haspopup", "dialog");
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        gaEvent("install_cta_click", { variant: "other_mobile", link_location: where(a) });
+        openSendForm(a);
+      });
+      return;
+    }
     a.href = storeUrl; a.target = "_blank"; a.rel = "noopener";
-    /* Key event: someone heading to their browser's store to install. */
-    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser }); });
+    /* Key event: someone heading to their browser's store to install (or, from Chrome on a phone, to queue it). */
+    a.addEventListener("click", function () {
+      gaEvent("install_cta_click", { variant: device, link_location: where(a) });
+      gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser });
+    });
   });
+
+  /* "Add to Desktop" on a phone without Chrome: one pop-up (a <dialog>) for every install button on every page, the nav's
+     included. It asks for an email address and the API sends the link (POST account/send-install), plus one reminder in
+     business hours a day later unless the link is opened first; the visitor's time zone goes along for that. */
+  var sendDlg = null, sendFrom = "";
+  function sendDialog() {
+    if (sendDlg) return sendDlg;
+    var d = document.createElement("dialog");
+    d.className = "send-dialog";
+    d.setAttribute("aria-labelledby", "send-dialog-title");
+    d.innerHTML =
+      '<button class="icon-btn close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
+      '<form class="send-form" novalidate>' +
+      '<h2 id="send-dialog-title" class="send-title">Get Slop Mop on your computer</h2>' +
+      '<p class="send-lede">Slop Mop works in your desktop browser. We\'ll email you a link to open there.</p>' +
+      '<label class="send-label" for="send-email">Your email</label>' +
+      '<div class="send-row"><input id="send-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>' +
+      '<button class="btn btn-primary" type="submit">Send link</button></div>' +
+      '<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+      '<p class="send-note" aria-live="polite">We\'ll only use this to send the link.</p>' +
+      '</form>' +
+      '<div class="send-sent" hidden><h2 class="send-title" tabindex="-1">Sent</h2><p class="send-lede">Open the email on your computer to add Slop Mop to your browser.</p>' +
+      '<button class="btn btn-primary" type="button" data-send-done>Done</button></div>';
+    document.body.appendChild(d);
+    var form = $(".send-form", d), input = $("input[type=email]", d), note = $(".send-note", d), btn = $("button[type=submit]", d), sent = $(".send-sent", d);
+    $(".close", d).addEventListener("click", function () { d.close(); });
+    $("[data-send-done]", d).addEventListener("click", function () { d.close(); });
+    d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = (input.value || "").trim();
+      if (!/^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/.test(email)) {
+        note.textContent = "That address doesn't look right."; note.classList.add("err"); input.setAttribute("aria-invalid", "true"); input.focus(); return;
+      }
+      var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (x) {}
+      input.removeAttribute("aria-invalid"); note.classList.remove("err"); note.textContent = "Sending…"; btn.disabled = true;
+      var from = sendFrom;
+      fetch(SITE.apiUrl + "/api/v1/account/send-install", {
+        method: "POST", headers: { "Content-Type": "application/json" }, credentials: "omit",
+        body: JSON.stringify({ email: email, tz: tz, browser: phoneBrowser, source: from, website: $("input[name=website]", form).value })
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { if (!r.ok) throw new Error(b.message || ""); return b; }); })
+        .then(function () {
+          gaEvent("generate_lead", { lead_source: "send_to_computer", form_location: from });
+          form.hidden = true; sent.hidden = false; $(".send-title", sent).focus();
+        })
+        .catch(function (err) { note.textContent = (err && err.message) || "That didn't go through. Try again in a minute."; note.classList.add("err"); })
+        .then(function () { btn.disabled = false; });
+    });
+    /* Each opening starts fresh, unless it was sent: then it says so again. */
+    d.addEventListener("close", function () {
+      $$("[data-add]").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+      if (!sent.hidden) return;
+      note.textContent = "We'll only use this to send the link."; note.classList.remove("err"); input.removeAttribute("aria-invalid");
+    });
+    sendDlg = d;
+    return d;
+  }
+  function openSendForm(trigger) {
+    sendFrom = where(trigger);
+    /* The nav's menu, if open, closes behind the pop-up. */
+    var nav = $(".nav"); if (nav && nav.classList.contains("open")) { nav.classList.remove("open"); var t = $(".nav-toggle"); if (t) t.setAttribute("aria-expanded", "false"); }
+    var d = sendDialog();
+    trigger.setAttribute("aria-expanded", "true");
+    if (d.showModal) d.showModal(); else d.setAttribute("open", "");
+    var sent = $(".send-sent", d);
+    if (sent.hidden) $("input[type=email]", d).focus(); else $(".send-title", sent).focus();
+  }
   /* announcement bar */
   (function () {
     var bar = $("[data-announce]"), an = SITE.announcement;
@@ -461,6 +585,22 @@
     $$("[data-theme-set]").forEach(function (b) { b.setAttribute("aria-checked", b.getAttribute("data-theme-set") === p ? "true" : "false"); });
   }
   $$(".theme-pick").forEach(function (g) { g.hidden = false; });
+
+  /* Cookie settings (Tom, 2026-11-16): an icon button in the footer, just left of the theme switcher and styled like it, on
+     every page, instead of GetTerms' floating button (switched off in GetTerms' dashboard: "persistent preferences
+     control"). GetTerms opens its preferences for any [data-gt-cookie-widget-show="true"] element, including one added
+     after the page loads, as this one is. */
+  var COOKIE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></svg>';
+  $$(".theme-pick").forEach(function (g) {
+    if (g.parentElement && g.parentElement.classList.contains("footer-prefs")) return;
+    var wrap = document.createElement("div");
+    wrap.className = "footer-prefs";
+    g.parentNode.insertBefore(wrap, g);
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "cookie-pick"; b.setAttribute("data-gt-cookie-widget-show", "true");
+    b.setAttribute("aria-label", "Cookie settings"); b.title = "Cookie settings"; b.innerHTML = COOKIE_ICON;
+    wrap.appendChild(b); wrap.appendChild(g);
+  });
   $$("[data-theme-set]").forEach(function (b) {
     b.addEventListener("click", function () {
       var v = b.getAttribute("data-theme-set");
