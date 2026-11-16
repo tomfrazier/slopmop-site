@@ -57,12 +57,32 @@ Events sent (register `link_location` and `lead_source` as custom dimensions in 
 
 | Event | When | Parameters |
 | --- | --- | --- |
-| `add_to_browser` | any "Add to browser" link is clicked | `link_location` (nav, footer, hero, pricing…), `link_url` |
-| `generate_lead` | newsletter signup or contact form is sent successfully | `lead_source` (`newsletter` or `contact_form`), `form_location` |
+| `add_to_browser` | any "Add to browser" link is clicked (on desktop, or "Add to Desktop" on Chrome on a phone) | `link_location` (nav, footer, hero, pricing…), `link_url` |
+| `install_cta_click` | any install button or "Email me the link" is pressed | `variant` (`desktop`, `chrome_mobile`, `other_mobile`, `email_link`), `link_location` |
+| `generate_lead` | newsletter signup, contact form, or "send to my computer" is sent successfully | `lead_source` (`newsletter`, `contact_form` or `send_to_computer`), `form_location`; for `send_to_computer` also `remind`, `variant` |
 | `tour_open` | "Take a tour" opens the video | `link_location` |
 | `begin_checkout` | the XL checkout opens on `xl/checkout` | `currency` |
 
 Page views, scrolls, outbound clicks and form starts come from GA's enhanced measurement.
+
+## Install buttons on phones
+
+Phones can't install a browser extension, so `assets/site.js` changes every `[data-add]` by device:
+
+- **Desktop:** unchanged. "Add to browser" goes to the browser's own store.
+- **Chrome on a phone:** "Add to Desktop", to the Chrome Web Store, where a signed-in person can queue the install for their computer. The big buttons (not the nav's) get an "Email me the link" text link beside them.
+- **Any other phone:** "Send Slop Mop to my computer" (nav: "Send to my computer"). It opens an email form in place, with an optional "Remind me tomorrow".
+  - The form posts to `<apiUrl>/api/v1/account/send-install`. The API only accepts it from slopmop.lol's origin, rate-limits it, and sends one link per address a day.
+  - The email's link (`api.slopmop.lol/get?t=…`) counts the open and lands on the home page with `utm_source=slopmop_email&utm_medium=email&utm_campaign=send_to_computer`.
+  - Those tags are added to the Chrome Web Store link, so the store's own stats count the installs the email led to.
+  - Test against staging with `?api=staging` (it's remembered; `?api=prod` goes back). The API's change must be in production before this goes live.
+
+The funnel, end to end:
+- **CTA clicks** (`install_cta_click`) and **emails captured** (`generate_lead`, `send_to_computer`): Google Analytics.
+- **Sent, opened, reminded**: admin → Referrals → Install emails from the website.
+- **Completed installs**: the Chrome Web Store developer dashboard, by UTM source `slopmop_email`.
+
+"Take a tour" is a text-only button with a ▶︎ (U+25B6 U+FE0E, so iOS doesn't draw it as an emoji).
 
 ## Slop Mop XL checkout
 

@@ -8,6 +8,9 @@
     edgeStoreUrl: "",
     firefoxStoreUrl: "",
     safariStoreUrl: "",
+    /* The Slop Mop API ("Send Slop Mop to my computer" emails the link from here). For testing, ?api=staging uses staging
+       (remembered in this browser) and ?api=prod goes back. */
+    apiUrl: "https://api.slopmop.lol",
     productHuntUrl: "https://www.producthunt.com/products/slop-mop",
     emailEndpoint: "https://formspree.io/f/xaenejjw",
     /* The top announcement bar on every page. Set show to false to hide it. Each new
@@ -52,15 +55,131 @@
   }
   window.slopmopTrack = gaEvent;
 
-  /* store + product hunt + social links */
+  /* ---------- install buttons ([data-add]): what they say and do depends on the device (Tom, 2026-11-16) ----------
+     1. Desktop: "Add to browser", to the browser's own store (unchanged).
+     2. Chrome on a phone: "Add to Desktop", to the Chrome Web Store, where a signed-in person can queue the install for
+        their computer; beside the big buttons, an "Email me the link" text link too.
+     3. Any other phone: "Send Slop Mop to my computer", which opens an email form in place (no store to go to). The API
+        emails a link (POST account/send-install); opened on a computer, it lands here with UTM tags, which go on to the
+        Chrome Web Store link, so the store's stats count the installs the email led to. */
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search).get("api");
+      if (q === "staging") localStorage.setItem("slopmop:api", "https://staging-api.slopmop.lol");
+      if (q === "prod") localStorage.removeItem("slopmop:api");
+      SITE.apiUrl = localStorage.getItem("slopmop:api") || SITE.apiUrl;
+    } catch (e) {}
+  })();
   var ua = navigator.userAgent;
+  var mobile = /Android|iPhone|iPad|iPod|Mobile/.test(ua) || !!(navigator.userAgentData && navigator.userAgentData.mobile);
+  var chromeMobile = mobile && (/CriOS\//.test(ua) || (/Android/.test(ua) && /Chrome\//.test(ua) && !/SamsungBrowser|EdgA|OPR|Opera|Firefox|FxiOS|YaBrowser|UCBrowser|DuckDuckGo|Brave|Vivaldi|MiuiBrowser|HuaweiBrowser|; wv\)/.test(ua)));
+  var device = !mobile ? "desktop" : chromeMobile ? "chrome_mobile" : "other_mobile";
   var browser = /Edg\//.test(ua) ? "edge" : /Firefox\//.test(ua) ? "firefox" : (/Safari\//.test(ua) && !/Chrome\/|Chromium\/|CriOS|Android/.test(ua)) ? "safari" : "chrome";
+  /* What the phone is, for the admin's funnel by browser ("ios-safari", "android-samsung"…). */
+  var phoneBrowser = !mobile ? browser : (/iPhone|iPad|iPod/.test(ua) ? "ios-" : /Android/.test(ua) ? "android-" : "") +
+    (/CriOS|Chrome\//.test(ua) && chromeMobile ? "chrome" : /SamsungBrowser/.test(ua) ? "samsung" : /FxiOS|Firefox/.test(ua) ? "firefox" : /EdgA|EdgiOS/.test(ua) ? "edge" : /OPR|OPT\//.test(ua) ? "opera" : /DuckDuckGo/.test(ua) ? "duckduckgo" : /Safari\//.test(ua) ? "safari" : "other");
   var storeUrl = { edge: SITE.edgeStoreUrl, firefox: SITE.firefoxStoreUrl, safari: SITE.safariStoreUrl }[browser] || SITE.storeUrl;
+  if (chromeMobile) storeUrl = SITE.storeUrl;
+  /* Landed from the install email (utm_* in the address): the Chrome Web Store link carries the same tags. */
+  if (storeUrl === SITE.storeUrl) {
+    try {
+      var here = new URLSearchParams(location.search), tagged = new URL(storeUrl), any = false;
+      ["utm_source", "utm_medium", "utm_campaign"].forEach(function (k) { var v = here.get(k); if (v) { tagged.searchParams.set(k, v); any = true; } });
+      if (any) storeUrl = tagged.toString();
+    } catch (e) {}
+  }
+  var LABEL = { chrome_mobile: { big: "Add to Desktop", nav: "Add to Desktop" }, other_mobile: { big: "Send Slop Mop to my computer", nav: "Send to my computer" } };
+  function relabel(a, text) {
+    /* Keep the button's icon; replace only its words. A plain text link becomes the words. */
+    var nodes = Array.prototype.slice.call(a.childNodes).filter(function (n) { return n.nodeType === 3 && n.textContent.trim(); });
+    if (nodes.length) { nodes.forEach(function (n, k) { n.textContent = k ? "" : text; }); } else a.appendChild(document.createTextNode(text));
+  }
+  var isNav = function (a) { return !!a.closest(".nav"); };
+  var isBig = function (a) { return a.classList.contains("btn") && !isNav(a); };
   $$("[data-add]").forEach(function (a) {
+    if (device !== "desktop" && LABEL[device]) relabel(a, isNav(a) ? LABEL[device].nav : a.classList.contains("btn") ? LABEL[device].big : "send Slop Mop to your computer");
+    if (device === "other_mobile") {
+      a.setAttribute("href", "#send-to-computer");
+      a.removeAttribute("target");
+      a.setAttribute("role", "button");
+      a.setAttribute("aria-expanded", "false");
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        gaEvent("install_cta_click", { variant: "other_mobile", link_location: where(a) });
+        openSendForm(a, "other_mobile");
+      });
+      return;
+    }
     a.href = storeUrl; a.target = "_blank"; a.rel = "noopener";
-    /* Key event: someone heading to their browser's store to install. */
-    a.addEventListener("click", function () { gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser }); });
+    /* Key event: someone heading to their browser's store to install (or, from Chrome on a phone, to queue it). */
+    a.addEventListener("click", function () {
+      gaEvent("install_cta_click", { variant: device, link_location: where(a) });
+      gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser });
+    });
+    if (device === "chrome_mobile" && isBig(a)) {
+      var mail = document.createElement("button");
+      mail.type = "button"; mail.className = "text-link email-me"; mail.textContent = "Email me the link";
+      mail.setAttribute("aria-expanded", "false");
+      a.insertAdjacentElement("afterend", mail);
+      mail.addEventListener("click", function () {
+        gaEvent("install_cta_click", { variant: "email_link", link_location: where(a) });
+        openSendForm(mail, "email_link");
+      });
+    }
   });
+
+  /* The inline email form, opened under the button that asked for it (one per spot). */
+  var formSeq = 0;
+  function openSendForm(trigger, variant) {
+    /* The nav's button has no room: use the first install button on the page, or the top of the page. */
+    if (isNav(trigger)) {
+      var nav = $(".nav"); if (nav) { nav.classList.remove("open"); var t = $(".nav-toggle"); if (t) t.setAttribute("aria-expanded", "false"); }
+      var first = $$("[data-add]").filter(function (b) { return !isNav(b); })[0];
+      if (first) { first.scrollIntoView({ block: "center", behavior: reduceMotion ? "auto" : "smooth" }); return openSendForm(first, variant); }
+    }
+    var host = trigger.closest(".hero-ctas, .ctas, .sos-join-ctas") || (trigger.closest("p, li") && !trigger.classList.contains("btn") ? trigger.closest("p, li") : null) || trigger;
+    var existing = host.nextElementSibling && host.nextElementSibling.classList.contains("send-form") ? host.nextElementSibling : null;
+    if (isNav(trigger) && !existing) { host = $("main") || document.body; existing = $(".send-form", host); }
+    $$("[data-add], .email-me").forEach(function (b) { if (b.closest && (b.closest(".hero-ctas, .ctas, .sos-join-ctas") === host || b === trigger)) b.setAttribute("aria-expanded", "true"); });
+    if (existing) { var inp = $("input[type=email]", existing); if (inp) inp.focus(); return; }
+    var id = "send-email-" + (++formSeq), loc = where(trigger);
+    var form = document.createElement("form");
+    form.className = "send-form"; form.noValidate = true; form.setAttribute("aria-label", "Send Slop Mop to my computer");
+    form.innerHTML =
+      '<label class="send-label" for="' + id + '">Your email, to open on your computer</label>' +
+      '<div class="send-row"><input id="' + id + '" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>' +
+      '<button class="btn btn-primary" type="submit">Send link</button></div>' +
+      '<label class="send-remind"><input type="checkbox" name="remind"> Remind me tomorrow</label>' +
+      '<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+      '<p class="send-note" aria-live="polite">We\'ll only use this to send the link.</p>';
+    if (host === ($("main") || document.body)) host.insertBefore(form, host.firstChild); else host.insertAdjacentElement("afterend", form);
+    var input = $("input[type=email]", form), note = $(".send-note", form), btn = $("button[type=submit]", form);
+    input.focus();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = (input.value || "").trim();
+      if (!/^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/.test(email)) {
+        note.textContent = "That address doesn't look right."; note.classList.add("err"); input.setAttribute("aria-invalid", "true"); input.focus(); return;
+      }
+      var remind = $("input[name=remind]", form).checked;
+      input.removeAttribute("aria-invalid"); note.classList.remove("err"); note.textContent = "Sending…"; btn.disabled = true;
+      fetch(SITE.apiUrl + "/api/v1/account/send-install", {
+        method: "POST", headers: { "Content-Type": "application/json" }, credentials: "omit",
+        body: JSON.stringify({ email: email, remind: remind, browser: phoneBrowser, source: loc, website: $("input[name=website]", form).value })
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { if (!r.ok) throw new Error(b.message || ""); return b; }); })
+        .then(function () {
+          gaEvent("generate_lead", { lead_source: "send_to_computer", form_location: loc, remind: remind, variant: variant });
+          var done = document.createElement("p");
+          done.className = "send-done"; done.setAttribute("role", "status"); done.tabIndex = -1;
+          done.textContent = "Sent. Open the email on your computer to add Slop Mop.";
+          form.replaceChildren(done); done.focus();
+        })
+        .catch(function (err) {
+          note.textContent = (err && err.message) || "That didn't go through. Try again in a minute."; note.classList.add("err"); btn.disabled = false;
+        });
+    });
+  }
   /* announcement bar */
   (function () {
     var bar = $("[data-announce]"), an = SITE.announcement;
