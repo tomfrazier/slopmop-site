@@ -49,7 +49,7 @@ A social icon stays hidden until its URL is filled in.
 Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2. The cookie banner is GetTerms (app.getterms.io; banner settings, wording and regions live there, not in this repo):
 
 - GetTerms' embed must be the **first script** in each page's `<head>`. Its blocker script sets `window.GetTermsDefaults` (the visitor's region default: opt-in in Europe, the UK and anywhere not listed; opt-out in the US and Canada; no banner in Australia). The gtag snippet right after it sends `gtag('consent', 'default', …)`: the visitor's saved choice (`localStorage.getterms_cookie_consent`) if they have one, otherwise that region default. GetTerms sends `gtag('consent', 'update', …)` when the visitor chooses.
-- The footer's "Cookie settings" buttons carry `data-gt-cookie-widget-show`, which reopens GetTerms' preferences. `assets/site.js` clears old `_ga` cookies when Analytics is off.
+- The footer's "Cookie settings" link, and the cookie icon button `assets/site.js` adds directly left of the theme switcher on every page (Tom, 2026-11-16), carry `data-gt-cookie-widget-show`, which reopens GetTerms' preferences. GetTerms' own floating button is hidden: `site.js` puts a style into the widget's shadow root, since page CSS can't reach it. Switching off "persistent preferences control" in GetTerms' dashboard removes it at the source. `assets/site.js` clears old `_ga` cookies when Analytics is off.
 - GetTerms logs each choice to `gettermscmp.com` (allowed in `csp.py`). Script and iframe blocking are off: Consent Mode covers GA, and blocking would break Polar's checkout.
 - The XL pages strip the query string from `page_location`, so checkout ids never reach GA.
 
@@ -71,7 +71,7 @@ Phones can't install a browser extension, so `assets/site.js` changes every `[da
 
 - **Desktop:** unchanged. "Add to browser" goes to the browser's own store.
 - **Chrome on a phone:** "Send to my computer", to the Chrome Web Store, where a signed-in person can queue the install for their computer (Tom, 2026-11-16).
-- **Any other phone:** "Add to Desktop". Every install button on every page, the nav's included, opens the same pop-up (a `<dialog>` built by `sendDialog` in `assets/site.js`): an email address, "Send link", then "Sent". The API emails the link now and schedules one reminder for the first business hours (Mon–Fri, 9–5 in the visitor's time zone, sent as `tz`) at least 24 hours later. Opening the link cancels the reminder.
+- **Any other phone:** "Add to Desktop". Every install button on every page, the nav's included, opens the same pop-up (a `<dialog>` built by `sendDialog` in `assets/site.js`): an email address, "Send link", then "Sent". The API emails the link now and schedules one reminder for the first business hours (Mon–Fri, 7am–7pm in the visitor's time zone, sent as `tz`) at least 24 hours later. Opening the link cancels the reminder.
   - The form posts to `<apiUrl>/api/v1/account/send-install`. The API only accepts it from slopmop.lol's origin, rate-limits it, and sends one link per address a day.
   - The email's link (`api.slopmop.lol/get?t=…`) counts the open and lands on the home page with `utm_source=slopmop_email&utm_medium=email&utm_campaign=send_to_computer`.
   - Those tags are added to the Chrome Web Store link, so the store's own stats count the installs the email led to.

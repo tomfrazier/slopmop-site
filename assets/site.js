@@ -585,6 +585,40 @@
     $$("[data-theme-set]").forEach(function (b) { b.setAttribute("aria-checked", b.getAttribute("data-theme-set") === p ? "true" : "false"); });
   }
   $$(".theme-pick").forEach(function (g) { g.hidden = false; });
+
+  /* Cookie settings (Tom, 2026-11-16): an icon button in the footer, just left of the theme switcher and styled like it, on
+     every page, instead of GetTerms' floating button. GetTerms opens its preferences for any [data-gt-cookie-widget-show]
+     element, including one added here. Its floating button lives in the widget's shadow root, which page CSS can't reach,
+     so a style is put in there once the widget appears. (Switching off "persistent preferences control" in GetTerms'
+     dashboard removes it at the source.) */
+  var COOKIE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></svg>';
+  $$(".theme-pick").forEach(function (g) {
+    if (g.parentElement && g.parentElement.classList.contains("footer-prefs")) return;
+    var wrap = document.createElement("div");
+    wrap.className = "footer-prefs";
+    g.parentNode.insertBefore(wrap, g);
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "cookie-pick"; b.setAttribute("data-gt-cookie-widget-show", "true");
+    b.setAttribute("aria-label", "Cookie settings"); b.title = "Cookie settings"; b.innerHTML = COOKIE_ICON;
+    wrap.appendChild(b); wrap.appendChild(g);
+  });
+  (function hideGetTermsFloat() {
+    function apply() {
+      var host = document.querySelector("cookie-widget-wrapper");
+      if (!host || !host.shadowRoot) return false;
+      if (!host.shadowRoot.querySelector("style[data-slopmop]")) {
+        var st = document.createElement("style");
+        st.setAttribute("data-slopmop", "");
+        st.textContent = ".gt-cookie-reopen-btn{display:none!important}";
+        host.shadowRoot.appendChild(st);
+      }
+      return true;
+    }
+    if (apply() || !window.MutationObserver) return;
+    var mo = new MutationObserver(function () { if (apply()) mo.disconnect(); });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, 30000);
+  })();
   $$("[data-theme-set]").forEach(function (b) {
     b.addEventListener("click", function () {
       var v = b.getAttribute("data-theme-set");
