@@ -10,7 +10,7 @@ Slop Mop is a browser extension for Chrome and other Chromium browsers (Brave, O
 
 It is **not an AI detector**. It judges the writing, not who or what wrote it. A useful post written with AI survives; empty engagement bait written by a person doesn't.
 
-- Made by: Artimovo LLC, founded by Tom Frazier
+- Made by: Artimovo, LLC, founded by Tom Frazier
 - Live on: LinkedIn
 - Coming soon: X, Reddit, Facebook, Substack, Medium, email (Gmail and Outlook) and websites
 - Works in: Chrome, Brave, Opera, Comet and other Chromium browsers. Microsoft Edge, Safari and Firefox are coming soon.
