@@ -795,8 +795,6 @@ html[data-theme="dark"] .footer { background: var(--mini-feed-on); }
   font: var(--type-body); background: var(--surface-card); color: var(--text-body); }
 .send-row input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 1px; border-color: var(--blue-500); }
 .send-row input[aria-invalid="true"] { border-color: var(--red-500); }
-.send-remind { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; font: var(--type-body-sm); color: var(--text-body); cursor: pointer; }
-.send-remind input { width: 18px; height: 18px; accent-color: var(--ink-900); }
 .send-note { margin: 0; font: var(--type-body-sm); color: var(--text-faint); }
 .send-note.err { color: var(--red-700); }
 .send-done { margin: 0; padding: var(--space-5) var(--space-6); border-radius: var(--radius-sm); background: var(--surface-card); border: 1px solid var(--border-default);

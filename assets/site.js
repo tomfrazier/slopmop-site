@@ -57,9 +57,9 @@
 
   /* ---------- install buttons ([data-add]): what they say and do depends on the device (Tom, 2026-11-16) ----------
      1. Desktop: "Add to browser", to the browser's own store (unchanged).
-     2. Chrome on a phone: "Add to Desktop", to the Chrome Web Store, where a signed-in person can queue the install for
-        their computer; beside the big buttons, an "Email me the link" text link too.
-     3. Any other phone: "Send Slop Mop to my computer", which opens an email form in place (no store to go to). The API
+     2. Chrome on a phone: "Send to my computer", to the Chrome Web Store, where a signed-in person can queue the install
+        for their computer.
+     3. Any other phone: "Add to Desktop", which opens an email form in place (no store to go to; no reminder). The API
         emails a link (POST account/send-install); opened on a computer, it lands here with UTM tags, which go on to the
         Chrome Web Store link, so the store's stats count the installs the email led to. */
   (function () {
@@ -88,16 +88,15 @@
       if (any) storeUrl = tagged.toString();
     } catch (e) {}
   }
-  var LABEL = { chrome_mobile: { big: "Add to Desktop", nav: "Add to Desktop" }, other_mobile: { big: "Send Slop Mop to my computer", nav: "Send to my computer" } };
+  var LABEL = { chrome_mobile: { big: "Send to my computer", nav: "Send to my computer" }, other_mobile: { big: "Add to Desktop", nav: "Add to Desktop" } };
   function relabel(a, text) {
     /* Keep the button's icon; replace only its words. A plain text link becomes the words. */
     var nodes = Array.prototype.slice.call(a.childNodes).filter(function (n) { return n.nodeType === 3 && n.textContent.trim(); });
     if (nodes.length) { nodes.forEach(function (n, k) { n.textContent = k ? "" : text; }); } else a.appendChild(document.createTextNode(text));
   }
   var isNav = function (a) { return !!a.closest(".nav"); };
-  var isBig = function (a) { return a.classList.contains("btn") && !isNav(a); };
   $$("[data-add]").forEach(function (a) {
-    if (device !== "desktop" && LABEL[device]) relabel(a, isNav(a) ? LABEL[device].nav : a.classList.contains("btn") ? LABEL[device].big : "send Slop Mop to your computer");
+    if (device !== "desktop" && LABEL[device]) relabel(a, isNav(a) ? LABEL[device].nav : a.classList.contains("btn") ? LABEL[device].big : device === "other_mobile" ? "get Slop Mop on your computer" : "send Slop Mop to your computer");
     if (device === "other_mobile") {
       a.setAttribute("href", "#send-to-computer");
       a.removeAttribute("target");
@@ -116,16 +115,6 @@
       gaEvent("install_cta_click", { variant: device, link_location: where(a) });
       gaEvent("add_to_browser", { link_location: where(a), link_url: storeUrl, browser: browser });
     });
-    if (device === "chrome_mobile" && isBig(a)) {
-      var mail = document.createElement("button");
-      mail.type = "button"; mail.className = "text-link email-me"; mail.textContent = "Email me the link";
-      mail.setAttribute("aria-expanded", "false");
-      a.insertAdjacentElement("afterend", mail);
-      mail.addEventListener("click", function () {
-        gaEvent("install_cta_click", { variant: "email_link", link_location: where(a) });
-        openSendForm(mail, "email_link");
-      });
-    }
   });
 
   /* The inline email form, opened under the button that asked for it (one per spot). */
@@ -140,7 +129,7 @@
     var host = trigger.closest(".hero-ctas, .ctas, .sos-join-ctas") || (trigger.closest("p, li") && !trigger.classList.contains("btn") ? trigger.closest("p, li") : null) || trigger;
     var existing = host.nextElementSibling && host.nextElementSibling.classList.contains("send-form") ? host.nextElementSibling : null;
     if (isNav(trigger) && !existing) { host = $("main") || document.body; existing = $(".send-form", host); }
-    $$("[data-add], .email-me").forEach(function (b) { if (b.closest && (b.closest(".hero-ctas, .ctas, .sos-join-ctas") === host || b === trigger)) b.setAttribute("aria-expanded", "true"); });
+    $$("[data-add]").forEach(function (b) { if (b.closest && (b.closest(".hero-ctas, .ctas, .sos-join-ctas") === host || b === trigger)) b.setAttribute("aria-expanded", "true"); });
     if (existing) { var inp = $("input[type=email]", existing); if (inp) inp.focus(); return; }
     var id = "send-email-" + (++formSeq), loc = where(trigger);
     var form = document.createElement("form");
@@ -149,7 +138,6 @@
       '<label class="send-label" for="' + id + '">Your email, to open on your computer</label>' +
       '<div class="send-row"><input id="' + id + '" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>' +
       '<button class="btn btn-primary" type="submit">Send link</button></div>' +
-      '<label class="send-remind"><input type="checkbox" name="remind"> Remind me tomorrow</label>' +
       '<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
       '<p class="send-note" aria-live="polite">We\'ll only use this to send the link.</p>';
     if (host === ($("main") || document.body)) host.insertBefore(form, host.firstChild); else host.insertAdjacentElement("afterend", form);
@@ -161,15 +149,14 @@
       if (!/^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[A-Za-z]{2,}$/.test(email)) {
         note.textContent = "That address doesn't look right."; note.classList.add("err"); input.setAttribute("aria-invalid", "true"); input.focus(); return;
       }
-      var remind = $("input[name=remind]", form).checked;
       input.removeAttribute("aria-invalid"); note.classList.remove("err"); note.textContent = "Sending…"; btn.disabled = true;
       fetch(SITE.apiUrl + "/api/v1/account/send-install", {
         method: "POST", headers: { "Content-Type": "application/json" }, credentials: "omit",
-        body: JSON.stringify({ email: email, remind: remind, browser: phoneBrowser, source: loc, website: $("input[name=website]", form).value })
+        body: JSON.stringify({ email: email, remind: false, browser: phoneBrowser, source: loc, website: $("input[name=website]", form).value })
       })
         .then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { if (!r.ok) throw new Error(b.message || ""); return b; }); })
         .then(function () {
-          gaEvent("generate_lead", { lead_source: "send_to_computer", form_location: loc, remind: remind, variant: variant });
+          gaEvent("generate_lead", { lead_source: "send_to_computer", form_location: loc, variant: variant });
           var done = document.createElement("p");
           done.className = "send-done"; done.setAttribute("role", "status"); done.tabIndex = -1;
           done.textContent = "Sent. Open the email on your computer to add Slop Mop.";
