@@ -358,7 +358,7 @@
         if (next === 0) { cycles++; }
         set(order[next]);
         if (cycles >= 2 && next === 0) stop(); /* two laps, then rest on LinkedIn: no endless loop */
-      }, 1800);
+      }, 3000); /* the deck shuffle (islands.js) and the "Built for" word swap both run off each slopmop:network event */
     }
     chips.forEach(function (c) { c.addEventListener("click", function () { set(c.getAttribute("data-net"), true); }); });
     if (pauseBtn) pauseBtn.addEventListener("click", function () { if (stopped) { cycles = 0; play(); } else stop(); });
