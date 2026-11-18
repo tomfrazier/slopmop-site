@@ -141,7 +141,6 @@
 .sos-join { margin: var(--space-11) 0; padding: var(--space-10); border-radius: var(--radius-lg); background: var(--surface-page); color: var(--text-body);
   border: 1px solid var(--border-hairline); display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: var(--space-10); align-items: center; }
 .sos .sos-join h2 { margin: 0; font: var(--weight-bold) clamp(32px, 4.4vw, 48px)/1.05 var(--font-display); letter-spacing: -0.02em; color: var(--text-body); }
-.prose > section.sos-join > .sos-join-copy h2::before { content: none; }
 .sos-join h2 .hl { box-shadow: inset 0 -0.14em 0 var(--mop-500); }
 .sos-join-lede { margin: var(--space-6) 0 0; font: var(--weight-regular) var(--text-lg)/1.5 var(--font-body); color: var(--text-muted); max-width: 46ch; }
 .sos .sos-join-points { margin: var(--space-7) 0 0; padding: 0; list-style: none; display: grid; gap: var(--space-4); }
