@@ -180,7 +180,6 @@ DOWNLOAD_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 CHECK_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
               '<path d="M20 6 9 17l-5-5"/></svg>')
 JOIN = {
-    "eyebrow": "get slop mop · free",
     "headline": ["Only the posts", "worth your time."],
     "lede": "{one_in} posts in this report read as slop. Slop Mop reads your feed ahead of you and folds away the junk, whoever wrote it.",
     "points": ["Slop folds into a strip you can reopen with one click",
@@ -205,11 +204,11 @@ def join(d, c, store_url):
             '<div class="sos-join-fold"><img src="../assets/img/mark.svg" alt="" width="18" height="18"><span>This post was hidden</span><b>Show post</b></div>'
             '<div class="sos-join-post"><i></i><i></i><i></i></div></div>')
     return ('<section class="sos-join" id="get-slop-mop" data-theme="dark" aria-labelledby="sos-join-h">'
-            '<div class="sos-join-copy"><span class="eyebrow">%s</span>'
+            '<div class="sos-join-copy">'
             '<h2 id="sos-join-h">%s <span class="hl">%s</span></h2><p class="sos-join-lede">%s</p>'
             '<ul class="sos-join-points">%s</ul>'
             '<div class="sos-join-ctas"><a class="btn btn-primary" data-add href="%s">%s%s</a><span class="mono">%s</span></div></div>'
-            '%s</section>') % (e(j["eyebrow"]), e(first), e(hl), e(lede), points, e(store_url), DOWNLOAD_ICON, e(j["cta"]), e(j["note"]), feed)
+            '%s</section>') % (e(first), e(hl), e(lede), points, e(store_url), DOWNLOAD_ICON, e(j["cta"]), e(j["note"]), feed)
 
 
 def tell_rows(tells):
@@ -469,7 +468,6 @@ def report(d, c, head, header, footer, months):
 <section class="page-head ph-dark sos-head" data-theme="dark">
   <div class="wrap ph-grid">
     <div class="ph-copy">
-      <span class="eyebrow">state of slop · {period} · {sources}</span>
       <h1 class="h-1">{headline}</h1>
       <p class="lede">{dek}</p>
       <p class="sos-byline mono">covers {window}</p>
@@ -534,7 +532,6 @@ def archive(months, head, header, footer):
 <body>
 {header}<main id="main">
 <section class="page-head ph-dark" data-theme="dark"><div class="wrap">
-  <span class="eyebrow">reports</span>
   <h1 class="h-1">State of Slop and other reports</h1>
   <p class="lede">{desc}</p>
 </div></section>
