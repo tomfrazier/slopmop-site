@@ -38,6 +38,8 @@ python3 home.py && python3 pages.py && python3 askai.py && python3 content.py
 python3 check.py      # content checks: fields, broken links, banned stock phrases
 ```
 
+The privacy policy, terms of service and acceptable use policy are written and kept in GetTerms (app.getterms.io); `LEGAL` in `_build/pages.py` holds each page's hero, description and GetTerms document, and the page embeds the policy itself (direct mode, from `gettermscdn.com`, allowed in `csp.py`).
+
 `content.py` builds the content library from `_content/` and writes every sitemap. Run it last: it also refreshes the footer in the hand-edited `xl/` pages. `SLOPMOP_TODAY=2026-11-03 python3 content.py` previews the site as it will look on a later date (put it back with a plain run before committing).
 
 ## Content library

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com 'sha256-dksH4PDVcGisGtLAP6DuqmCA8MQbPLyf9dUXVzjtVJY=' 'sha256-VkKR1dKVL8jmEjA627RqmUklY2kM0gD2Rn1YUWbxp2k='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com 'sha256-dksH4PDVcGisGtLAP6DuqmCA8MQbPLyf9dUXVzjtVJY=' 'sha256-wrE7/1bZbvdZWyGqfBIY2LUEEudNYNEKTFBxMx86smQ='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh https://gettermscdn.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex">
 <style>html,body{background:transparent!important}html,body{overflow:hidden!important}body{margin:0!important;padding:1px 1px 10px!important}.sm-page{width:auto!important;max-width:none!important;margin:0!important;padding:0!important}.sm-head,.iso-legend{display:none!important}.iso-figure{margin:0!important}</style>
 <script>(function(){var R=document.documentElement;try{var P=parent.document.documentElement;if(P!==R){var s=function(){var t=P.getAttribute("data-theme");if(t)R.setAttribute("data-theme",t);else R.removeAttribute("data-theme")};s();new MutationObserver(s).observe(P,{attributes:true,attributeFilter:["data-theme"]})}}catch(e){}
 var h=function(){var f=window.frameElement;if(f&&document.body)f.style.height=Math.ceil(document.body.getBoundingClientRect().height)+"px"};addEventListener("load",h);addEventListener("resize",h);if(window.ResizeObserver)addEventListener("DOMContentLoaded",function(){new ResizeObserver(h).observe(document.body)});
@@ -1118,7 +1118,7 @@ const bench = (() => {
     if (layer) stage.setAttribute("data-gl", "");
     return layer;
   };
-  // white: 0 shows the score colour, 1 the lamp's idle white (no reading yet)
+  // white: 0 shows the score color, 1 the lamp's idle white (no reading yet)
   const drawLamp = (stage, score, level, time, white = 0) => {
     const c = colourOf(score);
     const col = c.map((v, i) => v * (1 - white) + pal[3][i] * white);
@@ -1259,7 +1259,7 @@ function step(dt) {
 
 function draw(now) {
   const run = post.phase === "run", t = run ? post.t : 99, a = post.at;
-  // the pen: where it is, the ticks it has drawn, the rows it passed by greyed out
+  // the pen: where it is, the ticks it has drawn, the rows it passed by grayed out
   const pen = run ? penAt(t) : post.phase === "clear" ? { u: D.TIP0.u, v: D.TIP0.v, ticking: -1 } : penAt(1e9);
   post.stops.forEach((stop) => {
     const i = stop.i, el = tickEls[i];

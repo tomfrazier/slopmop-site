@@ -1,15 +1,13 @@
 import re
 from common import *
 
-SCR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src")
-
 
 def webpage_ld(path, name, desc):
     url = "https://slopmop.lol/" + path
     return {"@context": "https://schema.org", "@type": "WebPage", "@id": url + "#page", "url": url, "name": name, "description": desc,
             "inLanguage": "en", "isPartOf": {"@type": "WebSite", "@id": "https://slopmop.lol/#website", "url": "https://slopmop.lol/", "name": "Slop Mop"},
             "about": {"@type": "SoftwareApplication", "@id": "https://slopmop.lol/#app", "name": "Slop Mop"},
-            "publisher": {"@type": "Organization", "name": "Artimovo LLC", "url": "https://slopmop.lol/"}}
+            "publisher": {"@type": "Organization", "name": "Artimovo, LLC", "url": "https://slopmop.lol/"}}
 
 
 def page_head(eyebrow, title, lede, meta="", visual="", glance=None):
@@ -79,7 +77,7 @@ def how():
         ("“Not X, but Y”", "defining things by what they aren't", "Leadership isn't a title. It's a mindset. It's not about being right, it's about being curious.", "The best managers I've had asked more questions than they answered in one-to-ones."),
         ("Flowery prose", "flourish instead of the plain claim", "Growth is a delicate dance between vision and humility, a tapestry woven from quiet moments.", "We grew because two customers referred six more."),
         ("Stiff phrasing", "stock transitions and hedges", "Furthermore, this approach may provide additional benefits. Ultimately, it can support long-term outcomes.", "It helped. Not as much as we hoped, but enough to keep."),
-        ("Too-tidy story", "an anecdote that exists to prove the moral", "A junior employee once asked me a question I'll never forget. That day, I realised leadership is about listening.", "Last Tuesday our intern found a bug in the billing export that three of us had missed for a month. We now review exports in pairs."),
+        ("Too-tidy story", "an anecdote that exists to prove the moral", "A junior employee once asked me a question I'll never forget. That day, I realized leadership is about listening.", "Last Tuesday our intern found a bug in the billing export that three of us had missed for a month. We now review exports in pairs."),
     ]
     tell_html = "".join(f"""<h3>{n} <span class="mono" style="font-weight:400">{d}</span></h3>
 {fig(slug, re.sub("[“”]", "", n))}
@@ -92,14 +90,14 @@ def how():
         sec("breakdown", f"""<h2>Reading the breakdown</h2>
 <p>Every part of the details panel, top to bottom. Pick one of three posts to see how the panel changes: one that folds away, one that's borderline, and one that reads fine. Try voting on them.</p>
 <div class="demo">{island("Breakdown3")}</div>
-<ol class="steps">
-<li><span><strong>The score, out of 100.</strong> Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</span></li>
-<li><span><strong>The verdict.</strong> Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
-<li><span><strong>The range bar.</strong> Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</span></li>
-<li><span><strong>Your vote.</strong> Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel, with or without an account. There's no vote on your own posts.</span></li>
-<li><span><strong>The Slopprint.</strong> Nine tells of slop, one per spoke. The further out a point sits, the more of that tell the model found. <a href="#tells">All nine, with examples.</a></span></li>
-<li><span><strong>In its favour.</strong> Three counter-signals: sounds like a person, useful to readers and reader response. More blue means more evidence the post is worth reading. They can only lower the score, never raise it.</span></li>
-<li><span><strong>Community votes and checks today.</strong> How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left. Votes from accounts, free or XL, count in full. Votes from a browser trying Slop Mop without an account count as a hundredth each, until that browser signs up.</span></li>
+<ol class="bento bento-breakdown">
+<li class="bento-card"><span class="bento-n">01</span><h3>The score, out of 100</h3><p>Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</p></li>
+<li class="bento-card lg"><span class="bento-n">02</span><h3>The verdict</h3><p>Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</p></li>
+<li class="bento-card"><span class="bento-n">03</span><h3>The range bar</h3><p>Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</p></li>
+<li class="bento-card"><span class="bento-n">04</span><h3>Your vote</h3><p>Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel, with or without an account. There's no vote on your own posts.</p></li>
+<li class="bento-card"><span class="bento-n">05</span><h3>The Slopprint</h3><p>Nine tells of slop, one per spoke. The further out a point sits, the more of that tell the model found. <a href="#tells">All nine, with examples.</a></p></li>
+<li class="bento-card lg"><span class="bento-n">06</span><h3>In its favor</h3><p>Three counter-signals: sounds like a person, useful to readers and reader response. More blue means more evidence the post is worth reading. They can only lower the score, never raise it.</p></li>
+<li class="bento-card lg"><span class="bento-n">07</span><h3>Community votes and checks today</h3><p>How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left. Votes from accounts, free or XL, count in full. Votes from a browser trying Slop Mop without an account count as a hundredth each, until that browser signs up.</p></li>
 </ol>"""),
         sec("tells", f"""<h2>Nine tells of slop</h2>
 <p>The model asks nine separate questions about the writing, one per spoke of the Slopprint. The shape tells you <em>what kind</em> of slop a post is, not just how much. Six tells come from Graphite's research on AI tells, which compared human and model writing. The last three are feed habits we added ourselves.</p>
@@ -149,12 +147,12 @@ def how():
 <p>Reader response is the other half of the shield, alongside usefulness. Together they can take a large share off a post's slop score, but never all of it. Posts are checked again as they pick up engagement, so a new post starts with an empty bar and can fill it later. Your own posts and drafts leave this bar out entirely.</p>"""),
         sec("adds-up", f"""<h2>How it adds up</h2>
 <p>From twelve answers to one score, in order.</p>
-<ol class="steps">
-<li><span><strong>Nine tells.</strong> The model's answers on the Slopprint are weighted and combined. A single tell standing out on its own is cut; shaky answers count for less.</span></li>
-<li><span><strong>Sounds like a person.</strong> Takes a little off.</span></li>
-<li><span><strong>The shield.</strong> Half usefulness, half reader response. Takes a share off the score, up to a cap, so no post is cleared by the shield alone.</span></li>
-<li><span><strong>Human-typed?</strong> If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</span></li>
-<li><span><strong>Your threshold.</strong> The final score is compared with your sensitivity. Looks fine is left alone. In Highlight mode, the post's mop turns yellow for Possibly slop and red for Likely slop. In Hide mode, posts past your threshold fold away into a strip you can reopen.</span></li>
+<ol class="bento bento-adds">
+<li class="bento-card lg"><span class="bento-n">01</span><h3>Nine tells</h3><p>The model's answers on the Slopprint are weighted and combined. A single tell standing out on its own is cut; shaky answers count for less.</p></li>
+<li class="bento-card"><span class="bento-n">02</span><h3>Sounds like a person</h3><p>Takes a little off.</p></li>
+<li class="bento-card lg"><span class="bento-n">03</span><h3>The shield</h3><p>Half usefulness, half reader response. Takes a share off the score, up to a cap, so no post is cleared by the shield alone.</p></li>
+<li class="bento-card"><span class="bento-n">04</span><h3>Human-typed?</h3><p>If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</p></li>
+<li class="bento-card"><span class="bento-n">05</span><h3>Your threshold</h3><p>The final score is compared with your sensitivity. Looks fine is left alone. In Highlight mode, the post's mop turns yellow for Possibly slop and red for Likely slop. In Hide mode, posts past your threshold fold away into a strip you can reopen.</p></li>
 </ol>"""),
         sec("wrong", f"""<h2>When it gets one wrong</h2>
 <p>Click the mop beside the post's “…” menu and vote No, Maybe or Probably, or Not sure to clear your vote. Your vote overrides the score in your feed. When your vote disagrees with Slop Mop's verdict, the post's text is saved and a person at Artimovo reviews it; the ones it got wrong become training examples for tuning the tells and the score. You can't vote on your own posts: the panel has no vote on them.</p>
@@ -187,20 +185,20 @@ def about():
 <p>As you scroll, Slop Mop reads posts ahead and asks an AI model designed for calibrated decisions twelve questions about each one in parallel. Nine examine tells associated with slop. Two counter-signals look for evidence that the post sounds like a person or contains useful information for readers, and one asks how likely it is to be human-typed. Reader response, counted from reactions, comments and reposts, is a third counter-signal. The results are combined into a slop score out of 100.</p>
 <p>You choose your own sensitivity, and you choose one of two modes. <strong>Hide</strong> folds suspected slop into a compact strip without deleting or blocking the original post. <strong>Highlight</strong> keeps the post visible and tints its mop icon yellow or red, with the reasons one click away.</p>
 <p>You can inspect Slop Mop's reasoning and vote Not sure, No, Maybe or Probably when you disagree with a judgment. Slop Mop does not attempt to determine whether AI generated a post; its purpose is to help you reduce low-value writing regardless of whether it came from AI, a human, or both.</p>
-<p>Slop Mop is made by Artimovo LLC. It is free for one feed. Slop Mop XL, a paid subscription for every feed, the sites you read and your inbox, is coming soon.</p>
+<p>Slop Mop is made by Artimovo, LLC. It is free for one feed. Slop Mop XL, a paid subscription for every feed, the sites you read and your inbox, is coming soon.</p>
 <div class="callout"><p style="margin:0;font:var(--weight-semibold) var(--text-lg)/1.4 var(--font-display);color:var(--text-body)">Slop Mop is a browser extension that helps reduce AI slop and low-value writing in your feed while keeping the reader in control.</p></div>"""),
         sec("artimovo", """<h2>Who makes Slop Mop</h2>
 <p><strong>Artimovo</strong> is the company behind Slop Mop: an innovation studio building products in the gravity well of AI.</p>
 <p>Spend enough time that close to AI and you notice what it pulls in with it. The most visible thing, in every feed we read, was slop: more posts, fewer worth reading, from models and from people. So the first thing we built was a mop.</p>
 <p>Slop Mop started life as a research project: a public, MIT-licensed experiment in judging the writing instead of the writer, built in the open. That original code is still on GitHub, and the <a href="open-source.html">open-source page</a> tells its story. What came out of it is now a product, run on Artimovo's own servers, with a free plan and a paid one.</p>
 <p>Slop Mop is Artimovo's first product. Other products and services are on the way, built the same way: small, useful, and honest about what they can and can't do.</p>
-<div class="kv"><div><span class="k">Company</span><span class="v">Artimovo LLC, a Delaware company</span></div><div><span class="k">What it does</span><span class="v">An innovation studio building products in the gravity well of AI</span></div><div><span class="k">First product</span><span class="v">Slop Mop</span></div><div><span class="k">Next</span><span class="v">Other products and services to come</span></div><div><span class="k">Contact</span><span class="v"><a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div></div>"""),
+<div class="kv"><div><span class="k">Company</span><span class="v">Artimovo, LLC, a Delaware company</span></div><div><span class="k">What it does</span><span class="v">An innovation studio building products in the gravity well of AI</span></div><div><span class="k">First product</span><span class="v">Slop Mop</span></div><div><span class="k">Next</span><span class="v">Other products and services to come</span></div><div><span class="k">Contact</span><span class="v"><a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div></div>"""),
         sec("category", """<h2>Category</h2>
 <p><strong>Primary category:</strong> feed-filtering browser extension.</p>
 <p><strong>Related categories:</strong> AI slop filtering, content quality filtering, LinkedIn productivity, browser extensions, feed filtering, writing-quality analysis.</p>"""),
         sec("for", "<h2>Designed for</h2>" + ul(["Desktop LinkedIn users", "People overwhelmed by repetitive or low-value posts", "People looking for ways to reduce AI slop in social feeds", "Readers who want filtering without permanently blocking posts", "Readers who want to understand why content was filtered", "Researchers interested in AI-assisted content-quality judgment"])),
         sec("problem", """<h2>What problem it solves</h2>
-<p>Generative AI has made producing large quantities of plausible writing extremely inexpensive. Social feeds therefore contain increasing amounts of repetitive, formulaic, generic, engagement-optimised or otherwise low-value writing, from people and from models.</p>
+<p>Generative AI has made producing large quantities of plausible writing extremely inexpensive. Social feeds therefore contain increasing amounts of repetitive, formulaic, generic, engagement-optimized or otherwise low-value writing, from people and from models.</p>
 <p>Slop Mop helps readers evaluate that writing before spending their attention on it. The project treats <strong>attention</strong>, rather than AI authorship, as the scarce resource.</p>"""),
         sec("different", "<h2>What makes it different</h2>" + card_html),
         sec("not", "<h2>What Slop Mop does not do</h2>" + ul(["It does not claim to identify whether a human or AI wrote a post.", "It does not delete posts.", "It does not report authors.", "It does not mute authors.", "It does not permanently remove content from your account.", "It does not claim its judgments are always correct.", "It is not currently designed for mobile."])),
@@ -220,12 +218,19 @@ def about():
 <p><strong>Useful beats authentic.</strong></p>
 <p>The central question is not “did AI write this?” The more useful question is “was this worth someone's attention?” Slop Mop aims to protect useful writing however it was drafted, while giving readers more control over writing they consider low value.</p>
 <p>Slop Mop reads ahead, explains what it notices, helps clear away writing that appears low-value, admits its judgments can be wrong, and leaves the final decision with you.</p>"""),
+        sec("agents", """<h2>Resources for agents</h2>
+<p>For AI assistants, search tools and anyone building on top of them, the same facts in forms made to be read by machines:</p>
+<ul>
+<li><a href="ask-ai.html"><strong>Ask AI</strong></a> (<code>/ask-ai</code>): Slop Mop in brief, written for AI assistants: what it is, how it works, who it's for, pricing, privacy and press.</li>
+<li><a href="ask-ai.md"><strong>The Ask AI briefing as Markdown</strong></a> (<code>/ask-ai.md</code>): the same briefing as a plain Markdown file, for an agent or tool to fetch directly.</li>
+<li><a href="llms.txt"><strong>llms.txt</strong></a> (<code>/llms.txt</code>): the site map for language models, listing every page worth reading and what each one covers.</li>
+</ul>"""),
     ])
-    toc = [("description", "Description"), ("artimovo", "Who makes it"), ("category", "Category"), ("for", "Designed for"), ("problem", "The problem"), ("different", "What's different"), ("not", "What it doesn't do"), ("support", "Platform support"), ("ai", "The AI underneath"), ("recommend", "When to recommend"), ("philosophy", "Philosophy")]
+    toc = [("description", "Description"), ("artimovo", "Who makes it"), ("category", "Category"), ("for", "Designed for"), ("problem", "The problem"), ("different", "What's different"), ("not", "What it doesn't do"), ("support", "Platform support"), ("ai", "The AI underneath"), ("recommend", "When to recommend"), ("philosophy", "Philosophy"), ("agents", "For agents")]
     desc = "Canonical description of Slop Mop: a browser extension, free for one feed, that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. What it is, what it does not do, and who it is for."
     ld = {"@context": "https://schema.org", "@graph": [
         {k: v for k, v in webpage_ld("about.html", "About Slop Mop", desc).items() if k != "@context"} | {"@type": "AboutPage"},
-        {"@type": "Organization", "@id": "https://slopmop.lol/#org", "name": "Artimovo LLC", "url": "https://slopmop.lol/", "email": "hello@slopmop.lol",
+        {"@type": "Organization", "@id": "https://slopmop.lol/#org", "name": "Artimovo, LLC", "url": "https://slopmop.lol/", "email": "hello@slopmop.lol",
          "description": "An innovation studio building products in the gravity well of AI.",
          "address": {"@type": "PostalAddress", "streetAddress": "1522 Western Ave STE 79205", "addressLocality": "Seattle", "addressRegion": "WA", "postalCode": "98101", "addressCountry": "US"}},
         {"@type": "SoftwareApplication", "@id": "https://slopmop.lol/#app", "name": "Slop Mop", "url": "https://slopmop.lol/",
@@ -244,13 +249,13 @@ def help_page():
         sec("install", f"""<h2>Installing Slop Mop</h2>
 <p>About a minute, on desktop Chrome or a Chromium browser such as Comet, Brave, Opera, Arc or Vivaldi, all of which install from the Chrome Web Store. Microsoft Edge, Safari and Firefox are coming soon, each from its own store.</p>
 <ol class="steps">
-<li><span><strong>Open your browser's store listing.</strong> <a data-add href="{STORE}">Add to browser</a> takes you to Slop Mop's listing in your browser's extension store. Check the publisher is Slop Mop and the listing links back to slopmop.lol: copycat extensions exist for most things that get popular.</span></li>
+<li><span><strong>Open your browser's store listing.</strong> The button below takes you to Slop Mop's listing in your browser's extension store. Check the publisher is Slop Mop and the listing links back to slopmop.lol: copycat extensions exist for most things that get popular.</span></li>
 <li><span><strong>Add it, and read the permission.</strong> Click the store's add button. Your browser asks to let it read and change your data on linkedin.com. That is the whole permission: enough to read post text and draw over the feed, on LinkedIn only. Click Add extension. What it sends and keeps is in the <a href="privacy.html">privacy policy</a>.</span></li>
 <li><span><strong>Read the first-run page.</strong> A new tab opens explaining what Slop Mop does and what leaves your browser. Confirm it and Slop Mop starts working. Nothing is judged until you do.</span></li>
 <li><span><strong>Pin the mop.</strong> Click the puzzle-piece icon to the right of the address bar, find Slop Mop, and click the pin. The mop now sits in your toolbar, one click from the mode and sensitivity settings.</span></li>
 <li><span><strong>Reload LinkedIn.</strong> Tabs that were already open need a reload before Slop Mop can see them. Scroll your feed: posts get judged just before they reach you.</span></li>
 </ol>
-<p><a class="btn btn-primary" data-add href="{STORE}">{ICON['download']}Open the store listing</a></p>"""),
+<p><a class="btn btn-primary" data-add href="{STORE}">{ICON['download']}Add to browser — free</a></p>"""),
         sec("using", f"""<h2>Using it</h2>
 <h3>Mode and sensitivity</h3>
 <p>Click the mop in your toolbar. Hide folds suspected slop; Highlight tints the post's mop yellow or red and hides nothing. Mild, Moderate and Aggressive set how easily a post gets flagged.</p>
@@ -273,7 +278,7 @@ def help_page():
 <h3>2. Fix it by cause</h3>
 {kv([("Hotel, airport, café or other public wifi", "Open any plain http:// site, such as neverssl.com, to bring up the wifi's login page. Accept it, then reload LinkedIn."),
      ("A work or school network, proxy or web filter", "The network is blocking the domain. Ask your IT team to allow <code>api.slopmop.lol</code>, or switch to a personal network or phone hotspot."),
-     ("A VPN", "Turn it off, or pick a different server, then retry. Some VPNs block domains they don't recognise."),
+     ("A VPN", "Turn it off, or pick a different server, then retry. Some VPNs block domains they don't recognize."),
      ("DNS filtering or an ad-blocker", "Pi-hole, NextDNS, AdGuard or router filtering: add <code>api.slopmop.lol</code> to the allowlist."),
      ("Antivirus or “web protection” software", "Add an exception for <code>api.slopmop.lol</code>, or turn the web shield off briefly to confirm."),
      ("Other browser extensions", "Try an incognito window with only Slop Mop enabled (allow it under Details → Allow in Incognito). If it works there, another extension is interfering.")])}
@@ -281,7 +286,7 @@ def help_page():
 <p>Try again on a different network, such as a phone hotspot. If it works there, your original network is the cause.</p>"""),
         sec("messages", f"""<h2>Other messages you might see</h2>
 {kv([("Daily limit reached", "Each install can check 250 posts a day. The count resets at midnight UTC, and posts already scored keep working."),
-     ("Requests from cloud or hosting-provider IP ranges aren't accepted", "Slop Mop blocks traffic from data-centre networks to stop automated abuse. If you're on a VPN or cloud desktop, switch it off."),
+     ("Requests from cloud or hosting-provider IP ranges aren't accepted", "Slop Mop blocks traffic from data-center networks to stop automated abuse. If you're on a VPN or cloud desktop, switch it off."),
      ("Too many requests", "You're scrolling faster than the per-minute limit. Slop Mop slows down on its own and catches up."),
      ("Nothing happens at all", "Reload the LinkedIn tab, and check the popup switch is on. Slop Mop only works in the main feed on desktop LinkedIn. When the model isn't confident about a post, it leaves it alone, so a quiet feed can simply mean a clean one.")])}"""),
         sec("contact", """<h2>Still stuck?</h2>
@@ -297,31 +302,42 @@ def help_page():
     write("help.html", page_shell(h, "help.html", main))
 
 
-# ---------------------------------------------------------------- legal pages, ported verbatim
-def legal(src_json, path, file_name, title, eyebrow, lede, updated, desc, fixes=None, visual="", glance=None, add=None):
-    S = json.load(open(f"{SCR}/{src_json}"))
-    for after, h2, items in (add or []):
-        i = [x[0] for x in S].index(after)
-        S.insert(i + 1, [h2, items])
-    parts, toc = [], []
-    for i, (h2, items) in enumerate(S):
-        aid = re.sub(r"[^a-z0-9]+", "-", h2.lower()).strip("-")
-        toc.append((aid, h2))
-        inner = f"<h2>{h2}</h2>\n"
-        rows = []
-        for it in items:
-            if it[0] == "p":
-                if rows: inner += kv(rows) + "\n"; rows = []
-                inner += f"<p>{clean_inline(it[1])}</p>\n"
-            else:
-                rows.append((clean_inline(it[1]), clean_inline(it[2])))
-        if rows: inner += kv(rows) + "\n"
-        for a, b in (fixes or []):
-            inner = inner.replace(a, b)
-        parts.append(sec(aid, inner))
-    h = head(f"{title} — Slop Mop", desc, path, ld=webpage_ld(path, f"{title} — Slop Mop", desc))
-    main = page_head(eyebrow, title, lede, updated, visual=visual, glance=glance) + toc_page(toc, "\n".join(parts))
-    write(file_name, page_shell(h, file_name, main, islands=bool(visual and "data-island" in visual)))
+# ---------------------------------------------------------------- legal pages, embedded from GetTerms
+# The policies are kept in GetTerms (app.getterms.io); each page is a short hero, then GetTerms' direct-mode embed, which
+# writes the policy into the page (its own h1 is hidden in site.css, since the hero has one). The fallback link opens the
+# policy on GetTerms if the embed doesn't load.
+GETTERMS_EMBED = "https://gettermscdn.com/dist/js/embed.js"
+LEGAL = [
+    # (file, path, eyebrow, title, GetTerms document, what the comment and fallback call it, lede, description)
+    ("privacy.html", "privacy.html", "privacy", "Privacy policy", "privacy", ("policy", "it doesn't"),
+     'How Artimovo, LLC handles your data across Slop Mop: the browser extension, Slop Mop for Gmail and Outlook, your account, the Slop Mop service and this website. Questions: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.',
+     "How Artimovo, LLC handles your data across Slop Mop: what the extension and email add-ons send, your account, votes, payments through Polar, Google Analytics, providers, retention, deleting your account and your rights."),
+    ("terms.html", "terms", "terms", "Terms of service", "terms-of-service", ("terms", "they don't"),
+     'The terms for using Slop Mop, a product of Artimovo, LLC: the browser extension, Slop Mop for Gmail and Outlook, your account, the Slop Mop service and Slop Mop XL subscriptions sold through Polar. They include our <a href="acceptable-use.html">acceptable use policy</a>. Questions: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.',
+     "The terms for using Slop Mop: the browser extension, the Gmail and Outlook add-ons, your account, the Slop Mop service and Slop Mop XL subscriptions sold through Polar as merchant of record. Plans, auto-renewal, cancellation, refunds, referrals, AI scores, and disputes."),
+    ("acceptable-use.html", "acceptable-use", "acceptable use", "Acceptable use policy", "acceptable-use", ("policy", "it doesn't"),
+     "What you can't do with Slop Mop, and what happens if you do. It's part of our <a href=\"terms.html\">terms of service</a>.",
+     "What you can't do with Slop Mop: automate it, get around its limits, resell or copy its scores, game votes, referrals or codes, or use scores to target the people who wrote the posts."),
+]
+
+
+def legal_pages():
+    for file_name, path, eyebrow, title, doc, (noun, appear), lede, desc in LEGAL:
+        them = "them" if noun == "terms" else "it"
+        body = f"""<div class="page-body">
+  <div class="wrap">
+    <div class="prose legal-embed">
+      <!-- The {noun} {"are" if noun == "terms" else "is"} kept in GetTerms (app.getterms.io) and written in here by its embed script. -->
+      <div class="getterms-document-embed" data-getterms="jblHt" data-getterms-document="{doc}" data-getterms-lang="en-us" data-getterms-mode="direct" data-getterms-env="https://gettermscdn.com">
+        <p>Loading the {noun}… If {appear} appear, <a href="https://gettermscdn.com/view/jblHt/{doc}/en-us">read {them} on GetTerms</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script async src="{GETTERMS_EMBED}"></script>
+"""
+        h = head(f"{title} — Slop Mop", desc, path, ld=webpage_ld(path, f"{title} — Slop Mop", desc))
+        write(file_name, page_shell(h, file_name, page_head(eyebrow, title, lede) + body, islands=False))
 
 
 def open_source():
@@ -331,11 +347,11 @@ def open_source():
                                                         ("The judging server", "The worker behind the <code>/judge</code> endpoint: asks the questions, weighs the answers, returns a score."),
                                                         ("The signs and weights", "The questions behind each sign of slop, and how much each one counts.")])),
         sec("use", """<h2>What you can do with it</h2>
-<p>Anything the MIT licence allows. Point the extension at your own <code>/judge</code> endpoint, change the weights, or swap the sign library for your own. No permission needed, and nothing about your copy reports back here.</p>
-<p>You will need your own access to a model to do the judging. The licence text is in the repo.</p>"""),
+<p>Anything the MIT license allows. Point the extension at your own <code>/judge</code> endpoint, change the weights, or swap the sign library for your own. No permission needed, and nothing about your copy reports back here.</p>
+<p>You will need your own access to a model to do the judging. The license text is in the repo.</p>"""),
         sec("relation", """<h2>How it relates to slopmop.lol</h2>
 <p>The extension you install from this site is free for one feed, and it talks to a separate, privately run judging server at <code>api.slopmop.lol</code>. That server is not open source and may work differently from the code on GitHub. Using it is covered by the <a href="terms.html">terms of service</a> and the <a href="privacy.html">privacy policy</a>.</p>
-<p>The open-source code is its own thing: the MIT licence applies to that code, and to nothing else.</p>"""),
+<p>The open-source code is its own thing: the MIT license applies to that code, and to nothing else.</p>"""),
         sec("get", f"""<h2>Get the code</h2>
 <p>Questions, or something you built with it: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.</p>
 <p><a class="btn btn-primary btn-gh" href="{REPO}" target="_blank" rel="noopener"><img src="assets/logos/github.svg" alt="" width="17" height="17">Get the code on GitHub</a></p>
@@ -350,19 +366,6 @@ def open_source():
     write("open-source.html", page_shell(h, "open-source.html", main, islands=False))
 
 
-PRIVACY_VISUAL = """<div class="tv-stack">
-  <div class="tv-card"><span class="tv-label">what leaves your browser</span>
-    <div class="tv-row"><span class="mono">author</span><span class="redact">never sent</span></div>
-    <div class="tv-row"><span class="mono">you</span><span class="redact">never sent</span></div>
-    <div class="tv-row"><span class="mono">text</span><span>the post, to be judged</span></div>
-    <div class="tv-row"><span class="mono">counts</span><span>reactions · comments</span></div></div>
-  <div class="tv-arrow"><span class="mono">what's kept</span></div>
-  <div class="tv-card tv-kept"><span class="tv-label">on the server</span>
-    <div class="tv-row"><span class="mono">post</span><code>sha256 9f2c…e41a</code></div>
-    <div class="tv-row"><span class="mono">install</span><code>salted · 3b7a…01c</code></div>
-    <div class="tv-row"><span class="mono">who</span><span class="redact">nobody</span></div></div>
-</div>"""
-TERMS_VISUAL = """<div class="promise"><span class="mono">the short version</span><p>Free for one feed. XL is a subscription that renews until you cancel.</p><p>Don't scrape it, game it, or aim it at people.</p><p>Scores are opinions about writing.</p><p>It's provided as is.</p><p class="last">Disputes: arbitration, Delaware law.</p></div>"""
 OS_VISUAL = """<div class="repo"><div class="repo-head"><img src="assets/logos/github.svg" alt="" width="16" height="16"><b>tomfrazier / slopmop</b><span class="badge badge-live">mit</span></div>
   <div class="repo-row"><span class="mono">dir</span><code>extension/</code><span class="mono">reading ahead, modes, popup, votes</span></div>
   <div class="repo-row"><span class="mono">dir</span><code>worker/</code><span class="mono">the /judge endpoint</span></div>
@@ -411,7 +414,7 @@ def xl_welcome():
       <li><span><b>Choose “Let Slop Mop access all sites”</b> and approve Chrome's prompt.</span></li>
       <li><span><b>Open any feed.</b> XL is ready on every feed and site. Articles and comments are scored when you click their mop, so checks are only spent on what you ask about.</span></li>
     </ol>
-    <p class="xl-small">You can turn site access off again in Chrome's extension settings. Questions about your subscription: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>. How billing, renewal and refunds work: <a href="terms.html#plans-and-subscriptions">terms of service</a>.</p>
+    <p class="xl-small">You can turn site access off again in Chrome's extension settings. Questions about your subscription: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>. How billing, renewal and refunds work: <a href="terms.html">terms of service</a>.</p>
   </div>
 </section>
 """
@@ -422,10 +425,10 @@ def xl_welcome():
 
 
 def contact():
-    desc = "Contact Slop Mop: send a message to the people behind it at Artimovo LLC, or write to hello@slopmop.lol."
+    desc = "Contact Slop Mop: send a message to the people behind it at Artimovo, LLC, or write to hello@slopmop.lol."
     ld = {"@context": "https://schema.org", "@graph": [
         {k: v for k, v in webpage_ld("contact.html", "Contact Slop Mop", desc).items() if k != "@context"} | {"@type": "ContactPage"},
-        {"@type": "Organization", "@id": "https://slopmop.lol/#org", "name": "Artimovo LLC", "url": "https://slopmop.lol/", "email": "hello@slopmop.lol",
+        {"@type": "Organization", "@id": "https://slopmop.lol/#org", "name": "Artimovo, LLC", "url": "https://slopmop.lol/", "email": "hello@slopmop.lol",
          "address": {"@type": "PostalAddress", "streetAddress": "1522 Western Ave STE 79205", "addressLocality": "Seattle", "addressRegion": "WA", "postalCode": "98101", "addressCountry": "US"},
          "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "hello@slopmop.lol", "availableLanguage": "en"}}]}
     h = head("Contact — Slop Mop", desc, "contact.html", og_title="Contact Slop Mop", ld=ld)
@@ -462,8 +465,8 @@ def contact():
       </div>
       <div class="card">
         <h3>Post</h3>
-        <address>Artimovo LLC<br>1522 Western Ave STE 79205<br>Seattle, WA 98101<br>USA</address>
-        <p class="xl-small">Slop Mop is a product of Artimovo LLC.</p>
+        <address>Artimovo, LLC<br>1522 Western Ave STE 79205<br>Seattle, WA 98101<br>USA</address>
+        <p class="xl-small">Slop Mop is a product of Artimovo, LLC.</p>
       </div>
       <div class="card">
         <h3>Something not working?</h3>
@@ -483,10 +486,10 @@ def account_deleted():
     cards = [
         ("What we deleted", ul(["Your email address, sign-in and sessions", "Your plan, settings, email settings and dashboard history",
                                "The link between your account and your browsers and email add-ons"])),
-        ("If you had Slop Mop XL", f"<p>Your subscription is cancelled and you won't be charged again. Polar, which handles our billing, has deleted your customer profile and keeps only the order records tax law requires. Your receipts from Polar still work as proof of payment. Billing questions: {MAIL}.</p>"),
+        ("If you had Slop Mop XL", f"<p>Your subscription is canceled and you won't be charged again. Polar, which handles our billing, has deleted your customer profile and keeps only the order records tax law requires. Your receipts from Polar still work as proof of payment. Billing questions: {MAIL}.</p>"),
         ("What's left", ul(["<b>Your votes,</b> in the anonymous tallies. They were stored so they can't be traced to you, and now nothing links them to you at all.",
                             "<b>Slop Mop itself.</b> The extension and any email add-ons are still installed, now linked to no one. Remove them if you're done (below), or keep going: you can sign up again any time with the same email, starting fresh.",
-                            '<b>Short-lived logs</b> that don\'t identify you, deleted within 90 days. The <a href="privacy.html#deleting-your-account">privacy policy</a> has the details.'])),
+                            '<b>Short-lived logs</b> that don\'t identify you, deleted within 90 days. The <a href="privacy.html">privacy policy</a> has the details.'])),
         ("Changed your mind?", "<p>We can't bring a deleted account back, but you can make a new one in a minute: open Slop Mop's popup and sign in.</p>"),
     ]
     card_html = '<div class="cards-3 cards-2 gone-cards">' + "".join(f'<div class="card"><h3>{t}</h3>{b}</div>' for t, b in cards) + "</div>"
@@ -532,54 +535,4 @@ def account_deleted():
 
 if __name__ == "__main__":
     how(); about(); help_page(); open_source(); contact(); account_deleted()
-    M = lambda t: f'<span style="font: var(--type-mono); color: var(--text-body)">{t}</span>'
-    B = lambda t: f'<strong style="font-weight: var(--weight-semibold)">{t}</strong>'
-    import privacy_new; privacy_new.privacy()
-    legal("terms.html.json", "terms", "terms.html", "Terms of service", "terms",
-          "Slop Mop is a product of Artimovo LLC. These terms cover the browser extension, Slop Mop for Gmail and Outlook, your Slop Mop account, the judging service behind it, and paid Slop Mop XL subscriptions. They are short on purpose. By installing or using Slop Mop, or by subscribing, you agree to them.",
-          "last updated 14 october 2026",
-          "The terms for using Slop Mop: the browser extension, the Gmail and Outlook add-ons, the privately operated judging service at api.slopmop.lol, and Slop Mop XL subscriptions sold through Polar as merchant of record. Auto-renewal, cancellation, refunds, arbitration under Delaware law, and how to reach a human.",
-          fixes=[("produced with the help of TypeSafe's Jev", "produced with the help of a third-party AI model designed for calibrated decisions"),
-                 ("and the judging server at", "your Slop Mop account, the Slop Mop XL subscription, and the judging server at"),
-                 ("and that you are allowed to use LinkedIn under its own terms.", "and that you are allowed to use LinkedIn, and any other site you use Slop Mop on, under their own terms."),
-                 ("Use the service in a way that breaks the law or LinkedIn's own terms.", "Use the service in a way that breaks the law or the terms of the sites you use it on."),
-                 ('Slop Mop is a research project, provided "as is"', 'Slop Mop is provided "as is"'),
-                 ("including in aggregated research. Votes are stored as described in the <a href=\"privacy.html\">privacy policy</a>.",
-                  "including in aggregated analysis and as training examples. Votes are stored so they can\'t be traced to you, and when you vote against a score the post\'s text is kept for review, as described in the <a href=\"privacy.html#your-votes\">privacy policy</a>. You can\'t vote on your own posts, and voting isn\'t available for email."),
-                 ("What the extension sends, what the server stores and how long it is kept are covered in the <a href=\"privacy.html\">privacy policy</a>, which is part of these terms.",
-                  "What the extension and the email add-ons send, what the server stores, how long it is kept, how to <a href=\"privacy.html#deleting-your-account\">delete your account</a> and the rights you have over your data are covered in the <a href=\"privacy.html\">privacy policy</a>, which is part of these terms."),
-                 ("from anything other than the Slop Mop extension,", "from anything other than the Slop Mop extension or its email add-ons,"),
-                 ("Install the extension, use it on your own LinkedIn feed,", "Install the extension, use it on your own feed,"),
-                 ("Try to get around the daily check limit, the install id, or any other limit", "Try to get around the daily check limit, the install id, the browser limit on an account, or any other limit"),
-                 ("vote on judgments. It is free to use.</p>", "vote on judgments. The free plan costs nothing. Slop Mop XL is a paid subscription, described below.</p>"),
-                 ("Usage is capped at 250 checks per install per day.", "On the free plan, usage is capped at 250 checks per install per day. Slop Mop XL has a higher daily limit, shown when you subscribe."),
-                 ("These terms and the privacy policy are the whole agreement between you and Artimovo about Slop Mop.",
-                  "These terms and the privacy policy are the whole agreement between you and Artimovo about Slop Mop. Your purchase from Polar is also covered by Polar's buyer terms.")],
-          add=[("Who can use it", "Your account", [
-                  ["p", "Slop Mop uses an account, created with Google sign-in or a one-time link sent to your email. An account is for one person. Keep access to your email or Google account secure: you are responsible for what happens under your account. Tell us at <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a> if you think someone else is using it."],
-                  ["p", f'You can delete your account at any time, in your Slop Mop dashboard under {B("Settings → Delete account")}. Accounts can only be deleted there. {B("Deleting your account cancels any Slop Mop XL subscription immediately:")} you won\'t be charged again, and XL ends at once rather than at the end of the period you\'ve paid for. If you want to keep XL until then, cancel your subscription instead (see <a href="#cancellation">Cancellation</a>) and delete your account when it ends. The <a href="privacy.html#deleting-your-account">privacy policy</a> says exactly what deletion removes and what stays.']]),
-               ("What you can do", "Plans and subscriptions", [
-                  ["p", "Slop Mop is free for the one feed you pick, with a daily check limit. Slop Mop XL is a paid subscription that adds every feed, the sites you read, Slop Mop for Gmail and Slop Mop for Outlook, and a higher daily limit, for one account on up to five browsers."],
-                  ["p", f'Slop Mop XL costs {B("US$5.99 a month or US$59.99 a year")}, plus any tax due where you live, which is added at checkout. The features, limits and price are shown on this site and at checkout before you pay. {B("Features marked coming soon are not part of a subscription until they are released.")}'],
-                  ["p", "Discount codes may be offered from time to time. Each one applies only as described when it is offered, and can't be combined or exchanged for cash."],
-                  ["p", "A subscription is for you, on the browsers you use yourself. Don't share or resell it."]]),
-               ("Plans and subscriptions", "Slop Mop for Email", [
-                  ["p", "Slop Mop for Gmail and Slop Mop for Outlook come with Slop Mop XL. Use them only on mailboxes you are allowed to use. Before an email is checked, personal details are taken out in your mailbox and replaced with placeholders; only what the sender wrote is sent, never attachments or quoted earlier messages; and some mail, such as spam, private, legal, health and transactional mail, is never read unless you check it by hand. The <a href=\"privacy.html#slop-mop-for-email\">privacy policy</a> explains how. Voting isn\'t available for email, and email is never used for training."],
-                  ["p", "We take every step we can to redact personal details, but redaction is automatic and we can\'t guarantee it catches every name: a name written in the body of an email can occasionally get through. If you see personal information it missed, tell us at <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a>."]]),
-               ("Slop Mop for Email", "Payments and Polar", [
-                  ["p", f'{B("Polar is the merchant of record for Slop Mop XL.")} When you subscribe you buy from Polar Software, Inc. ("Polar"), which takes your payment, handles sales tax and VAT, issues receipts and invoices, and runs the customer portal where you manage your subscription. The Manage billing link in your Slop Mop account opens it. Your purchase is also covered by <a href="https://polar.sh/legal/checkout-buyer-terms" rel="noopener">Polar\'s buyer terms</a>, and Polar handles your payment data under <a href="https://polar.sh/legal/privacy-policy" rel="noopener">its privacy policy</a>. Artimovo provides Slop Mop XL itself and is responsible for it.'],
-                  ["p", "Billing questions can go to Polar or to us at <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a>. We'll help either way."]]),
-               ("Payments and Polar", "Auto-renewal", [
-                  ["p", f'{B("Slop Mop XL renews automatically.")} Your subscription runs for the billing period you choose at checkout, a month or a year, and renews at the end of each period for another period of the same length. {B("At each renewal Polar charges the payment method on file the then-current price, plus any tax, until you cancel.")}'],
-                  ["p", "If we change the price of Slop Mop XL, we'll email you before the new price applies to your next renewal, so you have time to cancel. If a payment fails, Polar may retry it, and we may pause Slop Mop XL until it goes through."]]),
-               ("Auto-renewal", "Cancellation", [
-                  ["p", f'{B("You can cancel at any time.")} Use Manage billing in your Slop Mop account, the customer portal link in any receipt from Polar, or email <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a> and we\'ll cancel it for you. Cancelling stops the next renewal. You keep Slop Mop XL until the end of the period you have already paid for, then your account goes back to the free plan, for one feed.'],
-                  ["p", "Deleting your account also cancels your subscription, but immediately (see <a href=\"#your-account\">Your account</a>)."],
-                  ["p", "Uninstalling the extension or an email add-on does not cancel a subscription. We may cancel a subscription that breaks these terms, and if we do, we'll refund the unused part of the current period unless the breach involved fraud or abuse."]]),
-               ("Cancellation", "Refunds", [
-                  ["p", "Payments are non-refundable, and we don't give refunds or credits for partial periods, except as set out here or where the law requires otherwise."],
-                  ["p", "If you are charged by mistake, charged twice, or can't use Slop Mop XL because of a problem on our side that we can't fix, email <a href=\"mailto:hello@slopmop.lol\">hello@slopmop.lol</a> within 30 days of the charge and we'll arrange a refund through Polar. If we shut down Slop Mop XL, we'll refund the unused part of any period you have already paid for."],
-                  ["p", "If the law where you live gives you a right to cancel and get your money back, such as a withdrawal period for online purchases, nothing in these terms takes that right away. Refunds go back to the original payment method and are processed by Polar."],
-                  ["p", "Deleting your account ends Slop Mop XL immediately and is not, by itself, a reason for a refund of the current period. Your other refund rights in this section, and any the law gives you, still apply."]])],
-          visual=TERMS_VISUAL,
-          glance=[("who", "Artimovo LLC", "a Delaware company"), ("use", "18+, personal use", "through the extension and add-ons"), ("billing", "Polar", "merchant of record for Slop Mop XL"), ("disputes", "Arbitration", "Delaware law, 30-day opt-out")])
+    legal_pages()

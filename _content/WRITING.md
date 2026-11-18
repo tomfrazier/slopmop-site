@@ -83,7 +83,7 @@ Also: no em-dash chains (one em dash per paragraph at most), no rhetorical-quest
 - Hide mode folds likely slop into a one-line strip you can reopen; Highlight mode marks it. Sensitivity Mild/Moderate/Aggressive. Vote to overrule (not on email). It never deletes, reports, mutes or blocks anything.
 - Twelve questions: nine tells (scroll-stopper, engagement bait, hype words, empty praise, no-catch promises, "not X, but Y", flowery prose, stiff phrasing, too-tidy story) and three counter-signals (sounds like a person, useful to readers, reader response).
 - **Free** for the one feed you pick, with 250 checks a day. **Slop Mop XL**: US$5.99 a month or US$59.99 a year, adds every feed, the sites you read, Gmail and Outlook, and a higher daily limit, on up to five browsers.
-- Made by Artimovo LLC, founded by Tom Frazier.
+- Made by Artimovo, LLC, founded by Tom Frazier.
 - Never mention Jev or TypeSafe. Call the model "an AI model designed for calibrated decisions". Don't link to graphite.io.
 - Don't invent statistics, user counts, quotes, testimonials or study results. The only Slop Mop numbers you may use are the ones above and in ask-ai.md.
 - Don't give medical, legal or financial advice. Terms touching mental health say so plainly and point to qualified help where relevant.

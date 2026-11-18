@@ -568,7 +568,6 @@
      sends Consent Mode updates to Google Analytics. Footer "Cookie settings" buttons carry
      data-gt-cookie-widget-show, which the banner wires up. When Analytics is off, clear any _ga
      cookies set before, since Consent Mode stops new ones but leaves old ones behind. ---------- */
-  try { localStorage.removeItem("slopmop:consent"); } catch (e) {} // the old banner's choice
   function clearGaCookies() {
     document.cookie.split(";").forEach(function (c) {
       var n = c.split("=")[0].trim();

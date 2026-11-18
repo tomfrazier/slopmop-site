@@ -383,7 +383,7 @@ def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", l
          "isPartOf": {"@id": SITE + "#website"}, "breadcrumb": {"@id": url + "#crumbs"},
          "about": {"@type": "SoftwareApplication", "@id": SITE + "#app", "name": "Slop Mop"},
          "author": {"@type": "Organization", "name": "Slop Mop", "url": SITE},
-         "publisher": {"@type": "Organization", "name": "Artimovo LLC", "url": SITE}},
+         "publisher": {"@type": "Organization", "name": "Artimovo, LLC", "url": SITE}},
         dict(crumbs_ld(crumbs), **{"@id": url + "#crumbs"})]}
     if ld_extra:
         ld_extra.setdefault("image", imgs[0]["url"])
@@ -728,7 +728,7 @@ def calculators():
 
 
 # ---------------------------------------------------------------- sitemaps
-CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "open-source", "media", "contact.html",
+CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "acceptable-use", "open-source", "media", "contact.html",
         # the brief for AI assistants: an orphan HTML page plus its Markdown source, and llms.txt
         "ask-ai", "ask-ai.md", "llms.txt"]
 # Children another script writes: .github/scripts/state_of_slop/build.py owns sitemap-reports.xml. Listed in the index, never

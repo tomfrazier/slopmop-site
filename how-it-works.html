@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us https://gettermscmp.com/cookie-consent/widget/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us 'sha256-Cj7LoFzR8ovLghf6TGulJ6l0/sxmllOTPmtrvp4ucpE=' 'sha256-fJppYTg3TvQNaKGRbe/aVA1KUvOKfjFRsvMiwdIvAsU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://formspree.io https://api.slopmop.lol https://staging-api.slopmop.lol https://gettermscmp.com; frame-src 'self' https://polar.sh https://*.polar.sh https://gettermscdn.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <!-- GetTerms cookie banner: sets the Consent Mode v2 defaults, so it must be the first script on the page -->
 <link rel="preload" href="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true" as="script">
 <script src="https://gettermscmp.com/cookie-consent/blocker/37bab0f5-83d0-4079-a8a9-4116c0f8f963/en-us?auto=true"></script>
@@ -78,7 +78,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Artimovo LLC",
+    "name": "Artimovo, LLC",
     "url": "https://slopmop.lol/"
   },
   "dateModified": "2026-10-23"
@@ -130,14 +130,14 @@
 <h2>Reading the breakdown</h2>
 <p>Every part of the details panel, top to bottom. Pick one of three posts to see how the panel changes: one that folds away, one that's borderline, and one that reads fine. Try voting on them.</p>
 <div class="demo"><div data-island="Breakdown3"></div></div>
-<ol class="steps">
-<li><span><strong>The score, out of 100.</strong> Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</span></li>
-<li><span><strong>The verdict.</strong> Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</span></li>
-<li><span><strong>The range bar.</strong> Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</span></li>
-<li><span><strong>Your vote.</strong> Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel, with or without an account. There's no vote on your own posts.</span></li>
-<li><span><strong>The Slopprint.</strong> Nine tells of slop, one per spoke. The further out a point sits, the more of that tell the model found. <a href="#tells">All nine, with examples.</a></span></li>
-<li><span><strong>In its favour.</strong> Three counter-signals: sounds like a person, useful to readers and reader response. More blue means more evidence the post is worth reading. They can only lower the score, never raise it.</span></li>
-<li><span><strong>Community votes and checks today.</strong> How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left. Votes from accounts, free or XL, count in full. Votes from a browser trying Slop Mop without an account count as a hundredth each, until that browser signs up.</span></li>
+<ol class="bento bento-breakdown">
+<li class="bento-card"><span class="bento-n">01</span><h3>The score, out of 100</h3><p>Higher means more slop-like. It's worked out after the three counter-signals have taken their share off, so it's the final number. It never arrives alone: the signs behind it are always listed.</p></li>
+<li class="bento-card lg"><span class="bento-n">02</span><h3>The verdict</h3><p>Looks fine, Possibly slop or Likely slop, each with a sentence saying why. When the model isn't confident, the verdict is Not sure and the post is left alone. Where the lines fall depends on your sensitivity setting (Mild, Moderate or Aggressive).</p></li>
+<li class="bento-card"><span class="bento-n">03</span><h3>The range bar</h3><p>Where this post sits between fine and likely. In Hide mode a line marks where posts start folding away.</p></li>
+<li class="bento-card"><span class="bento-n">04</span><h3>Your vote</h3><p>Not sure, No, Maybe or Probably. Not sure is where every post starts. A vote overrides the model's score in your feed and dims it in the panel, with or without an account. There's no vote on your own posts.</p></li>
+<li class="bento-card"><span class="bento-n">05</span><h3>The Slopprint</h3><p>Nine tells of slop, one per spoke. The further out a point sits, the more of that tell the model found. <a href="#tells">All nine, with examples.</a></p></li>
+<li class="bento-card lg"><span class="bento-n">06</span><h3>In its favor</h3><p>Three counter-signals: sounds like a person, useful to readers and reader response. More blue means more evidence the post is worth reading. They can only lower the score, never raise it.</p></li>
+<li class="bento-card lg"><span class="bento-n">07</span><h3>Community votes and checks today</h3><p>How other Slop Mop readers voted on this post, and how many of your 250 daily checks are left. Votes from accounts, free or XL, count in full. Votes from a browser trying Slop Mop without an account count as a hundredth each, until that browser signs up.</p></li>
 </ol>
 </section>
 <section id="tells">
@@ -167,7 +167,7 @@
 <figure class="tell-fig"><iframe src="assets/figures/stiff-phrasing.html" loading="lazy" scrolling="no" title="Stiff phrasing: interactive figure. Drag across it, or use the arrow keys, to go from clean to sloppy."></iframe></figure>
 <div class="kv"><div><span class="k"><span class="badge badge-soon" style="background:var(--mop-100);color:var(--mop-900);border-color:var(--mop-500)">slop</span></span><span class="v">Furthermore, this approach may provide additional benefits. Ultimately, it can support long-term outcomes.</span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v">It helped. Not as much as we hoped, but enough to keep.</span></div></div><h3>Too-tidy story <span class="mono" style="font-weight:400">an anecdote that exists to prove the moral</span></h3>
 <figure class="tell-fig"><iframe src="assets/figures/too-tidy-story.html" loading="lazy" scrolling="no" title="Too-tidy story: interactive figure. Drag across it, or use the arrow keys, to go from clean to sloppy."></iframe></figure>
-<div class="kv"><div><span class="k"><span class="badge badge-soon" style="background:var(--mop-100);color:var(--mop-900);border-color:var(--mop-500)">slop</span></span><span class="v">A junior employee once asked me a question I'll never forget. That day, I realised leadership is about listening.</span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v">Last Tuesday our intern found a bug in the billing export that three of us had missed for a month. We now review exports in pairs.</span></div></div>
+<div class="kv"><div><span class="k"><span class="badge badge-soon" style="background:var(--mop-100);color:var(--mop-900);border-color:var(--mop-500)">slop</span></span><span class="v">A junior employee once asked me a question I'll never forget. That day, I realized leadership is about listening.</span></div><div><span class="k"><span class="badge badge-live">fine</span></span><span class="v">Last Tuesday our intern found a bug in the billing export that three of us had missed for a month. We now review exports in pairs.</span></div></div>
 </section>
 <section id="person">
 <p class="mono">counter-signal 1 of 3</p>
@@ -215,12 +215,12 @@
 <section id="adds-up">
 <h2>How it adds up</h2>
 <p>From twelve answers to one score, in order.</p>
-<ol class="steps">
-<li><span><strong>Nine tells.</strong> The model's answers on the Slopprint are weighted and combined. A single tell standing out on its own is cut; shaky answers count for less.</span></li>
-<li><span><strong>Sounds like a person.</strong> Takes a little off.</span></li>
-<li><span><strong>The shield.</strong> Half usefulness, half reader response. Takes a share off the score, up to a cap, so no post is cleared by the shield alone.</span></li>
-<li><span><strong>Human-typed?</strong> If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</span></li>
-<li><span><strong>Your threshold.</strong> The final score is compared with your sensitivity. Looks fine is left alone. In Highlight mode, the post's mop turns yellow for Possibly slop and red for Likely slop. In Hide mode, posts past your threshold fold away into a strip you can reopen.</span></li>
+<ol class="bento bento-adds">
+<li class="bento-card lg"><span class="bento-n">01</span><h3>Nine tells</h3><p>The model's answers on the Slopprint are weighted and combined. A single tell standing out on its own is cut; shaky answers count for less.</p></li>
+<li class="bento-card"><span class="bento-n">02</span><h3>Sounds like a person</h3><p>Takes a little off.</p></li>
+<li class="bento-card lg"><span class="bento-n">03</span><h3>The shield</h3><p>Half usefulness, half reader response. Takes a share off the score, up to a cap, so no post is cleared by the shield alone.</p></li>
+<li class="bento-card"><span class="bento-n">04</span><h3>Human-typed?</h3><p>If the post reads as typed by a person, the score is softened a little. This step can only lower the score; being AI-assisted never adds to it.</p></li>
+<li class="bento-card"><span class="bento-n">05</span><h3>Your threshold</h3><p>The final score is compared with your sensitivity. Looks fine is left alone. In Highlight mode, the post's mop turns yellow for Possibly slop and red for Likely slop. In Hide mode, posts past your threshold fold away into a strip you can reopen.</p></li>
 </ol>
 </section>
 <section id="wrong">
@@ -270,6 +270,7 @@
         <li><a href="patterns/">The nine tells</a></li>
         <li><a href="index.html#networks">Networks</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="open-source.html">Open source</a></li>
       </ul></div>
       <div><h3>Resources</h3><ul>
         <li><a href="glossary/">Glossary</a></li>
@@ -280,6 +281,7 @@
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="media.html">Media</a></li>
+        <li><a href="/state-of-slop">Latest Slop Report</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div><h3>Slop Mop for</h3><ul>
@@ -306,10 +308,10 @@
       <div><h3>Legal</h3><ul>
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="terms.html">Terms of service</a></li>
-        <li><a href="open-source.html">Open source</a></li>
+        <li><a href="acceptable-use.html">Acceptable use</a></li>
         <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
       </ul></div>
-      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+      <div class="theme-pick" role="radiogroup" aria-label="Color theme" hidden>
         <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
         <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
         <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
@@ -325,7 +327,7 @@
         <a data-social="github" aria-label="Slop Mop on GitHub"><img src="assets/logos/github.svg" alt="" width="15" height="15"></a>
         <a data-social="producthunt" aria-label="Slop Mop on Product Hunt"><img src="assets/logos/producthunt.svg" alt="" width="15" height="15"></a>
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+      <span>© <span data-year>2026</span> Artimovo, LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
     </div>
   </div>
 </footer>
