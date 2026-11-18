@@ -55,29 +55,81 @@
   function PanelPeek(p) { return h(Scaled, { w: 340, h: p.h || 330, k: p.k || 0.72 }, h(DS.WhyCard, p.card)); }
 
   var SITES = window.SlopMopSites || {}, ORDER = window.SlopMopSiteOrder || [];
+  var CALM = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
   function Win(p) {
     var n = SITES[p.net]; if (!n) return null;
     var logo = n.logo || p.net;
-    return h("div", { className: "win " + p.cls, "aria-hidden": p.cls === "front" ? null : "true" },
+    return h("div", { className: "win " + p.cls, "aria-hidden": p.front ? null : "true", ref: p.wref },
       h("div", { className: "win-bar" },
         h("span", { className: "win-dots" }, h("i"), h("i"), h("i")),
         h("span", { className: "win-url" }, h("img", { src: "assets/logos/" + logo + ".svg", alt: "" }), n.url),
         n.live ? null : h("span", { className: "badge badge-soon" }, "coming soon"),
         h("span", { className: "win-ext" }, h(DS.MopIcon, { surface: "toolbar", state: "red", count: 9, label: "Slop Mop" }))),
-      p.cls === "front" ? h("div", { className: "win-body mock" }, h(n.render)) : h("div", { style: { height: 480 } }));
+      p.live ? h("div", { key: "body", className: "win-body mock" }, h(n.render)) : h("div", { key: "ph", style: { height: 480 } }));
+  }
+  /* The hero deck: one window per network, keyed so it keeps its element as it moves back-2 → back-1 → front and CSS can
+     animate the move. The old front stays as a "leaving" window for its exit; backs that drop out fade in place ("dropped").
+     Windows render in creation order so React never moves a node (a moved node loses its running transition). */
+  var ROLES = ["front", "back-1", "back-2"], ENTER = ["enter-f", "enter-b1", "enter-b2"];
+  function placeDeck(s, net, animate) {
+    var i = ORDER.indexOf(net), L = ORDER.length, want = [net, ORDER[(i + 1) % L], ORDER[(i + 2) % L]];
+    s.wins.forEach(function (w) {
+      if (w.out) return;
+      var r = want.indexOf(w.net);
+      if (r < 0) { w.out = w.role === "front" ? "leaving" : "dropped"; return; }
+      if (r === 0 && w.role !== "front" && animate) w.reveal = true;
+      w.role = ROLES[r]; want[r] = null;
+    });
+    want.forEach(function (n, r) {
+      if (!n) return;
+      s.seq++;
+      s.wins.push({ key: n + "-" + s.seq, net: n, role: ROLES[r], enter: animate ? ENTER[r] : "", reveal: animate && r === 0, out: "" });
+    });
+    s.net = net;
   }
   function NetworkStack(p) {
-    var s = useState(p.start || "linkedin"), net = s[0];
+    var ref = React.useRef(null), tick = useState(0), measured = React.useRef(null), ro = React.useRef(null);
+    if (!ref.current) { ref.current = { seq: 0, wins: [], net: null, frontEl: null, settle: 0, moving: false }; placeDeck(ref.current, ORDER.indexOf(p.start) >= 0 ? p.start : ORDER[0] || "linkedin", false); }
+    var s = ref.current;
+    function redraw() { tick[1](function (x) { return x + 1; }); }
     useEffect(function () {
-      function on(e) { s[1](e.detail.net); }
+      function on(e) {
+        var net = e.detail && e.detail.net;
+        if (!SITES[net] || ORDER.indexOf(net) < 0 || net === s.net) return;
+        var calm = !!(CALM && CALM.matches);
+        placeDeck(s, net, true);
+        s.wins.forEach(function (w) { /* each outgoing window removes itself once its exit is over */
+          if (w.out && !w.timer) w.timer = setTimeout(function () { s.wins = s.wins.filter(function (x) { return x !== w; }); redraw(); }, calm ? 200 : 460);
+        });
+        s.moving = !calm;
+        clearTimeout(s.settle); /* once everything has landed, drop the one-shot classes */
+        s.settle = setTimeout(function () { s.wins.forEach(function (w) { w.enter = ""; w.reveal = false; }); s.moving = false; redraw(); }, 800);
+        redraw();
+      }
       document.addEventListener("slopmop:network", on);
-      return function () { document.removeEventListener("slopmop:network", on); };
+      return function () {
+        document.removeEventListener("slopmop:network", on);
+        clearTimeout(s.settle); s.wins.forEach(function (w) { clearTimeout(w.timer); });
+        if (ro.current) ro.current.disconnect();
+      };
     }, []);
-    var i = ORDER.indexOf(net), L = ORDER.length;
-    return h(React.Fragment, null,
-      h(Win, { key: "b2", net: ORDER[(i + 2) % L], cls: "back-2" }),
-      h(Win, { key: "b1", net: ORDER[(i + 1) % L], cls: "back-1" }),
-      h(Win, { key: "f", net: net, cls: "front" }));
+    /* every window is absolute, so the island holds the front window's height (no layout shift as windows trade places) */
+    React.useLayoutEffect(function () {
+      var el = s.frontEl; if (!el || el === measured.current) return;
+      measured.current = el;
+      var host = el.parentNode;
+      function size() { if (el.offsetHeight) host.style.setProperty("--win-h", el.offsetHeight + "px"); }
+      size();
+      if (window.ResizeObserver) { if (ro.current) ro.current.disconnect(); ro.current = new ResizeObserver(size); ro.current.observe(el); }
+    });
+    return h(React.Fragment, null, s.wins.map(function (w) {
+      var cls = w.out === "leaving" ? "leaving" : w.role + (w.out ? " dropped" : "");
+      if (w.enter) cls += " " + w.enter;
+      if (w.reveal) cls += " reveal";
+      if (s.moving) cls += " moving";
+      var front = !w.out && w.role === "front";
+      return h(Win, { key: w.key, net: w.net, cls: cls, front: front, live: front || w.out === "leaving", wref: front ? function (el) { if (el) s.frontEl = el; } : null });
+    }));
   }
 
   /* ---------- the nine tells ---------- */
