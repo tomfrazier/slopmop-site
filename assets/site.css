@@ -119,14 +119,40 @@ a:hover { text-decoration: underline; }
 .chip[aria-pressed="true"] { border-color: var(--text-body); box-shadow: 0 0 0 1px var(--text-body); }
 .chip .badge { height: 18px; }
 .hero-meta { margin-top: var(--space-6); }
-.stack { position: relative; max-width: 1080px; margin: var(--space-11) auto 0; padding-top: 44px; min-height: 560px; text-align: left; }
+.stack { position: relative; max-width: 1080px; margin: var(--space-11) auto 0; padding-top: 44px; min-height: 560px; text-align: left; --deck-ease: cubic-bezier(0.16, 1, 0.3, 1); --deck-exit: cubic-bezier(0.4, 0, 1, 1); }
+.stack > [data-island="NetworkStack"] { height: var(--win-h, 662px); } /* every window is absolute; the island holds the front window's height (set from JS) */
 .stack-pause { position: absolute; right: 0; top: 0; }
 
-/* browser windows in the hero stack */
-.win { position: absolute; left: 0; right: 0; top: 44px; margin: 0 auto; background: var(--surface-card); border: 1px solid var(--border-default); border-radius: var(--radius-lg); box-shadow: var(--shadow-raised); overflow: hidden; transition: transform var(--dur-slow) var(--ease-standard), top var(--dur-slow) var(--ease-standard); }
-.win.back-1 { transform: scale(0.95); top: 22px; z-index: 1; }
-.win.back-2 { transform: scale(0.9); top: 0; z-index: 0; }
-.win.front { position: relative; z-index: 2; }
+/* browser windows in the hero stack: a deck that shuffles on each network change (islands.js NetworkStack). Poses are transforms
+   from a top origin, matching the old top/scale offsets: back-1 sits 53px above the front at 95%, back-2 62px above at 90%. */
+.win { position: absolute; left: 0; right: 0; top: 88px; margin: 0 auto; background: var(--surface-card); border: 1px solid var(--border-default); border-radius: var(--radius-lg); box-shadow: var(--shadow-raised); overflow: hidden;
+  transform-origin: 50% 0; transition: transform 600ms var(--deck-ease), opacity 600ms var(--deck-ease); }
+.win.front { z-index: 2; }
+.win.back-1 { transform: translateY(-53px) scale(0.95); z-index: 1; transition-delay: 40ms; }
+.win.back-2 { transform: translateY(-62px) scale(0.9); z-index: 0; transition-delay: 80ms; }
+.win.leaving { z-index: 3; transform: translateY(36px) scale(1.03); opacity: 0; pointer-events: none; transition: transform 420ms var(--deck-exit), opacity 200ms cubic-bezier(0.2, 0, 0, 1); } /* fades out fast so it never overlaps the incoming content */
+.win.dropped { opacity: 0; pointer-events: none; transition: opacity 420ms var(--deck-exit); } /* a back window that drops out after a chip jump fades in place */
+.win.moving { will-change: transform, opacity; }
+.win.enter-b2, .win.enter-b1 { animation: win-enter 600ms var(--deck-ease) 80ms backwards; }
+.win.enter-b1 { animation-delay: 40ms; }
+.win.enter-f { animation: win-enter-front 600ms var(--deck-ease) backwards; }
+@keyframes win-enter { from { transform: translateY(-71px) scale(0.85); opacity: 0; } } /* the old "scale(0.85); top: -22px" */
+@keyframes win-enter-front { from { transform: translateY(-53px) scale(0.95); opacity: 0; } } /* from back-1's pose */
+/* the new front's content rises in; the posts in its feed column follow 40ms apart (capped at the sixth) */
+.win.reveal .win-body, .win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > * { animation: win-reveal 360ms var(--deck-ease) 240ms both; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(2) { animation-delay: 280ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(3) { animation-delay: 320ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(4) { animation-delay: 360ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(5) { animation-delay: 400ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(n+6) { animation-delay: 440ms; }
+@keyframes win-reveal { from { opacity: 0; transform: translateY(10px); } }
+@keyframes win-fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { /* no movement: the front's content crossfades, the backs just swap */
+  .win, .win.dropped { transition: none; }
+  .win.enter-b2, .win.enter-b1, .win.enter-f, .win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > * { animation: none; }
+  .win.leaving { transform: none; transition: opacity 150ms linear; }
+  .win.reveal .win-body { animation: win-fade 150ms linear both; }
+}
 .win-bar { display: flex; align-items: center; gap: var(--space-5); height: 40px; padding: 0 var(--space-6); border-bottom: 1px solid var(--border-hairline); background: var(--surface-page); }
 .win-dots { display: flex; gap: 6px; } .win-dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-200); }
 .win-url { flex: 1; max-width: 420px; margin: 0 auto; height: 24px; border-radius: var(--radius-sm); background: var(--surface-card); border: 1px solid var(--border-hairline); font: var(--type-mono); display: flex; align-items: center; gap: 6px; padding: 0 10px; color: var(--text-faint); }
@@ -141,6 +167,7 @@ a:hover { text-decoration: underline; }
   .win-body .win-panel { display: none; }
   .win-body { height: auto; max-height: 560px; }
   .stack { min-height: 0; }
+  .stack > [data-island="NetworkStack"] { height: var(--win-h, 602px); }
 }
 
 /* generic mock post (per-network skins below) */
@@ -412,7 +439,8 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 @media (max-width: 640px) {
   .win.back-1, .win.back-2, .win-dots { display: none; }
   .stack { padding-top: 48px; }
-  .win.front { top: 0; }
+  .win { top: 48px; }
+  .win.enter-f { animation: none; } /* backs are hidden: only the exit and the content reveal run */
   .win-body { padding: var(--space-5); }
 }
 
