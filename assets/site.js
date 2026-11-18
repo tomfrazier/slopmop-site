@@ -412,19 +412,6 @@
     requestAnimationFrame(frame);
   });
 
-  /* ---------- quote: words darken with scroll; fully dark near the top ---------- */
-  var rv = document.querySelector("[data-reveal]");
-  if (rv) {
-    var ws = Array.prototype.slice.call(rv.querySelectorAll("span"));
-    var paint = function () {
-      var r = rv.getBoundingClientRect(), vh = window.innerHeight;
-      var p = reduceMotion ? 1 : Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (vh * 0.85 - vh * 0.2)));
-      var n = Math.round(p * ws.length);
-      ws.forEach(function (w, k) { w.classList.toggle("on", k < n); });
-    };
-    window.addEventListener("scroll", paint, { passive: true }); window.addEventListener("resize", paint); paint();
-  }
-
   /* ---------- counter-signal bars grow once ---------- */
   var grows = $$("[data-grow]");
   if (grows.length) {
