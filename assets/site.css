@@ -130,7 +130,7 @@ a:hover { text-decoration: underline; }
 .win.front { z-index: 2; }
 .win.back-1 { transform: translateY(-53px) scale(0.95); z-index: 1; transition-delay: 40ms; }
 .win.back-2 { transform: translateY(-62px) scale(0.9); z-index: 0; transition-delay: 80ms; }
-.win.leaving { z-index: 3; transform: translateY(36px) scale(1.03); opacity: 0; pointer-events: none; transition: transform 420ms var(--deck-exit), opacity 420ms var(--deck-exit); }
+.win.leaving { z-index: 3; transform: translateY(36px) scale(1.03); opacity: 0; pointer-events: none; transition: transform 420ms var(--deck-exit), opacity 200ms cubic-bezier(0.2, 0, 0, 1); } /* fades out fast so it never overlaps the incoming content */
 .win.dropped { opacity: 0; pointer-events: none; transition: opacity 420ms var(--deck-exit); } /* a back window that drops out after a chip jump fades in place */
 .win.moving { will-change: transform, opacity; }
 .win.enter-b2, .win.enter-b1 { animation: win-enter 600ms var(--deck-ease) 80ms backwards; }
@@ -139,12 +139,12 @@ a:hover { text-decoration: underline; }
 @keyframes win-enter { from { transform: translateY(-71px) scale(0.85); opacity: 0; } } /* the old "scale(0.85); top: -22px" */
 @keyframes win-enter-front { from { transform: translateY(-53px) scale(0.95); opacity: 0; } } /* from back-1's pose */
 /* the new front's content rises in; the posts in its feed column follow 40ms apart (capped at the sixth) */
-.win.reveal .win-body, .win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > * { animation: win-reveal 360ms var(--deck-ease) 180ms both; }
-.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(2) { animation-delay: 220ms; }
-.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(3) { animation-delay: 260ms; }
-.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(4) { animation-delay: 300ms; }
-.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(5) { animation-delay: 340ms; }
-.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(n+6) { animation-delay: 380ms; }
+.win.reveal .win-body, .win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > * { animation: win-reveal 360ms var(--deck-ease) 240ms both; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(2) { animation-delay: 280ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(3) { animation-delay: 320ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(4) { animation-delay: 360ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(5) { animation-delay: 400ms; }
+.win.reveal :is(.win-feed, .li-feed, .x-tl, .rd-feed, .fb-feed, .ss-article, .md-feed, .em-list, .ws-results) > :nth-child(n+6) { animation-delay: 440ms; }
 @keyframes win-reveal { from { opacity: 0; transform: translateY(10px); } }
 @keyframes win-fade { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { /* no movement: the front's content crossfades, the backs just swap */
