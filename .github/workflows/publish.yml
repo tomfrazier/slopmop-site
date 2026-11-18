@@ -1,0 +1,72 @@
+# Rebuilds the site just after midnight Pacific time so scheduled pages go live on their date. A guide in
+# _content/guides/ with a publish_date of today or earlier (Pacific date) gets its page, its hub links and its
+# sitemap entry; nothing else changes.
+# If the build changes anything it's committed to main, GitHub Pages deploys it, and the IndexNow workflow then
+# submits the new pages. Run it by hand (Actions → Publish scheduled pages → Run workflow) to publish early.
+name: Publish scheduled pages
+
+on:
+  # GitHub schedules run on UTC. 12:07am Pacific is 07:07 UTC while daylight saving time is on (PDT) and 08:07 UTC
+  # when it's off (PST), so both run and the first step lets through only the one that falls at 00:xx Pacific.
+  # GitHub can start scheduled runs some minutes late at busy times.
+  schedule:
+    - cron: "7 7 * * *"
+    - cron: "7 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only run at 12:07am Pacific
+        id: when
+        run: |
+          hour=$(TZ=America/Los_Angeles date +%H)
+          echo "Pacific time now: $(TZ=America/Los_Angeles date '+%Y-%m-%d %H:%M %Z')"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$hour" != "00" ]; then
+            echo "Not midnight in Pacific time; the other scheduled run handles today."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.when.outputs.go == 'true'
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        if: steps.when.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+      - name: Build the site
+        if: steps.when.outputs.go == 'true'
+        working-directory: _build
+        run: python3 home.py && python3 pages.py && python3 askai.py && python3 content.py
+      - name: Commit and push anything that changed
+        if: steps.when.outputs.go == 'true'
+        id: commit
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing scheduled for today."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --cached --stat
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish scheduled pages for $(TZ=America/Los_Angeles date +%F)"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Ask GitHub Pages to deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages build request failed; the push should still trigger a deploy."
