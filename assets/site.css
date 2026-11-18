@@ -502,9 +502,6 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 .repo-head .badge { margin-left: auto; }
 .repo-row { display: grid; grid-template-columns: 30px 90px 1fr; gap: 10px; align-items: center; padding: 10px var(--space-6); border-bottom: 1px solid var(--border-hairline); font: var(--type-body-sm); }
 .repo-row:last-child { border-bottom: 0; }
-.prose { counter-reset: sec; }
-.prose > section { counter-increment: sec; }
-.prose > section > h2::before, .prose > section > .mono:first-child + h2::before { content: counter(sec, decimal-leading-zero); display: block; font: var(--type-mono-label); font-size: var(--text-2xs); letter-spacing: var(--tracking-caps); color: var(--mop-700); margin-bottom: 8px; }
 .prose > section > h2 { padding-top: 0; }
 .prose .kv { border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 0 var(--space-6); background: var(--surface-card); box-shadow: var(--shadow-card); }
 .prose .kv > div:last-child { border-bottom: 0; }
