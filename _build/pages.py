@@ -10,7 +10,7 @@ def webpage_ld(path, name, desc):
             "publisher": {"@type": "Organization", "name": "Artimovo, LLC", "url": "https://slopmop.lol/"}}
 
 
-def page_head(eyebrow, title, lede, meta="", visual="", glance=None):
+def page_head(title, lede, meta="", visual="", glance=None):
     m = f'\n      <p class="mono">{meta}</p>' if meta else ""
     v = f'\n    <div class="ph-visual">{visual}</div>' if visual else ""
     g = ""
@@ -19,7 +19,6 @@ def page_head(eyebrow, title, lede, meta="", visual="", glance=None):
     return f"""<section class="page-head ph-dark" data-theme="dark">
   <div class="wrap ph-grid">
     <div class="ph-copy">
-      <span class="eyebrow">{eyebrow}</span>
       <h1 class="h-1">{title}</h1>
       <p class="lede">{lede}</p>{m}
     </div>{v}
@@ -166,7 +165,7 @@ def how():
     vis = island("PanelPeek", {"k": 0.78, "h": 560, "card": {"verdict": "likely", "score": 72, "mode": "hide", "tells": {"engagementBait": 0.81, "contrastFraming": 0.74, "formulaicHook": 0.55, "emptyEvaluation": 0.42}, "humanVoice": 0.18, "usefulness": 0.12, "readerResponse": 0.4, "interactive": False}})
     glance = [("01", "Twelve questions", "nine tells, two counter-signals and a human-typed check, asked at once"), ("02", "One score out of 100", "never alone: the signs behind it are always shown"),
               ("03", "Three counter-signals", "they can only pull a score down"), ("04", "Your vote wins", "Not sure, No, Maybe or Probably overrides the model in your feed")]
-    main = page_head("how it works", "How Slop Mop judges a post", "Click the mop on any post and you get a breakdown: a score, a verdict, the Slopprint and three blue bars. Here's what each part means, what moves it, and what it can't tell you.", visual=vis, glance=glance) + toc_page(toc, body)
+    main = page_head("How Slop Mop judges a post", "Click the mop on any post and you get a breakdown: a score, a verdict, the Slopprint and three blue bars. Here's what each part means, what moves it, and what it can't tell you.", visual=vis, glance=glance) + toc_page(toc, body)
     write("how-it-works.html", page_shell(h, "how-it-works.html", main))
 
 
@@ -239,7 +238,7 @@ def about():
          "privacyPolicy": "https://slopmop.lol/privacy.html", "termsOfService": "https://slopmop.lol/terms"}]}
     h = head("About Slop Mop — canonical product information", desc, "about.html", og_title="About Slop Mop", ld=ld)
     vis = '<div class="promise"><span class="mono">the contract</span><p>We\'ll read ahead.</p><p>We\'ll tell you what we noticed.</p><p>We\'ll help clear away what looks like slop.</p><p>We\'ll never pretend our judgment is perfect.</p><p class="last">And you\'ll always get the final say.</p></div>'
-    main = page_head("canonical product information", "About Slop Mop", "Slop Mop is a browser extension from Artimovo, free for one feed, that helps people identify and reduce low-value writing and AI slop in their feeds. It evaluates posts before they reach your view, explains the signs behind its judgment, and lets you hide, highlight, reveal or override suspected slop. <strong style=\"color:var(--text-body)\">It is not an AI-content detector. It judges the writing, not who, or what, wrote it.</strong>", visual=vis) + toc_page(toc, body)
+    main = page_head("About Slop Mop", "Slop Mop is a browser extension from Artimovo, free for one feed, that helps people identify and reduce low-value writing and AI slop in their feeds. It evaluates posts before they reach your view, explains the signs behind its judgment, and lets you hide, highlight, reveal or override suspected slop. <strong style=\"color:var(--text-body)\">It is not an AI-content detector. It judges the writing, not who, or what, wrote it.</strong>", visual=vis) + toc_page(toc, body)
     write("about.html", page_shell(h, "about.html", main))
 
 
@@ -298,7 +297,7 @@ def help_page():
     h = head("Help — Slop Mop", desc, "help.html", ld=webpage_ld("help.html", "Slop Mop help", desc))
     vis = '<div class="ph-popup">' + island("Popup") + '</div>'
     glance = [("install", "About a minute", "from your browser's extension store"), ("controls", "Hide or Highlight", "Mild, Moderate or Aggressive"), ("limit", "250 checks a day", "resets at midnight UTC"), ("people", "A human reads email", "hello@slopmop.lol")]
-    main = page_head("help", "Need a hand with the mop?", "Getting Slop Mop installed, what the controls do, and what to try when a post can't be scored.", visual=vis, glance=glance) + toc_page(toc, body)
+    main = page_head("Need a hand with the mop?", "Getting Slop Mop installed, what the controls do, and what to try when a post can't be scored.", visual=vis, glance=glance) + toc_page(toc, body)
     write("help.html", page_shell(h, "help.html", main))
 
 
@@ -308,21 +307,21 @@ def help_page():
 # policy on GetTerms if the embed doesn't load.
 GETTERMS_EMBED = "https://gettermscdn.com/dist/js/embed.js"
 LEGAL = [
-    # (file, path, eyebrow, title, GetTerms document, what the comment and fallback call it, lede, description)
-    ("privacy.html", "privacy.html", "privacy", "Privacy policy", "privacy", ("policy", "it doesn't"),
+    # (file, path, title, GetTerms document, what the comment and fallback call it, lede, description)
+    ("privacy.html", "privacy.html", "Privacy policy", "privacy", ("policy", "it doesn't"),
      'How Artimovo, LLC handles your data across Slop Mop: the browser extension, Slop Mop for Gmail and Outlook, your account, the Slop Mop service and this website. Questions: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.',
      "How Artimovo, LLC handles your data across Slop Mop: what the extension and email add-ons send, your account, votes, payments through Polar, Google Analytics, providers, retention, deleting your account and your rights."),
-    ("terms.html", "terms", "terms", "Terms of service", "terms-of-service", ("terms", "they don't"),
+    ("terms.html", "terms", "Terms of service", "terms-of-service", ("terms", "they don't"),
      'The terms for using Slop Mop, a product of Artimovo, LLC: the browser extension, Slop Mop for Gmail and Outlook, your account, the Slop Mop service and Slop Mop XL subscriptions sold through Polar. They include our <a href="acceptable-use.html">acceptable use policy</a>. Questions: <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a>.',
      "The terms for using Slop Mop: the browser extension, the Gmail and Outlook add-ons, your account, the Slop Mop service and Slop Mop XL subscriptions sold through Polar as merchant of record. Plans, auto-renewal, cancellation, refunds, referrals, AI scores, and disputes."),
-    ("acceptable-use.html", "acceptable-use", "acceptable use", "Acceptable use policy", "acceptable-use", ("policy", "it doesn't"),
+    ("acceptable-use.html", "acceptable-use", "Acceptable use policy", "acceptable-use", ("policy", "it doesn't"),
      "What you can't do with Slop Mop, and what happens if you do. It's part of our <a href=\"terms.html\">terms of service</a>.",
      "What you can't do with Slop Mop: automate it, get around its limits, resell or copy its scores, game votes, referrals or codes, or use scores to target the people who wrote the posts."),
 ]
 
 
 def legal_pages():
-    for file_name, path, eyebrow, title, doc, (noun, appear), lede, desc in LEGAL:
+    for file_name, path, title, doc, (noun, appear), lede, desc in LEGAL:
         them = "them" if noun == "terms" else "it"
         body = f"""<div class="page-body">
   <div class="wrap">
@@ -337,7 +336,7 @@ def legal_pages():
 <script async src="{GETTERMS_EMBED}"></script>
 """
         h = head(f"{title} — Slop Mop", desc, path, ld=webpage_ld(path, f"{title} — Slop Mop", desc))
-        write(file_name, page_shell(h, file_name, page_head(eyebrow, title, lede) + body, islands=False))
+        write(file_name, page_shell(h, file_name, page_head(title, lede) + body, islands=False))
 
 
 def open_source():
@@ -361,7 +360,7 @@ def open_source():
     desc = "The original Slop Mop extension and judging server are MIT licensed and public on GitHub. Read the code, fork it, and point the extension at your own /judge endpoint."
     h = head("Open source — Slop Mop", desc, "open-source", ld=webpage_ld("open-source", "Open source — Slop Mop", desc))
     vis = OS_VISUAL
-    main = page_head("open source", "The open-source version", "Slop Mop started as an MIT-licensed project, and that code is still public. The extension, the judging server and the sign library are all there to read, fork and run yourself.",
+    main = page_head("The open-source version", "Slop Mop started as an MIT-licensed project, and that code is still public. The extension, the judging server and the sign library are all there to read, fork and run yourself.",
                      f'<a class="btn btn-primary btn-gh" href="{REPO}" target="_blank" rel="noopener" style="margin-top:var(--space-4)"><img src="assets/logos/github.svg" alt="" width="17" height="17">View the code on GitHub</a>', visual=vis) + toc_page(toc, body)
     write("open-source.html", page_shell(h, "open-source.html", main, islands=False))
 
@@ -403,10 +402,9 @@ def xl_welcome():
     desc = "You're on Slop Mop XL. A receipt is on its way from Polar. One last step: let Slop Mop read the sites you visit so the mop can reach every feed."
     h = head("Welcome to Slop Mop XL", desc, "xl/welcome", ld=webpage_ld("xl/welcome", "Welcome to Slop Mop XL", desc), robots="noindex, nofollow")
     steps = "".join(f'<li class="{c}"><span class="mono">{n:02d}</span>{t}</li>' for n, (t, c) in enumerate([("Plan", "done"), ("Checkout", "done"), ("Access", "now")], 1))
-    main = page_head("slop mop xl", "You're on Slop Mop XL.", "A receipt is on its way from Polar. You can switch plans, update your card or cancel any time from <b>Manage billing</b> in your Slop Mop account.", visual=f'<ol class="xl-steps" aria-label="Upgrade steps">{steps}</ol>') + f"""
+    main = page_head("You're on Slop Mop XL.", "A receipt is on its way from Polar. You can switch plans, update your card or cancel any time from <b>Manage billing</b> in your Slop Mop account.", visual=f'<ol class="xl-steps" aria-label="Upgrade steps">{steps}</ol>') + f"""
 <section class="section">
   <div class="wrap xl-next">
-    <span class="eyebrow">one last step</span>
     <h2 class="h-1">Your mop can reach everywhere.</h2>
     <p class="lede">To mop more than one feed, Chrome needs your OK for Slop Mop to read the pages you visit. It reads post and article text to score it, and never stores it.</p>
     <ol class="xl-how">
@@ -432,7 +430,7 @@ def contact():
          "address": {"@type": "PostalAddress", "streetAddress": "1522 Western Ave STE 79205", "addressLocality": "Seattle", "addressRegion": "WA", "postalCode": "98101", "addressCountry": "US"},
          "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "hello@slopmop.lol", "availableLanguage": "en"}}]}
     h = head("Contact — Slop Mop", desc, "contact.html", og_title="Contact Slop Mop", ld=ld)
-    main = page_head("contact", "Say hello to the mop.", "Questions, bugs, a post it got wrong, or an idea for what it should mop next. A person reads every message and replies by email.") + f"""
+    main = page_head("Say hello to the mop.", "Questions, bugs, a post it got wrong, or an idea for what it should mop next. A person reads every message and replies by email.") + f"""
 <section class="section">
   <div class="wrap contact-grid">
     <form class="contact-form" data-contact novalidate>
@@ -493,7 +491,7 @@ def account_deleted():
         ("Changed your mind?", "<p>We can't bring a deleted account back, but you can make a new one in a minute: open Slop Mop's popup and sign in.</p>"),
     ]
     card_html = '<div class="cards-3 cards-2 gone-cards">' + "".join(f'<div class="card"><h3>{t}</h3>{b}</div>' for t, b in cards) + "</div>"
-    main = page_head("account", "Your Slop Mop account is deleted", "That's done. Your account and the personal data in it are gone, and you've been signed out.") + f"""
+    main = page_head("Your Slop Mop account is deleted", "That's done. Your account and the personal data in it are gone, and you've been signed out.") + f"""
 <section class="section">
   <div class="wrap gone">
     {card_html}
