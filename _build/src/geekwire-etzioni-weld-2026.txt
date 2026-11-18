@@ -1,0 +1,81 @@
+
+Etzioni on AI: The colorful and cranky language of the AI era, from slop to slap
+by Oren Etzioni & Daniel S. Weld on Oct 16, 2026 at 1:01 pmOctober 17, 2026 at 8:20 am
+	Share 
+ Facebook
+ X (Twitter)
+ LinkedIn
+ Email
+The AI slap: forwarding AI-generated text without reading it. (GeekWire Illustration / GPT-6)
+We’ve all encountered the phrase AI slop, but what’s an AI slap? A meat proxy? Chatfishing? Or agentsomnia? Following up on my glossary of AI, which demystified AI jargon, Prof. Dan Weld is joining me to shine a light on the nontechnical lingo of the AI era. We also sneak in a few phrases that should exist to capture the AI zeitgeist, circa 2026.
+We introduce more than 35 phrases, so we’ve divided them into sections to keep the broligarchy from crowding enshittification.
+AI slop
+“Digital content of low quality that is produced usually in quantity by means of artificial intelligence,” which is how Merriam-Webster defined slop, its 2025 word of the year. Shrimp Jesus is the specimen, Christ fused with crustaceans, posted to Facebook by the thousands.
+AI cream is our name for the rare opposite, superb writing authored with the help of AI. We hope that over time the cream will rise to the top and the slop will sink.
+Until that happens, we have the meat proxy, “a person who forwards AI-generated text, code, or other output without reading, understanding, or validating it.” We call the action of sending AI-generated text blindly an AI slap. It stings.
+Your AI Slop Bores Me is a website where you type a prompt and a randomly chosen human answers it while pretending to be a chatbot. Fifty million views in a week, which tells you how badly people wanted to say something back.
+AI suspicion is our name for the nagging feeling that what you’re reading was AI generated. You could also call it Turing tingle or AI-dar.
+AI shaming is the accusation that follows, attacking someone’s work by insinuating a machine wrote it. The paper that named it is subtitled “Birth of a Classist Slur in Knowledge Work,” and it argues that the accusations fall hardest on racial minorities and on writers whose first language isn’t English.
+See also: tasteslop, workslop, slopaganda.
+Deepfake
+A video or recording altered by machine learning so that a real person appears to say or do something they never said or did. Named in late 2017 for the Reddit user who called himself deepfakes. The word we all use for AI deception descends from one anonymous pornographer’s handle.
+The liar’s dividend is the payoff a real wrongdoer collects once any authentic recording can be waved off as a fake. The damage isn’t the fake video. It’s that real video stops counting.
+Counterfeit people was Daniel Dennett’s last argument, that machines able to pass as human are “the most dangerous artifacts in human history, capable of destroying not just economies but human freedom itself.” He wanted them outlawed and watermarked like banknotes.
+Tilly Norwood is one of them, an AI actress unveiled at the Zurich Film Festival in September 2025. Her makers said talent agents wanted to sign her. Emily Blunt, shown a picture, said “Good Lord, we’re screwed” and told the agencies to stop.
+Most of the damage doesn’t need AI at all. A cheapfake is manipulation made with cheap software or none at all. Chatfishing is using AI to write your messages on a dating app, where the con used to be a fake photo and is now a rented personality.
+The Nerd Reich
+A name for the Silicon Valley billionaires and venture capitalists who think democracy is finished and want corporate rule in its place. Gil Durán’s book, subtitled Silicon Valley Fascism and the War on Democracy, traces the idea to a 1997 book, The Sovereign Individual, and to Peter Thiel’s circle, which Durán says believes “technology means democracy is an obsolete software system.”
+Durán didn’t coin the phrase. Someone in the crypto world told him they’d been using it for years.
+Durán’s target is the broligarchy, “a small group of extremely wealthy men, particularly those in technology, who wield significant political and economic power.” The word sat on Twitter from 2009 and went nowhere until Carole Cadwalladr wrote about “a new super-class of broligarchs” in July 2024.
+See also: technofeudalism.
+Brain rot
+The mental deterioration that comes from consuming too much junk online, chosen by Oxford University Press as its 2024 word of the year. Thoreau got there first, in Walden in 1854, complaining that England was busy curing the potato-rot while nobody was curing the brain-rot.
+Dead internet theory is the supply side, “a theory that a lot of the internet is no longer created by real people but rather by bots and other AI tools.” It started as a forum post in January 2021 and is quietly turning into a description.
+Enshittification is Cory Doctorow’s three-stage decay: “first, they are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves.”
+AI fatigue is what’s left over, “the exhaustion or the sense of being overwhelmed by the rapid proliferation and constant engagement with artificial intelligence technologies.” The phrase has been drifting through the trade press since 2023 with no author attached; the definition above comes from Route Fifty, a trade publication for state and local government.
+Vibe coding
+Andrej Karpathy’s February 2025 coinage, crowned Collins Dictionary’s word of the year for 2025, is “fully giving in to the vibes, embrac[ing] exponentials, and forget[ting] that the code even exists”—accepting whatever diff the AI hands you without reading it.
+Promptatory is our word, styled on “purgatory,” for the state of being trapped in an unending edit-and-re-prompt loop with an AI system. You fix the bug the AI introduced, and in fixing it, the AI introduces two more, each smaller and more absurd than the last. Progress is hard earned: you close in on “done” like the runner in Zeno’s paradox, forever eating the remaining distance in half. Promptatory is vibe coding’s hangover: the vibe wears off, and the rereading begins.
+A related condition we dub agentsomnia is the chronic inability to rest or disconnect from work, driven by the haunting feeling that your autonomous software or AI agents are stalled without your feedback. The Wall Street Journal calls it agent FOMO.
+Feel the AGI
+An OpenAI rallying cry. AGI is the point where a machine can do any intellectual task a person can, and the phrase became a general exclamation for the moment a model does something that rearranges your sense of what’s coming. Ilya Sutskever used it inside the company and posted it publicly in 2022. It works as celebration and as diagnosis.
+P(doom) runs in the other direction: “your personal probability that AI ends the world, stated as a number so the vibe feels like math.” It started as shorthand among a small online community in 2022 and now gets asked at dinner parties.
+Talk that outruns the technology comes in other flavors too.
+Bragawatts, a unit of measurement for boasting, is “the practice of AI companies boasting about very large projects to create excitement and attract investment, even though many of these projects are never completed,” as Britain’s Cambridge Dictionary put it in January 2026.
+Vibe revenue does the same thing to the income statement, “money or funding that an AI company is given because people are excited about the potential of AI, rather than because the company’s products are already successful.”
+Parasocial
+A one-sided relationship with someone who doesn’t know you exist. Donald Horton and Richard Wohl coined it in 1956 about television viewers, and Britain’s Cambridge Dictionary made it the 2025 word of the year, citing celebrities, influencers, and chatbots. A seventy-year-old term about Ed Sullivan turns out to describe your relationship with ChatGPT.
+AI addiction is what happens when the one-sided relationship takes over. A 2026 study sorted it into three kinds: escapist roleplay, where people come to prefer the world the chatbot builds; pseudosocial companionship, where it replaces the relationships; and the epistemic rabbit hole, compulsive question-asking that crowds out everything else.
+The researchers blame the design and call the chatbot an AI genie, a thing that gives you exactly anything you want with minimal effort.
+AI psychosis is the far end, “a phenomenon wherein individuals reportedly develop or experience worsening psychosis, such as paranoia and delusions, in connection with their use of chatbots.” The Danish psychiatrist Søren Dinesen Østergaard suggested the term in a 2023 editorial in the journal Schizophrenia Bulletin. It isn’t a recognized clinical diagnosis, and we should say so.
+See also: wireborn.
+Nearly every phrase above names a problem. Slop, shaming, deepfakes, brain rot, psychosis: what the AI era has added to English so far is a vocabulary of complaint. There’s still no common word for AI doing something well. We’ve offered AI cream. If you have a candidate for a phrase we’re missing, please send it to us.
+                                                                        Oren Etzioni is a professor emeritus at the University of Washington, founding CEO of the Allen Institute for AI (Ai2), founder of AI House (formerly AI2 Incubator) and a venture partner at Madrona.Daniel S. Weld is Chief Scientist and General Manager of Semantic Scholar at the Allen Institute for Artificial Intelligence and Professor Emeritus of Computer Science & Engineering at the University of Washington.
+Get ready to dive deeper into the AWS services you build on
+In just a few weeks, AWS re:Invent brings advanced and expert-level sessions on the services you build on every day, from serverless and containers to databases and developer tools. Go hands-on with new launches the same week they’re announced, and hear directly from the engineers who built them. Experience the depth you won’t find anywhere else.
+Register now for AWS re:Invent →
+Click for more about underwritten and sponsored content on GeekWire.
+	Share 
+ Facebook
+ X (Twitter)
+ LinkedIn
+ Email
+Previous StoryTraffic data pioneer Inrix to be acquired by Allstate’s Arity after more than two decades                                    
+Next StoryAmazon’s new Bee AI devices have a bystander problem, says former AWS security engineer                                    
+                                                                     Filed Under: Tech  Tagged With: AI slop • chatbots • Dan Weld • Deepfakes • Etzioni on AI • Oren Etzioni • vibe coding
+Latest Stories
+                                    Read All Stories
+GeekWire Newsletters
+Subscribe to GeekWire's free newsletters to catch every headline
+                                                Email address
+                                                Subscribe
+                                                    GeekWire Daily - Top headlines daily
+                                                    GeekWire Weekly - Most-read stories of the week, delivered Sunday
+                                                    Breaking News Alerts - Important news as it happens
+                                                    GeekWire Startups - News, analysis, insights from the Pacific Northwest startup ecosystem, delivered Friday
+                                                    GeekWire Mid-week Update — Most-read stories so far this week, delivered Wednesday
+                                                    GeekWire Partner Content — Special offers and sponsored content from GeekWire partners
+Send Us a Tip
+Have a scoop that you'd like GeekWire to cover? Let us know.
+                                        Send Us a Tip
+    

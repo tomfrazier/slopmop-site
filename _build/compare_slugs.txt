@@ -1,0 +1,24 @@
+slop-mop-vs-deslop	DeSlop
+slop-mop-vs-cringe-guard	Cringe Guard
+slop-mop-vs-pangram	Pangram
+slop-mop-vs-gptzero	GPTZero
+slop-mop-vs-originality-ai	Originality.ai
+slop-mop-vs-kagi-slopstop	Kagi SlopStop
+slop-mop-vs-duckduckgo-ai-image-filter	DuckDuckGo "Hide AI-Generated Images"
+slop-mop-vs-slop-evader	Slop Evader
+slop-mop-vs-ublock-origin	uBlock Origin
+slop-mop-vs-news-feed-eradicator	News Feed Eradicator
+slop-mop-vs-unhook	Unhook
+slop-mop-vs-social-fixer	Social Fixer
+slop-mop-vs-sanebox	SaneBox
+slop-mop-vs-unroll-me	Unroll.Me
+slop-mop-vs-ad-blockers	Ad blockers
+slop-mop-vs-spam-filters	Spam filters
+slop-mop-vs-ai-detectors	AI detectors
+slop-mop-vs-keyword-filters	Keyword and mute-word filters
+slop-mop-vs-linkedin-feed-controls	LinkedIn's own feed controls
+slop-mop-vs-unfollowing-and-muting	Unfollowing and muting people
+slop-mop-vs-rss-readers	RSS and feed readers
+slop-mop-vs-email-triage-tools	Newsletter unsubscribe and email triage tools
+slop-mop-vs-feed-blockers	Feed blockers and hiders
+slop-mop-vs-reading-modes-and-summarisers	Browser reading modes and AI summarisers
