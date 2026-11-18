@@ -38,7 +38,7 @@ FAQ = [
     ("What leaves my browser?",
      ["The post text and its public engagement counts go to api.slopmop.lol to be judged. Your name and the author's name are never sent. The server keeps a one-way hash of the text, not the text, unless your vote disagrees with its verdict: then that post's text is kept for review and training. The <a href=\"privacy.html\">privacy policy</a> lists everything it stores."]),
     ("Does Slop Mop read my email?",
-     ["Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. We take every step we can to catch names written in the body of an email, but can't guarantee every one. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The <a href=\"privacy.html#slop-mop-for-email\">privacy policy</a> has the details."]),
+     ["Only with Slop Mop XL, through Slop Mop for Gmail and Slop Mop for Outlook, and only the emails you open or ask it to check. Personal details are taken out in your mailbox before anything is sent: names, email and street addresses, phone numbers, links, card and bank numbers, ID numbers and dates of birth become placeholders like [NAME]. We take every step we can to catch names written in the body of an email, but can't guarantee every one. Only what the sender wrote is sent, never attachments, signatures or the earlier messages quoted below. Spam, private, legal, health and transactional mail is skipped unless you check it by hand. Email text is never stored, voting isn't available for email, and email is never used for training. The <a href=\"privacy.html\">privacy policy</a> has the details."]),
     ("Can Slop Mop see who I email?",
      ["No. Slop Mop never sees who an email is from or who it's to: the sender and recipient names and addresses are taken out in your mailbox before anything is sent. Slop Mop judges the writing in an email, never who sent it or who it's for."]),
     ("Is Slop Mop open source?",
@@ -57,7 +57,7 @@ def ld():
             {"@type": "WebSite", "@id": "https://slopmop.lol/#website", "url": "https://slopmop.lol/", "name": "Slop Mop",
              "description": "A browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown.",
              "inLanguage": "en", "publisher": {"@id": "https://slopmop.lol/#org"}},
-            {"@type": "Organization", "@id": "https://slopmop.lol/#org", "name": "Artimovo LLC", "url": "https://slopmop.lol/",
+            {"@type": "Organization", "@id": "https://slopmop.lol/#org", "name": "Artimovo, LLC", "url": "https://slopmop.lol/",
              "email": "hello@slopmop.lol", "founder": {"@id": "https://slopmop.lol/#tom"}, "brand": {"@type": "Brand", "name": "Slop Mop"}},
             {"@type": "Person", "@id": "https://slopmop.lol/#tom", "name": "Tom Frazier", "url": "https://tomfrazier.com",
              "sameAs": ["https://linkedin.com/in/tomfrazier"]},
@@ -87,7 +87,7 @@ PRESS = [("theregister", "The Register", "news", "https://www.theregister.com/ai
          ("ycombinator", "Hacker News", "discussion", "https://news.ycombinator.com/item?id=49819820"),
          ("producthunt", "Product Hunt", "launch", "https://www.producthunt.com/products/slop-mop"),
          ("googlechrome", "Chrome Web Store", "listing", STORE)]
-TOKENS = ("100M+", "tokens of posts Slop Mop has read so far", "2026-10-23")
+TOKENS = ("200M+", "tokens of posts Slop Mop has read so far", "2026-11-16")
 
 
 # (logo, name, live). Edge, Safari and Firefox are coming soon.
@@ -104,13 +104,12 @@ def build():
 
     hero = f"""<section class="hero" data-networks>
   <div class="wrap">
-    <span class="eyebrow">a bad-writing detector, not an ai detector</span>
-    <h1 class="h-hero" style="margin-top:var(--space-7)">Only the posts <span class="hl">worth your time.</span></h1>
+    <h1 class="h-hero">Only the posts <span class="hl">worth your time.</span></h1>
     <p class="h-sub">Built for <span class="net-word" style="--c:#0A66C2"><span class="net-logo"><img src="assets/logos/linkedin.svg" alt=""></span><span class="word">LinkedIn</span><span class="stop">.</span></span></p>
     <p class="lede">Slop Mop reads ahead and folds away the junk, whether a person or an AI wrote it.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" data-add href="{STORE}">{ICON['download']}Add to browser — free</a>
-      <button class="btn btn-secondary" type="button" data-tour>{ICON['play']}Take a tour</button>
+      <button class="text-link tour-link" type="button" data-tour><span class="play" aria-hidden="true">▶︎</span><span class="label">Take a tour</span></button>
     </div>
     <div class="chips chips-grid" role="group" aria-label="Choose a network">
 {chips}
@@ -144,19 +143,6 @@ def build():
 </section>
 """
 
-    qtext = "My feed had turned into something I scrolled past instead of read. Some of it was AI, plenty of it was people, and all of it cost attention. I built Slop Mop to read ahead for me, show its working, and let me overrule it whenever it's wrong."
-    words = " ".join(f"<span>{w}</span>" for w in qtext.split(" "))
-    quote = f"""<section class="quote">
-  <div class="wrap">
-    <span class="eyebrow">why this exists</span>
-    <blockquote class="reveal" data-reveal style="margin-top:var(--space-7)">{words}</blockquote>
-    <div class="quote-foot">
-      <a class="btn btn-secondary" href="about.html">About Slop Mop</a>
-      <div class="who"><img src="assets/img/tom.webp" alt="Tom Frazier" width="48" height="48"><div><b>Tom Frazier</b><span>Founder, Slop Mop</span></div></div>
-    </div>
-  </div>
-</section>
-"""
 
     assets = [
         ("Fold strip", "Past your threshold, a post folds into a 44px strip. One click unfolds it in place.", "FoldStrip", {"tone": "red", "density": "compact", "label": "This post was hidden", "stats": {"today": 17, "week": 86, "month": 341, "total": 2904}, "style": {"width": "100%"}}, "foldstrip"),
@@ -165,7 +151,7 @@ def build():
         ("Your vote", "Not sure, No, Maybe or Probably. Your vote overrides the model in your own feed.", "Vote", {"value": "probably", "style": {"width": "100%"}}, "votecontrol"),
         ("Sensitivity", "Mild, Moderate or Aggressive: how easily a post gets flagged.", "Sensitivity", {"value": "moderate", "showThreshold": False}, "sensitivitytoggle"),
         ("Hide or Highlight", "Fold suspected slop away, or leave everything visible and tint its mop.", "Mode", {"value": "hide"}, "segmentedcontrol"),
-        ("Four verdicts", "Every stop carries a word, so no verdict is colour-only.", "Verdicts", None, "badge"),
+        ("Four verdicts", "Every stop carries a word, so no verdict is color-only.", "Verdicts", None, "badge"),
         ("The details panel", "Click the mop for the score, strongest signs, the Slopprint and your vote.", "PanelPeek", {"k": 0.62, "h": 400, "card": {"verdict": "likely", "score": 78, "mode": "hide", "tells": {"manufacturedNarrative": 0.79, "contrastFraming": 0.72, "formulaicHook": 0.66}, "humanVoice": 0.12, "usefulness": 0.15, "readerResponse": 0.38, "interactive": False}}, "whycard"),
         ("Hidden today", "The popup keeps count, so you can see how much attention you got back.", "Tiles", None, "stattile"),
         ("Checking", "Posts are scored just before you reach them. This is what a post looks like mid-check.", "NoticePanel", {"kind": "scoring", "title": "Checking this post", "body": "Reading the writing. This takes a moment."}, "noticepanel"),
@@ -193,7 +179,10 @@ def build():
       </ul>
     </div>
     <div class="turn">
-      <p>So Slop Mop reads ahead and does the deciding. Here's the kit it uses.</p>
+      <div class="turn-copy">
+        <h2 class="h-2">Slop Mop: the solution to Internet slop</h2>
+        <p>It reads ahead, scores each post and folds away the slop, with its reasoning one click away.</p>
+      </div>
       <button class="icon-btn" type="button" data-marquee-toggle="assets-marquee" aria-label="Pause carousel">{ICON['pause']}</button>
     </div>
   </div>
@@ -217,7 +206,6 @@ def build():
     tells = f"""<section class="section sunken" id="tells">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">the nine tells</span>
       <h2 class="h-1">Nine tells of slop</h2>
       <p class="lede">The model asks nine separate questions about the writing. Six come from Graphite's research on AI tells; the last three are feed habits we added. One spike isn't enough: slop usually shows several at once.</p>
     </div>
@@ -251,7 +239,6 @@ def build():
     counters = f"""<section class="section" id="humanity">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">three counter-signals</span>
       <h2 class="h-1" style="max-width:18ch">The value of humanity, included</h2>
       <p class="lede measure">Useful beats authentic. Three counter-signals sit beside every verdict, and they can only pull a score down. A useful post survives the mop however it was written.</p>
     </div>
@@ -282,7 +269,6 @@ def build():
     trust = f"""<section class="section" id="trust">
   <div class="wrap trust">
     <div class="trust-copy">
-      <span class="eyebrow">no judgment of people</span>
       <h2 class="h-1">Judges the writing. Never the writer.</h2>
       <p class="lede">Slop Mop has no opinion about you, and none about the person who wrote the post. It never learns who wrote a post, and tells nobody what it thought.</p>
       <ul class="never">
@@ -353,8 +339,7 @@ def build():
   <div class="wrap">
     <div class="section-head flow-head">
       <div>
-        <span class="eyebrow">how it works</span>
-        <h2 class="h-1" style="max-width:16ch;margin-top:var(--space-6)">Reads ahead, so you don't have to</h2>
+        <h2 class="h-1" style="max-width:16ch">Reads ahead, so you don't have to</h2>
       </div>
       <div>
         <p class="lede">Seven steps between a post loading and you deciding it wasn't worth it. All but the last finish before you scroll there.</p>
@@ -381,7 +366,6 @@ def build():
     integrations = f"""<section class="section" id="networks">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">works where you read</span>
       <h2 class="h-1">One mop for every feed</h2>
       <p class="lede">Slop Mop works on LinkedIn today. The same mop, fold strip and details panel are coming to the other feeds you scroll, the articles and websites you open, and the email you triage.</p>
     </div>
@@ -407,7 +391,6 @@ def build():
     pricing = f"""<section class="section sunken" id="pricing">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">pricing</span>
       <h2 class="h-1">One feed is free. The XL mop does the whole house.</h2>
       <p class="lede">Free cleans the one feed you pick, with 250 checks a day, for good. Slop Mop XL takes the mop everywhere you read, and it's coming soon.</p>
     </div>
@@ -447,7 +430,6 @@ def build():
     faq_html = f"""<section class="section" id="faq">
   <div class="wrap">
     <div class="section-head center">
-      <span class="eyebrow">faq</span>
       <h2 class="h-1">Questions? We've mopped up a few.</h2>
     </div>
     <div class="faq">
@@ -484,7 +466,7 @@ def build():
     h = head("Slop Mop — Only the posts worth your time.",
              "Slop Mop is a browser extension, free for one feed, that reads your feed ahead of you, folds away low-value writing and shows why. Not an AI detector: a bad-writing detector. LinkedIn today; X, Reddit, Facebook, Substack and Medium coming soon.",
              "", og_title="Slop Mop — Only the posts worth your time.", ld=ld())
-    write("index.html", page_shell(h, "", hero + proof + quote + problem + tells + counters + trust + flow + integrations + pricing + faq_html + band))
+    write("index.html", page_shell(h, "", hero + proof + problem + tells + counters + trust + flow + integrations + pricing + faq_html + band))
 
 
 if __name__ == "__main__":

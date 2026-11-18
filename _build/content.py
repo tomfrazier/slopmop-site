@@ -370,7 +370,7 @@ def term_faq(p):
     return out
 
 
-def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", ld_extra=None, network=None, share_text=None, faq=None):
+def article(p, crumbs, lede, meta="", visual="", before="", after="", ld_extra=None, network=None, share_text=None, faq=None):
     body, toc = md(p["body"])
     url = SITE + p["path"]
     spec = page_images(p)
@@ -383,7 +383,7 @@ def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", l
          "isPartOf": {"@id": SITE + "#website"}, "breadcrumb": {"@id": url + "#crumbs"},
          "about": {"@type": "SoftwareApplication", "@id": SITE + "#app", "name": "Slop Mop"},
          "author": {"@type": "Organization", "name": "Slop Mop", "url": SITE},
-         "publisher": {"@type": "Organization", "name": "Artimovo LLC", "url": SITE}},
+         "publisher": {"@type": "Organization", "name": "Artimovo, LLC", "url": SITE}},
         dict(crumbs_ld(crumbs), **{"@id": url + "#crumbs"})]}
     if ld_extra:
         ld_extra.setdefault("image", imgs[0]["url"])
@@ -401,8 +401,8 @@ def article(p, crumbs, eyebrow, lede, meta="", visual="", before="", after="", l
         body += faq_html(*faq)
     tail = (f'<div class="page-tail">{sh}<span class="mono">updated {nice_date(p["lastmod"]).lower()}</span></div>'
             + after + related_html(p) + sources_html(p) + cta(network) + explore(p["path"]))
-    main = P.page_head(eyebrow, esc(p["title"]), lede, meta=meta, visual=hero_img(p["path"], hero_alt))
-    main = main.replace('<span class="eyebrow">', crumbs_html(crumbs) + '<span class="eyebrow">', 1)
+    main = P.page_head(esc(p["title"]), lede, meta=meta, visual=hero_img(p["path"], hero_alt))
+    main = main.replace('<h1 class="h-1">', crumbs_html(crumbs) + '<h1 class="h-1">', 1)
     main += P.toc_page(toc, before + body + tail)
     return h, main
 
@@ -428,8 +428,8 @@ def hub_page(family, title, lede, inner, desc, depth=1, extra_ld=None, visual=""
         ld["@graph"].append(faq_ld(url, faq[1]))
         inner += "\n" + faq_html(*faq)
     h = head(f"{title} · Slop Mop", desc, path, og_title=title, ld=ld, og_image=og_for(path))
-    main = P.page_head(FAMILIES[family][0].lower(), esc(title), lede, visual=hero_img(path, alt))
-    main = main.replace('<span class="eyebrow">', crumbs_html(crumbs, last=True) + '<span class="eyebrow">', 1)
+    main = P.page_head(esc(title), lede, visual=hero_img(path, alt))
+    main = main.replace('<h1 class="h-1">', crumbs_html(crumbs, last=True) + '<h1 class="h-1">', 1)
     main += f'<section class="section hub">\n  <div class="wrap">\n{inner}\n{cta()}{explore(path)}\n  </div>\n</section>\n'
     write(path + "index.html", rel(page_shell(h, "", main, islands=False), depth))
 
@@ -493,7 +493,7 @@ def glossary():
   <a href="/glossary/"><span class="mono">all terms</span>The glossary</a>
   <a href="/{next_["path"]}"><span class="mono">next term</span>{esc(next_["term"])}</a>
 </nav>'''
-        h, main = article(p, [("Home", ""), ("Glossary", "glossary/"), (p["term"], p["path"])], "glossary",
+        h, main = article(p, [("Home", ""), ("Glossary", "glossary/"), (p["term"], p["path"])],
                           esc(p["punchline"]), meta=" · ".join(bits), visual=visual, after=nav_, ld_extra=dt,
                           share_text=f'{p["term"]}: {p["punchline"]}', faq=(f'{p["term"]}: common questions', term_faq(p)))
         emit(p["path"], h, main, 2)
@@ -581,7 +581,7 @@ def patterns():
   <a href="/{next_["path"]}"><span class="mono">next tell</span>{esc(next_["tell"])}</a>
 </nav>'''
         visual = f'<figure class="radar-card">{radar(p["slug"])}<figcaption><span class="mono">tell {p["order"]} of 9</span>{esc(p["tell"])}</figcaption></figure>'
-        h, main = article(p, [("Home", ""), ("The nine tells", "patterns/"), (p["tell"], p["path"])], f"the nine tells · {p['order']} of 9",
+        h, main = article(p, [("Home", ""), ("The nine tells", "patterns/"), (p["tell"], p["path"])],
                           esc(p["summary"]), meta=esc(p["short"]), visual=visual, after=nav_)
         emit(p["path"], h, main, 2)
     cards = "".join(card(p, f"{p['order']:02d} · {esc(p['short'])}") for p in TELLS)
@@ -607,7 +607,7 @@ def for_pages():
         if net:
             status = '<span class="badge badge-live">live</span>' if net in LIVE else '<span class="badge badge-soon">coming soon</span>'
         h, main = article(p, [("Home", ""), ("Slop Mop for", "for/"), (p["title"].replace("Slop Mop for ", ""), p["path"])],
-                          "slop mop for", esc(p["summary"]), meta=status, after=after, network=net)
+                          esc(p["summary"]), meta=status, after=after, network=net)
         emit(p["path"], h, main, 2)
     nets = [p for n, _ in NETWORKS for p in pages_ if p["slug"] == n]
     roles = sorted([p for p in pages_ if p["kind"] == "role"], key=lambda p: sort_key(p["audience"]))
@@ -634,7 +634,7 @@ def compare():
         others = [o for o in pages_ if o is not p]
         after = '<div class="related"><h2>Other comparisons</h2><ul class="compare-list">' + "".join(
             f'<li><a href="/{o["path"]}">{esc(o["title"])}</a><span>{esc(o["summary"])}</span></li>' for o in others) + "</ul></div>"
-        h, main = article(p, [("Home", ""), ("Compare", "compare/"), (p["them"], p["path"])], "compare",
+        h, main = article(p, [("Home", ""), ("Compare", "compare/"), (p["them"], p["path"])],
                           esc(p["summary"]), after=after)
         main = main.replace('<nav class="toc" aria-label="On this page">\n      <b>on this page</b>\n',
                             '<nav class="toc" aria-label="On this page">\n      <b>on this page</b>\n      <a href="#at-a-glance">At a glance</a>\n', 1)
@@ -658,7 +658,7 @@ def guides():
             after = f'<div class="related"><h2>More {esc(NET_NAME[net])} guides</h2><div class="cards-3">' + "".join(card(x) for x in more) + "</div></div>"
         meta = f'{p.get("minutes", 5)} min read · steps checked {nice_date(p["verified"]).lower()}'
         h, main = article(p, [("Home", ""), ("Guides", "guides/"), (NET_NAME[net], f"guides/{net}/"), (p["title"], p["path"])],
-                          f"guides · {NET_NAME[net].lower()}", esc(p["summary"]), meta=meta, after=after, network=net,
+                          esc(p["summary"]), meta=meta, after=after, network=net,
                           ld_extra={"@type": "Article", "headline": p["title"], "datePublished": p["publish_date"],
                                     "dateModified": p["lastmod"], "author": {"@type": "Organization", "name": "Slop Mop"},
                                     "mainEntityOfPage": SITE + p["path"]})
@@ -679,7 +679,7 @@ def guides():
               dict(crumbs_ld(crumbs), **{"@id": url + "#crumbs"})]}
         desc = f"Practical guides to cutting the slop on {name}: the built-in controls, what to look for and what to skip."
         h = head(f"{name} guides · Slop Mop", desc, path, ld=ld)
-        main = P.page_head("guides", f"{esc(name)} guides", esc(desc)).replace('<span class="eyebrow">', crumbs_html(crumbs, last=True) + '<span class="eyebrow">', 1)
+        main = P.page_head(f"{esc(name)} guides", esc(desc)).replace('<h1 class="h-1">', crumbs_html(crumbs, last=True) + '<h1 class="h-1">', 1)
         main += f'<section class="section hub"><div class="wrap"><div class="cards-3">{"".join(card(x) for x in g)}</div></div></section>\n'
         write(path + "index.html", rel(page_shell(h, "", main, islands=False), 2))
     soon = ""
@@ -698,7 +698,7 @@ def learn():
     pages_ = sorted(LIVE_PAGES["learn"], key=lambda p: p.get("order", 99))
     for p in pages_:
         meta = f'{p.get("minutes", 6)} min read'
-        h, main = article(p, [("Home", ""), ("Learn", "learn/"), (p["title"], p["path"])], "learn", esc(p["summary"]), meta=meta,
+        h, main = article(p, [("Home", ""), ("Learn", "learn/"), (p["title"], p["path"])], esc(p["summary"]), meta=meta,
                           ld_extra={"@type": "Article", "headline": p["title"], "datePublished": p["updated"], "dateModified": p["lastmod"],
                                     "author": {"@type": "Organization", "name": "Slop Mop"}, "mainEntityOfPage": SITE + p["path"]})
         emit(p["path"], h, main, 2)
@@ -718,7 +718,7 @@ def calculators():
     for p in pages_:
         app = {"@type": "WebApplication", "name": p["title"], "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (runs in your browser)",
                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": SITE + p["path"], "description": p["description"]}
-        h, main = article(p, [("Home", ""), ("Calculators", "calculators/"), (p["title"], p["path"])], "calculators", esc(p["summary"]),
+        h, main = article(p, [("Home", ""), ("Calculators", "calculators/"), (p["title"], p["path"])], esc(p["summary"]),
                           meta="free · runs in your browser · nothing is sent anywhere", before=calc_widget(p), ld_extra=app)
         emit(p["path"], h, main, 2)
     hub_page("calculators", "Slop calculators",
@@ -728,7 +728,7 @@ def calculators():
 
 
 # ---------------------------------------------------------------- sitemaps
-CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "open-source", "media", "contact.html",
+CORE = ["", "how-it-works.html", "about.html", "privacy.html", "help.html", "terms", "acceptable-use", "open-source", "media", "contact.html",
         # the brief for AI assistants: an orphan HTML page plus its Markdown source, and llms.txt
         "ask-ai", "ask-ai.md", "llms.txt"]
 # Children another script writes: .github/scripts/state_of_slop/build.py owns sitemap-reports.xml. Listed in the index, never

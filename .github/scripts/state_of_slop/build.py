@@ -124,7 +124,7 @@ def rel(fragment):
     return re.sub(r'\b(href|src)="([^"]*)"', fix, fragment)
 
 
-# ---------- charts (static HTML, coloured by design-system tokens) ----------
+# ---------- charts (static HTML, colored by design-system tokens) ----------
 
 TIP_IDS = iter(range(1, 1000))
 
@@ -180,7 +180,6 @@ DOWNLOAD_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 CHECK_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
               '<path d="M20 6 9 17l-5-5"/></svg>')
 JOIN = {
-    "eyebrow": "get slop mop · free",
     "headline": ["Only the posts", "worth your time."],
     "lede": "{one_in} posts in this report read as slop. Slop Mop reads your feed ahead of you and folds away the junk, whoever wrote it.",
     "points": ["Slop folds into a strip you can reopen with one click",
@@ -205,11 +204,11 @@ def join(d, c, store_url):
             '<div class="sos-join-fold"><img src="../assets/img/mark.svg" alt="" width="18" height="18"><span>This post was hidden</span><b>Show post</b></div>'
             '<div class="sos-join-post"><i></i><i></i><i></i></div></div>')
     return ('<section class="sos-join" id="get-slop-mop" data-theme="dark" aria-labelledby="sos-join-h">'
-            '<div class="sos-join-copy"><span class="eyebrow">%s</span>'
+            '<div class="sos-join-copy">'
             '<h2 id="sos-join-h">%s <span class="hl">%s</span></h2><p class="sos-join-lede">%s</p>'
             '<ul class="sos-join-points">%s</ul>'
             '<div class="sos-join-ctas"><a class="btn btn-primary" data-add href="%s">%s%s</a><span class="mono">%s</span></div></div>'
-            '%s</section>') % (e(j["eyebrow"]), e(first), e(hl), e(lede), points, e(store_url), DOWNLOAD_ICON, e(j["cta"]), e(j["note"]), feed)
+            '%s</section>') % (e(first), e(hl), e(lede), points, e(store_url), DOWNLOAD_ICON, e(j["cta"]), e(j["note"]), feed)
 
 
 def tell_rows(tells):
@@ -391,7 +390,7 @@ def report(d, c, head, header, footer, months):
     glance = "".join('<div class="glance-tile"><span class="mono">%s</span><b>%s%s</b><span>%s</span></div>' % (a, b, tip, cc) for a, b, cc, tip in tiles)
 
     modified = d.get("modified", d["published"])
-    org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo LLC", "url": SITE + "/",
+    org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo, LLC", "url": SITE + "/",
            "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png", "width": 512, "height": 512}, "brand": {"@type": "Brand", "name": "Slop Mop"}}
     tom = {"@type": "Person", "@id": SITE + "/#tom", "name": "Tom Frazier", "url": "https://tomfrazier.com", "sameAs": ["https://linkedin.com/in/tomfrazier"]}
     graph = [
@@ -469,7 +468,6 @@ def report(d, c, head, header, footer, months):
 <section class="page-head ph-dark sos-head" data-theme="dark">
   <div class="wrap ph-grid">
     <div class="ph-copy">
-      <span class="eyebrow">state of slop · {period} · {sources}</span>
       <h1 class="h-1">{headline}</h1>
       <p class="lede">{dek}</p>
       <p class="sos-byline mono">covers {window}</p>
@@ -495,7 +493,7 @@ def report(d, c, head, header, footer, months):
 <script src="../assets/state-of-slop.js"></script>
 </body>
 </html>
-""".format(head=head, meta=meta, header=header, footer=footer, period=e(range_short(w)), sources=e(src_label.lower()),
+""".format(head=head, meta=meta, header=header, footer=footer,
            headline=e(c["headline"]), dek=e(c["dek"]), window=range_long(w),
            slug=slug, alt=e(c["hero_alt"]), glance=glance, toc="\n      ".join(toc), sections="\n".join(sections))
 
@@ -534,7 +532,6 @@ def archive(months, head, header, footer):
 <body>
 {header}<main id="main">
 <section class="page-head ph-dark" data-theme="dark"><div class="wrap">
-  <span class="eyebrow">reports</span>
   <h1 class="h-1">State of Slop and other reports</h1>
   <p class="lede">{desc}</p>
 </div></section>

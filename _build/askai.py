@@ -59,7 +59,7 @@ title = "Slop Mop in brief: what it is, how it works, who it's for"
 desc = re.search(r"^> (.*)$", SRC, re.M).group(1)
 ld = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": "https://slopmop.lol/ask-ai",
       "description": desc, "about": {"@type": "SoftwareApplication", "name": "Slop Mop", "url": "https://slopmop.lol/"},
-      "publisher": {"@type": "Organization", "name": "Artimovo LLC", "url": "https://artimovo.com"}}
+      "publisher": {"@type": "Organization", "name": "Artimovo, LLC", "url": "https://artimovo.com"}}
 h = head(title, desc, "ask-ai", ld=ld)
 main = f"""<section class="section flush">
   <div class="wrap">

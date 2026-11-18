@@ -38,7 +38,7 @@ OFFERS = [
 # sitemap.xml as lastmod. Bump a page's date when its content changes, not for site-wide chrome like the footer.
 UPDATED = {
     "": "2026-10-23", "how-it-works.html": "2026-10-23", "about.html": "2026-10-14", "help.html": "2026-10-19",
-    "privacy.html": "2026-11-13", "terms": "2026-10-14", "open-source": "2026-10-14", "contact.html": "2026-10-14",
+    "privacy.html": "2026-11-14", "terms": "2026-11-16", "acceptable-use": "2026-11-13", "open-source": "2026-10-14", "contact.html": "2026-10-14",
     "account-deleted": "2026-10-14", "media": "2026-10-27",
     "ask-ai": "2026-10-23", "ask-ai.md": "2026-10-23", "llms.txt": "2026-10-18",
 }
@@ -238,6 +238,7 @@ def footer(path=None):
         <li><a href="patterns/">The nine tells</a></li>
         <li><a href="index.html#networks">Networks</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="open-source.html">Open source</a></li>
       </ul></div>
       <div><h3>Resources</h3><ul>
         <li><a href="glossary/">Glossary</a></li>
@@ -248,6 +249,7 @@ def footer(path=None):
         <li><a href="help.html">Help</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="media.html">Media</a></li>
+        <li><a href="/state-of-slop">Latest Slop Report</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div><h3>Slop Mop for</h3><ul>
@@ -260,10 +262,10 @@ def footer(path=None):
       <div><h3>Legal</h3><ul>
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="terms.html">Terms of service</a></li>
-        <li><a href="open-source.html">Open source</a></li>
+        <li><a href="acceptable-use.html">Acceptable use</a></li>
         <li><button class="link-btn" type="button" data-gt-cookie-widget-show="true">Cookie settings</button></li>
       </ul></div>
-      <div class="theme-pick" role="radiogroup" aria-label="Colour theme" hidden>
+      <div class="theme-pick" role="radiogroup" aria-label="Color theme" hidden>
         <button type="button" role="radio" aria-checked="true" data-theme-set="system" title="System"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>System</span></button>
         <button type="button" role="radio" aria-checked="false" data-theme-set="light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span>Light</span></button>
         <button type="button" role="radio" aria-checked="false" data-theme-set="dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><span>Dark</span></button>
@@ -273,7 +275,7 @@ def footer(path=None):
       <div class="socials">
 {soc}
       </div>
-      <span>© <span data-year>2026</span> Artimovo LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
+      <span>© <span data-year>2026</span> Artimovo, LLC · <span class="credit">not affiliated with linkedin, x, reddit, meta, substack, medium, google, microsoft, openai, anthropic, perplexity or xai</span></span>
     </div>
   </div>
 </footer>
@@ -308,13 +310,6 @@ def page_shell(head_html, active, main_html, islands=True, extra_scripts=""):
 def subdir(html_):
     """Pages served one folder down (/stats/oct-26, /xl/welcome) need ../ on relative links."""
     return re.sub(r'((?:href|src|poster)=")(?!https?:|#|mailto:|/|data:|\.\./)', r"\1../", html_)
-
-
-def clean_inline(s):
-    """Strip legacy inline styles from ported legal copy; mono spans become <code>."""
-    s = re.sub(r'<span style="font: var\(--type-mono\)[^"]*">(.*?)</span>', r"<code>\1</code>", s)
-    s = re.sub(r'\s*style="[^"]*"', "", s)
-    return s
 
 
 def write(name, content):

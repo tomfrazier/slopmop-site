@@ -103,7 +103,7 @@
 .sos-col .mono { position: absolute; bottom: -22px; left: 0; font-size: var(--text-3xs); color: var(--text-faint); white-space: nowrap; }
 
 /* archive */
-.sos-archive { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-8); }
+.sos-archive { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: var(--space-8); }
 .sos-arch a { display: grid; gap: 8px; color: inherit; text-decoration: none; }
 .sos-arch img { width: 100%; height: auto; border-radius: var(--radius-md); border: 1px solid var(--border-hairline); }
 .sos-arch .mono { font-size: var(--text-2xs); color: var(--text-faint); }
@@ -130,7 +130,6 @@
   .sos-head .ph-grid { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-6); }
   .sos-head .ph-copy { display: contents; }
   .sos-head .ph-copy > * { margin-top: 0; }
-  .sos-head .ph-copy > .eyebrow { order: 1; }
   .sos-head .ph-copy > .h-1 { order: 2; }
   .sos-head .sos-hero { order: 3; display: block; width: 100%; max-width: 560px; justify-self: auto; }
   .sos-head .ph-copy > .lede { order: 4; }
@@ -141,7 +140,7 @@
 .prose > section.sos-join { counter-increment: none; scroll-margin-top: 88px; }
 .sos-join { margin: var(--space-11) 0; padding: var(--space-10); border-radius: var(--radius-lg); background: var(--surface-page); color: var(--text-body);
   border: 1px solid var(--border-hairline); display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: var(--space-10); align-items: center; }
-.sos .sos-join h2 { margin: var(--space-5) 0 0; font: var(--weight-bold) clamp(32px, 4.4vw, 48px)/1.05 var(--font-display); letter-spacing: -0.02em; color: var(--text-body); }
+.sos .sos-join h2 { margin: 0; font: var(--weight-bold) clamp(32px, 4.4vw, 48px)/1.05 var(--font-display); letter-spacing: -0.02em; color: var(--text-body); }
 .prose > section.sos-join > .sos-join-copy h2::before { content: none; }
 .sos-join h2 .hl { box-shadow: inset 0 -0.14em 0 var(--mop-500); }
 .sos-join-lede { margin: var(--space-6) 0 0; font: var(--weight-regular) var(--text-lg)/1.5 var(--font-body); color: var(--text-muted); max-width: 46ch; }

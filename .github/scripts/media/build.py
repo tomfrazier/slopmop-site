@@ -138,7 +138,7 @@ FAQ = [
     ]),
     ("About the company", [
         ("Who makes Slop Mop?",
-         ["Slop Mop is made by Artimovo LLC, a venture studio founded by Tom Frazier. Artimovo identifies opportunities, develops products, launches brands and builds businesses."]),
+         ["Slop Mop is made by Artimovo, LLC, a venture studio founded by Tom Frazier. Artimovo identifies opportunities, develops products, launches brands and builds businesses."]),
         ("How is Slop Mop related to Artimovo?",
          ["Slop Mop is an Artimovo venture. Artimovo is a venture studio, and each of its ventures addresses a need tied to one of three dimensions of human agency: judgment, clarity and autonomy. Slop Mop sits under the Clarity pillar, which asks “Can I understand what's happening?” AI has raised the volume of content online, and more information doesn't make more understanding on its own. Slop Mop helps people spend less attention on noise and more on what matters. Artimovo's ventures page lists Slop Mop and how it fits: https://www.artimovo.com/ventures/"]),
         ("Who is Tom Frazier?",
@@ -180,7 +180,7 @@ def jsonld():
                                 "caption": "Slop Mop media kit. Read only the posts worth your time."},
          "breadcrumb": {"@id": URL + "#breadcrumb"}, "datePublished": UPDATED, "dateModified": UPDATED},
         {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": "Slop Mop", "publisher": {"@id": SITE + "/#org"}},
-        {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo LLC", "alternateName": "Artimovo",
+        {"@type": "Organization", "@id": SITE + "/#org", "name": "Artimovo, LLC", "alternateName": "Artimovo",
          "url": ARTIMOVO["url"], "slogan": "Advancing human agency in the age of AI.",
          "description": "A venture studio that identifies opportunities, develops products, launches brands and builds businesses, each tied to one of three dimensions of human agency: judgment, clarity and autonomy.",
          "founder": {"@id": SITE + "/#tom"}, "brand": {"@type": "Brand", "@id": SITE + "/#brand", "name": "Slop Mop", "logo": SITE + "/icon-512.png"},
@@ -284,7 +284,7 @@ def page(head, header, footer, scripts):
     glance = [
         ("What it is", "A browser extension that reads your feed ahead of you, folds away the slop and shows why."),
         ("Category", "Feed-filtering browser extension. A bad-writing detector, not an AI detector."),
-        ("Made by", 'Artimovo LLC, a venture studio. Slop Mop is its venture in the <a href="%s" target="_blank" rel="noopener">Clarity pillar</a>.' % ARTIMOVO["clarity"]),
+        ("Made by", 'Artimovo, LLC, a venture studio. Slop Mop is its venture in the <a href="%s" target="_blank" rel="noopener">Clarity pillar</a>.' % ARTIMOVO["clarity"]),
         ("Founder", 'Tom Frazier, author of <a href="%s" target="_blank" rel="noopener"><em>The Idea Chose You</em></a>' % TOM["book"]),
         ("Started", "September 2026. Launched on Product Hunt on 24 September 2026."),
         ("Live on", 'LinkedIn <span class="badge badge-live">live</span> · X, Reddit, Facebook, Substack, Medium, websites, Gmail and Outlook <span class="badge badge-soon">coming soon</span>'),
@@ -313,9 +313,11 @@ def page(head, header, footer, scripts):
         if svg:
             links.append('<a class="btn btn-secondary btn-sm" href="%s" download>%sSVG</a>' % (svg, DL))
         links.append('<a class="btn btn-secondary btn-sm" href="%s" download>%sPNG</a>' % (png, DL))
-        assets.append('<div class="mk-asset"><div class="mk-asset-stage mk-%s"><img src="%s" alt="" loading="lazy"></div>'
+        # The preview shows the PNG, loaded with the page: the dark wordmark's stage is near-black, so a preview that never
+        # loads (lazy loading, or a browser that won't draw the SVG's glyph <use> refs) reads as an empty black box.
+        assets.append('<div class="mk-asset"><div class="mk-asset-stage mk-%s"><img src="%s" alt="" decoding="async"></div>'
                       '<div class="mk-asset-text"><b>%s</b><span>%s</span><div class="mk-asset-dl">%s</div></div></div>'
-                      % (kind, svg or png, e(name), e(desc), "".join(links)))
+                      % (kind, png, e(name), e(desc), "".join(links)))
     assets = "".join(assets)
 
     faq_html = "".join(
@@ -327,9 +329,8 @@ def page(head, header, footer, scripts):
 <section class="page-head ph-dark" data-theme="dark">
   <div class="wrap ph-grid">
     <div class="ph-copy">
-      <span class="eyebrow">media kit</span>
       <h1 class="h-1">Read only the posts worth your time</h1>
-      <p class="lede">Slop Mop reads your feed ahead of you and folds away the slop. This page has what reporters, producers and event organisers ask for: the facts, the numbers, quotes you can use, the founder's bio and the logos.</p>
+      <p class="lede">Slop Mop reads your feed ahead of you and folds away the slop. This page has what reporters, producers and event organizers ask for: the facts, the numbers, quotes you can use, the founder's bio and the logos.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="press/slop-mop-press-kit.zip" download>{dl}Download the press kit</a>
         <a class="btn btn-secondary" href="mailto:{email}">{mail}{email}</a>
@@ -419,7 +420,7 @@ def page(head, header, footer, scripts):
 <h2>About Artimovo</h2>
 <p>Artimovo is a venture studio. It identifies opportunities, develops products, launches brands and builds businesses, and each venture addresses a need tied to one of three dimensions of human agency: judgment, clarity and autonomy. Its line is “Advancing human agency in the age of AI.”</p>
 <p>Slop Mop is Artimovo's venture in the <strong>Clarity</strong> pillar, which asks a plain question: can I understand what's happening? AI has raised the volume of content online, and more information doesn't make more understanding on its own. Slop Mop helps people spend less attention on noise and more on what matters, and it supports the reader's judgment instead of replacing it.</p>
-<div class="kv"><div><span class="k">Company</span><span class="v">Artimovo LLC, a Delaware company</span></div><div><span class="k">What it is</span><span class="v">A venture studio</span></div><div><span class="k">Pillars</span><span class="v">Judgment · Clarity · Autonomy</span></div><div><span class="k">Slop Mop's pillar</span><span class="v">Clarity</span></div><div><span class="k">More</span><span class="v"><a href="{ventures}" target="_blank" rel="noopener">Artimovo ventures</a> · <a href="{am_slopmop}" target="_blank" rel="noopener">Slop Mop at Artimovo</a></span></div></div>
+<div class="kv"><div><span class="k">Company</span><span class="v">Artimovo, LLC, a Delaware company</span></div><div><span class="k">What it is</span><span class="v">A venture studio</span></div><div><span class="k">Pillars</span><span class="v">Judgment · Clarity · Autonomy</span></div><div><span class="k">Slop Mop's pillar</span><span class="v">Clarity</span></div><div><span class="k">More</span><span class="v"><a href="{ventures}" target="_blank" rel="noopener">Artimovo ventures</a> · <a href="{am_slopmop}" target="_blank" rel="noopener">Slop Mop at Artimovo</a></span></div></div>
 </section>
 <section id="boilerplate">
 <h2>Boilerplate</h2>
@@ -482,7 +483,7 @@ INK, MOPY, PAPER, WHITE = "#16181A", "#F5B400", "#F7F8F9", "#FFFFFF"
 
 def mop(x, y, k, c, _id=None):
     """The mop mark at 24-unit scale. The bristles are cut out of the head (even-odd),
-    not painted in a background colour, so the mark works on any background."""
+    not painted in a background color, so the mark works on any background."""
     slots = "".join("M%.3f 16.6v4.6a.575 .575 0 0 0 1.15 0v-4.6a.575 .575 0 0 0 -1.15 0z" % (bx - .575) for bx in (8.6, 12, 15.4))
     return ('<g transform="translate({x} {y}) scale({k})"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="{c}"/>'
             '<path d="M5.2 13.6h13.6l-1.6 8.2H6.8z{s}" fill="{c}" fill-rule="evenodd"/></g>').format(x=x, y=y, k=k, c=c, s=slots)

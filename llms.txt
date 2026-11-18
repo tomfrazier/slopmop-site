@@ -6,7 +6,7 @@
 - [Slop Mop in brief](https://slopmop.lol/ask-ai.md): what it is, how it works, who it's for, pricing, privacy, press
 - [How it works](https://slopmop.lol/how-it-works.html): the nine tells, the counter-signals, the score
 - [About](https://slopmop.lol/about.html): canonical product information
-- [Media kit](https://slopmop.lol/media): for press, producers and event organisers: facts, the State of Slop numbers, quotes, founder bio, boilerplate, logos, and how Slop Mop relates to Artimovo
+- [Media kit](https://slopmop.lol/media): for press, producers and event organizers: facts, the State of Slop numbers, quotes, founder bio, boilerplate, logos, and how Slop Mop relates to Artimovo
 
 ## Reports
 - [State of Slop](https://slopmop.lol/state-of-slop): always the latest monthly report on how much of what people scroll past is slop, the signs that show up most and when slop peaks
@@ -24,3 +24,4 @@
 ## Policies
 - [Privacy policy](https://slopmop.lol/privacy.html)
 - [Terms of service](https://slopmop.lol/terms)
+- [Acceptable use policy](https://slopmop.lol/acceptable-use): what you can't do with Slop Mop (automate it, get around limits, resell or copy scores, game votes or referrals, aim scores at people)
