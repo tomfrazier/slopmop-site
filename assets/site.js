@@ -328,15 +328,16 @@
   /* ---------- hero: the network the page is "built for" ---------- */
   var hero = $("[data-networks]");
   if (hero) {
-    var chips = $$(".chip[data-net]", hero), word = $(".net-word", hero), wordText = $(".word", word), logo = $(".net-logo img", word);
+    var chips = $$(".chip[data-net]", hero), word = $(".net-word", hero), wordText = $(".word", word), logo = $(".net-logo img", word), soon = $(".net-soon", word);
     var pauseBtn = $(".stack-pause", hero), order = chips.map(function (c) { return c.getAttribute("data-net"); });
-    var i = 0, timer = null, stopped = reduceMotion, cycles = 0;
+    /* No tour under automation (navigator.webdriver: screenshots, tests): the hero stays on LinkedIn, the stack too. */
+    var i = 0, timer = null, stopped = reduceMotion || !!navigator.webdriver, cycles = 0;
     function set(net, user) {
       var chip = chips.filter(function (c) { return c.getAttribute("data-net") === net; })[0]; if (!chip) return;
       i = order.indexOf(net);
       chips.forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
       word.classList.add("swap");
-      setTimeout(function () { wordText.textContent = chip.getAttribute("data-label"); logo.src = chip.getAttribute("data-logo"); word.style.setProperty("--c", chip.getAttribute("data-color")); word.toggleAttribute("data-ink", chip.hasAttribute("data-ink")); word.classList.remove("swap"); }, reduceMotion ? 0 : 200);
+      setTimeout(function () { wordText.textContent = chip.getAttribute("data-label"); logo.src = chip.getAttribute("data-logo"); word.style.setProperty("--c", chip.getAttribute("data-color")); word.toggleAttribute("data-ink", chip.hasAttribute("data-ink")); if (soon) soon.hidden = !$(".badge-soon", chip); word.classList.remove("swap"); }, reduceMotion ? 0 : 200);
       document.dispatchEvent(new CustomEvent("slopmop:network", { detail: { net: net } }));
       if (user) stop();
     }

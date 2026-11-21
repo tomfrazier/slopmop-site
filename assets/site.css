@@ -107,6 +107,10 @@ a:hover { text-decoration: underline; }
 .net-word .word { display: inline-block; transition: opacity var(--dur-base) var(--ease-standard), transform var(--dur-base) var(--ease-standard); }
 .net-word.swap .word, .net-word.swap .net-logo { opacity: 0; transform: translateY(8px); }
 .net-word .net-logo { transition: opacity var(--dur-base) var(--ease-standard), transform var(--dur-base) var(--ease-standard); }
+/* "soon" after a network that isn't live yet: the chips' badge (set by site.js with the word) */
+.net-word .net-soon { height: 18px; transition: opacity var(--dur-base) var(--ease-standard); }
+.net-word .net-soon[hidden] { display: none; }
+.net-word.swap .net-soon { opacity: 0; }
 .hero .lede { max-width: 56ch; margin: var(--space-8) auto 0; text-wrap: balance; }
 .hero-tag { margin: var(--space-5) auto 0; font: var(--type-body); color: var(--text-body); }
 .hero-tag strong { font-weight: var(--weight-semibold); }
