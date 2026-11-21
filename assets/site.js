@@ -130,11 +130,11 @@
     d.setAttribute("aria-labelledby", "send-dialog-title");
     d.innerHTML =
       '<button class="icon-btn close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
-      '<form class="send-form" novalidate>' +
+      '<form class="send-form" novalidate toolname="email_desktop_install_link" tooldescription="Email the user a link to install Slop Mop in a desktop browser">' +
       '<h2 id="send-dialog-title" class="send-title">Get Slop Mop on your computer</h2>' +
       '<p class="send-lede">Slop Mop works in your desktop browser. We\'ll email you a link to open there.</p>' +
       '<label class="send-label" for="send-email">Your email</label>' +
-      '<div class="send-row"><input id="send-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>' +
+      '<div class="send-row"><input id="send-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required toolparamdescription="Email address to send the install link to">' +
       '<button class="btn btn-primary" type="submit">Send link</button></div>' +
       '<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">' +
       '<p class="send-note" aria-live="polite">We\'ll only use this to send the link.</p>' +

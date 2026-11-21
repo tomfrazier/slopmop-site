@@ -18,3 +18,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Every page's policy matches its inline scripts
         run: python3 .github/scripts/csp.py --check
+      - name: Every page's announcement bar matches SITE.announcement
+        run: python3 .github/scripts/announce.py --check

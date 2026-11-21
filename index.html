@@ -122,6 +122,7 @@
           "name": "Slop Mop (free for one feed)",
           "price": "0",
           "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
           "description": "Free for the one feed you pick, with 250 checks a day.",
           "url": "https://slopmop.lol/#pricing"
         },
@@ -131,6 +132,7 @@
           "category": "subscription",
           "price": "59.99",
           "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
             "price": "59.99",
@@ -152,6 +154,7 @@
           "category": "subscription",
           "price": "5.99",
           "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
             "price": "5.99",
@@ -732,10 +735,10 @@
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
       <div class="footer-side">
-      <form class="subscribe" data-subscribe novalidate>
+      <form class="subscribe" data-subscribe novalidate toolname="subscribe_monthly_stats" tooldescription="Subscribe an email address to Slop Mop's monthly State of Slop stats email">
         <label for="sub-email">Get the monthly stats</label>
         <div class="row">
-          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required toolparamdescription="Email address to subscribe">
           <button class="btn btn-solid" type="submit">Subscribe</button>
         </div>
         <p class="note" aria-live="polite"></p>

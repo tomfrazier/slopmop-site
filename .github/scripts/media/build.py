@@ -199,7 +199,7 @@ def jsonld():
          "installUrl": STORE, "image": IMG,
          "description": "A browser extension that reads your feed ahead of you and folds away low-value writing, with its reasoning shown. A bad-writing detector, not an AI detector.",
          "publisher": {"@id": SITE + "/#org"}, "creator": {"@id": SITE + "/#tom"}, "brand": {"@id": SITE + "/#brand"},
-         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free for one feed, 250 checks a day."}},
+         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Free for one feed, 250 checks a day."}},
         {"@type": "Person", "@id": SITE + "/#tom", "name": "Tom Frazier", "url": TOM["url"],
          "image": SITE + "/assets/img/tom.webp",
          "jobTitle": "Founder", "worksFor": {"@id": SITE + "/#org"}, "description": BIO_SHORT,

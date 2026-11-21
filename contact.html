@@ -139,19 +139,19 @@
 
 <section class="section">
   <div class="wrap contact-grid">
-    <form class="contact-form" data-contact novalidate>
+    <form class="contact-form" data-contact novalidate toolname="contact_slop_mop" tooldescription="Send a message to the Slop Mop team at Artimovo">
       <div class="field">
         <label for="c-name">Name</label>
-        <input id="c-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        <input id="c-name" name="name" type="text" autocomplete="name" maxlength="120" required toolparamdescription="Your name">
       </div>
       <div class="field">
         <label for="c-email">Email</label>
-        <input id="c-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="c-email-err">
+        <input id="c-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="c-email-err" toolparamdescription="Email address for the reply">
         <p class="field-err" id="c-email-err" hidden>Enter an email address like name@example.com.</p>
       </div>
       <div class="field">
         <label for="c-message">Message</label>
-        <textarea id="c-message" name="message" rows="7" maxlength="5000" required></textarea>
+        <textarea id="c-message" name="message" rows="7" maxlength="5000" required toolparamdescription="The message"></textarea>
       </div>
       <input type="hidden" name="_subject" value="Slop Mop contact form">
       <input type="hidden" name="form" value="contact">
@@ -189,10 +189,10 @@
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
       <div class="footer-side">
-      <form class="subscribe" data-subscribe novalidate>
+      <form class="subscribe" data-subscribe novalidate toolname="subscribe_monthly_stats" tooldescription="Subscribe an email address to Slop Mop's monthly State of Slop stats email">
         <label for="sub-email">Get the monthly stats</label>
         <div class="row">
-          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required toolparamdescription="Email address to subscribe">
           <button class="btn btn-solid" type="submit">Subscribe</button>
         </div>
         <p class="note" aria-live="polite"></p>
