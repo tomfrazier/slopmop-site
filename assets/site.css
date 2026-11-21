@@ -3,6 +3,9 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* Form controls, scrollbars and other browser-drawn parts follow the theme toggle, not just the system setting. */
+:root { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 body { margin: 0; background: var(--surface-card); color: var(--text-body); font: var(--type-body); }
 img, svg, video { max-width: 100%; }
 a { color: var(--text-link); text-decoration: none; }
