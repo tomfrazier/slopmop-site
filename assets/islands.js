@@ -89,6 +89,7 @@
   }
   function NetworkStack(p) {
     var ref = React.useRef(null), tick = useState(0), measured = React.useRef(null), ro = React.useRef(null);
+    var probe = React.useRef(null), measuring = useState(true), tallest = React.useRef(0);
     if (!ref.current) { ref.current = { seq: 0, wins: [], net: null, frontEl: null, settle: 0, moving: false }; placeDeck(ref.current, ORDER.indexOf(p.start) >= 0 ? p.start : ORDER[0] || "linkedin", false); }
     var s = ref.current;
     function redraw() { tick[1](function (x) { return x + 1; }); }
@@ -107,22 +108,49 @@
         redraw();
       }
       document.addEventListener("slopmop:network", on);
+      /* measure every network again when the width changes (once per frame), and once images and fonts have loaded */
+      var raf = 0, lastW = window.innerWidth;
+      function remeasure() { measuring[1](true); }
+      function resized() {
+        if (raf) return;
+        raf = requestAnimationFrame(function () { raf = 0; if (window.innerWidth !== lastW) { lastW = window.innerWidth; remeasure(); } });
+      }
+      window.addEventListener("resize", resized);
+      if (document.readyState !== "complete") window.addEventListener("load", remeasure);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
       return function () {
         document.removeEventListener("slopmop:network", on);
+        window.removeEventListener("resize", resized); window.removeEventListener("load", remeasure); cancelAnimationFrame(raf);
         clearTimeout(s.settle); s.wins.forEach(function (w) { clearTimeout(w.timer); });
         if (ro.current) ro.current.disconnect();
       };
     }, []);
-    /* every window is absolute, so the island holds the front window's height (no layout shift as windows trade places) */
+    /* Every window is absolute, so the island holds a height: the tallest front window of any network at this width, so
+       the page below the hero never moves as the networks change (at 900px and under, windows take their content's height,
+       up to 560px of body, so it differs by network). Each network's front window renders once, hidden, in a probe; the
+       probe is measured before paint and removed. The live front window can still raise the height if it grows. */
+    function size(host) {
+      var el = s.frontEl, hgt = Math.max(tallest.current, (el && el.offsetHeight) || 0);
+      if (host && hgt) host.style.setProperty("--win-h", hgt + "px");
+    }
+    React.useLayoutEffect(function () {
+      if (!measuring[0] || !probe.current) return;
+      var max = 0;
+      Array.prototype.forEach.call(probe.current.children, function (w) { max = Math.max(max, w.offsetHeight); });
+      tallest.current = max;
+      size(probe.current.parentNode);
+      measuring[1](false);
+    }, [measuring[0]]);
     React.useLayoutEffect(function () {
       var el = s.frontEl; if (!el || el === measured.current) return;
       measured.current = el;
       var host = el.parentNode;
-      function size() { if (el.offsetHeight) host.style.setProperty("--win-h", el.offsetHeight + "px"); }
-      size();
-      if (window.ResizeObserver) { if (ro.current) ro.current.disconnect(); ro.current = new ResizeObserver(size); ro.current.observe(el); }
+      size(host);
+      if (window.ResizeObserver) { if (ro.current) ro.current.disconnect(); ro.current = new ResizeObserver(function () { size(host); }); ro.current.observe(el); }
     });
-    return h(React.Fragment, null, s.wins.map(function (w) {
+    var probeEl = measuring[0] ? h("div", { key: "probe", ref: probe, "aria-hidden": "true", style: { position: "absolute", left: 0, right: 0, top: 0, height: 0, overflow: "hidden", visibility: "hidden", pointerEvents: "none" } },
+      ORDER.filter(function (n) { return SITES[n]; }).map(function (n) { return h(Win, { key: n, net: n, cls: "front", front: false, live: true }); })) : null;
+    return h(React.Fragment, null, probeEl, s.wins.map(function (w) {
       var cls = w.out === "leaving" ? "leaving" : w.role + (w.out ? " dropped" : "");
       if (w.enter) cls += " " + w.enter;
       if (w.reveal) cls += " reveal";
