@@ -10,7 +10,7 @@
   function Sensitivity(p) { var s = useState(p.value || "moderate"); return h("div", { className: "sens-wrap" }, h(DS.SensitivityToggle, Object.assign({}, p, { value: s[0], onChange: s[1] }))); }
   function Mode(p) {
     var s = useState(p.value || "hide");
-    return h("div", { className: "sens-wrap" }, h(DS.SegmentedControl, { value: s[0], onChange: s[1], options: [{ value: "hide", label: "Hide", icon: "eye-off" }, { value: "highlight", label: "Highlight", icon: "flag" }] }));
+    return h("div", { className: "sens-wrap" }, h(DS.SegmentedControl, { "aria-label": "Mode", value: s[0], onChange: s[1], options: [{ value: "hide", label: "Hide", icon: "eye-off" }, { value: "highlight", label: "Highlight", icon: "flag" }] }));
   }
   function Why(p) { var s = useState(p.vote === undefined ? null : p.vote); return h(DS.WhyCard, Object.assign({}, p, { vote: s[0], onVote: s[1] })); }
   function Scaled(p) { /* render a fixed-size component at a fraction, reserving the scaled box */
@@ -20,7 +20,7 @@
   function MopRow() {
     return h("div", { style: { display: "grid", gap: 14, justifyItems: "center" } },
       h("div", { style: { display: "flex", gap: 14, alignItems: "center" } },
-        ["unchecked", "blue", "yellow", "red", "disabled"].map(function (s) { return h(DS.MopIcon, { key: s, state: s, label: s }); })),
+        [["unchecked", "Not checked yet"], ["blue", "Looks fine"], ["yellow", "Possibly slop"], ["red", "Likely slop"], ["disabled", "Turned off"]].map(function (s) { return h(DS.MopIcon, { key: s[0], state: s[0], label: s[1] }); })),
       h("div", { style: { display: "flex", gap: 18, alignItems: "center" } },
         h(DS.MopIcon, { surface: "toolbar", state: "red", count: 9, label: "toolbar" }),
         h("span", { className: "mono", style: { fontSize: 10 } }, "toolbar · 9 hidden today")));
@@ -46,8 +46,8 @@
     var row = { padding: "12px 16px", borderBottom: "1px solid var(--border-hairline)", display: "grid", gap: 10 };
     var lab = { font: "var(--type-mono-label)", letterSpacing: "var(--tracking-caps)", color: "var(--text-faint)", textTransform: "lowercase" };
     return h("div", { style: { width: 360, background: "var(--surface-card)", border: "1px solid var(--border-hairline)", borderRadius: "var(--radius-md)", overflow: "hidden", font: "var(--type-body-sm)", color: "var(--text-body)" } },
-      h("div", { style: Object.assign({}, row, { display: "flex", alignItems: "center", justifyContent: "space-between" }) }, h(DS.Wordmark, { size: 16 }), h(DS.Switch, { checked: on[0], onChange: on[1] })),
-      h("div", { style: row }, h("span", { style: lab }, "mode"), h(DS.SegmentedControl, { value: m[0], onChange: m[1], options: [{ value: "hide", label: "Hide", icon: "eye-off" }, { value: "highlight", label: "Highlight", icon: "flag" }] })),
+      h("div", { style: Object.assign({}, row, { display: "flex", alignItems: "center", justifyContent: "space-between" }) }, h(DS.Wordmark, { size: 16 }), h(DS.Switch, { "aria-label": "Slop Mop", checked: on[0], onChange: on[1] })),
+      h("div", { style: row }, h("span", { style: lab }, "mode"), h(DS.SegmentedControl, { "aria-label": "Mode", value: m[0], onChange: m[1], options: [{ value: "hide", label: "Hide", icon: "eye-off" }, { value: "highlight", label: "Highlight", icon: "flag" }] })),
       h("div", { style: row }, h("span", { style: lab }, "sensitivity"), h(DS.SensitivityToggle, { value: sv[0], onChange: sv[1], showThreshold: false })),
       h("div", { style: Object.assign({}, row, { borderBottom: 0 }) }, h("span", { style: lab }, "hidden"),
         h("div", { style: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 } }, h(DS.StatTile, { label: "Today", value: 17 }), h(DS.StatTile, { label: "Week", value: 86 }), h(DS.StatTile, { label: "Month", value: 341 }))));
