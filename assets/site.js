@@ -16,7 +16,8 @@
     /* The top announcement bar on every page. Set show to false to hide it. Each new
        url counts as a new announcement, so it comes back for people who dismissed the last one.
        It stays hidden on the page it links to. shortText replaces text on phones, where
-       the bar also drops the mop and the tag so it fits on two lines. */
+       the bar also drops the mop and the tag so it fits on two lines. After editing it, run
+       python3 .github/scripts/announce.py (writes the bar into every page), then csp.py. */
     announcement: {
       show: true,
       tag: "New report",
@@ -185,27 +186,17 @@
     var sent = $(".send-sent", d);
     if (sent.hidden) $("input[type=email]", d).focus(); else $(".send-title", sent).focus();
   }
-  /* announcement bar */
+  /* announcement bar: .github/scripts/announce.py writes it into every page from SITE.announcement, visible from the
+     first paint, and a script in the head hides it before paint (class announce-off on <html>) for anyone who
+     dismissed this url and on the page it links to. Here only the click and the dismiss button are wired. */
   (function () {
-    var bar = $("[data-announce]"), an = SITE.announcement;
-    if (!bar || !an || !an.show || !an.url) return;
-    var here = location.pathname.replace(/\.html$/, "").replace(/\/$/, "");
-    if (here === an.url.replace(/\/$/, "")) return;
-    var key = "slopmop:announce-dismissed";
-    try { if (localStorage.getItem(key) === an.url) return; } catch (e) {}
-    var link = $(".announce-link", bar);
-    link.href = an.url;
-    $("[data-announce-tag]", bar).textContent = an.tag || "New";
-    var text = $("[data-announce-text]", bar), full = document.createElement("span"), short = document.createElement("span");
-    full.className = "announce-full"; full.textContent = an.text || "";
-    short.className = "announce-short"; short.textContent = an.shortText || an.text || "";
-    text.textContent = ""; text.appendChild(full); text.appendChild(short);
-    $("[data-announce-cta]", bar).textContent = an.cta || "";
-    bar.hidden = false;
-    link.addEventListener("click", function () { gaEvent("announcement_click", { link_url: an.url, link_location: where(link) }); });
-    $("[data-announce-x]", bar).addEventListener("click", function () {
-      bar.hidden = true;
-      try { localStorage.setItem(key, an.url); } catch (e) {}
+    var bar = $("[data-announce]"), link = bar && $(".announce-link", bar), x = bar && $("[data-announce-x]", bar);
+    if (!link) return;
+    var url = link.getAttribute("href");
+    link.addEventListener("click", function () { gaEvent("announcement_click", { link_url: url, link_location: where(link) }); });
+    if (x) x.addEventListener("click", function () {
+      document.documentElement.classList.add("announce-off");
+      try { localStorage.setItem("slopmop:announce-dismissed", url); } catch (e) {}
     });
   })();
   $$("[data-social]").forEach(function (a) {

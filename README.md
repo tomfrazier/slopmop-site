@@ -39,12 +39,21 @@ var SITE = {
   storeUrl: "https://chromewebstore.google.com/detail/slop-mop/…",
   productHuntUrl: "https://www.producthunt.com/products/slop-mop",   // "" removes the top bar
   emailEndpoint: "https://formspree.io/f/xaenejjw",
-  announcementBar: false,   // true shows the Product Hunt bar again
+  announcement: { show: true, tag: "…", text: "…", shortText: "…", cta: "…", url: "/…" },   // the top bar: see below
   social: { linkedin: "", x: "", bluesky: "", threads: "", youtube: "", github: "", producthunt: "" }
 };
 ```
 
 A social icon stays hidden until its URL is filled in.
+
+### Announcement bar
+
+The bar at the top of every page comes from `SITE.announcement` in `assets/site.js` (`show`, `tag`, `text`, `shortText` for phones, `cta`, `url`), but it is written into the HTML, so it is there on first paint and nothing moves when the page loads. After editing it:
+
+1. `python3 .github/scripts/announce.py` writes the bar into every page that has one (on the page it links to, it leaves the bar out), plus a small script in each `<head>`, right after the GetTerms banner, that hides the bar before paint for anyone who dismissed this `url`. `show: false` takes the bar out of every page (a marker comment keeps its place for next time).
+2. `python3 .github/scripts/csp.py`, since that head script's hash goes in each page's policy.
+
+`python3 .github/scripts/announce.py --check` exits 1 if any page's bar is out of date. A new `url` counts as a new announcement, so it comes back for people who dismissed the last one. The media and State of Slop builders run both scripts themselves.
 
 Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2. The cookie banner is GetTerms (app.getterms.io; banner settings, wording and regions live there, not in this repo):
 

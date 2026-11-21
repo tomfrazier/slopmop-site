@@ -538,7 +538,7 @@ dialog.tour .close { position: absolute; top: 10px; right: 10px; z-index: 2; }
 @media (max-width: 560px) { .glance { grid-template-columns: 1fr; } .ph-visual { display: none; } }
 
 /* ---------- round 3 ---------- */
-.announce[hidden] { display: none; }
+.announce[hidden], .announce-off .announce { display: none; }
 .plan { display: flex; flex-direction: column; }
 .plan .btn { margin-top: auto; }
 .plan ul { margin-bottom: var(--space-4); }
