@@ -38,6 +38,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+import announce  # noqa: E402
 import csp  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
@@ -742,6 +743,7 @@ def main(argv):
     open(out, "w", encoding="utf-8").write(latest_redirect(months[0]))
     print("  wrote", os.path.relpath(out, ROOT), "->", months[0]["slug"])
     update_sitemap(months)
+    announce.run()  # the announcement bar, from SITE.announcement in assets/site.js (left off the page it links to)
     csp.run()  # the new pages' inline scripts need their hashes in each page's Content-Security-Policy
 
 
