@@ -13,6 +13,7 @@ privacy.html        privacy policy (embedded from GetTerms)
 terms.html          terms of service (embedded from GetTerms, served at /terms)
 acceptable-use.html acceptable use policy (embedded from GetTerms, served at /acceptable-use)
 open-source.html    the MIT-licensed version, links to the public repo (served at /open-source)
+404.html            "page not found", from _build/pages.py (GitHub Pages serves it at any missing path, so every URL in it is root-relative; noindex, not in the sitemaps or llms.txt)
 media.html          press kit (served at /media), built by .github/scripts/media/build.py with media.png and press/
 _ds/slopmop/        Slop Mop design system: tokens, styles.css, _ds_bundle.js (components), mop.svg
 assets/site.css     site layout on top of the design-system tokens
@@ -67,12 +68,21 @@ var SITE = {
   storeUrl: "https://chromewebstore.google.com/detail/slop-mop/…",
   productHuntUrl: "https://www.producthunt.com/products/slop-mop",   // "" removes the top bar
   emailEndpoint: "https://formspree.io/f/xaenejjw",
-  announcementBar: false,   // true shows the Product Hunt bar again
+  announcement: { show: true, tag: "…", text: "…", shortText: "…", cta: "…", url: "/…" },   // the top bar: see below
   social: { linkedin: "", x: "", bluesky: "", threads: "", youtube: "", github: "", producthunt: "" }
 };
 ```
 
 A social icon stays hidden until its URL is filled in.
+
+### Announcement bar
+
+The bar at the top of every page comes from `SITE.announcement` in `assets/site.js` (`show`, `tag`, `text`, `shortText` for phones, `cta`, `url`), but it is written into the HTML, so it is there on first paint and nothing moves when the page loads. After editing it:
+
+1. Rebuild (see Building). `head()` and `nav()` in `_build/common.py` write the bar into every generated page (on the page it links to, they leave it out), plus a small script in each `<head>`, right after the GetTerms banner, that hides the bar before paint for anyone who dismissed this `url`. The markup and that script come from `.github/scripts/announce.py`, and `content.py` ends by running it on the pages the build doesn't write (`xl/`, `media.html`, `reports/`). `show: false` takes the bar out of every page (a marker comment keeps its place for next time). On its own, `python3 .github/scripts/announce.py` does the same for every page.
+2. `python3 .github/scripts/csp.py`, since that head script's hash goes in each page's policy.
+
+`python3 .github/scripts/announce.py --check` exits 1 if any page's bar is out of date (the CSP workflow runs it). A new `url` counts as a new announcement, so it comes back for people who dismissed the last one. The media and State of Slop builders run both scripts themselves.
 
 Google Analytics (`G-QLWD48WK07`) is in the `<head>` of every page, with Consent Mode v2. The cookie banner is GetTerms (app.getterms.io; banner settings, wording and regions live there, not in this repo):
 
@@ -139,6 +149,10 @@ MIT.
 The title, description, Open Graph, Twitter and JSON-LD tags **must stay inside `<head>`**, above `<body>`. LinkedIn, Facebook, Slack and X read the raw HTML without running JavaScript and ignore tags in `<body>`. 
 
 After deploying, re-scrape: https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ . To force a refresh, rename the image (og-image-4.png) and update every og:image / twitter:image.
+
+## Structured data
+
+The JSON-LD offers list the free plan as `"availability": "https://schema.org/InStock"` and the Slop Mop XL yearly and monthly offers as `"availability": "https://schema.org/PreOrder"`. They come from `OFFERS` in `_build/common.py` (the SoftwareApplication `offers` on the home page and `about.html`); the calculators' free offers in `_build/content.py` are `InStock` too. On launch day, flip both XL offers in `OFFERS` to `https://schema.org/InStock` and rebuild. `.github/scripts/media/build.py` emits only the free offer into `media.html`; if XL offers are added there, give them the same availability and re-run it with `--no-images`.
 
 ## Security headers
 

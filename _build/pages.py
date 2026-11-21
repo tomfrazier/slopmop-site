@@ -10,8 +10,9 @@ def webpage_ld(path, name, desc):
             "publisher": {"@type": "Organization", "name": "Artimovo, LLC", "url": "https://slopmop.lol/"}}
 
 
-def page_head(title, lede, meta="", visual="", glance=None):
+def page_head(title, lede, meta="", visual="", glance=None, after=""):
     m = f'\n      <p class="mono">{meta}</p>' if meta else ""
+    m += f"\n      {after}" if after else ""
     v = f'\n    <div class="ph-visual">{visual}</div>' if visual else ""
     g = ""
     if glance:
@@ -433,23 +434,23 @@ def contact():
     main = page_head("Say hello to the mop.", "Questions, bugs, a post it got wrong, or an idea for what it should mop next. A person reads every message and replies by email.") + f"""
 <section class="section">
   <div class="wrap contact-grid">
-    <form class="contact-form" data-contact novalidate>
+    <form class="contact-form" data-contact novalidate toolname="contact_slop_mop" tooldescription="Send a message to the Slop Mop team at Artimovo">
       <div class="field">
         <label for="c-name">Name</label>
-        <input id="c-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        <input id="c-name" name="name" type="text" autocomplete="name" maxlength="120" required toolparamdescription="Your name">
       </div>
       <div class="field">
         <label for="c-email">Email</label>
-        <input id="c-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="c-email-err">
+        <input id="c-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="200" required aria-describedby="c-email-err" toolparamdescription="Email address for the reply">
         <p class="field-err" id="c-email-err" hidden>Enter an email address like name@example.com.</p>
       </div>
       <div class="field">
         <label for="c-message">Message</label>
-        <textarea id="c-message" name="message" rows="7" maxlength="5000" required></textarea>
+        <textarea id="c-message" name="message" rows="7" maxlength="5000" required toolparamdescription="The message"></textarea>
       </div>
       <input type="hidden" name="_subject" value="Slop Mop contact form">
       <input type="hidden" name="form" value="contact">
-      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" toolparamdescription="Spam trap: always leave this empty. Anything in it discards the message.">
       <div class="contact-actions">
         <button class="btn btn-primary" type="submit" disabled>Send message</button>
         <p class="contact-status" role="status" aria-live="polite"></p>
@@ -531,6 +532,21 @@ def account_deleted():
     write("account-deleted.html", page_shell(h, "", main, islands=False))
 
 
+def root_relative(html_):
+    """Every relative URL made root-relative, for a page served at any path (index.html → /)."""
+    html_ = re.sub(r'((?:href|src|poster)=")index\.html(?=[#"])', r"\1/", html_)
+    return re.sub(r'((?:href|src|poster)=")(?!https?:|#|mailto:|/|data:)', r"\1/", html_)
+
+
+def not_found():
+    """404.html: GitHub Pages serves it at any missing path, however deep, so every URL in it is root-relative.
+    noindex, no canonical, and not in the sitemaps or llms.txt."""
+    desc = "The page you were looking for isn't here. It may have moved or never existed."
+    h = head("Page not found — Slop Mop", desc, "404.html", robots="noindex", social=False)
+    main = page_head("This page got mopped up.", desc, after='<p><a class="btn btn-primary" href="index.html">Go to the home page</a></p>')
+    write("404.html", root_relative(page_shell(h, "", main, islands=False)))
+
+
 if __name__ == "__main__":
-    how(); about(); help_page(); open_source(); contact(); account_deleted()
+    how(); about(); help_page(); open_source(); contact(); account_deleted(); not_found()
     legal_pages()

@@ -1,7 +1,9 @@
-import os
+import os, sys
 import json, re, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, ".github", "scripts"))
+import announce  # noqa: E402  the announcement bar's words and markup, from SITE.announcement in assets/site.js
 STORE = "https://chromewebstore.google.com/detail/slop-mop/bhndmmjpeedeamimjijhagjgcibkdlho"
 
 ICON = {
@@ -24,11 +26,14 @@ POLAR = {"@type": "Organization", "name": "Polar", "url": "https://polar.sh/"}
 XL_DESC = "Auto-renewing subscription: every feed, the sites you read, Slop Mop for Gmail and Slop Mop for Outlook, and a higher daily limit, on up to five browsers and email add-ons. Coming soon. Sold by Polar as merchant of record."
 OFFERS = [
     {"@type": "Offer", "name": "Slop Mop (free for one feed)", "price": "0", "priceCurrency": "USD",
+     "availability": "https://schema.org/InStock",
      "description": "Free for the one feed you pick, with 250 checks a day.", "url": "https://slopmop.lol/#pricing"},
     {"@type": "Offer", "name": "Slop Mop XL, yearly", "category": "subscription", "price": "59.99", "priceCurrency": "USD",
+     "availability": "https://schema.org/PreOrder",
      "priceSpecification": {"@type": "UnitPriceSpecification", "price": "59.99", "priceCurrency": "USD", "billingDuration": "P1Y", "unitText": "year"},
      "description": XL_DESC, "url": "https://slopmop.lol/#pricing", "seller": POLAR},
     {"@type": "Offer", "name": "Slop Mop XL, monthly", "category": "subscription", "price": "5.99", "priceCurrency": "USD",
+     "availability": "https://schema.org/PreOrder",
      "priceSpecification": {"@type": "UnitPriceSpecification", "price": "5.99", "priceCurrency": "USD", "billingDuration": "P1M", "unitText": "month"},
      "description": XL_DESC, "url": "https://slopmop.lol/#pricing", "seller": POLAR},
 ]
@@ -129,23 +134,37 @@ def esc(s):
 THEME_BOOT = '<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>'
 
 
-def head(title, desc, path, og_title=None, ld=None, og_image="og-image-4.png", extra="", robots="index, follow, max-image-preview:large"):
+# The announcement bar (SITE.announcement in assets/site.js). It is written into every page so it is there on first
+# paint and nothing moves when the page loads; a tiny script right after the GetTerms banner hides it before paint for
+# anyone who dismissed this url, and the page it links to leaves it out. .github/scripts/announce.py holds the markup
+# and the head script, and content.py runs it on the pages this build doesn't write (xl/, media.html, reports/).
+ANNOUNCE = announce.settings()
+ANNOUNCE_ON = bool(ANNOUNCE.get("show")) and bool(ANNOUNCE.get("url"))
+
+
+def announce_here(path):
+    """True when the page at this canonical path (e.g. "help.html", "glossary/") is the one the bar links to."""
+    return ANNOUNCE_ON and announce.norm("/" + (path or "")) == announce.norm(ANNOUNCE["url"])
+
+
+def announce_head(path):
+    return announce.head_script(ANNOUNCE) if ANNOUNCE_ON and not announce_here(path) else ""
+
+
+def announce_bar(path):
+    return announce.bar(ANNOUNCE) if ANNOUNCE_ON and not announce_here(path) else announce.OFF
+
+
+def head(title, desc, path, og_title=None, ld=None, og_image="og-image-4.png", extra="", robots="index, follow, max-image-preview:large",
+         social=True):
+    """The page's <head>. social=False (the 404 page) leaves out the canonical link and the Open Graph and Twitter tags."""
     url = "https://slopmop.lol/" + path
     og_title = og_title or title
     if path in UPDATED:
         ld = _with_modified(ld, url, UPDATED[path])
     ld_html = '<script type="application/ld+json">\n' + json.dumps(ld, indent=2, ensure_ascii=False) + "\n</script>\n" if ld else ""
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-{GETTERMS}<meta name="viewport" content="width=device-width, initial-scale=1">
-{THEME_BOOT}
-{GA}<title>{esc(title)}</title>
-<meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{url}">
-<meta name="robots" content="{robots}">
-<meta property="og:type" content="website">
+    canon = f'<link rel="canonical" href="{url}">\n' if social else ""
+    tags = f"""<meta property="og:type" content="website">
 <meta property="og:site_name" content="Slop Mop">
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{esc(og_title)}">
@@ -159,7 +178,17 @@ def head(title, desc, path, og_title=None, ld=None, og_image="og-image-4.png", e
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="https://slopmop.lol/{og_image}">
 <meta name="author" content="Tom Frazier">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+""" if social else ""
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+{GETTERMS}{announce_head(path)}<meta name="viewport" content="width=device-width, initial-scale=1">
+{THEME_BOOT}
+{GA}<title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+{canon}<meta name="robots" content="{robots}">
+{tags}<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
@@ -175,10 +204,11 @@ def head(title, desc, path, og_title=None, ld=None, og_image="og-image-4.png", e
 """
 
 
-def nav(active=""):
+def nav(active="", path=None):
+    """The announcement bar and the header. path is the page's canonical path (the bar is left off the page it links to)."""
     links = "\n".join(
         f'      <a href="{h}"{" aria-current=\"page\"" if h == active else ""}>{t}</a>' for h, t in NAV)
-    return f"""<div class="announce" data-announce hidden><a class="announce-link" href="/state-of-slop"><svg class="announce-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="10.6" y="2" width="2.8" height="12" rx="1.4" fill="currentColor"/><path d="M5.2 13.6h13.6l-1.6 8.2H6.8z" fill="currentColor"/><path d="M8.6 16.6v4.6M12 16.6v4.6M15.4 16.6v4.6" stroke="var(--mop-500)" stroke-width="1.15" stroke-linecap="round"/></svg><span class="announce-tag" data-announce-tag>New</span><span class="announce-text" data-announce-text></span><span class="announce-cta" data-announce-cta></span></a><button type="button" class="announce-x" data-announce-x aria-label="Dismiss announcement">&times;</button></div>
+    return f"""{announce_bar(path)}
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Slop Mop home"><img src="assets/img/mark.svg" alt="" width="26" height="26">Slop Mop</a>
@@ -216,10 +246,10 @@ def footer(path=None):
         <div class="made"><img src="assets/img/tom.webp" alt="" width="32" height="32"><span>Made by <a href="https://linkedin.com/in/tomfrazier" target="_blank" rel="noopener">Tom Frazier</a> · <a href="mailto:hello@slopmop.lol">hello@slopmop.lol</a></span></div>
       </div>
       <div class="footer-side">
-      <form class="subscribe" data-subscribe novalidate>
+      <form class="subscribe" data-subscribe novalidate toolname="subscribe_monthly_stats" tooldescription="Subscribe an email address to Slop Mop's monthly State of Slop stats email">
         <label for="sub-email">Get the monthly stats</label>
         <div class="row">
-          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <input id="sub-email" type="email" name="email" placeholder="Email address" autocomplete="email" required toolparamdescription="Email address to subscribe">
           <button class="btn btn-solid" type="submit">Subscribe</button>
         </div>
         <p class="note" aria-live="polite"></p>
@@ -304,7 +334,8 @@ def island(name, props=None, cls="", style=""):
 
 def page_shell(head_html, active, main_html, islands=True, extra_scripts=""):
     m = re.search(r'rel="canonical" href="https://slopmop.lol/([^"]*)"', head_html)
-    return head_html + nav(active) + '<main id="main">\n' + main_html + "</main>\n" + footer(m.group(1) if m else None) + extra_scripts + scripts(islands)
+    path = m.group(1) if m else None
+    return head_html + nav(active, path) + '<main id="main">\n' + main_html + "</main>\n" + footer(path) + extra_scripts + scripts(islands)
 
 
 def subdir(html_):
