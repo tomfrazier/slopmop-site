@@ -105,7 +105,7 @@ def build():
     hero = f"""<section class="hero" data-networks>
   <div class="wrap">
     <h1 class="h-hero">Only the posts <span class="hl">worth your time.</span></h1>
-    <p class="h-sub">Built for <span class="net-word" style="--c:#0A66C2"><span class="net-logo"><img src="assets/logos/linkedin.svg" alt=""></span><span class="word">LinkedIn</span><span class="stop">.</span></span></p>
+    <p class="h-sub">Built for <span class="net-word" style="--c:#0A66C2"><span class="net-logo"><img src="assets/logos/linkedin.svg" alt=""></span><span class="word">LinkedIn</span><span class="badge badge-soon net-soon" hidden>soon</span><span class="stop">.</span></span></p>
     <p class="lede">Slop Mop reads ahead and folds away the junk, whether a person or an AI wrote it.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" data-add href="{STORE}">{ICON['download']}Add to browser — free</a>
@@ -160,7 +160,7 @@ def build():
     def asset_cards(hidden):
         out = []
         for t, d, isl, props, code in assets:
-            aria = ' aria-hidden="true"' if hidden else ""
+            aria = ' aria-hidden="true" inert' if hidden else ""
             out.append(f'<div class="asset"{aria}><div class="asset-stage">{island(isl, props)}</div><div class="asset-text"><b>{t}</b><span>{d}</span><span class="mono">{code}</span></div></div>')
         return "\n        ".join(out)
 

@@ -9,6 +9,7 @@ for previews.
 import datetime, glob, html as H, shutil
 from urllib.parse import quote
 from common import *
+import announce  # .github/scripts/announce.py (common.py puts it on the path)
 import pages as P
 
 CONTENT = f"{ROOT}/_content"
@@ -717,7 +718,7 @@ def calculators():
     pages_ = sorted(LIVE_PAGES["calculators"], key=lambda p: p.get("order", 99))
     for p in pages_:
         app = {"@type": "WebApplication", "name": p["title"], "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (runs in your browser)",
-               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": SITE + p["path"], "description": p["description"]}
+               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}, "url": SITE + p["path"], "description": p["description"]}
         h, main = article(p, [("Home", ""), ("Calculators", "calculators/"), (p["title"], p["path"])], esc(p["summary"]),
                           meta="free · runs in your browser · nothing is sent anywhere", before=calc_widget(p), ld_extra=app)
         emit(p["path"], h, main, 2)
@@ -989,3 +990,4 @@ if __name__ == "__main__":
     clean_stale()
     glossary(); patterns(); for_pages(); compare(); guides(); learn(); calculators()
     sitemaps(); patch_xl(); images_manifest()
+    announce.run()  # the announcement bar on the pages this build doesn't write: xl/, media.html, reports/
